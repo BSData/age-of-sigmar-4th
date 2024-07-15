@@ -1073,6 +1073,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="88c9-115c-3714-e884" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a894-c0e3-2a4-79d0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="98d0-7e0e-b303-6db0" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1087,10 +1088,18 @@ Start of Battle Round</characteristic>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="c13d-57e7-bdb8-f0c4">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="98d0-7e0e-b303-6db0" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="c13d-57e7-bdb8-f0c4"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Doom-flayer" hidden="false" id="1dc6-90e9-4539-7fb4" type="selectionEntry" targetId="c759-c695-2cf9-5d59">
       <modifiers>
@@ -1291,7 +1300,7 @@ Start of Battle Round</characteristic>
         <cost name="pts" typeId="points" value="270"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Plague Monks" hidden="false" id="5d77-22a3-e306-b1cd" type="selectionEntry" targetId="38fa-afa3-6368-1722">
+    <entryLink import="true" name="Plague Censer Bearers" hidden="false" id="5d77-22a3-e306-b1cd" type="selectionEntry" targetId="1d37-8688-0cdd-434b">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="31d1-715c-822a-e7c3" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
@@ -1308,6 +1317,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="476b-6ecb-c5f8-cdee" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="88c9-115c-3714-e884" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="98d0-7e0e-b303-6db0" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1324,7 +1334,7 @@ Start of Battle Round</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Plagueclaw" hidden="false" id="a16b-628e-56cf-c980" type="selectionEntry" targetId="2eef-4222-6eaf-1e39">
@@ -1340,6 +1350,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="96e7-bdfc-d62-5b04" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="476b-6ecb-c5f8-cdee" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="98d0-7e0e-b303-6db0" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1774,6 +1785,115 @@ Start of Battle Round</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6ae0-b27b-75dc-848d" includeChildSelections="true"/>
       </constraints>
+    </entryLink>
+    <entryLink import="true" name="Plague Priest" hidden="false" id="0ed5-13eb-85e4-39a4" type="selectionEntry" targetId="90a1-d4c0-96ae-328">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="cc4f-f97e-6796-5669" type="selectionEntryGroup" targetId="26fc-3985-5b0a-b181"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="3a59-b950-a4e0-a404" type="selectionEntryGroup" targetId="aeac-82cb-a7a7-4ebf"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Plague Priest" hidden="false" id="98d0-7e0e-b303-6db0" type="selectionEntry" targetId="90a1-d4c0-96ae-328">
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="9aee-96f8-a0f8-c834"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="19b2-31bf-bf96-1a12" type="selectionEntryGroup" targetId="aeac-82cb-a7a7-4ebf"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="4636-f057-32e7-08b0" type="selectionEntryGroup" targetId="26fc-3985-5b0a-b181"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="0982-8821-7007-4572" targetId="d1f3-921c-b403-1106" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gutter Runners" hidden="false" id="0ee2-8b2b-4bcc-c095" type="selectionEntry" targetId="d3a7-4e1b-3de7-d042">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="8d8f-5330-8f20-fee5" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="703-8991-676d-bf79" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-ee25-cfb7-621f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d3e7-d46e-1989-7534" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="96e7-bdfc-d62-5b04" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="88c9-115c-3714-e884" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a894-c0e3-2a4-79d0" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Plague Monks" hidden="false" id="0781-d12b-b6ff-35e0" type="selectionEntry" targetId="38fa-afa3-6368-1722">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="c3c1-c344-49e9-ef82" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-ee25-cfb7-621f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d3e7-d46e-1989-7534" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="96e7-bdfc-d62-5b04" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="476b-6ecb-c5f8-cdee" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="88c9-115c-3714-e884" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="98d0-7e0e-b303-6db0" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
     </entryLink>
   </entryLinks>
   <selectionEntries>

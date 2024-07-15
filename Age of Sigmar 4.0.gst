@@ -141,7 +141,7 @@
     <categoryEntry name="Legends" id="acaf-8bb6-d6f-3e2a" hidden="false"/>
     <categoryEntry name="MAGGOTKIN OF NURGLE" id="ca3c-6c3b-4887-3a9d" hidden="false"/>
     <categoryEntry name="DAEMON" id="dc0b-e417-51f4-10f0" hidden="false"/>
-    <categoryEntry name="ROTBRINGER" id="b665-bb9e-c89c-ad7d" hidden="false"/>
+    <categoryEntry name="ROTBRINGERS" id="b665-bb9e-c89c-ad7d" hidden="false"/>
     <categoryEntry name="CHAOS" id="319b-38ee-d10d-e800" hidden="false"/>
     <categoryEntry name="IDONETH DEEPKIN" id="c8fc-7a72-6665-2f34" hidden="false"/>
     <categoryEntry name="ISHARANN" id="c96-48d5-fd6d-b079" hidden="false"/>
@@ -2082,6 +2082,14 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <description>Full functionality is not available in Battlescribe. While the majority of listbuilding should work, some features may behave unexpectedly and text will have markup notation interspersed that Battlescribe will display as plaintext. Please use New Recruit to ensure full functionality of this data set.</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Allow Legends" hidden="false" id="7e59-2237-4890-a80a">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ef2f-8b2e-0a27-0708"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="c0a9-3014-a13a-8ee1" targetId="676-2b78-7bbf-ba9c" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
