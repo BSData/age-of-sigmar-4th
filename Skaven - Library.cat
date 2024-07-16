@@ -111,12 +111,12 @@
           <modifiers>
             <modifier type="increment" value="1" field="a668-d963-a973-805c">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="1" field="f4ab-7ad3-b87e-2f32">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -227,12 +227,12 @@
           <modifiers>
             <modifier type="increment" value="1" field="2f5-838f-ee9e-639e">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="1" field="ff5a-3cc4-4a23-e30b">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -307,12 +307,12 @@
           <modifiers>
             <modifier type="increment" value="1" field="f54e-a122-f077-3f98">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="1" field="5ad9-6f86-6994-e8a4">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -974,7 +974,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Plague Priest" hidden="false" id="90a1-d4c0-96ae-328" publicationId="40f6-9b64-7daa-d1c8">
+    <selectionEntry type="unit" import="true" name="Plague Priest" hidden="false" id="90a1-d4c0-96ae-328" publicationId="9dee-a6b2-4b42-bfee">
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="2930-3d45-8976-39d9" targetId="6e72-1656-d554-528a" primary="true"/>
         <categoryLink name="SKAVEN" hidden="false" id="c580-17a8-a5b8-a7b4" targetId="cce6-9e5a-dd33-a755" primary="false"/>
@@ -982,6 +982,7 @@
         <categoryLink name="INFANTRY" hidden="false" id="bfab-75ce-871e-6dc5" targetId="75d6-6995-dfcc-3898" primary="false"/>
         <categoryLink name="PRIEST (1)" hidden="false" id="beb9-bbc-428f-9d49" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
         <categoryLink name="PESTILENS" hidden="false" id="8b18-ab95-e052-78ab" targetId="e9fa-30a7-a728-b45e" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="b48f-1590-2771-904b" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="7f1d-722f-935b-9fcd" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -997,10 +998,11 @@
         </profile>
         <profile name="Feed on Pestilence" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e430-6e3d-c92a-feae">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a Fight ability for a friendly **^^Pestilens^^** unit wholly within 13&quot; of this unit</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Fight^^** ability for a friendly **^^Pestilens^^** unit wholly within 13&quot; of this unit</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Give this unit 1 ritual point.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
       </profiles>
@@ -1032,6 +1034,13 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warlock Engineer" hidden="false" id="e77c-c9e7-720e-86e2" publicationId="40f6-9b64-7daa-d1c8">
       <categoryLinks>
@@ -1339,18 +1348,18 @@
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ee86-110-3e90-ea27"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="5408-e8e1-bb06-9a47"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="ee86-110-3e90-ea27"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5408-e8e1-bb06-9a47"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="5" field="ee86-110-3e90-ea27">
+            <modifier type="increment" value="3" field="ee86-110-3e90-ea27">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" value="5" field="5408-e8e1-bb06-9a47">
+            <modifier type="increment" value="3" field="5408-e8e1-bb06-9a47">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1583,18 +1592,18 @@ Your Shooting Phase</characteristic>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="7434-2d24-62c0-6d93"/>
-            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="59f-2fb0-eb2e-4bf9"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7434-2d24-62c0-6d93"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="59f-2fb0-eb2e-4bf9"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="10" field="7434-2d24-62c0-6d93">
+            <modifier type="increment" value="3" field="7434-2d24-62c0-6d93">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" value="10" field="59f-2fb0-eb2e-4bf9">
+            <modifier type="increment" value="3" field="59f-2fb0-eb2e-4bf9">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2022,12 +2031,12 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
           <modifiers>
             <modifier type="increment" value="5" field="db3f-2b23-a7a1-bc65">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="5" field="794e-a87-1bbd-dac1">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2213,12 +2222,12 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
           <modifiers>
             <modifier type="increment" value="10" field="c86b-2155-e031-57fe">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="10" field="75fe-b877-d4d6-13c2">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2276,8 +2285,8 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="92b9-b0b7-7190-3648"/>
-            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="fc3b-2a31-3fd3-78d0"/>
+            <constraint type="min" value="20" field="selections" scope="parent" shared="true" id="92b9-b0b7-7190-3648"/>
+            <constraint type="max" value="20" field="selections" scope="parent" shared="true" id="fc3b-2a31-3fd3-78d0"/>
           </constraints>
           <selectionEntryGroups>
             <selectionEntryGroup name="Command Models" id="4d9d-ab70-d4fa-ec9e" hidden="false">
@@ -2321,14 +2330,14 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
-            <modifier type="increment" value="10" field="92b9-b0b7-7190-3648">
+            <modifier type="increment" value="20" field="92b9-b0b7-7190-3648">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" value="10" field="fc3b-2a31-3fd3-78d0">
+            <modifier type="increment" value="20" field="fc3b-2a31-3fd3-78d0">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2431,12 +2440,12 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
           <modifiers>
             <modifier type="increment" value="10" field="36ab-7385-786c-81">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="10" field="dcc3-d750-1e5d-772f">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3052,12 +3061,12 @@ However, for each unmodified hit roll of 1 for an attack made with this unit’
           <modifiers>
             <modifier type="increment" value="10" field="b296-8f1b-6b80-5635">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="10" field="25fc-88ed-5c2-8ce0">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -3244,6 +3253,184 @@ Cover**</description>
         <categoryLink name="SKAVEN" hidden="false" id="406c-3a86-41d1-4c94" targetId="cce6-9e5a-dd33-a755" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="ab93-d2fa-eaab-1764" targetId="319b-38ee-d10d-e800" primary="false"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Plague Censer Bearers" hidden="false" id="1d37-8688-0cdd-434b" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="SKAVEN" hidden="false" id="7bfd-f1f3-e3be-dee8" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="71d8-8145-4ec2-b5f0" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="fb76-e96a-0dba-ed30" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="Legends" hidden="false" id="367a-3059-d993-62fb" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="PESTILENS" hidden="false" id="d110-75a6-3e4c-b3c8" targetId="e9fa-30a7-a728-b45e" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Plague Censer Bearers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="a122-2a56-d7e2-e5ff">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Frenzied Assault" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c6c7-1555-2527-5072">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit charged in the same turn, add 1 to the Attacks characteristic of its melee weapons for the rest of the turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Enshrouding Fumes" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e603-f135-beeb-34f1">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for shooting attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Plague Censer Bearer" hidden="false" id="49c6-82f4-2897-3fb2" defaultAmount="5">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plague Censer" hidden="false" id="3bb1-0851-f066-90a5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3d3-b4d4-fc09-7def"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91b7-765c-f4b7-ea6e"/>
+              </constraints>
+              <profiles>
+                <profile name="Plague Censer" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5707-62c0-4dbb-d9bf">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="e8d6-4e04-8cf2-a084"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="5189-60cd-5c86-da33"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="5" field="e8d6-4e04-8cf2-a084">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="5" field="5189-60cd-5c86-da33">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gutter Runners" hidden="false" id="d3a7-4e1b-3de7-d042" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="SKAVEN" hidden="false" id="c54d-5681-a322-12fc" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="4733-2efc-93da-4638" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="8ca4-1468-5ff9-2240" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="ESHIN" hidden="false" id="ab40-694f-f51c-00c3" targetId="a2e1-6655-23f6-6533" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="d8eb-abb3-c162-5d53" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Gutter Runners" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="2618-a293-1227-7a8e">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Deliver the Killing Strike" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0899-7394-e4e9-6df3">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 3 to the Attacks characteristic of this unit’s **Punch Dagger and Blade** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+        <profile name="Sneaky Infiltrators" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a121-c2c3-021a-6224">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While each model in this unit is within 1&quot; of any terrain features, this unit cannot be targeted by shooting attacks unless the attacking model is within 9&quot; of it.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Gutter Runner" hidden="false" id="eabf-245b-c015-e832" defaultAmount="10">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stars" hidden="false" id="5ecb-f0f0-8054-60ef">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="965c-2896-6571-929a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="331d-7b1e-3fd3-5087"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Stars" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="6c8d-5a51-ea02-4fb4">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Punch Dagger and Blade" hidden="false" id="743b-bc9a-2398-b525">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e62c-9f4a-b854-35f1"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ed0-a589-a0cd-8cb3"/>
+              </constraints>
+              <profiles>
+                <profile name="Punch Dagger and Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3a04-ccfc-9f73-eeba">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="49d0-98c6-0a73-5c6f"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="1433-e874-a8c3-cd69"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="10" field="49d0-98c6-0a73-5c6f">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="1433-e874-a8c3-cd69">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>

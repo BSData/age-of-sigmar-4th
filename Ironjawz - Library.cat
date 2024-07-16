@@ -605,12 +605,12 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
           <modifiers>
             <modifier type="increment" value="3" field="8ee3-2b96-5e50-b95a">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="3" field="a8de-dc57-f40d-6c08">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -711,12 +711,12 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
           <modifiers>
             <modifier type="increment" value="3" field="8b5e-bd9f-566e-8567">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="3" field="f8fc-6793-b3ef-d6a3">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -781,12 +781,12 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
           <modifiers>
             <modifier type="increment" value="10" field="5cf3-ec89-707a-f8ce">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="10" field="b32d-649d-55a0-65e2">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -1065,25 +1065,25 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
         <cost name="⬤" typeId="1dd2-2af7-76a2-2423" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Brute" hidden="false" id="5559-a21d-9ee1-998" defaultAmount="1,2">
+        <selectionEntry type="model" import="true" name="Brute" hidden="false" id="5559-a21d-9ee1-998" defaultAmount="1,1,3">
           <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="false" id="b49c-82e1-8ba3-a2cf"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="d69d-202d-8b90-4785"/>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="false" id="b49c-82e1-8ba3-a2cf"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="false" id="d69d-202d-8b90-4785"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="3" field="b49c-82e1-8ba3-a2cf">
+            <modifier type="increment" value="5" field="b49c-82e1-8ba3-a2cf">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" value="3" field="d69d-202d-8b90-4785">
+            <modifier type="increment" value="5" field="d69d-202d-8b90-4785">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Brute Weapons" hidden="false" id="630f-c582-b845-f9">
+            <selectionEntry type="upgrade" import="true" name="Brute Weapons" hidden="false" id="630f-c582-b845-f9" defaultAmount="1,0,1">
               <profiles>
                 <profile name="Brute Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="65e4-dee1-d6e6-3c57">
                   <characteristics>
@@ -1106,9 +1106,19 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="5b38-2970-e289-5dfa" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="0" field="91e9-a799-587e-9a6">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5b38-2970-e289-5dfa" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="b968-724f-4e40-b2e6">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5b38-2970-e289-5dfa" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gore-choppa" hidden="false" id="5b38-2970-e289-5dfa">
+            <selectionEntry type="upgrade" import="true" name="Gore-choppa" hidden="false" id="5b38-2970-e289-5dfa" defaultAmount="0,1,0">
               <profiles>
                 <profile name="Gore-choppa" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aa68-d9d8-638a-7a60">
                   <characteristics>
@@ -1122,8 +1132,6 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5492-549c-74f-2eae"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="416c-f128-d52a-c2b0"/>
                 <constraint type="max" value="1" field="selections" scope="f330-c2f2-f018-d93b" shared="true" id="c6bb-5b30-1a4c-692c"/>
               </constraints>
               <modifiers>
@@ -1146,7 +1154,7 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3108-bc8c-d96e-128a" includeChildSelections="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Champion" hidden="false" id="815e-1538-5f77-aeb6" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
+                <entryLink import="true" name="Champion" hidden="false" id="815e-1538-5f77-aeb6" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da80-4d53-3b56-15a2"/>
                     <constraint type="max" value="1" field="selections" scope="f330-c2f2-f018-d93b" shared="true" id="7c41-c368-7421-acb4" includeChildSelections="true"/>
@@ -1318,12 +1326,12 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
           <modifiers>
             <modifier type="increment" value="3" field="8f29-b9a4-35ea-7024">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="3" field="6b66-f10a-4622-4b55">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
