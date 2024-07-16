@@ -2354,7 +2354,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
               </characteristics>
             </profile>
-            <profile name="Summon a Malevolent Maelstrom" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="1f2c-ca29-2c5b-24ba">
+            <profile name="Summon Malevolent Maelstrom" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="1f2c-ca29-2c5b-24ba">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
@@ -2531,7 +2531,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
     <publication name="Battletome Supplement: Bonesplitterz" id="06c5-6322-e810-7967" hidden="false"/>
   </publications>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
+    <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e690-4c2f-4d26-581b"/>
       </constraints>
@@ -2550,12 +2550,12 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Allow Legends" hidden="false" id="7e59-2237-4890-a80a">
+    <selectionEntry type="upgrade" import="false" name="Allow Legends" hidden="false" id="7e59-2237-4890-a80a">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ef2f-8b2e-0a27-0708"/>
       </constraints>
       <categoryLinks>
-        <categoryLink name="Configuration" hidden="false" id="c0a9-3014-a13a-8ee1" targetId="676-2b78-7bbf-ba9c" primary="false"/>
+        <categoryLink name="Configuration" hidden="false" id="c0a9-3014-a13a-8ee1" targetId="676-2b78-7bbf-ba9c" primary="true"/>
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
