@@ -247,6 +247,10 @@
     <categoryEntry name="BRAYHERD" id="bf15-f13d-cca6-29d8" hidden="false"/>
     <categoryEntry name="THUNDERSCORN" id="7be1-3285-0de8-35da" hidden="false"/>
     <categoryEntry name="WARHERD" id="8fec-20f5-8470-a056" hidden="false"/>
+    <categoryEntry name="CHAMPION (1/13)" id="9979-5342-032f-c16d" hidden="false"/>
+    <categoryEntry name="STANDARD BEARER (1/8)" id="f3eb-c688-9ac3-0761" hidden="false"/>
+    <categoryEntry name="BONESPLITTERZ" id="dcf6-0115-279f-7a80" hidden="false"/>
+    <categoryEntry name="ORRUK" id="86bf-1ccb-b937-c9d7" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844">

@@ -2294,7 +2294,7 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8203-35f4-6296-a889"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Standard Bearer" hidden="false" id="a680-184c-42d9-fd72" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="1">
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="a680-184c-42d9-fd72" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
                   <modifiers>
                     <modifier type="increment" value="1" field="2612-ecbd-7f62-c3e1">
                       <repeats>
@@ -2307,7 +2307,7 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d4-4a44-dd84-ff89"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Musician" hidden="false" id="2d1c-1c14-d988-bf99" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="1">
+                <entryLink import="true" name="Musician" hidden="false" id="2d1c-1c14-d988-bf99" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="605a-d055-1afc-a02c" shared="true" id="1167-8aba-6b7d-206a" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e282-b23c-677e-486e"/>
@@ -2320,7 +2320,7 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Champion" hidden="false" id="2a05-7175-b10-5404" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                <entryLink import="true" name="Champion" hidden="false" id="2a05-7175-b10-5404" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="605a-d055-1afc-a02c" shared="true" id="42d8-ed22-5bbf-9bdc" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b982-248-6fcc-d4a8"/>
@@ -3422,6 +3422,628 @@ Cover**</description>
               </repeats>
             </modifier>
           </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Skabbik&apos;s Plaguepack" hidden="false" id="4f4c-4e64-71f7-d4b2" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="3c68-80cb-2759-8dbf" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="08ff-4ace-1454-d232" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="1e13-a0b1-d7f5-b203" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="8081-9fba-f59d-0884" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="SKAVEN" hidden="false" id="38b1-498a-4c4e-f9e2" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="PRIEST (1)" hidden="false" id="a10c-8a45-9a4e-2cd0" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
+        <categoryLink name="PESTILENS" hidden="false" id="43ba-3cd2-3990-ace9" targetId="e9fa-30a7-a728-b45e" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="3cc3-1bcf-59b6-0111" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Spiteclaw&apos;s Swarm" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="7bb7-44f6-d6fe-97e0">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Seething Swarm" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ca05-ed6e-1386-4ded">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for shooting attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Skritter" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0d1e-e875-6cd0-4125">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit’s **Skritter** is a token. If you make a chanting roll of 1 for this unit while its **Skritter** is on the battlefield, you can remove its **Skritter** from the battlefield and then re-roll that chanting roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Rabidius Skench" hidden="false" id="d8a7-20a5-9d20-938f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="406e-3bf7-9c3a-2f0b"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="18f8-3a4e-4240-92af"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plague Censer" hidden="false" id="7568-b6c2-b8bc-9c2f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4edf-4e82-cee3-b367"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a156-1870-3089-2ca6"/>
+              </constraints>
+              <profiles>
+                <profile name="Plague Censer" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1174-408c-0b63-d5a5">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Skabbik Plagueseeker" hidden="false" id="4bfe-43a5-7f22-7817">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1083-08bb-3b27-6269"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6bda-cc9b-d2db-6ec5"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plaguepack Weapons" hidden="false" id="76f1-8500-cb42-b444">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="843c-ccc9-ee26-ad3a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57f8-acfa-d641-c20f"/>
+              </constraints>
+              <profiles>
+                <profile name="Plaguepack Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="fd66-ab2a-567a-64d4">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="2fd9-cc40-e308-a98f" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a085-d63f-54b5-8753"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="7f7e-3856-d416-5648" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="4f4c-4e64-71f7-d4b2" shared="true" id="4390-623f-14be-65ce" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c45a-b18d-2a2c-9438"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Rikkit" hidden="false" id="b6b2-a977-e54d-4e7c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f347-89f5-4f38-7e8d"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4200-ecd2-504d-347d"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plaguepack Weapons" hidden="false" id="f8a0-41b8-ff44-839f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="704b-ea24-f6f6-cc95"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="145b-f7fc-f8cb-857e"/>
+              </constraints>
+              <profiles>
+                <profile name="Plaguepack Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e5e6-9d91-2898-0a61">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Itchitt" hidden="false" id="67bf-2065-d45f-5397">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="df63-5d50-7b08-b53e"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="312d-254f-f02f-7779"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plaguepack Weapons" hidden="false" id="4b87-a9fd-b732-6e49">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a61e-a053-5c11-6b69"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="104d-eee2-1484-c996"/>
+              </constraints>
+              <profiles>
+                <profile name="Plaguepack Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aaef-4574-426e-92d4">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Poxlix" hidden="false" id="c0e4-e292-5917-fcb3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d49-346b-a712-72cd"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57db-73f2-271a-4faa"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plaguepack Weapons" hidden="false" id="cf89-4944-d570-dafd">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1dce-52fe-d53b-3ba7"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1af4-953a-92bd-71ee"/>
+              </constraints>
+              <profiles>
+                <profile name="Plaguepack Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="737c-04dc-2438-bd67">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Skittershank&apos;s Clawpack" hidden="false" id="3c80-fb87-4ba2-326c" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="56e4-d0cc-bb90-98dd" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="fd07-85b3-a693-933c" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="b4eb-c571-4a4d-743f" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="eb14-f6ae-8e6a-4d21" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="SKAVEN" hidden="false" id="b986-cd6c-ec51-0c9b" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="ESHIN" hidden="false" id="ec96-c540-9df6-d35a" targetId="a2e1-6655-23f6-6533" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Skittershank&apos;s Clawpack" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="af76-ca70-47b8-49db">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sneaky Infiltrators" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="706f-dcdc-3eaa-c3d7">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While each model in this unit is within 1&quot; of a terrain feature, this unit cannot be targeted by shooting attacks unless the attacking model is within 9&quot; of it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Shadowy Killers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="45a2-ffd2-8f3b-a068">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If the unmodified hit roll for an attack that targets this unit is 1-4, the attack fails and the attack sequence ends.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Slynk Skittershank" hidden="false" id="d6c0-ed10-07d8-b447">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b8d-bcec-52a0-4e10"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b372-2bf2-91ca-54d0"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stars" hidden="false" id="c417-02cb-3b3a-14a9">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c4d-ce81-9f69-11a9"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="275a-b9de-2d00-32aa"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Stars" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="9050-d5e1-5421-c710">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Weeping Blade" hidden="false" id="7ef5-dfc7-52bf-d953">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca19-36c5-eb14-9bb0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1721-e964-0a09-7102"/>
+              </constraints>
+              <profiles>
+                <profile name="Weeping Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="4aa3-33cb-6472-7059">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Kreep Kinwhisper" hidden="false" id="9127-293b-1e2b-b4da">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ed9-6a31-8a84-f22d"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60b1-8948-5e4d-2813"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Blades" hidden="false" id="92c1-a9be-6f8d-1bc3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="06f4-6559-2b82-473a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ab9-7b23-9a70-71d5"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a07d-bc12-e32c-6a4e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stars" hidden="false" id="2078-9f27-0bc3-e881">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1d3-5d55-ce7f-85d3"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d53-fc7e-ac4a-5ac2"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Stars" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="83a8-d57d-50f4-4e97">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Skulck" hidden="false" id="cb8b-dc0b-97a2-6393">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a11-4074-4364-607a"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f906-57c3-3059-8a26"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Blades" hidden="false" id="386d-bdad-2937-e4f8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fcda-95fe-70f1-4858"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7059-474a-fc9c-b91d"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="452d-2be0-eac8-daa0">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stars" hidden="false" id="e80e-9564-258a-1984">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e1ef-0bdf-27e3-40a0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e82f-5deb-3775-f63f"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Stars" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="e61e-7e94-b570-ecd0">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Snyp Padpaw" hidden="false" id="1d42-0d4e-a0ba-8463">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1216-f35b-7fe4-1408"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b694-c348-2ab8-1c88"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Blades" hidden="false" id="d105-8e42-6ee8-6301">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f939-e2e5-0e34-bf13"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd61-be21-225a-991e"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c4e0-d867-0c6f-e9e0">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stars" hidden="false" id="d559-e57b-244a-96b4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31c3-eb5b-4efc-5b53"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d3b-1a51-7cf9-9b7b"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Stars" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="2b84-92ae-4f3f-6c5f">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Krowch’t" hidden="false" id="c8ae-7813-502a-42bb">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="470e-05f0-7b65-cebd"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8647-5f51-6d68-89bf"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Blades" hidden="false" id="fcb0-91f8-f48d-3abb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8533-510b-d642-fa85"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41e5-7e4d-a2d3-5451"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c37d-33c4-41b1-e57f">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Stars" hidden="false" id="c8f7-f0fc-2fad-e2e9">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe44-6566-68fe-91ab"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c676-773e-1fda-a83a"/>
+              </constraints>
+              <profiles>
+                <profile name="Poisoned Stars" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="e665-7898-fc48-74fe">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Spiteclaw&apos;s Swarm" hidden="false" id="6459-a4be-e73f-7222" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="c0d4-b0a7-4a18-e75c" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="ae8a-2218-91ec-043b" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="36f5-fa55-18f8-5b54" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="ca67-ddc0-b0b8-9d4b" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="SKAVEN" hidden="false" id="3ba0-0c9e-e7c4-d67e" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="VERMINUS" hidden="false" id="8dfb-9d93-ab00-5481" targetId="e0fb-7194-508-f33b" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Spiteclaw&apos;s Swarm" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="9d8f-4d2e-0b02-aac1">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Seething Swarm" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e200-ec20-587f-3a43">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can return D3 slain models to this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Krrk the Almost-trusted" hidden="false" id="bfc1-3cff-f7a4-acce">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b18e-e052-8426-dd65"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9e2-a04e-b625-0283"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rusty Weapon" hidden="false" id="78e0-904b-aafe-ad2d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5831-72ec-57a3-3f6f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9ee-081a-b287-52dd"/>
+              </constraints>
+              <profiles>
+                <profile name="Rusty Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="15c6-1f09-28f1-1c1d">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Skritch Spiteclaw" hidden="false" id="864c-474d-2716-ab8d">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5487-4622-2746-cadb"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24b3-2c96-2970-54fc"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Wicked Halberd" hidden="false" id="a7be-44aa-cfac-afa6">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8cb6-eb08-48a1-ec28"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63d8-c0f2-ed2c-31d8"/>
+              </constraints>
+              <profiles>
+                <profile name="Wicked Halberd" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="169c-54c6-3420-580a">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="The Lurking Skaven" hidden="false" id="b516-24bc-acaa-c828">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6179-ea1e-7084-de9d"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c8e-7ea3-f2c9-c73c"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rusty Weapon" hidden="false" id="0ca1-147b-2169-e73d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a336-c065-c858-6296"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bde4-dc72-1149-8ee2"/>
+              </constraints>
+              <profiles>
+                <profile name="Rusty Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a62b-6a78-1dff-2ef4">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="The Hungering Skaven" hidden="false" id="0ec0-3cb8-203e-6a67">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="672c-21a7-211f-add9"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3171-820a-7036-b9d3"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rusty Weapon" hidden="false" id="4c06-8b6a-7ec4-7ca7">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bddb-9eed-03f8-83b3"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5ae-5844-87f7-b357"/>
+              </constraints>
+              <profiles>
+                <profile name="Rusty Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="708a-2551-9712-74de">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="The Festering Skaven" hidden="false" id="f296-ae17-cc28-ee77">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2de0-b64e-98e3-c09e"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="754a-8f6a-cbee-ed5b"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rusty Weapon" hidden="false" id="c44b-0528-eb19-5ecb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1666-af9c-d41f-e334"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1d2-a13b-3c82-fa2f"/>
+              </constraints>
+              <profiles>
+                <profile name="Rusty Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c69d-10c7-2c28-cd53">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <modifiers>
