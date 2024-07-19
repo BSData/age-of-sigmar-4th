@@ -1816,6 +1816,7 @@ In addition, until the start of your next turn, roll a dice each time this unit
         <categoryLink name="WIZARD (1)" hidden="false" id="9a-73a0-6b08-bee2" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
         <categoryLink name="ARCANITE" hidden="false" id="24f0-b169-dd63-617a" targetId="4fa7-56fe-431f-fd98" primary="false"/>
         <categoryLink name="WARFLOCK" hidden="false" id="8a95-c895-a1a9-4efb" targetId="33cc-ab90-fc8f-69ec" primary="false"/>
+        <categoryLink name="DISC OF TZEENTCH" hidden="false" id="e61d-d626-c142-e639" targetId="6960-3f0d-5b0-2ec4" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Tzaangor Shaman" hidden="false" id="db2-d6a-1e63-f8b4">
@@ -3236,6 +3237,575 @@ In addition, until the start of your next turn, roll a dice each time this unit
             <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a2d7-2ed6-c2c1-60c6"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8fce-8b92-cc00-0332"/>
           </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Eyes of the Nine" hidden="false" id="b399-11ba-9505-07ff" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="ea50-b0fa-ac49-ad84" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="8d26-e212-fe1a-9099" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="9130-120e-1c02-176d" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="2265-0fe9-4e5b-9e20" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="DISCIPLES OF TZEENTCH" hidden="false" id="ab13-299d-dfeb-002e" targetId="d64d-ec64-3cf-cc4" primary="false"/>
+        <categoryLink name="ARCANITE" hidden="false" id="8215-d392-302b-c2d3" targetId="4fa7-56fe-431f-fd98" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="790c-a77c-b30d-5669" targetId="319b-38ee-d10d-e800" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Eyes of the Nine" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="ce73-5327-539b-3a4c">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Power Leech" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4898-fe21-0d7f-ba66">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit’s **Vortemis the All-seeing** is on the battlefield, it has **^^Wizard (1)^^**.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Brimstone Horror" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d5f8-8f27-c239-f421">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit’s **Brimstone Horror** is a token. When this unit’s **Blue Horror** is slain, place this unit’s **Brimstone Horror** on the battlefield. Add 1 to the Damage characteristic of this unit’s **Mighty Sorcerous Bolt** while its **Brimstone Horror** is on the battlefield. If you make an unmodified save roll of 1 for this unit, remove this unit’s **Brimstone Horror** from the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Vortemis the All-seeing" hidden="false" id="c3b4-2f09-db15-a2a4">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a0a2-5535-85b9-3f2d"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3107-4986-fb9a-1a75"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Arcanite Weapons" hidden="false" id="9d99-30cf-4ca0-7a81">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7b1-faf8-ee0f-1a26"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fc7-f859-0268-d88e"/>
+              </constraints>
+              <profiles>
+                <profile name="Arcanite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0987-aafd-9ca4-9fa5">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mighty Sorcerous Bolt" hidden="false" id="e55f-ccbc-1fa6-f1d3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f97-f164-e6b4-622c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9465-19de-37f0-8a18"/>
+              </constraints>
+              <profiles>
+                <profile name="Mighty Sorcerous Bolt" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="c8ff-e594-f5a5-04d2">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="fe3a-1b64-c3c8-44fe" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29bf-e594-8664-2876" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="3166-7786-36e3-5cab" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8392-83ca-bccd-cc09"/>
+                    <constraint type="max" value="1" field="selections" scope="b399-11ba-9505-07ff" shared="true" id="8ddc-9823-c45e-07b6" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="K’charik" hidden="false" id="3b3c-ea65-52be-5468">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83d9-20aa-f491-5a14"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41e1-662e-801a-54ee"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Arcanite Weapons" hidden="false" id="ee7f-518a-7b06-fe61">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed46-d0a1-4c1f-4893"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="267b-bd4c-5c72-65e2"/>
+              </constraints>
+              <profiles>
+                <profile name="Arcanite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="99c6-4af9-e6e0-ae12">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mighty Sorcerous Bolt" hidden="false" id="8e2c-af3d-f01f-3508">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f720-82af-d846-eee6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1f5-f97a-ef98-a0c4"/>
+              </constraints>
+              <profiles>
+                <profile name="Mighty Sorcerous Bolt" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="c487-e82a-f4b9-5fea">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Narvia" hidden="false" id="dc30-e153-c644-0258">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7348-ad35-1e1d-05c8"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a18-58f8-e5cf-e562"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Arcanite Weapons" hidden="false" id="0255-1a90-2725-5ced">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be84-58e1-a6ff-aa4e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae56-3c1a-acb3-9b32"/>
+              </constraints>
+              <profiles>
+                <profile name="Arcanite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a9ff-00f2-ece8-c57b">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mighty Sorcerous Bolt" hidden="false" id="e80c-e92a-7ab9-bf17">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b75d-7949-d7b4-47d9"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c372-8dda-f296-59c6"/>
+              </constraints>
+              <profiles>
+                <profile name="Mighty Sorcerous Bolt" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="beba-03bf-a0cc-2bc1">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Turosh" hidden="false" id="2e5b-6b54-89dd-b83d">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f1bf-95fb-ccd2-8469"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22a2-8020-ac57-dc75"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Arcanite Weapons" hidden="false" id="1988-edca-1a27-42f5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e2c-0b16-8939-f882"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1ea-3c7d-e252-8828"/>
+              </constraints>
+              <profiles>
+                <profile name="Arcanite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="dacd-1563-7c7a-5358">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mighty Sorcerous Bolt" hidden="false" id="200e-44f6-c315-2c8a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5e9-de19-8906-d4ef"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75d0-0bd7-5c81-6efe"/>
+              </constraints>
+              <profiles>
+                <profile name="Mighty Sorcerous Bolt" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="da52-77c1-8853-254f">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Blue Horror" hidden="false" id="c034-86fb-4c3d-edba">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9bd-0b17-2e15-ba14"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="857c-006b-5fd2-245d"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Arcanite Weapons" hidden="false" id="534c-020b-4877-dcd3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d402-be3d-52db-1f06"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08d9-6051-5ee7-5528"/>
+              </constraints>
+              <profiles>
+                <profile name="Arcanite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7f90-71fd-f637-6a2c">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mighty Sorcerous Bolt" hidden="false" id="1889-8115-408b-9c4a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8dbf-1e83-adc9-fe56"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70b5-632c-a683-3da4"/>
+              </constraints>
+              <profiles>
+                <profile name="Mighty Sorcerous Bolt" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="4cb2-e6df-b770-9213">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ephilim&apos;s Pandaemonium" hidden="false" id="16f4-4752-ac83-17ae" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="393d-1cc7-f268-7e7a" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="8495-7279-b8ac-7a4a" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="562a-3ebc-a5a3-bc07" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="0987-53c6-9846-4fa3" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="73b9-bce0-3e4d-5f31" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="8fd9-aba4-14b3-7b98" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="DISCIPLES OF TZEENTCH" hidden="false" id="4ac3-3dd0-efff-2a50" targetId="d64d-ec64-3cf-cc4" primary="false"/>
+        <categoryLink name="DAEMON" hidden="false" id="dfa5-fce5-c36d-4167" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="763c-5859-2f9d-5723" targetId="319b-38ee-d10d-e800" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Ephilim&apos;s Pandaemonium" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="5bc4-b866-a2c2-2f8e">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Power Leech" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e145-3ad5-f780-3624">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. Allocate a number of damage points to this unit equal to the roll (ward rolls cannot be made for those damage points). Then, add 2 to the Attacks characteristic of this unit’s ranged weapons for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+        <profile name="Keeper of the Pandaemonium" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="eacf-6ed8-4f05-6617">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You can return D3 slain models to this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ephilim the Unknowable" hidden="false" id="c329-fce6-8be7-29b6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1031-7377-21fe-a81b"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a2c-8174-5cba-52a3"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Talons" hidden="false" id="5f5b-53e6-666b-4dca">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36f7-7916-30ac-938c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63dd-ab46-5399-b98e"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonic Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="542a-9239-3d0c-56e1">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warping Wyrdfire" hidden="false" id="f6e7-e6be-d9b0-ed2a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba01-0751-5b80-874a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8413-1062-c3e0-f373"/>
+              </constraints>
+              <profiles>
+                <profile name="Warping Wyrdfire" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="e757-cb09-d500-a28b">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame, Anti-**^^Unique^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="95b1-87da-7230-9898" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3eb5-237c-38ac-f1be" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="6cf8-d182-192a-7b50" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c75-2298-468c-739f"/>
+                    <constraint type="max" value="1" field="selections" scope="16f4-4752-ac83-17ae" shared="true" id="9dcb-5e3e-86d0-974b" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Flamespooler" hidden="false" id="a2e2-e3a2-1e09-1e3c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1355-ab06-29db-4b59"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="733f-6009-37dd-f167"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Talons" hidden="false" id="d7f6-f7da-9d27-ad51">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9041-dc2d-f71f-3028"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9721-a883-d5d0-0d21"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonic Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d528-c8ee-3057-8637">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warping Wyrdfire" hidden="false" id="cb72-f9bf-ee23-d7e1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f34a-d9b6-9ccc-e84a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e0a-3ac3-e559-205a"/>
+              </constraints>
+              <profiles>
+                <profile name="Warping Wyrdfire" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="861e-489f-838b-be84">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame, Anti-**^^Unique^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Kindlefinger" hidden="false" id="c59f-961b-8605-f7ae">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d2d-73ff-db93-cbfc"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1718-6e88-a81a-5230"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Talons" hidden="false" id="2489-0452-d3cd-f540">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="398c-a032-250c-54db"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c595-b334-1ef3-00b7"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonic Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="4b04-a714-c8ee-5c99">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warping Wyrdfire" hidden="false" id="7195-e6d3-735d-109d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce90-7c16-609f-8eaf"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df60-8baa-1338-ce32"/>
+              </constraints>
+              <profiles>
+                <profile name="Warping Wyrdfire" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="273e-67c3-3ee0-6b94">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame, Anti-**^^Unique^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Spawnmaw" hidden="false" id="39de-faf1-0d46-4807">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d926-6073-ea09-1a21"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="98df-ffb0-769a-88a2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warping Wyrdfire" hidden="false" id="bfcc-34cb-1547-21e1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0075-a92f-0c57-8d0e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaaf-fe06-fe67-15f5"/>
+              </constraints>
+              <profiles>
+                <profile name="Warping Wyrdfire" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="b55a-0f8f-b389-7411">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame, Anti-**^^Unique^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Talons" hidden="false" id="8fcd-d439-8e23-bda7">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b627-e42f-2d3e-097d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d9a-d98b-9c5a-2d0c"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonic Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8698-e90e-be16-b009">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Apo’trax, the Starefysh" hidden="false" id="687b-2e3c-a32e-65fb">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0d79-2f24-4abc-27db"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3f17-c313-7ce6-34fc"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Talons" hidden="false" id="4d1d-7ca3-10e9-b159">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7d6-36b3-e53a-6ad0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd61-a18f-b0c5-ec8b"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonic Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="28ff-e8db-57b0-5b66">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warping Wyrdfire" hidden="false" id="6611-96b5-b47f-aa4e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="06a1-a82f-0299-e874"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5eb1-1d08-5a9c-a58b"/>
+              </constraints>
+              <profiles>
+                <profile name="Warping Wyrdfire" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="a9b3-f7c2-63c2-4c5b">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdfame, Anti-**^^Unique^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <modifiers>

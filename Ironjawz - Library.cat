@@ -28,7 +28,7 @@
         <categoryLink name="DESTRUCTION" hidden="false" id="92a2-208b-6c4e-5dcc" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="ba08-ff07-52ea-2f46" targetId="75d6-6995-dfcc-3898" primary="false"/>
         <categoryLink name="IRONJAWZ" hidden="false" id="797c-5013-c09e-aae4" targetId="c1ca-4b17-3512-89f" primary="false"/>
-        <categoryLink name="PRIEST (1)" hidden="false" id="f9af-5da6-1993-9c1d" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="1ed5-2f1b-914e-03cf" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e4d-27cc-1c01-9c2b" includeChildSelections="true"/>
@@ -1602,6 +1602,282 @@ Add the number of **momentum points** this unit has to the Damage characteristi
           </constraints>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Morgok&apos;s Krushas" hidden="false" id="5e0d-b8d1-f5e7-f1df" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="d6ad-5b06-4546-6def" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="1289-ccb5-2646-aad7" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="1006-a7a9-6364-359c" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="DESTRUCTION" hidden="false" id="e876-4dc8-5901-c2fa" targetId="9057-5a29-dda5-3c28" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="2758-88d5-6851-20d6" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="IRONJAWZ" hidden="false" id="ac50-42bb-849c-1120" targetId="c1ca-4b17-3512-89f" primary="false"/>
+        <categoryLink name="BRUTE" hidden="false" id="8bc3-b791-89d4-cbb5" targetId="2461-b51f-dc6-3114" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Morgok&apos;s Krushas" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="7f80-8024-548b-d1c7">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="In Their Element" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="11d6-76d4-3745-26b0">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The first time an enemy **^^Monster^^** is destroyed by this unit, add 1 to wound rolls for this unit’s attacks for the rest of the battle.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Morgok" hidden="false" id="5f22-aae5-4ea7-58d8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce09-0c37-c03b-760c"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Krusha Weapons" hidden="false" id="b660-efc8-2b36-7adc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="208a-483f-fa17-bf32"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="813d-fdc8-b16b-1b39"/>
+              </constraints>
+              <profiles>
+                <profile name="Krusha Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5f5c-0fe0-dbf0-6244">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="73fe-4548-6ce4-5ce8" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f120-b323-f29e-effc" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="fdf6-e941-c2b0-ed0c" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="5e0d-b8d1-f5e7-f1df" shared="true" id="f0fa-cc34-3c40-5ebd"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2c7-6066-4180-f879"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Thugg" hidden="false" id="e727-e28e-89d3-0a2c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9586-5fb9-dace-3869"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Krusha Weapons" hidden="false" id="d369-df90-71bb-fd76">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b663-f1fa-ba48-0c9f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67a2-8346-2b0e-e5ea"/>
+              </constraints>
+              <profiles>
+                <profile name="Krusha Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a2c4-fc38-8703-b0ba">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="&apos;Ardskull" hidden="false" id="2850-eb11-c815-7ab4">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="042b-3c00-9d4b-d302"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Krusha Weapons" hidden="false" id="d721-26e0-1de7-5f07">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="98df-836d-5416-61cb"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d68-e3df-c539-169d"/>
+              </constraints>
+              <profiles>
+                <profile name="Krusha Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="084b-e203-35da-65d3">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ironskull&apos;s Boyz" hidden="false" id="fd56-6594-4cd4-c765" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="03b7-e657-fafe-18f2" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="4bc1-99c5-d4ed-7c7e" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="b696-1cdb-59e3-4a06" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="DESTRUCTION" hidden="false" id="13be-7f7f-01c0-f88f" targetId="9057-5a29-dda5-3c28" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="135e-12fa-b54b-8d29" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="IRONJAWZ" hidden="false" id="15e5-9e1a-b72a-1e54" targetId="c1ca-4b17-3512-89f" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Ironskull&apos;s Boyz" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="41a4-3262-ebaf-8e7d">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Dead &apos;Ard" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e848-94c5-1e49-8a4d">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from wound rolls for attacks that target this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Gurzag Ironskull" hidden="false" id="f28c-c51e-c58a-936f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c179-606d-84a4-7c1b"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ardboy Weapons" hidden="false" id="6d91-f338-bdb2-7f94">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25b2-c54d-951e-29d7"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="202d-b759-de0a-bafa"/>
+              </constraints>
+              <profiles>
+                <profile name="Ardboy Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9d87-97e3-9e08-28ff">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-charge (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="f4b9-585a-3cdd-fd85" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="baba-e8dd-e26d-a2b5" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="5c4c-d7a4-ccb0-7511" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="fd56-6594-4cd4-c765" shared="true" id="41fb-80c5-a369-842c"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3743-0d1a-c49c-e5a2"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Basha" hidden="false" id="f118-7ca4-aa69-62de">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a4bc-c477-abd5-1f84"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ardboy Weapons" hidden="false" id="3d2f-1f8f-bd72-ce59">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="227b-5d44-4a70-56be"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f87f-c5c6-52c4-0613"/>
+              </constraints>
+              <profiles>
+                <profile name="Ardboy Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a813-f9db-729a-4874">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-charge (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Hakka" hidden="false" id="0eb4-0971-fab3-c499">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36ec-ef00-af05-55cf"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ardboy Weapons" hidden="false" id="2236-fc53-1fab-faec">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a549-4ab4-8a76-7dc4"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e6b-cefb-f411-efc8"/>
+              </constraints>
+              <profiles>
+                <profile name="Ardboy Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b428-ecc4-375f-93df">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-charge (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Bonekutta" hidden="false" id="739f-7cfe-2a3e-9f31">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="93ed-aa5e-45c0-8f6f"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ardboy Weapons" hidden="false" id="874b-f6d4-aa2b-49f5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f918-0652-3cbe-fcb2"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e23e-bcb8-2a6a-8550"/>
+              </constraints>
+              <profiles>
+                <profile name="Ardboy Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d4a0-1320-e836-1f17">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-charge (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

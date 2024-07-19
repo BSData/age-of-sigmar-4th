@@ -1035,18 +1035,18 @@ If this unit is destroyed while it is in combat with its quarry, inflict 3 mort
         <categoryLink name="MUSICIAN (1/10)" hidden="false" id="8522-552b-b33-3c65" targetId="eeed-ef77-b0d-fa9d" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Auric Hearthguard" hidden="false" id="a968-db0-69a-93c2" defaultAmount="1,9">
+        <selectionEntry type="model" import="true" name="Auric Hearthguard" hidden="false" id="a968-db0-69a-93c2" defaultAmount="1,4">
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="false" id="1e13-5810-757b-f08e"/>
-            <constraint type="max" value="10" field="selections" scope="parent" shared="false" id="d93a-1f9c-95d3-21a9"/>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="false" id="1e13-5810-757b-f08e"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="false" id="d93a-1f9c-95d3-21a9"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="10" field="1e13-5810-757b-f08e">
+            <modifier type="increment" value="5" field="1e13-5810-757b-f08e">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="c2d0-1db-e516-2344" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" value="10" field="d93a-1f9c-95d3-21a9">
+            <modifier type="increment" value="5" field="d93a-1f9c-95d3-21a9">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="c2d0-1db-e516-2344" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
@@ -1816,6 +1816,167 @@ If this unit is destroyed while it is in combat with its quarry, inflict 3 mort
 Cover, Impassible, Obscuring**</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="The Chosen Axes" hidden="false" id="79e4-f929-c8d1-d8cf" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="ORDER" hidden="false" id="192a-602f-173c-0967" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="a9fc-553b-2068-0f7e" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="9784-b3f5-b815-7aa5" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="0985-5fc5-83c7-05b8" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="a84e-0935-a032-858b" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="124a-7938-caa6-7a91" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="DUARDIN" hidden="false" id="a2b9-b776-2ea2-0903" targetId="72e3-7b1b-cb94-4cbd" primary="false"/>
+        <categoryLink name="FYRESLAYERS" hidden="false" id="2df0-55ef-6ab1-32c3" targetId="6a02-a995-fd92-d806" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="The Chosen Axes" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="ab13-874a-d1f2-4dfc">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Berserk Fury" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="293d-b182-cd03-b142">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Fjul&apos;s Retinue" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="92cf-c84d-383f-a7bb">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit’s **Fjul-Grimnir** is on the battlefield, ignore the first damage point that would be allocated to this unit each phase.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Tefk Flamebearer" hidden="false" id="dc29-8ff2-04a4-55ab">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfd3-2154-6cb2-2915"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e50e-4c7b-8c56-9149"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fyresteel Weapons" hidden="false" id="25a6-2120-906e-2ac7">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86c5-3561-56aa-e3e7"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="812d-312c-1e11-a7bb"/>
+              </constraints>
+              <profiles>
+                <profile name="Fyresteel Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="fcf6-8f31-cee4-b99b">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Fjul-Grimnir" hidden="false" id="3467-467a-1686-ed81">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d09d-c8ec-7f71-4714"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f78-9317-5d7f-736d"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Latchkey Grandaxe" hidden="false" id="a4aa-212e-c6e4-ac91">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b07a-4a0c-b1c7-5b67"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb1d-b250-2f8f-cdb2"/>
+              </constraints>
+              <profiles>
+                <profile name="Latchkey Grandaxe" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="33fe-3986-b098-d58a">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="981b-6612-7c20-b3a0" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e4ab-f05a-2cd8-a22e"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="8fae-34a7-4bcf-2174" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="79e4-f929-c8d1-d8cf" shared="true" id="e9e9-a2f1-722c-a548" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Mad Maegrim" hidden="false" id="501c-9ef0-8f36-b241">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2144-9ebd-8696-c989"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc97-a0e9-bee3-39ef"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fyresteel Weapons" hidden="false" id="62f6-59fd-f40d-80c7">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e3f-6b24-bac4-049d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1092-11f0-845f-203c"/>
+              </constraints>
+              <profiles>
+                <profile name="Fyresteel Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2ff0-e3a1-991d-193f">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Vol Orrukbane" hidden="false" id="c411-d757-ff37-ec0c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4c3-69c1-3cff-97d8"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5980-811d-b2a3-f506"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fyresteel Weapons" hidden="false" id="e8c1-886b-20b8-9848">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="40f0-7b82-83c5-a650"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2313-52e2-484f-0cab"/>
+              </constraints>
+              <profiles>
+                <profile name="Fyresteel Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d728-8b39-e61e-5096">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
