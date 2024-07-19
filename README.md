@@ -11,15 +11,9 @@ Age of Sigmar 4th
 
 ## Overview ##
 
-__What's this?__
+__How do I load this in Battlescribe?__
 
-BSData organisation created this project. It's a GitHub repository of datafiles.
-Maintained by community, in no way endorsed by BattleScribe or any other company/publisher. If you want
-to develop - cool! We need you! Take a look at [our homepage][BSData.net]
-
-__Okay, nice project. Is it actually working?__ _I just want those files..._
-
-Yeah! We have it hosted on AppSpot. Take a look: [BattleScribe Data on Appspot][]
+Battlescribe is abandonware and this dataset no longer supports it. If you really want, you can load it manually, but it will be extremely glitchy (e.g. reinforcing units does not double their points cost). Use New Recruit instead.
 
 __I found a bug!__ / *I have another request*
 
@@ -28,7 +22,7 @@ Great, thank you! Please [Report a bug][bug report] - you can also suggest enhan
 ## Links ##
 
 * [BSData organization homepage][BSData.net]
-* [BattleScribe app homepage](https://www.battlescribe.net/)
+* [New Recruit app homepage](https://www.newrecruit.eu/)
 
 [BSData.net]: https://www.bsdata.net/
 [bug report]: https://github.com/BSData/age-of-sigmar-4th/issues/new/choose
