@@ -1118,7 +1118,7 @@
                     </conditionGroup>
                   </conditionGroups>
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="1ed8-2e23-1563-c119" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1663,6 +1663,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="abcb-73d0-2b6c-4f17" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="4063-b3a6-e7e1-383f" shared="true"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
@@ -1672,7 +1673,7 @@
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c203-51a0-3d44-6b07" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="376a-6b97-8699-dd59" childId="c203-51a0-3d44-6b07" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>

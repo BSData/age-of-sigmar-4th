@@ -2254,7 +2254,7 @@
         </profile>
         <profile name="Vessel of Sigmar" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="ff25-d46d-a55f-3561">
           <characteristics>
-            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Once Per Battle (Army), Any Combat Phase</characteristic>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
             <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
             <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Make a chanting roll of D6.</characteristic>
             <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Pick 1 of the following effects to apply until the start of your next turn. Pick up to 2 different effects instead if the chanting roll was 10+.
@@ -2792,7 +2792,7 @@
         <categoryLink name="DUARDIN" hidden="false" id="96a8-a0e1-1e1a-93d6" targetId="72e3-7b1b-cb94-4cbd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Hammerer" hidden="false" id="5f94-76db-5f9b-679c" defaultAmount="1,1,8">
+        <selectionEntry type="model" import="true" name="Hammerer" hidden="false" id="5f94-76db-5f9b-679c" defaultAmount="1,1,1,7">
           <constraints>
             <constraint type="min" value="10" field="selections" scope="parent" shared="false" id="376c-15b2-3acf-c629"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="false" id="7f17-6ee7-5968-e980"/>
@@ -2829,6 +2829,47 @@
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="fc77-6144-c553-fcf3" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="def1-39a8-599e-88f0"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="30e9-a407-7229-564f" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="e8a7-8dbf-12ec-5753" shared="true" id="f3cf-e616-39f5-dfd7" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c436-38e7-753e-740f"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="b1dc-a025-3253-f43a" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="e8a7-8dbf-12ec-5753" shared="true" id="abb8-41bd-5796-38d6" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff46-1aa5-b57f-af12"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="abb8-41bd-5796-38d6">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Musician" hidden="false" id="7adb-9d64-3d1a-b843" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="e8a7-8dbf-12ec-5753" shared="true" id="0eb3-2622-4964-5862" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da89-fd52-dab5-81a5"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="0eb3-2622-4964-5862">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
