@@ -4,7 +4,7 @@
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3">
+    <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4">
       <characteristicTypes>
         <characteristicType id="60e-35aa-31ed-e488" name="Atk"/>
         <characteristicType id="26dc-168-b2fd-cb93" name="Hit"/>
@@ -14,7 +14,7 @@
         <characteristicType id="eda3-7332-5db1-4159" name="Ability"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ranged Weapon" hidden="false" id="1fd-a42f-41d3-fe05">
+    <profileType name="Ranged Weapon" hidden="false" id="1fd-a42f-41d3-fe05" sortIndex="3">
       <characteristicTypes>
         <characteristicType id="c6b5-908c-a604-1a98" name="Rng"/>
         <characteristicType id="aa17-4296-2887-e05d" name="Atk"/>
@@ -25,13 +25,13 @@
         <characteristicType id="d793-3dd7-9c13-741e" name="Ability"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788">
+    <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5">
       <characteristicTypes>
         <characteristicType id="b977-7c5e-33b2-428e" name="Keywords"/>
         <characteristicType id="fd7f-888d-3257-a12b" name="Effect"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef">
+    <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8">
       <characteristicTypes>
         <characteristicType id="de6f-d57b-248a-83be" name="Timing"/>
         <characteristicType id="9fc7-b0f6-d018-a608" name="Casting Value"/>
@@ -40,7 +40,7 @@
         <characteristicType id="353f-565e-c351-1cf2" name="Keywords"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195">
+    <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9">
       <characteristicTypes>
         <characteristicType id="76bf-8126-64d4-c709" name="Timing"/>
         <characteristicType id="f192-6780-8138-9cef" name="Chanting Value"/>
@@ -49,7 +49,7 @@
         <characteristicType id="e3d8-f58b-e4e0-8e9d" name="Keywords"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872">
+    <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7">
       <characteristicTypes>
         <characteristicType id="736-6e3a-d0b5-a1b0" name="Timing"/>
         <characteristicType id="a49e-3082-e2a6-e802" name="Cost"/>
@@ -58,7 +58,7 @@
         <characteristicType id="445d-f443-5448-e7ce" name="Keywords"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc">
+    <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6">
       <characteristicTypes>
         <characteristicType id="652c-3d84-4e7-14f4" name="Timing"/>
         <characteristicType id="bad3-f9c5-ba46-18cb" name="Declare"/>
@@ -67,7 +67,7 @@
         <characteristicType id="1b32-c9d6-3106-166b" name="Used By"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2">
+    <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2">
       <characteristicTypes>
         <characteristicType id="fed0-d1b3-1bb8-c501" name="Move"/>
         <characteristicType id="96be-54ae-ce7b-10b7" name="Health"/>
@@ -75,7 +75,7 @@
         <characteristicType id="6c6f-8510-9ce1-fc6e" name="Control"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40">
+    <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40" sortIndex="1">
       <characteristicTypes>
         <characteristicType name="Move" hidden="false" id="c28a-6000-2a0b-e7cf"/>
         <characteristicType name="Health" hidden="false" id="d1b9-3068-515-131e"/>
