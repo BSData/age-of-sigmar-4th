@@ -1719,23 +1719,17 @@
             <characteristic name="Effect" id="b137-be1-a320-9e97" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
           </characteristics>
         </profile>
+        <profile name="Amberbone Claws and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="245d-e7e2-477e-edb0">
+          <characteristics>
+            <characteristic name="Atk" id="89de-6c24-68b4-75ea" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
+            <characteristic name="Hit" id="5da4-f289-2fb3-1145" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" id="d803-430c-8c66-2f9e" hidden="false" typeId="61c1-22cc-40af-2847">2+</characteristic>
+            <characteristic name="Rnd" id="4303-a4d1-e952-92b9" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
+            <characteristic name="Dmg" id="20b7-e36f-73be-f2f8" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
+            <characteristic name="Ability" id="368e-d428-40cf-9130" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^Manifestation^^**(+1 Rend)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Melee Weapons" hidden="false" id="97e9-8cbd-ca23-215">
-          <profiles>
-            <profile name="Amberbone Claws and Fangs" hidden="false" id="245d-e7e2-477e-edb0" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Atk" id="89de-6c24-68b4-75ea" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                <characteristic name="Hit" id="5da4-f289-2fb3-1145" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                <characteristic name="Wnd" id="d803-430c-8c66-2f9e" hidden="false" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                <characteristic name="Rnd" id="4303-a4d1-e952-92b9" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                <characteristic name="Dmg" id="20b7-e36f-73be-f2f8" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
-                <characteristic name="Ability" id="368e-d428-40cf-9130" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^Manifestation^^**(+1 Rend)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
       <categoryLinks>
         <categoryLink targetId="bff0-8be9-719f-4afc" id="2445-59d-c23d-d8aa" primary="true" name="MANIFESTATION"/>
         <categoryLink targetId="e7bc-543-4076-553c" id="3ce-2fd3-9f20-2bc" primary="false" name="ENDLESS SPELL"/>
@@ -1779,23 +1773,17 @@
             <characteristic name="Effect" id="69cf-46b6-8a0a-a010" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
           </characteristics>
         </profile>
+        <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
+          <characteristics>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Melee Weapons" hidden="false" id="f873-3055-2b32-708d">
-          <profiles>
-            <profile name="Transmuting Rays" hidden="false" id="aabd-6cde-e7a9-d614" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
-              <characteristics>
-                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Soulsnare Shackles" hidden="false" id="dee3-92a0-27e7-252a">
       <categoryLinks>
@@ -1938,42 +1926,32 @@
         </profile>
         <profile name="Dancing Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c08-79dc-f4d5-dc9f">
           <characteristics>
-            <characteristic name="Keywords" id="f0ae-25d4-d36f-863f" hidden="false" typeId="b977-7c5e-33b2-428e">**^^Core^^**, **^^Move^^**</characteristic>
-            <characteristic name="Effect" id="c8f2-d9ed-c9b2-63b2" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^**uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this MANIFESTATION (ward rolls cannot be made for that damage point).</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^**uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this MANIFESTATION (ward rolls cannot be made for that damage point).</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
+          <characteristics>
+            <characteristic name="Rng" id="6450-3ecf-55e3-c5f9" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+            <characteristic name="Atk" id="7fb3-4e62-f6bb-248f" hidden="false" typeId="aa17-4296-2887-e05d">D6</characteristic>
+            <characteristic name="Hit" id="fe8a-e579-8c8c-afce" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+            <characteristic name="Wnd" id="beee-ba5e-b27c-bbcd" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+            <characteristic name="Rnd" id="efad-96a3-21c3-4c0e" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
+            <characteristic name="Dmg" id="25dd-ea24-dd6-e8d2" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+            <characteristic name="Ability" id="15cb-97de-41d8-b213" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Flaming Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="64ae-5cff-df66-8a57">
+          <characteristics>
+            <characteristic name="Atk" id="748c-6d49-32ec-6c3e" hidden="false" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" id="55d-7e5d-a388-5073" hidden="false" typeId="26dc-168-b2fd-cb93">2+</characteristic>
+            <characteristic name="Wnd" id="c0f1-6ce9-7e5b-8dab" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" id="4168-d28b-2d84-2222" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
+            <characteristic name="Dmg" id="42b8-d9c1-8b81-cd8d" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" id="6aec-c94e-c3df-b09a" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Ranged Weapons" hidden="false" id="f8e4-da7b-9a5e-8f69">
-          <profiles>
-            <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
-              <characteristics>
-                <characteristic name="Rng" id="6450-3ecf-55e3-c5f9" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                <characteristic name="Atk" id="7fb3-4e62-f6bb-248f" hidden="false" typeId="aa17-4296-2887-e05d">D6</characteristic>
-                <characteristic name="Hit" id="fe8a-e579-8c8c-afce" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
-                <characteristic name="Wnd" id="beee-ba5e-b27c-bbcd" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                <characteristic name="Rnd" id="efad-96a3-21c3-4c0e" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
-                <characteristic name="Dmg" id="25dd-ea24-dd6-e8d2" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                <characteristic name="Ability" id="15cb-97de-41d8-b213" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-        <infoGroup name="Melee Weapons" hidden="false" id="c3da-ee7d-8ba1-2fe">
-          <profiles>
-            <profile name="Flaming Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="64ae-5cff-df66-8a57">
-              <characteristics>
-                <characteristic name="Atk" id="748c-6d49-32ec-6c3e" hidden="false" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-                <characteristic name="Hit" id="55d-7e5d-a388-5073" hidden="false" typeId="26dc-168-b2fd-cb93">2+</characteristic>
-                <characteristic name="Wnd" id="c0f1-6ce9-7e5b-8dab" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                <characteristic name="Rnd" id="4168-d28b-2d84-2222" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                <characteristic name="Dmg" id="42b8-d9c1-8b81-cd8d" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                <characteristic name="Ability" id="6aec-c94e-c3df-b09a" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Horrorghast" hidden="false" id="f935-2383-94ba-3be2">
       <categoryLinks>
@@ -1999,38 +1977,28 @@
             <characteristic name="Keywords" id="fb37-34f1-363a-6f0d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
           </characteristics>
         </profile>
+        <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
+          <characteristics>
+            <characteristic name="Atk" hidden="false" id="902f-6fd4-500f-e52b" typeId="60e-35aa-31ed-e488">4</characteristic>
+            <characteristic name="Hit" hidden="false" id="d809-3a12-584e-3c42" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" hidden="false" id="cb9a-ea57-a1b7-4e59" typeId="61c1-22cc-40af-2847">4+</characteristic>
+            <characteristic name="Rnd" hidden="false" id="6b30-70aa-d9c0-f34" typeId="eccc-10fa-6958-fb73">-</characteristic>
+            <characteristic name="Dmg" hidden="false" id="387f-1bbd-df77-2b6e" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" hidden="false" id="58ae-32b1-a14e-798e" typeId="eda3-7332-5db1-4159">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scream of Terror" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="263b-a289-2895-1180">
+          <characteristics>
+            <characteristic name="Rng" id="ce40-c4d0-f060-bb5b" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+            <characteristic name="Atk" id="3851-81f5-3add-b9ad" hidden="false" typeId="aa17-4296-2887-e05d">6</characteristic>
+            <characteristic name="Hit" id="c6ad-558d-fa4b-a02d" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+            <characteristic name="Wnd" id="5d96-3d1c-8ca0-4f21" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+            <characteristic name="Rnd" id="9613-fe12-ea1f-613b" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
+            <characteristic name="Dmg" id="9fd8-58ab-c2db-eea4" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+            <characteristic name="Ability" id="d792-39ea-e5bd-837" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Melee Weapons" hidden="false" id="8c3d-ca30-4240-e26a">
-          <profiles>
-            <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
-              <characteristics>
-                <characteristic name="Atk" hidden="false" id="902f-6fd4-500f-e52b" typeId="60e-35aa-31ed-e488">4</characteristic>
-                <characteristic name="Hit" hidden="false" id="d809-3a12-584e-3c42" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                <characteristic name="Wnd" hidden="false" id="cb9a-ea57-a1b7-4e59" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                <characteristic name="Rnd" hidden="false" id="6b30-70aa-d9c0-f34" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                <characteristic name="Dmg" hidden="false" id="387f-1bbd-df77-2b6e" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                <characteristic name="Ability" hidden="false" id="58ae-32b1-a14e-798e" typeId="eda3-7332-5db1-4159">-</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-        <infoGroup name="Ranged Weapons" hidden="false" id="8624-8944-5964-1c3b">
-          <profiles>
-            <profile name="Scream of Terror" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="263b-a289-2895-1180">
-              <characteristics>
-                <characteristic name="Rng" id="ce40-c4d0-f060-bb5b" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                <characteristic name="Atk" id="3851-81f5-3add-b9ad" hidden="false" typeId="aa17-4296-2887-e05d">6</characteristic>
-                <characteristic name="Hit" id="c6ad-558d-fa4b-a02d" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
-                <characteristic name="Wnd" id="5d96-3d1c-8ca0-4f21" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                <characteristic name="Rnd" id="9613-fe12-ea1f-613b" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
-                <characteristic name="Dmg" id="9fd8-58ab-c2db-eea4" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                <characteristic name="Ability" id="d792-39ea-e5bd-837" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Malevolent Maelstrom" hidden="false" id="e699-49b7-d2b8-d5fc">
       <categoryLinks>
@@ -2066,23 +2034,17 @@
 This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
+          <characteristics>
+            <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">3</characteristic>
+            <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" hidden="false" id="6e5a-2b17-5419-a645" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+            <characteristic name="Ability" hidden="false" id="d240-195f-8fa2-e599" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Melee Weapons" hidden="false" id="dbce-1659-c429-4ca3">
-          <profiles>
-            <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
-              <characteristics>
-                <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">3</characteristic>
-                <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                <characteristic name="Wnd" hidden="false" id="6e5a-2b17-5419-a645" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                <characteristic name="Ability" hidden="false" id="d240-195f-8fa2-e599" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shards of Valagharr" hidden="false" id="94f6-4321-fd80-f20e">
       <categoryLinks>
@@ -2143,23 +2105,17 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" id="10c3-9bec-a51e-9041" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move**^^</characteristic>
           </characteristics>
         </profile>
+        <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
+          <characteristics>
+            <characteristic name="Atk" hidden="false" id="2685-1d07-362d-1178" typeId="60e-35aa-31ed-e488">3</characteristic>
+            <characteristic name="Hit" hidden="false" id="c445-8dc4-5e85-74f0" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" hidden="false" id="3485-8fed-df5c-7dc8" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" hidden="false" id="e81f-833b-bb77-29ae" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" hidden="false" id="6267-902e-a076-49c" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+            <characteristic name="Ability" hidden="false" id="c79b-9200-2df1-9672" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Melee Weapons" hidden="false" id="ca67-a87a-9f95-7804">
-          <profiles>
-            <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
-              <characteristics>
-                <characteristic name="Atk" hidden="false" id="2685-1d07-362d-1178" typeId="60e-35aa-31ed-e488">3</characteristic>
-                <characteristic name="Hit" hidden="false" id="c445-8dc4-5e85-74f0" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                <characteristic name="Wnd" hidden="false" id="3485-8fed-df5c-7dc8" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                <characteristic name="Rnd" hidden="false" id="e81f-833b-bb77-29ae" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                <characteristic name="Dmg" hidden="false" id="6267-902e-a076-49c" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                <characteristic name="Ability" hidden="false" id="c79b-9200-2df1-9672" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Quicksilver Swords" hidden="false" id="8cde-fafe-2b2a-ced5">
       <categoryLinks>
@@ -2183,23 +2139,17 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Effect" id="6ca7-77df-ead5-1e89" hidden="false" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for damage points inflicted by this **^^Manifestation^^**&apos;s attacks.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
+          <characteristics>
+            <characteristic name="Atk" hidden="false" id="50d2-e059-4608-205" typeId="60e-35aa-31ed-e488">12</characteristic>
+            <characteristic name="Hit" hidden="false" id="e557-5ee7-497d-26f" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+            <characteristic name="Wnd" hidden="false" id="abd6-b4e8-bb4-e965" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" hidden="false" id="e4d-1200-feac-fdae" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" hidden="false" id="9100-fed7-4aae-8971" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" hidden="false" id="bfff-3b78-15cd-8547" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup name="Melee Weapons" hidden="false" id="789a-828-bdaf-f77d">
-          <profiles>
-            <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
-              <characteristics>
-                <characteristic name="Atk" hidden="false" id="50d2-e059-4608-205" typeId="60e-35aa-31ed-e488">12</characteristic>
-                <characteristic name="Hit" hidden="false" id="e557-5ee7-497d-26f" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                <characteristic name="Wnd" hidden="false" id="abd6-b4e8-bb4-e965" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                <characteristic name="Rnd" hidden="false" id="e4d-1200-feac-fdae" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                <characteristic name="Dmg" hidden="false" id="9100-fed7-4aae-8971" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                <characteristic name="Ability" hidden="false" id="bfff-3b78-15cd-8547" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7f34-77c9-597-62c3">
       <profiles>
@@ -2239,6 +2189,94 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
       <categoryLinks>
         <categoryLink name="Command Model" hidden="false" id="dc08-ebbc-3cd5-cbd8" targetId="9c77-5e0b-a20f-d885" primary="false"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Emerald Lifeswarm" hidden="false" id="3071-fc11-4eb8-bbcc">
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="9e9c-897f-632f-ef74" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="dd97-fb7e-6148-444d" targetId="bff0-8be9-719f-4afc" primary="false"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="f7c3-f40c-4961-4a64" targetId="e7bc-543-4076-553c" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="d1e6-fcdb-82e7-b9a7" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Emerald Lifeswarm" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="d532-f4c0-1d71-1a19">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">8&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">5</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Restored Vigour" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2899-7afa-38bc-a40e">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (3)** this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+        <profile name="Bounteous Healing" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5d6d-9bfb-60e3-db42">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit within 3&quot; of this **^^Manifestation^^** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (3)** the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+        <profile name="Swarming Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9a05-9547-1ad1-2bf8">
+          <characteristics>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="41c4-2f6a-0d3c-a23e">
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="9011-7f76-7af6-a7f0" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="7c1e-a735-5c49-f97f" targetId="bff0-8be9-719f-4afc" primary="false"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="1b9c-ac1f-ad9c-5cb6" targetId="e7bc-543-4076-553c" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Ravenak&apos;s Gnashing Jaws" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="7ae7-f962-b679-feaf">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">3D6&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">10</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ravening Hunger" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9b8b-617a-3c69-2af9">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this **^^Manifestation^^** charged this turn, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 10 dice. For each 5+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+        <profile name="Gnashing Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="44ec-0340-a597-8bc5">
+          <characteristics>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wild Form" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f615-ebe3-a14e-0cc7">
+          <characteristics>
+            <characteristic name="Keywords" id="9b1c-24a8-4106-1bc8" hidden="false" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" id="ce62-912e-836b-9d21" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>

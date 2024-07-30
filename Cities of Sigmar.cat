@@ -239,11 +239,11 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
               </characteristics>
             </profile>
-            <profile name="Cinderloud" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="2e13-d3dd-9a26-e85">
+            <profile name="Cindercloud" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="2e13-d3dd-9a26-e85">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Cities of Sigmar Wizard^^** to cast this spell, pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 12&quot; to be the target, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Cities of Sigmar Wizard^^** to cast this spell, pick a visible friendly **^^Cities of Sigmar^^** unit wholly within 18&quot; to be the target, then make a casting roll of 2D6.</characteristic>
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, subtract 1 from the Attacks characteristic of the target’s melee weapons.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
               </characteristics>
@@ -664,25 +664,6 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1fa6-770e-e549-cf7f" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Callis and Toll" hidden="false" id="a96c-fac4-c88e-9f37" type="selectionEntry" targetId="bead-f727-a5cc-fde1">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="ce0c-51c8-f881-2919"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="230"/>
-      </costs>
-    </entryLink>
     <entryLink import="true" name="Steam Tank Commander" hidden="false" id="d04d-eecf-a1c3-22ac" type="selectionEntry" targetId="6bc7-2301-7561-6983">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -713,6 +694,13 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <costs>
         <cost name="pts" typeId="points" value="230"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Cogsmith" hidden="false" id="4ef2-9b6f-2205-6e1a" type="selectionEntry" targetId="89d6-1612-ce3c-50e9">
       <categoryLinks>
@@ -2003,7 +1991,20 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="cc5f-63d1-12b9-4e09">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="f534-437-b727-fa21" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="min" value="-1" field="selections" scope="force" shared="true" id="cc5f-63d1-12b9-4e09"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Wildercorps Hunters" hidden="false" id="b45e-2e9b-f0fa-31e7" type="selectionEntry" targetId="f9e7-7b02-8660-65f7">
       <modifiers>
@@ -2176,6 +2177,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="563d-f275-b579-f2cf"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="c785-e5e0-905e-da39"/>
       </constraints>
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="f8f1-e80-1498-cacd" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
@@ -2187,6 +2189,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e0e7-cf19-75f7-e432"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="dfea-fc81-62d5-01b6"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Prayer Lores" hidden="false" id="6c16-3e5c-d28c-8400" type="selectionEntryGroup" targetId="b0fd-9397-ac0c-dc5f" flatten="true" collective="false"/>
@@ -2198,6 +2201,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b885-ada4-5f10-3388"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="12e4-a12e-c6c7-fb4f"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="7333-fdeb-8ed6-7383" type="selectionEntryGroup" targetId="3f1c-3077-dd34-8efb" flatten="true" collective="false"/>
