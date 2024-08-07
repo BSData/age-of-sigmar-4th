@@ -523,6 +523,12 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3cb-53fb-b710-87f5" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -774,6 +780,12 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b3cb-53fb-b710-87f5" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3cb-53fb-b710-87f5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1666,7 +1678,7 @@
             <categoryLink name="MONSTER" hidden="false" id="e546-86e5-d092-8ae9" targetId="6d54-625c-d063-13e2"/>
             <categoryLink name="WAR MACHINE" hidden="false" id="445a-8590-c2-9290" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="c3ea-d207-7c7-4a01" targetId="926c-df8c-6841-d49e"/>
-            <categoryLink name="BEAST" hidden="false" id="d129-5548-6424-b42a" targetId="b224-8c8e-ca93-9860" type="category"/>
+            <categoryLink name="BEAST" hidden="false" id="d129-5548-6424-b42a" targetId="b224-8c8e-ca93-9860"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fcf-10cf-9ed9-1e32"/>
@@ -2596,6 +2608,8 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
     <publication name="Faction Pack: Skaven" id="40f6-9b64-7daa-d1c8" hidden="false"/>
     <publication name="Battletome Supplement: Stormcast Eternals" id="87c-f122-a891-630e" hidden="false"/>
     <publication name="Battletome Supplement: Bonesplitterz" id="06c5-6322-e810-7967" hidden="false"/>
+    <publication name="White Dwarf Issue 503" id="4a1e-2c36-6a96-9434" hidden="false"/>
+    <publication name="Armies of Renown" id="0578-e89b-7163-86c5" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
@@ -2624,6 +2638,17 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c0a9-3014-a13a-8ee1" targetId="676-2b78-7bbf-ba9c" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="1" field="defaultAmount">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="26d8-61fd-4bf1-5323" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
