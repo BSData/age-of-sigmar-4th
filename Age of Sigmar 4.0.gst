@@ -86,10 +86,31 @@
   </profileTypes>
   <categoryEntries>
     <categoryEntry name="DEATH" hidden="false" id="d484-a2d7-cf4f-c4a0"/>
-    <categoryEntry name="HERO" hidden="false" id="6e72-1656-d554-528a"/>
+    <categoryEntry name="HERO" hidden="false" id="6e72-1656-d554-528a">
+      <infoLinks>
+        <infoLink name="Guarded Hero" id="a27b-f91f-4ad0-d8a4" hidden="false" type="profile" targetId="3bc-444a-5cf8-e4d">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f7bc-b618-4b5d-2bae" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </categoryEntry>
     <categoryEntry name="WIZARD (1)" hidden="false" id="6f28-c3f6-4b1b-8aff"/>
     <categoryEntry name="INFANTRY" hidden="false" id="75d6-6995-dfcc-3898"/>
-    <categoryEntry name="WARD (6+)" hidden="false" id="70a4-383f-421f-52cd"/>
+    <categoryEntry name="WARD (6+)" hidden="false" id="70a4-383f-421f-52cd">
+      <infoLinks>
+        <infoLink name="Ward Save" id="2f4b-a2bc-b51a-2542" hidden="false" type="profile" targetId="ed70-f30-2f5a-747f"/>
+      </infoLinks>
+    </categoryEntry>
     <categoryEntry name="OSSIARCH BONEREAPERS" hidden="false" id="5603-d1-a021-331e"/>
     <categoryEntry name="MORTISAN" hidden="false" id="a2d-c08d-4d7d-fe93"/>
     <categoryEntry name="UNIQUE" hidden="false" id="72ce-2188-70bf-2dbd"/>
@@ -103,8 +124,16 @@
     <categoryEntry name="WARMASTER" hidden="false" id="c203-51a0-3d44-6b07"/>
     <categoryEntry name="MONSTER" hidden="false" id="6d54-625c-d063-13e2"/>
     <categoryEntry name="WIZARD (9)" hidden="false" id="5a9b-95b7-c807-341f"/>
-    <categoryEntry name="FLY" hidden="false" id="b979-4c3e-7d0e-6921"/>
-    <categoryEntry name="WARD (5+)" hidden="false" id="52cc-95fd-6cd3-8f72"/>
+    <categoryEntry name="FLY" hidden="false" id="b979-4c3e-7d0e-6921">
+      <infoLinks>
+        <infoLink name="Fly" id="0fb5-79bc-38be-2693" hidden="false" type="profile" targetId="8e01-c601-8a44-8f74"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="WARD (5+)" hidden="false" id="52cc-95fd-6cd3-8f72">
+      <infoLinks>
+        <infoLink name="Ward Save" id="f6f6-14d4-4515-9ed2" hidden="false" type="profile" targetId="ed70-f30-2f5a-747f"/>
+      </infoLinks>
+    </categoryEntry>
     <categoryEntry name="WIZARD (3)" hidden="false" id="8bc-6d63-e37f-9239"/>
     <categoryEntry name="CAVALRY" hidden="false" id="926c-df8c-6841-d49e"/>
     <categoryEntry name="CHAMPION (1/8)" hidden="false" id="d131-3bfe-3ff4-a703"/>
@@ -126,7 +155,11 @@
     <categoryEntry name="Restrict General" id="abcb-73d0-2b6c-4f17" hidden="true"/>
     <categoryEntry name="Reference" id="3360-1158-e879-9606" hidden="false"/>
     <categoryEntry name="NIGHTHAUNT" id="e3a4-4581-9f76-4215" hidden="false"/>
-    <categoryEntry name="WARD (4+)" id="f99f-98ee-909f-57cd" hidden="false"/>
+    <categoryEntry name="WARD (4+)" id="f99f-98ee-909f-57cd" hidden="false">
+      <infoLinks>
+        <infoLink name="Ward Save" id="bda6-d02e-20b0-c04a" hidden="false" type="profile" targetId="ed70-f30-2f5a-747f"/>
+      </infoLinks>
+    </categoryEntry>
     <categoryEntry name="MUSICIAN (1/4)" id="fe9c-1d27-a698-5f31" hidden="false"/>
     <categoryEntry name="FLESH-EATER COURTS" id="8d10-dc24-7ece-50df" hidden="false"/>
     <categoryEntry name="ABHORRENT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
