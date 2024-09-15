@@ -2204,8 +2204,8 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Dancing Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7b11-c623-fc14-4639">
           <characteristics>
-            <characteristic name="Keywords" id="4ba8-2a80-809d-99f9" hidden="false" typeId="b977-7c5e-33b2-428e">**^^Core^^**, **^^Move^^**</characteristic>
-            <characteristic name="Effect" id="6ca7-77df-ead5-1e89" hidden="false" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for damage points inflicted by this **^^Manifestation^^**&apos;s attacks.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for damage points inflicted by this **^^Manifestation^^**&apos;s attacks.</characteristic>
           </characteristics>
         </profile>
         <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
@@ -2347,6 +2347,140 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Suffocating Gravetide" hidden="false" id="1885-a1aa-bf5d-6d0d">
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="4bb7-1cff-08a5-7e05" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="3ca6-7c53-de77-a676" targetId="bff0-8be9-719f-4afc" primary="false"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="8d66-7e25-a6fd-6218" targetId="e7bc-543-4076-553c" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="bf15-dadc-3aa4-beda" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Suffocating Gravetide" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="8e89-c81d-535c-2f7c">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">12&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pulled to the Grave" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1fa3-5209-8869-8d58">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move but cannot end that move in combat. Then, you can pick an enemy unit that this **^^Manifestation^^** passed across during that move to be the target. Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+        <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
+          <characteristics>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Geminids of Uhl-Gysh" hidden="false" id="d420-1699-5ad9-1956">
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="ad12-1701-306b-ba7b" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="e5b2-5aaf-629c-c01d" targetId="bff0-8be9-719f-4afc" primary="false"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="a1ac-44e6-9f02-02cb" targetId="e7bc-543-4076-553c" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="1cda-1921-a1b4-e805" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Geminids of Uhl-Gysh" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="94c2-884a-d92d-6dec">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">8&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Tendrils of Shadow and Light" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7752-7084-5da1-812b">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot use commands while they are within 3&quot; of either part of this **^^Manifestation^^**&apos;.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
+          <characteristics>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7f8e-f2c5-2638-f35d">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When a number of damage points equal to this **^^Manifestation^^**&apos;s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.
+Each time this **^^Manifestation^^** moves, both its parts must end within 9&quot; of each other.
+Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and Shadow**.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Umbral Spellportal" hidden="false" id="0552-183c-1b2a-d117">
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="3957-427a-8722-4dcc" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="77cd-8e1b-744e-55ca" targetId="bff0-8be9-719f-4afc" primary="false"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="3aad-ae4c-67fd-695b" targetId="e7bc-543-4076-553c" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Umbral Spellportal" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="7729-640a-ccd5-4c5d">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ba4a-41ff-85b6-17e7">
+          <characteristics>
+            <characteristic name="Keywords" id="1d02-2f0d-4af8-2ee8" hidden="false" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" id="9a99-b896-4fe2-087c" hidden="false" typeId="fd7f-888d-3257-a12b">When a number of damage points equal to this **^^Manifestation^^**&apos;s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Arcane Passage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b327-e576-8829-814d">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Wizard^^** within 3&quot; of this **^^Manifestation^^** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The next time the target uses a non-**^^Summon Spell^^** ability this phase, add 1 to the casting value of that spell. When picking targets for that spell, you can measure range and visibility from either part of this **^^Manifestation^^** instead of from the caster, and your opponent can measure range and visibility to either part of this **^^Manifestation^^** instead of to the caster for the purposes of the ‘Unbind’ ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Prismatic Palisade" hidden="false" id="015a-4e4f-322f-ccff">
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="1f3f-0573-29ad-a5e0" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="82bc-8ae6-ff24-0e66" targetId="bff0-8be9-719f-4afc" primary="false"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="48fa-d4b4-0597-3104" targetId="e7bc-543-4076-553c" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Prismatic Palisade" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="05da-2fbd-a0cb-4d2a">
+          <characteristics>
+            <characteristic name="Move" hidden="false" id="8938-9158-1bbc-23b4" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Health" hidden="false" id="dbba-e15e-f87d-3e21" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" hidden="false" id="49ae-154e-f4aa-5b32" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
+            <characteristic name="Banishment" hidden="false" id="c1db-4920-c155-cfd8" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Blinding Light" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fc0c-9252-758c-533c">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **^^Manifestation^^** cannot be targeted by shooting attacks. In addition, a unit cannot be targeted by shooting attacks if it is impossible to draw a straight line from a model in the attacking unit to a model in the target unit without that line passing across this **^^Manifestation^^**.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Crit (2 Hits)" hidden="false" id="ccb6-2643-88c1-9357">
@@ -2390,6 +2524,14 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Krondspine Incarnate of Ghur" hidden="false" id="2585-f5a3-dadd-2b91" type="selectionEntry" targetId="4ba0-e87-36e0-db58">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b48-9d1e-90d8-2779-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b48-9d1e-90d8-2779-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Forbidden Power" hidden="false" id="9fd2-a506-6462-a6c8">
           <constraints>
@@ -2433,6 +2575,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Horrorghast" hidden="false" id="7390-46b7-8332-b2a4" type="selectionEntry" targetId="f935-2383-94ba-3be2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8cb-d650-d224-a32f-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8cb-d650-d224-a32f-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lauchon the Soulseeker" hidden="false" id="7b58-db22-9e39-33f8" type="selectionEntry" targetId="a26b-cd08-8f9d-90b0">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca9f-a9bb-c8f6-280e-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca9f-a9bb-c8f6-280e-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Shards of Valagharr" hidden="false" id="2ed5-3e68-8b7f-02d1" type="selectionEntry" targetId="94f6-4321-fd80-f20e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8448-2eaf-81c9-7d5a-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8448-2eaf-81c9-7d5a-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Soulscream Bridge" hidden="false" id="a071-3b40-5a78-732e" type="selectionEntry" targetId="523f-bd78-e418-9922">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c1b7-5dfa-cf61-7acd-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1b7-5dfa-cf61-7acd-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Morbid Conjuration" hidden="false" id="b4d2-4178-ff43-a44b">
           <constraints>
@@ -2476,6 +2644,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Malevolent Maelstrom" hidden="false" id="a11c-cd93-caef-1009" type="selectionEntry" targetId="e699-49b7-d2b8-d5fc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3208-5751-fc8a-c94c-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3208-5751-fc8a-c94c-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Purple Sun of Shyish" hidden="false" id="032d-5646-6397-a2c0" type="selectionEntry" targetId="e7a5-e611-4c13-22d0">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2af7-5a79-de91-6bbe-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2af7-5a79-de91-6bbe-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Suffocating Gravetide" hidden="false" id="2b80-8296-773e-522b" type="selectionEntry" targetId="1885-a1aa-bf5d-6d0d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b6b-5a96-e748-3b0d-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b6b-5a96-e748-3b0d-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Soulsnare Shackles" hidden="false" id="85a8-3074-cbe8-f84d" type="selectionEntry" targetId="dee3-92a0-27e7-252a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="94b1-ce4a-cbd9-6928-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94b1-ce4a-cbd9-6928-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Aetherwrought Machineries" hidden="false" id="db7f-2a40-6ebc-907b">
           <constraints>
@@ -2510,6 +2704,26 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Aethervoid Pendulum" hidden="false" id="0347-1407-af6e-9270" type="selectionEntry" targetId="fcb6-ae80-2e58-aadb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a8a-06ee-d25d-735c-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a8a-06ee-d25d-735c-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Chronomantic Cogs" hidden="false" id="7451-2eff-3f62-98a8" type="selectionEntry" targetId="1aba-bc38-e988-d79f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff4b-96b7-85e9-fa6b-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff4b-96b7-85e9-fa6b-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Quicksilver Swords" hidden="false" id="467f-492a-68d2-814f" type="selectionEntry" targetId="8cde-fafe-2b2a-ced5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ca3-2645-72e5-d3e0-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ca3-2645-72e5-d3e0-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Primal Energy" hidden="false" id="7217-5951-aaf0-47e8">
           <constraints>
@@ -2544,6 +2758,26 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Emerald Lifeswarm" hidden="false" id="3268-17dd-d7e9-5180" type="selectionEntry" targetId="3071-fc11-4eb8-bbcc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae80-9b20-d731-a609-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae80-9b20-d731-a609-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="9a4b-db06-8401-e984" type="selectionEntry" targetId="41c4-2f6a-0d3c-a23e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="083d-3aa3-e011-b309-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="083d-3aa3-e011-b309-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="The Burning Head" hidden="false" id="ecb7-164c-e7de-e1f1" type="selectionEntry" targetId="e1cc-64dc-f765-b9cc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9cad-527f-249b-9cb7-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9cad-527f-249b-9cb7-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Twilit Sorceries" hidden="false" id="83f1-e447-c26-c5c">
           <constraints>
@@ -2578,6 +2812,26 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Geminids of Uhl-Gysh" hidden="false" id="15c0-e4e0-b110-0b69" type="selectionEntry" targetId="d420-1699-5ad9-1956">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11fa-03c0-e50e-9907-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11fa-03c0-e50e-9907-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Prismatic Palisade" hidden="false" id="0f92-d7bd-bfc1-be97" type="selectionEntry" targetId="015a-4e4f-322f-ccff">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d11d-7ef3-1eeb-91af-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d11d-7ef3-1eeb-91af-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Umbral Spellportal" hidden="false" id="1725-321d-766e-e8ca" type="selectionEntry" targetId="0552-183c-1b2a-d117">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c6d2-55c5-bdd6-76fc-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c6d2-55c5-bdd6-76fc-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
