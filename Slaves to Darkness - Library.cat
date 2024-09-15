@@ -56,6 +56,18 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
           </characteristics>
         </profile>
+        <profile name="Three-headed Titan" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3745-897b-efcd-5338">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
+***Filth-spewer:*** Pick an enemy unit within 6&quot; of this unit and roll a number of dice equal to the number of models in that unit, to a maximum of 7. For each 3+, inflict 1 mortal damage on that unit.
+***Skull-gorger:*** Pick an enemy unit in combat with this unit and roll a dice. If the roll exceeds that unit’s Health characteristic, 1 model in that unit is slain and you can **Heal (X)** this unit, where **X** is that unit’s Health characteristic.
+***Spell-eater:*** Pick a **^^Manifestation^^** within 12&quot; of this unit and roll a dice. On a 2+, it is banished and inflict D3 mortal damage on the unit that summoned it.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
       </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c302-2c70-2b22-f0ae" includeChildSelections="true"/>
@@ -167,7 +179,7 @@
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
@@ -1426,9 +1438,9 @@
       <categoryLinks>
         <categoryLink name="SLAVES TO DARKNESS" hidden="false" id="a91e-4458-5a7-5afa" targetId="94d9-cc36-9083-1bea" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="da2e-6d21-ebaa-4ab3" targetId="319b-38ee-d10d-e800" primary="false"/>
-        <categoryLink name="PRIEST (1)" hidden="false" id="c63c-b974-c6ef-ec24" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
-        <categoryLink name="WAR MACHINE" hidden="false" id="a240-40eb-a6f5-8457" targetId="f7bc-b618-4b5d-2bae" primary="true"/>
-        <categoryLink name="WARRIORS OF CHAOS" hidden="false" id="9f9f-2df2-d4b1-dedb" targetId="e06-cc4d-8589-c273" primary="false"/>
+        <categoryLink name="DAEMON" hidden="false" id="ddce-14f4-8999-8bcc" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="MONSTER" hidden="false" id="6eb6-5abd-073b-b2ce" targetId="6d54-625c-d063-13e2" primary="true"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="0504-1454-3ad0-3f64" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="1074-5f39-2749-3305" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -1449,7 +1461,7 @@
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Piston-driven Legs and Daemonic Blade or Claw** is 6.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Favour of Chaos" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c01b-75c7-361c-6a52">
+        <profile name="Piston-driven Carnage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c01b-75c7-361c-6a52">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Infantry^^** unit in combat with this unit to be the target.</characteristic>
@@ -1457,10 +1469,10 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
           </characteristics>
         </profile>
-        <profile name="Protection of the Dark Gods" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a7e4-5472-531a-a4ac">
+        <profile name="Implacable Advance" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a7e4-5472-531a-a4ac">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Warriors of Chaos^^** units have **^^Ward (6+)^^** while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can use **^^Charge^^** abilities even if it used a **^^Run^^** ability in the same turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1528,14 +1540,15 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7ea-6563-2e0d-7308"/>
               </constraints>
               <profiles>
-                <profile name="Phlegm Bombardment" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="521f-5abe-a466-c6da">
+                <profile name="Phlegm Bombardment" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="521f-5abe-a466-c6da">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
