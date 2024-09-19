@@ -1717,6 +1717,78 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fcf-10cf-9ed9-1e32"/>
           </constraints>
         </forceEntry>
+        <forceEntry name="Volt-Klaw&apos;s Enginecoven" id="ffc1-e2cb-f2f0-f72e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="Regimental Leader" hidden="false" id="c93c-9390-dd8a-898f" targetId="d1f3-921c-b403-1106"/>
+            <categoryLink name="HERO" hidden="false" id="1edd-86b5-ea3f-1e46" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="7ffe-9bc5-276d-3518" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="49e6-a713-64ee-529b" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="f64a-803d-dd3b-9198" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="565e-a89a-7828-2933" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="5ad9-1a94-2ba0-3724" targetId="b224-8c8e-ca93-9860"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2e45-3a6a-05b4-b79b"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Krittok&apos;s Clawpack" id="d0d8-3ec6-4b57-16fd" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="Regimental Leader" hidden="false" id="a3ba-1b90-470a-8cd2" targetId="d1f3-921c-b403-1106"/>
+            <categoryLink name="HERO" hidden="false" id="1292-c42e-03b0-c66d" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="fc43-6ae0-cf7b-67ff" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="eb7b-d92d-00f2-cfd8" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="9079-aec5-017a-abb8" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="ce98-7c4b-a7c4-d240" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="a3a1-22cf-488d-5841" targetId="b224-8c8e-ca93-9860"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a43e-09a8-7e6f-cab9"/>
+          </constraints>
+        </forceEntry>
       </forceEntries>
     </forceEntry>
   </forceEntries>
