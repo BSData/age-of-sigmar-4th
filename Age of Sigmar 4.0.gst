@@ -1880,7 +1880,7 @@
         <categoryLink targetId="b979-4c3e-7d0e-6921" id="4494-b9a6-2e65-65c8" primary="false" name="FLY"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Purple Sun of Shyish" hidden="false" id="e7a5-e611-4c13-22d0">
+    <selectionEntry type="unit" import="true" name="Purple Sun of Shyish" hidden="false" id="e7a5-e611-4c13-22d0">
       <categoryLinks>
         <categoryLink targetId="70a4-383f-421f-52cd" id="4dc8-eece-d5b7-2df3" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="bff0-8be9-719f-4afc" id="4658-ba98-3211-8adb" primary="false" name="MANIFESTATION"/>
@@ -1928,7 +1928,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Soulsnare Shackles" hidden="false" id="dee3-92a0-27e7-252a">
+    <selectionEntry type="unit" import="true" name="Soulsnare Shackles" hidden="false" id="dee3-92a0-27e7-252a">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="29ee-593-8425-f708" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="ab7-d07a-63d3-1a97" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -1961,7 +1961,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Soulscream Bridge" hidden="false" id="523f-bd78-e418-9922">
+    <selectionEntry type="unit" import="true" name="Soulscream Bridge" hidden="false" id="523f-bd78-e418-9922">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="318f-f7c-cd32-cab6" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="596c-59e1-d1fd-87be" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -1992,7 +1992,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Aethervoid Pendulum" hidden="false" id="fcb6-ae80-2e58-aadb">
+    <selectionEntry type="unit" import="true" name="Aethervoid Pendulum" hidden="false" id="fcb6-ae80-2e58-aadb">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="fd2e-8c73-ab69-88f" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="c4b3-67a0-2c15-4ec2" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2024,7 +2024,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Chronomantic Cogs" hidden="false" id="1aba-bc38-e988-d79f">
+    <selectionEntry type="unit" import="true" name="Chronomantic Cogs" hidden="false" id="1aba-bc38-e988-d79f">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="70e7-b4bd-717a-1d6" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="3892-8061-dc6e-371d" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2051,7 +2051,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="The Burning Head" hidden="false" id="e1cc-64dc-f765-b9cc">
+    <selectionEntry type="unit" import="true" name="The Burning Head" hidden="false" id="e1cc-64dc-f765-b9cc">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="954-d964-bf0c-b4d2" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="90c0-fa5b-aeea-6cbb" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2096,7 +2096,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Horrorghast" hidden="false" id="f935-2383-94ba-3be2">
+    <selectionEntry type="unit" import="true" name="Horrorghast" hidden="false" id="f935-2383-94ba-3be2">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="eb53-fa27-65fb-8a6f" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="2e4c-94ee-1b98-89b7" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2143,7 +2143,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Malevolent Maelstrom" hidden="false" id="e699-49b7-d2b8-d5fc">
+    <selectionEntry type="unit" import="true" name="Malevolent Maelstrom" hidden="false" id="e699-49b7-d2b8-d5fc">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="f445-f6f0-e0dd-8aac" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="3eec-eca0-777d-fcdc" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2189,7 +2189,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Shards of Valagharr" hidden="false" id="94f6-4321-fd80-f20e">
+    <selectionEntry type="unit" import="true" name="Shards of Valagharr" hidden="false" id="94f6-4321-fd80-f20e">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="d1dd-7035-e029-1d70" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="b24d-1d35-47ed-6504" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2224,7 +2224,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Lauchon the Soulseeker" hidden="false" id="a26b-cd08-8f9d-90b0">
+    <selectionEntry type="unit" import="true" name="Lauchon the Soulseeker" hidden="false" id="a26b-cd08-8f9d-90b0">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="6dd9-aa8f-d6a5-1863" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="8e22-445f-2f12-d721" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2260,7 +2260,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Quicksilver Swords" hidden="false" id="8cde-fafe-2b2a-ced5">
+    <selectionEntry type="unit" import="true" name="Quicksilver Swords" hidden="false" id="8cde-fafe-2b2a-ced5">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="daa3-b5c-6bd9-9ca7" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="adb6-f19e-dae5-7cf0" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2333,7 +2333,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <categoryLink name="Command Model" hidden="false" id="dc08-ebbc-3cd5-cbd8" targetId="9c77-5e0b-a20f-d885" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Emerald Lifeswarm" hidden="false" id="3071-fc11-4eb8-bbcc">
+    <selectionEntry type="unit" import="true" name="Emerald Lifeswarm" hidden="false" id="3071-fc11-4eb8-bbcc">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="9e9c-897f-632f-ef74" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="dd97-fb7e-6148-444d" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2379,7 +2379,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="41c4-2f6a-0d3c-a23e">
+    <selectionEntry type="unit" import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="41c4-2f6a-0d3c-a23e">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="9011-7f76-7af6-a7f0" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="7c1e-a735-5c49-f97f" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2421,7 +2421,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Suffocating Gravetide" hidden="false" id="1885-a1aa-bf5d-6d0d">
+    <selectionEntry type="unit" import="true" name="Suffocating Gravetide" hidden="false" id="1885-a1aa-bf5d-6d0d">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="4bb7-1cff-08a5-7e05" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="3ca6-7c53-de77-a676" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2458,7 +2458,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Geminids of Uhl-Gysh" hidden="false" id="d420-1699-5ad9-1956">
+    <selectionEntry type="unit" import="true" name="Geminids of Uhl-Gysh" hidden="false" id="d420-1699-5ad9-1956">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="ad12-1701-306b-ba7b" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="e5b2-5aaf-629c-c01d" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2500,7 +2500,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Umbral Spellportal" hidden="false" id="0552-183c-1b2a-d117">
+    <selectionEntry type="unit" import="true" name="Umbral Spellportal" hidden="false" id="0552-183c-1b2a-d117">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="3957-427a-8722-4dcc" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="77cd-8e1b-744e-55ca" targetId="bff0-8be9-719f-4afc" primary="false"/>
@@ -2532,7 +2532,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Prismatic Palisade" hidden="false" id="015a-4e4f-322f-ccff">
+    <selectionEntry type="unit" import="true" name="Prismatic Palisade" hidden="false" id="015a-4e4f-322f-ccff">
       <categoryLinks>
         <categoryLink name="WARD (6+)" hidden="false" id="1f3f-0573-29ad-a5e0" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MANIFESTATION" hidden="false" id="82bc-8ae6-ff24-0e66" targetId="bff0-8be9-719f-4afc" primary="false"/>
