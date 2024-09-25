@@ -1490,8 +1490,8 @@ Your Shooting Phase</characteristic>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Warpfire Thrower" hidden="false" id="9e61-e216-a6a6-e2ac">
               <constraints>
-                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="cf44-5602-b4f5-7adf"/>
-                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="188e-66f8-b49c-b0fe"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf44-5602-b4f5-7adf"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="188e-66f8-b49c-b0fe"/>
               </constraints>
               <profiles>
                 <profile name="Warpfire Thrower" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="a6d2-c75d-fc6a-b1d4">
@@ -1509,8 +1509,8 @@ Your Shooting Phase</characteristic>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a6f-baa9-ef3d-1412"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e96d-6f1d-6af3-aca4"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="6a6f-baa9-ef3d-1412"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e96d-6f1d-6af3-aca4"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -1534,10 +1534,13 @@ Your Shooting Phase</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Unleashed Warp-fury" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6505-e695-e571-e804">
+        <profile name="Unleashed Warp-fury" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6505-e695-e571-e804">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Inflict D3 mortal damage on this unit. Then, add 1 to the Attacks characteristic of this unit’s melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Inflict D3 mortal damage on this unit. Then, add 1 to the Attacks characteristic of this unit’s melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
       </profiles>
@@ -1728,8 +1731,8 @@ Your Shooting Phase</characteristic>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3295-a50-b074-19ce"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3525-5971-867b-8335"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="3295-a50-b074-19ce"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="3525-5971-867b-8335"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -4350,7 +4353,7 @@ Cover**</description>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="Plaguepack" hidden="false" id="eb1c-e2a1-9750-4912">
+        <selectionEntry type="model" import="true" name="Plaguepack" hidden="false" id="eb1c-e2a1-9750-4912" defaultAmount="1,3">
           <constraints>
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3eb4-1ce4-ae73-bda3"/>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="1b31-2985-569d-f2c4"/>
@@ -4381,7 +4384,7 @@ Cover**</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e30-7ae1-0639-ffa4"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Champion" hidden="false" id="7578-d202-7e5a-1e0a" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                <entryLink import="true" name="Champion" hidden="false" id="7578-d202-7e5a-1e0a" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="f187-0277-e210-7c65" shared="true" id="dacc-60f1-cfe8-e81f" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="331a-614a-19cc-357c"/>
@@ -4392,13 +4395,6 @@ Cover**</description>
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vizzik Skour, Prophet of the Horned Rat" hidden="false" id="2a51-7859-e014-cecd" publicationId="ff83-b049-91b9-ed05">
       <categoryLinks>
