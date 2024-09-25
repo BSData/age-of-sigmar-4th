@@ -230,7 +230,7 @@
         <profile name="Desperate Remedies" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7709-9243-a8b5-ff1e">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If a **^^Diseased^^** enemy unit uses an ability that would heal or return slain models to it, instead of healing or returning slain models to it, that unit no longer has the **^^Diseased^^** keyword.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If an ability would heal 1 or more damage points or return 1 or more slain models to a **^^Diseased^^** enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the**^^Diseased^^** keyword.</characteristic>
           </characteristics>
         </profile>
         <profile name="Wracked with Disease" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="81e8-e2f8-46ab-7d2">
@@ -251,6 +251,12 @@ the roll.</characteristic>
 ***Spread:*** Pick a **^^Diseased^^** enemy unit to be the target. Each other enemy unit within the target’s combat range has the **^^Diseased^^** keyword.
 ***Mutate:*** If all enemy units on the battlefield have the **^^Diseased^^** keyword, inflict 1 mortal damage on each of them.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+          </characteristics>
+        </profile>
+        <profile name="Burst Pustules" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7c3b-0ed3-037f-f87f">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a **^^Diseased^^** enemy unit would be destroyed, before the last model in the unit is removed from play, roll a dice. On a 3+, pick another enemy unit within 9&quot; of that model to be **^^Diseased^^**.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -315,7 +321,7 @@ the roll.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="550"/>
+        <cost name="pts" typeId="points" value="530"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Great Unclean One" hidden="false" id="f528-55e7-b1ed-a05b" type="selectionEntry" targetId="bbb9-4b05-be8a-af89">
@@ -351,7 +357,7 @@ the roll.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bloab Rotspawned" hidden="false" id="566b-4fac-92fd-9668" type="selectionEntry" targetId="5d0c-177b-8fbf-c3ee">
@@ -375,7 +381,7 @@ the roll.</characteristic>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="eb65-72a2-e5d1-695f"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="300"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Harbinger of Decay" hidden="false" id="77ff-b36e-79ac-e2f1" type="selectionEntry" targetId="c473-7f30-9a81-12d4">
@@ -395,7 +401,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e408-5aa5-147c-701e" type="selectionEntryGroup" targetId="15b6-a9e9-941e-18d3"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord of Plagues" hidden="false" id="d5ff-92c2-4bdc-5bab" type="selectionEntry" targetId="542a-9c27-908f-8c30">
@@ -436,7 +442,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ae33-5548-72a-bdca" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -508,7 +514,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="fd01-3b32-57e9-6ae0" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -559,7 +565,7 @@ the roll.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="300"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Orghotts Daemonspew" hidden="false" id="a89-98d3-f2db-2679" type="selectionEntry" targetId="b30a-a7ad-baf5-52a9">
@@ -575,7 +581,7 @@ the roll.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="320"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Sloppity Bilepiper, Herald of Nurgle" hidden="false" id="4164-9ba7-3197-50f1" type="selectionEntry" targetId="29d8-9408-2148-b2c9">
@@ -586,8 +592,21 @@ the roll.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6011-228f-fea3-caa5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4a18-bdb4-644e-3ab4" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="687b-0969-69c1-8be3">
+          <conditions>
+            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -597,6 +616,24 @@ the roll.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="687b-0969-69c1-8be3"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="f29d-edaa-05cd-86e5" field="category"/>
+            <modifier type="set" value="0" field="687b-0969-69c1-8be3">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="f29d-edaa-05cd-86e5" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Rotbringer Sorcerer" hidden="false" id="48ff-1c18-9a79-c93a" type="selectionEntry" targetId="8fe7-5f8f-68ac-b786">
       <modifiers>
@@ -626,8 +663,21 @@ the roll.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6011-228f-fea3-caa5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4a18-bdb4-644e-3ab4" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="b3b6-91a5-6fe6-4b4d">
+          <conditions>
+            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -635,8 +685,26 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ca87-c71e-2d00-9f6e" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="f29d-edaa-05cd-86e5" field="category"/>
+            <modifier type="set" value="0" field="b3b6-91a5-6fe6-4b4d">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="f29d-edaa-05cd-86e5" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b3b6-91a5-6fe6-4b4d"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Rotigus" hidden="false" id="de9c-939f-b7db-13b5" type="selectionEntry" targetId="bb0e-3648-ee6e-3e43">
       <modifiers>
@@ -651,7 +719,7 @@ the roll.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="500"/>
+        <cost name="pts" typeId="points" value="480"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Spoilpox Scrivener, Herald of Nurgle" hidden="false" id="fc2f-3027-cb44-af15" type="selectionEntry" targetId="d44-acf2-9394-f93">
@@ -662,8 +730,21 @@ the roll.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6011-228f-fea3-caa5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4a18-bdb4-644e-3ab4" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="c0cf-44bb-bb25-2d7e">
+          <conditions>
+            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -673,13 +754,31 @@ the roll.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="c0cf-44bb-bb25-2d7e"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="f29d-edaa-05cd-86e5" field="category"/>
+            <modifier type="set" value="0" field="c0cf-44bb-bb25-2d7e">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="f29d-edaa-05cd-86e5" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Bloab Rotspawned" hidden="false" id="42e4-cc7-e1ba-f794" type="selectionEntry" targetId="5d0c-177b-8fbf-c3ee">
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="2e2a-9e2-f857-630d" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="300"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Great Unclean One" hidden="false" id="4a18-bdb4-644e-3ab4" type="selectionEntry" targetId="bbb9-4b05-be8a-af89">
@@ -699,7 +798,7 @@ the roll.</characteristic>
         <categoryLink name="Regimental Leader" hidden="false" id="c0b0-2ca3-4464-70d4" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Harbinger of Decay" hidden="false" id="3f0c-9c21-d5a7-b913" type="selectionEntry" targetId="c473-7f30-9a81-12d4">
@@ -711,7 +810,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d677-b023-6032-bc93" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Horticulous Slimux" hidden="false" id="6905-ccf8-6433-cf49" type="selectionEntry" targetId="6393-ad97-81d9-ccbe">
@@ -743,7 +842,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="805-e5cc-4ba3-390" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord of Plagues" hidden="false" id="549f-8a55-57c4-4785" type="selectionEntry" targetId="542a-9c27-908f-8c30">
@@ -755,7 +854,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2274-5f35-f9e2-73e4" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Morbidex Twiceborn" hidden="false" id="b9f2-c7b5-bb7b-98f2" type="selectionEntry" targetId="4de5-75a7-bc3d-8ced">
@@ -763,7 +862,7 @@ the roll.</characteristic>
         <categoryLink name="Regimental Leader" hidden="false" id="e9b-71f6-634a-569e" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="300"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Orghotts Daemonspew" hidden="false" id="79ac-11a4-9f0d-34c5" type="selectionEntry" targetId="b30a-a7ad-baf5-52a9">
@@ -771,7 +870,7 @@ the roll.</characteristic>
         <categoryLink name="Regimental Leader" hidden="false" id="2cb6-fa70-f98b-bc9d" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="320"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Poxbringer, Herald of Nurgle" hidden="false" id="2445-ff39-e129-a7dc" type="selectionEntry" targetId="3f9b-a5f1-3290-cd8a">
@@ -783,7 +882,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9a13-5436-63c6-2e11" type="selectionEntryGroup" targetId="6ce9-d284-339d-1e9b"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Rotbringer Sorcerer" hidden="false" id="2184-b254-8bf9-c04d" type="selectionEntry" targetId="8fe7-5f8f-68ac-b786">
@@ -803,7 +902,7 @@ the roll.</characteristic>
         <categoryLink name="Regimental Leader" hidden="false" id="73c6-e1-92c2-d655" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="500"/>
+        <cost name="pts" typeId="points" value="480"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Sloppity Bilepiper, Herald of Nurgle" hidden="false" id="907f-d7f2-6e21-7bf3" type="selectionEntry" targetId="29d8-9408-2148-b2c9">
@@ -835,7 +934,7 @@ the roll.</characteristic>
         <categoryLink name="Regimental Leader" hidden="false" id="6b33-e19b-fc0c-680e" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="550"/>
+        <cost name="pts" typeId="points" value="530"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Beasts of Nurgle" hidden="false" id="7ea9-910a-ce67-7f" type="selectionEntry" targetId="8197-2f04-e647-f5c">
@@ -907,7 +1006,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Reinforced" hidden="false" id="c004-76dd-3c84-8718" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Plague Drones" hidden="false" id="b5af-6b55-c9ff-ac9" type="selectionEntry" targetId="18c2-5ea0-f7f6-639f">
@@ -1120,7 +1219,7 @@ the roll.</characteristic>
         <entryLink import="true" name="Reinforced" hidden="false" id="4948-e511-2322-43cf" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Rotmire Creed" hidden="false" id="5088-4587-86f0-4b4a" type="selectionEntry" targetId="6ad6-e6a2-391d-74f3">
@@ -1266,5 +1365,6 @@ the roll.</characteristic>
   </entryLinks>
   <categoryEntries>
     <categoryEntry name="Rotbringer Lord" id="1102-5ae7-aac8-1899" hidden="false"/>
+    <categoryEntry name="Plague Scion" id="f29d-edaa-05cd-86e5" hidden="false"/>
   </categoryEntries>
 </catalogue>

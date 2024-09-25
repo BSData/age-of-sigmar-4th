@@ -2711,7 +2711,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">2+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
@@ -3385,7 +3385,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
         <profile name="Soul-bonded" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9f24-a6ac-1925-6d82">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a friendly **^^Stormcast Eternals Hero^^** to be this unit’s soulbonded charge for the rest of the battle.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a friendly **^^Stormcast Eternals Hero^^** to be this unit’s soul-bonded charge for the rest of the battle. This unit can use this ability while it is in reserve.</characteristic>
           </characteristics>
         </profile>
         <profile name="Soul-forged Guardians" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="605d-3101-ef64-6fc1">
@@ -3609,7 +3609,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
         <cost name="‎" id="6f6-de26-aff6-796f" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Stormdrake Guard" hidden="false" id="497-b742-829-3487">
+        <selectionEntry type="model" import="true" name="Stormdrake Guard" hidden="false" id="497-b742-829-3487" defaultAmount="1,1">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="1945-a7c0-b012-4e36"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e169-9dec-47ff-6a33"/>
@@ -3718,9 +3718,25 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7639-c285-d4aa-9851"/>
               </constraints>
             </selectionEntryGroup>
+            <selectionEntryGroup name="Command Models" id="b46d-251a-0b82-33e3" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="405b-bad5-2d70-02f6" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="a9a3-79a6-28da-3c6c" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="de73-4b2d-e8b7-106f" shared="true" id="ab7a-c018-aa94-2631" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6770-856d-ea7a-dff2"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+      <infoLinks>
+        <infoLink name="Extremis Chamber" id="1c0a-7888-8cd7-c62f" hidden="false" type="profile" targetId="c5d3-f67a-8d2c-b3d5"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vanguard-Hunters" hidden="false" id="2a10-8a5d-a743-9706" publicationId="daf8-1c23-a61e-b132">
       <profiles>

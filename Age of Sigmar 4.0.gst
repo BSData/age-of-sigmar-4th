@@ -1910,12 +1910,6 @@
             <characteristic name="Effect" id="3122-a017-ecd3-e131" hidden="false" typeId="fd7f-888d-3257-a12b">Subtract 1 from save rolls for enemy units while they are within 3&quot; of this **^^Manifestation^^**.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Wild Form" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="22dd-caf4-27a9-2a27">
-          <characteristics>
-            <characteristic name="Keywords" id="2437-b93f-c25e-8ec5" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="69cf-46b6-8a0a-a010" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
           <characteristics>
             <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
@@ -2161,10 +2155,11 @@
         </profile>
         <profile name="Morbid Detonation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b8a4-541-b62-cf62">
           <characteristics>
-            <characteristic name="Timing" id="915e-4a1b-6ab5-9d09" hidden="false" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" id="a7af-a2a6-8180-12e7" hidden="false" typeId="bad3-f9c5-ba46-18cb">If this **^^Manifestation^^** has 6 **maelstrom points**, pick each unit (friendly and enemy) within 9&quot; of it to be the targets</characteristic>
-            <characteristic name="Effect" id="49d-5e2e-cc4c-52a5" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, this **^^Manifestation^^** is destroyed.</characteristic>
-            <characteristic name="Keywords" id="7e0f-1422-10c6-4442" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You must, and can only, use this ability if this unit has 6 **maelstrom points**. Pick each unit (friendly and enemy) within 9&quot; of it to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, this **^^Manifestation^^** is destroyed.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Necrotic Vortex" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c711-ce6-1fb6-7abc">
@@ -2411,12 +2406,6 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
             <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
             <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Wild Form" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f615-ebe3-a14e-0cc7">
-          <characteristics>
-            <characteristic name="Keywords" id="9b1c-24a8-4106-1bc8" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="ce62-912e-836b-9d21" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2693,7 +2682,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <profile name="Summon Suffocating Gravetide" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="36e0-4b94-aeb-67ac">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
                 <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Suffocating Gravetide endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Suffocating Gravetide endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
