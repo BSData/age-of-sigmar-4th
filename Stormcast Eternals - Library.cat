@@ -1401,12 +1401,12 @@ This unit has **^^Ward (4+)^^** against mortal damage inflicted by **^^Manifest
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Lord-Imperitant" hidden="false" id="c1b5-c776-1613-a463" publicationId="daf8-1c23-a61e-b132">
+    <selectionEntry type="unit" import="true" name="Lord-Imperatant" hidden="false" id="c1b5-c776-1613-a463" publicationId="daf8-1c23-a61e-b132">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="d4dc-79b1-e4f6-be20" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
       <profiles>
-        <profile name="Lord-Imperitant" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d330-6204-86ec-c3c3">
+        <profile name="Lord-Imperatant" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d330-6204-86ec-c3c3">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
@@ -1437,7 +1437,7 @@ This unit has **^^Ward (4+)^^** against mortal damage inflicted by **^^Manifest
         <categoryLink name="WARRIOR CHAMBER" hidden="false" id="5c7b-b418-19dd-881" targetId="94a8-e786-4b45-1c16" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Lord-Imperitant" hidden="false" id="8733-c74f-2be1-a683">
+        <selectionEntry type="model" import="true" name="Lord-Imperatant" hidden="false" id="8733-c74f-2be1-a683">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Blessed Warhammer" hidden="false" id="ec8b-7fc7-7798-c173">
               <profiles>
@@ -2380,7 +2380,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -3449,7 +3449,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fae-cff1-ea31-b23" includeChildSelections="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Champion" hidden="false" id="2f4e-9e3d-93d6-8d84" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                <entryLink import="true" name="Champion" hidden="false" id="2f4e-9e3d-93d6-8d84" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="e845-969a-b1fd-4b49" shared="true" id="5d3a-243b-6e9-962a" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84d-48b2-655d-dd48"/>
@@ -3627,12 +3627,17 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
             </modifier>
             <modifier type="set" value="1" field="1945-a7c0-b012-4e36">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="e169-9dec-47ff-6a33">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="defaultAmount">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>

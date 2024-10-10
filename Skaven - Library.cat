@@ -645,8 +645,8 @@
         <categoryLink name="CHAOS" hidden="false" id="8f16-695-97b5-c9ed" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="WARD (5+)" hidden="false" id="ce9a-6482-4aa7-9c3c" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="WAR MACHINE" hidden="false" id="25ba-47ef-64b4-1a24" targetId="f7bc-b618-4b5d-2bae" primary="false"/>
-        <categoryLink name="WIZARD (1)" hidden="false" id="dba0-29d4-5dca-3dfc" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
         <categoryLink name="MASTERCLAN" hidden="false" id="f0d7-c966-4184-b7ce" targetId="7974-c5a2-e00a-f98f" primary="false"/>
+        <categoryLink name="WIZARD (2)" hidden="false" id="e4e3-6faa-106d-6f5c" targetId="8179-697a-9f4c-91d4" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="b136-74ef-32d3-16c8" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -1555,7 +1555,7 @@ Your Shooting Phase</characteristic>
               <profiles>
                 <profile name="Claws, Blades and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a899-9a5d-8447-3ac7">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -1668,6 +1668,18 @@ Your Shooting Phase</characteristic>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="830f-16f1-ed09-82dd"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d0ef-30f1-c9df-3f2a"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="2" field="830f-16f1-ed09-82dd">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="2" field="d0ef-30f1-c9df-3f2a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -1734,6 +1746,18 @@ Your Shooting Phase</characteristic>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="3295-a50-b074-19ce"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="3525-5971-867b-8335"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="3" field="3295-a50-b074-19ce">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="3" field="3525-5971-867b-8335">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
@@ -2424,7 +2448,7 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="880d-fe38-59ea-40e"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Standard Bearer" hidden="false" id="599-dbfe-7b44-9c77" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="1">
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="599-dbfe-7b44-9c77" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
                   <modifiers>
                     <modifier type="increment" value="1" field="664-7978-a80e-4945">
                       <repeats>
@@ -2437,7 +2461,7 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="209b-8c5d-ed7f-1b9f"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Musician" hidden="false" id="2c27-b320-9fc5-636a" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="1">
+                <entryLink import="true" name="Musician" hidden="false" id="2c27-b320-9fc5-636a" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="fed2-4975-ae44-473" shared="true" id="740d-3499-2143-19ea" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb50-f949-17ee-863c"/>
@@ -2450,7 +2474,7 @@ Then, pick up to 3 enemy units that this unit passed across during that move to
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Champion" hidden="false" id="c01d-817a-be5f-c13a" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                <entryLink import="true" name="Champion" hidden="false" id="c01d-817a-be5f-c13a" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="fed2-4975-ae44-473" shared="true" id="4746-70de-4cb8-7131" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79d3-35ea-7c92-780a"/>
@@ -3041,7 +3065,7 @@ However, for each unmodified hit roll of 1 for an attack made with this unit’
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Night Runner" hidden="false" id="9b59-98ab-c05d-31c1" defaultAmount="1, 9">
+        <selectionEntry type="model" import="true" name="Night Runner" hidden="false" id="9b59-98ab-c05d-31c1" defaultAmount="1,9">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Slings and Poisoned Stars" hidden="false" id="9797-a128-a0ee-c201">
               <constraints>
@@ -3091,7 +3115,7 @@ However, for each unmodified hit roll of 1 for an attack made with this unit’
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2db7-5ec7-1439-b4"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Champion" hidden="false" id="482e-1e66-8bad-b03c" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                <entryLink import="true" name="Champion" hidden="false" id="482e-1e66-8bad-b03c" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="687e-ab15-48d9-4103" shared="true" id="6ee0-c70f-52f3-3bdf" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f4a-49cb-ab0d-f367"/>
