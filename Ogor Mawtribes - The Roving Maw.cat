@@ -288,6 +288,38 @@
       </costs>
     </entryLink>
     <entryLink import="true" name="Battle Traits: The Roving Maw" hidden="false" id="55d5-303c-34ab-969d" type="selectionEntry" targetId="5917-becd-a7c9-7d43"/>
+    <entryLink import="true" name="Gorger Mawpack" hidden="false" id="9cdc-56f1-dedf-afe7" type="selectionEntry" targetId="8d6b-1912-d60a-5163">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="3cd7-d21c-087b-7bd9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="854e-5de7-7cb0-9eac" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="ddb7-1a3d-36fd-d182" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="260"/>
+      </costs>
+    </entryLink>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Ogor Mawtribes - Library" id="2343-bad6-c703-f5b3" targetId="9a90-83e7-7a45-6aed"/>

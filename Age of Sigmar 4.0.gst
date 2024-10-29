@@ -862,6 +862,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="eddc-996e-d84a-ee0a" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="f3ed-a538-1f95-4c8b" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="b620-3531-20d8-cd5b" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="f5c6-8ab6-598b-0dea" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="460b-b59c-1dd7-cd30"/>
@@ -907,6 +908,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="96d6-acb9-3ff9-6190" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="d3e5-a787-a104-aec6" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="c3e7-7f74-00e8-65c6" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="ac96-7ea8-4510-7552" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="68d9-7ef1-a7fb-c64"/>
@@ -950,6 +952,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="584a-1ef6-ed44-2a1c" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="3765-78c1-5269-dd11" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="2c0a-7a28-2e70-da5a" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="2ede-70ac-644b-0399" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e26-37d5-4fca-7962"/>
@@ -989,6 +992,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="b080-3214-cff8-9dde" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="5215-7d89-f35c-1006" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="d7e2-2e03-6d2e-4b7a" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="69f0-2ce8-b290-155d" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f19c-90de-65b2-c65a"/>
@@ -1028,6 +1032,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="6cc8-18e3-9f8c-1f87" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="78b0-2521-c356-8e62" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="1b89-51b7-31b2-c557" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="d992-1f8d-fadc-d2db" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3023-e024-f7db-3f78"/>
@@ -1068,6 +1073,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="4f32-4002-4b2c-edb8" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="d936-2cd2-8675-bc4e" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="5332-3e7d-e958-c43d" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="c970-35ff-243d-4a78" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9b07-6873-f1a1-6c62"/>
@@ -1107,6 +1113,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="702-f303-4372-46e1" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="654a-a39a-7238-b58f" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="8a94-34fa-3393-bc8f" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="3546-eba0-344b-b160" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a7ba-9df1-f27-c0fd"/>
@@ -1146,6 +1153,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="df82-f991-4731-efc4" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="287a-c90f-8c7f-bfd0" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="e685-34ea-d972-5404" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="389f-36e7-0a6b-37e6" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9472-695c-5dcc-5240"/>
@@ -1185,6 +1193,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="c51a-d490-d61c-2852" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="367d-513b-f83-1341" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="3eaa-0ab6-6382-d724" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="b322-c362-c716-a4ca" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c62-3fea-f7bc-a32a"/>
@@ -1222,6 +1231,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="bf6e-bc4a-63ad-25a8" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="40e4-1edc-a944-9158" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="e236-eb4a-7e71-4f3a" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="8cfd-3954-44d0-e872" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4366-39e7-7d0c-c0fc"/>
@@ -1259,6 +1269,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="90f-d42a-a5a8-1f28" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="999-254a-37c3-c635" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="95b2-3ed1-3966-e452" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="3996-676b-46d2-bcfe" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50d4-e21f-abdc-6bc2"/>
@@ -1296,6 +1307,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="79cb-1998-cfb5-bf53" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="81f-b0c2-261-a5aa" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="0226-a91f-97a7-a488" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="3273-c1f4-1986-fffd" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2be7-dd4e-a7f6-f713"/>
@@ -1332,6 +1344,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="a375-8c49-dc9c-c8d4" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="604c-e197-a2ad-1066" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="9b6e-2952-765e-b67c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="ce82-bb3c-29f8-955f" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="34dd-ac54-5b14-27f1"/>
@@ -1366,6 +1379,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="3cfd-778e-ebbc-96f8" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="106d-31f3-2dd2-ddd4" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="4217-5e13-3516-e92c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="6727-f296-ee3f-d34d" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8da8-fbab-6bd6-abe3"/>
@@ -1400,6 +1414,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="31eb-826e-74e0-d4c7" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="f769-7cbe-90a7-9a08" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="a7cd-a68a-92fe-d9d1" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="b624-7bbf-7b7d-c744" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d8b8-2c69-bc1-31b"/>
@@ -1434,6 +1449,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="5ea1-6880-8783-769b" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="c2c7-97a5-f994-1dd8" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="a9bd-135b-e6a2-9762" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="dda5-a95d-b339-0b98" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7dfa-3068-7c98-4d8d"/>
@@ -1468,6 +1484,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="4aca-566a-a2f6-d720" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="eb16-43df-638d-c3a3" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="461d-e576-67b8-6ada" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="087c-6e17-283b-f708" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cfc3-8787-6bce-c464"/>
@@ -1502,6 +1519,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="e7c9-87cb-1e6c-b16b" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="f8d0-4806-7528-e28e" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="88b2-b241-7890-f102" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="3868-deb7-26c2-cc04" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aa54-3175-5564-1f2"/>
@@ -1536,6 +1554,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="d8cc-3aba-b9a-5e1d" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="f9f-88e0-135a-cfb3" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="b5b1-ebd5-cb67-e88c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="0b01-113f-2c6b-3302" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fdd-7b45-c8ce-fe87"/>
@@ -1570,6 +1589,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="535c-a522-70a-d6f4" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="a705-cdb1-81ef-9a5e" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="ebf4-a87e-83a1-3c67" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="0ce0-4d2a-6207-557b" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7990-a802-c965-ffe7"/>
@@ -1604,6 +1624,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="b78c-ec87-1d0d-79fc" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="a240-9190-1a85-c00e" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="824e-04c4-ef2a-d9ce" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="f186-e4d5-da8a-34bd" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="117f-4b0e-399d-721c"/>
@@ -1640,6 +1661,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="779a-3d41-ed0d-a9c5" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="ec36-9d9e-1697-968f" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="1715-0277-699b-0010" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="84c3-5c81-37af-087d" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4885-bc5e-c59a-7223"/>
@@ -1676,6 +1698,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="a28c-5d55-9075-325f" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="de06-68ab-cbcf-a006" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="85da-3dd7-ef64-3d88" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="73d2-7eec-301d-5f64" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="64d3-d983-dea8-ebb0"/>
@@ -1712,6 +1735,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="445a-8590-c2-9290" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="c3ea-d207-7c7-4a01" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="d129-5548-6424-b42a" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="1a38-a2c1-7ac6-317c" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fcf-10cf-9ed9-1e32"/>
@@ -1749,6 +1773,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="f64a-803d-dd3b-9198" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="565e-a89a-7828-2933" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="5ad9-1a94-2ba0-3724" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="b02b-6846-494b-a024" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2e45-3a6a-05b4-b79b"/>
@@ -1786,6 +1811,7 @@
             <categoryLink name="WAR MACHINE" hidden="false" id="9079-aec5-017a-abb8" targetId="f7bc-b618-4b5d-2bae"/>
             <categoryLink name="CAVALRY" hidden="false" id="ce98-7c4b-a7c4-d240" targetId="926c-df8c-6841-d49e"/>
             <categoryLink name="BEAST" hidden="false" id="a3a1-22cf-488d-5841" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="4b37-3523-b833-1c30" targetId="3360-1158-e879-9606"/>
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a43e-09a8-7e6f-cab9"/>
