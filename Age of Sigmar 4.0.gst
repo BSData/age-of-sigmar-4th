@@ -2987,6 +2987,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 503" id="4a1e-2c36-6a96-9434" hidden="false"/>
     <publication name="Armies of Renown" id="0578-e89b-7163-86c5" hidden="false"/>
     <publication name="Battletome: Skaven" id="ff83-b049-91b9-ed05" hidden="false"/>
+    <publication name="Battletome: Stormcast Eternals" id="43cd-e9ef-5d4d-87c4" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
