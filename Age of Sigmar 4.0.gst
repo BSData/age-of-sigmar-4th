@@ -562,6 +562,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5be9-f24d-b606-6c24" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -2028,12 +2040,13 @@
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
-        <profile name="Pulled to the Grave" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54d0-e6a1-c6e8-46a7">
+        <profile name="Scything Blade" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54d0-e6a1-c6e8-46a7">
           <characteristics>
-            <characteristic name="Timing" id="f4b3-5dfe-47b-da2d" hidden="false" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
-            <characteristic name="Declare" id="b235-7c46-4457-fcfc" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="e45a-b92-f55f-e08a" hidden="false" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
-            <characteristic name="Keywords" id="8a69-3ee8-12a6-523f" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic in one direction (see ‘The Pendulum Swings’). It can pass through models during that move and can end that move in combat. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move or that are within ½&quot; of it to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="The Pendulum Swings" hidden="false" id="9ec5-1011-c05e-5045" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
