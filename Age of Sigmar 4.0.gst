@@ -284,6 +284,7 @@
     <categoryEntry name="STANDARD BEARER (1/8)" id="f3eb-c688-9ac3-0761" hidden="false"/>
     <categoryEntry name="BONESPLITTERZ" id="dcf6-0115-279f-7a80" hidden="false"/>
     <categoryEntry name="ORRUK" id="86bf-1ccb-b937-c9d7" hidden="false"/>
+    <categoryEntry name="WARD (3+)" id="70eb-9b87-b57a-f9f6" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844">
@@ -586,6 +587,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a06d-4e09-7a23-05bf" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4631-7997-6da0-7a32" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -867,6 +880,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4631-7997-6da0-7a32" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1863,6 +1888,86 @@
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a43e-09a8-7e6f-cab9"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="The Horizon Seekers" id="435e-269e-899d-3f7e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="Regimental Leader" hidden="false" id="337c-e026-7100-45c9" targetId="d1f3-921c-b403-1106"/>
+            <categoryLink name="HERO" hidden="false" id="5671-f848-b9a7-5c77" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="f4f7-8173-5e5c-bbfb" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="d5b6-e7e0-5449-3084" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="5c8f-84e8-6fbf-cb36" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="d0ed-b79c-feb0-f925" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="1078-5210-f12d-4fa7" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="b132-baa1-e16e-e699" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a5b3-923e-02d4-49c1"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Valnir&apos;s Stormwing" id="2eec-326e-528c-8473" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="Regimental Leader" hidden="false" id="e069-e014-89fb-2f6e" targetId="d1f3-921c-b403-1106"/>
+            <categoryLink name="HERO" hidden="false" id="f488-c524-0d99-3b6a" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="3ca0-9b57-6777-af62" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="9736-eab5-85a0-702e" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="d279-edfe-f038-8c67" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="f00c-0681-889b-ba50" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="5751-57a8-aeee-5b8c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="e135-7ffd-de64-85b7" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d0d-3a5b-4950-186d"/>
           </constraints>
         </forceEntry>
       </forceEntries>
@@ -3043,6 +3148,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 503" id="4a1e-2c36-6a96-9434" hidden="false"/>
     <publication name="Armies of Renown" id="0578-e89b-7163-86c5" hidden="false"/>
     <publication name="Battletome: Skaven" id="ff83-b049-91b9-ed05" hidden="false"/>
+    <publication name="Github" id="746d-e204-2266-6377" hidden="false" shortName="BSData/age-of-sigmar-4th" publisherUrl="https://github.com/BSData/warhammer-age-of-sigmar-4th"/>
     <publication name="Battletome: Stormcast Eternals" id="43cd-e9ef-5d4d-87c4" hidden="false"/>
     <publication name="White Dwarf Issue 506" id="e47d-cde6-bbd2-9db9" hidden="false"/>
   </publications>
