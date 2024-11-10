@@ -845,6 +845,30 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5be9-f24d-b606-6c24" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1898,6 +1922,7 @@
             <characteristic name="Declare" id="b1df-cf32-9ca9-7fe8" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" id="dcaa-9a59-3589-d7" hidden="false" typeId="b6f1-ba36-6cd-3b03">If this **^^Manifestation^^** destroyed any enemy **^^Manifestations^^** this turn, Heal (6) this **^^Manifestation^^**.</characteristic>
             <characteristic name="Keywords" id="3a45-5cc6-92ac-7528" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Arcane Predator" hidden="false" id="9456-22b9-7885-e464" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -1952,6 +1977,7 @@
             <characteristic name="Declare" id="7477-fe19-7787-bb8e" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" id="35b5-51d8-b915-3e63" hidden="false" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move to be the targets. Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" id="bd1-9136-c603-a7f5" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Necrotic Vortex" hidden="false" id="c99-9240-9da1-d029" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -1995,6 +2021,7 @@
 • Inflict an amount of mortal damage on the target equal to the roll.
 • Subtract a number of inches equal to the roll from the target’s Move characteristic for the rest of the turn.</characteristic>
             <characteristic name="Keywords" id="65c7-c6f8-59e2-2277" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9e13-160b-4a87-da4e">
@@ -2026,6 +2053,7 @@
             <characteristic name="Declare" id="b3d1-c9b6-7535-b129" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit wholly within 6&quot; of one part of this **^^Manifestation^^** to be the target.</characteristic>
             <characteristic name="Effect" id="187a-b0be-420-b818" hidden="false" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again on the battlefield wholly within 6&quot; of the other part of this **^^Manifestation^^** and more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" id="2dfe-26d3-f148-a60d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="676c-91fa-8432-ee8d">
@@ -2092,6 +2120,7 @@
 ***Increase Time Flow***: Until the start of your next turn, you can re-roll charge rolls for friendly units while they are wholly within 12&quot; of this **^^Manifestation^^**.
 ***Decrease Time Flow***: Until the start of your next turn, subtract 1 from hit rolls for attacks that target friendly **^^Wizards^^** while they are wholly within 12&quot; of this **^^Manifestation^^**.</characteristic>
             <characteristic name="Keywords" id="a922-cfeb-4479-2f54" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
       </profiles>
@@ -2163,6 +2192,7 @@
             <characteristic name="Declare" id="9431-282-fecb-9a50" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that was targeted by this **^^Manifestation^^**&apos;s shooting attacks this phase to be the target.</characteristic>
             <characteristic name="Effect" id="44e7-e0b8-8dc8-f084" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll is less than the number of models in the target unit that were slain this phase, the target cannot use commands for the rest of the turn.</characteristic>
             <characteristic name="Keywords" id="fb37-34f1-363a-6f0d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
@@ -2292,6 +2322,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Declare" id="2965-413a-1979-820c" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Infantry Wizard Hero^^** within 3&quot; of this **^^Manifestation^^** to be the target</characteristic>
             <characteristic name="Effect" id="697-e4de-dc67-c893" hidden="false" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move. Then, remove the target from the battlefield and set them up again on the battlefield within 3&quot; of this **^^Manifestation^^** and not in combat. Then, inflict 1 mortal damage on the target.</characteristic>
             <characteristic name="Keywords" id="10c3-9bec-a51e-9041" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move**^^</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
         <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
@@ -3048,6 +3079,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
