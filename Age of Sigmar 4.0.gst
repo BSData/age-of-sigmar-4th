@@ -3149,9 +3149,9 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 503" id="4a1e-2c36-6a96-9434" hidden="false"/>
     <publication name="Armies of Renown" id="0578-e89b-7163-86c5" hidden="false"/>
     <publication name="Battletome: Skaven" id="ff83-b049-91b9-ed05" hidden="false"/>
-    <publication name="Github" id="746d-e204-2266-6377" hidden="false" shortName="BSData/age-of-sigmar-4th" publisherUrl="https://github.com/BSData/warhammer-age-of-sigmar-4th"/>
     <publication name="Battletome: Stormcast Eternals" id="43cd-e9ef-5d4d-87c4" hidden="false"/>
     <publication name="White Dwarf Issue 506" id="e47d-cde6-bbd2-9db9" hidden="false"/>
+    <publication name="Battletome: Slaves to Darkness" id="6357-5d77-a2b2-f86b" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
