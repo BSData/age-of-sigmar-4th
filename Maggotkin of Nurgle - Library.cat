@@ -13,8 +13,8 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">While this unit has 10 or more damage points, the Attacks characteristic of its **Gnarlrod** is 3.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">If there are fewer than 3 friendly **Feculent Gnarlmaws** on the battlefield, you can set up a **Feculent Gnarlmaw** wholly within 12&quot; of this unit, more than 3&quot; from all enemy units, objectives and other terrain features.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If there are fewer than 3 friendly **Feculent Gnarlmaws** on the battlefield, you can set up a **Feculent Gnarlmaw** wholly within 12&quot; of this unit, more than 3&quot; from all enemy units, objectives and other terrain features.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
@@ -562,7 +562,7 @@
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move a distance up to the value of the charge roll. During that move, this unit can move into
-combat and can pass through models in the target unit, but it must end that move within 1&quot; of the target. Then, inflict D3 mortal damage on the target.</characteristic>
+combat and can pass through models in the target unit, but it must end that move within 1&quot; of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**, **^^Charge^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2403,10 +2403,10 @@ At the end of the battle round, any unspent **tally points** are lost.</characte
         <categoryLink name="UNIQUE" hidden="false" id="0884-03c0-ba52-cea9" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="Legends" hidden="false" id="ace9-ef7d-f6bb-f6dd" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="cec0-5cc3-b81e-0bd5" targetId="f679-3bcb-d664-9ac3" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="4f6e-2b00-3fbe-52a5" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="b865-ce34-963f-41fd" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="7864-a410-8a8d-e01b" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="93fa-c4cf-ffba-fee1" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="20b8-7241-bbc3-f9c1" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <profiles>
         <profile name="The Thricefold Discord" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d5aa-e5e5-c9e6-d0d9">
@@ -2533,5 +2533,215 @@ At the end of the battle round, any unspent **tally points** are lost.</characte
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Grandfather&apos;s Gardeners" hidden="false" id="c031-2a32-ee55-4a1c" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="4c50-e6a7-d0f2-893e" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="0a5b-2989-f657-f573" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="08d1-0113-d239-f190" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="5441-76e3-3bfd-9fbe" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="07fd-d298-d636-3594" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="3bb9-0c0c-a24a-f2a0" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="ca06-59c4-71f2-09b9" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+        <categoryLink name="DAEMON" hidden="false" id="c470-b2ad-21bc-b9cd" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="STANDARD BEARER" hidden="false" id="62c6-d6c8-1e7c-d826" targetId="8b4d-69b4-dbc6-3beb" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Grandfather&apos;s Gardeners" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="03ae-85d4-990c-7a26">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Seeds of Rot" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="24c4-8d2a-e0b6-7005">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When using the &apos;Blessed by the Plaguefater&apos; ability, if you choose to infect an enemy unit, you can pick an enemy unit that is contesting an objective that is seeded with rot.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Blooming Plague" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="87c7-c25c-9d9f-13bb">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective that is contested by this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target is **seeded with rot** for the rest of the battle.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Phleghmus Potbelly" hidden="false" id="62e2-3476-0c07-c4d8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fefc-6e70-fd0c-568c"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="98a6-e5d8-1116-85cd"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gardening Tools" hidden="false" id="00d0-776e-b333-9736">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="30d4-3f16-0097-af57"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5714-d69a-abe3-2257"/>
+              </constraints>
+              <profiles>
+                <profile name="Gardening Tools" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2ef4-c39f-cc73-7118">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="5f4e-ee0b-9751-2e8e" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d6d-bfd3-a249-4e16" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="1455-393a-639a-4b95" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e12-b6de-bd93-3042"/>
+                    <constraint type="max" value="1" field="selections" scope="c031-2a32-ee55-4a1c" shared="true" id="e6dd-0cde-a35c-ef98" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Slunge" hidden="false" id="ada7-3df8-5605-9427">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="edc2-560f-bf62-d154"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c18-f78e-5619-6795"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gardening Tools" hidden="false" id="9a9c-caf4-fb03-c935">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="188c-bc66-b795-635e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb52-2718-8589-cb59"/>
+              </constraints>
+              <profiles>
+                <profile name="Gardening Tools" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="54ec-1421-a064-d7c7">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Squort" hidden="false" id="3d75-72d6-1111-6779">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ddf-f3c3-8702-a569"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a2e7-3f93-a517-410b"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gardening Tools" hidden="false" id="8ef3-0645-88f4-d44f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f77-cfa8-c697-d8b9"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4fc-5c1f-10af-4644"/>
+              </constraints>
+              <profiles>
+                <profile name="Gardening Tools" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="401a-a2fb-53bd-03cd">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Maggoty Strewg" hidden="false" id="a444-df46-5025-466d">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2f7-f15a-31c4-9686"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-41a2-f1d5-0b63"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gardening Tools" hidden="false" id="4ce9-e99c-a9ad-4efb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24ea-dcfd-ac8a-7f8e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47d3-3b9b-3922-d8ab"/>
+              </constraints>
+              <profiles>
+                <profile name="Gardening Tools" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9752-3cb2-616e-dfe2">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Bug-Eyed Dripterus" hidden="false" id="a84c-33a5-dcf8-501f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d719-d9a7-fda8-e357"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aae2-1c3e-0c7c-a744"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gardening Tools" hidden="false" id="a42c-fa7f-9d3d-28f4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="00c9-d676-b175-feb3"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="470f-2a5c-cfa0-4834"/>
+              </constraints>
+              <profiles>
+                <profile name="Gardening Tools" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5f40-998e-0932-2906">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="b662-5f4f-67e4-42d9" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f24-201e-73d4-a95f" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="d5aa-250d-bb2e-fd39" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="04ed-7bf0-f8c7-93f1"/>
+                    <constraint type="max" value="1" field="selections" scope="c031-2a32-ee55-4a1c" shared="true" id="19f3-f851-8537-9437" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
+  <categoryEntries>
+    <categoryEntry name="STANDARD BEARER" id="8b4d-69b4-dbc6-3beb" hidden="false"/>
+  </categoryEntries>
 </catalogue>
