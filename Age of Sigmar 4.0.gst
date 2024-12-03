@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="2" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="3" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
@@ -196,8 +196,6 @@
     <categoryEntry name="SLAVES TO DARKNESS" id="94d9-cc36-9083-1bea" hidden="false"/>
     <categoryEntry name="DARKOATH" id="56-43e3-895c-2c26" hidden="false"/>
     <categoryEntry name="GUNNAR&apos;S OATHSWORN" id="500-4d38-67a4-feed" hidden="false"/>
-    <categoryEntry name="TZEENTCH" id="111a-ba91-f34b-d71e" hidden="false"/>
-    <categoryEntry name="KHORNE" id="2fe7-eb4-81bd-bdcd" hidden="false"/>
     <categoryEntry name="UNDIVIDED" id="9ff6-420e-8f6d-f6dd" hidden="false"/>
     <categoryEntry name="WARRIORS OF CHAOS" id="e06-cc4d-8589-c273" hidden="false"/>
     <categoryEntry name="CITIES OF SIGMAR" id="4999-8ae2-e1bb-ba5" hidden="false"/>
@@ -285,6 +283,9 @@
     <categoryEntry name="BONESPLITTERZ" id="dcf6-0115-279f-7a80" hidden="false"/>
     <categoryEntry name="ORRUK" id="86bf-1ccb-b937-c9d7" hidden="false"/>
     <categoryEntry name="WARD (3+)" id="70eb-9b87-b57a-f9f6" hidden="false"/>
+    <categoryEntry name="PLEDGED TO TZEENTCH" id="cd13-c472-ceff-5bd8" hidden="false"/>
+    <categoryEntry name="PLEDGED TO KHORNE" id="8aac-5207-b454-5ecb" hidden="false"/>
+    <categoryEntry name="LEGION OF THE FIRST PRINCE" id="5942-b473-e229-37cd" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844">
@@ -599,6 +600,12 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -894,6 +901,12 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1007,6 +1020,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1362,6 +1376,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1399,6 +1414,8 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1828,6 +1845,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1866,6 +1884,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1968,6 +1987,82 @@
           </categoryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d0d-3a5b-4950-186d"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Lord Skaldior&apos;s Chosen" id="ba3f-fa41-97d3-2c0f" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="Regimental Leader" hidden="false" id="e1fe-a593-2c2b-bea7" targetId="d1f3-921c-b403-1106"/>
+            <categoryLink name="HERO" hidden="false" id="d39d-963d-9ecf-d372" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="e7b0-c932-4da3-4425" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="5bbf-4809-2c7e-6e21" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="049e-25bc-b1e0-0dcc" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="d03d-f804-bcce-0563" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="59d7-11ed-7c43-2c0e" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="2bf1-f3f4-01a5-a4fa" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0294-85f5-4e7e-f710"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Godmarked Ascendant" id="ab5a-af59-e05f-2daa" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="Regimental Leader" hidden="false" id="6d20-a39b-1ad3-12cd" targetId="d1f3-921c-b403-1106"/>
+            <categoryLink name="HERO" hidden="false" id="803e-4331-f6e4-3d9c" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="a5a4-d652-138f-9591" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="d6e7-87ec-0fb1-a848" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="c475-b02e-3621-0d72" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="2fb4-6669-d65f-3912" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="89bb-c42d-c492-6cc4" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="d515-ef00-4ec8-5297" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d1c-194a-313c-e5ba"/>
           </constraints>
         </forceEntry>
       </forceEntries>
@@ -2121,12 +2216,12 @@
         </profile>
         <profile name="Bound for the Great Oubliette" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6817-e507-443e-1ff4">
           <characteristics>
-            <characteristic name="Timing" id="6c22-f8bc-66f0-8c0d" hidden="false" typeId="652c-3d84-4e7-14f4"/>
-            <characteristic name="Declare" id="7172-7aa-2d5c-4ec6" hidden="false" typeId="bad3-f9c5-ba46-18cb">For each part of this **^^Manifestation^^**, you can pick an enemy unit within 3&quot; of that part to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn.</characteristic>
-            <characteristic name="Effect" id="1a52-f987-4888-3b17" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+:
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">For each part of this **^^Manifestation^^**, you can pick an enemy unit within 3&quot; of that part to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+:
 • Inflict an amount of mortal damage on the target equal to the roll.
 • Subtract a number of inches equal to the roll from the target’s Move characteristic for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" id="65c7-c6f8-59e2-2277" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
         </profile>
@@ -2769,9 +2864,9 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Krondspine Incarnate of Ghur endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Krondspine Incarnate of Ghur endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Krondspine Incarnate of Ghur** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Krondspine Incarnate of Ghur** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2793,36 +2888,36 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Shards of Valagharr endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Shards of Valagharr endless spell wholly within 18&quot; of the caster and visible to them. A Shards of Valagharr endless spell has 2 parts that must be set up within 9&quot; of each other.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Shards of Valagharr** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Shards of Valagharr** endless spell wholly within 18&quot; of the caster and visible to them. A **Shards of Valagharr** endless spell has 2 parts that must be set up within 9&quot; of each other.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Lauchon the Soulseeker" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="eba-b6d2-203a-8ba3">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Lauchon the Soulseeker endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Lauchon the Soulseeker endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Lauchon the Soulseeker** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Lauchon the Soulseeker** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Horrorghast" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="54a-8669-80d9-b659">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Horrorghast endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Horrorghast  endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Horrorghast** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Horrorghast** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Soulscream Bridge" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c400-fd73-7e04-eade">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Soulscream Bridge endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Soulscream Bridge wholly within 18&quot; of the caster and visible to them. A Soulscream Bridge has 2 parts that must be set up within 9&quot; of each other.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Soulscream** Bridge endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Soulscream Bridge** wholly within 18&quot; of the caster and visible to them. A **Soulscream Bridge** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2862,36 +2957,36 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Purple Sun of Shyish endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Purple Sun of Shyish endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Purple Sun of Shyish** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Purple Sun of Shyish** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Suffocating Gravetide" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="36e0-4b94-aeb-67ac">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Suffocating Gravetide endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Suffocating Gravetide endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Suffocating Gravetide** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Suffocating Gravetide** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Soulsnare Shackles" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ee70-f212-c079-a752">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Soulsnare Shackles endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Soulsnare Shackles endless spell wholly within 18&quot; of the caster and visible to them. A Soulsnare Shackles endless spell has 3 parts that must each be set up within 3&quot; of at least 1 other part.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Soulsnare Shackles** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Soulsnare Shackles** endless spell wholly within 18&quot; of the caster and visible to them. A **Soulsnare Shackles** endless spell has 3 parts that must each be set up within 3&quot; of at least 1 other part.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Malevolent Maelstrom" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="1f2c-ca29-2c5b-24ba">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly a Malevolent Maelstrom endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a a Malevolent Maelstrom endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly a **Malevolent Maelstrom** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a a **Malevolent Maelstrom** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2931,27 +3026,27 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Aethervoid Pendulum endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up an Aethervoid Pendulum wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Aethervoid Pendulum endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up an **Aethervoid Pendulum** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Quicksilver Swords" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="d4da-e543-192d-84ae">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Quicksilver Swords endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Quicksilver Swords endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Quicksilver Swords** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Quicksilver Swords** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Chronomantic Cogs" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c402-d205-c59f-e84b">
               <characteristics>
-                <characteristic name="Timing" hidden="false" id="1ea8-be59-121-86d8" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" hidden="false" id="227a-a588-7af0-9245" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" hidden="false" id="7d4e-d739-ab8d-af3b" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Chronomantic Cogs endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" hidden="false" id="4a14-2d52-262b-cca3" typeId="1cb9-a-1345-907f">Set up a Chronomantic Cogs endless spell wholly within 12&quot; of the caster and visible to them.</characteristic>
-                <characteristic name="Keywords" hidden="false" id="238-f875-3057-afa9" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Chronomantic Cogs** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Chronomantic Cogs** endless spell wholly within 12&quot; of the caster and visible to them.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2985,27 +3080,27 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly The Burning Head endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a The Burning Head endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **The Burning Head** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **The Burning Head** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Emerald Lifeswarm" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="3287-7355-d3c6-3f71">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Emerald Lifeswarm endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Emerald Lifeswarm endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Emerald Lifeswarm** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Emerald Lifeswarm** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Ravenak’s Gnashing Jaws" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="5c89-2809-149c-7e83">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Ravenak’s Gnashing Jaws endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Ravenak’s Gnashing Jaws endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Ravenak’s Gnashing Jaws** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Ravenak’s Gnashing Jaws** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3039,27 +3134,27 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Umbral Spellportal endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up an Umbral Spellportal wholly within 18&quot; of the caster and visible to them. An Umbral Spellportal has 2 parts that must be set up within 9&quot; of each other.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Umbral Spellportal** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up an **Umbral Spellportal** wholly within 18&quot; of the caster and visible to them. An **Umbral Spellportal** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Prismatic Palisade" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c32f-88f8-b295-6f92">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Prismatic Palisade endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Prismatic Palisade wholly within 18&quot; of the caster and visible to them.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Prismatic Palisade** endless spell on the battlefield, pick a friendly **^^Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Prismatic Palisade** wholly within 18&quot; of the caster and visible to them.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
             <profile name="Summon Geminids of Uhl-Gysh" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="477a-4ba9-95b1-5921">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly Geminids of Uhl-Gysh endless spell on the battlefield, pick a friendly WIZARD to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a Geminids of Uhl-Gysh endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">SPELL, SUMMON</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Geminids of Uhl-Gysh** endless spell on the battlefield, pick a friendly **^^Wizard^^**to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Geminids of Uhl-Gysh** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3149,9 +3244,9 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 503" id="4a1e-2c36-6a96-9434" hidden="false"/>
     <publication name="Armies of Renown" id="0578-e89b-7163-86c5" hidden="false"/>
     <publication name="Battletome: Skaven" id="ff83-b049-91b9-ed05" hidden="false"/>
-    <publication name="Github" id="746d-e204-2266-6377" hidden="false" shortName="BSData/age-of-sigmar-4th" publisherUrl="https://github.com/BSData/warhammer-age-of-sigmar-4th"/>
     <publication name="Battletome: Stormcast Eternals" id="43cd-e9ef-5d4d-87c4" hidden="false"/>
     <publication name="White Dwarf Issue 506" id="e47d-cde6-bbd2-9db9" hidden="false"/>
+    <publication name="Battletome: Slaves to Darkness" id="6357-5d77-a2b2-f86b" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
