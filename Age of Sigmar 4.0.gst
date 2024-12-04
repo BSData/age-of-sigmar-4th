@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="3" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="4" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
@@ -307,6 +307,13 @@
                 <constraint type="min" value="1" field="selections" scope="force" shared="true" id="fed1-8a87-7850-5a90-min"/>
                 <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fed1-8a87-7850-5a90-max"/>
               </constraints>
+              <modifiers>
+                <modifier type="add" value="If you are trying to add a second HERO to an eligible regiment, add it from the HERO section, not the Regimental Leader one." field="error">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </categoryLink>
             <categoryLink name="HERO" hidden="false" id="5737-69cb-210b-3666" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="57d7-987e-b726-db43" targetId="75d6-6995-dfcc-3898"/>
@@ -939,9 +946,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="480" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="2a36-3f6a-d92c-d9df" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="a3b0-4efe-c915-d477" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="5305-154c-8a0-bd35" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="e4a1-e574-613-a793" targetId="6d54-625c-d063-13e2"/>
@@ -985,9 +992,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="450" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="5ada-67e4-940a-1a23" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="f84c-54f8-18a5-b266" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="78c6-ba30-f91-cba8" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="41f8-d94f-75e0-5c53" targetId="6d54-625c-d063-13e2"/>
@@ -1030,9 +1037,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="440" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="f573-7559-c3e5-b8c1" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="8685-9de-c6ef-2523" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="5a87-7525-f1a4-f341" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="6363-af46-db2c-73a9" targetId="6d54-625c-d063-13e2"/>
@@ -1070,9 +1077,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="260" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="d09f-9d17-9b03-2755" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="8ee8-2017-b724-846e" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="394d-3c39-e1e-ecd6" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="b5ee-e917-b3cd-5260" targetId="6d54-625c-d063-13e2"/>
@@ -1110,9 +1117,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="500" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="f224-e761-4ef-ae33" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="7fe7-f73d-b26d-a8af" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="60f7-1cd-5079-d1c3" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="1b1e-d82f-8eb0-84c3" targetId="6d54-625c-d063-13e2"/>
@@ -1151,9 +1158,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="360" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="c859-c1e6-ea55-d4ba" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="8186-47c2-454e-6ab" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="b97e-ca41-c59-42e9" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="ac1e-cbae-4328-ac3e" targetId="6d54-625c-d063-13e2"/>
@@ -1191,9 +1198,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="350" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="d9f9-fc47-e39e-f01" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="3579-d1fa-943-d349" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="4728-dcf8-2daf-baed" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="d27e-631f-ca67-fcef" targetId="6d54-625c-d063-13e2"/>
@@ -1231,9 +1238,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="230" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="d2ed-63aa-6918-2192" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="7031-2636-76a3-57c2" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="6126-604c-5909-8bdc" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="2602-19e8-1989-71d5" targetId="6d54-625c-d063-13e2"/>
@@ -1271,9 +1278,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="320" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="43d3-aeb8-98e7-814e" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="f9c8-1455-d9b9-6c09" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="147f-d1f1-9adc-b1ad" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="1f68-957c-7654-8d48" targetId="6d54-625c-d063-13e2"/>
@@ -1309,9 +1316,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="250" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="c363-f267-73c5-52a1" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="a112-42a2-e538-93af" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="5e04-91c0-1527-6a8f" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="3572-432c-73eb-aa41" targetId="6d54-625c-d063-13e2"/>
@@ -1347,9 +1354,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="460" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="befc-e188-6c7d-63bb" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="f94f-e787-ec3-f604" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="231a-b74d-6265-b8e4" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="8598-e16c-95a8-b971" targetId="6d54-625c-d063-13e2"/>
@@ -1386,9 +1393,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="540" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="78c9-13fd-d6a5-bde0" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="bcb1-457b-848f-c1e8" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="9ef6-e83-e9d7-ee66" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="adb2-bfed-4b33-bc31" targetId="6d54-625c-d063-13e2"/>
@@ -1415,7 +1422,6 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1425,9 +1431,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="280" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="9ddb-ae30-b66c-abf5" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="b6fc-628-32b0-c4a1" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="9ca0-c027-244c-a66f" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="4dac-6d19-7207-8df2" targetId="6d54-625c-d063-13e2"/>
@@ -1460,9 +1466,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="520" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="d68e-bdd-820a-115c" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="bd49-173-e545-22ca" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="c8ad-659c-9765-29b0" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="28d8-3a39-1334-a6b7" targetId="6d54-625c-d063-13e2"/>
@@ -1495,9 +1501,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="760" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="aa32-2974-bb2d-cd48" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="71b-f035-48e1-4a6e" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="791-6695-b565-ce11" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="2893-77f0-2760-8d45" targetId="6d54-625c-d063-13e2"/>
@@ -1530,9 +1536,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="810" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="8db3-3ea-e747-ad7e" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="476b-c364-9177-c0e" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="625b-493b-3203-9ec7" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="88a8-beb5-3d09-96ae" targetId="6d54-625c-d063-13e2"/>
@@ -1565,9 +1571,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="830" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="fbbe-24d0-702a-119c" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="3e32-2d98-365a-2078" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="25a0-8c11-49bb-fd85" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="ebca-268c-75e0-501f" targetId="6d54-625c-d063-13e2"/>
@@ -1600,9 +1606,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="620" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="4048-73da-9714-f3ad" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="d8b0-9a55-da81-74c1" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="c2ae-b144-e3d1-df2" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="3c55-117a-fac4-7054" targetId="6d54-625c-d063-13e2"/>
@@ -1635,9 +1641,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="700" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="1ad5-c238-c1fb-c311" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="dc85-4afa-e200-8b30" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="4423-53ea-29df-1897" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="67b0-844a-cdd6-6a72" targetId="6d54-625c-d063-13e2"/>
@@ -1670,9 +1676,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="700" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="dab0-bd73-be81-c220" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="7e1d-2d49-c0bf-c9db" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="9feb-c6c4-e466-b667" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="dead-8778-197f-7355" targetId="6d54-625c-d063-13e2"/>
@@ -1705,9 +1711,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="240" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="cd30-4295-3b1c-f9c1" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="4f07-d6ca-f0a6-e9a7" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="4b99-ec9f-eccc-dc30" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="c9a6-802e-cf9a-8ff8" targetId="6d54-625c-d063-13e2"/>
@@ -1742,9 +1748,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="450" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="397d-b9fc-16c5-360d" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="c7cd-5b3a-d3bb-4244" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="ad1e-1ea1-dfcd-9844" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="7c68-ac4a-71-c597" targetId="6d54-625c-d063-13e2"/>
@@ -1779,9 +1785,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="340" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="1670-f5f1-501b-2bbd" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="564c-894d-539-47e0" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="bd53-2110-3505-74e4" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="4477-b531-2026-1c62" targetId="6d54-625c-d063-13e2"/>
@@ -1816,9 +1822,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="490" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="c839-f8e-339f-1331" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="476f-ca8b-f28d-1ec3" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="5516-8530-dce-bdfd" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="e546-86e5-d092-8ae9" targetId="6d54-625c-d063-13e2"/>
@@ -1855,9 +1861,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="460" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="c93c-9390-dd8a-898f" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="1edd-86b5-ea3f-1e46" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="7ffe-9bc5-276d-3518" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="49e6-a713-64ee-529b" targetId="6d54-625c-d063-13e2"/>
@@ -1894,9 +1900,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="450" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="a3ba-1b90-470a-8cd2" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="1292-c42e-03b0-c66d" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="fc43-6ae0-cf7b-67ff" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="eb7b-d92d-00f2-cfd8" targetId="6d54-625c-d063-13e2"/>
@@ -1934,9 +1940,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="500" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="337c-e026-7100-45c9" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="5671-f848-b9a7-5c77" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="f4f7-8173-5e5c-bbfb" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="d5b6-e7e0-5449-3084" targetId="6d54-625c-d063-13e2"/>
@@ -1974,9 +1980,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="400" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="e069-e014-89fb-2f6e" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="f488-c524-0d99-3b6a" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="3ca0-9b57-6777-af62" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="9736-eab5-85a0-702e" targetId="6d54-625c-d063-13e2"/>
@@ -2012,9 +2018,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="570" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="e1fe-a593-2c2b-bea7" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="d39d-963d-9ecf-d372" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="e7b0-c932-4da3-4425" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="5bbf-4809-2c7e-6e21" targetId="6d54-625c-d063-13e2"/>
@@ -2050,9 +2056,9 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="270" field="points"/>
           </modifiers>
           <categoryLinks>
-            <categoryLink name="Regimental Leader" hidden="false" id="6d20-a39b-1ad3-12cd" targetId="d1f3-921c-b403-1106"/>
             <categoryLink name="HERO" hidden="false" id="803e-4331-f6e4-3d9c" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="a5a4-d652-138f-9591" targetId="75d6-6995-dfcc-3898"/>
             <categoryLink name="MONSTER" hidden="false" id="d6e7-87ec-0fb1-a848" targetId="6d54-625c-d063-13e2"/>
@@ -2065,7 +2071,444 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d1c-194a-313c-e5ba"/>
           </constraints>
         </forceEntry>
+        <forceEntry name="Enforcers of the Tithe" id="162a-f77e-f5f8-041b" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="510" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="9205-5836-6095-0576" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="ff7a-6c89-e2ec-da80" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="82c2-2f2e-6b6d-023a" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="3abc-7932-4e0b-6d1d" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="3661-d598-a55d-6686" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="aa32-7b59-12fc-b281" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="5ba2-e621-487a-3db3" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="431c-3420-7622-eb2e"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Exile Scavengers" id="c09c-6726-db25-549b" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="460" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="32b6-c130-fc1a-107e" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="9cf8-8891-a7ea-7fef" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="c722-9d6b-c6f2-a390" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="5998-f0b6-3547-2a2a" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="cd18-01ff-f539-e64e" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="7d34-fa7e-b9c5-b2e4" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="8524-0dc6-20d9-f551" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2dbd-ac50-222b-82ed"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Squires of the Everchosen" id="2b2d-a5c6-4595-5468" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="310" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="a6a2-c1e5-dcde-9f47" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="40ce-4b97-f422-24cb" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="e208-bff6-04f2-6dd7" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="3763-c940-16d0-385a" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="0077-4c54-8a66-8065" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="ee55-7287-baf0-f517" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="bd3c-6627-22da-77a4" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3886-43b0-7f50-2261"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="The Lost-Song Spirits" id="147d-a572-a516-94c5" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="430" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="4fbe-4a61-c575-dbe0" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="8ce6-f721-51bd-fad4" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="c085-8791-78ce-41e7" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="e98b-21c8-05c2-37ec" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="784b-04af-dbaf-600d" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="6c09-e7c0-f4e7-36f7" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="ce92-dc10-7630-0b81" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9bb9-3027-f399-60aa"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Nurgle&apos;s Gift" id="0fec-ccda-3904-c0ce" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="180" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="3946-d754-546d-4691" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="7762-b23d-a09d-5161" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="7ffb-d383-9f78-44be" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="1230-3037-68ea-2b7f" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c0e5-8f0c-5399-61fd" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="f956-3033-baa7-2e46" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="14e5-1af1-06fd-4dc1" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d3f-efcf-1663-e3cd"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Stumblefoot Gargant" id="e974-53fd-481c-5345" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="180" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="4622-6c6a-58d5-922b" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="145d-2c56-ae2b-f0e9" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="f555-93ac-f0ba-c277" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="4983-52f5-664a-53fa" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="e80f-e8b8-8dff-2eec" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="2a6a-02ae-51ce-1556" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="66e6-9d64-f104-263d" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca64-ad20-9945-3e9f"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Snerk&apos;s Trogg-fer-Hire" id="9d39-ae0e-afc9-f982" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="250" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="f2aa-f314-9499-dfe1" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="826d-cac9-39dc-786e" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="da5d-1858-c679-ef61" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="b631-64fc-2447-b2b8" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c713-3333-d062-137f" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="0973-4573-a68c-3ece" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="b160-9fa1-d285-fc61" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a28a-3566-79e0-41b8"/>
+          </constraints>
+        </forceEntry>
+        <forceEntry name="Goroan Scions" id="d7f8-513c-ea3d-bc9e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="470" field="points"/>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="4f1e-5e90-0df6-c8c5" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="7e89-82d6-3e49-de95" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="0d32-f26e-5e05-140a" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="d58c-a42f-36d7-bd3b" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="9802-5a0c-beee-250b" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="61c3-1aa7-2778-4b12" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="bf0e-5e4c-2265-8b5b" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9480-14d5-5092-6179"/>
+          </constraints>
+        </forceEntry>
       </forceEntries>
+      <modifiers>
+        <modifier type="add" value="Your list can have a maximum of 5 regiments, including up to 1 Regiment of Renown." field="error">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="7" field="forces" scope="roster" childId="any" shared="true" includeChildForces="false"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="8" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="6" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="4063-b3a6-e7e1-383f" shared="true"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="To add units to your roster, you need to add a regiment. These can be added under the Forces selector - select your top-level force for your army and then click the + on mobile or check the sidebar panel on desktop." field="error">
+          <conditions>
+            <condition type="atMost" value="1" field="forces" scope="roster" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
@@ -3261,10 +3704,11 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             </condition>
           </conditions>
         </modifier>
+        <modifier type="set" value="500" field="points"/>
       </modifiers>
       <rules>
         <rule name="Use New Recruit!" id="1d48-54c4-219e-7285" hidden="false">
-          <description>Full functionality is not available in Battlescribe. While the majority of listbuilding should work, some features may behave unexpectedly and text will have markup notation interspersed that Battlescribe will display as plaintext. Please use New Recruit to ensure full functionality of this data set.</description>
+          <description>Full functionality is not available in Battlescribe. While the majority of listbuilding should work, some features may behave unexpectedly (e.g. reinforcing will not work) and text will have markup notation interspersed that Battlescribe will display as plaintext. Please use New Recruit to ensure full functionality of this data set.</description>
         </rule>
       </rules>
     </selectionEntry>
