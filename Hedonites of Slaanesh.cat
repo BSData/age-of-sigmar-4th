@@ -23,8 +23,12 @@ At the end of the battle round, any temptation dice that have not been used ar
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly unit has the **^^Euphoric^^** keyword:
-• That unit’s weapons have **Crit (2 Hits)**.
-• That unit can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.</characteristic>
+• That unit’s weapons, including **Companion** weapons, have **Crit (2 Hits)**.
+• That unit can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.
+
+
+**Designer’s Note:** ***Note that ‘Sadistic Spite’ does not affect
+**Companion** weapons.***</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -329,7 +333,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9393-6106-7840-6ce9" type="selectionEntryGroup" targetId="c061-56e0-f2c0-af3e"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Contorted Epitome" hidden="false" id="d020-4ef6-10c2-b2de" type="selectionEntry" targetId="7ff4-32c2-f67e-5476">
@@ -392,7 +396,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Glutos Orscollion, Lord of Gluttony" hidden="false" id="e92b-705c-75c9-f634" type="selectionEntry" targetId="fac2-b0a0-feec-f70f">
@@ -491,7 +495,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9d42-8e94-ee08-d1e4" type="selectionEntryGroup" targetId="521a-8c3e-b543-3b40"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="440"/>
+        <cost name="pts" typeId="points" value="420"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord of Hubris" hidden="false" id="8fda-94a4-7fd5-29ed" type="selectionEntry" targetId="ef1b-a791-66b4-735f">
@@ -551,7 +555,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord of Pain" hidden="false" id="f921-f7c0-5a6d-7ec6" type="selectionEntry" targetId="4890-8c79-a2bd-b1ad">
@@ -611,7 +615,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Shalaxi Hellbane" hidden="false" id="79a6-40ee-6379-39a4" type="selectionEntry" targetId="288-b306-7776-96b5">
@@ -683,6 +687,16 @@ At the end of the battle round, any temptation dice that have not been used ar
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -693,6 +707,33 @@ At the end of the battle round, any temptation dice that have not been used ar
       <costs>
         <cost name="pts" typeId="points" value="260"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="d7aa-c392-f0a6-dad9" field="category"/>
+            <modifier type="set" value="0" field="1ce7-f4ab-ef26-a604">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="d7aa-c392-f0a6-dad9" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="bf83-8936-c723-921a" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8d4f-1390-6596-ef54" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Synessa, the Voice of Slaanesh" hidden="false" id="14c2-ceed-8427-b5c6" type="selectionEntry" targetId="eb63-b209-7932-2b43">
       <modifiers>
@@ -731,7 +772,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="230"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="The Masque" hidden="false" id="f09a-c265-e3cd-6130" type="selectionEntry" targetId="19fa-187-b059-ffce">
@@ -784,7 +825,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="The Masque" hidden="false" id="5c24-aded-3430-9992" type="selectionEntry" targetId="19fa-187-b059-ffce">
@@ -792,7 +833,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <categoryLink name="Regimental Leader" hidden="false" id="7e38-a76f-741e-c4fb" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bladebringer, Herald on Exalted Chariot" hidden="false" id="8fb0-25a8-5bd2-4d01" type="selectionEntry" targetId="95eb-6e32-fd0f-7b39">
@@ -804,7 +845,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="cb0c-1a1e-9335-f87d" type="selectionEntryGroup" targetId="521a-8c3e-b543-3b40"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Contorted Epitome" hidden="false" id="fc94-72c-a558-c907" type="selectionEntry" targetId="7ff4-32c2-f67e-5476">
@@ -824,7 +865,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <categoryLink name="Regimental Leader" hidden="false" id="4abf-8d78-3a78-5f7a" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Glutos Orscollion, Lord of Gluttony" hidden="false" id="e6cc-9cda-6e08-4921" type="selectionEntry" targetId="fac2-b0a0-feec-f70f">
@@ -856,7 +897,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2ea2-10b6-ee12-3c7f" type="selectionEntryGroup" targetId="521a-8c3e-b543-3b40"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="440"/>
+        <cost name="pts" typeId="points" value="420"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord of Hubris" hidden="false" id="e120-58a7-b8ef-ab66" type="selectionEntry" targetId="ef1b-a791-66b4-735f">
@@ -868,7 +909,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="273c-cb07-4ca3-e083" type="selectionEntryGroup" targetId="521a-8c3e-b543-3b40"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord of Pain" hidden="false" id="5c9a-9bc-17a5-10c4" type="selectionEntry" targetId="4890-8c79-a2bd-b1ad">
@@ -880,7 +921,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="543b-af72-d005-fea6" type="selectionEntryGroup" targetId="521a-8c3e-b543-3b40"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Shalaxi Hellbane" hidden="false" id="3dc-2b50-5aef-e9d4" type="selectionEntry" targetId="288-b306-7776-96b5">
@@ -924,7 +965,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <categoryLink name="Regimental Leader" hidden="false" id="649d-cef2-a109-1dcd" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="230"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Hedonites of Slaanesh" hidden="false" id="9eab-ba5b-5d29-3c72" type="selectionEntry" targetId="77b8-2e38-40f0-4472">
@@ -1078,7 +1119,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8688-2643-83b9-5c55"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Hellstriders" hidden="false" id="6dcc-93db-64ec-6cb8" type="selectionEntry" targetId="7fbf-a41a-7e29-8476">
@@ -1296,7 +1337,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Seeker Chariot" hidden="false" id="3cea-692e-73de-99f9" type="selectionEntry" targetId="4b99-af35-44db-7fd8">
@@ -1366,7 +1407,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8550-ff9d-9815-bbcb"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Seekers" hidden="false" id="98b5-b299-4898-429e" type="selectionEntry" targetId="ebde-c823-a0d7-dce1">
@@ -1515,7 +1556,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Slickblade Seekers" hidden="false" id="abb6-eea9-4ae3-cbd5" type="selectionEntry" targetId="395d-b625-25a4-4ca2">

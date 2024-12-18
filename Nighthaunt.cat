@@ -301,10 +301,10 @@
         </profile>
         <profile name="Discorporate" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="c6d2-2b92-5367-7b43">
           <characteristics>
-            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Reaction: Opponent declared an **^^Attack^^** ability</characteristic>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Any Hero Phase</characteristic>
             <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
-            <characteristic name="Declare" typeId="b77f-7548-840e-c086">A friendly **^^Nighthaunt^^** unit targeted by that **^^Attack^^** ability</characteristic>
-            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">That unit has **^^Ward (5+)^^** for the rest of the phase.</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Nighthaunt^^** unit to use this ability.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">That unit has **^^Ward (5+)^^** for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
         </profile>
@@ -367,7 +367,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Knight of Shrouds" hidden="false" id="303-eeea-40b-580d" type="selectionEntry" targetId="625-d4af-9738-48ca">
@@ -390,7 +390,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="417b-5a9c-dee1-f3cf" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Guardian of Souls" hidden="false" id="a1fa-faa9-3b72-fd02" type="selectionEntry" targetId="76b8-eb95-f916-c5b5">
@@ -413,7 +413,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="3f0d-b9d4-ca09-2271" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Cairn Wraith" hidden="false" id="f659-a262-ac79-b0eb" type="selectionEntry" targetId="eac-95c-b449-a7a5">
@@ -487,7 +487,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2ddb-ec8-be30-30cc" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Krulghast Cruciator" hidden="false" id="9498-134b-1395-ef12" type="selectionEntry" targetId="d5e7-8080-3243-6c22">
@@ -521,6 +521,19 @@
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e5fd-27bc-4ac3-4825" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="cb94-2d3c-b866-f621" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b7c3-7f7-72a2-ee8f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="78cd-3409-a94f-93f9" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="dc09-dae9-d3da-130e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5b02-b841-9c31-b69c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="df02-2a23-a841-4ce3" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
@@ -535,6 +548,21 @@
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="3fb9-4ad6-b87c-48e6" field="category"/>
+            <modifier type="set" value="0" field="257-52d2-23d7-970e">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="3fb9-4ad6-b87c-48e6" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Kurdoss Valentian, the Craven King" hidden="false" id="2e05-5bd-aa9d-564b" type="selectionEntry" targetId="9b2f-951a-816b-94c4">
       <constraints>
@@ -552,7 +580,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Reikenor the Grimhailer" hidden="false" id="28ab-7bac-ba95-27f4" type="selectionEntry" targetId="ea83-60f1-bd67-d25">
@@ -571,7 +599,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lady Olynder, Mortarch of Grief" hidden="false" id="d312-505d-1619-b43d" type="selectionEntry" targetId="ee75-82ec-9c18-397b">
@@ -590,7 +618,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="310"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Scriptor Mortis" hidden="false" id="5b37-a5e1-5b0f-8271" type="selectionEntry" targetId="bd18-dcfd-b081-f533">
@@ -677,7 +705,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="cf33-6c39-aa8b-cee2" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -722,6 +750,19 @@
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e5fd-27bc-4ac3-4825" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="cb94-2d3c-b866-f621" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b7c3-7f7-72a2-ee8f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="78cd-3409-a94f-93f9" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="dc09-dae9-d3da-130e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5b02-b841-9c31-b69c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="df02-2a23-a841-4ce3" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
@@ -736,13 +777,28 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="3fb9-4ad6-b87c-48e6" field="category"/>
+            <modifier type="set" value="0" field="2df0-b99a-9567-c9ae">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="3fb9-4ad6-b87c-48e6" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Awlrach the Drowner" hidden="false" id="e5fd-27bc-4ac3-4825" type="selectionEntry" targetId="d8ef-7494-db04-b1a9">
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="5d7d-cfac-a548-6fcd" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Cairn Wraith" hidden="false" id="7648-12f1-95fd-fcd2" type="selectionEntry" targetId="eac-95c-b449-a7a5">
@@ -766,7 +822,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d58f-1ed5-11d2-3c0e" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Knight of Shrouds" hidden="false" id="cb94-2d3c-b866-f621" type="selectionEntry" targetId="625-d4af-9738-48ca">
@@ -778,7 +834,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="bfdb-84db-e422-2b4c" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Knight of Shrouds on Ethereal Steed" hidden="false" id="b7c3-7f7-72a2-ee8f" type="selectionEntry" targetId="72d-cbfa-2680-9e66">
@@ -790,7 +846,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5b9e-3996-e0a1-d1c1" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Krulghast Cruciator" hidden="false" id="c81c-805a-e4d7-583e" type="selectionEntry" targetId="d5e7-8080-3243-6c22">
@@ -810,7 +866,7 @@
         <categoryLink name="Regimental Leader" hidden="false" id="86cc-61a3-c8bf-e5ca" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lady Olynder, Mortarch of Grief" hidden="false" id="dc09-dae9-d3da-130e" type="selectionEntry" targetId="ee75-82ec-9c18-397b">
@@ -818,7 +874,7 @@
         <categoryLink name="Regimental Leader" hidden="false" id="1ec0-d14-9cb3-81fa" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="310"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord Executioner" hidden="false" id="1500-8766-b518-a243" type="selectionEntry" targetId="8bd-370e-5881-48fb">
@@ -830,7 +886,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9df5-55a1-14a7-783e" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Nagash, Supreme Lord of the Undead" hidden="false" id="5b02-b841-9c31-b69c" type="selectionEntry" targetId="fb77-fec9-42ed-a7fd">
@@ -846,7 +902,7 @@
         <categoryLink name="Regimental Leader" hidden="false" id="2850-5bba-a55e-63ec" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Scriptor Mortis" hidden="false" id="7b5d-b482-d599-789f" type="selectionEntry" targetId="bd18-dcfd-b081-f533">
@@ -921,7 +977,7 @@
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5383-844c-da86-b7bd"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bladegheist Revenants" hidden="false" id="dd37-50db-7b5a-83d9" type="selectionEntry" targetId="4b64-f4ae-a675-d024">
@@ -964,7 +1020,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="62c3-babe-8bb-19ec" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Chainghasts" hidden="false" id="89e-e44e-1563-a04a" type="selectionEntry" targetId="4550-ab13-9a71-205c">
@@ -1126,7 +1182,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="aa15-6eaf-65d7-55b2" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Dreadscythe Harridans" hidden="false" id="782b-e882-501f-5a3a" type="selectionEntry" targetId="1a20-8b80-4ae3-5168">
@@ -1169,7 +1225,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="7b30-3f4d-9e69-4947" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Glaivewraith Stalkers" hidden="false" id="4489-e8a7-ddcb-2e42" type="selectionEntry" targetId="43ee-d90-fdd8-e998">
@@ -1255,7 +1311,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="cc7d-4294-957c-78cc" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Hexwraiths" hidden="false" id="134b-dda7-eda7-4b9a" type="selectionEntry" targetId="66a0-f02f-2616-3c62">
@@ -1291,7 +1347,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="4c35-9b00-c72e-ef2" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Myrmourn Banshees" hidden="false" id="e01e-ae3-b250-7f09" type="selectionEntry" targetId="ca83-a38b-b1c6-f4e6">

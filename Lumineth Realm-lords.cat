@@ -365,7 +365,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cd73-478c-c1cc-689f" type="selectionEntryGroup" targetId="a340-462e-ac27-73f8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Archmage Teclis and Celennar, Spirit of Hysh" hidden="false" id="529e-1e95-8795-682a" type="selectionEntry" targetId="c336-da82-9495-8766">
@@ -384,7 +384,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="9038-73b1-b7ec-92f9"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="590"/>
+        <cost name="pts" typeId="points" value="600"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Avalenor, the Stoneheart King" hidden="false" id="ac02-1ce3-bf5f-bff5" type="selectionEntry" targetId="f6dc-5ecd-a783-3fa4">
@@ -445,7 +445,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f6c0-dc34-f281-95c2" type="selectionEntryGroup" targetId="f424-4edc-e0bc-60bc"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lyrior Uthralle, Warden of Ymetrica" hidden="false" id="5f9a-cb0e-9289-24e6" type="selectionEntry" targetId="17ab-ba44-9593-e3d4">
@@ -464,7 +464,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="48b-d773-5150-ac07"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="220"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Scinari Calligrave" hidden="false" id="bda7-4d9d-e203-6504" type="selectionEntry" targetId="56b6-9e6e-4f51-60c">
@@ -575,7 +575,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ab9b-10d0-1fa0-d84d" type="selectionEntryGroup" targetId="f424-4edc-e0bc-60bc"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="The Light of Eltharion" hidden="false" id="50a2-ca12-da93-60d5" type="selectionEntry" targetId="d19-ee8b-af86-b163">
@@ -586,6 +586,17 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="970e-5c77-322e-e83" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9caa-6acd-54b7-1ca7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e5c5-abb9-481b-461e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d46-46e8-3a3c-9cfd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="15bc-e9e7-ab76-49df" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -594,8 +605,23 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="cad1-d4f7-9633-bd7"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="230"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="c4b1-4aed-9332-3ee6" field="category"/>
+            <modifier type="set" value="0" field="cad1-d4f7-9633-bd7">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="c4b1-4aed-9332-3ee6" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Vanari Bannerblade" hidden="false" id="39a1-e726-2e3-61e" type="selectionEntry" targetId="2df7-ab5b-fecc-341b">
       <modifiers>
@@ -678,7 +704,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2eed-4eb-d259-294e" type="selectionEntryGroup" targetId="f424-4edc-e0bc-60bc"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Archmage Teclis and Celennar, Spirit of Hysh" hidden="false" id="970e-5c77-322e-e83" type="selectionEntry" targetId="c336-da82-9495-8766">
@@ -686,7 +712,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <categoryLink name="Regimental Leader" hidden="false" id="3338-1bd2-f225-f087" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="590"/>
+        <cost name="pts" typeId="points" value="600"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Avalenor, the Stoneheart King" hidden="false" id="3f82-ac47-1ba2-a307" type="selectionEntry" targetId="f6dc-5ecd-a783-3fa4">
@@ -714,7 +740,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="822a-f301-8fe2-f3b5" type="selectionEntryGroup" targetId="f424-4edc-e0bc-60bc"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lyrior Uthralle, Warden of Ymetrica" hidden="false" id="e5c5-abb9-481b-461e" type="selectionEntry" targetId="17ab-ba44-9593-e3d4">
@@ -722,7 +748,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <categoryLink name="Regimental Leader" hidden="false" id="d134-e962-3ba2-8b58" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="220"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Scinari Calligrave" hidden="false" id="6f34-3260-74b5-a9b5" type="selectionEntry" targetId="56b6-9e6e-4f51-60c">
@@ -773,7 +799,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a434-702-8f26-84fd" type="selectionEntryGroup" targetId="f424-4edc-e0bc-60bc"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Sevireth, Lord of the Seventh Wind" hidden="false" id="2cfd-546b-46db-5798" type="selectionEntry" targetId="880-ddff-1e6d-916f">
@@ -789,7 +815,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         <categoryLink name="Regimental Leader" hidden="false" id="583-5fc1-81be-e3fe" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="230"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Vanari Bannerblade" hidden="false" id="d33e-217b-3100-8f97" type="selectionEntry" targetId="2df7-ab5b-fecc-341b">
@@ -851,7 +877,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="330"/>
+        <cost name="pts" typeId="points" value="320"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Ydrilan Riverblades" hidden="false" id="fc79-62e1-45e2-dedd" type="selectionEntry" targetId="6e14-dd31-2bf8-c9d3">
@@ -955,7 +981,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Hurakan Windchargers" hidden="false" id="788c-c143-17c-d58c" type="selectionEntry" targetId="1bca-d303-8bb8-9624">
@@ -990,7 +1016,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Hurakan Spirit of the Wind" hidden="false" id="98bd-19f6-d8ec-9be7" type="selectionEntry" targetId="4f9b-c3fa-a07b-59b0">
@@ -1065,7 +1091,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Vanari Dawnriders" hidden="false" id="f46-de68-85f-9427" type="selectionEntry" targetId="8f4-ae60-8a15-6d7d">
@@ -1137,7 +1163,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Vanari Auralan Wardens" hidden="false" id="5458-8e15-1e45-badf" type="selectionEntry" targetId="b62e-acea-4717-14bd">
@@ -1181,7 +1207,7 @@ For the rest of the battle round, subtract 1 from hit rolls for attacks that ta
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Vanari Starshard Ballista" hidden="false" id="a432-89c4-e457-e433" type="selectionEntry" targetId="ac41-4a7-88c5-9ab2">

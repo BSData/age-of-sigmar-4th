@@ -427,6 +427,15 @@ The target has that keyword for the rest of the battle.</characteristic>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Pledged to Nurgle^^** units have **^^Ward (6+)^^**. If a unit already has **^^Ward (6+^^**, it has **^^Ward (5+)^^** instead.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Pledged to Slaanesh" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6916-1fc0-ca2f-bfd4">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">for the rest of the turn, add 1 to the number of dice rolled when making charge rolls for friendly **^^Pledged to Slaanesh^^** units, to a maximum of 3.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="Reference" hidden="false" id="f77f-49cd-6e09-6ca7" targetId="3360-1158-e879-9606" primary="true"/>
@@ -538,7 +547,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a1ba-b491-d5d8-c690" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Chaos Warshrine" hidden="false" id="d015-7720-20af-cfd7" type="selectionEntry" targetId="ec2a-ca82-de63-2262">
@@ -617,6 +626,23 @@ The target has that keyword for the rest of the battle.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7fc-170d-1114-5731" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="738a-431b-178a-ca86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="67e6-b577-6c95-878c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d6e2-94fc-fd66-6886" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4ed5-6657-f305-1435" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="94a1-ff6e-2657-55cd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -626,8 +652,35 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8c59-739a-3d33-5a0b" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="7f8d-8fe3-162b-a83a" field="category"/>
+            <modifier type="set" value="0" field="3438-e645-5d03-216">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="7f8d-8fe3-162b-a83a" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="3855-40d2-2349-c4e3" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="67e6-b577-6c95-878c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Centaurion Marshal" hidden="false" id="8d43-5edd-d84f-b938" type="selectionEntry" targetId="4c43-1634-6d7f-2705">
       <constraints>
@@ -730,6 +783,23 @@ The target has that keyword for the rest of the battle.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7fc-170d-1114-5731" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="738a-431b-178a-ca86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="67e6-b577-6c95-878c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d6e2-94fc-fd66-6886" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4ed5-6657-f305-1435" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="94a1-ff6e-2657-55cd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -741,6 +811,33 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="7f8d-8fe3-162b-a83a" field="category"/>
+            <modifier type="set" value="0" field="8649-ad9d-3a1c-9e0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="7f8d-8fe3-162b-a83a" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="3855-40d2-2349-c4e3" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="67e6-b577-6c95-878c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Chaos Lord on Karkadrak" hidden="false" id="5937-a839-2109-92a0" type="selectionEntry" targetId="7a78-c427-452-436b">
       <constraints>
@@ -753,6 +850,23 @@ The target has that keyword for the rest of the battle.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7fc-170d-1114-5731" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="738a-431b-178a-ca86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="67e6-b577-6c95-878c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d6e2-94fc-fd66-6886" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4ed5-6657-f305-1435" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="94a1-ff6e-2657-55cd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -764,6 +878,33 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="7f8d-8fe3-162b-a83a" field="category"/>
+            <modifier type="set" value="0" field="111d-703-8617-f8c3">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="7f8d-8fe3-162b-a83a" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="3855-40d2-2349-c4e3" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="67e6-b577-6c95-878c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Chaos Sorcerer Lord" hidden="false" id="fb8e-bc11-f531-208d" type="selectionEntry" targetId="eb21-eb7e-ebce-aafe">
       <constraints>
@@ -852,7 +993,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="13d2-41b3-d72e-5020" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Darkoath Chieftain" hidden="false" id="c5e1-b741-5f6a-a6b8" type="selectionEntry" targetId="b09c-3f57-8c75-aa38">
@@ -902,7 +1043,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="df33-7b13-d8a7-2101" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Daemon Prince" hidden="false" id="bb61-329e-8bf1-6e29" type="selectionEntry" targetId="22ef-99c8-eb17-973f">
@@ -939,6 +1080,14 @@ The target has that keyword for the rest of the battle.</characteristic>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="dc0-f4bd-c462-b452" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fe32-8e6c-ec1-a3a3" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -948,8 +1097,27 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ef14-acda-6d87-1060" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="982f-fdc0-951d-761" field="category"/>
+            <modifier type="set" value="0" field="5f57-6506-144f-ab7f">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="982f-fdc0-951d-761" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Eternus, Blade of the First Prince" hidden="false" id="3855-40d2-2349-c4e3" type="selectionEntry" targetId="de49-6e72-d443-42c0">
       <constraints>
@@ -1147,7 +1315,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d78c-aadd-6d8e-343a" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Chaos Lord on Karkadrak" hidden="false" id="a1f2-1808-4a74-c167" type="selectionEntry" targetId="7a78-c427-452-436b">
@@ -1231,7 +1399,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="21-b737-311c-ce0e" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Darkoath Chieftain on Warsteed" hidden="false" id="dc0-f4bd-c462-b452" type="selectionEntry" targetId="6bde-370e-478d-cf24">
@@ -1243,7 +1411,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="745d-6afd-c81-604b" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Darkoath Warqueen" hidden="false" id="fe32-8e6c-ec1-a3a3" type="selectionEntry" targetId="7f9-8a5a-4a59-769b">
@@ -1275,7 +1443,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9ba9-142a-55f2-e661" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Gaunt Summoner" hidden="false" id="e664-cf6d-9d6a-74df" type="selectionEntry" targetId="6d8c-8fd5-7276-ea">
@@ -1299,7 +1467,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b164-d617-ba46-c5f1" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Gunnar Brand" hidden="false" id="6ae-10fb-92fd-affb" type="selectionEntry" targetId="dd16-c1dc-4ff-85f2">
@@ -1307,7 +1475,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <categoryLink name="Regimental Leader" hidden="false" id="9916-228b-7d97-c962" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Ogroid Myrmidion" hidden="false" id="2ea9-d799-4ed9-7920" type="selectionEntry" targetId="2955-114b-f931-cafa">
@@ -1474,7 +1642,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Chaos Knights" hidden="false" id="6272-7e37-5f4c-904b" type="selectionEntry" targetId="27c4-2bbe-3811-30fc">
@@ -1727,7 +1895,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Darkoath Savagers" hidden="false" id="f88a-78f6-fd1f-a261" type="selectionEntry" targetId="df89-794a-4994-8293">
@@ -1767,7 +1935,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Mutalith Vortex Beast" hidden="false" id="7a81-b8f7-3486-930c" type="selectionEntry" targetId="321d-437b-9c00-e25d">
@@ -2042,7 +2210,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Fomoroid Crusher" hidden="false" id="99b6-b112-433f-7a5c" type="selectionEntry" targetId="42-fa77-4a18-a2e3">
@@ -2220,7 +2388,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Slaughterbrute" hidden="false" id="daf3-f3d6-aa67-9155" type="selectionEntry" targetId="652-2c4a-e24c-cc02">
@@ -2486,7 +2654,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="330"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Nexus Chaotica" hidden="false" id="2bdb-6f98-a878-96b7" type="selectionEntry" targetId="22a9-a618-90cf-5bc7"/>
