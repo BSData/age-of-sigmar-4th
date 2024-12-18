@@ -9,7 +9,7 @@
         <profile name="Endless Growth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3ff5-8812-c55e-7f5a" publicationId="61ee-fae0-f1da-2591">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick any number of friendly **^^Sylvaneth^^** units wholly within 6&quot; of a friendly **Awakened Wyldwood** to be the targets.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick any number of friendly **^^Sylvaneth^^** units wholly within 6&quot; of any friendly **Awakened Wyldwoods** to be the targets.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D3)** each target.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -350,6 +350,15 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="959d-ffda-a3a5-db6a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1ba3-5bf-df0-e4ae" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="21f4-fbfa-6e85-1c5b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
@@ -358,12 +367,27 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f724-dc1a-549d-36ea" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="15f5-7f3a-1e68-ed9e" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="a00d-5f4a-9e65-a4d3" field="category"/>
+            <modifier type="set" value="0" field="8d84-41b8-d801-309d">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="a00d-5f4a-9e65-a4d3" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Belthanos, First Thorn of Kurnoth" hidden="false" id="647a-e636-968-9440" type="selectionEntry" targetId="f6f4-66ce-c346-42ed">
       <constraints>
@@ -400,7 +424,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="290"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Branchwych" hidden="false" id="64e0-75-f55c-f2cc" type="selectionEntry" targetId="e410-e36e-9cea-2482">
@@ -419,7 +443,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="69e0-24ad-e7cf-3b36" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -465,7 +489,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="250"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Warsong Revenant" hidden="false" id="7dd5-7c37-dccd-25b8" type="selectionEntry" targetId="438e-768a-7545-d329">
@@ -531,7 +555,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="220"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="706e-9a57-f8b5-9bd5" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -554,7 +578,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f6eb-7441-dc4e-7dcc" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -571,7 +595,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
     </entryLink>
     <entryLink import="true" name="Arch-Revenant" hidden="false" id="1baa-e7d7-61a1-95f3" type="selectionEntry" targetId="c21d-479c-e8ef-b406">
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7b32-a5c2-5631-b1bf" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -594,7 +618,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <categoryLink name="Regimental Leader" hidden="false" id="1377-34dc-70ab-cce1" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a08a-ef9c-b0a8-3037" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -606,7 +630,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <categoryLink name="Regimental Leader" hidden="false" id="efa8-c0ef-3bd8-13d5" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="290"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Spirit of Durthu" hidden="false" id="1ba3-5bf-df0-e4ae" type="selectionEntry" targetId="f163-eaf6-2b5b-1cd3">
@@ -626,7 +650,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <categoryLink name="Regimental Leader" hidden="false" id="830c-62b7-9bf4-25c1" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="250"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Treelord" hidden="false" id="a53e-d251-9986-28ac" type="selectionEntry" targetId="a896-d266-a881-f920">
@@ -634,7 +658,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <categoryLink name="Regimental Leader" hidden="false" id="20d2-af3d-dd14-2081" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="220"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="911f-574a-ad47-c1b" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -646,7 +670,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <categoryLink name="Regimental Leader" hidden="false" id="a15a-583b-8fd8-d393" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="bac6-290c-4341-1053" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -706,7 +730,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Gossamid Archers" hidden="false" id="5d21-41ae-45c5-7c8f" type="selectionEntry" targetId="7395-623b-7652-b8c6">
@@ -945,7 +969,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Spiterider Lancers" hidden="false" id="95bf-7814-c6f0-e91a" type="selectionEntry" targetId="8d4f-cdc2-f74f-daac">
@@ -1019,7 +1043,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Tree-Revenants" hidden="false" id="c39-46c9-4f97-771" type="selectionEntry" targetId="d0bc-bdf6-3a68-4aa9">

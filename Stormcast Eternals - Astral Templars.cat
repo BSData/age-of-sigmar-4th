@@ -1695,7 +1695,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Knight-Draconis" hidden="false" id="7ba8-5919-d91d-3403" type="selectionEntry" targetId="1b67-5ed1-5c9d-388f">
@@ -1707,7 +1707,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="6f4e-0647-33b4-9047" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="dcdd-460d-dea8-3e20">
@@ -1887,15 +1887,6 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a529-6e13-113e-6a1b"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" value="1" field="a529-6e13-113e-6a1b">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="3a8d-b40d-5bdc-8591" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -1912,10 +1903,71 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c82a-853f-4148-9d4a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b2a1-c244-1ed0-fae4" field="category"/>
+            <modifier type="set" value="0" field="04eb-183f-5bd0-1758">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="b2a1-c244-1ed0-fae4" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Knight-Judicator with Gryph-hounds" hidden="false" id="4e3f-84f9-566f-2d66" type="selectionEntry" targetId="8934-66a7-47ba-727d">
       <entryLinks>
@@ -1926,7 +1978,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="120f-4128-c564-e12a" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="55a8-3bd5-337c-cf4c">
@@ -2003,7 +2055,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -2051,7 +2103,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="cf05-bdd2-3904-bce4" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="6840-3289-ac08-7ee5">
@@ -2158,15 +2210,6 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3d43-1ab5-a881-0d9e"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" value="1" field="3d43-1ab5-a881-0d9e">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="3a8d-b40d-5bdc-8591" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -2183,10 +2226,71 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c82a-853f-4148-9d4a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b2a1-c244-1ed0-fae4" field="category"/>
+            <modifier type="set" value="0" field="a2eb-8c75-224e-0a48">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="b2a1-c244-1ed0-fae4" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Knight-Venator" hidden="false" id="78d5-825a-3c0b-6759" type="selectionEntry" targetId="d5aa-f736-3c06-d6ad">
       <entryLinks>
@@ -2274,7 +2378,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -2322,7 +2426,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="1032-cf66-929b-9796" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="b84c-a3ec-c8c6-c791">
@@ -2356,15 +2460,6 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1bd4-cb2d-3861-cb78"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" value="1" field="1bd4-cb2d-3861-cb78">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="3a8d-b40d-5bdc-8591" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -2381,10 +2476,71 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c82a-853f-4148-9d4a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b2a1-c244-1ed0-fae4" field="category"/>
+            <modifier type="set" value="0" field="e06b-f042-e021-2dc2">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="b2a1-c244-1ed0-fae4" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Knight-Zephyros" hidden="false" id="ecec-65ed-d9f8-97d0" type="selectionEntry" targetId="f0d9-5cb2-345b-565e">
       <entryLinks>
@@ -2517,15 +2673,6 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b6b4-fe65-8eab-f5d5"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" value="1" field="b6b4-fe65-8eab-f5d5">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="3a8d-b40d-5bdc-8591" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -2542,10 +2689,71 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c82a-853f-4148-9d4a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b2a1-c244-1ed0-fae4" field="category"/>
+            <modifier type="set" value="0" field="f64a-6ba4-7d44-978d">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="b2a1-c244-1ed0-fae4" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Lord-Aquilor" hidden="false" id="c682-3cc6-0fb6-7aba" type="selectionEntry" targetId="feec-61cb-ca0-7d3c">
       <entryLinks>
@@ -2556,7 +2764,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="0702-6deb-87c1-d47a" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="2d80-7eee-217f-380a">
@@ -3247,15 +3455,6 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1153-e365-84c7-38ee"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="increment" value="1" field="1153-e365-84c7-38ee">
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="3a8d-b40d-5bdc-8591" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
@@ -3272,10 +3471,71 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c82a-853f-4148-9d4a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b2a1-c244-1ed0-fae4" field="category"/>
+            <modifier type="set" value="0" field="d8a4-be0c-63ac-a531">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="b2a1-c244-1ed0-fae4" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Lord-Imperatant" hidden="false" id="c936-b2fb-e2d5-3fb0" type="selectionEntry" targetId="c1b5-c776-1613-a463">
       <entryLinks>
@@ -3286,7 +3546,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="85e5-60e3-0b95-938d" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="ff5c-8ee0-f0d2-5acb">
@@ -3491,10 +3751,71 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="c82a-853f-4148-9d4a" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b2a1-c244-1ed0-fae4" field="category"/>
+            <modifier type="set" value="0" field="efbe-b70b-2a41-2d51">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="b2a1-c244-1ed0-fae4" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d1e0-068a-a7ac-4f52" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d789-cd2c-083e-6881" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f895-f5ec-eb63-987c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="6790-f399-6439-c13e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c936-b2fb-e2d5-3fb0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="f0b7-caad-1db4-b269" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="2be2-8575-385e-29e8" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c4af-5dc9-f2eb-51b0" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1d99-6f87-b2fb-d7ea" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="d0d4-8c3f-86b3-65b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Lord-Terminos" hidden="false" id="2be2-8575-385e-29e8" type="selectionEntry" targetId="678a-136a-c7ce-fe8c">
       <entryLinks>
@@ -3566,7 +3887,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord-Veritant" hidden="false" id="c4af-5dc9-f2eb-51b0" type="selectionEntry" targetId="1197-3ca0-f8b0-9c67">
@@ -3578,7 +3899,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="e777-2d8d-c794-12a2" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="b718-6bf9-41d0-7e2a">
@@ -4903,7 +5224,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="330"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Yndrasta, the Celestial Spear" hidden="false" id="d0d4-8c3f-86b3-65b5" type="selectionEntry" targetId="b665-fc99-6937-e5e5">
@@ -4911,7 +5232,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="c512-a05b-1963-9209" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="330"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord-Vigilant on Morrgryph" hidden="false" id="3a83-f0c3-7491-156f" type="selectionEntry" targetId="a86d-34b5-ebc7-76ed">
@@ -4951,7 +5272,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8a02-c33f-d6c7-4552"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Lord-Vigilant on Morrgryph" hidden="false" id="2115-2a3a-cc0f-c460" type="selectionEntry" targetId="a86d-34b5-ebc7-76ed">
@@ -4963,7 +5284,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <categoryLink name="Regimental Leader" hidden="false" id="9d36-0f1d-2986-d7f8" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="65b0-e8fa-444c-94cf">
@@ -4996,7 +5317,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8225-2738-fc0f-065b" type="selectionEntryGroup" targetId="2838-358c-f130-8b7e"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <modifiers>
         <modifier type="increment" value="1" field="4aca-3c50-49b4-a973">
@@ -5057,7 +5378,7 @@ At the end of the turn, any unspent **charmed fate points** are lost.</character
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d06c-f78e-e6e9-fed8"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Stormstrike Palladors" hidden="false" id="b993-22dd-e983-1fc6" type="selectionEntry" targetId="75e5-05cd-3163-7335">

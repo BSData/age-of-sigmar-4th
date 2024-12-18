@@ -222,7 +222,7 @@
                 <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
                 <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
                 <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Ogor Mawtribes Priest^^** to chant this prayer, pick a terrain feature within 18&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
-                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Place a **blizzard token** next to the target. Terrain features that have a **blizzard token** gain the ‘Obscuring’ terrain ability. In addition, if the chanting roll was 10+, until the start of your next turn, friendly **^^Beastclaw Raiders^^** units have **^^Ward (5+)^^** while they are within 3&quot; of any terrain features that have **blizzard tokens**.</characteristic>
+                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Place a **blizzard token** next to the target. Terrain features that have a **blizzard token** gain the ‘Obscuring’ terrain ability. In addition, if the chanting roll was 8+, until the start of your next turn, friendly **^^Beastclaw Raiders^^** units have **^^Ward (5+)^^** while they are within 3&quot; of any terrain features that have **blizzard tokens**.</characteristic>
                 <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Unlimited^^**</characteristic>
               </characteristics>
             </profile>
@@ -238,9 +238,9 @@
             <profile name="Pulverising Hailstorm" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="b9e2-9c10-8976-147">
               <characteristics>
                 <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
-                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
+                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
                 <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Ogor Mawtribes Priest^^** to chant this prayer, pick a point on the battlefield within 12&quot; of them, then pick each visible enemy unit within 3&quot; of that point to be the targets. Then, make a chanting roll of D6.</characteristic>
-                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the chanting roll was 10+, double the amount of mortal damage inflicted.</characteristic>
+                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the chanting roll was 8+, double the amount of mortal damage inflicted.</characteristic>
                 <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
               </characteristics>
             </profile>
@@ -262,7 +262,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Ogor^^** or **^^Rhinox^^** unit that charged this turn to use this ability, then pick a visible enemy unit within 1&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Add 2 to the roll if this unit is a **^^Monster^^**</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -335,7 +335,7 @@
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Butcher" hidden="false" id="665d-bd84-28a5-a542" type="selectionEntry" targetId="1688-fcbe-1470-a4ee">
@@ -445,6 +445,14 @@
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bbf0-df1b-c6f8-1e92" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1c3c-25d3-b3ce-80c9" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -452,6 +460,21 @@
       <costs>
         <cost name="pts" typeId="points" value="280"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="bf4e-4b1b-7055-2ec8" field="category"/>
+            <modifier type="set" value="0" field="67b-55b1-574c-1d5b">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="bf4e-4b1b-7055-2ec8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Huskard on Thundertusk" hidden="false" id="cf86-ec81-dc9c-5abd" type="selectionEntry" targetId="ebcd-aa92-94f1-c1be">
       <entryLinks>
@@ -468,6 +491,14 @@
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bbf0-df1b-c6f8-1e92" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1c3c-25d3-b3ce-80c9" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -475,6 +506,21 @@
       <costs>
         <cost name="pts" typeId="points" value="270"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="bf4e-4b1b-7055-2ec8" field="category"/>
+            <modifier type="set" value="0" field="8350-3eaa-4e62-74d">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="bf4e-4b1b-7055-2ec8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Icebrow Hunter" hidden="false" id="f6fe-ef05-9ca8-1404" type="selectionEntry" targetId="8ea1-2719-4da0-2b1f">
       <entryLinks>
@@ -494,8 +540,8 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bbf0-df1b-c6f8-1e92" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c3c-25d3-b3ce-80c9" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b9ec-1f8e-289-6a89" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -516,9 +562,22 @@
             <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
           </conditions>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="bf4e-4b1b-7055-2ec8" field="category"/>
+            <modifier type="set" value="0" field="c36d-3654-fbb7-4e">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="bf4e-4b1b-7055-2ec8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="5405-35ec-6427-e87c" type="selectionEntry" targetId="7231-fb13-c283-ff9d">
@@ -583,7 +642,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Tyrant" hidden="false" id="ba19-a5af-577c-4ecb" type="selectionEntry" targetId="8af5-807c-4c2e-2ceb">
@@ -595,7 +654,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9774-2886-2ae4-7bb6" type="selectionEntryGroup" targetId="30c8-590c-42a7-3c48"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bloodpelt Hunter" hidden="false" id="3941-ff89-5c42-9230" type="selectionEntry" targetId="a800-1a5b-4097-8f11">
@@ -607,7 +666,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7b11-a387-b55c-4175" type="selectionEntryGroup" targetId="30c8-590c-42a7-3c48"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Butcher" hidden="false" id="7f3c-b60f-d9a3-64ae" type="selectionEntry" targetId="1688-fcbe-1470-a4ee">
@@ -691,7 +750,7 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f821-aad0-3351-3db" type="selectionEntryGroup" targetId="30c8-590c-42a7-3c48"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="effb-1317-8351-5855" type="selectionEntry" targetId="7231-fb13-c283-ff9d">
@@ -825,7 +884,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Icefall Yhetees" hidden="false" id="92ef-3f35-c07d-5d50" type="selectionEntry" targetId="5fed-90de-715-e720">
@@ -862,7 +921,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Ironblaster" hidden="false" id="2ddd-fabd-7d0-d164" type="selectionEntry" targetId="7f12-bfdf-bff5-c0fd">
@@ -897,7 +956,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Leadbelchers" hidden="false" id="96ee-3e88-f022-9f5a" type="selectionEntry" targetId="15cd-469c-4ed6-afef">
@@ -1006,7 +1065,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Ogor Gluttons" hidden="false" id="ff7f-ced8-cc4c-106f" type="selectionEntry" targetId="e93b-4897-f014-9b88">
@@ -1044,7 +1103,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Stonehorn Beastriders" hidden="false" id="81ea-a0e7-bffa-7ebb" type="selectionEntry" targetId="8b95-893a-4c1a-9224">
@@ -1154,7 +1213,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Ironguts" hidden="false" id="d797-f5f5-84e3-e83e" type="selectionEntry" targetId="7ea4-f81b-b7cc-b16e">
@@ -1357,4 +1416,7 @@
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
+  <categoryEntries>
+    <categoryEntry name="Voice of the Everwinter" id="bf4e-4b1b-7055-2ec8" hidden="false"/>
+  </categoryEntries>
 </catalogue>

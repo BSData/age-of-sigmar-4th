@@ -946,7 +946,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="480" field="points"/>
+            <modifier type="set" value="450" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="a3b0-4efe-c915-d477" targetId="6e72-1656-d554-528a"/>
@@ -992,7 +992,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="450" field="points"/>
+            <modifier type="set" value="420" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f84c-54f8-18a5-b266" targetId="6e72-1656-d554-528a"/>
@@ -1037,7 +1037,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="440" field="points"/>
+            <modifier type="set" value="410" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="8685-9de-c6ef-2523" targetId="6e72-1656-d554-528a"/>
@@ -1158,7 +1158,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="360" field="points"/>
+            <modifier type="set" value="340" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="8186-47c2-454e-6ab" targetId="6e72-1656-d554-528a"/>
@@ -1238,7 +1238,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="230" field="points"/>
+            <modifier type="set" value="270" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7031-2636-76a3-57c2" targetId="6e72-1656-d554-528a"/>
@@ -1606,7 +1606,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="620" field="points"/>
+            <modifier type="set" value="590" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="d8b0-9a55-da81-74c1" targetId="6e72-1656-d554-528a"/>
@@ -1676,7 +1676,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="700" field="points"/>
+            <modifier type="set" value="660" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7e1d-2d49-c0bf-c9db" targetId="6e72-1656-d554-528a"/>
@@ -1748,7 +1748,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="450" field="points"/>
+            <modifier type="set" value="420" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="c7cd-5b3a-d3bb-4244" targetId="6e72-1656-d554-528a"/>
