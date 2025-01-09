@@ -233,42 +233,63 @@
     <selectionEntryGroup name="Prayer Lores" id="554f-b4a7-5337-2204" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Blood Blessings of Khorne" hidden="false" id="6633-d2f4-bab6-3a35" defaultAmount="1" publicationId="81a9-3dbf-dbc5-672e">
-          <profiles>
-            <profile name="Blood Boil" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="7110-35e0-803b-2487">
-              <characteristics>
-                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
-                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
-                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible enemy unit within 18&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
-                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target. In addition, if the chanting roll was 8+, subtract 1 from wound rolls for the target until the start of your next turn.</characteristic>
-                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Unholy Flames" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="ce16-4ab0-2908-305f">
-              <characteristics>
-                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
-                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
-                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible friendly **^^Blades of Khorne^^** unit wholly within 12&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
-                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Add 1 to the Rend characteristic of the target’s melee weapons for the rest of the turn. In addition, if the chanting roll was 10+, add 1 to wound rolls for the target’s attacks for the rest of the turn.</characteristic>
-                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Witchbane Curse" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="3951-df2c-1c3a-2943">
-              <characteristics>
-                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
-                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
-                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible enemy **^^Wizard^^** within 18&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
-                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Subtract 1 from the target’s power level, to a minimum of 0, until the end of your next turn. In addition, if the chanting roll was 8+, inflict 3 mortal damage on the target.</characteristic>
-                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26b6-2104-1b86-a0a4"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Blood Boil" hidden="false" id="ae41-942a-11f1-948b" type="selectionEntry" targetId="ae0d-8932-1358-f9c4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="28ca-6e65-bb85-a22f-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="28ca-6e65-bb85-a22f-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Unholy Flames" hidden="false" id="9dbb-64f4-4561-fb33" type="selectionEntry" targetId="461b-664a-6005-b2b2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bdf2-744d-3d14-f629-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bdf2-744d-3d14-f629-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Witchbane Curse" hidden="false" id="c8d6-7d6d-2a76-5a28" type="selectionEntry" targetId="6062-ef2a-d346-dc58">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d85c-e2de-8bd2-6380-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d85c-e2de-8bd2-6380-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1ecd-1dfa-2e70-4a04" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="6dcf-7de6-0f0f-bfc6" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="aa8f-4cbb-7e4b-eb5e" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="d906-fb02-4a48-6c73"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="8e28-9445-463a-5883" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="a6da-d9ad-7fd5-d221" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a56-27c2-e72a-8045"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -333,9 +354,49 @@
         <categoryLink name="Reference" hidden="false" id="42dd-d6e7-9620-968e" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blood Boil" hidden="false" id="ae0d-8932-1358-f9c4">
+      <profiles>
+        <profile name="Blood Boil" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="7110-35e0-803b-2487">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible enemy unit within 18&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target. In addition, if the chanting roll was 8+, subtract 1 from wound rolls for the target until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Unholy Flames" hidden="false" id="461b-664a-6005-b2b2">
+      <profiles>
+        <profile name="Unholy Flames" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="ce16-4ab0-2908-305f">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible friendly **^^Blades of Khorne^^** unit wholly within 12&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Add 1 to the Rend characteristic of the target’s melee weapons for the rest of the turn. In addition, if the chanting roll was 10+, add 1 to wound rolls for the target’s attacks for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Witchbane Curse" hidden="false" id="6062-ef2a-d346-dc58">
+      <profiles>
+        <profile name="Witchbane Curse" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="3951-df2c-1c3a-2943">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, pick a visible enemy **^^Wizard^^** within 18&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Subtract 1 from the target’s power level, to a minimum of 0, until the end of your next turn. In addition, if the chanting roll was 8+, inflict 3 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Blades of Khorne - Library" id="e001-ff8c-e9dc-5555" targetId="6887-883c-79f3-9f8"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="eb87-eb99-d57c-0fb9" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Bloodbound Warmonger" id="9a4a-9555-d827-3700" hidden="false"/>
@@ -386,6 +447,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="77b5-d3fe-3d80-7021" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d60e-33be-8dd3-9cff" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0ce2-0652-062d-17d9" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9f3b-1857-9a97-1361" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodmaster, Herald of Khorne" hidden="false" id="37f1-444e-66cb-a888" type="selectionEntry" targetId="2724-10df-1094-e344">
@@ -409,6 +472,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="01c2-a6f2-c8f3-5a01" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d0e3-77cf-bc37-ec06" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e226-c8f1-7ac3-24c8" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3a01-fbd3-d553-18e6" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodsecrator" hidden="false" id="8ef0-6cad-37fa-ef09" type="selectionEntry" targetId="9943-f207-9aef-190c">
@@ -454,6 +519,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="50e5-b3db-e2a5-8c40" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="e001-df91-2340-6373" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="52d3-a4a0-b2a4-1631" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8794-777b-48e8-b9df" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodstoker" hidden="false" id="8bce-6281-23b4-82e3" type="selectionEntry" targetId="bed-461e-b0ef-6bc3">
@@ -499,6 +566,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cfe3-520d-d1a2-01e9" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="df9d-3aa5-fb1c-3521" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="16b7-5c5f-a779-69cd" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1e60-3c0c-f68e-e605" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodthirster of Insensate Rage" hidden="false" id="bf02-446-9b32-ac2b" type="selectionEntry" targetId="ac0a-f4e1-99b-9562">
@@ -529,6 +598,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9211-60be-bef9-8cf8" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="c779-299c-dd31-c089" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b5b5-9074-e4ef-3178" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="374a-c978-e287-a0a1" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -574,6 +645,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3b13-41ec-10ff-4e63" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="291d-30ae-1061-ab4c" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="cfb1-44b2-515f-8f98" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bd2e-0a5a-2f94-adb8" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -634,6 +707,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3054-7868-62c1-d39e" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="32e3-7990-df43-a3e6" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3c57-d304-5a9a-2020" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="91cd-6ca2-0e3f-8096" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Herald of Khorne on Blood Throne" hidden="false" id="f47a-e01a-e2b0-fe44" type="selectionEntry" targetId="1c5f-4b09-e2da-7a0c">
@@ -657,6 +732,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a4bf-8746-a81f-060c" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8c67-8b8a-7ebc-35c2" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8af2-8ebf-ef94-b21a" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ac50-8b64-c941-20b6" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Karanak" hidden="false" id="fec9-eb41-7b4a-cbe6" type="selectionEntry" targetId="182c-a6ee-9890-fe8e">
@@ -678,6 +755,9 @@
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="65fd-e144-9ce6-413a" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Lord of Khorne on Juggernaut" hidden="false" id="4341-d511-18ab-c937" type="selectionEntry" targetId="ce66-7711-3047-4195">
       <modifiers>
@@ -700,6 +780,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="5de1-6346-3b0e-bb95" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="c998-f9e7-4001-7ce4" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f037-7bf5-d7f6-55fb" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f7b5-f42b-6eb3-6b36" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Mighty Lord of Khorne" hidden="false" id="1544-2c05-b428-8528" type="selectionEntry" targetId="d9d9-55ad-2a9f-acf9">
@@ -724,6 +806,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4ee4-0138-732a-5386" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f6d9-db7c-2932-fb4d" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="335d-c443-ce3b-2f13" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="70b2-0928-27a7-4619" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Realmgore Ritualist" hidden="false" id="8788-687b-384f-ca56" type="selectionEntry" targetId="2592-295e-eed8-361b">
@@ -747,6 +831,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="59c5-8b61-fd2d-d522" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="bcd4-b8b4-6f77-9a82" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8df5-f4ee-b72c-8cbb" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4f68-e38d-315d-2ba9" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skarbrand" hidden="false" id="3690-f655-e04-9656" type="selectionEntry" targetId="b1a1-2377-3fa4-f264">
@@ -767,6 +853,9 @@
       <costs>
         <cost name="pts" typeId="points" value="470"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5abb-a146-07e1-04dc" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skarr Bloodwrath" hidden="false" id="93a2-d9df-323f-7f15" type="selectionEntry" targetId="79a6-3d8a-8302-cc13">
       <modifiers>
@@ -786,6 +875,9 @@
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ed13-8f3e-a99f-d48d" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skulltaker" hidden="false" id="abc9-3179-8e65-e843" type="selectionEntry" targetId="62-1d37-fc6c-515f">
       <modifiers>
@@ -832,6 +924,9 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4032-2046-c8e0-be2b" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skullgrinder" hidden="false" id="6384-b834-1181-2418" type="selectionEntry" targetId="1232-f6cb-9900-bcba">
       <modifiers>
@@ -876,6 +971,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="24ce-9e03-b735-2ca3" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="15f3-f100-08f1-b46c" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a019-2a11-b185-910f" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cce6-5fc3-e0b4-66c8" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skullmaster, Herald of Khorne" hidden="false" id="293a-3eb8-d3b0-bad8" type="selectionEntry" targetId="383d-692c-7457-a03c">
@@ -899,6 +996,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a112-3b9c-d4d5-f6f4" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b264-5e2a-c66e-4498" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8df6-2260-189e-4ffe" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c274-eb0e-4ffa-7274" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Slaughterpriest" hidden="false" id="5954-d923-2554-dc1e" type="selectionEntry" targetId="d612-30cd-6166-f751">
@@ -922,6 +1021,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ce6f-0194-ab62-b93c" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="557a-c335-aa92-97c7" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b281-e59f-7e11-efef" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3b25-a0ba-a694-3628" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Wrath of Khorne Bloodthirster" hidden="false" id="8b67-631e-880-2bb5" type="selectionEntry" targetId="3759-4ff4-40bf-6f48">
@@ -945,6 +1046,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="fef3-6b39-11b2-9583" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7aa3-0155-5065-d1bb" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="66fb-234e-828b-79a6" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b66c-c7cb-a2d7-88ae" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Wrath of Khorne Bloodthirster" hidden="false" id="2276-240a-fde6-d60a" type="selectionEntry" targetId="3759-4ff4-40bf-6f48">
@@ -957,6 +1060,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cdb3-bd0a-5be5-a877" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f5d6-156c-bab1-5cd4" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1cde-6be4-c3be-b719" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cdce-f9be-62a6-007c" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Aspiring Deathbringer" hidden="false" id="574c-debf-d0c8-8f7" type="selectionEntry" targetId="886-9e3f-ed95-f1e7">
@@ -969,6 +1074,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f0ca-0b8b-b751-1060" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2d8a-08b4-2da8-23af" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="35e8-f262-54e6-bf9c" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="97f6-f4ab-accc-be73" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodmaster, Herald of Khorne" hidden="false" id="bc17-8cf9-ec7-e2a2" type="selectionEntry" targetId="2724-10df-1094-e344">
@@ -981,6 +1088,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="52d6-601f-95f9-354c" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6873-cafb-dc10-1700" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="15ce-beef-2d9a-6123" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="832e-e2e8-e2d0-ca7d" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodsecrator" hidden="false" id="290e-14c1-e70b-667d" type="selectionEntry" targetId="9943-f207-9aef-190c">
@@ -993,6 +1102,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8778-3d8a-1354-28a6" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7181-d8fe-fc37-4a7d" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b702-7f8a-7a92-f7c4" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ce1c-00bd-48bf-3a7d" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodstoker" hidden="false" id="6c19-a114-9d38-157c" type="selectionEntry" targetId="bed-461e-b0ef-6bc3">
@@ -1005,6 +1116,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e414-c07a-bfb8-e0de" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="10bc-ddd0-e451-8694" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ff4f-21c7-c2e7-c9b1" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a500-edf7-1f1b-1bb3" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodthirster of Insensate Rage" hidden="false" id="b47-5a22-e61b-ab3e" type="selectionEntry" targetId="ac0a-f4e1-99b-9562">
@@ -1017,6 +1130,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b448-1d4c-e7c3-d669" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8e89-aac0-116a-118d" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="71b2-cfc1-cf2a-4a44" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0729-4ce6-8603-6d2c" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bloodthirster of Unfettered Fury" hidden="false" id="6b18-2904-953d-b406" type="selectionEntry" targetId="9aae-e077-190b-d63b">
@@ -1029,6 +1144,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b38d-45f7-a3d0-47d4" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="dc88-5b09-5bba-96ab" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="260f-56ce-2e09-275b" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="79e5-9e54-cf9f-1d25" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Exalted Deathbringer" hidden="false" id="2322-5509-fde3-44c2" type="selectionEntry" targetId="4ac3-575f-5bc8-7da2">
@@ -1041,6 +1158,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a062-ce82-2faa-a751" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ee45-b41e-0599-05b7" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="da68-911c-ba6b-0bb6" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="09d3-dc77-738d-f978" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Herald of Khorne on Blood Throne" hidden="false" id="d4b7-ee4a-45ab-18c7" type="selectionEntry" targetId="1c5f-4b09-e2da-7a0c">
@@ -1053,6 +1172,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1e15-96b7-735e-ecb1" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="3731-ac01-3e3e-37c4" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1193-1f8e-641e-cfea" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8d40-79d3-def9-045d" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Karanak" hidden="false" id="e1c8-45a4-88d-972a" type="selectionEntry" targetId="182c-a6ee-9890-fe8e">
@@ -1062,6 +1183,9 @@
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="056c-33e6-e5af-bb04" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Lord of Khorne on Juggernaut" hidden="false" id="4355-5ac0-4a0-e610" type="selectionEntry" targetId="ce66-7711-3047-4195">
       <categoryLinks>
@@ -1073,6 +1197,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4e83-a449-c69e-e348" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="c2fe-d6ba-a941-e01b" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="fff4-607d-22c1-128f" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="94d9-77a8-8464-9274" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Mighty Lord of Khorne" hidden="false" id="e0c4-7af2-b0a2-4718" type="selectionEntry" targetId="d9d9-55ad-2a9f-acf9">
@@ -1085,6 +1211,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d93f-57d7-dbd9-6230" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8e4e-c538-cf36-b37e" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e9df-e6eb-8d5c-95ac" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b118-567a-81a7-25a1" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Realmgore Ritualist" hidden="false" id="73c8-9db7-15d-b03a" type="selectionEntry" targetId="2592-295e-eed8-361b">
@@ -1097,6 +1225,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7b10-553e-cadc-6720" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="25f6-1851-34a4-d09d" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="58e9-16ac-2265-7a36" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="181d-b7d2-bd30-ecb4" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skarbrand" hidden="false" id="3b5f-188e-d4b6-f639" type="selectionEntry" targetId="b1a1-2377-3fa4-f264">
@@ -1106,6 +1236,9 @@
       <costs>
         <cost name="pts" typeId="points" value="470"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4a19-3360-ffc9-1e26" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skarr Bloodwrath" hidden="false" id="fb53-5d47-ef69-5a6c" type="selectionEntry" targetId="79a6-3d8a-8302-cc13">
       <categoryLinks>
@@ -1114,6 +1247,9 @@
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7bc4-26a8-ab78-d1ca" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skullgrinder" hidden="false" id="4064-c696-b71c-bf4d" type="selectionEntry" targetId="1232-f6cb-9900-bcba">
       <categoryLinks>
@@ -1125,6 +1261,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8699-2994-df05-3ebd" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6b9e-2e73-78c5-2153" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="61c4-6c54-ab52-a8dd" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7966-ec53-2981-1225" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skullmaster, Herald of Khorne" hidden="false" id="2a37-2478-7c6-2125" type="selectionEntry" targetId="383d-692c-7457-a03c">
@@ -1137,6 +1275,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8c4a-f887-cf73-4337" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="50ff-152e-de92-0e92" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7dd5-df9c-4fae-7660" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3766-5143-f32e-5897" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skulltaker" hidden="false" id="43ef-7759-bb6d-81e4" type="selectionEntry" targetId="62-1d37-fc6c-515f">
@@ -1146,6 +1286,9 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="61f1-e399-426a-492c" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Slaughterpriest" hidden="false" id="5550-c14a-39b3-fd64" type="selectionEntry" targetId="d612-30cd-6166-f751">
       <categoryLinks>
@@ -1157,6 +1300,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1205-8319-fe01-85be" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2c68-8784-798b-6835" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b5ef-bdc1-3211-d3f8" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="92aa-0ed7-e43a-df96" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Blades of Khorne" hidden="false" id="eb01-6045-1959-1f8a" type="selectionEntry" targetId="1c5d-907-fd0c-c8a4">
@@ -1167,6 +1312,8 @@
     <entryLink import="true" name="Blood Warriors" hidden="false" id="dfdf-46c2-a1ec-5fc9" type="selectionEntry" targetId="560e-1939-d927-c961">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="57c5-331b-e694-78fe" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a60c-0b7d-b91d-d046" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cd72-9525-4ef5-1ef7" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1241,6 +1388,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="c5dd-6704-b9e-36f1" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e4ed-ad4e-22e6-4f6b" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e164-9295-84af-e1c6" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -1279,6 +1428,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="fdf6-c2c8-6b4a-f1a4" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0650-6d29-f310-f34d" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1028-7cef-38ef-e0ed" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -1322,6 +1473,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="94d0-5ad2-47cf-54ca" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="54d7-2d47-423e-484d" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="77f5-d6a9-4ae6-2837" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -1361,6 +1514,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="f932-8d29-d513-9abf" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c39c-788d-430b-1db2" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="af99-21ae-898e-8262" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -1403,6 +1558,10 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="5157-97c8-343c-cac9" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c991-2206-3f46-386d" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Claws of Karanak" hidden="false" id="5e1f-6273-a597-e2c" type="selectionEntry" targetId="e7fd-3790-fce1-2de9">
       <modifiers>
@@ -1444,6 +1603,10 @@
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="741b-6ee6-7309-7ba8" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="864b-a8bb-ebac-a157" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skull Cannon" hidden="false" id="99c7-f450-6c36-87de" type="selectionEntry" targetId="597f-3928-bede-9c43">
       <modifiers>
@@ -1480,6 +1643,10 @@
       <costs>
         <cost name="pts" typeId="points" value="170"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="8d08-2f9a-4a98-1984" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="382f-09cb-4790-d2bf" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Skullreapers" hidden="false" id="3c41-27ec-414-b922" type="selectionEntry" targetId="60f-d859-6aac-6dc6">
       <modifiers>
@@ -1519,6 +1686,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="52fc-b2c7-d5d-f36b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ec1c-0a8c-6858-8f93" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="12a3-30f2-bcb7-64d8" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -1562,6 +1731,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="90a7-f723-d69a-74ea" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="48ba-7073-1aef-ce6c" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="00ef-311f-5639-da4f" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -1585,6 +1756,9 @@
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9a43-251c-ba2e-e010" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Valkia the Bloody" hidden="false" id="c92d-39f9-4a9e-e505" type="selectionEntry" targetId="6bd2-bd18-aef2-ef44">
       <categoryLinks>
@@ -1593,6 +1767,9 @@
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ed05-7d6f-f0af-b897" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Scyla Anfingrimm" hidden="false" id="e1ea-73fa-2863-d01b" type="selectionEntry" targetId="cb9f-454f-469e-a785">
       <categoryLinks>
@@ -1601,6 +1778,9 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a176-e055-a094-0a89" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Scyla Anfingrimm" hidden="false" id="d08f-908f-4d78-2f5c" type="selectionEntry" targetId="cb9f-454f-469e-a785">
       <constraints>
@@ -1620,6 +1800,9 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d059-5eab-d60a-293c" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Garrek&apos;s Reavers" hidden="false" id="ccee-1272-8b1e-b9bc" type="selectionEntry" targetId="94e7-4cd1-fb6e-77b2">
       <modifiers>
@@ -1668,6 +1851,9 @@
       <costs>
         <cost name="pts" typeId="points" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3d66-27b3-2d5f-322f" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Gorechosen of Dromm" hidden="false" id="8db5-601a-0363-5818" type="selectionEntry" targetId="a5a3-d0d5-fc50-9020">
       <modifiers>
@@ -1716,6 +1902,9 @@
       <costs>
         <cost name="pts" typeId="points" value="190"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e7fe-928d-38dd-193b" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Magore&apos;s Fiends" hidden="false" id="1f77-c326-fb05-20ea" type="selectionEntry" targetId="e17c-89f4-8d3a-a652">
       <modifiers>
@@ -1764,6 +1953,9 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3151-b9db-2a62-ee22" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Wrathmongers" hidden="false" id="d279-8ae8-f8e8-1be1" type="selectionEntry" targetId="8aed-ea87-e4c8-97ea">
       <modifiers>
@@ -1803,6 +1995,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="150e-f9bb-aa5c-9578" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a2b2-1506-49c3-92c4" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fe95-afa7-87df-e038" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -1822,7 +2016,7 @@
         <categoryLink name="Army Composition" hidden="false" id="1660-1a59-72b3-a320" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="a922-7fde-6ec4-ca6" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="a922-7fde-6ec4-ca6" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="8e56-a881-9e-6b30" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="9b98-80ee-33f8-e1bc" type="selectionEntryGroup" targetId="383d-bbab-49a9-dd66" flatten="true"/>
@@ -1834,8 +2028,15 @@
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="f140-826d-971a-3865" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Prayer Lore" hidden="false" id="8e85-b771-83c7-9afc" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Prayer Lore" hidden="true" id="8e85-b771-83c7-9afc" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="c13d-b772-fdb9-b3f2" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
@@ -1846,6 +2047,61 @@
       <entryLinks>
         <entryLink import="true" name="Prayer Lores" hidden="false" id="c841-6e6a-9424-bed2" type="selectionEntryGroup" targetId="554f-b4a7-5337-2204" flatten="true" collective="false"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="b51d-2aae-ac7b-4c42" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="d8b0-01ad-5b8f-09eb"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bb03-1e37-e9e8-84e1"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="ec62-91cc-0936-b979" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="e113-561d-4240-c1be" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Blood Blessings of Khorne" id="6a9c-a215-ca68-898c" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Witchbane Curse" hidden="false" id="daf6-97eb-b174-caa9" type="selectionEntry" targetId="6062-ef2a-d346-dc58">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0358-a78b-af60-eef0"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Blood Boil" hidden="false" id="8bbe-33b0-cd0d-224d" type="selectionEntry" targetId="ae0d-8932-1358-f9c4">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0677-3e1b-f04d-a46d"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Unholy Flames" hidden="false" id="de7c-4428-09bd-3f56" type="selectionEntry" targetId="461b-664a-6005-b2b2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5fd-b1ce-c4b1-1300"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="9a88-8dda-5b96-0f04"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="f366-357c-a245-619d" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="5653-2b00-aafc-2667" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

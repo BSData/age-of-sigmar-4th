@@ -74,6 +74,36 @@
         <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="ee83-8bfe-7ef3-4ed7" includeChildSelections="true"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="b129-6e77-21dd-c012" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="89dd-ca12-2e6d-1474" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="c66b-d225-4e0c-8d43"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="595b-d6fe-979d-c2a7" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="abbd-665a-a5c2-7848" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="032c-24ce-2332-cf60"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: The Swords of Chaos" hidden="false" id="558c-1f27-9f35-4213">
@@ -145,6 +175,9 @@
       <costs>
         <cost name="pts" typeId="points" value="870"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1996-5179-82bd-9283" type="selectionEntryGroup" targetId="b129-6e77-21dd-c012"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Archaon the Everchosen" hidden="false" id="9198-ea41-d856-241f" type="selectionEntry" targetId="8f2a-58f3-5fab-a1a">
       <categoryLinks>
@@ -154,6 +187,9 @@
       <costs>
         <cost name="pts" typeId="points" value="870"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1ca5-e905-a758-15c8" type="selectionEntryGroup" targetId="b129-6e77-21dd-c012"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Abraxia, Spear of the Everchosen" hidden="false" id="f102-3bef-645d-36ae" type="selectionEntry" targetId="3843-8ca1-6cd7-70e1">
       <constraints>
@@ -176,6 +212,9 @@
       <costs>
         <cost name="pts" typeId="points" value="340"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4617-bd51-9ce0-483b" type="selectionEntryGroup" targetId="b129-6e77-21dd-c012"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Abraxia, Spear of the Everchosen" hidden="false" id="6b53-2e91-e246-05b8" type="selectionEntry" targetId="3843-8ca1-6cd7-70e1">
       <categoryLinks>
@@ -185,11 +224,16 @@
       <costs>
         <cost name="pts" typeId="points" value="340"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7e3c-a289-f6eb-25c9" type="selectionEntryGroup" targetId="b129-6e77-21dd-c012"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Varanguard" hidden="false" id="c9cf-b831-17ff-7291" type="selectionEntry" targetId="3f86-7961-558c-50aa">
       <entryLinks>
         <entryLink import="true" name="First Circle Titles" hidden="false" id="ec2e-176f-1805-cdf7" type="selectionEntryGroup" targetId="54c4-d2c3-c7be-ee89"/>
         <entryLink import="true" name="Reinforced" hidden="false" id="c40e-57d4-c4c5-ae4f" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d7c5-ab3b-a1bd-4087" type="selectionEntryGroup" targetId="b129-6e77-21dd-c012"/>
+        <entryLink import="true" name="Paths" hidden="false" id="372f-237b-2009-45c3" type="selectionEntryGroup" targetId="595b-d6fe-979d-c2a7"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -226,9 +270,10 @@
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Slaves to Darkness - Library" id="f36-74ae-9ec4-aff7" targetId="c580-f07a-aa35-f79f"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="720c-2218-1a90-922b" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="a777-bd2b-5f90-cf14" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="a777-bd2b-5f90-cf14" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="8246-9133-ec0b-b2b5" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
       </entryLinks>
@@ -239,6 +284,40 @@
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="9b66-afa0-f0b2-cf10" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="624e-7389-98b6-dc9d" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="026e-6eec-38c3-6868"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ace5-7764-ad84-26f2"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="4bf3-0965-39b0-1765" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="1466-541e-2198-bc86" hidden="false">
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="b2a0-f8ef-d158-afed"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="1221-54d1-62b3-db8a" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="9ad6-cac6-611c-3b3d" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

@@ -4,38 +4,29 @@
     <selectionEntryGroup name="Spell Lores" id="76d4-19e8-38b1-d8c9" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Lore of the Damned" hidden="false" id="b595-3928-d862-a044" defaultAmount="1">
-          <profiles>
-            <profile name="Spite-tongue Curse" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="8950-32fb-950c-e2c3">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Slaves to Darkness Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6. If the casting attempt is unsuccessful or if the spell is unbound, inflict D3 mortal damage on the caster.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 3 mortal damage on the target.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Binding Damnation" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ea32-60f6-a2f6-d964">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Slaves to Darkness Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target has **^^Strike-last^^** until the start of your next turn.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Daemonic Speed" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="b103-f3ca-78e1-4952">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Slaves to Darkness Wizard^^** to cast this spell, pick a visible friendly **^^Slaves to Darkness^^** unit wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the target, to a maximum of 3.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e08-1d85-8755-3a18"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spite-tongue Curse" hidden="false" id="4598-f9f2-ea8a-fe90" type="selectionEntry" targetId="a76d-4048-59ab-4a8a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5e52-9fa5-b4e9-e466-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e52-9fa5-b4e9-e466-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Binding Damnation" hidden="false" id="8434-b094-7142-3648" type="selectionEntry" targetId="4238-4b9d-0a56-931d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6061-d3cf-1002-af6c-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6061-d3cf-1002-af6c-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Daemonic Speed" hidden="false" id="d1e7-5e23-cb5c-dfc1" type="selectionEntry" targetId="4756-4114-0582-1abb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2219-e788-5d61-a0be-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2219-e788-5d61-a0be-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -366,6 +357,36 @@ In addition, while this unit includes any standard bearers, attacks that target 
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="20bb-e408-9d25-ffc6" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="73b1-102b-f662-8b4f" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="0720-38a3-91ef-5262"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="b0a6-aba3-da51-8a7f" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="796b-e7a4-a88c-5226" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="396b-8e45-97b6-2cfc"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Slaves to Darkness" hidden="false" id="171b-6db-6bab-cb2e" publicationId="6357-5d77-a2b2-f86b">
@@ -441,9 +462,49 @@ The target has that keyword for the rest of the battle.</characteristic>
         <categoryLink name="Reference" hidden="false" id="f77f-49cd-6e09-6ca7" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Spite-tongue Curse" hidden="false" id="a76d-4048-59ab-4a8a">
+      <profiles>
+        <profile name="Spite-tongue Curse" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="8950-32fb-950c-e2c3">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Slaves to Darkness Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6. If the casting attempt is unsuccessful or if the spell is unbound, inflict D3 mortal damage on the caster.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 3 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Binding Damnation" hidden="false" id="4238-4b9d-0a56-931d">
+      <profiles>
+        <profile name="Binding Damnation" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ea32-60f6-a2f6-d964">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Slaves to Darkness Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target has **^^Strike-last^^** until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemonic Speed" hidden="false" id="4756-4114-0582-1abb">
+      <profiles>
+        <profile name="Daemonic Speed" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="b103-f3ca-78e1-4952">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Slaves to Darkness Wizard^^** to cast this spell, pick a visible friendly **^^Slaves to Darkness^^** unit wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the target, to a maximum of 3.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Slaves to Darkness - Library" id="b103-d101-84e5-a8d" targetId="c580-f07a-aa35-f79f"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="cc3d-0eb9-b0ef-b2d5" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Formation" hidden="false" id="9715-615d-6123-76a6" defaultAmount="1">
@@ -457,7 +518,7 @@ The target has that keyword for the rest of the battle.</characteristic>
         <categoryLink name="Army Composition" hidden="false" id="5b90-ea8-bc59-91ec" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="705a-99c8-eddd-3df4" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="705a-99c8-eddd-3df4" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="d453-332b-42e-d220" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="62af-eb64-af50-a3b4" type="selectionEntryGroup" targetId="1b20-2d37-b109-b418" flatten="true"/>
@@ -469,8 +530,15 @@ The target has that keyword for the rest of the battle.</characteristic>
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="2f98-a657-ace0-e64" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="false" id="877a-5a32-260b-409c" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="877a-5a32-260b-409c" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="88ee-3cf-9a6e-a10b" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
@@ -481,6 +549,61 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="4abd-cbe7-c185-eadc" type="selectionEntryGroup" targetId="76d4-19e8-38b1-d8c9" flatten="true" collective="false"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="634d-42c7-c187-74d0" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="dddb-2d2a-f0e1-e940"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="08b7-910f-9df4-346b"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="9077-f44b-df00-8e33" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="9788-9156-9b55-b1f1" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Lore of the Damned" id="1fcb-f0a7-124c-b779" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Daemonic Speed" hidden="false" id="256e-6b9e-733f-0c2d" type="selectionEntry" targetId="4756-4114-0582-1abb">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4b0-03af-e56c-7dcb"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Binding Damnation" hidden="false" id="c1ba-6d45-3b3a-3629" type="selectionEntry" targetId="4238-4b9d-0a56-931d">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e4ab-d31a-de79-46b6"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Spite-tongue Curse" hidden="false" id="c2e5-7815-033b-924e" type="selectionEntry" targetId="a76d-4048-59ab-4a8a">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2ab-86c4-c70c-5c83"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="92cd-d5e7-629e-e754"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="56d0-1c56-f2e6-d691" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="602c-12e8-2817-b22a" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <entryLinks>
@@ -507,6 +630,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="340"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1ca5-b839-3acd-19b3" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Archaon the Everchosen" hidden="false" id="f2f6-54b7-5325-7805" type="selectionEntry" targetId="8f2a-58f3-5fab-a1a">
       <constraints>
@@ -526,6 +652,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="870"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8010-88c3-99bd-d303" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Gaunt Summoner on Disc of Tzeentch" hidden="false" id="f8c-bd1e-37b3-894" type="selectionEntry" targetId="de-30dc-2385-d1d1">
       <constraints>
@@ -545,6 +674,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="fcdb-1166-a11b-e3b3" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a1ba-b491-d5d8-c690" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="69ec-bb6d-d444-e916" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8fb7-9e21-e4d6-c873" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -568,6 +699,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="88f-bda2-b123-13e4" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5f4b-7620-1d7a-e30f" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a050-d5ec-5a2e-86fa" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c14c-0f68-3eef-ca8a" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="250"/>
@@ -591,6 +724,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="440"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7b0e-f2a1-e8c9-bfce" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chaos Lord on Manticore" hidden="false" id="8179-932e-feb3-a0ef" type="selectionEntry" targetId="88e5-f93a-7d25-83ab">
       <constraints>
@@ -610,6 +746,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a1c6-5234-158-49ba" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="4483-852f-b09d-7f16" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8a31-9983-5328-0181" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b684-7fe5-ac8f-8ff1" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="260"/>
@@ -650,6 +788,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="926a-44e0-f4b-ae9e" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8c59-739a-3d33-5a0b" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="77d3-2cb4-ed42-9bea" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e95a-012d-b888-4566" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -744,6 +884,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ad85-1450-b6c-1aa" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4af1-aef6-f115-eaa5" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dabd-fc6d-a602-c76a" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c170-cb8f-bedb-6394" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -767,6 +909,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="949f-e352-8da3-8cc0" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a7d3-4306-d370-6581" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a8ab-8d4a-02a5-a4d8" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8a55-465b-3169-9e98" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="280"/>
@@ -807,6 +951,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="bad9-d44d-b42f-b304" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d41c-de57-c5f4-8c92" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e03e-0562-7f16-3bfb" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9deb-c40d-68a6-8468" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -874,6 +1020,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ba38-8b6e-c11f-dead" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7b13-ea6f-3d10-60d0" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a935-0d3f-64b6-ba98" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7002-62a1-ac1e-f7ca" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -924,6 +1072,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7726-99f2-99cd-d15e" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="996a-3e5-4592-5134" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="87ee-2bd7-14ac-28ed" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="033f-f3ec-f26e-f636" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -991,6 +1141,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cf5f-ae1f-eae6-9c56" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="13d2-41b3-d72e-5020" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="40bb-f3ff-fb6a-2d44" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3dd2-86d8-fe69-a437" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -1041,6 +1193,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="dd22-b041-674d-2172" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="df33-7b13-d8a7-2101" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a02a-320e-476e-2617" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a549-ae71-351c-c528" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
@@ -1064,6 +1218,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6d6b-66f1-1818-3a09" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2b0e-febf-eb78-3d86" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0222-122e-2216-86e4" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="aebe-baf4-b356-b5d8" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
@@ -1095,6 +1251,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ceb-88d7-3a24-6970" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ef14-acda-6d87-1060" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1ced-eb80-32a6-d049" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a334-3bea-b613-ce88" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -1144,6 +1302,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ff33-3cdb-cd56-c0c6" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Darkoath Warqueen" hidden="false" id="4d88-93ae-40e-a91b" type="selectionEntry" targetId="7f9-8a5a-4a59-769b">
       <constraints>
@@ -1163,6 +1324,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d3a5-9ee1-2e87-cf4c" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="37bc-8053-c180-3b3b" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a9d8-0e29-06b7-6cf2" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e4d0-38d2-8e7b-054b" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -1186,6 +1349,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="129f-8997-281a-d55d" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="3376-fd58-e9f5-6cfb" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6bb0-06d6-838e-bd64" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9d4a-0687-5ea2-bfd7" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -1253,6 +1418,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a4f9-edcc-f327-dfb0" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="416e-a329-418-7824" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d08f-9289-0068-9833" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c6e2-a0bb-047b-b794" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -1265,6 +1432,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="340"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f922-b76f-0ec5-db40" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Archaon the Everchosen" hidden="false" id="738a-431b-178a-ca86" type="selectionEntry" targetId="8f2a-58f3-5fab-a1a">
       <categoryLinks>
@@ -1273,6 +1443,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="870"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ffd6-86b2-aefe-31a5" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Be&apos;lakor, the Dark Master" hidden="false" id="67e6-b577-6c95-878c" type="selectionEntry" targetId="672f-33c8-1e61-cead">
       <categoryLinks>
@@ -1281,6 +1454,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="440"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9ac3-29b4-b343-b3b5" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Centaurion Marshal" hidden="false" id="1ce8-db67-a549-95d7" type="selectionEntry" targetId="4c43-1634-6d7f-2705">
       <categoryLinks>
@@ -1289,6 +1465,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4770-8a63-d597-ed21" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="1e43-d5e-e39a-faed" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4746-3263-b016-90c3" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5cd0-70b0-ac12-4c10" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -1301,6 +1479,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7f17-e572-c5b8-4e60" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="1154-d4ff-28d8-7719" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="04dc-c344-3977-be9f" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3630-748b-659a-3962" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -1313,6 +1493,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6d50-c539-cee-875c" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d78c-aadd-6d8e-343a" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2ee5-f85c-d652-4b22" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0a22-d194-2de5-50b9" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -1325,6 +1507,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f8a9-24c0-58a8-976c" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d701-6136-81e2-2c26" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b1ba-822f-44c5-9fe8" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="44ae-5855-c48c-2bc5" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -1337,6 +1521,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="fe60-5678-858d-ce35" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8fc3-6b8-87db-7b95" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7d62-7935-92f0-386e" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="57bb-7a2f-74a5-b4e8" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="260"/>
@@ -1349,6 +1535,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="eb99-5033-c5b-410e" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="cb14-283c-8c5a-b0fb" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="583e-5840-fe5a-6966" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="89d2-47eb-0e17-0961" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -1361,6 +1549,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="fd07-6408-1f3d-6117" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="3c3e-a2d1-8bc5-93ed" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e5f1-3b59-933f-79cc" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1ff8-9e95-993d-a044" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="280"/>
@@ -1373,6 +1563,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ae9-f7c8-bf5-1768" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7a8c-38b9-255b-a46" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6aa8-2b0d-3291-826f" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3708-4b58-ce8f-f6be" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="250"/>
@@ -1385,6 +1577,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6503-9c5e-faf5-cd7e" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9d6a-5cec-20a7-ff59" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0b0c-be5e-6900-e70d" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="27d8-5c34-89e9-554d" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
@@ -1397,6 +1591,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f650-26b7-5b65-1f12" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="21-b737-311c-ce0e" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8cae-5b4a-c8e5-56cc" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="80a5-2e51-528f-3843" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
@@ -1409,6 +1605,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f976-2f15-1f29-e508" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="745d-6afd-c81-604b" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c5ff-e7d4-0a2e-5514" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="d8f1-896e-ef4b-2b01" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -1421,6 +1619,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="219a-51b1-da11-14fe" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="12ea-21d5-16aa-68" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1762-408a-4461-9782" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9722-d319-5585-3370" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -1433,6 +1633,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a186-4ed0-bd28-1e86" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Exalted Hero of Chaos" hidden="false" id="2332-5544-532f-b77b" type="selectionEntry" targetId="ce02-e726-b9c0-28f8">
       <categoryLinks>
@@ -1441,6 +1644,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="c001-3b7d-158f-8d3" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9ba9-142a-55f2-e661" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5296-e658-a89b-a7ab" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b5e2-a55b-d757-101d" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -1453,6 +1658,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7b0b-efc5-6854-f374" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="256d-8767-3a49-b17d" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9a25-b381-6501-b0c5" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7a19-d52b-25ea-076a" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -1465,6 +1672,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6177-d58e-851d-669" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b164-d617-ba46-c5f1" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6fe7-f33a-3660-2553" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a79e-c035-f581-12f3" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -1477,6 +1686,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="08ed-488b-6b94-1071" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ogroid Myrmidion" hidden="false" id="2ea9-d799-4ed9-7920" type="selectionEntry" targetId="2955-114b-f931-cafa">
       <categoryLinks>
@@ -1485,6 +1697,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f877-f07-b53d-1f38" type="selectionEntryGroup" targetId="a1ac-1337-7d66-251b"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="df7c-55da-5732-35f1" type="selectionEntryGroup" targetId="a81-fa40-378b-46e8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9c7c-f747-d08d-dcb4" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="fc4a-78b7-92ab-1acc" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -1518,6 +1732,9 @@ The target has that keyword for the rest of the battle.</characteristic>
           </conditions>
         </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f9c8-8995-33c2-379a" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chaos Chariot" hidden="false" id="4be1-3639-ae8e-48dc" type="selectionEntry" targetId="e161-b68c-7d8c-9513">
       <modifiers>
@@ -1560,11 +1777,17 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6075-64e0-ff18-7743" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f77a-6257-d4fb-9d4f" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chaos Chosen" hidden="false" id="6ed1-cf02-cd29-1db5" type="selectionEntry" targetId="3aa3-1abd-dbb-4a18">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="6111-421e-9c1-2a48" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="d607-5262-1fc6-8448" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7ef2-0f6b-2cee-2b40" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b42e-fe13-d26d-2b52" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1610,6 +1833,8 @@ The target has that keyword for the rest of the battle.</characteristic>
     <entryLink import="true" name="Chaos Furies" hidden="false" id="8056-31ae-f57d-1b5c" type="selectionEntry" targetId="cdb1-4aba-7c64-aa4d">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="f9b1-e980-53d3-1483" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9e46-6b0b-7c4b-8559" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="adc1-5332-6095-afcb" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1649,6 +1874,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="c092-bc30-c76f-290b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="1151-8e34-2aad-a7c7" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7026-d8d9-cad2-050c" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f6e6-794e-beca-0afb" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1733,10 +1960,16 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6444-a3f4-7fe4-2be8" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="19ba-af7b-568c-d98a" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chaos Spawn" hidden="false" id="5445-5020-de97-208b" type="selectionEntry" targetId="ead3-8dd9-3ace-8198">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="366a-e66b-363e-ad80" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="42cc-5a73-d02b-eb44" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="dc30-62c3-fd87-5212" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1774,6 +2007,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="5917-1edc-aa46-e8b1" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="d16b-e008-ce1d-2471" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c6d2-defe-09e2-7510" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0f47-6518-af52-83f1" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1820,6 +2055,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="c4a7-a41c-453b-1ca4" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="ffd4-e37d-578d-5b40" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="43c4-5c26-4985-6645" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0025-1315-3dc1-951a" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1861,6 +2098,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="2101-59ce-3536-34e2" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="6325-e4a5-21fb-8948" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="133e-9b54-2c68-3bc3" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="db36-a7ed-ea48-70a8" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1901,6 +2140,8 @@ The target has that keyword for the rest of the battle.</characteristic>
     <entryLink import="true" name="Darkoath Savagers" hidden="false" id="f88a-78f6-fd1f-a261" type="selectionEntry" targetId="df89-794a-4994-8293">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="dc12-b28c-bebf-2efd" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1075-f6da-91f3-3e7b" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="04aa-c9a3-e766-6b72" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2037,6 +2278,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="abb9-3057-0b4c-247d" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6516-e036-f282-a868" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Mindstealer Sphiranx" hidden="false" id="1bd9-b817-55e9-d3af" type="selectionEntry" targetId="a574-8be3-d5ce-d1bc">
       <modifiers>
@@ -2137,11 +2382,17 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="839d-b30f-13d8-d15b" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8960-e2f4-ac58-050a" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ogroid Theridons" hidden="false" id="556b-dc1f-bd6-4fba" type="selectionEntry" targetId="dc36-25e9-9522-971e">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="d945-5c6-1ac9-e561" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="11ff-34bd-934b-b39f" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b0bf-fb94-c161-4afd" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f05c-8e5d-cdf1-22e4" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2212,6 +2463,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="62ca-f580-1a7a-f258" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1257-3596-9e3a-6d55" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Fomoroid Crusher" hidden="false" id="99b6-b112-433f-7a5c" type="selectionEntry" targetId="42-fa77-4a18-a2e3">
       <modifiers>
@@ -2312,6 +2567,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3348-51d7-d84c-ac60" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="deae-0910-14ec-ba0a" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Gorebeast Chariot" hidden="false" id="6f65-8680-3086-680c" type="selectionEntry" targetId="9392-e6fd-9139-464c">
       <modifiers>
@@ -2354,10 +2613,16 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="50c6-13b6-6de3-13a6" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="336e-e222-f050-710e" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Raptoryx" hidden="false" id="abf6-499e-5541-1e61" type="selectionEntry" targetId="7995-d071-b30e-8eb8">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="f20b-47f7-98f2-f211" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="38f8-80a9-8c85-0baf" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5be3-be25-40ad-a727" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2490,6 +2755,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c4f9-1493-c738-ea87" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4306-8918-c33c-36de" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Soul Grinder" hidden="false" id="7120-72bf-118b-879d" type="selectionEntry" targetId="8171-deda-b88f-b561">
       <modifiers>
@@ -2578,6 +2847,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="330"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="afb5-74b1-061d-1283" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2310-2c54-3171-ca9f" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="The Oathsworn Kin" hidden="false" id="a7e4-736d-e448-95dd" type="selectionEntry" targetId="c8b1-7d96-6db6-2293">
       <modifiers>
@@ -2611,10 +2884,15 @@ The target has that keyword for the rest of the battle.</characteristic>
       <constraints>
         <constraint type="min" value="-1" field="selections" scope="parent" shared="true" id="d126-b788-30fb-5301"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7ac9-e087-4e4c-6e05" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Varanguard" hidden="false" id="80ba-f8dc-ff8d-3b4" type="selectionEntry" targetId="3f86-7961-558c-50aa">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="994-4487-8239-34ec" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9712-0c5b-f736-8eea" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2bed-fe2b-2da9-bf29" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2700,6 +2978,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae74-7238-cbe9-13b0" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4e3a-310d-0546-96ba" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Cypher Lords" hidden="false" id="9ab1-3223-f141-1f26" type="selectionEntry" targetId="5a21-301b-7e70-62fd">
       <modifiers>
@@ -2743,6 +3025,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a07f-aa56-acca-6a7f" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="30d7-890a-f15a-209c" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Horns of Hashut" hidden="false" id="c2df-74d6-4478-5ade" type="selectionEntry" targetId="4146-b722-ff22-610d">
       <modifiers>
@@ -2786,6 +3072,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0d2b-65d8-817e-5dde" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="effb-61d7-5379-56a8" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Iron Golem" hidden="false" id="4a79-a489-2f04-b87c" type="selectionEntry" targetId="9a4c-e68d-108d-98f5">
       <modifiers>
@@ -2831,6 +3121,8 @@ The target has that keyword for the rest of the battle.</characteristic>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Ensorcelled Banners" hidden="false" id="f1a5-85e3-2301-05ca" type="selectionEntryGroup" targetId="5ad4-988a-ad77-9a2f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7948-8dfa-3598-6846" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="d78e-d080-9d40-8ef0" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Scions of the Flame" hidden="false" id="ea38-78c5-617d-4336" type="selectionEntry" targetId="cc95-e171-14b9-002f">
@@ -2875,6 +3167,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d9aa-054f-2426-075c" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1ea1-c4c8-cad3-80e4" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Spire Tyrants" hidden="false" id="3798-a94f-c3c2-a847" type="selectionEntry" targetId="62a3-63bf-2306-e2a2">
       <modifiers>
@@ -2918,6 +3214,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="91d0-f9c2-dd17-e8e0" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7ea8-de1f-5a0a-23b3" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Splintered Fang" hidden="false" id="d82a-95d9-b777-37e1" type="selectionEntry" targetId="78f8-9ac5-641f-8b5c">
       <modifiers>
@@ -2961,6 +3261,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="93e6-2560-ffad-ed00" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4eb7-517c-b7d1-7de1" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Tarantulos Brood" hidden="false" id="2dce-8abc-c24b-a5ca" type="selectionEntry" targetId="066a-b04a-44ea-fca2">
       <modifiers>
@@ -3004,6 +3308,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="67ef-1adf-0996-adff" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="d15a-3a73-e950-7a9b" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="The Unmade" hidden="false" id="da7a-0512-dc1a-ac0d" type="selectionEntry" targetId="6aef-12ed-3dc9-2c83">
       <modifiers>
@@ -3047,6 +3355,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="abad-0cff-8498-8895" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6f85-977e-3787-7d55" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Untamed Beasts" hidden="false" id="d0f3-f79e-25f5-e369" type="selectionEntry" targetId="056b-6839-dc2f-46db">
       <modifiers>
@@ -3090,6 +3402,10 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="15b4-f017-e536-a496" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="540b-2594-5e19-471d" type="selectionEntryGroup" targetId="b0a6-aba3-da51-8a7f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Godsworn Hunt" hidden="false" id="a7d5-74de-6e60-9130" type="selectionEntry" targetId="1bb9-8fa7-8bf8-e4a2">
       <modifiers>
@@ -3127,6 +3443,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ab46-9474-24ea-c7a3" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="The Gnarlspirit Pack" hidden="false" id="b0cd-5867-a3f5-2066" type="selectionEntry" targetId="8046-a145-5d79-aa66">
       <modifiers>
@@ -3164,6 +3483,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ff96-80af-977c-4e1b" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Khagra&apos;s Ravagers" hidden="false" id="f83b-2e39-f2a4-c214" type="selectionEntry" targetId="c9bb-a2c8-8c92-a00c">
       <modifiers>
@@ -3206,6 +3528,9 @@ The target has that keyword for the rest of the battle.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2de6-a98f-1707-09bf" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
   <categoryEntries>

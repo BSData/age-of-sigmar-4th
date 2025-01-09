@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6cc-9eb2-c5b4-2877" name="Beasts of Chaos" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6cc-9eb2-c5b4-2877" name="Beasts of Chaos" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="338e-2f22-3508-8bc7" hidden="false">
       <selectionEntryGroups>
@@ -248,47 +248,63 @@
     <selectionEntryGroup name="Spell Lores" id="a20d-08c9-ea8f-33e7" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Lore of the Twisted Wilds" hidden="false" id="a415-7dcd-0814-85e3" defaultAmount="1" publicationId="3cc2-31d3-9dd2-f858">
-          <profiles>
-            <profile name="Viletide" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="9e2d-9462-78e4-4505">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Beasts of Chaos Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict D3 mortal damage on the target. In addition, until the start of your next turn, the target cannot use commands.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Devolve" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6e4c-7fa2-52be-998c">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Beasts of Chaos Wizard^^** to cast this spell, pick a visible enemy non-**^^Hero^^** unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn:
-• The target unit has a maximum control score of 1.
-• The target cannot use commands.
-• Each time the target moves, if the caster is on the battlefield, the target must end that move no further from the caster than it was at the start of the move.’</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Vicious Stranglethorns" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="5394-f529-76a8-18b5">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Beasts of Chaos Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn:
-• Halve the target’s Move characteristic.
-• Subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af49-c6ce-ff6e-0ccc"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Devolve" hidden="false" id="a661-dbfd-e030-3712" type="selectionEntry" targetId="bcd2-36fc-3817-dd29">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d39-7c7d-9b50-065c-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d39-7c7d-9b50-065c-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Vicious Stranglethorns" hidden="false" id="24f1-83d7-8c07-7a90" type="selectionEntry" targetId="19f0-7157-940f-3084">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d65-2b94-a8c6-ffc6-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d65-2b94-a8c6-ffc6-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Viletide" hidden="false" id="4754-d255-4ac6-c8a9" type="selectionEntry" targetId="31f7-16a1-3229-6e91">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ffc2-87e8-af90-9705-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffc2-87e8-af90-9705-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6156-e57e-9136-b002" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="d680-a692-ba7e-d0fa" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="b4f2-500a-1311-d428" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="6023-fc75-79bc-0f64"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="733a-1ec8-6333-11b3" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="6052-ea29-bf68-fa7f" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ac2-691e-3cad-e1c1"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -332,9 +348,54 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
         <categoryLink name="Reference" hidden="false" id="73d1-64a2-f1cb-9fac" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Devolve" hidden="false" id="bcd2-36fc-3817-dd29">
+      <profiles>
+        <profile name="Devolve" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6e4c-7fa2-52be-998c">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Beasts of Chaos Wizard^^** to cast this spell, pick a visible enemy non-**^^Hero^^** unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn:
+• The target unit has a maximum control score of 1.
+• The target cannot use commands.
+• Each time the target moves, if the caster is on the battlefield, the target must end that move no further from the caster than it was at the start of the move.’</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Vicious Stranglethorns" hidden="false" id="19f0-7157-940f-3084">
+      <profiles>
+        <profile name="Vicious Stranglethorns" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="5394-f529-76a8-18b5">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Beasts of Chaos Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn:
+• Halve the target’s Move characteristic.
+• Subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Viletide" hidden="false" id="31f7-16a1-3229-6e91">
+      <profiles>
+        <profile name="Viletide" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="9e2d-9462-78e4-4505">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Beasts of Chaos Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict D3 mortal damage on the target. In addition, until the start of your next turn, the target cannot use commands.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Beasts of Chaos - Library" id="b48c-dc5f-b9c1-dcee" targetId="5549-bece-2339-36e9"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="841f-4f92-d212-b073" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <entryLinks>
     <entryLink import="true" name="Beastlord" hidden="false" id="44fa-598b-7306-156f" type="selectionEntry" targetId="9652-a6eb-7e57-9761">
@@ -365,6 +426,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="59d2-3b58-b501-5999" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="374f-b5be-7f6a-636b" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2615-af00-734a-3f1a" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="cfa5-eec0-49a4-48e1" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -413,6 +476,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4c54-b9f4-0b85-2860" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="532a-0b08-a561-cc5f" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0d8f-6a66-af8b-cdc6" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c35f-6d70-889e-20ff" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -451,6 +516,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ae11-c902-3b8d-c4ca" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="835f-43a1-c7e3-34d9" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e346-5a4a-06b5-c5f9" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ffcf-20f5-3d76-0671" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -474,6 +541,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9f41-7aa1-7454-315e" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a6c4-0d14-452b-c258" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2238-c95f-b92c-0de5" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9596-6954-d3cf-ba30" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -486,6 +555,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="aa48-ce6c-be75-bee3" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="eb07-006c-8489-b4ab" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="800d-d914-d84d-8b91" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c021-84ca-c68f-13fd" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -498,6 +569,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3cd7-1b11-407c-9236" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="0dae-49d3-55ce-1ece" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d9ae-4d1a-1da9-0e5e" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="43f1-1cba-0ed8-f2ad" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -510,6 +583,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3f78-2533-e491-ec62" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f1aa-6414-43b6-4122" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="99d6-6519-a940-ab39" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b11a-3b4e-337c-7dcb" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -522,6 +597,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8edd-1bdf-28b8-98fe" type="selectionEntryGroup" targetId="bec5-f602-dfea-e64f"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="efd5-19d0-3402-4d7b" type="selectionEntryGroup" targetId="338e-2f22-3508-8bc7"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1740-dc52-fb83-1e24" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2200-b84d-77fd-570f" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -571,10 +648,16 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="60b7-67c2-fc83-4d50" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7e3f-530b-985b-3a3d" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bestigors" hidden="false" id="67c6-9a43-cd6e-4758" type="selectionEntry" targetId="e81b-8963-7fe4-f5ed">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="b9f3-67dc-608e-4ccb" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="57c3-5876-e367-ca6a" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="96fb-2500-dc6d-5a2f" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -609,6 +692,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
     <entryLink import="true" name="Bullgors" hidden="false" id="20f2-ce89-35ad-5c7f" type="selectionEntry" targetId="d994-d366-3e28-c304">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="b0d2-1e3b-811a-5901" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1f52-b963-f741-3816" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="897a-7ff5-1358-fc3c" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -642,6 +727,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
     <entryLink import="true" name="Chaos Warhounds" hidden="false" id="6b69-ea4a-79a1-6b27" type="selectionEntry" targetId="7c3c-ad38-60b3-7c30">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="80b7-cac3-e13b-1942" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4809-479b-2f94-60ac" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0b5a-1010-5e97-7fc3" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -695,6 +782,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
     <entryLink import="true" name="Centigors" hidden="false" id="9673-2640-44e5-e39f" type="selectionEntry" targetId="49ea-b4e5-abbc-7c73">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="64eb-7035-4734-8d52" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3599-fe61-cdbb-6ef8" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2adf-d898-ba99-ee8e" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -750,6 +839,10 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1745-ab96-e270-893e" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a0d6-5395-5506-028e" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chaos Gargant" hidden="false" id="5f61-3409-a522-1ab6" type="selectionEntry" targetId="a95c-3447-894b-43a3">
       <modifiers>
@@ -775,6 +868,10 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5a6d-f6d9-23ad-27ad" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b973-6f3f-e798-585b" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chimera" hidden="false" id="91dd-4419-1467-4c58" type="selectionEntry" targetId="92c9-1353-bc81-7814">
       <modifiers>
@@ -800,6 +897,10 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7aef-df09-6328-1f94" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="255c-fb21-5e02-4f0f" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Cockatrice" hidden="false" id="a1bd-54b0-81e7-a05c" type="selectionEntry" targetId="a80a-b7c0-c7d5-9b9f">
       <modifiers>
@@ -845,10 +946,16 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a183-b32d-c01f-b711" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="838c-960a-47a8-cf27" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Dragon Ogors" hidden="false" id="f0d1-af45-42a8-fe51" type="selectionEntry" targetId="9bbe-6fe3-2117-7dca">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="3f7f-665a-c8e6-83bc" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a1e1-e878-51da-72f9" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="48bc-04c5-ae0b-5ae8" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -903,6 +1010,10 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d500-5ca9-a22c-7ce2" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c2ac-5e65-0454-3ee8" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Razorgor" hidden="false" id="711f-b93f-94b6-eb40" type="selectionEntry" targetId="5efa-c95d-80d7-bec9">
       <modifiers>
@@ -948,10 +1059,16 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="70"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fdbf-f5d8-bd64-02fd" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8a6e-c902-5361-22db" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ungor Raiders" hidden="false" id="981a-eb67-7124-b61d" type="selectionEntry" targetId="3771-efac-15d0-cc5b">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="d9ff-c66a-f542-a87a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4203-cf5c-aa4b-dcba" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="89fe-c05b-8092-98c3" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1015,6 +1132,8 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="46be-036a-b449-14ac" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ef0b-46e3-c6a4-27f7" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9e23-eacb-eab7-a963" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Jabberslythe" hidden="false" id="d662-c505-1986-b5c8" type="selectionEntry" targetId="e692-609a-09fa-d49b">
@@ -1041,6 +1160,10 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="20ff-9738-a0d5-3f4a" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3968-5968-e50f-c997" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Tuskgor Chariots" hidden="false" id="2ff3-f007-e363-117a" type="selectionEntry" targetId="21de-ca00-a110-b175">
       <modifiers>
@@ -1067,10 +1190,16 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1c01-fa42-52ce-b275" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2411-0835-be21-9fc8" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ungors" hidden="false" id="5086-dea0-628a-a2f7" type="selectionEntry" targetId="920d-c7ac-1a68-8337">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="360b-a8a5-fee1-fb46" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7b6e-e9eb-e0d9-cc62" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a01e-c0b4-a975-95c2" type="selectionEntryGroup" targetId="733a-1ec8-6333-11b3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1137,6 +1266,9 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1b8e-18bc-d987-47d8" type="selectionEntryGroup" targetId="d680-a692-ba7e-d0fa"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Herdstone" hidden="false" id="e494-b95e-5651-5fea" type="selectionEntry" targetId="dbf4-0d75-ee00-02a2"/>
   </entryLinks>
@@ -1152,7 +1284,7 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
         <categoryLink name="Army Composition" hidden="false" id="1694-f638-153c-1ae4" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="ca45-bd47-9de1-6c4a" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="ca45-bd47-9de1-6c4a" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="a664-d80e-4b60-8225" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="5085-15a7-12fb-c5e0" type="selectionEntryGroup" targetId="ab04-81b1-be73-d7de" flatten="true"/>
@@ -1164,8 +1296,15 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="d156-ef40-ae7b-efe3" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="false" id="e806-6063-f8e4-dcff" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="e806-6063-f8e4-dcff" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="2594-d4e1-e1c5-be49" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
@@ -1176,6 +1315,61 @@ For the rest of the turn, add 1 to charge rolls for that unit.</characteristic>
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="a64d-d2d7-3e41-7954" type="selectionEntryGroup" targetId="a20d-08c9-ea8f-33e7" flatten="true" collective="false"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="0068-121d-f8bb-b385" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="5d18-5ce3-9bc9-8772"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="51d8-2866-cae7-2d57"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="fd27-a888-28ac-24f8" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="aeda-b09c-e7ac-3493" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Lore of the Twisted Wilds" id="2475-e9c1-94f0-8b3f" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Viletide" hidden="false" id="3e73-2c2e-3f59-e3ae" type="selectionEntry" targetId="31f7-16a1-3229-6e91">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b21-852c-cac0-04c5"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Devolve" hidden="false" id="a500-7188-17ea-500d" type="selectionEntry" targetId="bcd2-36fc-3817-dd29">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d2d-0391-d3b3-3055"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Vicious Stranglethorns" hidden="false" id="2374-19c9-60d1-8348" type="selectionEntry" targetId="19f0-7157-940f-3084">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7b0-fd25-918b-f329"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="c695-1b75-97e8-869e"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="ac82-fda0-e3f7-041c" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="720f-4c71-944f-5379" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <categoryEntries>

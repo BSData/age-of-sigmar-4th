@@ -2,6 +2,7 @@
 <catalogue library="false" id="1100-a22f-15c6-bdea" name="Kharadron Overlords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Kharadron Overlords - Library" id="c4eb-4566-cf00-726c" targetId="7e5e-7934-c23b-c35e"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="a944-d6c3-2091-dd73" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Kharadron Overlords" hidden="false" id="8b5f-e3cf-35c2-fa90">
@@ -231,6 +232,36 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a4d3-1fd8-60db-cb23" includeChildSelections="true"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="bc80-e576-07c4-aac3" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="e3ea-2881-b439-6b05" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="d724-22d0-e13b-2b33"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="89d2-c6e7-76d7-b21b" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="9d8f-692f-228a-244f" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d51-ca02-4063-2d57"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <entryLinks>
     <entryLink import="true" name="Aether-Khemist" hidden="false" id="8a5a-246b-500-d604" type="selectionEntry" targetId="26a7-80ea-22a-21ca">
@@ -275,6 +306,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="76b2-f8b-47dd-ab99" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e564-b1c0-6fba-fb81" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a514-b238-2df4-8f01" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c4e5-071c-4870-89fc" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -322,6 +355,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="bc41-2c95-2dc9-fdd1" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f432-2612-9f06-d362" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="931f-3b40-d732-3a7d" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a1d3-c95e-567d-8f40" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -345,6 +380,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f636-cbcd-63ad-83de" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="50ce-a447-8e8c-931b" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6372-6ad1-e016-ad58" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5f8b-1407-d166-42f3" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -368,6 +405,9 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <costs>
         <cost name="pts" typeId="points" value="250"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ca40-f498-10ce-27b8" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Codewright" hidden="false" id="afad-b331-509e-20b2" type="selectionEntry" targetId="bed0-dd91-c45b-71df">
       <modifiers>
@@ -411,6 +451,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e2ca-9cc-e910-2a6" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ee00-b934-bb87-85c4" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="91dc-9fac-d538-1b86" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0bf3-e973-2579-9378" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
@@ -434,6 +476,9 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9cbf-9bb9-ca46-a925" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Endrinmaster with Dirgible Suit" hidden="false" id="367e-3c82-1b78-2b90" type="selectionEntry" targetId="a505-e76e-45f8-7874">
       <modifiers>
@@ -477,6 +522,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="58c1-7b65-63e4-36fc" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f646-16a2-25bc-8543" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e8d4-5e0b-38af-f166" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3e57-06a0-ccb8-60c6" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -524,6 +571,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7637-ffc7-d300-4929" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6fa7-600d-5c1e-4b4d" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5ea1-c44e-d167-8d8c" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="18a4-9d95-f873-5b4a" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -536,6 +585,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="c614-76c5-81f8-ea1e" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="297c-557d-dc8a-1887" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="59bc-1b29-fcdd-0d9e" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="84f3-ce91-19fd-a14b" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -548,6 +599,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="30da-52c9-3de5-d1ec" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="4f89-2279-cbec-3ff4" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a8fb-d8fc-b9e4-09da" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8f9c-1e1c-9940-b47f" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -560,6 +613,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="618b-12b7-3aa0-a8d8" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="652a-e274-1881-3441" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4963-e28b-6e3b-5d54" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f97f-eec1-7b70-2711" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -572,6 +627,9 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <costs>
         <cost name="pts" typeId="points" value="250"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="47f7-b47d-719b-2418" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Codewright" hidden="false" id="4409-20da-fa37-a3e0" type="selectionEntry" targetId="bed0-dd91-c45b-71df">
       <categoryLinks>
@@ -580,6 +638,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="51d7-a56d-8f10-5a5" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f4e-fffd-fcdf-5256" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e72f-582f-345d-f1dc" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fb31-3e9f-6208-9f23" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
@@ -592,6 +652,9 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ff88-6635-8512-ecd3" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Endrinmaster with Dirgible Suit" hidden="false" id="7927-fec3-a5e9-4d56" type="selectionEntry" targetId="a505-e76e-45f8-7874">
       <categoryLinks>
@@ -600,6 +663,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e20-da0c-3de2-721b" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="512f-cbb-ff91-a930" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="218f-8ded-6a1d-0453" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8602-2bb2-bb39-481d" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -612,6 +677,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8145-329d-fffb-72f" type="selectionEntryGroup" targetId="f067-97fa-4baa-58b5"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ac72-3ef-b9ef-29b1" type="selectionEntryGroup" targetId="8729-9ec4-fe73-ef22"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a505-2e87-54ea-08db" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="aec9-869c-fe48-5bf4" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -650,6 +717,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="879c-f9ff-9b6f-accb" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f9fb-73f2-b66e-25f3" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3543-3afd-df2f-bca2" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -707,10 +776,16 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <costs>
         <cost name="pts" typeId="points" value="320"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="80c3-2d75-f52c-317d" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="635f-69cc-bbf3-cc31" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Arkanaut Ironclad" hidden="false" id="a859-5e57-3c39-313b" type="selectionEntry" targetId="2b23-328b-3916-4947">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="528b-7f75-528f-64ef" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5b9e-5966-a4cd-6ac9" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="84b9-def1-fb2e-a75d" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -772,6 +847,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
     <entryLink import="true" name="Endrinriggers" hidden="false" id="6f8-4cb0-d377-8800" type="selectionEntry" targetId="4c3c-1a00-2c49-87ce">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="64a6-740d-efc7-f2b8" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e682-f54d-5b79-1644" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5d33-b453-7b51-7d67" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -810,6 +887,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
     <entryLink import="true" name="Grundstock Gunhauler" hidden="false" id="2f7d-b7b4-e14a-b240" type="selectionEntry" targetId="66fa-6ab8-35c3-beef">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="7575-f2c8-ab02-90e9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e8b6-4241-3823-c73c" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae59-b44e-7393-7881" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -871,6 +950,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
     <entryLink import="true" name="Grundstock Thunderers" hidden="false" id="2bc0-f758-186e-4c88" type="selectionEntry" targetId="9f81-a727-f6ab-e7cc">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="1459-a31d-b996-6dc" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b0fa-1ce9-1de7-e7c0" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7eb9-88b4-80fa-c2f0" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -916,6 +997,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
     <entryLink import="true" name="Skywardens" hidden="false" id="3c87-3893-9539-22e2" type="selectionEntry" targetId="bc2-ce5c-7ccc-4145">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="4bca-7ddd-aaff-7fef" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="149e-6daf-7e8c-b52f" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d7fa-7947-61f7-291e" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -985,6 +1068,9 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0fe0-f9b7-b459-6726" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Kharadron Overlords" hidden="false" id="5113-2b39-878f-7d46" type="selectionEntry" targetId="8b5f-e3cf-35c2-fa90">
       <constraints>
@@ -996,7 +1082,7 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
     <categoryEntry name="Guild Officer" id="30e-b6bb-5728-835e" hidden="false"/>
   </categoryEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="6429-d7aa-e387-1c8c" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="6429-d7aa-e387-1c8c" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="e0c1-4e89-a437-0987" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
       </entryLinks>
@@ -1007,6 +1093,13 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="4dcb-46cd-4171-9432" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Battle Formation" hidden="false" id="ba87-3612-e355-673b" defaultAmount="1">
       <entryLinks>
@@ -1018,6 +1111,33 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="086d-7875-906c-1ba5" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="31b7-a356-515c-d016" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="5509-b48d-9508-330e"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bc14-284d-c52a-0f65"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="0758-276e-aefb-1f2b" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="73cc-7b47-33e9-cad2" hidden="false">
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="170a-50a8-d746-2512"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="3631-10b5-b627-f995" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="7ec5-5440-2f35-632e" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
