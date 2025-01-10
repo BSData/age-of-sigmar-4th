@@ -263,11 +263,6 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="No Spell Lore selected. Are you sure?" field="warning">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
     </selectionEntry>
   </selectionEntries>
@@ -556,10 +551,36 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="decrement" value="1" field="9a55-4899-7bec-495b">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="c8ad-9335-2f70-f86a" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="9a55-4899-7bec-495b">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="9a55-4899-7bec-495b" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Kruleboyz Monsta-killaz" hidden="false" id="8b1c-b0a6-a1ec-2009" type="selectionEntry" targetId="2314-f03-bcc6-8ea8">
       <modifiers>
@@ -588,6 +609,29 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="decrement" value="1" field="4bf3-f88d-11c8-a353">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="2314-f03-bcc6-8ea8" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="4bf3-f88d-11c8-a353">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -596,6 +640,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <entryLink import="true" name="Paths" hidden="false" id="2c73-901b-e4db-6b09" type="selectionEntryGroup" targetId="8076-4db9-001f-875c"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e0da-2605-4a1d-5599" type="selectionEntryGroup" targetId="77c2-c505-074d-237f"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="4bf3-f88d-11c8-a353" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Gutrippaz" hidden="false" id="f1f4-495d-c4d7-1b7b" type="selectionEntry" targetId="23f9-c4ec-3e40-1a31">
       <entryLinks>
@@ -636,6 +683,7 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
                 <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
                 <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="23f9-c4ec-3e40-1a31" shared="true"/>
               </conditions>
             </localConditionGroup>
           </localConditionGroups>
@@ -691,10 +739,36 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="decrement" value="1" field="6c77-0f58-286f-42ca">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="6c77-0f58-286f-42ca">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="6c77-0f58-286f-42ca" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Da Kunnin&apos; Krew" hidden="false" id="d9ed-86cd-3761-8ae8" type="selectionEntry" targetId="7d2e-ce9a-1dd6-1aad">
       <modifiers>
@@ -723,6 +797,29 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="e20c-2aaa-baaa-ea89">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="7d2e-ce9a-1dd6-1aad" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="e20c-2aaa-baaa-ea89">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -730,6 +827,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7b30-beb1-13ad-b495" type="selectionEntryGroup" targetId="77c2-c505-074d-237f"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="e20c-2aaa-baaa-ea89" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Daggok&apos;s Stab-ladz" hidden="false" id="2baf-01de-232c-dcfe" type="selectionEntry" targetId="5462-e249-ce89-3c82">
       <modifiers>
@@ -758,6 +858,29 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="decrement" value="1" field="b290-74d4-564d-3be8">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="5462-e249-ce89-3c82" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="b290-74d4-564d-3be8">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -765,6 +888,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2edd-d310-ef78-9159" type="selectionEntryGroup" targetId="77c2-c505-074d-237f"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="b290-74d4-564d-3be8" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
