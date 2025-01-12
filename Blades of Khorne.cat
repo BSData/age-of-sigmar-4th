@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1ede-f90-a661-b6c2" hidden="false">
       <selectionEntryGroups>
@@ -194,15 +194,6 @@
                 <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Summon^^**</characteristic>
               </characteristics>
             </profile>
-            <profile name="Summon Bleeding Icon" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="bb76-cde-8439-1002">
-              <characteristics>
-                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
-                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
-                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">If there is not a friendly **Bleeding Icon** on the battlefield, pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, then make a chanting roll of D6.</characteristic>
-                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Set up a **Bleeding Icon** wholly within 12&quot; of the chanter and visible to them.</characteristic>
-                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Summon^^**</characteristic>
-              </characteristics>
-            </profile>
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2dd7-5682-b6b1-6879"/>
@@ -227,6 +218,32 @@
               </constraints>
             </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Summon Bleeding Icon" hidden="false" id="6054-e84b-763c-2055">
+              <profiles>
+                <profile name="Summon Bleeding Icon" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="bb76-cde-8439-1002">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+                    <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+                    <characteristic name="Declare" typeId="284c-90b2-245b-adf3">If there is not a friendly **Bleeding Icon** on the battlefield, pick a friendly **^^Blades of Khorne Priest^^** to chant this prayer, then make a chanting roll of D6.</characteristic>
+                    <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Set up a **Bleeding Icon** wholly within 12&quot; of the chanter and visible to them.</characteristic>
+                    <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Summon^^**</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c225-db30-cac7-717f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="458c-54e2-37ae-a39b"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="c225-db30-cac7-717f">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b51d-2aae-ac7b-4c42" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

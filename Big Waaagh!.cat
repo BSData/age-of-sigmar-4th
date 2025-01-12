@@ -70,6 +70,19 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Summon Foot of Gork" hidden="false" id="485e-b60d-7af3-32f2">
+      <profiles>
+        <profile name="Summon Foot of Gork" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6bfb-eaca-dca6-259b" publicationId="8b1b-f2c7-890e-2bbe">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Foot of Gork** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Foot of Gork** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units. A **Foot of Gork** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="fa75-3926-f054-8728" hidden="false" flatten="true">
@@ -212,17 +225,6 @@
     <selectionEntryGroup name="Manifestation Lores" id="1187-72d3-09f9-a410" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Manifestation Lore: Big Waaagh!" hidden="false" id="4567-11d7-7262-e373" publicationId="8b1b-f2c7-890e-2bbe">
-          <profiles>
-            <profile name="Summon Foot of Gork" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6bfb-eaca-dca6-259b" publicationId="8b1b-f2c7-890e-2bbe">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Foot of Gork** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Foot of Gork** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units. A **Foot of Gork** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f06-0ffc-7c3c-a398"/>
           </constraints>
@@ -231,6 +233,12 @@
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6146-d494-ad70-f65a"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6664-837d-3574-ce4d"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Summon Foot of Gork" hidden="false" id="de0e-2240-714d-4c92" type="selectionEntry" targetId="485e-b60d-7af3-32f2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ab1-fb32-f7f0-e811-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ab1-fb32-f7f0-e811-max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -381,25 +389,6 @@
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="168b-5112-0c4d-6d0f" defaultAmount="1">
-      <entryLinks>
-        <entryLink import="true" name="Manifestation Lores" hidden="false" id="86fc-3c5b-a2c8-43fc" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="613f-07d9-a065-ee8c"/>
-        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="46a1-31d7-16e5-61b7"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink name="Army Composition" hidden="false" id="1aa1-1693-94aa-aa5c" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
   </selectionEntries>
   <entryLinks>
     <entryLink import="true" name="Battle Traits: Big Waaagh!" hidden="false" id="e2d9-4f97-a243-6c07" type="selectionEntry" targetId="5f83-4fe9-9e63-f951">
@@ -481,93 +470,21 @@
         <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="Big Waaagh! must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="equalTo" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="notEqualTo" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="equalTo" value="2" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="notEqualTo" value="2" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="notEqualTo" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="equalTo" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="notEqualTo" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="equalTo" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-              <localConditionGroups>
-                <localConditionGroup type="atLeast" value="3" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="2a45-46b2-62f9-63cc" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="3" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="2a45-46b2-62f9-63cc" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </localConditionGroup>
-              </localConditionGroups>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -723,6 +640,24 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="88d6-2668-90f4-a165" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Gore-gruntas" hidden="false" id="3ea2-d163-34b3-3c29" type="selectionEntry" targetId="f4bd-9f1c-cc46-5b5e">
       <entryLinks>
@@ -975,6 +910,24 @@
       <costs>
         <cost name="pts" typeId="points" value="190"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Megaboss on Maw-krusha" hidden="false" id="c695-224a-374b-1b74" type="selectionEntry" targetId="8400-417c-251b-860a">
       <constraints>
@@ -1014,6 +967,24 @@
       <costs>
         <cost name="pts" typeId="points" value="360"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Morgok&apos;s Krushas" hidden="false" id="4476-1c45-589a-08e9" type="selectionEntry" targetId="5e0d-b8d1-f5e7-f1df">
       <modifiers>
@@ -1114,6 +1085,24 @@
       <costs>
         <cost name="pts" typeId="points" value="260"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Warchanter" hidden="false" id="ca21-62f0-d383-f841" type="selectionEntry" targetId="7d89-20b4-7ed4-6ca0">
       <constraints>
@@ -1153,6 +1142,24 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Weirdbrute Wrekkaz" hidden="false" id="255c-26d7-4eed-3ed4" type="selectionEntry" targetId="c08c-f42b-30bb-ccd">
       <entryLinks>
@@ -1232,6 +1239,24 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Zoggrok Anvilsmasha" hidden="false" id="0f6d-6dc8-3708-b17f" type="selectionEntry" targetId="d4c-6af5-1346-a8ab">
       <constraints>
@@ -1255,6 +1280,22 @@
               </conditionGroups>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -1379,6 +1420,24 @@
       <costs>
         <cost name="pts" typeId="points" value="220"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Da Kunnin&apos; Krew" hidden="false" id="836e-d207-f0c0-5d70" type="selectionEntry" targetId="7d2e-ce9a-1dd6-1aad">
       <modifiers>
@@ -1492,6 +1551,24 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5f25-d875-c6f4-e54f" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Gutrippaz" hidden="false" id="64d5-bd30-674f-b3dd" type="selectionEntry" targetId="23f9-c4ec-3e40-1a31">
       <entryLinks>
@@ -1597,6 +1674,24 @@
         <entryLink import="true" name="Paths" hidden="false" id="2072-8805-8c24-d4f6" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0719-705f-e929-f698" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Hobgrot Slittaz" hidden="false" id="ddb8-e09c-8705-f6f8" type="selectionEntry" targetId="82f1-fd-499c-a2db">
       <entryLinks>
@@ -1700,6 +1795,24 @@
       <costs>
         <cost name="pts" typeId="points" value="290"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Killaboss on Great Gnashtoof" hidden="false" id="320e-c545-71d7-76bb" type="selectionEntry" targetId="b780-2683-34de-ec5">
       <constraints>
@@ -1761,6 +1874,24 @@
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Killaboss with Stab-grot" hidden="false" id="44ef-63a2-972d-a932" type="selectionEntry" targetId="17d5-b7e8-6b70-9260">
       <constraints>
@@ -1830,6 +1961,24 @@
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Kruleboyz Monsta-killaz" hidden="false" id="5a14-db41-5d1a-936f" type="selectionEntry" targetId="2314-f03-bcc6-8ea8">
       <modifiers>
@@ -1980,6 +2129,24 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Snatchaboss on Sludgeraker Beast" hidden="false" id="c303-85f7-4a74-a30e" type="selectionEntry" targetId="60a9-d871-f253-146c">
       <constraints>
@@ -2041,6 +2208,24 @@
       <costs>
         <cost name="pts" typeId="points" value="320"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Swampboss Skumdrekk" hidden="false" id="8e11-fc42-f3ff-7eb7" type="selectionEntry" targetId="57d2-f5d7-ec57-5d4a">
       <constraints>
@@ -2074,6 +2259,24 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f74e-c9f4-a640-71f5" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Swampcalla Shaman with Pot-grot" hidden="false" id="2214-8ad9-2f4e-f744" type="selectionEntry" targetId="5f19-cef-ee2-f796">
       <constraints>
@@ -2113,6 +2316,24 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Big Waaagh! rosters must have equal numbers of regiments led by IRONJAWZ and KRULEBOYZ HEROES." field="error">
+          <localConditionGroups>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="-1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c1ca-4b17-3512-89f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+            <localConditionGroup type="always" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="6e42-3c75-4cb5-337a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <catalogueLinks>

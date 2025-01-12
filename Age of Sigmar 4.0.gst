@@ -2653,6 +2653,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
+      </constraints>
     </forceEntry>
     <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false">
       <categoryLinks>
@@ -4077,6 +4080,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="2980-eb35-12cf-8017"/>
+      </constraints>
     </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
