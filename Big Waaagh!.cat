@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="63fb-d677-eb4c-b148" name="Big Waaagh!" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="4" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="63fb-d677-eb4c-b148" name="Big Waaagh!" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="4" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Big Waaagh!" hidden="false" id="5f83-4fe9-9e63-f951" publicationId="8b1b-f2c7-890e-2bbe">
       <profiles>
@@ -511,6 +511,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -525,17 +526,30 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="1" field="8486-364d-3ea9-db2e">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
-          </conditions>
+        <modifier type="set" value="0" field="8486-364d-3ea9-db2e">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
       <constraints>
-        <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="8486-364d-3ea9-db2e"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8486-364d-3ea9-db2e" includeChildSelections="true"/>
       </constraints>
     </entryLink>
     <entryLink import="true" name="Brute Ragerz" hidden="false" id="9f05-aa65-8830-2e12" type="selectionEntry" targetId="d77b-a0ba-7d99-28d5">
@@ -559,6 +573,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -573,10 +589,31 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="4173-2687-b9fd-5fce">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="4173-2687-b9fd-5fce" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Brutes" hidden="false" id="7e85-6990-0b37-7272" type="selectionEntry" targetId="f330-c2f2-f018-d93b">
       <entryLinks>
@@ -599,6 +636,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -613,10 +652,31 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="cccd-dc8c-5781-a0be">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="cccd-dc8c-5781-a0be" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Gordrakk, the Fist of Gork" hidden="false" id="85b2-1c2d-b868-e5c8" type="selectionEntry" targetId="b8a1-7664-687e-c0d9">
       <constraints>
@@ -730,12 +790,32 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="9bc3-394c-a233-a96f">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -746,6 +826,9 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3774-66df-868c-d57f" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="9bc3-394c-a233-a96f" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="4871-fe28-4283-367f" type="selectionEntry" targetId="2a45-46b2-62f9-63cc">
       <constraints>
@@ -796,6 +879,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -810,6 +894,23 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="f02e-c739-3ad0-5c00">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -818,6 +919,9 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9351-4bf0-3b25-4443" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
         <entryLink import="true" name="Paths" hidden="false" id="f37c-f9b6-4686-3f78" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="f02e-c739-3ad0-5c00" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Maw-grunta with Hakkin&apos; Krew" hidden="false" id="5f97-29eb-5df4-6254" type="selectionEntry" targetId="2ccb-7f24-4e64-9431">
       <modifiers>
@@ -835,6 +939,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -849,6 +954,23 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="6a25-97a6-8bd8-2af0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="250"/>
@@ -857,6 +979,9 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="40b7-d17b-297b-a470" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
         <entryLink import="true" name="Paths" hidden="false" id="6266-6e3b-56fe-fed8" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="6a25-97a6-8bd8-2af0" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Megaboss" hidden="false" id="2c03-29c9-80c7-d80a" type="selectionEntry" targetId="4e07-f63a-6315-b48b">
       <constraints>
@@ -1017,12 +1142,32 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1662-022a-3908-e5ac">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1033,6 +1178,9 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f153-9aaa-4025-5ea2" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="1662-022a-3908-e5ac" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Tuskboss on Maw-grunta" hidden="false" id="1dcc-48d3-aa30-840a" type="selectionEntry" targetId="3520-fc6a-d4fc-1c1f">
       <constraints>
@@ -1193,6 +1341,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="0300-99a1-fbf6-2c11" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6118-dfd7-4419-1517" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1c22-06a0-4e21-3fa4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1207,10 +1357,31 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="24e8-aefd-d0ba-0bf0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="24e8-aefd-d0ba-0bf0" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Weirdnob Shaman" hidden="false" id="80c1-8244-a9e6-726e" type="selectionEntry" targetId="e824-4e07-12f6-309c">
       <constraints>
@@ -1348,6 +1519,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f491-2ea9-401b-24c2" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1362,6 +1534,23 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="c063-426f-759b-a9fd">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="f7bc-b618-4b5d-2bae" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -1370,6 +1559,9 @@
         <entryLink import="true" name="Paths" hidden="false" id="be1e-15e9-766b-dc50" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cbe0-f96d-bcbd-07df" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="c063-426f-759b-a9fd" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Breaka-boss on Mirebrute Troggoth" hidden="false" id="87a2-f047-5260-86bd" type="selectionEntry" targetId="5616-42d8-b4aa-2e4">
       <constraints>
@@ -1473,12 +1665,32 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c0a3-a66d-3dca-71d5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1fb6-23af-b56c-75ec">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1489,6 +1701,9 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="225e-ba0a-253b-2873" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="1fb6-23af-b56c-75ec" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Daggok&apos;s Stab-ladz" hidden="false" id="7315-9b22-db50-6009" type="selectionEntry" targetId="5462-e249-ce89-3c82">
       <modifiers>
@@ -1513,12 +1728,32 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c0a3-a66d-3dca-71d5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="29ff-dab6-5062-3b17">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1529,6 +1764,9 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dddf-0ba6-d65d-32fe" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="29ff-dab6-5062-3b17" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Gobsprakk, the Mouth of Mork" hidden="false" id="1c90-50f6-9060-1766" type="selectionEntry" targetId="98a8-f41c-6668-fed1">
       <constraints>
@@ -1604,6 +1842,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c0a3-a66d-3dca-71d5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1618,10 +1858,31 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="9550-7464-a8e7-1f3c">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="9550-7464-a8e7-1f3c" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Hobgrot Slittaboss" hidden="false" id="28a3-0867-6fc5-6908" type="selectionEntry" targetId="3bd7-2a9f-9356-b454">
       <entryLinks>
@@ -1733,6 +1994,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c0a3-a66d-3dca-71d5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1767,6 +2030,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f5fc-6d0e-911e-bc33" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c70f-7e24-1ad2-99bf" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1846,6 +2110,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f5fc-6d0e-911e-bc33" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c70f-7e24-1ad2-99bf" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2015,6 +2280,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c0a3-a66d-3dca-71d5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2029,6 +2296,24 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="0564-d7e8-1c67-62a0">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -2037,6 +2322,9 @@
         <entryLink import="true" name="Paths" hidden="false" id="4bff-29de-ff72-a5c8" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e276-575e-1029-789c" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="0564-d7e8-1c67-62a0" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Marshcrawla Sloggoth" hidden="false" id="3a70-e132-f7a5-1644" type="selectionEntry" targetId="c625-96c8-1d47-2e0b">
       <modifiers>
@@ -2055,6 +2343,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f491-2ea9-401b-24c2" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2069,6 +2358,23 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="0" field="8c03-56b8-4043-6c46">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="f7bc-b618-4b5d-2bae" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -2077,6 +2383,9 @@
         <entryLink import="true" name="Paths" hidden="false" id="9ad0-aaa6-9419-954f" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="893d-19fa-c7b0-bddb" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8c03-56b8-4043-6c46" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Murknob with Belcha-banna" hidden="false" id="b229-1871-a6dc-b6d3" type="selectionEntry" targetId="3ce1-f1a5-cbd9-1831">
       <constraints>
@@ -2180,6 +2489,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f5fc-6d0e-911e-bc33" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c70f-7e24-1ad2-99bf" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2351,6 +2661,70 @@
           </localConditionGroups>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Man-skewer Boltboyz" hidden="false" id="377d-72af-cd15-4766" type="selectionEntry" targetId="c8ad-9335-2f70-f86a">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="1d26-d034-95b5-32b9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0978-54b6-aef0-2db1" type="selectionEntryGroup" targetId="4f54-904a-d2f4-5695"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bc23-9895-4b3c-60fc" type="selectionEntryGroup" targetId="2c9a-a9ac-2c3e-6120"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="0a41-7b12-9b95-ded8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f5fc-6d0e-911e-bc33" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e243-9d34-b7c9-77e9" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a3ae-77b0-aef0-8ac1" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b0bc-5896-a1a6-2e3d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c70f-7e24-1ad2-99bf" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f491-2ea9-401b-24c2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="dabc-85c6-3533-3ab4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="771a-98a9-687b-128d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="432a-5f30-11e0-975a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="650e-b6e2-05a2-f073">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="5393-cca4-423e-2ed2" shared="true"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="2" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="75d6-6995-dfcc-3898" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="82f1-fd-499c-a2db" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="650e-b6e2-05a2-f073" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
