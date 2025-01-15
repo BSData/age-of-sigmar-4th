@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="3cd3-38d3-26cb-7a17" name="Skaven - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="3cd3-38d3-26cb-7a17" name="Skaven - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Stormfiends" hidden="false" id="64f5-f28b-5aa9-4e18" publicationId="ff83-b049-91b9-ed05">
       <categoryLinks>
@@ -73,7 +73,7 @@
                   <profiles>
                     <profile name="Grinderfist Tunnellers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="365f-f8ed-3a29-ba64">
                       <characteristics>
-                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
                         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit if it is **in the tunnels below** and includes any models armed with **Grinderfists**.</characteristic>
                         <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up this unit anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -4411,6 +4411,18 @@ Cover**</description>
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="1" field="ea36-23fb-c960-d13e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="e3ad-bf1b-07c8-28c2">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Plaguepack" hidden="false" id="eb1c-e2a1-9750-4912" defaultAmount="1,3">
           <constraints>
@@ -4452,6 +4464,18 @@ Cover**</description>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <modifiers>
+            <modifier type="increment" value="4" field="3eb4-1ce4-ae73-bda3">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="4" field="1b31-2985-569d-f2c4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -5028,4 +5052,324 @@ If the chanting roll was 12+, you can pick 2 targets instead of 1.</characterist
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Paths" id="46d6-d6e9-b870-4dfb" hidden="false" flatten="true" publicationId="8b1b-f2c7-890e-2bbe">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Path of the Master" hidden="true" id="a81f-2b30-a80e-0114" publicationId="ff83-b049-91b9-ed05">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="6aec-6c83-c52b-9464" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Truly Ravenous" hidden="false" id="6191-e358-cb03-8481">
+                  <profiles>
+                    <profile name="Truly Ravenous" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="604b-6642-ec5e-c782">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to charge rolls for this unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9dd-0ee6-e34c-8395"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Touched by Warpstone" hidden="false" id="c853-bbb9-e9f7-2a82">
+                  <profiles>
+                    <profile name="Touched by Warpstone" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="caa5-3bc9-a8f6-5920">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to this unit&apos;s Health characteristic.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="490a-f1d4-1d2d-48c4"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2cf4-815e-9251-d07a"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="9711-0a56-84a9-cb9e" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Subtle Tactician" hidden="false" id="927d-d2b6-da0e-3d3c">
+                  <profiles>
+                    <profile name="Subtle Tactician" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9816-145f-f684-1f81">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, subtract 1 from hit rolls for ranged attacks that target friendly **^^Skaven^^** units wholly within 12&quot; of this unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b609-56a9-eeff-da34"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Vermindoom Vanguard" hidden="false" id="9aa9-8770-6ba9-e063">
+                  <profiles>
+                    <profile name="Vermindoom Vanguard" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0915-5acf-e182-ca79">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s non-**Companion** melee weapons have **Anti-^^Order^^ (+1 Rend)**.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b20-7234-bd0c-018e"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce5c-bb34-d97a-547f"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="2323-1a5b-13e2-df1a" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Poison-Tipped Caltrops" hidden="false" id="744b-c029-d394-0071">
+                  <profiles>
+                    <profile name="Poison-Tipped Caltrops" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a00b-2cea-2926-ecb4">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Skaven^^** units wholly within 13&quot; of this unit to be the targets.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, each time an enemy unit uses a **^^Charge^^** ability and ends the move within 1&quot; of any of the targets, roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll after the *^^Charge^^** ability has been resolved.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9e0-dc8f-d976-bf65"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="The God-King&apos;s Favour" hidden="false" id="e7ad-0107-0979-f465">
+                  <profiles>
+                    <profile name="The God-King&apos;s Favour" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0564-9398-963f-f54f">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)^^**</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c05-c744-afd6-aa1c"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53c6-2950-c408-91ee"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="8bc8-4f47-762e-cdbe" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Tear-tear Them Apart!" hidden="false" id="f8f5-b8e5-9836-abd7">
+                  <profiles>
+                    <profile name="Tear-tear Them Apart!" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8cc8-c093-4b14-e05f">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The unit has **^^Strike-first^^** if it charged in the same turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0cab-63a2-5f75-ca86"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Choking Fumes" hidden="false" id="c21f-0211-d19a-5f84">
+                  <profiles>
+                    <profile name="Choking Fumes" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8885-213d-47d5-6823">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, subtract 2 from the Attacks characteristic of the target&apos;s melee weapons for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6790-6796-fc92-fc09"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1602-efe9-ef04-f889"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="cce6-9e5a-dd33-a755" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Path of the Redeemer" hidden="true" id="7681-465e-1cb2-44e0" publicationId="ff83-b049-91b9-ed05">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="0848-e2aa-d4ba-6342" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Mighty Reclaimers" hidden="false" id="91e0-d14a-effe-6cb4">
+                  <profiles>
+                    <profile name="Mighty Reclaimers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e348-8def-21c5-3123">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls for combat attacks made by this unit that target an enemy unit that is contesting an objective.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bf4-84bd-8011-5832"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Heralds of the Tempest" hidden="false" id="4bad-3da2-41ac-74dd">
+                  <profiles>
+                    <profile name="Heralds of the Tempest" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6b2b-e519-38c6-2905">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit was set up on the battlefield using the &apos;Scions of the Storm&apos; ability this turn, add 1 to charge rolls for this unit for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c0e-910b-eea6-0246"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f052-1034-e0b4-53eb"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="f9ea-da22-0464-fd3c" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Blaze of Glory" hidden="false" id="aa28-390e-7c6d-e285">
+                  <profiles>
+                    <profile name="Blaze of Glory" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="599b-6fb8-807f-df4d">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. For each 4+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="996a-1649-0271-27b5"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Speed of the Storm" hidden="false" id="63a7-1cb1-7e42-1675">
+                  <profiles>
+                    <profile name="Speed of the Storm" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c44d-e6c7-4795-f973">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2&quot; to the Move characteristic of this unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5375-4d63-a283-ca06"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8a4-9e78-c2fc-9376"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="2f7d-f314-44ed-a1d7" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Blessed by Azyr" hidden="false" id="f9c2-ee68-ae17-6ed5">
+                  <profiles>
+                    <profile name="Blessed by Azyr" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="efa3-87ea-79c3-155d">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D3)** this unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c75-fd29-258c-2c6f"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Defensive Mastery" hidden="false" id="1f7f-95c6-e201-3a5c">
+                  <profiles>
+                    <profile name="Defensive Mastery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bb5a-a87a-a492-9e1e">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, this unit has **^^Strike-last^^** and **^^Ward (4+)^^**</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1af0-7503-0c4a-6e30"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50af-337a-f3ae-2a3b"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="e1d3-e7e7-787c-c043" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Indomitable Souls" hidden="false" id="2d6a-1ec2-4c59-6145">
+                  <profiles>
+                    <profile name="Indomitable Souls" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9be8-4c76-2980-1b8e">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to this unit&apos;s Health characteristic.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed2d-0063-9d58-5124"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Lightning-Wreathed Weapons" hidden="false" id="e250-5f1c-60e8-c992">
+                  <profiles>
+                    <profile name="Lightning-Wreathed Weapons" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9571-8520-bd94-d39e">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from the Rend characteristic of melee weapons used for attacks that target this unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22a4-46b4-de0b-f889"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1252-35f2-042b-6715"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="cce6-9e5a-dd33-a755" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>

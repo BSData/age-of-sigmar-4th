@@ -178,42 +178,63 @@
     <selectionEntryGroup name="Spell Lores" id="cb9f-db01-c709-20a1" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Lore of the Deeps" hidden="false" id="26a7-5dac-2100-34ac" defaultAmount="1">
-          <profiles>
-            <profile name="Steed of Tides" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="87cb-8bfd-ab34-9bc3">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible friendly **^^Idoneth Deepkin^^** unit wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Remove the target from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Arcane Corrasion" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="778c-2469-85cc-1214">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Subtract 1 from the Rend characteristic of the target’s melee weapons until the start of your next turn.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Pressure of the Deep" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="d6cf-bfd1-e0eb-86fb">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible enemy unit within 18&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc6a-51fb-8f4e-5c6"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Steed of Tides" hidden="false" id="ab43-ee7c-672f-a052" type="selectionEntry" targetId="64d7-3841-e28f-63ed">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3161-b361-6a7f-47da-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3161-b361-6a7f-47da-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Arcane Corrasion" hidden="false" id="6d8b-665a-c987-1c02" type="selectionEntry" targetId="b097-945b-1126-f189">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6c9-41a9-d5c0-97cd-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6c9-41a9-d5c0-97cd-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Pressure of the Deep" hidden="false" id="39f4-3e1e-e973-b053" type="selectionEntry" targetId="88f7-f0dd-c017-8e5d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e255-7fa0-8d67-52bb-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e255-7fa0-8d67-52bb-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3242-ff25-3979-cfd3" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="6690-4b92-7bcf-ecfd" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="41ae-20b6-8d33-c7c9" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="1e94-0063-f74e-1f84"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="ffa1-0adf-78bb-b563" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="4919-8977-4c50-3eec" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee58-826f-4944-36b7"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -257,6 +278,45 @@
         <categoryLink name="Reference" hidden="false" id="1385-bc19-9347-c11b" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Steed of Tides" hidden="false" id="64d7-3841-e28f-63ed">
+      <profiles>
+        <profile name="Steed of Tides" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="87cb-8bfd-ab34-9bc3">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible friendly **^^Idoneth Deepkin^^** unit wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Remove the target from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pressure of the Deep" hidden="false" id="88f7-f0dd-c017-8e5d">
+      <profiles>
+        <profile name="Pressure of the Deep" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="d6cf-bfd1-e0eb-86fb">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible enemy unit within 18&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Corrasion" hidden="false" id="b097-945b-1126-f189">
+      <profiles>
+        <profile name="Arcane Corrasion" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="778c-2469-85cc-1214">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Idoneth Deepkin Wizard^^** to cast this spell, pick a visible enemy unit within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Subtract 1 from the Rend characteristic of the target’s melee weapons until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Battle Traits: Idoneth Deepkin" hidden="false" id="44d6-5b9f-c32b-630e" type="selectionEntry" targetId="fedc-c96f-444c-4021">
@@ -287,6 +347,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e477-f4be-b5ca-8e35" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5f27-520f-3393-4386" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1ac9-3a3c-ce44-5044" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5c59-9842-a6b7-1b95" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -316,6 +378,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a976-bfa9-f217-bed5" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a213-3dd1-263f-20e9" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="194f-8231-0e95-81b7" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="389a-98c4-9018-390e" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -371,6 +435,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8dad-1244-9d10-8d" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="afe6-dab4-d354-9595" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="18ed-84c3-2f6d-5491" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2125-afd1-5b6d-0e0c" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="350"/>
@@ -399,6 +465,9 @@
       <costs>
         <cost name="pts" typeId="points" value="270"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f516-e00f-3e05-9456" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Isharann Soulrender" hidden="false" id="d825-f446-1087-460f" type="selectionEntry" targetId="b597-c539-60f-da1f">
       <constraints>
@@ -431,6 +500,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="744b-937a-ec96-1f88" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="5538-64c5-ac4b-1e0f" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5dd7-c116-e8b7-b215" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a8af-3634-cf33-317a" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
@@ -486,6 +557,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="3362-4dc-2edb-ddb1" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="197c-17-7a0c-3df4" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="54fa-eeec-9d68-dbf2" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="87a4-4aaa-0942-497a" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="320"/>
@@ -554,6 +627,9 @@
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="db67-5545-17b7-6a83" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Isharann Soulscryer" hidden="false" id="e9e0-da5d-b17f-8c75" type="selectionEntry" targetId="1296-cd3a-b6fc-f28f">
       <constraints>
@@ -586,6 +662,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="cef6-402f-4480-7dfe" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e5b1-d9b7-eccb-c8b" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="af9b-fc01-2a71-2812" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ecdf-2a30-4ad3-01be" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -641,6 +719,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="47c7-3879-7e1a-509c" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4fd4-b3f0-301b-5254" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="315d-6850-950e-7317" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7be7-411e-b401-42c6" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -653,6 +733,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ce09-d10e-c6bd-3cdc" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7c39-c7e1-7f20-ba3a" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f6dc-03f7-ce95-6926" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="84d7-81b4-9d7b-fc03" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -665,6 +747,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6c44-d390-35da-a7e" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="bc2-9149-6cc0-6bd4" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="fd72-b158-1c4a-8d06" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3897-af50-066f-fe76" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -677,6 +761,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="47da-ab00-cad8-cd77" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="73b-150e-a6f0-5631" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ebbc-7e41-67e2-08ea" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f673-2fa4-892d-9706" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="350"/>
@@ -689,6 +775,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="e9e-320b-b23f-d131" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="918d-e07b-cf55-2f3" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4539-9f1e-9bcd-2caf" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="783b-ef33-bb50-0a9c" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="320"/>
@@ -701,6 +789,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8618-72db-7aab-318e" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9eb3-5182-554-53b" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3487-3594-4832-d513" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="82c9-35d7-ae26-ef07" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
@@ -713,6 +803,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="c99a-b620-b649-67ea" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="803f-473f-c1ed-ee4f" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a312-f9ac-b62d-bb85" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f91c-83b5-8533-6fe3" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -725,6 +817,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="3db6-73f2-b9ae-2500" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3fe0-b06a-c139-4a8c" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c098-1190-e149-b38d" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6fee-35fe-2132-cf90" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -737,6 +831,9 @@
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="da2e-8a0e-e17f-7c3d" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Volturnos, High King of the Deep" hidden="false" id="278b-c82c-70aa-ccc7" type="selectionEntry" targetId="301e-efbe-65c3-bf78">
       <categoryLinks>
@@ -745,6 +842,9 @@
       <costs>
         <cost name="pts" typeId="points" value="270"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bc42-5c0c-7b18-7f2b" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Akhelian Allopex" hidden="false" id="f6d5-b588-907e-a51b" type="selectionEntry" targetId="91f6-6340-d95c-b89d">
       <modifiers>
@@ -777,6 +877,10 @@
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="810e-81be-daa2-a9e6" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0fce-5661-17a9-62f2" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Akhelian Ishlaen Guard" hidden="false" id="b8aa-232f-d530-85a6" type="selectionEntry" targetId="4a97-b100-c4de-f706">
       <modifiers>
@@ -808,6 +912,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="80c1-4b3d-d69e-dfb9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="afc9-7e0b-bf94-c9fc" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="de61-8225-b3ea-d095" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -844,6 +950,10 @@
       <costs>
         <cost name="pts" typeId="points" value="480"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="b4ef-f5d4-04d2-046e" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a90f-ee4a-9a4b-a234" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Akhelian Morrsarr Guard" hidden="false" id="e35d-db1a-234e-85e" type="selectionEntry" targetId="f3a8-6043-25e2-51ea">
       <modifiers>
@@ -875,6 +985,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="c57b-a697-4a41-b646" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e47d-5520-82fa-ed45" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6f87-6b54-fa24-0ad2" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -914,6 +1026,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="5e7b-4539-b4b6-1a1" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b26a-bbf8-e0e8-595f" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="295f-e55b-d81c-a53c" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -953,6 +1067,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="ed6b-2a39-28ff-ae18" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="424d-450d-90a9-fc05" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f021-c92d-044b-39b1" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -994,6 +1110,9 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d67d-29ab-dbe1-55a8" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Elathain&apos;s Soulraid" hidden="false" id="b20b-d074-d63e-1f54" type="selectionEntry" targetId="460b-a097-4b5f-3376">
       <modifiers>
@@ -1030,6 +1149,9 @@
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="88ab-e6d7-0a7a-8e76" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>
@@ -1044,7 +1166,7 @@
         <categoryLink name="Army Composition" hidden="false" id="a290-c8cb-3a40-7d5c" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="e4c-4af1-3d18-34c5" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="e4c-4af1-3d18-34c5" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="ab28-a1b5-16da-7583" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
       </entryLinks>
@@ -1055,8 +1177,15 @@
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="bb5f-6258-4096-a6ca" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="false" id="dd2a-9dcb-6ca-87e4" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="dd2a-9dcb-6ca-87e4" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="87bf-c908-2f89-3b86" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
@@ -1067,10 +1196,66 @@
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="b9dc-e715-bab3-a633" type="selectionEntryGroup" targetId="cb9f-db01-c709-20a1" flatten="true" collective="false"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="2f56-663a-50ea-c971" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="d607-32cc-c8c2-d62e"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ab17-eb03-1d22-a05e"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="2373-36e7-c77c-0f38" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="6c7a-4e01-2e19-589d" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Lore of the Deeps" id="3aca-d1b4-9ee0-b7d0" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Arcane Corrasion" hidden="false" id="12e4-dc5b-874a-9d37" type="selectionEntry" targetId="b097-945b-1126-f189">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e49-f550-5257-9eed"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Pressure of the Deep" hidden="false" id="ac1a-3f88-ccb1-293b" type="selectionEntry" targetId="88f7-f0dd-c017-8e5d">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8afe-1b40-808b-9692"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Steed of Tides" hidden="false" id="cafa-45ab-029e-1c31" type="selectionEntry" targetId="64d7-3841-e28f-63ed">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b90-d83c-5900-d22f"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="a7f2-484f-4525-5892"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="2e8c-5a7f-661b-5964" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="5dc0-daf0-5dc9-d11e" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Idoneth Deepkin - Library" id="322c-4ee1-2b05-7370" targetId="d6ed-ac84-d78f-73e6"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="4d1b-56be-0d42-57ab" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Akhelian Raidmaster" id="bad0-5cfa-f355-402d" hidden="false"/>

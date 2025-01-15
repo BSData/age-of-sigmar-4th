@@ -46,6 +46,32 @@
         <categoryLink name="Reference" hidden="false" id="17ce-5faa-4b5b-ae45" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dark Cantrip" hidden="false" id="4f3d-9997-2841-9cef">
+      <profiles>
+        <profile name="Dark Cantrip" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="a9c3-a609-d3a0-cf32">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Legion of the First Prince Wizard^^** to cast this spell, pick up to 3 visible enemy units within 18&quot; of them to be the targets, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 1 mortal damage on each target.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Shroud in Darkness" hidden="false" id="1f9f-df92-739a-600f">
+      <profiles>
+        <profile name="Shroud in Darkness" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6ee0-26b7-5580-9f17">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Legion of the First Prince Wizard^^** to cast this spell, pick a visible friendly **^^Legion of the First Prince^^** unit that is not in combat and is wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target can move D6&quot;. It cannot end that move in combat. In addition, until the start of your next turn, the target is not visible to enemy units while they are more than 12&quot; away.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="cf6a-7f63-fdb5-2537" hidden="false">
@@ -139,38 +165,63 @@
     <selectionEntryGroup name="Spell Lores" id="a97f-4158-de6d-1490" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Spell Lore: Legion of the First Prince" hidden="false" id="7292-8494-46c0-5586" defaultAmount="1" publicationId="6357-5d77-a2b2-f86b">
-          <profiles>
-            <profile name="Dark Cantrip" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="a9c3-a609-d3a0-cf32">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Legion of the First Prince Wizard^^** to cast this spell, pick up to 3 visible enemy units within 18&quot; of them to be the targets, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 1 mortal damage on each target.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Shroud in Darkness" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6ee0-26b7-5580-9f17">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Legion of the First Prince Wizard^^** to cast this spell, pick a visible friendly **^^Legion of the First Prince^^** unit that is not in combat and is wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target can move D6&quot;. It cannot end that move in combat. In addition, until the start of your next turn, the target is not visible to enemy units while they are more than 12&quot; away.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d52f-6889-8120-52cf"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Shroud in Darkness" hidden="false" id="2fea-16cc-5408-7597" type="selectionEntry" targetId="1f9f-df92-739a-600f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec3e-3e40-4472-f3e9-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec3e-3e40-4472-f3e9-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Dark Cantrip" hidden="false" id="200e-1146-3ec2-5108" type="selectionEntry" targetId="4f3d-9997-2841-9cef">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d7b1-6533-dae5-edc0-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d7b1-6533-dae5-edc0-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="848a-3cae-76a3-6404" includeChildSelections="true"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="30aa-ebc9-444f-7be3" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="cdd3-fc6c-0a78-6473" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="a383-0020-1ee0-94aa"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="2156-0cb8-ed35-a44f" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="81d8-faa4-7b86-a1aa" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f89c-a13a-e9a5-76ee"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Slaves to Darkness - Library" id="994c-7c88-8d2b-7543" targetId="c580-f07a-aa35-f79f"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="7e32-083f-e44c-6346" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Ruinous Champion" id="b5ef-7da9-9aff-13d5" hidden="false"/>
@@ -194,6 +245,9 @@
       <costs>
         <cost name="pts" typeId="points" value="440"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7dca-5eb6-da4e-2b05" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Be&apos;lakor, the Dark Master" hidden="false" id="769a-f9c8-7ef6-cec9" type="selectionEntry" targetId="672f-33c8-1e61-cead">
       <categoryLinks>
@@ -202,6 +256,9 @@
       <costs>
         <cost name="pts" typeId="points" value="440"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b83c-f23c-bad3-f2f0" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Daemon Prince" hidden="false" id="51d1-471a-a8b0-b88d" type="selectionEntry" targetId="22ef-99c8-eb17-973f">
       <constraints>
@@ -221,6 +278,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4fa9-fa14-e3bc-cfa2" type="selectionEntryGroup" targetId="9105-9b49-ed6e-25fc"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="0b06-08e7-2c07-34cd" type="selectionEntryGroup" targetId="cf6a-7f63-fdb5-2537"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0d6a-49ef-1ead-1a53" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="bb0d-ead3-f577-f379" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
@@ -233,6 +292,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a003-bee2-b653-125b" type="selectionEntryGroup" targetId="9105-9b49-ed6e-25fc"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="23de-c660-ce0a-36a3" type="selectionEntryGroup" targetId="cf6a-7f63-fdb5-2537"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7d0b-37f5-0b2c-0f59" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="15cf-1b89-e228-b0aa" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
@@ -245,6 +306,9 @@
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7c31-6108-e548-9ba1" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Eternus, Blade of the First Prince" hidden="false" id="e9d1-0a57-06cd-3479" type="selectionEntry" targetId="de49-6e72-d443-42c0">
       <constraints>
@@ -271,10 +335,15 @@
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="807e-5dd9-806c-9595" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Varanguard" hidden="false" id="f320-b52e-71b1-be16" type="selectionEntry" targetId="3f86-7961-558c-50aa">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="c003-1aa0-3d6d-c5ea" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="edd0-bff7-2f1f-9b06" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f8aa-687b-5cd2-97d3" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -324,6 +393,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e665-7de4-d0cd-dd20" type="selectionEntryGroup" targetId="9105-9b49-ed6e-25fc"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2966-2a9f-13c1-7f72" type="selectionEntryGroup" targetId="cf6a-7f63-fdb5-2537"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0a2b-e0f0-4990-ddf2" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="77da-09db-8ac9-95ff" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -336,6 +407,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="515f-39b1-7d4a-311c" type="selectionEntryGroup" targetId="9105-9b49-ed6e-25fc"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="87f2-da7c-fdb1-086b" type="selectionEntryGroup" targetId="cf6a-7f63-fdb5-2537"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="20b1-cdb4-f2d6-2a82" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e25a-5935-2a90-735b" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -372,10 +445,16 @@
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4216-8375-e30e-2289" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6438-8ef8-3488-ab96" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Chaos Furies" hidden="false" id="c784-8785-cc83-c559" type="selectionEntry" targetId="cdb1-4aba-7c64-aa4d">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="ad5c-83a1-740b-c803" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0121-fcf8-7240-3acb" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a716-c725-e5f0-b0cc" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -413,6 +492,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="24cb-08ff-a3fe-b2e8" type="selectionEntryGroup" targetId="9105-9b49-ed6e-25fc"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f836-7eb6-edfc-e6ee" type="selectionEntryGroup" targetId="cf6a-7f63-fdb5-2537"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8323-9e65-77f7-0721" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="bc24-a0be-9490-6183" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -472,6 +553,8 @@
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="cc61-9f2b-f7c7-6541" type="selectionEntryGroup" targetId="cf6a-7f63-fdb5-2537"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3b51-22b4-d3c8-ed11" type="selectionEntryGroup" targetId="9105-9b49-ed6e-25fc"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c644-b0ff-0ec7-560b" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4a48-144c-08dc-ccc8" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -486,6 +569,8 @@
     <entryLink import="true" name="Legion of the First Prince Bloodcrushers" hidden="false" id="7bec-b2a5-4e49-8b27" type="selectionEntry" targetId="4aae-c0cb-88a1-93fc">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="b113-df29-182e-a28d" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bcdf-c60e-0f4a-3f61" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a091-ff14-e0df-e9c6" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -544,6 +629,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="ce93-2e63-7d50-40bb" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5bca-b1f2-03c6-1dc3" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="76bd-d24e-c468-8339" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
@@ -552,6 +639,8 @@
     <entryLink import="true" name="Legion of the First Prince Bloodletters" hidden="false" id="06b2-7b57-cf3c-4963" type="selectionEntry" targetId="cc6a-0a94-64f6-2169">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="5c39-46d1-4a1e-8b12" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1bbc-b10d-14bd-c261" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c3bd-0e72-6f2f-dcac" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -585,6 +674,8 @@
     <entryLink import="true" name="Legion of the First Prince Flamers of Tzeentch" hidden="false" id="23dc-d899-035c-03c7" type="selectionEntry" targetId="0ba0-f177-4fe6-d601">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="731c-4b05-f346-41e7" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cda8-00a2-2295-7726" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="51b8-8727-88eb-b00d" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -618,6 +709,8 @@
     <entryLink import="true" name="Legion of the First Prince Fiends" hidden="false" id="f957-b8a0-25a7-62ff" type="selectionEntry" targetId="0bd0-5c13-810c-ede2">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="7acf-ef03-ceeb-1961" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="75e4-024d-1dc0-a44e" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9659-b4af-e2b8-302b" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -651,6 +744,8 @@
     <entryLink import="true" name="Legion of the First Prince Hellflayer" hidden="false" id="ebc2-53cf-f679-0b1a" type="selectionEntry" targetId="4d78-5d2c-af0d-c19a">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="4491-9c92-5a35-a81a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e40a-add0-aece-1905" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5e39-18b8-2b6e-8629" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -684,6 +779,8 @@
     <entryLink import="true" name="Legion of the First Prince Plaguebearers" hidden="false" id="bd85-823c-f1e7-31b5" type="selectionEntry" targetId="845c-9912-3977-07f2">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="1dc8-ce09-6b0b-7a8b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1d9e-d49e-b7c4-efde" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="dc82-2c44-30cf-d7f4" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -717,6 +814,8 @@
     <entryLink import="true" name="Legion of the First Prince Screamers of Tzeentch" hidden="false" id="8adf-a968-8434-4f58" type="selectionEntry" targetId="fe0e-9e59-8005-64be">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="5e87-fac3-bce8-ae10" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5eb9-69e3-1116-5c8b" type="selectionEntryGroup" targetId="30aa-ebc9-444f-7be3"/>
+        <entryLink import="true" name="Paths" hidden="false" id="4054-cb2a-77d7-7cdc" type="selectionEntryGroup" targetId="2156-0cb8-ed35-a44f"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -749,7 +848,7 @@
     </entryLink>
   </entryLinks>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="08d5-efe0-5749-8d00" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="08d5-efe0-5749-8d00" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="7219-575a-94d6-5e96" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="457c-286f-0313-5a0e" type="selectionEntryGroup" targetId="c4fe-c2b0-b39b-b6c3" flatten="true"/>
@@ -761,8 +860,15 @@
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="86ed-5065-7b36-438a" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="false" id="ccf8-2603-b8c7-a087" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="ccf8-2603-b8c7-a087" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="dac5-e545-e675-99b1" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
@@ -773,6 +879,56 @@
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="a251-920d-2333-c813" type="selectionEntryGroup" targetId="a97f-4158-de6d-1490" flatten="true" collective="false"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="35fc-47f6-e96a-4f1c" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="b53c-7d29-1ea6-b76f"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4a94-4b3f-657c-898c"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="ddcb-f237-de7a-f9dc" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="9fee-788a-f64c-d6e6" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Spell Lore: Legion of the First Prince" id="5658-2295-3e49-493d" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Dark Cantrip" hidden="false" id="0a5c-a395-ec06-d7fb" type="selectionEntry" targetId="4f3d-9997-2841-9cef">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6359-d0ab-fb38-5fc0"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Shroud in Darkness" hidden="false" id="ddf2-c849-4ec1-0286" type="selectionEntry" targetId="1f9f-df92-739a-600f">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61b9-b7be-3b8c-ee04"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="9a18-3dd0-6f01-648f"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="5154-2b1e-0998-8164" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="747b-6e62-4278-c4e1" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

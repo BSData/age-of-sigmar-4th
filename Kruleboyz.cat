@@ -1,41 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8aef-b85d-b63a-ef05" name="Kruleboyz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8aef-b85d-b63a-ef05" name="Kruleboyz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="6e0f-e98f-84b6-8188" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Lore of the Swamp" hidden="false" id="5966-7fef-4c95-1e1c" defaultAmount="1">
-          <profiles>
-            <profile name="Da Black Pit" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ac40-170e-df46-82eb">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible enemy unit within 18&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Choking Mist" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="1abd-510b-e57-abb9">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible enemy unit wholly within 18&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Subtract 1 from the Attacks characteristic of the target’s weapons until the start of your next turn.</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Mork&apos;s Kunnin&apos;" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="4541-8384-c6b0-23a5">
-              <characteristics>
-                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible friendly **^^Kruleboyz^^** unit wholly within 12&quot; of them, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, add 1 to save rolls for attacks that target that friendly unit</characteristic>
-                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b16b-5da5-64e4-49ba"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Mork&apos;s Kunnin&apos;" hidden="false" id="9e53-2737-d1e9-a273" type="selectionEntry" targetId="c525-1031-3525-b76e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e843-0045-887b-f328-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e843-0045-887b-f328-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Choking Mist" hidden="false" id="52cf-c82a-24da-7edc" type="selectionEntry" targetId="4df5-e1e9-de24-704a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4da-62dc-15d7-9b8e-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4da-62dc-15d7-9b8e-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Da Black Pit" hidden="false" id="1ced-992f-8c22-d32d" type="selectionEntry" targetId="f62e-e3d3-de04-5734">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9022-654f-de84-5320-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9022-654f-de84-5320-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -221,6 +212,95 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c181-ec90-bc42-ba08" includeChildSelections="true"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="b922-1cb1-893c-dec2" hidden="true" collapsible="false">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="578b-271a-9e47-0f73" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="8912-cb4e-1dfb-5157"/>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Manifestation Lores" id="80c8-baca-93b8-bacc" hidden="false" flatten="true">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Manifestations of Gorkamorka" hidden="false" id="a8da-8f87-23eb-35bb">
+          <profiles>
+            <profile name="Summon Morkspit Marsh" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="0b0b-c191-9cb2-6bbe" publicationId="8b1b-f2c7-890e-2bbe">
+              <characteristics>
+                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Morkspit Marsh** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Morkspit Marsh** wholly within 18&quot; of the caster and visible to them.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Summon Foot of Gork" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="47e8-a2b7-7c09-dd3f" publicationId="8b1b-f2c7-890e-2bbe">
+              <characteristics>
+                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Foot of Gork** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Foot of Gork** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units. A **Foot of Gork** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Summon Gork-Roara" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="0e8f-b4f9-3935-1b8c" publicationId="bf63-6cf5-2975-bafa">
+              <characteristics>
+                <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+                <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+                <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Gork-Roara** on the battlefield, pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Gork-Roara** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f975-5f47-feae-f888"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Morkspit Marsh" hidden="false" id="2909-da2b-72eb-f2cb" type="selectionEntry" targetId="9500-6054-f472-f184">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c5b-dcd3-d548-154a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9fd-2233-c63c-bf77"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Foot of Gork" hidden="false" id="d828-15d2-b892-b791" type="selectionEntry" targetId="6cc6-3227-bf8d-1a1d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="96ab-0ed2-3e09-2b83"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2ff-1140-5bfb-b72f"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Gork-Roara" hidden="false" id="fbd7-e197-3f63-be5d" type="selectionEntry" targetId="4362-f538-078e-fb12">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6a5-1b24-5687-dfb8"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6af-b1de-8933-72d6"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="f73e-97bd-1805-3b18" hidden="true">
+      <entryLinks>
+        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="33db-e641-11c0-5b20" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c013-71e5-02ad-9d39" type="selectionEntryGroup" targetId="bc48-e6c9-dc40-3a92"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37f0-022a-cc73-5213"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Kruleboyz" hidden="false" id="7a79-d86e-48ad-a3ce">
@@ -255,7 +335,7 @@
         </profile>
         <profile name="Sneaky Sneakin&apos;" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5ffc-eff8-8d98-90bc">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Movement Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Kruleboyz Infantry^^** unit that has 10 or fewer models and is not in combat to be the target, then make a dirty trick roll.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again wholly within 3&quot; of a terrain feature and more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Dirty Trick^^**</characteristic>
@@ -276,6 +356,45 @@
         <categoryLink name="Reference" hidden="false" id="7f53-58b7-a068-1139" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Choking Mist" hidden="false" id="4df5-e1e9-de24-704a">
+      <profiles>
+        <profile name="Choking Mist" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="1abd-510b-e57-abb9">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible enemy unit wholly within 12&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Subtract 1 from the Attacks characteristic of the target’s weapons until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Da Black Pit" hidden="false" id="f62e-e3d3-de04-5734">
+      <profiles>
+        <profile name="Da Black Pit" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ac40-170e-df46-82eb">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible enemy unit within 18&quot; of them to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mork&apos;s Kunnin&apos;" hidden="false" id="c525-1031-3525-b76e">
+      <profiles>
+        <profile name="Mork&apos;s Kunnin&apos;" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="4541-8384-c6b0-23a5">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a friendly **^^Kruleboyz Wizard^^** to cast this spell, pick a visible friendly **^^Kruleboyz^^** unit wholly within 12&quot; of them, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, add 1 to save rolls for attacks that target that friendly unit</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Breaka-boss on Mirebrute Troggoth" hidden="false" id="4e59-6545-e5d2-6aa3" type="selectionEntry" targetId="5616-42d8-b4aa-2e4">
@@ -293,6 +412,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2a45-46b2-62f9-63cc" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -303,6 +423,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="bea3-da7c-ccd8-3bea" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="91a4-98d6-5832-1895" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="17c2-f05c-1095-4143" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d785-de05-6da3-9a5e" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -341,6 +463,9 @@
       <costs>
         <cost name="pts" typeId="points" value="330"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="19d4-59c9-b06c-e38e" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Killaboss on Corpse-rippa Vulcha" hidden="false" id="5bab-8a3a-247c-b4fb" type="selectionEntry" targetId="9963-d56-fbf8-b8a8">
       <constraints>
@@ -357,6 +482,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2a45-46b2-62f9-63cc" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -367,6 +493,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6f3b-dce2-7596-a285" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f0cd-eed9-e9d4-4a94" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6123-6a7e-8f67-8deb" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3fba-cfdd-2105-a27a" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
@@ -402,6 +530,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2a45-46b2-62f9-63cc" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -412,9 +541,11 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="88bf-9b54-dc73-bc73" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2e00-b95c-d6e-379b" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="83a3-2e9b-376a-b449" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5faa-844c-1874-3296" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -450,11 +581,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="3f75-d4c7-9594-e4dc" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="db61-2645-ed6a-2202" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="ada6-db1-6998-c930" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3991-707f-d46b-935c" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -465,6 +593,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1e8e-c8c8-1a11-f2f6" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6333-d14c-9e7a-d2bf" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="cf8f-6184-5413-5ac1" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f7ed-8bf3-faae-7a5d" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -482,10 +612,10 @@
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="2323-9a6b-5a40-92ba" type="selectionEntry" targetId="c934-96ac-bf0f-643b">
+    <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="2323-9a6b-5a40-92ba" type="selectionEntry" targetId="2a45-46b2-62f9-63cc">
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="f5c3-8702-daa5-d140"/>
       </constraints>
@@ -503,6 +633,9 @@
       <costs>
         <cost name="pts" typeId="points" value="580"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="832b-56f1-eb6f-3584" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Murknob with Belcha-banna" hidden="false" id="9d71-18ac-76-a773" type="selectionEntry" targetId="3ce1-f1a5-cbd9-1831">
       <constraints>
@@ -522,11 +655,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="3f75-d4c7-9594-e4dc" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="db61-2645-ed6a-2202" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="ada6-db1-6998-c930" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3991-707f-d46b-935c" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -537,9 +667,11 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="2818-cffe-15b8-51fb" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="371b-5f13-9bd4-c204" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="aba4-970c-04c1-3ab7" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="81dd-49e1-a5e3-8cc8" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -572,6 +704,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2a45-46b2-62f9-63cc" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -582,9 +715,11 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d311-33be-36be-f32f" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b1b3-4054-4c3f-f0c1" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e5ad-a7df-9722-5c74" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="874a-58a5-7aed-847d" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -620,6 +755,9 @@
       <costs>
         <cost name="pts" typeId="points" value="220"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a01e-208b-f6e7-b9b2" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Swampcalla Shaman with Pot-grot" hidden="false" id="a983-a3c9-46a3-fcc9" type="selectionEntry" targetId="5f19-cef-ee2-f796">
       <constraints>
@@ -639,6 +777,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d53d-2916-1d42-e26" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="fb5c-3664-e8fb-a6a6" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="830a-7db7-9b79-d23b" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0060-f9a5-3db1-d864" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -651,6 +791,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9821-d22c-78e9-c66" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="2d19-dea7-f5b6-831" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="af89-0b9f-954c-d382" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="65d1-cfdb-ad06-fd27" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -663,6 +805,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="5c97-3f3a-dd0a-e7fa" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9c87-f412-d557-4415" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e002-6f1d-c5b6-5211" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="adf9-f0e5-bd99-ce92" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -675,6 +819,9 @@
       <costs>
         <cost name="pts" typeId="points" value="330"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0b74-113f-c390-854f" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Killaboss on Corpse-rippa Vulcha" hidden="false" id="3f75-d4c7-9594-e4dc" type="selectionEntry" targetId="9963-d56-fbf8-b8a8">
       <categoryLinks>
@@ -683,6 +830,8 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="df3f-95c5-f0b9-1892" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="409f-e4de-d948-16c0" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="239d-7d9c-7862-c6ed" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bb01-10f1-992c-0f66" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
@@ -695,9 +844,11 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="2def-13e9-f687-7839" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b31a-b007-6724-c5f7" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2b85-bf85-d842-18f3" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b5fb-8093-2d01-6052" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Killaboss with Stab-grot" hidden="false" id="ada6-db1-6998-c930" type="selectionEntry" targetId="17d5-b7e8-6b70-9260">
@@ -707,18 +858,23 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="c25b-3f24-c599-b915" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="f5d9-80b9-bb37-ee16" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ebdb-512f-f485-fdd3" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fc4a-63ec-dfba-75f7" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="8e30-54e4-64cf-39ba" type="selectionEntry" targetId="c934-96ac-bf0f-643b">
+    <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="8e30-54e4-64cf-39ba" type="selectionEntry" targetId="2a45-46b2-62f9-63cc">
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="fb10-fcf7-222d-39da" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="580"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8586-d2b4-2730-c30b" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Murknob with Belcha-banna" hidden="false" id="3991-707f-d46b-935c" type="selectionEntry" targetId="3ce1-f1a5-cbd9-1831">
       <categoryLinks>
@@ -727,9 +883,11 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cba3-55c9-bb4e-c5de" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="923f-6c41-f68-1f26" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a2dc-59f8-3fe9-60ee" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e756-213a-a12e-c434" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Snatchaboss on Sludgeraker Beast" hidden="false" id="daa4-5b7b-3265-e72e" type="selectionEntry" targetId="60a9-d871-f253-146c">
@@ -739,9 +897,11 @@
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="c0d4-1712-b2ca-aab1" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9086-a983-e83c-af65" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c106-0d98-cb6f-1caa" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a179-b668-f2fe-7e76" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Swampboss Skumdrekk" hidden="false" id="7a6e-dc55-4eae-4d5e" type="selectionEntry" targetId="57d2-f5d7-ec57-5d4a">
@@ -751,6 +911,9 @@
       <costs>
         <cost name="pts" typeId="points" value="220"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e4d6-e924-0524-c8ba" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Kruleboyz" hidden="false" id="4875-1a37-c671-e67b" type="selectionEntry" targetId="7a79-d86e-48ad-a3ce">
       <constraints>
@@ -774,6 +937,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="3991-707f-d46b-935c" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -786,16 +950,30 @@
         <modifier type="multiply" value="2" field="points">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="6b29-8a4d-7f6a-07ae">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="9ea8-f8b4-195f-e797" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4851-68e2-12b2-a6e4" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="6b29-8a4d-7f6a-07ae" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Gutrippaz" hidden="false" id="b73c-9007-dfd7-f6c4" type="selectionEntry" targetId="23f9-c4ec-3e40-1a31">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="75b9-bd8e-caaf-f0f7" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="39c1-a9dd-25db-607a" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="39a3-1f03-7335-903a" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -814,6 +992,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3bd7-2a9f-9356-b454" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -828,14 +1007,24 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="1d10-c616-0347-09c5">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="1d10-c616-0347-09c5" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Hobgrot Slittaz" hidden="false" id="8162-5e37-a0e3-adcd" type="selectionEntry" targetId="82f1-fd-499c-a2db">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="596c-910b-60ba-20a3" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6e79-becf-6c17-4924" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b8c4-438a-36de-9f78" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -854,6 +1043,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3bd7-2a9f-9356-b454" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -909,10 +1099,16 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="fc9e-c66e-7a46-b386" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8738-c1cc-4d5e-5a1f" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Man-skewer Boltboyz" hidden="false" id="f9a-7715-eb57-3e9f" type="selectionEntry" targetId="c8ad-9335-2f70-f86a">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="9b69-145a-5608-dd11" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6f91-f496-54d6-42ca" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6551-c0fc-b80f-8be4" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -931,6 +1127,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3bd7-2a9f-9356-b454" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -945,10 +1142,18 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="d17d-6d1d-3053-0569">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="d17d-6d1d-3053-0569" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Marshcrawla Sloggoth" hidden="false" id="12e5-5a08-d60c-6e05" type="selectionEntry" targetId="c625-96c8-1d47-2e0b">
       <modifiers>
@@ -967,6 +1172,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="3991-707f-d46b-935c" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3bd7-2a9f-9356-b454" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -981,10 +1187,22 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="ef5b-a332-f270-388e">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="7cae-b3ec-5ca1-1176" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7315-9dd3-bd4f-36c9" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="ef5b-a332-f270-388e" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Da Kunnin&apos; Krew" hidden="false" id="9b83-0242-f76e-2893" type="selectionEntry" targetId="7d2e-ce9a-1dd6-1aad">
       <modifiers>
@@ -1009,6 +1227,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3bd7-2a9f-9356-b454" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1018,10 +1237,21 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="b907-9cb3-fa5a-76f0">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="158b-6c8e-39f6-0be3" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b907-9cb3-fa5a-76f0" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Daggok&apos;s Stab-ladz" hidden="false" id="4e65-024b-67f3-8d33" type="selectionEntry" targetId="5462-e249-ce89-3c82">
       <modifiers>
@@ -1046,6 +1276,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-6dfa-8c4b-cd9c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3bd7-2a9f-9356-b454" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1055,14 +1286,93 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="63df-154d-d2d5-47ce">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="e2c0-7584-0844-1e1c" shared="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ad9c-515c-7a7a-22f6" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="63df-154d-d2d5-47ce" includeChildSelections="true"/>
+      </constraints>
+    </entryLink>
+    <entryLink import="true" name="Scaregob Tower" hidden="false" id="96ca-879a-c202-226c" type="selectionEntry" targetId="8346-0ba5-9740-dc49"/>
+    <entryLink import="true" name="Hobgrot Slittaboss" hidden="false" id="ba7c-cc17-0d98-98d6" type="selectionEntry" targetId="3bd7-2a9f-9356-b454">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="5715-5555-be0f-620d" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="5013-ba8e-584f-b60b" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6352-93fa-60fb-e665" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="384d-7f2a-b817-98e3" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="29ec-194-ff0b-a96f" field="category"/>
+            <modifier type="set" value="0" field="ed37-9ae6-04ae-87d2">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="29ec-194-ff0b-a96f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="abea-706a-64f7-a082" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9a3e-420f-c187-70c8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3f75-d4c7-9594-e4dc" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="db61-2645-ed6a-2202" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="daa4-5b7b-3265-e72e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7a6e-dc55-4eae-4d5e" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="ed37-9ae6-04ae-87d2"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Hobgrot Slittaboss" hidden="false" id="e2c0-7584-0844-1e1c" type="selectionEntry" targetId="3bd7-2a9f-9356-b454">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="0f95-17b7-2b14-5f41" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="aa85-1e29-8919-5c44" type="selectionEntryGroup" targetId="996f-c015-737f-69a2"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="cefc-d6e5-16d4-5907" type="selectionEntryGroup" targetId="ba35-aab2-754e-1a4e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1eca-5749-ac67-bfc8" type="selectionEntryGroup" targetId="f73e-97bd-1805-3b18"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0174-3849-2787-a456" type="selectionEntryGroup" targetId="b922-1cb1-893c-dec2"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Kruleboyz - Library" id="a9e8-b9c8-5b5e-f027" targetId="1a85-1d4f-41c-2e19"/>
+    <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="6da2-3038-2b16-ca42" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Mob Wrangler" id="29ec-194-ff0b-a96f" hidden="false"/>
@@ -1080,7 +1390,7 @@
         <categoryLink name="Army Composition" hidden="false" id="a8f4-1b2-c7da-2e5f" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="false" id="8af9-2436-772f-22b9" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="8af9-2436-772f-22b9" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="6e6c-666-f5e2-d015" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
       </entryLinks>
@@ -1091,8 +1401,15 @@
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="1167-d1e9-5457-9e7e" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="false" id="b7d3-c523-1d1a-e601" defaultAmount="1">
+    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="b7d3-c523-1d1a-e601" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="8ee2-e6e7-38cb-c75f" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
@@ -1103,6 +1420,61 @@
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="a8b6-8aa0-952-d5ce" type="selectionEntryGroup" targetId="6e0f-e98f-84b6-8188" flatten="true" collective="false"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Arcane Tome" hidden="true" id="bb84-9f54-89aa-e6db" defaultAmount="1">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="57cf-8931-a460-91c0"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="06b1-7449-27f9-b1c8"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="c3d8-648f-3724-56ce" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="" id="75ca-e357-9f21-7ca7" hidden="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Lore of the Swamp" id="d928-a139-8e27-62ba" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Choking Mist" hidden="false" id="ca0b-5db8-6ece-f20f" type="selectionEntry" targetId="4df5-e1e9-de24-704a">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="61f1-b488-6257-82da"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Da Black Pit" hidden="false" id="effa-2795-fbed-cd0a" type="selectionEntry" targetId="f62e-e3d3-de04-5734">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ac3-0e90-1c39-79e2"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Mork&apos;s Kunnin&apos;" hidden="false" id="412b-2a8e-0874-558a" type="selectionEntry" targetId="c525-1031-3525-b76e">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dfbe-e98a-f870-e380"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="199c-b239-96e9-c035"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Spell Lores" hidden="false" id="7c55-0fa6-9742-e627" type="selectionEntryGroup" targetId="0bcf-1704-aaff-2b45" flatten="true"/>
+            <entryLink import="true" name="Prayer Lores" hidden="false" id="dd2e-5248-a84c-a59d" type="selectionEntryGroup" targetId="123c-ec0f-04eb-41d5" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
