@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9baf-c109-f621-e60" name="Gloomspite Gitz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9baf-c109-f621-e60" name="Gloomspite Gitz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Gloomspite Gitz - Library" id="ffa-f2fd-56e8-d5fa" targetId="9fb4-c9d6-3da7-5b5d"/>
     <catalogueLink type="catalogue" name="Path to Glory - Ravaged Coast" id="31aa-72d3-d893-1f78" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -60,6 +60,9 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9279-19f7-e6c0-b15d" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="64f4-76b2-7bc4-de13" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Battle Formations: Gloomspite Gitz" id="aeef-bacd-3932-f41d" hidden="false" flatten="true">
       <selectionEntries>
@@ -181,6 +184,9 @@ In addition, each time a friendly **Skitterstrand Arachnarok** uses the ‘Ambu
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e82-2de9-6995-ea87" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="1184-126f-a428-4407" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Manifestation Lores" id="df44-5076-da14-1de2" hidden="false" flatten="true">
       <selectionEntries>
@@ -1063,12 +1069,12 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="caf9-e433-3c38-dfd3" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fcff-ddaa-c333-c6df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="aa6c-cd1d-3eb-efbd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="425d-a6f4-6932-4d19" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c52-29e3-19c7-e2c1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="85fd-78fb-e4e0-53d8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1091,6 +1097,34 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
         <entryLink import="true" name="Paths" hidden="false" id="5db2-1084-6f7e-1bd7" type="selectionEntryGroup" targetId="b182-942d-da44-5153"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f8c6-94f3-9151-9b7d" type="selectionEntryGroup" targetId="9ee4-6545-911b-3cf6"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="3566-be17-f5c5-b225">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3566-be17-f5c5-b225"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Arachnarok Spider with Spiderfang Warparty" hidden="false" id="bd14-df53-d988-7c6d" type="selectionEntry" targetId="fb01-3fb7-ecf9-f5ec">
       <modifiers>
@@ -1129,6 +1163,34 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
         <entryLink import="true" name="Paths" hidden="false" id="979f-3b60-958c-2c64" type="selectionEntryGroup" targetId="b182-942d-da44-5153"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="918e-27ee-1a83-c5e9" type="selectionEntryGroup" targetId="9ee4-6545-911b-3cf6"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="850b-8850-54b9-ae4b">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="850b-8850-54b9-ae4b"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Boingrot Bounderz" hidden="false" id="81f6-7643-f0e7-adfa" type="selectionEntry" targetId="2e50-954-9c1-37cb">
       <entryLinks>
@@ -1227,6 +1289,7 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fcff-ddaa-c333-c6df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="aa6c-cd1d-3eb-efbd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1ced-9cbf-b05b-fa01" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1249,6 +1312,34 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
         <entryLink import="true" name="Paths" hidden="false" id="8235-7930-7c45-ba9c" type="selectionEntryGroup" targetId="b182-942d-da44-5153"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3611-baad-630a-5b4f" type="selectionEntryGroup" targetId="9ee4-6545-911b-3cf6"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="c259-70ce-5eae-f0fe">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="c259-70ce-5eae-f0fe"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Mangler Squigs" hidden="false" id="b819-5390-cdf1-5d17" type="selectionEntry" targetId="7d29-9cf8-1621-e523">
       <modifiers>
@@ -1291,6 +1382,34 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
         <entryLink import="true" name="Paths" hidden="false" id="8233-6e06-6aa7-e6e6" type="selectionEntryGroup" targetId="b182-942d-da44-5153"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5c56-e7fa-a97f-25b8" type="selectionEntryGroup" targetId="9ee4-6545-911b-3cf6"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b8e9-f0cc-e5dd-0a58">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b8e9-f0cc-e5dd-0a58"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Moonclan Shootas" hidden="false" id="163b-1065-8d64-322a" type="selectionEntry" targetId="b8a3-fc8f-cbdf-9424">
       <entryLinks>
@@ -1495,6 +1614,34 @@ While a friendly **^^Gloomspite Gitz^^** unit is **under the light of the Bad M
       <costs>
         <cost name="pts" typeId="points" value="210"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="8beb-b733-fa56-c0e3">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="force" childId="6d54-625c-d063-13e2" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="7c57-b589-f1f0-30b3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8beb-b733-fa56-c0e3"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Squig Hoppers" hidden="false" id="bcc5-d94f-28bf-b62e" type="selectionEntry" targetId="d378-a542-6aa9-ccf9">
       <entryLinks>
