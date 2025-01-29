@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Liberators" hidden="false" id="e914-877f-21fe-8db9" publicationId="43cd-e9ef-5d4d-87c4">
       <profiles>
@@ -1430,7 +1430,7 @@ This unit has **^^Ward (4+)^^** against mortal damage inflicted by **^^Manifest
         </profile>
         <profile name="Guided by Lightning" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="900f-18a4-bbb1-b6f5">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle(Army), Your Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Stormcast Eternals^^** units wholly within 12&quot; of this unit that were set up this turn using the ‘Scions of the Storm’ ability to be the targets.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each target can immediately move D3&quot;. The targets cannot move into combat during any part of that move.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -2564,12 +2564,17 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
             </modifier>
             <modifier type="set" value="1" field="892c-486b-38ec-4718">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="ac89-7f77-6744-c172" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="8379-98cb-813d-dd8f">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="ac89-7f77-6744-c172" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="defaultAmount">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2966,12 +2971,17 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
             </modifier>
             <modifier type="set" value="1" field="195-773e-e361-a879">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="1b86-303a-7b34-526b" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="cc9e-fe02-6f18-545e">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="1b86-303a-7b34-526b" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="defaultAmount">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3081,14 +3091,19 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="set" value="1" field="354f-2342-d67a-d2be">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="bd45-af2b-6ae7-7636" childId="c461-2ebb-5bbc-81a2" shared="true"/>
-              </conditions>
-            </modifier>
             <modifier type="set" value="1" field="fa9a-be3c-b3a6-e27b">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="bd45-af2b-6ae7-7636" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="354f-2342-d67a-d2be">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="defaultAmount">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3203,12 +3218,17 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
             </modifier>
             <modifier type="set" value="1" field="68b2-0d6a-a92c-1a28">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="7d69-482-91aa-e846" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="4575-e27e-ead5-050f">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="7d69-482-91aa-e846" childId="c461-2ebb-5bbc-81a2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="defaultAmount">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3658,7 +3678,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
             </modifier>
             <modifier type="set" value="1" field="1945-a7c0-b012-4e36">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="c461-2ebb-5bbc-81a2" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="e169-9dec-47ff-6a33">
@@ -4489,7 +4509,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
         </profile>
         <profile name="Ordained Quest" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9721-5fe-fd7b-986b">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick an objective wholly outside friendly territory. That objective is considered by you to be questmarked.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -4506,7 +4526,7 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
         </profile>
         <profile name="Relictor Soulguide" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8b6f-9ae-7de5-8cc4">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can pick a friendly **Knight-Questor** within this unit’s combat range to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units. Then, if you picked a target, remove it from the battlefield and set it up again within this unit’s combat range and more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="6" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="7" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
@@ -1701,14 +1701,14 @@
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8e0e-5e8c-5824-89c9" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="640e-6bc1-c83d-13c" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1ed8-2e23-1563-c119" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5697,7 +5697,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Prized Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ad6-dccc-c9b9-dabc">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** in, but not leading, a regiment to be that regiment’s **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** that is not reinforced and that is in, but not leading, a regiment to be that regiment’s **honour guard**. You can pick a unit in reserve.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit can ignore the effects of the ‘Battle Damaged’ ability. In addition, add 1 to hit rolls for combat attacks made by the **honour guard**. This ability affects Companion weapons.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
