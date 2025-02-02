@@ -23,6 +23,12 @@ __How do I create regiments in New Recruit?__
 
 When you create a list, you will have a single parent force loaded with your general army composition options like lores and battle formation. to add a regiment (or auxiliary units), navigate to the sidebar and select the Forces category. You can add a child force there. Click your faction name and then Regiment or Auxillary as needed (each regiment will need its own force). You can also add regiments of reknown in this manner. To quickly navigate to unit entry for a specific regiment, click its header in the list view. That will scroll the sidebar panel to that regiment's selections where you can add units to it as needed.
 
+__Will support for Path to Glory: Ascension (from the Core Rulebook) be added? What about Anvils of Apotheosis?__ 
+
+Possibly. Unlike Path to Glory: Ravaged Coast, Ascension uses a split system where you track a seperate roster of available units that you then build lists from. There is no way to do this in Battlescribe or New Recruit, but support for individual rosters or lists could be added. This is low priority, but will likely be added at some point.
+
+Anvils of Apotheosis are very doable, but a significant amount of input work. The user interface will also be less than ideal. These will almost certainly be added at some point, but are similarly low priority.
+
 ## Links ##
 
 * [BSData organization homepage][BSData.net]
