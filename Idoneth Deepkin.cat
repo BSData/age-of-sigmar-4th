@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="40a4-1c1c-8a00-bb65" name="Idoneth Deepkin" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="40a4-1c1c-8a00-bb65" name="Idoneth Deepkin" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="d151-d105-9199-1667" hidden="false">
       <selectionEntryGroups>
@@ -50,12 +50,17 @@
           </selectionEntries>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6fb-5fc2-ad3e-7dbd"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6af8-dd6d-0080-6efc" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="6af8-dd6d-0080-6efc">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="81ca-d2a9-9238-1c51" includeChildSelections="true"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="05ab-1579-acc0-5d06" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
       </entryLinks>
@@ -171,12 +176,17 @@
           </selectionEntries>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="937e-3d1e-8c94-cb74"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0eea-f9c6-e717-02cf" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="0eea-f9c6-e717-02cf">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="267b-7943-e0f-f204" includeChildSelections="true"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="47f5-2604-e284-56c1" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
       </entryLinks>
@@ -341,15 +351,7 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" value="0" field="f3f3-4b6c-fdc3-a2f1">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
-          </conditions>
-        </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f3f3-4b6c-fdc3-a2f1"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e477-f4be-b5ca-8e35" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5f27-520f-3393-4386" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
@@ -419,9 +421,6 @@
       </costs>
     </entryLink>
     <entryLink import="true" name="Eidolon of Mathlann, Aspect of the Sea" hidden="false" id="1330-5de2-a9f8-7e0c" type="selectionEntry" targetId="9ca1-3e30-fb7-44c0">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="55c6-490d-1f5b-e6c5"/>
-      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -431,11 +430,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" value="0" field="55c6-490d-1f5b-e6c5">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -449,9 +443,6 @@
       </costs>
     </entryLink>
     <entryLink import="true" name="Volturnos, High King of the Deep" hidden="false" id="d8ff-b6d1-9b4a-c387" type="selectionEntry" targetId="301e-efbe-65c3-bf78">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a1a6-47c1-29ea-8821"/>
-      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -461,11 +452,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" value="0" field="a1a6-47c1-29ea-8821">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <costs>
@@ -477,7 +463,7 @@
     </entryLink>
     <entryLink import="true" name="Isharann Soulrender" hidden="false" id="d825-f446-1087-460f" type="selectionEntry" targetId="b597-c539-60f-da1f">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2387-687b-94ee-abf6"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="2387-687b-94ee-abf6"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -541,9 +527,6 @@
       </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Eidolon of Mathlann, Aspect of the Storm" hidden="false" id="1197-bbc5-ebd5-7fa9" type="selectionEntry" targetId="2f12-e371-2aa-baa2">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3d3b-c60f-61a9-44c3"/>
-      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -553,11 +536,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" value="0" field="3d3b-c60f-61a9-44c3">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -572,7 +550,7 @@
     </entryLink>
     <entryLink import="true" name="Lotann, Warden of the Soul Ledgers" hidden="false" id="f5aa-c21d-d08a-c8e5" type="selectionEntry" targetId="50be-c90a-20c4-66ed">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3935-b9d4-21ba-1f8c"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3935-b9d4-21ba-1f8c"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -596,11 +574,6 @@
               </conditionGroups>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" value="0" field="3935-b9d4-21ba-1f8c">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <modifierGroups>
@@ -639,7 +612,7 @@
     </entryLink>
     <entryLink import="true" name="Isharann Soulscryer" hidden="false" id="e9e0-da5d-b17f-8c75" type="selectionEntry" targetId="1296-cd3a-b6fc-f28f">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4bfa-3fbc-fb19-9daf"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="4bfa-3fbc-fb19-9daf"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -703,9 +676,6 @@
       </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Isharann Tidecaster" hidden="false" id="4fae-12fe-1e50-7f6e" type="selectionEntry" targetId="b3e9-4dba-c419-550">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1153-8d9b-7b85-820a"/>
-      </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -715,11 +685,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="set" value="0" field="1153-8d9b-7b85-820a">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <entryLinks>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="832c-fd6-a535-ffae" name="Ironjawz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="832c-fd6-a535-ffae" name="Ironjawz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Ironjawz" hidden="false" id="d8ca-c367-a211-97b3">
       <profiles>
@@ -61,7 +61,7 @@
             <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
             <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
             <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Ironjawz Priest^^** to chant this prayer, pick a visible friendly **^^Ironjawz^^** unit wholly within 12&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
-            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Add 1 to the Damage characteristic of the target’s melee weapons for the rest of the turn. If the chanting roll was 8+, you can pick up to 2 eligible units to be the targets instead of 1</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Add 1 to the Damage characteristic of the target’s melee weapons for the rest of the turn. If the chanting roll was 10+, you can pick up to 2 eligible units to be the targets instead of 1.</characteristic>
             <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
           </characteristics>
         </profile>
@@ -189,12 +189,17 @@
           </selectionEntries>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffdc-af6c-9329-16db"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="71cb-83ba-169b-699e" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="71cb-83ba-169b-699e">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bf6d-3ace-c5e0-dc7a" includeChildSelections="true"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7917-18f9-4b82-c041" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
       </entryLinks>
@@ -310,12 +315,17 @@
           </selectionEntries>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bc-536c-f3b6-3c1f"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="13be-6000-705f-57f4" includeChildSelections="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="13be-6000-705f-57f4">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fee1-cbd4-49fc-519d" includeChildSelections="true"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7d28-d81d-b0c6-3d7c" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
       </entryLinks>
