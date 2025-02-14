@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="8" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="9" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
@@ -5569,7 +5569,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25e2-76e3-e15a-84fb"/>
           </constraints>
           <profiles>
-            <profile name="Summon The Burning Head" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="be33-a164-e7f7-918c">
+            <profile name="Summon Burning Head" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="be33-a164-e7f7-918c">
               <characteristics>
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
