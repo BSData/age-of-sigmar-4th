@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="9" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="10" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
@@ -30,6 +30,10 @@
         <characteristicType id="b977-7c5e-33b2-428e" name="Keywords"/>
         <characteristicType id="fd7f-888d-3257-a12b" name="Effect"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="50fe-4f29-6bc3-dcc6"/>
+        <attributeType name="Type" id="bf11-4e10-3ab1-06f4"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8">
       <characteristicTypes>
@@ -39,6 +43,10 @@
         <characteristicType id="1cb9-a-1345-907f" name="Effect"/>
         <characteristicType id="353f-565e-c351-1cf2" name="Keywords"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="16b6-0911-f549-a4bd"/>
+        <attributeType name="Type" id="da27-8d61-f955-5031"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9">
       <characteristicTypes>
@@ -48,6 +56,10 @@
         <characteristicType id="6219-6fcc-5ae2-a6b7" name="Effect"/>
         <characteristicType id="e3d8-f58b-e4e0-8e9d" name="Keywords"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="7564-4bf0-b34a-b143"/>
+        <attributeType name="Type" id="c63c-196d-34a7-cec3"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7">
       <characteristicTypes>
@@ -57,6 +69,10 @@
         <characteristicType id="2111-3ca8-61dd-a5f0" name="Effect"/>
         <characteristicType id="445d-f443-5448-e7ce" name="Keywords"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="5c69-e4b9-19bc-e801"/>
+        <attributeType name="Type" id="2bd5-08f1-f3d1-86f7"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6">
       <characteristicTypes>
@@ -66,6 +82,10 @@
         <characteristicType id="12e8-3214-7d8f-1d0f" name="Keywords"/>
         <characteristicType id="1b32-c9d6-3106-166b" name="Used By"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="5a11-eab3-180c-ddf5"/>
+        <attributeType name="Type" id="6d16-c86b-2698-85a4"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2">
       <characteristicTypes>
@@ -4618,18 +4638,30 @@
             <characteristic name="Keywords" id="3a45-5cc6-92ac-7528" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+          </attributes>
         </profile>
         <profile name="Arcane Predator" hidden="false" id="9456-22b9-7885-e464" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" id="a127-f3da-a547-5260" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="7b71-374f-1953-bd99" hidden="false" typeId="fd7f-888d-3257-a12b">You can add 1 to the number of dice rolled when making charge rolls for this **^^Manifestation^^**, to a maximum of 3, while it is within 18&quot; of any enemy **^^Manifestations^^**, but if you do so, it must end the charge move within ½&quot; of an enemy **^^Manifestation^^**.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Wild Form" hidden="false" id="4f4-6041-9f7e-2585" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" id="b594-1d0d-ae7c-afba" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="b137-be1-a320-9e97" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+          </attributes>
         </profile>
         <profile name="Amberbone Claws and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="245d-e7e2-477e-edb0">
           <characteristics>
@@ -4673,12 +4705,20 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Necrotic Vortex" hidden="false" id="c99-9240-9da1-d029" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" id="d78a-7452-d2fd-d430" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="3122-a017-ecd3-e131" hidden="false" typeId="fd7f-888d-3257-a12b">Subtract 1 from save rolls for enemy units while they are within 3&quot; of this **^^Manifestation^^**.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
           <characteristics>
@@ -4717,12 +4757,20 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9e13-160b-4a87-da4e">
           <characteristics>
             <characteristic name="Keywords" id="db71-825d-3b88-6be7" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="d397-af49-6056-8a09" hidden="false" typeId="fd7f-888d-3257-a12b">When a number of damage points equal to this **^^Manifestation^^**&apos;s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and all its parts are removed from play.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -4749,12 +4797,20 @@
             <characteristic name="Keywords" id="2dfe-26d3-f148-a60d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="676c-91fa-8432-ee8d">
           <characteristics>
             <characteristic name="Keywords" id="9ed2-a67d-f047-7f70" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="2112-d788-edc-c9c2" hidden="false" typeId="fd7f-888d-3257-a12b">When a number of damage points equal to this **^^Manifestation^^**&apos;s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -4782,12 +4838,20 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="The Pendulum Swings" hidden="false" id="9ec5-1011-c05e-5045" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" id="f377-977c-5a3f-90f0" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="4518-14cc-a17b-4c45" hidden="false" typeId="fd7f-888d-3257-a12b">This **^^Manifestation^^** cannot use **^^Charge^^** or **^^Fight^^** abilities. In addition, when this **^^Manifestation^^** moves, it must move in a straight line either in the direction in which the tip of the pendulum blade is pointing or in the opposite direction to the direction in which the tip of the pendulum blade is pointing</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -4816,6 +4880,10 @@
             <characteristic name="Keywords" id="a922-cfeb-4479-2f54" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -4840,6 +4908,10 @@
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^**uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this MANIFESTATION (ward rolls cannot be made for that damage point).</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+          </attributes>
         </profile>
         <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
           <characteristics>
@@ -4888,6 +4960,10 @@
             <characteristic name="Keywords" id="fb37-34f1-363a-6f0d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
           <characteristics>
@@ -4936,6 +5012,10 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+          </attributes>
         </profile>
         <profile name="Necrotic Vortex" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c711-ce6-1fb6-7abc">
           <characteristics>
@@ -4946,6 +5026,10 @@
 • Each time a model is slain within 12&quot; of this **^^Manifestation^^**.
 This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
           <characteristics>
@@ -4979,18 +5063,30 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a part of this **Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="86da-767f-a1d7-9b8a">
           <characteristics>
             <characteristic name="Keywords" id="434c-ed87-d083-fa30" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="31bb-78b1-9282-62e1" hidden="false" typeId="fd7f-888d-3257-a12b">When a number of damage points equal to this **^^Manifestation^^**&apos;s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Ensnaring Soul-drain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9d0c-ae55-1df5-ec0e">
           <characteristics>
             <characteristic name="Keywords" id="89d2-b95c-d2f9-285b" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="5041-5fbe-a87c-6e8e" hidden="false" typeId="fd7f-888d-3257-a12b">Each time an enemy unit uses a **^^Move^^** ability while it is within 6&quot; of any parts of this Manifestation, the effects of the ‘Fly’ ability do not apply to that unit. Enemy units cannot be set up within 6&quot; of either part of this **^^Manifestation^^**.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -5018,6 +5114,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" id="10c3-9bec-a51e-9041" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move**^^</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
           <characteristics>
@@ -5052,6 +5152,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for damage points inflicted by this **^^Manifestation^^**&apos;s attacks.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+          </attributes>
         </profile>
         <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
           <characteristics>
@@ -5072,6 +5176,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" id="7823-b5d2-96c3-f2d" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="41a0-f4d3-94f7-b5f2" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit contains any standard bearers, add 1 to this unit’s control score.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+          </attributes>
         </profile>
       </profiles>
       <categoryLinks>
@@ -5085,6 +5193,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" id="2928-d479-3f0c-d702" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="88e8-86d2-bf52-5c71" hidden="false" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of weapons used by champions in this unit.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+          </attributes>
         </profile>
       </profiles>
       <categoryLinks>
@@ -5098,6 +5210,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" id="98bb-35ab-5c54-88ea" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="2464-8e0d-db9b-bf62" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit contains any musicians, if it uses the ‘Rally’ command, you can make one additional rally roll of D6.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
+          </attributes>
         </profile>
       </profiles>
       <categoryLinks>
@@ -5128,6 +5244,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+          </attributes>
         </profile>
         <profile name="Bounteous Healing" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5d6d-9bfb-60e3-db42">
           <characteristics>
@@ -5137,6 +5257,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+          </attributes>
         </profile>
         <profile name="Swarming Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9a05-9547-1ad1-2bf8">
           <characteristics>
@@ -5173,6 +5297,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+          </attributes>
         </profile>
         <profile name="Gnashing Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="44ec-0340-a597-8bc5">
           <characteristics>
@@ -5210,6 +5338,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
           <characteristics>
@@ -5244,6 +5376,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot use commands while they are within 3&quot; of either part of this **^^Manifestation^^**&apos;.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
           <characteristics>
@@ -5262,6 +5398,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
 Each time this **^^Manifestation^^** moves, both its parts must end within 9&quot; of each other.
 Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and Shadow**.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -5285,6 +5425,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" id="1d02-2f0d-4af8-2ee8" hidden="false" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" id="9a99-b896-4fe2-087c" hidden="false" typeId="fd7f-888d-3257-a12b">When a number of damage points equal to this **^^Manifestation^^**&apos;s Health characteristic are allocated to it, this **^^Manifestation^^** is destroyed and both its parts are removed from play.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
         </profile>
         <profile name="Arcane Passage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b327-e576-8829-814d">
           <characteristics>
@@ -5294,6 +5438,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -5317,6 +5465,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **^^Manifestation^^** cannot be targeted by shooting attacks. In addition, a unit cannot be targeted by shooting attacks if it is impossible to draw a straight line from a model in the attacking unit to a model in the target unit without that line passing across this **^^Manifestation^^**.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -5361,6 +5513,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Krondspine Incarnate of Ghur** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
           </profiles>
           <entryLinks>
@@ -5385,6 +5541,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Shards of Valagharr** endless spell wholly within 18&quot; of the caster and visible to them. A **Shards of Valagharr** endless spell has 2 parts that must be set up within 9&quot; of each other.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Lauchon the Soulseeker" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="eba-b6d2-203a-8ba3">
               <characteristics>
@@ -5394,6 +5554,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Lauchon the Soulseeker** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Horrorghast" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="54a-8669-80d9-b659">
               <characteristics>
@@ -5403,6 +5567,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Horrorghast** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Soulscream Bridge" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c400-fd73-7e04-eade">
               <characteristics>
@@ -5412,6 +5580,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Soulscream Bridge** wholly within 18&quot; of the caster and visible to them. A **Soulscream Bridge** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
           </profiles>
           <entryLinks>
@@ -5454,6 +5626,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Purple Sun of Shyish** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Suffocating Gravetide" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="36e0-4b94-aeb-67ac">
               <characteristics>
@@ -5463,6 +5639,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Suffocating Gravetide** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Soulsnare Shackles" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ee70-f212-c079-a752">
               <characteristics>
@@ -5472,6 +5652,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Soulsnare Shackles** endless spell wholly within 18&quot; of the caster and visible to them. A **Soulsnare Shackles** endless spell has 3 parts that must each be set up within 3&quot; of at least 1 other part.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Malevolent Maelstrom" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="1f2c-ca29-2c5b-24ba">
               <characteristics>
@@ -5481,6 +5665,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a a **Malevolent Maelstrom** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
           </profiles>
           <entryLinks>
@@ -5523,6 +5711,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up an **Aethervoid Pendulum** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Quicksilver Swords" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="d4da-e543-192d-84ae">
               <characteristics>
@@ -5532,6 +5724,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Quicksilver Swords** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Chronomantic Cogs" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c402-d205-c59f-e84b">
               <characteristics>
@@ -5541,6 +5737,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Chronomantic Cogs** endless spell wholly within 12&quot; of the caster and visible to them.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
           </profiles>
           <entryLinks>
@@ -5577,6 +5777,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **The Burning Head** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Emerald Lifeswarm" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="3287-7355-d3c6-3f71">
               <characteristics>
@@ -5586,6 +5790,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Emerald Lifeswarm** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Ravenak’s Gnashing Jaws" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="5c89-2809-149c-7e83">
               <characteristics>
@@ -5595,6 +5803,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Ravenak’s Gnashing Jaws** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
           </profiles>
           <entryLinks>
@@ -5631,6 +5843,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up an **Umbral Spellportal** wholly within 18&quot; of the caster and visible to them. An **Umbral Spellportal** has 2 parts that must be set up within 9&quot; of each other.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Prismatic Palisade" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c32f-88f8-b295-6f92">
               <characteristics>
@@ -5640,6 +5856,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Prismatic Palisade** wholly within 18&quot; of the caster and visible to them.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
             <profile name="Summon Geminids of Uhl-Gysh" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="477a-4ba9-95b1-5921">
               <characteristics>
@@ -5649,6 +5869,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Geminids of Uhl-Gysh** endless spell wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
+              <attributes>
+                <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+                <attribute typeId="da27-8d61-f955-5031" name="Type">Special</attribute>
+              </attributes>
             </profile>
           </profiles>
           <entryLinks>
@@ -5681,18 +5905,30 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">As this unit moves, it ignores other models, terrain features and the combat ranges of enemy units. It cannot end its move in combat unless specified in the ability that allowed it to move. Ignore any vertical distance moved for this unit.</characteristic>
       </characteristics>
+      <attributes>
+        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
+        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+      </attributes>
     </profile>
     <profile name="Beast" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8e01-c681-8a44-8f44">
       <characteristics>
         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has a maximum control score of 1.</characteristic>
       </characteristics>
+      <attributes>
+        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
+        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+      </attributes>
     </profile>
     <profile name="Ward Save" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ed70-f30-2f5a-747f">
       <characteristics>
         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">In step 1 of the damage sequence (see 18.0), make a **ward roll** of D6 for each **damage point** in this unit’s **damage pool**. If the roll equals or exceeds this unit’s **ward value**, remove that damage point from the damage pool.</characteristic>
       </characteristics>
+      <attributes>
+        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+      </attributes>
     </profile>
     <profile name="Guarded Hero" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3bc-444a-5cf8-e4d">
       <characteristics>
@@ -5701,6 +5937,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
 • Subtract 1 from hit rolls for shooting attacks that target this Hero.
 • If this **^^Hero^^** is **^^Infantry^^**, they cannot be picked as the target of shooting attacks made by units more than 12&quot; from them.</characteristic>
       </characteristics>
+      <attributes>
+        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+      </attributes>
     </profile>
   </sharedProfiles>
   <publications>
@@ -5810,6 +6050,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+          </attributes>
         </profile>
         <profile name="Bodyguard" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4a1a-5004-d133-ac9c">
           <characteristics>
@@ -5821,6 +6065,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+          </attributes>
         </profile>
         <profile name="Field Sergeant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54eb-6de5-1e82-a796">
           <characteristics>
@@ -5830,6 +6078,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+          </attributes>
         </profile>
         <profile name="Prized Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ad6-dccc-c9b9-dabc">
           <characteristics>
@@ -5839,6 +6091,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+          </attributes>
         </profile>
         <profile name="Special Assignment" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="99f1-c5a8-8a2e-4d27">
           <characteristics>
@@ -5854,6 +6110,10 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+          </attributes>
         </profile>
       </profiles>
       <rules>
