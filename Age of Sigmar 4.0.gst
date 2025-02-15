@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="10" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="11" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
   </costTypes>
@@ -4632,10 +4632,10 @@
         </profile>
         <profile name="Devourer of Magics" hidden="false" id="61af-1ae8-5d5e-d349" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" id="b84d-405c-9401-ceab" hidden="false" typeId="652c-3d84-4e7-14f4"/>
-            <characteristic name="Declare" id="b1df-cf32-9ca9-7fe8" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="dcaa-9a59-3589-d7" hidden="false" typeId="b6f1-ba36-6cd-3b03">If this **^^Manifestation^^** destroyed any enemy **^^Manifestations^^** this turn, Heal (6) this **^^Manifestation^^**.</characteristic>
-            <characteristic name="Keywords" id="3a45-5cc6-92ac-7528" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this **^^Manifestation^^** destroyed any enemy **^^Manifestations^^** this turn, Heal (6) this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -4791,10 +4791,10 @@
         </profile>
         <profile name="Deathly Passage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f4c4-3de7-898a-b7d8">
           <characteristics>
-            <characteristic name="Timing" id="b99b-6d2f-8b22-6cb1" hidden="false" typeId="652c-3d84-4e7-14f4"/>
-            <characteristic name="Declare" id="b3d1-c9b6-7535-b129" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit wholly within 6&quot; of one part of this **^^Manifestation^^** to be the target.</characteristic>
-            <characteristic name="Effect" id="187a-b0be-420-b818" hidden="false" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again on the battlefield wholly within 6&quot; of the other part of this **^^Manifestation^^** and more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" id="2dfe-26d3-f148-a60d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit wholly within 6&quot; of one part of this **^^Manifestation^^** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again on the battlefield wholly within 6&quot; of the other part of this **^^Manifestation^^** and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -4954,10 +4954,10 @@
         </profile>
         <profile name="Harbinger of Horror" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a59-1e45-94a8-3c90">
           <characteristics>
-            <characteristic name="Timing" id="b378-b0ad-c3b0-4ab4" hidden="false" typeId="652c-3d84-4e7-14f4"/>
-            <characteristic name="Declare" id="9431-282-fecb-9a50" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that was targeted by this **^^Manifestation^^**&apos;s shooting attacks this phase to be the target.</characteristic>
-            <characteristic name="Effect" id="44e7-e0b8-8dc8-f084" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll is less than the number of models in the target unit that were slain this phase, the target cannot use commands for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" id="fb37-34f1-363a-6f0d" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that was targeted by this **^^Manifestation^^**&apos;s shooting attacks this phase to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll is less than the number of models in the target unit that were slain this phase, the target cannot use commands for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
