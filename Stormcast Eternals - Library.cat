@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Liberators" hidden="false" id="e914-877f-21fe-8db9" publicationId="43cd-e9ef-5d4d-87c4">
       <profiles>
@@ -9817,7 +9817,7 @@ Cover, Impassible**</description>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Stormblast" hidden="true" id="249e-9dd8-cb83-9d85">
+            <selectionEntry type="upgrade" import="true" name="Stormblast" hidden="true" id="249e-9dd8-cb83-9d85" defaultAmount="0">
               <profiles>
                 <profile name="Stormblast" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="fb15-3992-8f4a-c60e">
                   <characteristics>
@@ -9843,11 +9843,23 @@ Cover, Impassible**</description>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d7ab-942b-3e36-64ca-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d7ab-942b-3e36-64ca-max"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6fb0-0881-ebba-4f73" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="3a92-2e12-821b-525f" automatic="true"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="89bf-c149-4be5-86c9" shared="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="3a92-2e12-821b-525f"/>
+                    <modifier type="set" value="1" field="6fb0-0881-ebba-4f73"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mighty Flying Noble Beast&apos;s Claws" hidden="true" id="f06f-2d2c-b295-dd14">
+            <selectionEntry type="upgrade" import="true" name="Mighty Flying Noble Beast&apos;s Claws" hidden="true" id="f06f-2d2c-b295-dd14" defaultAmount="0">
               <profiles>
                 <profile name="Mighty Flying Noble Beast&apos;s Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ea61-914e-a7ab-1d0a">
                   <characteristics>
@@ -9871,19 +9883,24 @@ Cover, Impassible**</description>
                   </modifiers>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5245-d3ac-1cd0-fe82" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="8de3-2ce3-6f0d-7819" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="08e7-e3d9-5a3d-036f" shared="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f802-e9b8-80f0-f601-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f802-e9b8-80f0-f601-max"/>
-              </constraints>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="8de3-2ce3-6f0d-7819"/>
+                    <modifier type="set" value="1" field="5245-d3ac-1cd0-fe82"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Flying Noble Beast&apos;s Claws" hidden="true" id="283c-10f9-2e97-f149">
+            <selectionEntry type="upgrade" import="true" name="Flying Noble Beast&apos;s Claws" hidden="true" id="283c-10f9-2e97-f149" defaultAmount="0">
               <profiles>
                 <profile name="Flying Noble Beast&apos;s Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e986-9cb4-48ec-d75a">
                   <characteristics>
@@ -9907,19 +9924,24 @@ Cover, Impassible**</description>
                   </modifiers>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a34d-07df-377c-afa2" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="d95e-4a89-deb3-f111" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="016a-a366-220b-4933" shared="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a88-c4ad-1a4c-8f23-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a88-c4ad-1a4c-8f23-max"/>
-              </constraints>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="d95e-4a89-deb3-f111"/>
+                    <modifier type="set" value="1" field="a34d-07df-377c-afa2"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fiery Breath" hidden="true" id="3e6b-7024-fb55-f736">
+            <selectionEntry type="upgrade" import="true" name="Fiery Breath" hidden="true" id="3e6b-7024-fb55-f736" defaultAmount="0">
               <profiles>
                 <profile name="Fiery Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="5df8-854e-71bd-7a2b">
                   <characteristics>
@@ -9937,19 +9959,24 @@ Cover, Impassible**</description>
                   </attributes>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c5b7-cafc-c6d3-2de1" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6119-d61e-5e01-1fb3-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6119-d61e-5e01-1fb3-max"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="70a4-54d2-6555-1afc" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="220f-0156-0e1e-693b" automatic="true"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2fa1-e4dd-df68-d755" shared="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="220f-0156-0e1e-693b"/>
+                    <modifier type="set" value="1" field="70a4-54d2-6555-1afc"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Noble Beast&apos;s Claws" hidden="true" id="264d-5d6b-01c5-0125">
+            <selectionEntry type="upgrade" import="true" name="Noble Beast&apos;s Claws" hidden="true" id="264d-5d6b-01c5-0125" defaultAmount="0">
               <profiles>
                 <profile name="Noble Beast&apos;s Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7704-fdff-4446-6f31">
                   <characteristics>
@@ -9966,19 +9993,24 @@ Cover, Impassible**</description>
                   </attributes>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="58b3-7b92-57e2-c231" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="8b89-4f29-61a8-d5f4" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c5b7-cafc-c6d3-2de1" shared="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd3f-8d06-f0b4-de16-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd3f-8d06-f0b4-de16-max"/>
-              </constraints>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="8b89-4f29-61a8-d5f4"/>
+                    <modifier type="set" value="1" field="58b3-7b92-57e2-c231"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heavy Boltstorm Pistol" hidden="true" id="a9ea-61b9-df57-f33c">
+            <selectionEntry type="upgrade" import="true" name="Heavy Boltstorm Pistol" hidden="true" id="a9ea-61b9-df57-f33c" defaultAmount="0">
               <profiles>
                 <profile name="Heavy Boltstorm Pistol" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="27cb-3af5-3ae3-15cf">
                   <characteristics>
@@ -9996,19 +10028,24 @@ Cover, Impassible**</description>
                   </attributes>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="188c-99e3-9511-2ebc" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="e258-4805-f677-cbce" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4421-b780-9987-9974" shared="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="053d-aa65-eb3a-c59f-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="053d-aa65-eb3a-c59f-max"/>
-              </constraints>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="e258-4805-f677-cbce"/>
+                    <modifier type="set" value="1" field="188c-99e3-9511-2ebc"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Terminus Greatbow" hidden="true" id="ad6f-bcd1-df7f-8395">
+            <selectionEntry type="upgrade" import="true" name="Terminus Greatbow" hidden="true" id="ad6f-bcd1-df7f-8395" defaultAmount="0">
               <profiles>
                 <profile name="Terminus Greatbow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="9651-1a88-0ab5-5d69">
                   <characteristics>
@@ -10026,17 +10063,22 @@ Cover, Impassible**</description>
                   </attributes>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7474-a00b-83b2-f5ec-max" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7474-a00b-83b2-f5ec-min" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="89bf-c149-4be5-86c9" shared="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7474-a00b-83b2-f5ec-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7474-a00b-83b2-f5ec-max"/>
-              </constraints>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="7474-a00b-83b2-f5ec-max"/>
+                    <modifier type="set" value="1" field="7474-a00b-83b2-f5ec-min"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
           </selectionEntries>
           <constraints>
