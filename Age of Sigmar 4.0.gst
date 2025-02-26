@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="12" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="13" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
-    <costType name="Destiny Point Limit" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true"/>
+    <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden"/>
+      </modifiers>
+    </costType>
   </costTypes>
   <profileTypes>
     <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4">
@@ -4240,16 +4244,16 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c203-51a0-3d44-6b07" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="c203-51a0-3d44-6b07" shared="true"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="376a-6b97-8699-dd59" childId="c203-51a0-3d44-6b07" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="4063-b3a6-e7e1-383f" childId="c203-51a0-3d44-6b07" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="c203-51a0-3d44-6b07" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="abcb-73d0-2b6c-4f17" shared="true"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
+                </localConditionGroup>
+              </localConditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -4257,24 +4261,11 @@
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="abcb-73d0-2b6c-4f17" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="abcb-73d0-2b6c-4f17" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="force" childId="4063-b3a6-e7e1-383f" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
               <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="c203-51a0-3d44-6b07" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="376a-6b97-8699-dd59" childId="c203-51a0-3d44-6b07" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="4063-b3a6-e7e1-383f" childId="c203-51a0-3d44-6b07" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
@@ -4609,6 +4600,19 @@
                       </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="c203-51a0-3d44-6b07" shared="true"/>
+                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c203-51a0-3d44-6b07" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="abcb-73d0-2b6c-4f17" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </conditionGroup>
@@ -6088,7 +6092,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** that is not reinforced and that is in, but not leading, a regiment to be that regiment’s **honour guard**. You can pick a unit in reserve.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit can ignore the effects of the ‘Battle Damaged’ ability. In addition, add 1 to hit rolls for combat attacks made by the **honour guard**. This ability affects Companion weapons.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit can ignore the effects of the ‘Battle Damaged’ ability. In addition, add 1 to hit rolls for combat attacks made by the **honour guard**. This ability also affects Companion weapons.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
