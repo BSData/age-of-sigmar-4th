@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Doralia ven Denst" hidden="false" id="6d6b-cfc7-7011-3be" publicationId="a746-732d-1a22-460">
       <categoryLinks>
@@ -1934,8 +1934,8 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Drakegun" hidden="false" id="1ec6-7e2a-8b5-75f8">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e9b-d659-6ffb-44b"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b359-261f-3cbb-84ea"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e9b-d659-6ffb-44b" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b359-261f-3cbb-84ea" automatic="true"/>
               </constraints>
               <profiles>
                 <profile name="Drakegun" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="37de-5fc0-a5f3-fb60">
@@ -1981,6 +1981,32 @@
                 </profile>
               </profiles>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Grudgehammer Torpedo" hidden="false" id="3ef3-c1d2-9719-19ec">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef70-f59a-34f7-6d41"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4b5-48f1-be35-d9ad"/>
+              </constraints>
+              <profiles>
+                <profile name="Grudgehammer Torpedo" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="6388-91ac-e7c5-c4fe">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">15&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti‑**^^Monster^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="9c21-1746-9873-a5b5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup name="Command Models" id="31eb-320c-51c9-4e42" hidden="false">
@@ -1993,27 +2019,6 @@
                     <constraint type="max" value="1" field="selections" scope="a4a9-4579-5a50-9ddb" shared="true" id="bd2f-a430-52a3-a7c" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4569-db77-62eb-f8fa"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Grudgehammer Torpedo" hidden="false" id="3ef3-c1d2-9719-19ec">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef70-f59a-34f7-6d41"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4b5-48f1-be35-d9ad"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Grudgehammer Torpedo" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="6388-91ac-e7c5-c4fe">
-                          <characteristics>
-                            <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">15&quot;</characteristic>
-                            <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
-                            <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
-                            <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                            <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                            <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                            <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti‑**^^Monster^^** (+1 Rend)</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                  </selectionEntries>
                 </entryLink>
                 <entryLink import="true" name="Standard Bearer" hidden="false" id="8531-5a46-c8ca-55d3" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
                   <constraints>
