@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Liberators" hidden="false" id="e914-877f-21fe-8db9" publicationId="43cd-e9ef-5d4d-87c4">
       <profiles>
@@ -3676,10 +3676,13 @@ While this unit has 10 or more damage points, add 2 to the Attacks characterist
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Soul-bonded" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9f24-a6ac-1925-6d82">
+        <profile name="Soul-bonded" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9f24-a6ac-1925-6d82">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a friendly **^^Stormcast Eternals Hero^^** to be this unit’s soul-bonded charge for the rest of the battle. This unit can use this ability while it is in reserve.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **^^Stormcast Eternals Hero^^** to be this unit’s soul-bonded charge for the rest of the battle. This unit can use this ability while it is in reserve.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -9690,7 +9693,7 @@ Cover, Impassible**</description>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159"/>
                   </characteristics>
                   <modifiers>
-                    <modifier type="set" value="3" field="e948-9c71-12a6-6be4">
+                    <modifier type="set" value="2+" field="26dc-168-b2fd-cb93">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="32e6-7a20-8d04-f523" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -9700,7 +9703,7 @@ Cover, Impassible**</description>
                         <conditionGroup type="and">
                           <conditions>
                             <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="f7fb-2a0e-f218-670e" shared="true" includeChildSelections="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4421-b780-9987-9974" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="aa34-e0ac-f780-02e4" shared="true" includeChildSelections="true"/>
                             <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="45a4-1cba-015c-fe47" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
@@ -9738,12 +9741,12 @@ Cover, Impassible**</description>
                     </modifier>
                     <modifier type="append" value="Charge (+1 Damage)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4421-b780-9987-9974" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45a4-1cba-015c-fe47" shared="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Crit (Mortal)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45a4-1cba-015c-fe47" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aa34-e0ac-f780-02e4" shared="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="increment" value="2" field="60e-35aa-31ed-e488">
@@ -9787,7 +9790,7 @@ Cover, Impassible**</description>
               <modifierGroups>
                 <modifierGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="89bf-c149-4be5-86c9" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="89bf-c149-4be5-86c9" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden"/>
@@ -9828,7 +9831,7 @@ Cover, Impassible**</description>
               <modifierGroups>
                 <modifierGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="08e7-e3d9-5a3d-036f" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="08e7-e3d9-5a3d-036f" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden"/>
@@ -9869,7 +9872,7 @@ Cover, Impassible**</description>
               <modifierGroups>
                 <modifierGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="016a-a366-220b-4933" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="016a-a366-220b-4933" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden"/>
@@ -9904,7 +9907,7 @@ Cover, Impassible**</description>
               <modifierGroups>
                 <modifierGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2fa1-e4dd-df68-d755" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2fa1-e4dd-df68-d755" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden"/>
@@ -9938,7 +9941,7 @@ Cover, Impassible**</description>
               <modifierGroups>
                 <modifierGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c5b7-cafc-c6d3-2de1" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c5b7-cafc-c6d3-2de1" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden"/>
@@ -9973,7 +9976,7 @@ Cover, Impassible**</description>
               <modifierGroups>
                 <modifierGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4421-b780-9987-9974" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4421-b780-9987-9974" shared="true" includeChildSelections="true"/>
                   </conditions>
                   <modifiers>
                     <modifier type="set" value="false" field="hidden"/>
@@ -10071,6 +10074,7 @@ Cover, Impassible**</description>
                 <selectionEntry type="upgrade" import="true" name="Vanguard Chamber" hidden="false" id="f360-fc79-b18c-f75f" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
                   </costs>
                   <modifiers>
                     <modifier type="add" value="3a8d-b40d-5bdc-8591" field="category" scope="root-entry"/>
@@ -10082,6 +10086,7 @@ Cover, Impassible**</description>
                 <selectionEntry type="upgrade" import="true" name="Extremis Chamber" hidden="false" id="042f-73ed-a4ad-62aa" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
                   </costs>
                   <modifiers>
                     <modifier type="add" value="fc06-9da0-fb8c-285f" field="category" scope="root-entry"/>
@@ -10093,6 +10098,7 @@ Cover, Impassible**</description>
                 <selectionEntry type="upgrade" import="true" name="Ruination Chamber" hidden="false" id="9ff4-1316-844a-7171" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
                   </costs>
                   <modifiers>
                     <modifier type="add" value="7e5d-ee55-7c89-4d05" field="category" scope="root-entry"/>
@@ -10518,7 +10524,7 @@ Cover, Impassible**</description>
                     <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                   </costs>
                   <modifiers>
-                    <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit"/>
+                    <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
                   </modifiers>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20e9-5731-38fe-9f04"/>
@@ -10530,7 +10536,7 @@ Cover, Impassible**</description>
                     <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                   </costs>
                   <modifiers>
-                    <modifier type="increment" value="1" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit"/>
+                    <modifier type="increment" value="1" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
@@ -10547,7 +10553,7 @@ Cover, Impassible**</description>
                     <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                   </costs>
                   <modifiers>
-                    <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit"/>
+                    <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
@@ -10661,6 +10667,7 @@ Cover, Impassible**</description>
                         <conditionGroup type="or">
                           <conditions>
                             <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="3fe-84f4-cec6-a1c1" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f7bf-4ab7-2e2f-0916" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -10724,6 +10731,7 @@ Cover, Impassible**</description>
                         <conditionGroup type="or">
                           <conditions>
                             <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6f28-c3f6-4b1b-8aff" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c250-e8c2-e96f-e91d" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
