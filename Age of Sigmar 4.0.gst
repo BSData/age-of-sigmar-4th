@@ -5038,11 +5038,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
           <characteristics>
-            <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">3</characteristic>
-            <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">2+</characteristic>
             <characteristic name="Wnd" hidden="false" id="6e5a-2b17-5419-a645" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+            <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">-</characteristic>
+            <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">1</characteristic>
             <characteristic name="Ability" hidden="false" id="d240-195f-8fa2-e599" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
           </characteristics>
         </profile>
@@ -5350,7 +5350,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
           <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
             <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
             <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
             <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
