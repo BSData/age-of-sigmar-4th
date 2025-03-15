@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="13" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="14" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -691,6 +691,12 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d215-65e4-50b1-c64c" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1038,6 +1044,12 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b155-f3bd-2dfc-d638" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b155-f3bd-2dfc-d638" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3659,6 +3671,12 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b155-f3bd-2dfc-d638" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -3994,6 +4012,12 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="ee11-1e0f-9354-8acf" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="ee11-1e0f-9354-8acf" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4597,6 +4621,12 @@
                             <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="b155-f3bd-2dfc-d638" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="704d-d7c8-b9a9-f8b6" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
@@ -5038,11 +5068,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
           <characteristics>
-            <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">3</characteristic>
-            <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">2+</characteristic>
             <characteristic name="Wnd" hidden="false" id="6e5a-2b17-5419-a645" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+            <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">-</characteristic>
+            <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">1</characteristic>
             <characteristic name="Ability" hidden="false" id="d240-195f-8fa2-e599" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
           </characteristics>
         </profile>
@@ -5350,7 +5380,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
           <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
             <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
             <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
             <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -5990,6 +6020,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Github" id="e49c-34a0-4d9c-72a4" hidden="false" publisherUrl="https://github.com/BSData/age-of-sigmar-4th"/>
     <publication name="Battletome: Gloomspite Gitz" id="a395-7bc4-71eb-46df" hidden="false"/>
     <publication name="Grotmas Advent Regiments of Renown" id="fdea-639c-1111-eecc" hidden="false"/>
+    <publication name="White Dwarf Issue 510" id="f860-3305-c15b-0a52" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
