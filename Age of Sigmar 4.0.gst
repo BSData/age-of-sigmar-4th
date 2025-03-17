@@ -2663,7 +2663,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="540" field="points"/>
+            <modifier type="set" value="500" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="6a3b-3b14-a667-b190" targetId="6e72-1656-d554-528a"/>
