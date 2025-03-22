@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="16" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="17" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -5216,6 +5216,13 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
           </attributes>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <categoryLinks>
@@ -5233,6 +5240,13 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
           </attributes>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <categoryLinks>
@@ -5250,6 +5264,13 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
           </attributes>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <categoryLinks>
@@ -5543,6 +5564,13 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
       </attributes>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </profile>
     <profile name="Beast" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8e01-c681-8a44-8f44">
       <characteristics>
@@ -5563,6 +5591,13 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
       </attributes>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </profile>
     <profile name="Guarded Hero" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3bc-444a-5cf8-e4d">
       <characteristics>
@@ -5575,6 +5610,13 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
       </attributes>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </profile>
   </sharedProfiles>
   <publications>
@@ -5659,6 +5701,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f8-da06-f04a-e271" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e8c9-ac55-8289-416f" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1bfb-7fa9-fe89-f491" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5762,6 +5805,19 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b07-18fc-eb03-7460"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hide Core Abilities" hidden="false" id="8f44-a403-e9a1-0aa3">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9544-4cf1-ff08-53c3"/>
+      </constraints>
+      <rules>
+        <rule name="" id="5202-75df-1d9a-9f02" hidden="false">
+          <description>Hides core rule abilities (e.g. &apos;Fly&apos; and &apos;Ward Save&apos;) from displaying on warscrolls.</description>
+        </rule>
+      </rules>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="ea0c-2329-c2e2-1a8f" targetId="676-2b78-7bbf-ba9c" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
