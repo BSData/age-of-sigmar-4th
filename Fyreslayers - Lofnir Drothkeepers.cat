@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="edc3-d297-701c-6643" name="Fyreslayers - Lofnir Drothkeepers" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="edc3-d297-701c-6643" name="Fyreslayers - Lofnir Drothkeepers" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Grimnir&apos;s Chosen" id="7dac-ee81-3ae6-61fe" hidden="false"/>
     <categoryEntry name="LOFNIR DROTHKEEPERS" id="a895-7fd3-6fad-5410" hidden="false"/>
@@ -583,6 +583,18 @@ Remove the targets from the battlefield. After the **^^Magmadroth^^** ends its m
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="15f7-042e-3219-71cf"/>
+        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="8771-d870-d024-9420">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1cf-7e69-e7df-dbf1"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Paths" id="a3cc-2ffc-2ad0-d9c9" hidden="true">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6cc-9eb2-c5b4-2877" name="Beasts of Chaos" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6cc-9eb2-c5b4-2877" name="Beasts of Chaos" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="338e-2f22-3508-8bc7" hidden="false">
       <selectionEntryGroups>
@@ -293,6 +293,18 @@
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="6023-fc75-79bc-0f64"/>
+        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="bf25-c1a6-106c-3e1d">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c52-189e-5cb4-6b0c"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Paths" id="733a-1ec8-6333-11b3" hidden="true">

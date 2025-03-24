@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1bd9-ad7d-68ee-3b53" name="Stormcast Eternals" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1bd9-ad7d-68ee-3b53" name="Stormcast Eternals" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Battle Traits: Stormcast Eternals" hidden="false" id="110e-c1a4-3308-11e" type="selectionEntry" targetId="a879-ee03-b626-8099"/>
     <entryLink import="true" name="Astreia Solbright" hidden="false" id="f3cb-d85b-abef-6134" type="selectionEntry" targetId="9fa1-9540-6069-3c75">
@@ -5819,6 +5819,18 @@ In addition, each time a friendly **^^Stormcast Eternals^^** unit is set up who
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="5aa5-6253-e545-139c"/>
+        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="41e6-8f63-d418-7dbe">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a950-43d2-4e44-4940"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Paths" id="4011-7bbc-1eeb-3ae1" hidden="true">

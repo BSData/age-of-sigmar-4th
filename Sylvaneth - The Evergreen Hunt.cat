@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="EVERGREEN HUNT" id="637b-b903-6980-34cf" hidden="false"/>
   </categoryEntries>
@@ -373,6 +373,18 @@
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="1681-f0d1-549b-2e01"/>
+        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="95eb-f787-a60d-dcde">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e046-c383-1dae-642e"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Paths" id="cd0a-4f22-0d92-5f96" hidden="true">

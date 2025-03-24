@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7bb3-81d1-72cc-ea89" name="Slaves to Darkness - Tribes of the Snow Peaks" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7bb3-81d1-72cc-ea89" name="Slaves to Darkness - Tribes of the Snow Peaks" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="SNOW PEAKS" id="b4c6-30f5-3976-4ed6" hidden="false"/>
     <categoryEntry name="Oathsworn" id="6a00-8623-4e06-55ca" hidden="false"/>
@@ -204,6 +204,18 @@
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="b2bb-906a-d90e-2fce"/>
+        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="2cbe-b380-e76c-5567">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ecb-207e-8c19-2026"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Paths" id="6709-9100-c776-b6a6" hidden="true">
