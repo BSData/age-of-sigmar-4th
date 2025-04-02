@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7dd9-f3c9-349a-1f6a" name="Skaven - Thanquol&apos;s Mutated Menagerie" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7dd9-f3c9-349a-1f6a" name="Skaven - Thanquol&apos;s Mutated Menagerie" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Thanquol&apos;s Mutated Menagerie" hidden="false" id="c4ae-1c0b-4448-f38c" publicationId="ff83-b049-91b9-ed05">
       <profiles>
@@ -269,7 +269,7 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
     </entryLink>
     <entryLink import="true" name="Master Moulder" hidden="false" id="112a-1f51-0fd8-608e" type="selectionEntry" targetId="4b86-5244-fe24-99c6">
       <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="fcf6-ba92-e2d2-a5e1"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="1bed-cf7a-41f3-d018"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -278,6 +278,13 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="448f-205a-0890-fa6d" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -294,6 +301,21 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
       <categoryLinks>
         <categoryLink name="MUTATED MENAGERIE" hidden="false" id="b99f-93d4-b3cf-818a" targetId="420f-2e14-2ae1-222c" primary="false"/>
       </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="45a0-8569-62b0-1882" field="category"/>
+            <modifier type="set" value="0" field="1bed-cf7a-41f3-d018">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="45a0-8569-62b0-1882" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Master Moulder" hidden="false" id="4e5b-35f2-a619-9427" type="selectionEntry" targetId="4b86-5244-fe24-99c6">
       <categoryLinks>
@@ -505,5 +527,6 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
   </selectionEntries>
   <categoryEntries>
     <categoryEntry name="MUTATED MENAGERIE" id="420f-2e14-2ae1-222c" hidden="false"/>
+    <categoryEntry name="Skaven Overclaw" id="45a0-8569-62b0-1882" hidden="false"/>
   </categoryEntries>
 </catalogue>
