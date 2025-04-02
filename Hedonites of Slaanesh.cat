@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Hedonites of Slaanesh - Library" id="253b-dcd3-c7aa-eab" targetId="34e0-2290-e185-efd2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fbec-3fce-0906-d052" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -13,8 +13,8 @@
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round (Army), Start of Battle Round</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Hedonites of Slaanesh units to be the targets.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The targets have the **^^Euphoric^^** keyword for the rest of the battle round.
-In addition, for each friendly unit you pick, give your opponent 1 temptation dice. Your opponent can use 1 temptation dice to replace 1 wound roll, 1 save roll, 1 ward roll or 1 run roll for a unit in their army with a 6, or they can use 2 temptation dice to replace 2 of the dice in a charge roll for a unit in their army with two 6s.
-
+In addition, for each friendly unit you pick, give your opponent 1 temptation dice. During this battle round,
+instead of making a wound roll, save roll, ward roll or run roll, your opponent can use 1 temptation dice to replace the roll they would have made with a 6, or instead of making a charge roll they can use 2 temptation dice to replace 2 of the dice in a charge roll with two 6s (other dice could then be rolled normally). Rolls that have been replaced count as unmodified rolls and cannot be re-rolled. You cannot use temptation dice to replace a re-roll.
 Each time your opponent uses a **temptation dice**, they must roll it. On a 1-2, your opponent’s roll is replaced by that value instead of a 6, and you must allocate D3 damage points to the unit for which the roll was replaced immediately after the ability used by that unit has been resolved (ward rolls cannot be made for those damage points).
 At the end of the battle round, any temptation dice that have not been used are lost.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -688,7 +688,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="66dc-f192-3254-fd2e"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="490"/>
+        <cost name="pts" typeId="points" value="460"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0eac-1bb4-b397-956c" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -767,7 +767,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="1ce7-f4ab-ef26-a604"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1021,7 +1021,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <categoryLink name="Regimental Leader" hidden="false" id="f233-a1a9-f1e7-9f3f" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="490"/>
+        <cost name="pts" typeId="points" value="460"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="90c9-926e-8d5c-5e4b" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1046,7 +1046,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <categoryLink name="Regimental Leader" hidden="false" id="d221-1186-c36f-bb27" targetId="d1f3-921c-b403-1106" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3289-4f66-d1e4-478a" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1161,7 +1161,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Daemonettes" hidden="false" id="8f2a-872-df1d-6c55" type="selectionEntry" targetId="73f4-30e5-20b1-cf47">
@@ -1203,33 +1203,6 @@ At the end of the battle round, any temptation dice that have not been used ar
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="8688-2643-83b9-5c55">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="2" field="selections" scope="force" childId="dc0b-e417-51f4-10f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8688-2643-83b9-5c55"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
@@ -1315,33 +1288,6 @@ At the end of the battle round, any temptation dice that have not been used ar
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="5340-591b-cb2c-1a6e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="2" field="selections" scope="force" childId="dc0b-e417-51f4-10f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="5340-591b-cb2c-1a6e"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
@@ -1384,33 +1330,6 @@ At the end of the battle round, any temptation dice that have not been used ar
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="3705-7124-4148-45a0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="2" field="selections" scope="force" childId="dc0b-e417-51f4-10f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3705-7124-4148-45a0"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
       </costs>
@@ -1503,33 +1422,6 @@ At the end of the battle round, any temptation dice that have not been used ar
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="8550-ff9d-9815-bbcb">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="2" field="selections" scope="force" childId="dc0b-e417-51f4-10f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8550-ff9d-9815-bbcb"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
       </costs>
@@ -1574,33 +1466,6 @@ At the end of the battle round, any temptation dice that have not been used ar
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="c154-b639-514-ef3b">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="2" field="selections" scope="force" childId="dc0b-e417-51f4-10f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="c154-b639-514-ef3b"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
@@ -1889,33 +1754,6 @@ At the end of the battle round, any temptation dice that have not been used ar
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="76f8-2fd5-a6e2-01d6">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="2" field="selections" scope="force" childId="dc0b-e417-51f4-10f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="76f8-2fd5-a6e2-01d6"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
       </costs>

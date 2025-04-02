@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="17" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="18" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -1130,7 +1130,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="420" field="points"/>
+            <modifier type="set" value="400" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f84c-54f8-18a5-b266" targetId="6e72-1656-d554-528a"/>
@@ -1215,7 +1215,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="260" field="points"/>
+            <modifier type="set" value="240" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="8ee8-2017-b724-846e" targetId="6e72-1656-d554-528a"/>
@@ -1255,7 +1255,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="500" field="points"/>
+            <modifier type="set" value="470" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7fe7-f73d-b26d-a8af" targetId="6e72-1656-d554-528a"/>
@@ -1336,7 +1336,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="350" field="points"/>
+            <modifier type="set" value="330" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="3579-d1fa-943-d349" targetId="6e72-1656-d554-528a"/>
@@ -1531,7 +1531,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="540" field="points"/>
+            <modifier type="set" value="530" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="bcb1-457b-848f-c1e8" targetId="6e72-1656-d554-528a"/>
@@ -1604,7 +1604,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="520" field="points"/>
+            <modifier type="set" value="480" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="bd49-173-e545-22ca" targetId="6e72-1656-d554-528a"/>
@@ -1814,7 +1814,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="660" field="points"/>
+            <modifier type="set" value="640" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7e1d-2d49-c0bf-c9db" targetId="6e72-1656-d554-528a"/>
@@ -1849,7 +1849,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="240" field="points"/>
+            <modifier type="set" value="220" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="4f07-d6ca-f0a6-e9a7" targetId="6e72-1656-d554-528a"/>
@@ -2038,7 +2038,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="450" field="points"/>
+            <modifier type="set" value="390" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="1292-c42e-03b0-c66d" targetId="6e72-1656-d554-528a"/>
@@ -2118,7 +2118,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="400" field="points"/>
+            <modifier type="set" value="370" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f488-c524-0d99-3b6a" targetId="6e72-1656-d554-528a"/>
@@ -2192,7 +2192,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="270" field="points"/>
+            <modifier type="set" value="260" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="803e-4331-f6e4-3d9c" targetId="6e72-1656-d554-528a"/>
@@ -2235,7 +2235,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="510" field="points"/>
+            <modifier type="set" value="490" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="9205-5836-6095-0576" targetId="6e72-1656-d554-528a"/>
@@ -2283,7 +2283,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="460" field="points"/>
+            <modifier type="set" value="430" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="32b6-c130-fc1a-107e" targetId="6e72-1656-d554-528a"/>
@@ -2321,7 +2321,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="310" field="points"/>
+            <modifier type="set" value="280" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="a6a2-c1e5-dcde-9f47" targetId="6e72-1656-d554-528a"/>
@@ -2464,7 +2464,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="180" field="points"/>
+            <modifier type="set" value="140" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="4622-6c6a-58d5-922b" targetId="6e72-1656-d554-528a"/>
@@ -2516,7 +2516,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="250" field="points"/>
+            <modifier type="set" value="230" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f2aa-f314-9499-dfe1" targetId="6e72-1656-d554-528a"/>
@@ -5601,10 +5601,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     </profile>
     <profile name="Guarded Hero" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3bc-444a-5cf8-e4d">
       <characteristics>
-        <characteristic name="Keywords" id="cdcb-f0cb-cb2d-ce31" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-        <characteristic name="Effect" id="8afb-4433-8be4-c89c" hidden="false" typeId="fd7f-888d-3257-a12b">If this **^^Hero^^** is within the combat range of a friendly unit that is not a **^^Hero^^**:
+        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this **^^Hero^^** is within the combat range of a friendly unit that is not a **^^Hero^^**:
 • Subtract 1 from hit rolls for shooting attacks that target this Hero.
-• If this **^^Hero^^** is **^^Infantry^^**, they cannot be picked as the target of shooting attacks made by units more than 12&quot; from them.</characteristic>
+• If this **^^Hero^^** is **^^Infantry^^**, they cannot be picked as the target of shooting attacks made by models more than 12&quot; from them.</characteristic>
       </characteristics>
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -5764,7 +5764,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Prized Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ad6-dccc-c9b9-dabc">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** that is not reinforced and that is in, but not leading, a regiment to be that regiment’s **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** that has not been reinforced and that is in, but not leading, a regiment to be that regiment’s **honour guard**. You can pick a unit in reserve.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit can ignore the effects of the ‘Battle Damaged’ ability. In addition, add 1 to hit rolls for combat attacks made by the **honour guard**. This ability also affects Companion weapons.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -5811,7 +5811,7 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9544-4cf1-ff08-53c3"/>
       </constraints>
       <rules>
-        <rule name="" id="5202-75df-1d9a-9f02" hidden="false">
+        <rule id="5202-75df-1d9a-9f02" hidden="false">
           <description>Hides core rule abilities (e.g. &apos;Fly&apos; and &apos;Ward Save&apos;) from displaying on warscrolls.</description>
         </rule>
       </rules>

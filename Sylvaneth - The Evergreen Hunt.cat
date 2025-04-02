@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="EVERGREEN HUNT" id="637b-b903-6980-34cf" hidden="false"/>
+    <categoryEntry name="Forest Sentinel" id="121e-0fc2-daa6-2e08" hidden="false"/>
   </categoryEntries>
   <entryLinks>
     <entryLink import="true" name="Belthanos, First Thorn of Kurnoth" hidden="false" id="b7ec-4c14-ea1a-17bb" type="selectionEntry" targetId="f6f4-66ce-c346-42ed">
@@ -59,6 +60,13 @@
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
               </conditions>
@@ -66,6 +74,24 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="d6ab-f930-ffde-61f6"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="121e-0fc2-daa6-2e08" field="category"/>
+            <modifier type="set" value="0" field="d6ab-f930-ffde-61f6">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="121e-0fc2-daa6-2e08" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Arch-Revenant" hidden="false" id="258e-8efe-5dc1-683a" type="selectionEntry" targetId="c21d-479c-e8ef-b406">
       <constraints>
