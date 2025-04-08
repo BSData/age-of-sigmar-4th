@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1ed8-2e23-1563-c119" name="Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Neferata, Mortarch of Blood" hidden="true" id="69dd-9ab3-ca73-65c" type="selectionEntry" targetId="ca26-c079-31bc-38a8">
       <constraints>
@@ -208,7 +208,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="775b-51d7-ecf0-d1b8" type="selectionEntryGroup" targetId="592c-d2b8-c3fb-73ff"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Grave Guard" hidden="true" id="60ed-b279-9ea2-9c41" type="selectionEntry" targetId="2485-5204-885a-9d5c">
+    <entryLink import="true" name="Barrow Guard" hidden="true" id="60ed-b279-9ea2-9c41" type="selectionEntry" targetId="2485-5204-885a-9d5c">
       <constraints>
         <constraint type="min" value="0" field="selections" scope="force" shared="true" id="7a6-c044-93d9-fb34"/>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6c2-4a93-33f2-e9e7"/>
@@ -1318,7 +1318,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="47fd-03aa-4ec8-36a9" type="selectionEntryGroup" targetId="592c-d2b8-c3fb-73ff"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Black Knights" hidden="true" id="c78d-cbc8-dc83-585" type="selectionEntry" targetId="83ee-18f8-249d-5fac">
+    <entryLink import="true" name="Barrow Knights" hidden="true" id="c78d-cbc8-dc83-585" type="selectionEntry" targetId="83ee-18f8-249d-5fac">
       <constraints>
         <constraint type="min" value="0" field="selections" scope="force" shared="true" id="2588-e40d-3c10-dfcc"/>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="63f6-4096-ff55-6f80"/>
@@ -2494,6 +2494,49 @@
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Revenant Draconith" hidden="false" id="b78f-e885-5db7-5517" type="selectionEntry" targetId="103c-9945-644a-361c">
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="1eb5-dace-2ddf-89e6" type="selectionEntryGroup" targetId="1a3f-5432-a929-6cb8"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="375b-29a3-6717-1d81" type="selectionEntryGroup" targetId="592c-d2b8-c3fb-73ff"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="c674-e46c-df56-017c"/>
+            <modifier type="set" value="1" field="9a2b-8924-4b23-215c"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="6e65-4c2e-132e-4c1e" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9a2b-8924-4b23-215c"/>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="c674-e46c-df56-017c"/>
+      </constraints>
+    </entryLink>
+    <entryLink import="true" name="Blades of the Hollow King" hidden="false" id="130f-bca9-e412-6464" type="selectionEntry" targetId="1ec0-40be-254d-d7a2">
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="33c1-9baf-79c7-f6c4" type="selectionEntryGroup" targetId="592c-d2b8-c3fb-73ff"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="1" field="e7c2-8e05-ae85-fd1d"/>
+            <modifier type="set" value="1" field="83c1-78dc-60ed-68ec"/>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="26c8-fdae-c6b6-e347" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="83c1-78dc-60ed-68ec"/>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="e7c2-8e05-ae85-fd1d"/>
+      </constraints>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
@@ -4648,6 +4691,66 @@ Add 1 to wound rolls for units in this Regiment of Renown while they are contest
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="9e33-089d-2367-ec3a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Regiment of Renown: The Beast of Castle Sterneiste" hidden="true" id="1aca-f058-8928-7317" defaultAmount="0" publicationId="e3a0-cfae-cbb3-0215">
+      <categoryLinks>
+        <categoryLink name="Reference" hidden="false" id="1776-144a-8d11-3b3d" targetId="3360-1158-e879-9606" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="af65-0063-49a5-4405"/>
+      </constraints>
+      <profiles>
+        <profile name="Deathless Monstrosity" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d833-8937-5a19-f90e">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (3)** this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="6e65-4c2e-132e-4c1e" shared="true" includeChildForces="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Blades of the Hollow King" hidden="true" id="af08-07a2-a744-868a" defaultAmount="0" publicationId="e3a0-cfae-cbb3-0215">
+      <categoryLinks>
+        <categoryLink name="Reference" hidden="false" id="2e8c-e815-2680-9ff0" targetId="3360-1158-e879-9606" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="13ac-df86-84f5-fd52"/>
+      </constraints>
+      <profiles>
+        <profile name="The Hunger" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f3a3-55f7-83be-c237">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit used a **^^Fight^^** ability this turn, **Heal (D3)** this unit. **Heal (2D3)** this unit instead if it destroyed an enemy unit this turn using a **^^Fight^^** ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="26c8-fdae-c6b6-e347" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
