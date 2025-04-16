@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="874b-f2c3-6829-7c1c" name="Stormcast Eternals - Draconith Skywing" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="874b-f2c3-6829-7c1c" name="Stormcast Eternals - Draconith Skywing" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Draconith Skywing" hidden="false" id="c858-458e-9b28-569e">
       <profiles>
@@ -427,6 +427,49 @@
       <costs>
         <cost name="pts" typeId="points" value="330"/>
       </costs>
+    </entryLink>
+    <entryLink import="true" name="Stormdrake Guard" hidden="false" id="12b2-86a1-e20a-3e92" type="selectionEntry" targetId="4fcf-b770-62ff-9013">
+      <modifiers>
+        <modifier type="set" value="Stormdrake Guard (1 model)" field="name"/>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="384a-a6a3-4bec-40f4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="dc76-6b67-a910-9f4f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="afab-36d9-2dc4-b1d4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="15eb-af56-e00c-c21f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="fdbf-06a1-9829-be4b">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="c554-7658-5c9d-663c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="15eb-af56-e00c-c21f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Undersize Unit" hidden="false" id="05dc-f69d-4588-6abe" targetId="c461-2ebb-5bbc-81a2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bcd2-b64b-0167-e094" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7626-0fac-2e67-2e43" type="selectionEntryGroup" targetId="205e-1673-7c4f-cb81"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="fdbf-06a1-9829-be4b"/>
+      </constraints>
     </entryLink>
   </entryLinks>
   <categoryEntries>

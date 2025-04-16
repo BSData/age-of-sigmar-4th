@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="9fb4-c9d6-3da7-5b5d" name="Gloomspite Gitz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="9fb4-c9d6-3da7-5b5d" name="Gloomspite Gitz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Dankhold Troggoth" hidden="false" id="9be3-6dc9-3f14-4553" publicationId="a395-7bc4-71eb-46df">
       <profiles>
@@ -5776,11 +5776,11 @@ are in combat with this unit.
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Anvil of Apotheosis: Grot Hero" hidden="false" id="3ffe-7c86-f14a-985e" publicationId="a395-7bc4-71eb-46df" flatten="false" collapsible="true">
+    <selectionEntry type="unit" import="true" name="Anvil of Apotheosis: Grot Hero" hidden="true" id="3ffe-7c86-f14a-985e" publicationId="a395-7bc4-71eb-46df" flatten="false" collapsible="true">
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Anvil of Apotheosis: Grot Hero" hidden="false" id="223f-6437-7b46-dac6">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Boss Weapon" hidden="true" id="c992-0901-2bd7-b789">
+            <selectionEntry type="upgrade" import="true" name="Boss Weapon" hidden="false" id="c992-0901-2bd7-b789">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64b0-a550-c7df-ca18"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb0-b182-77d9-6caa"/>
@@ -6108,6 +6108,12 @@ are in combat with this unit.
         <modifier type="add" value="Destiny point limit exceeded." field="error">
           <conditions>
             <condition type="lessThan" value="0" field="bc33-05f5-8d3f-af43" scope="self" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="9baf-c109-f621-e60" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6815,7 +6821,7 @@ are in combat with this unit.
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7aac-3075-a326-4553" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Anvil of Apotheosis: Troggoth Hero" hidden="false" id="1d2f-efe8-1248-f74c" publicationId="a395-7bc4-71eb-46df" flatten="false" collapsible="true">
+    <selectionEntry type="unit" import="true" name="Anvil of Apotheosis: Troggoth Hero" hidden="true" id="1d2f-efe8-1248-f74c" publicationId="a395-7bc4-71eb-46df" flatten="false" collapsible="true">
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Anvil of Apotheosis: Troggoth Hero" hidden="false" id="f8e9-fd55-fd1c-caf7">
           <selectionEntries>
@@ -6919,6 +6925,12 @@ are in combat with this unit.
         <modifier type="add" value="Destiny point limit exceeded." field="error">
           <conditions>
             <condition type="lessThan" value="0" field="bc33-05f5-8d3f-af43" scope="self" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="9baf-c109-f621-e60" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>

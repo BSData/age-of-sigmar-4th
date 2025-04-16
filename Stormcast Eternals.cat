@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1bd9-ad7d-68ee-3b53" name="Stormcast Eternals" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1bd9-ad7d-68ee-3b53" name="Stormcast Eternals" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Battle Traits: Stormcast Eternals" hidden="false" id="110e-c1a4-3308-11e" type="selectionEntry" targetId="a879-ee03-b626-8099"/>
     <entryLink import="true" name="Astreia Solbright" hidden="false" id="f3cb-d85b-abef-6134" type="selectionEntry" targetId="9fa1-9540-6069-3c75">
@@ -2065,6 +2065,14 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1781-b3fc-9002-b3de" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="74ac-b5df-2d42-eadb" shared="true"/>
                   </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="64df-1a09-e8fb-10da" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3a8d-b40d-5bdc-8591" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </conditionGroup>
@@ -3923,6 +3931,12 @@
           </conditionGroups>
         </modifier>
         <modifier type="set" value="Stormdrake Guard (1 model)" field="name"/>
+        <modifier type="increment" value="1" field="7cdb-c3e1-45af-73cc">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="ab7e-0ae7-abe0-4b0f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="bb4b-15dc-7f74-7139" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -3934,6 +3948,9 @@
         <entryLink import="true" name="Paths" hidden="false" id="9cdf-81b8-40bb-e1b6" type="selectionEntryGroup" targetId="4011-7bbc-1eeb-3ae1"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0730-7d82-c355-aead" type="selectionEntryGroup" targetId="148c-ca2b-6414-7eca"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7cdb-c3e1-45af-73cc"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Vanguard-Palladors with Shock Handaxes" hidden="false" id="06dc-0524-9216-13fd" type="selectionEntry" targetId="2d01-fd48-55af-dc1c">
       <modifiers>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="19" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="20" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -697,6 +697,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1052,6 +1064,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1084,7 +1108,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="450" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="a3b0-4efe-c915-d477" targetId="6e72-1656-d554-528a"/>
@@ -1098,6 +1121,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="460b-b59c-1dd7-cd30"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="450"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Bundo Whalebiter" hidden="true" id="fb09-ac57-e70e-716d">
           <modifiers>
@@ -1130,7 +1157,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="400" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f84c-54f8-18a5-b266" targetId="6e72-1656-d554-528a"/>
@@ -1144,6 +1170,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="68d9-7ef1-a7fb-c64"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="400"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="One-eyed Grunnock" hidden="true" id="733b-7b81-c2b-b772">
           <modifiers>
@@ -1175,7 +1205,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="410" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="8685-9de-c6ef-2523" targetId="6e72-1656-d554-528a"/>
@@ -1189,6 +1218,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e26-37d5-4fca-7962"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="410"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Elthwin&apos;s Thorns" hidden="true" id="e484-c06-d856-2921">
           <modifiers>
@@ -1215,7 +1248,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="240" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="8ee8-2017-b724-846e" targetId="6e72-1656-d554-528a"/>
@@ -1229,6 +1261,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f19c-90de-65b2-c65a"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="240"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Fjori&apos;s Flamebearers" hidden="true" id="a723-1314-55da-86d8">
           <modifiers>
@@ -1255,7 +1291,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="470" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7fe7-f73d-b26d-a8af" targetId="6e72-1656-d554-528a"/>
@@ -1269,6 +1304,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3023-e024-f7db-3f78"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="470"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Gotrek Gurnisson" hidden="true" id="d72a-3662-14bd-40d9">
           <modifiers>
@@ -1296,7 +1335,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="340" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="8186-47c2-454e-6ab" targetId="6e72-1656-d554-528a"/>
@@ -1310,6 +1348,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9b07-6873-f1a1-6c62"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="340"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Norgrimm&apos;s Rune Throng" hidden="true" id="c7eb-8e6c-a032-4e04">
           <modifiers>
@@ -1336,7 +1378,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="330" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="3579-d1fa-943-d349" targetId="6e72-1656-d554-528a"/>
@@ -1350,6 +1391,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a7ba-9df1-f27-c0fd"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="330"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Saviors of Cinderfall" hidden="true" id="4585-a85c-ebec-6527">
           <modifiers>
@@ -1376,7 +1421,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="270" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7031-2636-76a3-57c2" targetId="6e72-1656-d554-528a"/>
@@ -1390,6 +1434,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9472-695c-5dcc-5240"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="270"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Blacktalons" hidden="true" id="bced-df96-fcc3-5cf6">
           <modifiers>
@@ -1416,7 +1464,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="320" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f9c8-1455-d9b9-6c09" targetId="6e72-1656-d554-528a"/>
@@ -1430,6 +1477,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c62-3fea-f7bc-a32a"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="320"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Brand&apos;s Oathbound" hidden="true" id="f8bf-3c82-73dc-a7e8">
           <modifiers>
@@ -1454,7 +1505,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="250" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="a112-42a2-e538-93af" targetId="6e72-1656-d554-528a"/>
@@ -1468,6 +1518,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4366-39e7-7d0c-c0fc"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="250"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Hargax&apos;s Pit-beasts" hidden="true" id="1339-980d-ee74-fe0b">
           <modifiers>
@@ -1492,7 +1546,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="460" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f94f-e787-ec3-f604" targetId="6e72-1656-d554-528a"/>
@@ -1506,6 +1559,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50d4-e21f-abdc-6bc2"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="460"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Phulgoth&apos;s Shudderhood" hidden="true" id="69d0-b9be-62a8-5ae4">
           <modifiers>
@@ -1531,7 +1588,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="530" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="bcb1-457b-848f-c1e8" targetId="6e72-1656-d554-528a"/>
@@ -1545,6 +1601,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2be7-dd4e-a7f6-f713"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="530"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Coven of Thryx" hidden="true" id="6f98-8771-7752-c86e">
           <modifiers>
@@ -1569,7 +1629,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="280" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="b6fc-628-32b0-c4a1" targetId="6e72-1656-d554-528a"/>
@@ -1583,6 +1642,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="34dd-ac54-5b14-27f1"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Jerrion&apos;s Delegation" hidden="true" id="b0c-f2cd-9cc3-8b9f">
           <modifiers>
@@ -1604,7 +1667,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="480" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="bd49-173-e545-22ca" targetId="6e72-1656-d554-528a"/>
@@ -1618,6 +1680,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8da8-fbab-6bd6-abe3"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="480"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Neferata&apos;s Royal Echelon" hidden="true" id="e071-126a-fb3e-1462">
           <modifiers>
@@ -1639,7 +1705,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="760" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="71b-f035-48e1-4a6e" targetId="6e72-1656-d554-528a"/>
@@ -1653,6 +1718,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d8b8-2c69-bc1-31b"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="760"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Scions of the Necropolis" hidden="true" id="4790-92d-f8a7-bd55">
           <modifiers>
@@ -1674,7 +1743,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="810" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="476b-c364-9177-c0e" targetId="6e72-1656-d554-528a"/>
@@ -1688,6 +1756,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7dfa-3068-7c98-4d8d"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="810"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Liche&apos;s Hand" hidden="true" id="9136-a422-571c-c77c">
           <modifiers>
@@ -1709,7 +1781,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="830" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="3e32-2d98-365a-2078" targetId="6e72-1656-d554-528a"/>
@@ -1723,6 +1794,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cfc3-8787-6bce-c464"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="830"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Sorrowmourn Choir" hidden="true" id="60b7-2797-5b4-8101">
           <modifiers>
@@ -1744,7 +1819,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="590" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="d8b0-9a55-da81-74c1" targetId="6e72-1656-d554-528a"/>
@@ -1758,6 +1832,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aa54-3175-5564-1f2"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="590"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Sterneiste Garrison" hidden="true" id="9030-4036-8c77-84e5">
           <modifiers>
@@ -1779,7 +1857,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="700" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="dc85-4afa-e200-8b30" targetId="6e72-1656-d554-528a"/>
@@ -1793,6 +1870,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fdd-7b45-c8ce-fe87"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="700"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Summerking&apos;s Entourage" hidden="true" id="de70-1b54-66b4-c010">
           <modifiers>
@@ -1814,7 +1895,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="640" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="7e1d-2d49-c0bf-c9db" targetId="6e72-1656-d554-528a"/>
@@ -1828,6 +1908,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7990-a802-c965-ffe7"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="640"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Veremord&apos;s Shamblers" hidden="true" id="c43c-4ed-d97a-b72">
           <modifiers>
@@ -1849,7 +1933,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="220" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="4f07-d6ca-f0a6-e9a7" targetId="6e72-1656-d554-528a"/>
@@ -1863,6 +1946,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="117f-4b0e-399d-721c"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="220"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Odo Godswallow" hidden="true" id="8a04-83ad-bc2-5354">
           <modifiers>
@@ -1886,7 +1973,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="420" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="c7cd-5b3a-d3bb-4244" targetId="6e72-1656-d554-528a"/>
@@ -1900,6 +1986,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4885-bc5e-c59a-7223"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="420"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Big Grikk&apos;s Kruleshots" hidden="true" id="a11c-1f80-1875-4639">
           <modifiers>
@@ -1923,7 +2013,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="340" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="564c-894d-539-47e0" targetId="6e72-1656-d554-528a"/>
@@ -1937,6 +2026,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="64d3-d983-dea8-ebb0"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="340"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Braggit&apos;s Bottle-snatchaz" hidden="true" id="d704-19f-a3d0-5edd">
           <modifiers>
@@ -1960,7 +2053,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="490" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="476f-ca8b-f28d-1ec3" targetId="6e72-1656-d554-528a"/>
@@ -1974,6 +2066,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fcf-10cf-9ed9-1e32"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="490"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Volt-Klaw&apos;s Enginecoven" id="ffc1-e2cb-f2f0-f72e" hidden="true">
           <modifiers>
@@ -1999,7 +2095,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="460" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="1edd-86b5-ea3f-1e46" targetId="6e72-1656-d554-528a"/>
@@ -2013,6 +2108,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2e45-3a6a-05b4-b79b"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="460"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Krittok&apos;s Clawpack" id="d0d8-3ec6-4b57-16fd" hidden="true">
           <modifiers>
@@ -2038,7 +2137,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="390" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="1292-c42e-03b0-c66d" targetId="6e72-1656-d554-528a"/>
@@ -2052,6 +2150,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a43e-09a8-7e6f-cab9"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="390"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Horizon Seekers" id="435e-269e-899d-3f7e" hidden="true">
           <modifiers>
@@ -2078,7 +2180,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="500" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="5671-f848-b9a7-5c77" targetId="6e72-1656-d554-528a"/>
@@ -2092,6 +2193,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a5b3-923e-02d4-49c1"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="500"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Valnir&apos;s Stormwing" id="2eec-326e-528c-8473" hidden="true">
           <modifiers>
@@ -2118,7 +2223,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="370" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f488-c524-0d99-3b6a" targetId="6e72-1656-d554-528a"/>
@@ -2132,6 +2236,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d0d-3a5b-4950-186d"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="370"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Lord Skaldior&apos;s Chosen" id="ba3f-fa41-97d3-2c0f" hidden="true">
           <modifiers>
@@ -2156,7 +2264,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="570" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="d39d-963d-9ecf-d372" targetId="6e72-1656-d554-528a"/>
@@ -2170,6 +2277,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0294-85f5-4e7e-f710"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="570"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Godmarked Ascendant" id="ab5a-af59-e05f-2daa" hidden="true">
           <modifiers>
@@ -2192,7 +2303,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="260" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="803e-4331-f6e4-3d9c" targetId="6e72-1656-d554-528a"/>
@@ -2206,6 +2316,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d1c-194a-313c-e5ba"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="260"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Enforcers of the Tithe" id="162a-f77e-f5f8-041b" hidden="true">
           <modifiers>
@@ -2235,7 +2349,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="490" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="9205-5836-6095-0576" targetId="6e72-1656-d554-528a"/>
@@ -2249,6 +2362,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="431c-3420-7622-eb2e"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="490"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Exile Scavengers" id="c09c-6726-db25-549b" hidden="true">
           <modifiers>
@@ -2283,7 +2400,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="430" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="32b6-c130-fc1a-107e" targetId="6e72-1656-d554-528a"/>
@@ -2297,6 +2413,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2dbd-ac50-222b-82ed"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="430"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Squires of the Everchosen" id="2b2d-a5c6-4595-5468" hidden="true">
           <modifiers>
@@ -2321,7 +2441,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="280" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="a6a2-c1e5-dcde-9f47" targetId="6e72-1656-d554-528a"/>
@@ -2335,6 +2454,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3886-43b0-7f50-2261"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Lost-Song Spirits" id="147d-a572-a516-94c5" hidden="true">
           <modifiers>
@@ -2358,7 +2481,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="430" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="4fbe-4a61-c575-dbe0" targetId="6e72-1656-d554-528a"/>
@@ -2372,6 +2494,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9bb9-3027-f399-60aa"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="430"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Nurgle&apos;s Gift" id="0fec-ccda-3904-c0ce" hidden="true">
           <modifiers>
@@ -2407,7 +2533,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="180" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="3946-d754-546d-4691" targetId="6e72-1656-d554-528a"/>
@@ -2421,6 +2546,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d3f-efcf-1663-e3cd"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="180"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Stumblefoot Gargant" id="e974-53fd-481c-5345" hidden="true">
           <modifiers>
@@ -2464,7 +2593,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="140" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="4622-6c6a-58d5-922b" targetId="6e72-1656-d554-528a"/>
@@ -2478,6 +2606,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca64-ad20-9945-3e9f"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="140"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Snerk&apos;s Trogg-fer-Hire" id="9d39-ae0e-afc9-f982" hidden="true">
           <modifiers>
@@ -2516,7 +2648,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="230" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="f2aa-f314-9499-dfe1" targetId="6e72-1656-d554-528a"/>
@@ -2530,6 +2661,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a28a-3566-79e0-41b8"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="230"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Goroan Scions" id="d7f8-513c-ea3d-bc9e" hidden="true">
           <modifiers>
@@ -2554,7 +2689,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="470" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="4f1e-5e90-0df6-c8c5" targetId="6e72-1656-d554-528a"/>
@@ -2568,6 +2702,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9480-14d5-5092-6179"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="470"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Da Hurtlin&apos; Hogz" id="3cd2-b31b-43c8-e42c" hidden="true">
           <modifiers>
@@ -2591,7 +2729,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="420" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="3e44-1c41-8653-64ac" targetId="6e72-1656-d554-528a"/>
@@ -2605,6 +2742,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c50-db58-c938-1aab"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="420"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Da Kountin&apos; Krew" id="1d9c-5fbb-bb1e-bdb8" hidden="true">
           <modifiers>
@@ -2627,7 +2768,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="360" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="5f10-a6ec-d102-7512" targetId="6e72-1656-d554-528a"/>
@@ -2641,6 +2781,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e98f-84e8-4faf-1d69"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="360"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Shinestealaz" id="11e8-d326-7125-4e5e" hidden="true">
           <modifiers>
@@ -2663,7 +2807,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="500" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="6a3b-3b14-a667-b190" targetId="6e72-1656-d554-528a"/>
@@ -2677,6 +2820,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="85f7-a94d-1ed5-ec8f"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="500"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="Skulkrik&apos;s Loonladz" id="2e3e-7081-a0db-9079" hidden="true">
           <modifiers>
@@ -2699,7 +2846,6 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="340" field="points"/>
           </modifiers>
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="de1a-80a9-3e24-aa50" targetId="6e72-1656-d554-528a"/>
@@ -2713,6 +2859,86 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f5c-01bd-679c-9a5d"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="340"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Blades of the Hollow King" id="26c8-fdae-c6b6-e347" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="0bd3-1037-2529-9b9e" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="2f3c-005d-4cd2-5c5f" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="0d83-fa08-be2d-5b00" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="eefe-07ab-7e18-7c03" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="0f39-90c3-ca19-b7a8" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="8e2c-44cd-a40d-cacf" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="a41e-2827-3dd9-af79" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="acf8-e36d-3ec2-e0f9"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Beast of Castle Sterneiste" id="6e65-4c2e-132e-4c1e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="d0d6-6edc-ebc7-aaff" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="5a2b-fef2-2c51-b6b2" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="5a07-50ac-b577-320e" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="c331-076d-1b2d-81c3" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="fd30-c05a-16a3-7df6" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="a938-a3ef-6c6a-aaf6" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="3464-7eb6-382e-93ad" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cbf6-d72a-35f2-a573"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="240"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
       </forceEntries>
       <modifiers>
@@ -3677,6 +3903,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -4018,6 +4256,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4626,6 +4876,18 @@
                           <conditions>
                             <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                             <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="704d-d7c8-b9a9-f8b6" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="a00b-ece9-a93d-7ca4" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="force" childId="3097-36cb-412f-8b60" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5662,6 +5924,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome: Gloomspite Gitz" id="a395-7bc4-71eb-46df" hidden="false"/>
     <publication name="Grotmas Advent Regiments of Renown" id="fdea-639c-1111-eecc" hidden="false"/>
     <publication name="White Dwarf Issue 510" id="f860-3305-c15b-0a52" hidden="false"/>
+    <publication name="Battletome: Soulblight Gravelords" id="e3a0-cfae-cbb3-0215" hidden="false"/>
+    <publication name="Battletome Supplement: Soulblight Gravelords" id="05a6-726c-4748-8360" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
