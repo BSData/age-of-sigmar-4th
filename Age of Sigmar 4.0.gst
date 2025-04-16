@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="19" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="20" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -2864,7 +2864,7 @@
             <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
           </costs>
         </forceEntry>
-        <forceEntry name="Blades of the Hollow Hing" id="26c8-fdae-c6b6-e347" hidden="true">
+        <forceEntry name="Blades of the Hollow King" id="26c8-fdae-c6b6-e347" hidden="true">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -2897,6 +2897,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="acf8-e36d-3ec2-e0f9"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
         <forceEntry name="The Beast of Castle Sterneiste" id="6e65-4c2e-132e-4c1e" hidden="true">
           <modifiers>
@@ -2931,6 +2935,10 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cbf6-d72a-35f2-a573"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="240"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
       </forceEntries>
       <modifiers>
@@ -5917,6 +5925,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Grotmas Advent Regiments of Renown" id="fdea-639c-1111-eecc" hidden="false"/>
     <publication name="White Dwarf Issue 510" id="f860-3305-c15b-0a52" hidden="false"/>
     <publication name="Battletome: Soulblight Gravelords" id="e3a0-cfae-cbb3-0215" hidden="false"/>
+    <publication name="Battletome Supplement: Soulblight Gravelords" id="05a6-726c-4748-8360" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
