@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8aef-b85d-b63a-ef05" name="Kruleboyz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8aef-b85d-b63a-ef05" name="Kruleboyz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="6e0f-e98f-84b6-8188" hidden="false" flatten="true">
       <selectionEntries>
@@ -294,12 +294,18 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="33db-e641-11c0-5b20" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="c013-71e5-02ad-9d39" type="selectionEntryGroup" targetId="bc48-e6c9-dc40-3a92"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="8142-0ccf-c115-fbd0" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -1518,6 +1524,7 @@
     <catalogueLink type="catalogue" name="Kruleboyz - Library" id="a9e8-b9c8-5b5e-f027" targetId="1a85-1d4f-41c-2e19"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="6da2-3038-2b16-ca42" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="f999-b9db-a8ce-285b" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="3c22-03b2-6c78-5b24" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Mob Wrangler" id="29ec-194-ff0b-a96f" hidden="false"/>

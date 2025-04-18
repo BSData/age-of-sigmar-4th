@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d048-1146-2bdf-cf78" name="Gloomspite Gitz - Trugg&apos;s Troggherd" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d048-1146-2bdf-cf78" name="Gloomspite Gitz - Trugg&apos;s Troggherd" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Dankhold Troggboss" hidden="false" id="5e93-9ecb-8c5f-daa" type="selectionEntry" targetId="c1d2-33ca-c5f3-56af">
       <modifiers>
@@ -214,6 +214,7 @@
     <catalogueLink type="catalogue" name="Gloomspite Gitz - Library" id="2137-1d4-2119-2efc" targetId="9fb4-c9d6-3da7-5b5d"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="473d-6984-1657-531a" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="bd61-c1f9-2644-2338" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="e5fc-dcb0-5668-8b59" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="TRUGG&apos;S TROGGHERD" id="d960-e20e-e995-7986" hidden="false"/>
@@ -334,12 +335,18 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="b7e9-f293-c1ab-d856" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="3dbf-329a-0bc1-0b62" type="selectionEntryGroup" targetId="72b1-d243-82e5-278b"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="8d71-0ea0-00db-82b4" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

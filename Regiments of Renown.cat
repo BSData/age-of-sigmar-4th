@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Neferata, Mortarch of Blood" hidden="true" id="69dd-9ab3-ca73-65c" type="selectionEntry" targetId="ca26-c079-31bc-38a8">
       <constraints>
@@ -2576,6 +2576,7 @@
     <catalogueLink type="catalogue" name="Blades of Khorne" id="9ec5-8681-ebce-90bc" targetId="d545-cdca-9e60-ad27"/>
     <catalogueLink type="catalogue" name="Disciples of Tzeentch" id="0681-026c-4aca-f1e5" targetId="d731-9058-b0e5-6ff5"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="882a-f13f-5a85-f3da" targetId="a434-b1ba-922b-7624"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="dd15-fc62-6e75-e234" targetId="3a8b-7496-526f-feab"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Regiment of Renown: The Liche&apos;s Hand" hidden="true" id="d63f-7194-a3af-7a00" defaultAmount="0" publicationId="27d9-b0c5-1ecc-ba2f">
@@ -4807,12 +4808,18 @@ Add 1 to wound rolls for units in this Regiment of Renown while they are contest
     <selectionEntryGroup name="Paths" id="1a3f-5432-a929-6cb8" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="cb8d-0e47-c42d-29f5" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="1db5-d3bb-3873-e1f0" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

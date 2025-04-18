@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="405e-c5f4-8579-b05c" name="Soulblight Gravelords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="405e-c5f4-8579-b05c" name="Soulblight Gravelords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Barrow Knights" hidden="false" id="db78-876a-5fe3-f1be" type="selectionEntry" targetId="83ee-18f8-249d-5fac">
       <modifiers>
@@ -2649,6 +2649,7 @@
     <catalogueLink type="catalogue" name="Soulblight Gravelords - Library" id="9d61-a38b-5735-d973" targetId="dff3-13f8-82b5-3347"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="ae9b-63a9-795a-6836" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="e5b3-3f24-8fc1-d2f2" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="5a51-f38e-09a3-db72" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="913c-af37-4684-2066" hidden="false" flatten="true">
@@ -2924,12 +2925,18 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="4155-834e-3763-240e" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="7a10-225e-8f88-d362" type="selectionEntryGroup" targetId="abc9-d69f-27e3-5345"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="79e0-b383-6663-1ef3" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

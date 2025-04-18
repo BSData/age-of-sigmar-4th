@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="92db-6ef9-6809-9a65" name="Ogor Mawtribes - The Roving Maw" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="92db-6ef9-6809-9a65" name="Ogor Mawtribes - The Roving Maw" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Bloodpelt Hunter" hidden="false" id="429d-7d88-3b7d-e9d7" type="selectionEntry" targetId="a800-1a5b-4097-8f11">
       <entryLinks>
@@ -387,6 +387,7 @@
     <catalogueLink type="catalogue" name="Ogor Mawtribes - Library" id="2343-bad6-c703-f5b3" targetId="9a90-83e7-7a45-6aed"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="ee3d-2a61-54d8-d037" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="25b8-e2a7-889b-9766" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="8016-e606-bede-46d8" targetId="3a8b-7496-526f-feab"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="ROVING MAW" id="91f7-e480-de1d-fb6a" hidden="false"/>
@@ -596,12 +597,18 @@
     <selectionEntryGroup name="Paths" id="21a7-f036-7300-35c7" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="9b03-31aa-08a6-97bb" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="1bff-63df-db7f-fb61" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

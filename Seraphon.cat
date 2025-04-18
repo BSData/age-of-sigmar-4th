@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="4e3-e1a7-a8d4-8719" name="Seraphon" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="4e3-e1a7-a8d4-8719" name="Seraphon" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Seraphon - Library" id="bac9-83e-a88b-8274" targetId="18f-620a-1c2f-b6b2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="bbff-c662-3555-9914" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="50a8-a1a5-8030-e8a8" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="e9b2-6a89-7cb2-f742" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="5eb0-445-d519-2e79" hidden="false">
@@ -297,12 +298,18 @@
     <selectionEntryGroup name="Paths" id="1571-5ff6-d10e-404f" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="e2e4-f0d9-83f1-fe70" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="aba3-3986-17ee-70b3" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

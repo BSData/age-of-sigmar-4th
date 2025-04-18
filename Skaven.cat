@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="231a-2a83-26f0-a718" name="Skaven" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="231a-2a83-26f0-a718" name="Skaven" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Skaven" hidden="false" id="8205-6284-a94b-5c93" publicationId="40f6-9b64-7daa-d1c8">
       <profiles>
@@ -401,12 +401,18 @@ Start of Battle Round</characteristic>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="f369-80c0-31b6-e5d8" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="db02-161d-b2ff-c7fe" type="selectionEntryGroup" targetId="46d6-d6e9-b870-4dfb"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="6eb4-0913-2b71-e2a4" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -418,6 +424,7 @@ Start of Battle Round</characteristic>
     <catalogueLink type="catalogue" name="Skaven - Library" id="9bbe-9b4a-c951-f629" targetId="3cd3-38d3-26cb-7a17"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="1d5e-866b-c926-6ecf" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="7bf9-eb86-f99d-6a6b" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="e474-620b-5adc-65f5" targetId="3a8b-7496-526f-feab"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Skaven Overclaw" id="649-9363-e350-48f4" hidden="false"/>

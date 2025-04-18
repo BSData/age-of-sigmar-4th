@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="BARROW LEGION" id="07ad-5d9a-db7f-270d" hidden="false"/>
     <categoryEntry name="Deathrattle Overseer" id="ca3d-ce07-0388-88b9" hidden="false"/>
@@ -8,6 +8,7 @@
     <catalogueLink type="catalogue" name="❖ Lores" id="b4d1-8e09-bab9-846e" targetId="0a11-cd61-2a4e-8e04"/>
     <catalogueLink type="catalogue" name="Soulblight Gravelords - Library" id="98a4-c922-0746-6bff" targetId="dff3-13f8-82b5-3347"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="ff85-c36a-d114-2498" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="0b5a-66e8-a04b-c399" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Barrow Legion" hidden="false" id="bd82-8424-ed1b-1373" publicationId="e3a0-cfae-cbb3-0215">
@@ -315,12 +316,18 @@ For the rest of the battle, each time an attack targets this unit, if the attack
     <selectionEntryGroup name="Paths" id="9cd2-fcb8-7b92-2889" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="dadf-44fa-3f29-c860" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="a4c3-24c9-c044-dd5e" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

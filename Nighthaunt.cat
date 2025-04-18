@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="f997-403-7b2e-60c6" hidden="false">
       <selectionEntryGroups>
@@ -270,12 +270,18 @@
     <selectionEntryGroup name="Paths" id="b01c-51e0-7c8b-0df5" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="64f7-c71c-62fe-de26" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="213e-963a-4531-762a" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -314,6 +320,7 @@
     <catalogueLink type="catalogue" name="Nighthaunt - Library" id="bfbd-b02e-8ce1-5588" targetId="4ac4-565f-a06e-893"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="6d74-2fcd-273d-ac60" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="22f4-6981-54bb-8697" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="d67e-b4fe-2a02-fe2b" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Nighthaunt" hidden="false" id="53c5-1078-24f5-3301">

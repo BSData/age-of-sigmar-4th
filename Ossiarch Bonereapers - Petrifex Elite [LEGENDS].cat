@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a06d-4e09-7a23-05bf" name="Ossiarch Bonereapers - Petrifex Elite [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a06d-4e09-7a23-05bf" name="Ossiarch Bonereapers - Petrifex Elite [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Petrifex Elite" hidden="false" id="83da-4481-85c2-de45">
       <profiles>
@@ -521,6 +521,7 @@ This unit has **^^Strike-last**^^ for the rest of the turn.</characteristic>
     <catalogueLink type="catalogue" name="Ossiarch Bonereapers - Library" id="df6c-3cea-2558-8159" targetId="3521-1b3c-7fd9-838b"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fdde-79f6-b981-d08d" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="7723-37ab-f10e-1ec8" targetId="0a11-cd61-2a4e-8e04"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="4ded-69b6-ddf1-cb57" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="4dbe-c85e-ab51-12bd" hidden="false">
@@ -670,12 +671,18 @@ This unit has **^^Strike-last**^^ for the rest of the turn.</characteristic>
     <selectionEntryGroup name="Paths" id="ef21-99cd-9877-a39c" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="5e23-eaee-50bd-918b" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="9cef-0758-0f32-867d" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

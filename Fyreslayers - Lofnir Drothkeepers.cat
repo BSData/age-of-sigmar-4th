@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="edc3-d297-701c-6643" name="Fyreslayers - Lofnir Drothkeepers" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="edc3-d297-701c-6643" name="Fyreslayers - Lofnir Drothkeepers" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="Grimnir&apos;s Chosen" id="7dac-ee81-3ae6-61fe" hidden="false"/>
     <categoryEntry name="LOFNIR DROTHKEEPERS" id="a895-7fd3-6fad-5410" hidden="false"/>
@@ -390,6 +390,7 @@
     <catalogueLink type="catalogue" name="Fyreslayers - Library" id="ac6c-1193-1563-3e7f" targetId="c401-2e10-cae8-d7f1"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="8a41-7cdb-7751-d2a7" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="fcfc-b842-04b9-a739" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="8a9f-db71-c13f-13f0" importRootEntries="true" targetId="3a8b-7496-526f-feab"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Lofnir Drothkeepers" hidden="false" id="f65e-5db8-d43d-eba2">
@@ -600,12 +601,18 @@ Remove the targets from the battlefield. After the **^^Magmadroth^^** ends its m
     <selectionEntryGroup name="Paths" id="a3cc-2ffc-2ad0-d9c9" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="89a0-7ae4-61b8-1edd" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="2619-ef92-9f06-ba42" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7bb3-81d1-72cc-ea89" name="Slaves to Darkness - Tribes of the Snow Peaks" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7bb3-81d1-72cc-ea89" name="Slaves to Darkness - Tribes of the Snow Peaks" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="SNOW PEAKS" id="b4c6-30f5-3976-4ed6" hidden="false"/>
     <categoryEntry name="Oathsworn" id="6a00-8623-4e06-55ca" hidden="false"/>
@@ -222,12 +222,18 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="cd85-2631-5110-03e6" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="31c2-8d42-8467-f179" type="selectionEntryGroup" targetId="962b-e74d-8efa-d6ea" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="cc3b-b892-5a40-666c" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -732,6 +738,7 @@
     <catalogueLink type="catalogue" name="Slaves to Darkness - Library" id="a184-5b22-50c8-87e2" targetId="c580-f07a-aa35-f79f"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="c4ff-62bb-e4b7-8b7e" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="ff28-cf06-86c2-6ccb" targetId="0a11-cd61-2a4e-8e04"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="1cf6-223d-1c8e-bd23" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="9e90-540a-a5f6-e6f1" defaultAmount="1">

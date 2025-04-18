@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b53b-1217-df2e-66d2" name="Flesh-eater Courts" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b53b-1217-df2e-66d2" name="Flesh-eater Courts" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Abhorrant Gorewarden" hidden="false" id="f86e-ce03-6074-f700" type="selectionEntry" targetId="3a7-f618-ba4d-9f6f">
       <modifiers>
@@ -1324,9 +1324,9 @@
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Flesh-eater Courts - Library" id="1e12-452f-7d09-cc71" targetId="a6b3-b9f5-ea34-9c96"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="967b-f4fb-522a-6b16" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="d79c-5e87-342f-ddb8" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="994a-380a-280b-f99f" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="ea80-ebb5-3e74-b2ee" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Flesh-eater Noble" id="384d-44d2-465-b82c" hidden="false"/>
@@ -1610,12 +1610,18 @@
     <selectionEntryGroup name="Paths" id="6607-5e8b-dd3c-0e38" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="acc2-208a-2725-d7db" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="1d24-1c9f-3d47-b238" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
