@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="21" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="22" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -4514,7 +4514,7 @@
         <categoryLink name="Configuration" hidden="false" id="0ad8-1348-974d-3643" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="d2ae-5c7d-0dda-8343" targetId="3360-1158-e879-9606"/>
         <categoryLink name="Army Composition" hidden="false" id="dba1-ff7e-38cd-b296" targetId="ac97-b27c-7e35-7ab9"/>
-        <categoryLink name="Order of Battle" hidden="false" id="7387-9b3b-bd7c-6306" targetId="8e18-320c-b5bb-7cc6" type="categoryEntry"/>
+        <categoryLink name="Order of Battle" hidden="false" id="7387-9b3b-bd7c-6306" targetId="8e18-320c-b5bb-7cc6"/>
         <categoryLink name="FACTION TERRAIN" hidden="false" id="1a84-3b80-5b02-3a17" targetId="cdd6-ffa1-9b32-4cb8">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d10b-cafd-2c03-5589"/>
@@ -4522,7 +4522,7 @@
         </categoryLink>
       </categoryLinks>
       <forceEntries>
-        <forceEntry name="Regiment" id="0d30-6c97-95ce-41a5" hidden="true">
+        <forceEntry name="Regiment" id="376a-6b97-8699-dd59" hidden="true">
           <categoryLinks>
             <categoryLink name="Regimental Leader" hidden="false" id="8d68-28fa-0d18-6664" targetId="d1f3-921c-b403-1106">
               <constraints>
@@ -4912,7 +4912,7 @@
             <constraint type="max" value="4" field="selections" scope="self" shared="true" id="28bb-e77e-831d-cfac"/>
           </constraints>
         </forceEntry>
-        <forceEntry name="Auxillary Units" id="4472-3905-8476-b4ae" hidden="true">
+        <forceEntry name="Auxillary Units" id="4063-b3a6-e7e1-383f" hidden="true">
           <categoryLinks>
             <categoryLink name="HERO" hidden="false" id="746a-fa00-b9f1-62a0" targetId="6e72-1656-d554-528a"/>
             <categoryLink name="INFANTRY" hidden="false" id="1300-1085-f7b4-8e9b" targetId="75d6-6995-dfcc-3898"/>
