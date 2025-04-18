@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a00b-ece9-a93d-7ca4" name="Soulblight Gravelords - Knights of the Crimson Keep" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a00b-ece9-a93d-7ca4" name="Soulblight Gravelords - Knights of the Crimson Keep" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Knights of the Crimson Keep" hidden="false" id="be88-5863-24a9-c376" publicationId="e3a0-cfae-cbb3-0215">
       <profiles>
@@ -193,12 +193,18 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
     <selectionEntryGroup name="Paths" id="060e-e5b2-5e43-8757" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="0705-a551-d1f0-1a47" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="6e16-6c96-562e-b9f8" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -225,6 +231,7 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="383d-a921-5033-393e" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Soulblight Gravelords - Library" id="91d2-4315-20f3-92e2" targetId="dff3-13f8-82b5-3347"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="1aef-0b28-d46d-8c4e" targetId="0a11-cd61-2a4e-8e04"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="1151-5bcb-9e33-44f4" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <entryLinks>
     <entryLink import="true" name="Prince Vhordrai" hidden="false" id="6ec4-2075-ca35-8657" type="selectionEntry" targetId="27bd-98bc-4798-170c">
@@ -259,6 +266,8 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="edc7-1fab-58fd-3230" type="selectionEntryGroup" targetId="0041-bfb5-ca47-8827"/>
         <entryLink import="true" name="Paths" hidden="false" id="25af-c28d-0df8-8e42" type="selectionEntryGroup" targetId="abc9-d69f-27e3-5345"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f2ec-cb4a-fb86-726b" type="selectionEntryGroup" targetId="0dc3-325d-f922-28cc"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="4490-0653-1a4f-b4b1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="3771-0e90-e5e1-1c23" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -277,6 +286,8 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6c4f-b3f3-8a05-89b3" type="selectionEntryGroup" targetId="0041-bfb5-ca47-8827"/>
         <entryLink import="true" name="Paths" hidden="false" id="8b92-ae67-a096-2a7a" type="selectionEntryGroup" targetId="abc9-d69f-27e3-5345"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae41-278e-6657-46f9" type="selectionEntryGroup" targetId="0dc3-325d-f922-28cc"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="a703-8bf3-5dab-9370" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="db25-2b7a-3ae1-f3e6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -321,6 +332,7 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="8cb3-793f-c2f9-32de" type="selectionEntryGroup" targetId="abc9-d69f-27e3-5345"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e7e3-6283-8f81-3413" type="selectionEntryGroup" targetId="0dc3-325d-f922-28cc"/>
+        <entryLink import="true" name="Renown" hidden="false" id="fd5f-79ad-3249-488a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="260"/>
@@ -367,6 +379,7 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
         <entryLink import="true" name="Reinforced" hidden="false" id="e155-e5bb-b8b1-e6ae" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="1ac3-473a-91bc-47d6" type="selectionEntryGroup" targetId="abc9-d69f-27e3-5345"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c586-3ddc-111f-9fc8" type="selectionEntryGroup" targetId="0dc3-325d-f922-28cc"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a55f-66bd-8312-90d3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="4631-7997-6da0-7a32" name="Stormcast Eternals - Heroes of the First-Forged" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="4631-7997-6da0-7a32" name="Stormcast Eternals - Heroes of the First-Forged" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="d56b-11b8-0555-b524" hidden="false" flatten="true">
       <selectionEntries>
@@ -155,12 +155,18 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="233a-fa8f-0a63-d22c" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="adbd-cd48-e3b5-e035" type="selectionEntryGroup" targetId="41cf-1cdb-2e91-e686" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="989d-0799-65b6-44be" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -237,6 +243,7 @@
     <catalogueLink type="catalogue" name="Stormcast Eternals - Library" id="4f38-1116-21e9-e9c6" targetId="d96e-14f5-b8ae-ce7a"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="3e1d-4080-db83-e4ca" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="eb9b-17df-e3b4-b535" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="5c82-bdb5-b536-a794" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="0a7a-45fc-3f10-f007" defaultAmount="1">
@@ -309,6 +316,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="1c95-9ea2-f5c6-a218" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e5d7-e01a-7829-dafa" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="5a12-a3c1-1782-b786" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="582b-fa23-3b80-8365" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="FIRST-FORGED" hidden="false" id="1ac0-03de-5e19-d1a1" targetId="5683-b46f-65e6-4b48" primary="false"/>
@@ -362,6 +370,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="8fb8-f1aa-e554-8f58" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="01ee-2702-e2ec-0c01" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="93d4-875f-a078-2eb1" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="df2a-7136-0062-ebda" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="FIRST-FORGED" hidden="false" id="f81d-5795-eec0-c41a" targetId="5683-b46f-65e6-4b48" primary="false"/>
@@ -630,6 +639,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="dbec-44da-ad18-2416" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ab7f-2bf4-9016-86f6" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="fbb0-0a25-6df5-a4e7" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9a7f-39dd-61d3-cf66" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ecb9-bf9e-d8a9-3792" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="46c6-f190-0c5b-c276"/>
@@ -659,6 +670,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9310-6253-3962-314b" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b677-c55f-89fd-4ba9" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="c27d-2958-5e8d-3881" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="a647-fed1-fcc3-05fc" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="9a53-52d8-8f20-3ed6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="cd0a-2fde-6867-915b" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -675,6 +688,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b2aa-e8f8-48df-d3d1" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d008-0850-a850-a8b5" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="fca9-7f02-c754-d687" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="03de-97f7-526c-de88" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="e7c8-33ed-5cd5-d68e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8b2c-e420-7f5a-e4ee"/>
@@ -704,6 +719,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="70c0-7fa5-9c34-e2ab" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f630-80f2-6ad3-8232" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="280e-f887-9314-265e" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="99e9-a037-d6fb-faea" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="9bac-0b78-aac7-e649" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="7ef9-3e96-7f71-395c" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -719,6 +736,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ab7a-74bb-56a2-4a9b" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4b6c-af42-e89e-db02" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="82e1-359c-069a-b62e" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="29f8-ec8e-60a5-5c2c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d719-4ad5-b1e3-15c3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="e6f0-7853-330d-7210"/>
@@ -798,6 +817,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b89f-ecce-02be-e404" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dad3-cfb1-c9e1-c613" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="b573-019f-3a02-65e3" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f766-25a2-e2e9-6e84" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6544-3c7b-0459-7a64" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="89e7-7f1d-8fbc-99b9" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -814,6 +835,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3889-4e80-e042-f6d8" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="29d0-c93e-4138-9c12" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="1619-b87f-2f9e-2de9" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="d77d-2009-adfe-9b5f" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a041-a129-6a62-782b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="f8c6-ac60-4224-df3c"/>
@@ -893,6 +916,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="9b08-6f06-0429-c5ac" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3fef-3780-00b6-5c8f" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="b30e-51d0-4477-c514" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="1223-5ed2-878c-81e1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f186-8ed5-91fe-64d5" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="b8b4-b0b2-a417-6eab" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -909,6 +934,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ec80-8bd6-d1c8-584e" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9418-d98a-b9d9-1b1a" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="c1a8-d8e8-5ad1-57ad" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="2bbf-3bd1-3c4e-5645" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4fdb-c790-0c87-5e3f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="a186-e6d1-d92d-6409"/>
@@ -938,6 +965,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1234-349e-888a-a392" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d8a5-474d-53b8-01c7" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="39fb-05a9-c4a6-117e" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="bbe2-4fbe-69d1-9261" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2ea3-9df9-3f3f-dbdf" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="6f41-ec12-4496-8e3b" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -954,6 +983,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3d99-9b90-38ef-cb74" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5738-23f3-7614-01d1" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="eaad-fbef-cd11-2e28" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="ad53-1f5b-a0ed-84f2" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d1b9-c8f5-7feb-0e37" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b445-c071-df32-f32f"/>
@@ -1033,6 +1064,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="c72d-4f41-13bd-a9a7" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9968-6976-00c4-0b6f" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="a3b4-6deb-337e-2d80" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="5c2d-45ba-2924-9d08" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ef19-5833-565d-72ad" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="b6a3-d152-ba4c-74df" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1049,6 +1082,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a6b5-6ffc-0c7b-33d4" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e8ce-a735-a341-25f1" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="c116-06c3-1da0-d0fd" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="e2b9-e7ae-cc8d-6ed6" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="e61a-0234-e5e0-bfac" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="85b3-2c86-2295-6f38"/>
@@ -1128,6 +1163,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="be06-01a7-8f6e-df67" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e4b7-7d3d-a9ed-ae57" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="89e2-805c-4b8c-a411" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="73e2-2037-de01-ab67" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ff5e-6b81-5f77-40bd" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="5333-e125-1af2-5085" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1183,6 +1220,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="0056-04ff-0c9d-81f9" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fe3d-b9ad-1ce3-e041" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="bd62-f3b9-838a-f950" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="05a3-caee-df24-1556" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f1f6-0aa6-761c-783a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="1879-4a73-3dad-431c"/>
@@ -1212,6 +1251,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="630a-c36f-7ac2-2777" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7e54-16eb-ef4d-7294" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="a274-825a-2a0e-f191" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="d62f-cbc4-15bb-bb52" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="17e3-b85a-10ba-c228" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="b546-5154-e702-fc9e" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1228,6 +1269,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="35fa-c8e0-a809-719e" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c25f-b250-c1bf-c7a0" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="6d6f-4a11-b54b-741c" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="87df-1c23-2840-7cd0" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6584-eedc-3eb5-281c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="98e9-30af-4b95-0389"/>
@@ -1257,6 +1300,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="0977-8537-ee2f-6275" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8835-2953-bcd9-7b26" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="fb8a-2df9-39af-506f" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="eb15-51e5-6f29-15bf" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8eeb-5681-64df-1b5d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="99a5-5652-e9c9-6e03" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1289,6 +1334,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4405-befc-d33b-f36c" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1eb6-5d42-f540-54e8" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="120b-f7d4-23ce-02d6" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="2536-18d9-6fc2-4d70" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ebdc-bb16-2fef-a520" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="dcc6-4f9f-b0ae-4dfd"/>
@@ -1368,6 +1415,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="74ee-8c96-ec78-70cc" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7b0d-624a-74b6-6651" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="4ebe-303f-48d7-3228" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="b49f-07c2-638a-f98d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a953-23ba-ad04-b6c7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="6af1-9990-8a86-ab49" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1426,6 +1475,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="e945-3e5b-40b0-a232" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5475-b6ea-7451-004f" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="79fe-225c-98cc-2f4d" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="97ed-0bcb-5593-c0ff" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Restrict General" hidden="false" id="e9e9-e19a-65b0-bd56" targetId="abcb-73d0-2b6c-4f17" primary="false"/>
@@ -1517,6 +1567,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="c4f2-da9c-6851-c62e" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9559-d862-9933-b1d9" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="55b0-26f7-263f-1c39" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="029f-43f6-008e-99e5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c321-b637-d95b-101b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="4dfd-5a32-0b1e-8b00"/>
@@ -1549,6 +1601,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="2269-e220-e283-c0d7" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b674-5cac-01f4-4566" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
         <entryLink import="true" name="Paths" hidden="false" id="c786-fa61-337c-af83" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="12e7-867f-daed-57c4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4177-98d0-512b-61f6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>

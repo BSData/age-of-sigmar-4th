@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="BARROW LEGION" id="07ad-5d9a-db7f-270d" hidden="false"/>
     <categoryEntry name="Deathrattle Overseer" id="ca3d-ce07-0388-88b9" hidden="false"/>
@@ -8,6 +8,7 @@
     <catalogueLink type="catalogue" name="❖ Lores" id="b4d1-8e09-bab9-846e" targetId="0a11-cd61-2a4e-8e04"/>
     <catalogueLink type="catalogue" name="Soulblight Gravelords - Library" id="98a4-c922-0746-6bff" targetId="dff3-13f8-82b5-3347"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="ff85-c36a-d114-2498" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="0b5a-66e8-a04b-c399" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Barrow Legion" hidden="false" id="bd82-8424-ed1b-1373" publicationId="e3a0-cfae-cbb3-0215">
@@ -315,12 +316,18 @@ For the rest of the battle, each time an attack targets this unit, if the attack
     <selectionEntryGroup name="Paths" id="9cd2-fcb8-7b92-2889" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="dadf-44fa-3f29-c860" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="a4c3-24c9-c044-dd5e" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -339,6 +346,8 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="bd0a-e757-6360-050c" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f18b-c12f-e77e-416a" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="6cb9-80aa-f59c-c1df" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="d57e-527a-f245-b25a" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d839-a6b7-6bd4-88ac" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -368,6 +377,8 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="68cb-3e6a-d6f3-04e3" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7a78-a7c1-58c2-9648" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="93b9-6465-2204-9391" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9ac2-cfaa-b7b1-1420" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4336-239f-ea04-382d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -404,6 +415,8 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="092c-f2aa-17b5-597b" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6674-80cb-717e-664f" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="b65b-1222-a32e-72b6" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9fd5-5dbf-319d-5591" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5b2e-2d5d-4fd6-1ea0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -429,6 +442,8 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9754-d1b9-3476-36f8" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e581-2d3d-4170-021b" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="e29f-ed39-68b3-208f" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="af36-a25a-0f2d-67e5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7f5c-ffea-01e5-b4b1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -450,6 +465,8 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="e058-0554-bc7d-e312" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e6f0-12b0-fc12-af55" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="6eda-f744-1771-2713" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="5ff4-1d39-f122-4abe" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8318-ea9d-1e77-8115" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -479,6 +496,8 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="c1e1-e268-a114-7720" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f92f-bbf2-38e8-0fbf" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="4318-add7-dcfa-61c9" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f578-d32b-613f-2640" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8347-77a7-5f3c-1849" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -671,6 +690,7 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Reinforced" hidden="false" id="75aa-12ca-5055-70d7" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="870e-1b68-ae72-e5e4" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="2a48-7853-6077-eb7d" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Renown" hidden="false" id="58e7-a29d-2e8a-43e0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -717,6 +737,7 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Reinforced" hidden="false" id="e2c4-f52f-a40f-bf23" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b31d-c5db-50a2-acac" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="d935-9499-10a9-de30" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5751-67f4-253b-0b22" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -764,6 +785,7 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <entryLink import="true" name="Reinforced" hidden="false" id="32d9-2858-b3af-1eaf" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="97ad-5c6d-708c-2155" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
         <entryLink import="true" name="Paths" hidden="false" id="6538-081e-4b35-8bb1" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+        <entryLink import="true" name="Renown" hidden="false" id="513b-f38e-1c6c-a7bb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>

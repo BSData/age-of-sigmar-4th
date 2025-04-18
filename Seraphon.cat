@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="4e3-e1a7-a8d4-8719" name="Seraphon" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="4e3-e1a7-a8d4-8719" name="Seraphon" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Seraphon - Library" id="bac9-83e-a88b-8274" targetId="18f-620a-1c2f-b6b2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="bbff-c662-3555-9914" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="50a8-a1a5-8030-e8a8" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="e9b2-6a89-7cb2-f742" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="5eb0-445-d519-2e79" hidden="false">
@@ -297,12 +298,18 @@
     <selectionEntryGroup name="Paths" id="1571-5ff6-d10e-404f" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="e2e4-f0d9-83f1-fe70" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="aba3-3986-17ee-70b3" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -432,6 +439,8 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d913-7fde-8864-6554" type="selectionEntryGroup" targetId="e4fd-c74-e5ab-f18d"/>
         <entryLink import="true" name="Paths" hidden="false" id="5a6b-5014-e217-05ac" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8c06-0dc5-c650-f0e9" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="0c59-1b10-2e47-1151" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="9918-aa63-9043-58ef" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -499,6 +508,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="68c4-e540-32a4-4266" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="3b10-0179-ba2f-779b" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8f44-302d-da5e-f6dd" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="5078-2362-eac0-6b01" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c3a8-9021-e7d4-8180" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -524,6 +535,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6459-7474-14b2-a164" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="a131-884f-b5d8-205f" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bcc2-7fc0-0301-a864" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="7671-e0df-2647-1fe6" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="87fb-001d-54f8-e4e1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -549,6 +562,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="932-5bd5-21f8-b13d" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="6893-eea1-422f-6e59" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="34e7-3369-2c86-2d79" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="78e5-de43-5bf5-aa7c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8e07-db10-e16a-81fc" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -574,6 +589,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="4471-3cbb-be53-58bb" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="7471-2d44-792d-7b1c" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4ad9-996b-53a4-a51d" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="583a-7f02-f0f4-6f8e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8d46-cd80-1394-17c1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -599,6 +616,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b478-7390-7066-4d43" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="b7bd-986c-6110-4893" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3992-b989-cc6c-72f0" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="1a5f-37d9-3255-924b" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="233b-d02a-d0cc-688c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -624,6 +643,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="742a-71a4-42b8-48d3" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="31cc-0c36-4d82-b73a" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0dbb-f241-93e9-08bc" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="b187-0e20-f230-2cba" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="63e1-906a-cc02-15b0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -649,6 +670,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="e1d8-1e24-f25d-ec25" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="6845-9e81-a216-2513" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0528-0ef1-3303-b845" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="2c31-d4a0-5ea4-7e39" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="3036-30cf-ba78-3ec2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -674,6 +697,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a159-d4b3-c0d7-1ae6" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="b499-d755-e4d5-167a" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f0c9-5f0f-65e8-6540" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="d156-9e10-fa65-bc4b" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8a10-d704-d774-b53d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
@@ -736,6 +761,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8833-53f2-f2d1-df1a" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="ffe9-62fb-4d16-7cf2" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3fd1-1470-1aac-b2af" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="31d7-1a7b-0ed1-b967" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c504-185c-e4a7-aeff" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -761,6 +788,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="1e57-8291-eb82-8ed9" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="86c8-1490-c152-d098" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4e5b-2bc3-e739-249a" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="eef6-ab21-112e-323e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="96d2-b2cd-7fcc-3fb8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="280"/>
@@ -786,6 +815,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5da1-8f7d-ad5e-db8d" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="d579-b5ef-3265-7427" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e26b-5ea1-2a51-dabe" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="d840-1a2d-7684-fbf4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c815-0936-09e0-cf04" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -811,6 +842,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="80e-4db9-55d0-3023" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="5275-08a9-3d54-e0a5" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2d46-f65f-4f88-d051" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c003-d514-1c6b-29d6" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2c28-4957-3f72-d3bb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -825,6 +858,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8b3c-9284-ce5-1798" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="b773-1127-fa07-ad5a" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2008-3e8c-ac76-c037" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="684a-0ff8-759b-9682" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f98f-34a1-8431-3788" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -839,6 +874,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b49b-cf0f-47bc-369f" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="e988-a949-d817-9d47" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e1b9-d777-e422-23cc" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="4fa3-f892-3bb3-86f5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8214-d500-51f8-d8fb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
@@ -853,6 +890,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5099-ff6-9c5b-2e3" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="b52a-6e5f-863f-9e70" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dfd4-747c-faae-ddb1" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="d297-04a8-36ea-4782" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="74fb-0b59-46c7-0ac7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -867,6 +906,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="5c56-adb7-8333-a90a" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="ada6-c319-5624-42d3" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bc88-0c9b-dca4-246c" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="81f7-02b7-b742-92e3" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d404-eaf3-06bc-b75e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -881,6 +922,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="ccb-9d3e-6d3e-b820" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="e752-05ef-761a-ad2f" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e0ec-3753-c5ef-4ea8" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="5746-15a6-ebd7-8f8c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="915e-4584-563a-3d15" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -895,6 +938,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="daf1-c12d-a5b8-7b92" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="2b53-f0c7-3abf-a47d" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="93c9-056d-cad5-3ed8" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="1a15-c770-64d3-bf37" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="430a-e83d-8549-0723" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
@@ -909,6 +954,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6db3-f58c-7685-db05" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="656d-d527-ac2c-2392" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cc88-0461-5062-188a" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="beac-1350-bda4-c0e1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="bf5f-5835-5f29-2836" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -923,6 +970,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d649-98df-2845-35cb" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="c121-089c-442b-8a91" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cd09-4b6c-0921-1c64" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9403-db45-7b51-b2f9" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8ee2-a9ca-3179-acef" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="170"/>
@@ -937,6 +986,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="9d70-5c42-5426-80fe" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="eb62-c178-42a2-5be9" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a02e-79d3-5b92-5e05" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="bb0d-9371-85c3-73e9" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6399-200b-d648-19b4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="280"/>
@@ -951,6 +1002,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b6e2-a9c6-9134-f0bc" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="53f6-9f31-dbc4-15ec" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="edb7-0b91-2400-a587" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9720-1495-bc22-5105" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5d06-101c-f1de-1f1f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -965,6 +1018,8 @@
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="200d-4a1c-9dfe-c1e0" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
         <entryLink import="true" name="Paths" hidden="false" id="2ae6-3f1d-59b3-c9ef" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="eec5-29b1-f27c-53b8" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="2a08-f550-65b7-c2de" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ceec-250d-876d-cb2f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="130"/>
@@ -1009,6 +1064,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="d7d0-7a67-e4cb-6e6a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="6294-8ea4-1ffe-1014" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e3db-056e-942d-2bc4" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="01fb-210f-0a61-24ae" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="220"/>
@@ -1103,12 +1159,14 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="db60-619f-155f-ad26" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9b4c-eb4d-13db-96e2" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c52a-8a54-8a1e-72d8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bastiladon with Solar Engine" hidden="false" id="49be-f24a-60af-3040" type="selectionEntry" targetId="4fee-26df-ea45-a2d6">
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="a571-b80a-b8a6-d6b6" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1dbb-9fb6-265c-c4bc" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="bb0a-5777-36c9-3209" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1287,6 +1345,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="6b15-0e04-6888-2098" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="862c-5877-270c-c140" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="bbbc-1377-79de-a4f8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Hunters of Huanchi with Dartpipes" hidden="false" id="2f78-9b69-50ea-bd78" type="selectionEntry" targetId="85bb-bb0c-b1e9-e870">
@@ -1326,6 +1385,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="7155-0919-3df6-689b" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6696-2830-349f-5b7a" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="847b-962d-64fa-6427" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Hunters of Huanchi with Starstone Bolas" hidden="false" id="319a-7694-9e4-faba" type="selectionEntry" targetId="aeda-8cda-b49c-c295">
@@ -1365,6 +1425,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="bffa-c183-81fa-d0c7" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5fc4-8a8d-8219-9520" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="b79e-9a9d-89a1-d9b7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Kroxigor" hidden="false" id="96ea-2334-ee8c-31a1" type="selectionEntry" targetId="9544-33d8-1d69-2be9">
@@ -1372,6 +1433,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="5478-c3f8-ab29-19e6" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="3c97-551d-3d86-ca08" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8f2b-317f-441d-a611" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0265-1069-ad1e-8260" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1412,6 +1474,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="941b-3e0b-aed2-85e4" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="b085-f0da-5a69-0f19" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="18d1-89cf-93d3-a48a" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4a80-01c9-edc3-8a1c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1452,6 +1515,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="31d3-d713-c715-68c9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="c5ed-759a-ea0a-160c" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7890-3926-5e0b-1726" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="55fa-d737-6cf3-93c3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1494,6 +1558,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="2f49-cef9-6af8-52a5" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="a44d-12d4-0605-f898" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="47e4-6bd7-6bf8-251a" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ace0-8f9a-a5c0-65bc" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1536,6 +1601,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="9458-cb25-a80c-5357" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="4a2f-5a31-339c-f0ed" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="faa8-89d7-2210-0780" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f952-b762-084c-242c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1625,6 +1691,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="6276-9f20-8030-fccd" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="42d9-a5c6-2978-8b11" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7117-419e-b420-302f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Saurus Guard" hidden="false" id="f524-12ee-36a6-32a9" type="selectionEntry" targetId="e16-5c12-f381-3006">
@@ -1632,6 +1699,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="7b2f-caab-8c01-f112" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="bf4e-1b1b-7237-88e7" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="80d5-faa2-dcbd-5fb4" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ff4d-0fec-4cd3-ab85" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1671,6 +1739,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="c9bd-305c-b9c8-4280" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="8de9-3834-9748-a4f5" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d341-df75-b452-8fd9" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6f5f-e669-bb1e-fd98" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1710,6 +1779,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="e129-e4cb-5044-a075" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="576b-ad85-4859-2350" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="70c6-91e8-19e6-1c6b" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6088-6a2c-48e6-c710" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1813,6 +1883,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="3bce-56a3-4843-47f8" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7aad-f6c6-2020-e1ca" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7a94-5250-c636-dbfa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Stegadon" hidden="false" id="4f5d-142f-c57d-8689" type="selectionEntry" targetId="967b-8047-ea59-d6ea">
@@ -1905,6 +1976,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="abb7-790b-6392-b157" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cd44-a702-eb79-f8fb" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7d52-52ab-8f26-f536" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Terradon Riders" hidden="false" id="7b4a-4062-99dc-3d6b" type="selectionEntry" targetId="66ed-4817-f929-7c3e">
@@ -1912,6 +1984,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="231-5231-e80a-81a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="ede8-a9ad-09c1-1e1d" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8548-6788-b216-3147" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0174-d536-a97b-6bdd" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -2003,6 +2076,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="5c38-e641-e39a-8b37" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="34cc-87ee-e6f4-89b1" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2a1f-fcb6-d3ac-45ea" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Terrawings" hidden="false" id="6363-a860-d9b1-5377" type="selectionEntry" targetId="c272-3fef-afc9-4f30">
@@ -2074,6 +2148,7 @@
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="9d12-e61a-c381-4e8b" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4923-afe2-11c5-ede1" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Renown" hidden="false" id="15b2-7650-a49e-9e63" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Realmshaper Engine" hidden="false" id="2bf-d0f6-9e4d-b9e7" type="selectionEntry" targetId="dbb9-da98-e92e-b31e"/>

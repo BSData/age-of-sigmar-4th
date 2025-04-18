@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="874b-f2c3-6829-7c1c" name="Stormcast Eternals - Draconith Skywing" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="874b-f2c3-6829-7c1c" name="Stormcast Eternals - Draconith Skywing" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Draconith Skywing" hidden="false" id="c858-458e-9b28-569e">
       <profiles>
@@ -215,12 +215,18 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="3b16-5119-033b-9376" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="7812-0449-e3f3-df0e" type="selectionEntryGroup" targetId="41cf-1cdb-2e91-e686" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="9357-8317-d34a-bdab" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -232,6 +238,7 @@
     <catalogueLink type="catalogue" name="Stormcast Eternals - Library" id="9c20-ea09-d021-2cf3" targetId="d96e-14f5-b8ae-ce7a"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="5c7c-b357-bb87-5e0b" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="68eb-2bb6-8112-22a9" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="73bf-65e7-783d-6223" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <entryLinks>
     <entryLink import="true" name="Battle Traits: Draconith Skywing" hidden="false" id="70aa-a2aa-7b73-4275" type="selectionEntry" targetId="c858-458e-9b28-569e"/>
@@ -372,6 +379,8 @@
         <entryLink import="true" name="Paths" hidden="false" id="b573-a8c5-2b01-4fb1" type="selectionEntryGroup" targetId="205e-1673-7c4f-cb81"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="8278-fd54-ea80-632c" type="selectionEntryGroup" targetId="08bd-9915-fd55-eaf2"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d715-95da-4f0e-a968" type="selectionEntryGroup" targetId="628c-54bf-5131-1ab2"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="2e10-96da-d829-31b1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="fabf-0093-78f4-2e6e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Knight-Draconis" hidden="false" id="15eb-af56-e00c-c21f" type="selectionEntry" targetId="1b67-5ed1-5c9d-388f">
@@ -387,6 +396,8 @@
         <entryLink import="true" name="Paths" hidden="false" id="e37d-9014-4530-f0ce" type="selectionEntryGroup" targetId="205e-1673-7c4f-cb81"/>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8cb0-d219-63b2-3a6e" type="selectionEntryGroup" targetId="628c-54bf-5131-1ab2"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="adb0-4b3e-a750-5793" type="selectionEntryGroup" targetId="08bd-9915-fd55-eaf2"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c610-8c23-0e9b-ea8d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4c44-e5f0-010a-9bad" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Stormdrake Guard" hidden="false" id="ccef-8f1a-8345-b325" type="selectionEntry" targetId="4fcf-b770-62ff-9013">
@@ -423,6 +434,7 @@
         <entryLink import="true" name="Reinforced" hidden="false" id="087d-935d-8d83-191f" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2b3c-76e7-1fb3-a0a7" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
         <entryLink import="true" name="Paths" hidden="false" id="ada4-e9dd-9676-1961" type="selectionEntryGroup" targetId="205e-1673-7c4f-cb81"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a282-9a7a-1208-bf0f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="330"/>
@@ -466,6 +478,7 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bcd2-b64b-0167-e094" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
         <entryLink import="true" name="Paths" hidden="false" id="7626-0fac-2e67-2e43" type="selectionEntryGroup" targetId="205e-1673-7c4f-cb81"/>
+        <entryLink import="true" name="Renown" hidden="false" id="3dac-add1-504e-eea8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="fdbf-06a1-9829-be4b"/>

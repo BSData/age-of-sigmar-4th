@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Cities of Sigmar - Library" id="7fae-e658-b76a-fe24" targetId="c83a-4a23-6dc5-fb68"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="91b3-9cb9-fded-8fef" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="5f01-6353-f346-f0fa" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="f88a-414d-2ddf-3670" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="d6f1-33e2-673e-c0c8" hidden="false">
@@ -291,12 +292,18 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
     <selectionEntryGroup name="Paths" id="1657-3097-6ebc-8023" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="27f2-8ad9-e77e-1e99" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="a23b-aad1-2f09-4440" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -392,6 +399,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cf7f-5e20-8763-7aa" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="09c1-bc0c-1d27-eee7" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c846-7a3d-1da1-53fa" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f8f7-3b3c-72a8-ab99" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="3840-6be2-9001-3429" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Alchemite Warforger" hidden="false" id="86a3-572-f5f3-aa2c" type="selectionEntry" targetId="2678-d067-8e12-84dc">
@@ -406,6 +415,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="fae-6319-b88b-6e9c" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="f070-90c1-095a-1af2" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7c55-6860-597e-c0c4" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="89f8-654c-26cf-c8bc" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0eca-cb49-9c0d-136f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Assassin" hidden="false" id="f0c5-d183-b4d-9a21" type="selectionEntry" targetId="41db-4a11-69e4-4f72">
@@ -455,6 +466,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="58eb-1381-ffb1-2cad" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="8589-9ddf-6fbc-0210" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fb3f-f855-1953-83cc" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="4fd2-fa09-0d38-59c9" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="e8dd-5262-13c3-8322" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Assassin" hidden="false" id="2287-704-d76c-8ec3" type="selectionEntry" targetId="41db-4a11-69e4-4f72">
@@ -469,6 +482,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="172f-26f1-2b41-2ff9" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="9362-1997-c0b4-3b31" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6c5d-bbf9-62c0-70b2" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="3ef1-b43f-d762-0b1c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="b5ed-1586-5e56-25c3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage" hidden="false" id="137b-ad27-72ec-7c6" type="selectionEntry" targetId="d1f3-97e9-f50a-d1a4">
@@ -494,6 +509,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6699-76c8-a63a-e5be" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="654e-182b-e4ac-c1b4" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c8dc-413d-ab7a-9824" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="524d-9b16-90e0-a010" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="549f-f553-61f1-c203" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage" hidden="false" id="702f-db1b-f8b2-c27" type="selectionEntry" targetId="d1f3-97e9-f50a-d1a4">
@@ -508,6 +525,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="522e-11a3-48f8-b12f" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="d045-611e-9171-c86a" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="08cb-2a7e-411c-cbe6" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="bf2b-18ec-a017-19f4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4bfa-38ae-c84c-12c3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage on Celestial Hurricanum" hidden="false" id="4296-795-7884-a8ef" type="selectionEntry" targetId="52f-1bc0-e898-f1a2">
@@ -533,6 +552,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3283-3dad-61cf-2e0" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="0a71-369e-e658-9aed" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="92e0-0023-58c1-2471" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="ab28-7e1c-eb95-abb2" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="e403-1d65-520f-ebab" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Black Ark Fleetmaster" hidden="false" id="f3cb-f87-df5e-ef19" type="selectionEntry" targetId="f2f1-e20a-f709-15a">
@@ -582,6 +603,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ae65-2ad-7c50-f0a2" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="ed45-16dd-f0b0-751a" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a1c5-2892-6d14-8309" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="b0ef-9574-8a57-1d86" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="94f1-3391-875a-e1e5" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage on Celestial Hurricanum" hidden="false" id="2c9f-2e5e-92d4-4707" type="selectionEntry" targetId="52f-1bc0-e898-f1a2">
@@ -596,6 +619,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="993c-2acd-3e7d-276d" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="c926-673c-818b-5c26" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cef8-a869-94ce-2e75" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="10ec-a9f0-ba03-851c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6378-7fee-11b5-8b0d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage on Griffon" hidden="false" id="ba9c-a035-3e00-a72d" type="selectionEntry" targetId="d11e-a9e7-b74b-2643">
@@ -621,6 +646,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="abf4-15cc-87d1-fc5d" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="9e1e-7f16-4c97-72f5" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9fbe-179d-ed55-9c0b" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="7e4f-31bf-3878-f546" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4388-f459-ffe0-30c7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage on Luminark of Hysh" hidden="false" id="6d96-480b-a1ba-91d7" type="selectionEntry" targetId="b1b8-a094-36c3-b25e">
@@ -646,6 +673,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e186-2f7b-e4f4-2622" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="b575-0394-7dcc-8076" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="40af-f35d-f0fc-0b7f" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="de83-a883-639c-e70e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c996-1c6d-9907-de78" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Dreadlord on Black Dragon" hidden="false" id="7741-67eb-d2a5-9f85" type="selectionEntry" targetId="3f66-4297-15aa-e6e">
@@ -671,6 +700,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3fa-2a0c-70e8-bc18" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="fc21-416a-54e3-b3e8" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="11b3-4fd6-bbff-51c4" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="40e7-c24a-030f-8606" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="402f-3e16-cefd-cf56" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage on Griffon" hidden="false" id="c41b-b7fb-996e-45e9" type="selectionEntry" targetId="d11e-a9e7-b74b-2643">
@@ -685,6 +716,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ff0c-237-12d0-d2df" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="e392-07b4-7cd8-08b2" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="55ec-0ec8-4fae-c3a8" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="e10e-1bc6-4b29-67ef" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a845-f3e9-6af0-9fbb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battlemage on Luminark of Hysh" hidden="false" id="41be-98b4-f3a1-2bae" type="selectionEntry" targetId="b1b8-a094-36c3-b25e">
@@ -699,6 +732,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d32d-a90-45d9-7f53" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="5b98-dde8-33a3-cdbf" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8ed3-2e79-424d-3894" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="afdf-0d0e-0116-98dd" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a04a-907b-cef8-8105" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Black Ark Fleetmaster" hidden="false" id="5dc3-5123-c02f-8726" type="selectionEntry" targetId="f2f1-e20a-f709-15a">
@@ -713,6 +748,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="51cb-3bef-5bae-c9f3" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="52d4-1703-ba62-9702" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9337-6b63-63dc-6510" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="bc89-6fc0-ba7b-7ba0" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d699-0e8a-3595-dc51" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Cogsmith" hidden="false" id="ab0f-f7f1-f767-d993" type="selectionEntry" targetId="89d6-1612-ce3c-50e9">
@@ -759,6 +796,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1fa6-770e-e549-cf7f" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="4509-aba7-25c3-da2c" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e43a-ef01-d0ee-7e5c" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="639e-98b3-72c8-bfae" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f159-b3e8-0bf9-e3c8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Steam Tank Commander" hidden="false" id="d04d-eecf-a1c3-22ac" type="selectionEntry" targetId="6bc7-2301-7561-6983">
@@ -794,6 +833,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="666a-dff5-6593-dedb" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="5fc8-f98d-a4e8-9853" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="86d3-39bd-1720-e1a1" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9dc4-6439-afa9-36c9" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2016-9723-bcab-11ad" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -841,6 +882,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6f0d-a882-6c32-9c24" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="5f38-9cb5-4726-06d8" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="365f-72dd-554d-d56e" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f4ae-48fd-7237-7f23" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c244-7cba-87b4-39cc" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Dreadlord on Black Dragon" hidden="false" id="5640-d86-bbf-c887" type="selectionEntry" targetId="3f66-4297-15aa-e6e">
@@ -855,6 +898,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="2477-8c1a-c957-730a" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="879a-61f6-226b-7fa1" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9dba-2139-2175-c8de" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c36a-4377-b796-eef4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="547a-7289-582d-67b2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Sorceress on Black Dragon" hidden="false" id="9199-4352-cb3d-41c4" type="selectionEntry" targetId="97d9-f0bf-ad89-37eb">
@@ -880,6 +925,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="19d9-6ed8-bd14-65b6" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="0aab-7ee8-8e9f-b807" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6f9a-d97d-c330-9bbb" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c520-cf90-1a41-126e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="35cf-876b-14c1-9b33" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Cavalier-Marshal" hidden="false" id="726f-654d-6df3-2a4e" type="selectionEntry" targetId="f921-535b-9f7d-615f">
@@ -915,6 +962,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="a3de-8bfe-58e5-8bd5" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="3189-4e88-3097-dcd9" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d5c6-bfe1-2e5e-4c1f" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c1f4-5eea-35a7-66f4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2bee-6599-d2a9-5c7e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -955,6 +1004,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3568-fa44-696c-8bc1" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="2cc3-3c1c-0c73-fe97" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a8c3-e538-bac9-56ff" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="533b-7c3e-6888-6542" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="62b7-38ea-7c88-b38b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Cavalier-Marshal" hidden="false" id="5189-df8c-c265-88e0" type="selectionEntry" targetId="f921-535b-9f7d-615f">
@@ -969,6 +1020,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6152-59ef-468d-63c0" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="ee64-5268-524d-65ca" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4f8c-aa91-7d85-b8fb" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="fdd0-b5bd-b91d-83c0" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8171-897d-54f1-a628" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Marshal and Relic Envoy" hidden="false" id="a96-babb-86a8-f2fa" type="selectionEntry" targetId="326c-d13-626c-cfd">
@@ -1004,6 +1057,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b4bd-1d13-eaca-d9f3" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="b6dd-17e5-bb41-2e9e" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="514b-9fdc-7257-0b52" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="e1cf-1de7-281e-554e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2094-da3a-e30f-7847" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1044,6 +1099,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3220-3bd3-f07b-7b89" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="5c7c-0cb8-8b66-c5a1" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="80e3-e3f7-05b7-7ed3" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="b87f-ddf8-1932-8c53" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4a85-7668-16ca-0127" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Marshal and Relic Envoy" hidden="false" id="68be-a563-c70e-652d" type="selectionEntry" targetId="326c-d13-626c-cfd">
@@ -1058,6 +1115,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="dfbe-448-bec0-be27" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="260d-7980-c94c-5ca5" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d2ff-7a63-b202-3b13" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="3352-8c71-f8be-d1d0" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="24fc-ec7d-0319-bb8a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Fusil-Major on Ogor Warhulk" hidden="false" id="4594-96-1b3f-6aaa" type="selectionEntry" targetId="7934-6325-c7ed-3d7b">
@@ -1108,6 +1167,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f247-8c28-840a-1880" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="f434-2e3e-364e-d122" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f5a1-c35d-a632-213f" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="4737-3178-3807-ac43" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="93d1-fe3c-217a-62ec" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Marshal on Griffon" hidden="false" id="831a-f506-71e0-607f" type="selectionEntry" targetId="c0d6-b8a8-c799-e09e">
@@ -1122,6 +1183,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="6ce7-c50b-4979-6d58" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="5ed5-2486-ee29-72ce" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b749-ded8-cb3e-7461" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="43af-3eb1-e917-3824" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a42b-e5d4-b679-1471" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Fusil-Major on Ogor Warhulk" hidden="false" id="db4f-981-b206-2fc5" type="selectionEntry" targetId="7934-6325-c7ed-3d7b">
@@ -1136,6 +1199,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d66d-848b-8463-94df" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="4afa-caf9-9569-2f09" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="aae8-0184-6e79-18d6" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="818c-002e-e105-edd7" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ead9-061a-7596-2583" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Doralia ven Denst" hidden="false" id="21df-81c0-4bcc-9594" type="selectionEntry" targetId="6d6b-cfc7-7011-3be">
@@ -1237,6 +1302,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ab25-374d-9c95-f869" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="586c-4003-0db6-97c8" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1254-f6cc-1779-0486" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="ad70-f4ec-ceeb-11cb" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="48f4-710c-7afa-15e9" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Runelord" hidden="false" id="d448-6492-8fc1-ed92" type="selectionEntry" targetId="e21a-cca6-9f40-1891">
@@ -1251,6 +1318,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e0-1e2b-831-fdd7" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="fb97-38ae-f2dd-b7c6" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9c1f-7b6a-716a-075f" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="a748-722a-9600-f98e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="1872-2a61-dc61-9062" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Steam Tank Commander" hidden="false" id="b92e-ce68-720b-d9ec" type="selectionEntry" targetId="6bc7-2301-7561-6983">
@@ -1265,6 +1334,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f972-7c14-accc-76a5" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="3a57-4303-e2f5-0364" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7c2e-c433-4a2f-2d17" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f1e4-69f7-02b0-9512" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="90fb-2073-6470-534f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Sorceress" hidden="false" id="da9-fda-c22f-c1d1" type="selectionEntry" targetId="6537-603a-884b-312b">
@@ -1279,6 +1350,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="36a3-8fdb-3292-3002" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="7302-c085-3e8c-eb86" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8e00-c9fb-9a59-ac6e" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="aff0-fd25-cd39-d2e0" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7fd0-b4b2-951b-b32d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Sorceress on Black Dragon" hidden="false" id="77b6-bdc2-b509-77" type="selectionEntry" targetId="97d9-f0bf-ad89-37eb">
@@ -1293,6 +1366,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="2c00-7087-e285-6776" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="318d-dc2d-606a-cdab" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="413d-9515-f0a7-ced3" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9ecc-b058-2d49-a203" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="62ce-13d7-f19d-37ec" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Tahlia Vedra, Lioness of the Parch" hidden="false" id="294b-a315-286f-aca" type="selectionEntry" targetId="16c9-ff28-9e7d-8702">
@@ -1351,6 +1426,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="67d0-5340-8fa7-8108" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="f7b8-db15-8fcf-2cb3" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="61ac-38b9-bfa3-639e" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="e9f0-b90a-df62-4715" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="1ada-c14b-76e0-284a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Warden King" hidden="false" id="e4b8-863b-6d0b-c9d7" type="selectionEntry" targetId="962e-f3fb-717c-d408">
@@ -1365,6 +1442,8 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d58-7a68-229b-ab1f" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
         <entryLink import="true" name="Paths" hidden="false" id="e35b-4f05-99c4-5550" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="202e-93ba-eae7-f20d" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="e970-33ff-e107-105d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0d77-6b3f-0066-49ff" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Black Ark Corsairs" hidden="false" id="123f-8392-d02c-4212" type="selectionEntry" targetId="e0b6-cd1a-833e-3ff3">
@@ -1402,6 +1481,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="f452-24bd-de1c-e8ed" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="330f-b948-9a23-8a54" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2329-7a9c-49e6-4add" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a5a4-0b0e-5700-baee" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Black Guard" hidden="false" id="e6b6-2503-79c5-caf1" type="selectionEntry" targetId="4041-4683-8028-c73a">
@@ -1439,6 +1519,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="5adf-fa27-ed65-8315" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="1e4b-13a4-e05a-fb54" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae4b-3c78-b391-5a44" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="e2c8-6bac-9646-3df4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Gyrobomber" hidden="false" id="2e3d-c98e-1c9f-dd7f" type="selectionEntry" targetId="f6b5-64f8-206a-1789">
@@ -1474,6 +1555,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="bf91-6506-932e-cb98" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="066a-be18-cd2d-bee9" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="94ae-5343-f134-8374" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bleakswords" hidden="false" id="249d-845-b923-5056" type="selectionEntry" targetId="67d2-d2ce-84c1-70b3">
@@ -1511,6 +1593,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="bcd1-ecf-2b31-e889" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="b9aa-ecb9-a9b2-629c" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1f39-53e2-0152-de46" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="808d-1270-cabc-e66e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Steelhelms" hidden="false" id="b48b-d013-c142-33f6" type="selectionEntry" targetId="db97-62b-745a-8db7">
@@ -1556,6 +1639,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="b5b1-bcc7-d071-3d8b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="5d6b-30ce-5823-d0a2" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2f34-4997-c176-2d70" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5d5b-849c-eb2b-096d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Gyrocopter" hidden="false" id="3f68-b234-e29d-bcb6" type="selectionEntry" targetId="a641-c2fa-e6d1-40ff">
@@ -1591,6 +1675,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="b844-bb4f-87ec-8c6b" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2f73-f419-2935-18ef" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4118-5e84-c81a-0dc7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Celestial Hurricanum" hidden="false" id="4908-676b-34f0-f2a4" type="selectionEntry" targetId="d5a5-3182-b4f8-52a">
@@ -1623,6 +1708,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="48b8-72a1-1b7b-4018" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="39b8-cbb8-2341-2b5b" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="95a7-3f48-066f-8a7f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Executioners" hidden="false" id="1530-6cce-d8a8-4dd2" type="selectionEntry" targetId="dc42-b5e2-69cb-8cd7">
@@ -1660,6 +1746,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="6f51-beaf-75f7-4aa0" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="1bba-3e0d-b07c-71ea" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9fc6-8f07-581c-c2e9" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6124-f50a-b4d4-5822" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Darkshards" hidden="false" id="c99c-458b-e77a-9370" type="selectionEntry" targetId="4c41-9957-d6c2-78e3">
@@ -1697,6 +1784,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="8495-d49b-1d97-fb57" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="09f3-2e30-fdc1-cffa" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9787-326c-8f04-acfc" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="22c2-9367-e82c-29b4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Dark Riders" hidden="false" id="b091-7254-4e87-af11" type="selectionEntry" targetId="b118-28da-4ebc-615b">
@@ -1734,6 +1822,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="6a71-5a89-cdb8-549b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="d6a8-105e-54ed-53f2" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5297-733d-8251-c307" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a12d-bece-854b-05de" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Command Corps" hidden="false" id="ee83-9f22-ef82-6957" type="selectionEntry" targetId="9e34-2f0c-69ff-e722">
@@ -1778,6 +1867,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="39b3-b6ee-5b62-83c6" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2c3a-721c-5847-670a" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="796d-1ffb-fc88-170b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Dreadspears" hidden="false" id="4b7-7f01-f22c-bd1a" type="selectionEntry" targetId="a787-69e-f77f-18d9">
@@ -1815,6 +1905,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="281a-6378-9894-365a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="bb96-b9f1-767a-619f" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6946-1ba9-c8e3-cd74" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6f9b-c6f4-46a9-28e1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Drakespawn Chariot" hidden="false" id="a8c8-3133-fda2-244b" type="selectionEntry" targetId="672e-438c-24a6-5fc4">
@@ -1846,6 +1937,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="bc23-7537-b12f-dfbc" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dd86-0cd3-7eaf-9edc" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d4f7-4fb2-c6e5-35d8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Drakespawn Knights" hidden="false" id="3f0d-155e-d06-3754" type="selectionEntry" targetId="5507-3979-c08f-1f0d">
@@ -1883,6 +1975,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="1e62-6c82-41dc-85a8" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="74ae-e566-432f-855c" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="47f7-d5c3-4d79-e88e" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5a48-cf74-9df3-712b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Flagellants" hidden="false" id="9975-9699-1c0c-85dc" type="selectionEntry" targetId="6da4-e6bc-e5f6-3751">
@@ -1928,6 +2021,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="10d7-77b5-80fa-764a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="1af7-bf5c-81fe-516e" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ea91-b6b9-7382-49ff" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="efec-29e1-86ee-758b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Cavaliers" hidden="false" id="337f-9f5b-ab79-bf66" type="selectionEntry" targetId="80f5-4df3-c41b-f6f7">
@@ -1973,6 +2067,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="bc3-9012-e1ee-be9e" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="a459-cba2-b109-45ad" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="225a-692f-f15f-2370" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4579-29b9-87e1-fa1c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Fusiliers" hidden="false" id="7d66-e49c-3e22-d942" type="selectionEntry" targetId="5fac-f8bc-2c88-9252">
@@ -2019,6 +2114,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="34c1-4a0b-b412-5ff4" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="efe6-cd28-8684-5bf9" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4926-168d-8016-3ba5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7655-7c6b-606e-9bd2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Hammerers" hidden="false" id="b14e-1b5c-500e-ff16" type="selectionEntry" targetId="e8a7-8dbf-12ec-5753">
@@ -2055,6 +2151,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="32ff-22db-2ace-783f" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="c21f-2ddf-bf44-0a1b" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9113-3ec6-4505-0856" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="25f3-8925-5d5a-e097" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ironbreakers" hidden="false" id="27c5-fd13-f4a2-f35b" type="selectionEntry" targetId="d831-4103-fb92-eb5b">
@@ -2091,6 +2188,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="fc37-9659-21c0-ce48" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="00de-12c8-7a63-c4c1" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7022-8ce7-0523-bc0f" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="cf07-09fc-ea07-157e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Scourgerunner Chariot" hidden="false" id="408b-7ec-23c1-64a3" type="selectionEntry" targetId="e03f-92f0-5e5d-924a">
@@ -2122,6 +2220,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="a41c-03f4-2bfd-29f7" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="91fe-471e-c3be-98da" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="bd17-c21d-f58d-297d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Luminark of Hysh" hidden="false" id="f57d-6269-7436-fd5" type="selectionEntry" targetId="9d8a-508e-c6e4-b096">
@@ -2154,6 +2253,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="0dd9-21d1-bd40-0ae0" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4785-4596-fef9-01c0" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6530-869c-92ff-72e4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Kharibdyss" hidden="false" id="1ca4-a67f-4c9a-d980" type="selectionEntry" targetId="ae46-44ae-4d68-6386">
@@ -2185,6 +2285,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="28ee-0497-ee67-4506" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cfcc-ba20-04a4-d9f9" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2f13-b2ee-109f-a13b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Irondrakes" hidden="false" id="b4b6-d469-4f37-5002" type="selectionEntry" targetId="a4a9-4579-5a50-9ddb">
@@ -2221,6 +2322,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="4d96-60a6-7f81-a4f1" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="e169-890d-549d-0aa6" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5a59-6bd4-014d-effe" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a361-856b-44a2-28dd" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ironweld Great Cannon" hidden="false" id="1792-e391-bd97-34aa" type="selectionEntry" targetId="8186-4957-8449-590c">
@@ -2253,6 +2355,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="446f-d054-f9e6-9f30" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="673a-cc9d-9ece-3560" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5d86-2255-50ca-4eaa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Longbeards" hidden="false" id="4c42-c592-2066-5020" type="selectionEntry" targetId="8ee5-3161-46c0-d0a2">
@@ -2289,6 +2392,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Reinforced" hidden="false" id="627-74e1-1e1a-34d2" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="2f61-984e-5dd0-59ae" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8313-f23e-2168-6e05" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="431e-9c24-bd61-1afa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Steam Tank" hidden="false" id="83fe-9ef0-814-b3fa" type="selectionEntry" targetId="293f-584a-25a2-c45c">
@@ -2322,6 +2426,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="812e-8138-2187-8d1c" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bb0b-5c3e-0808-a5ec" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7ced-faa2-b229-2af4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Toll&apos;s Companions" hidden="false" id="e729-6dc2-40fe-2b84" type="selectionEntry" targetId="b41d-d073-1ba9-1728">
@@ -2403,6 +2508,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="056b-d491-61fa-ad0e" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="33be-3854-5b6b-d377" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="23ff-123c-22cb-d20a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="War Hydra" hidden="false" id="7890-bf9c-b4ea-a2e7" type="selectionEntry" targetId="7031-9a79-bad7-203a">
@@ -2434,6 +2540,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="ed81-619c-9c67-1486" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ba55-a236-a2e5-6c53" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="024f-9260-f105-bcb8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Cities of Sigmar" hidden="false" id="203e-fc08-7ead-5212" type="selectionEntry" targetId="7cf4-ebee-6d30-c1e1">

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="bb7e-b0da-5c2-a980" name="Sylvaneth" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="bb7e-b0da-5c2-a980" name="Sylvaneth" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Sylvaneth - Library" id="948c-6ad8-8217-2c32" targetId="7e0b-8a19-260-5b58"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="f9f8-a13c-bbff-3403" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="9abc-67c2-83a4-e16c" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="a8cc-33f0-d72d-980e" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Sylvaneth" hidden="false" id="583a-37b4-52b2-9058">
@@ -349,12 +350,18 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
     <selectionEntryGroup name="Paths" id="4f72-c02a-2a86-b47b" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="0ad7-10ff-aef4-5085" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
+        <entryLink import="true" name="Ascension Paths" hidden="false" id="f841-4f56-7292-fecd" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -420,6 +427,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="15f5-7f3a-1e68-ed9e" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="888a-c3db-dea1-f8ba" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="fa3b-f9a6-fdac-33f3" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f00b-e591-f931-3310" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2208-3e07-bcc3-e153" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -504,6 +513,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="59fb-f4fc-8c92-afa4" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e085-29e2-8e2d-ee63" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="761f-e405-db58-bd21" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="b3e9-6d3d-80a1-22fc" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4db9-56aa-108d-2dce" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Spirit of Durthu" hidden="false" id="25b8-cc83-ee3e-b11" type="selectionEntry" targetId="f163-eaf6-2b5b-1cd3">
@@ -529,6 +540,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d858-1d22-6e8f-8235" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a98a-bf78-275e-d76d" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="75f4-a548-8da1-2b01" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9fb1-2ea8-4ee1-af39" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ffb3-a509-3390-584c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="The Lady of Vines" hidden="false" id="1a9a-58b0-5822-4273" type="selectionEntry" targetId="72e5-d623-ac8c-14a1">
@@ -576,6 +589,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="3504-ceac-3e41-b65c" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cc53-a07b-6f53-d0b2" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="0b17-12c3-79a4-61ca" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c598-5e7f-1015-5d35" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="dd10-87bd-22be-f88f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Treelord" hidden="false" id="5541-2d10-f30a-24b6" type="selectionEntry" targetId="a896-d266-a881-f920">
@@ -628,6 +643,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e72-ab18-9a67-538d" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a84a-7b8d-7c3d-da43" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="3b95-7da2-6533-26e4" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="412e-f405-083a-59b5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="752e-9e33-14e0-cd81" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Treelord Ancient" hidden="false" id="2a6-9def-8540-1946" type="selectionEntry" targetId="678-a231-5f4c-4d7c">
@@ -653,6 +670,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="e483-779f-51bc-850e" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5940-c255-1280-05a9" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="b21a-5d6f-ddc2-d69f" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f2e4-9309-f8d5-114c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="9f05-407c-09b7-b790" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Alarielle the Everqueen" hidden="false" id="959d-ffda-a3a5-db6a" type="selectionEntry" targetId="efc2-ef9b-4eee-a341">
@@ -675,6 +694,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8c52-3115-5641-7983" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d2c9-36fc-3a96-c7cb" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="ab58-d8a7-0639-d27f" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="00d2-efbd-d601-f253" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f333-9272-177c-03e4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="0a95-1739-513c-01ee" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -703,6 +724,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="16b4-3d3d-3257-2375" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bbc3-254f-f9a5-3686" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="6bd4-c643-6c46-7404" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="53c9-b21d-d8fe-2c68" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5f0d-a128-d724-f4c5" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Drycha Hamadreth" hidden="false" id="2ed4-4df2-66bd-ac07" type="selectionEntry" targetId="b3b6-f91d-754d-af73">
@@ -728,6 +751,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4e92-379c-3cd9-a56a" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="04bc-88fd-fb27-c2a6" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="97bc-9c48-1d81-39dd" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="cde9-113d-06de-c17d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0628-6a90-f6c5-3266" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="The Lady of Vines" hidden="false" id="8eb8-a788-e726-2be0" type="selectionEntry" targetId="72e5-d623-ac8c-14a1">
@@ -753,6 +778,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="ca28-b4e6-4d67-c80c" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b577-6c04-f29c-93bf" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="8c09-6749-e290-4ee1" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="0ee9-6b7e-653a-e681" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0235-2f0f-95bf-a64c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Treelord Ancient" hidden="false" id="21f4-fbfa-6e85-1c5b" type="selectionEntry" targetId="678-a231-5f4c-4d7c">
@@ -767,6 +794,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="47f1-ef8b-83af-ba71" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0a49-cad0-e782-7f59" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="b933-2ae1-bdea-0ef4" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="8d09-91d4-d8b3-2e19" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="b1c9-114c-7291-9288" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Warsong Revenant" hidden="false" id="3028-82cb-fce4-4cf9" type="selectionEntry" targetId="438e-768a-7545-d329">
@@ -781,6 +810,8 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Heroic Traits" hidden="false" id="2e08-ae5b-f50f-971" type="selectionEntryGroup" targetId="ccba-5033-fe11-a2a"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="122c-51cc-3ee8-76ad" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="a821-48f2-aae8-41fe" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="76b2-3994-4836-5024" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="eb7a-f5d4-35f4-21e8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Sylvaneth" hidden="false" id="3e25-8f0a-9dea-1954" type="selectionEntry" targetId="583a-37b4-52b2-9058">
@@ -793,6 +824,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="e4bd-91d1-e33b-f490" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4334-5100-b1e4-33ec" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="b03e-3ca4-30e8-e8f9" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="8d3e-5dc6-ce0a-d260" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -834,6 +866,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="bdb0-f5dd-c0bf-bfc3" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e2b7-0a78-a375-16d1" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="4878-065d-3549-7a71" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6859-05a0-94df-aca3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -876,6 +909,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="f658-e7d1-5d3d-17a6" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9a31-e5e5-0ed1-69a0" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="e11a-aebb-18ae-7bb2" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7ca2-6281-4be6-5033" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -918,6 +952,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="3155-8559-15f1-f405" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3868-4646-030d-8de3" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="3c46-655c-5a8d-63ad" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a187-8db6-f32e-14c2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -960,6 +995,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="e126-5dce-4c3c-95be" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="54b9-c28e-150e-79ce" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="4f3a-45d0-f295-3e31" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ff77-4888-03d3-2412" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1002,6 +1038,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="2d44-1d8d-de8e-7a1d" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4028-103a-ac80-8586" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="823b-238a-7ea3-3312" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f97b-23dc-0491-a241" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1044,6 +1081,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="3172-bd0-7df2-f8e6" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ee78-2890-02f8-ba00" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="4f74-a683-2f92-ed5f" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="9e0e-bdad-a7ca-5805" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1085,6 +1123,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="cbc8-3e7c-abf9-5d4c" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c8bf-9faa-1463-af0f" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="6682-ac38-69b7-dc5d" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="944d-3ba3-7670-c0ee" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1158,6 +1197,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3775-8947-129a-b784" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="fb8d-ac4c-a2af-216f" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f26b-29e9-e8a0-f300" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Tree-Revenants" hidden="false" id="c39-46c9-4f97-771" type="selectionEntry" targetId="d0bc-bdf6-3a68-4aa9">
@@ -1165,6 +1205,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
         <entryLink import="true" name="Reinforced" hidden="false" id="28fd-f2f7-9d61-c51f" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="107c-120b-e945-c7ac" type="selectionEntryGroup" targetId="4b15-3fca-7be1-1fbb"/>
         <entryLink import="true" name="Paths" hidden="false" id="0feb-0971-5341-d22c" type="selectionEntryGroup" targetId="4f72-c02a-2a86-b47b"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a330-b297-59d7-224d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1331,6 +1372,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Spell Lores" hidden="false" id="637a-a01-8576-e7fd" type="selectionEntryGroup" targetId="6cbb-5e30-1121-a587" flatten="true" collective="false"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2751-da6a-a09d-dfb1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
