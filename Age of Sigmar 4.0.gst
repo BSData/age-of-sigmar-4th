@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="25" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="26" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -7300,7 +7300,7 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
       </constraints>
       <rules>
         <rule id="5202-75df-1d9a-9f02" hidden="false">
-          <description>Hides core rule abilities (e.g. &apos;Fly&apos; and &apos;Ward Save&apos;) from displaying on warscrolls.</description>
+          <description>Hides core rule abilities (e.g. &apos;Fly&apos; and &apos;Ward Save&apos;) from displaying on warscrolls. Can be helpful for pretty-printing.</description>
         </rule>
       </rules>
       <categoryLinks>
