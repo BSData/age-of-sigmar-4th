@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="231a-2a83-26f0-a718" name="Skaven" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="231a-2a83-26f0-a718" name="Skaven" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Skaven" hidden="false" id="8205-6284-a94b-5c93" publicationId="40f6-9b64-7daa-d1c8">
       <profiles>
@@ -260,6 +260,62 @@ Start of Battle Round</characteristic>
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Envoys of the Deepgnaw" hidden="true" id="97be-93c7-5592-d0db" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f10-9ec9-50e3-ea35"/>
+          </constraints>
+          <profiles>
+            <profile name="Will of the Horned Rat" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a36c-88c6-9cd2-f203">
+              <characteristics>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly **^^Skaven Daemon^^** is within the combat range of a friendly non-**^^Hero Skaven Infantry^^** unit:
+• That **^^Skaven Daemon^^** has **^^Ward (4+)^^**.
+• Each time you make a successful ward roll for that **^^Skaven Daemon^^**, inflict 1 mortal damage on a friendly non-**^^Hero Skaven Infantry^^** unit within that unit’s combat range after the damage sequence for that unit has been resolved.
+
+</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Gathering of the Clans" hidden="true" id="2de7-893c-2d1e-52d1" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f61-0d2c-d1bc-fa3e"/>
+          </constraints>
+          <profiles>
+            <profile name="Backstabbing Allies" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="562e-1e07-49b8-be00">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared the ‘Redeploy’ command for a friendly **^^Skaven^^** unit</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick up to 2 other friendly **^^Skaven^^** units that are not in combat and are wholly within 13&quot;
+of the unit using the ‘Redeploy’ command to be the targets. Each target must have at least one of the following keywords: **^^Verminus^^**, **^^Skryre^^**, **^^Moulder^^**, **^^Pestilens^^**, **^^Eshin^^**. After that ‘Redeploy’ command has been resolved, each of the targets can immediately use the ‘Redeploy’ command in an order of your choice without any command points being spent.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b68-d4b0-eaca-57e5" includeChildSelections="true" includeChildForces="true"/>
@@ -334,6 +390,85 @@ Start of Battle Round</characteristic>
             <modifier type="set" value="-1" field="8c15-92be-7e4f-de5f">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Ruinous Realm-Gnawers" id="97fd-eed1-711e-ad2b" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fleshmeddler" hidden="false" id="da91-ada6-ce55-9d77">
+              <profiles>
+                <profile name="Fleshmeddler" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d122-a20f-d9bb-b151">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly *^^Moulder^^** unit wholly within 13&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the target’s melee weapons. Add 1 to the Rend characteristic of that weapon for the rest of the turn.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0549-0ad8-a3f8-a4c6" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Devious Underling" hidden="false" id="5270-9f80-e9b3-7de6">
+              <profiles>
+                <profile name="Devious Underling" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1190-e784-d8cd-f20a">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Skaven Hero^^** on the battlefield with a Health characteristic that equals or exceeds this unit’s Health characteristic to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle:
+• While the target has not been slain, friendly **^^Skaven Infantry^^** units have **^^Ward (6+)^^** while they are wholly within 13&quot; of this unit.
+• Once the target has been slain, add 2 to charge rolls for friendly **^^Skaven Infantry^^** units while they are wholly within 13&quot; of this unit.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b37d-b013-02fa-5a04" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pit Tinkerer" hidden="false" id="9187-3b0d-c30d-c407">
+              <profiles>
+                <profile name="Pit Tinkerer" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="cb57-1034-1ace-00c7">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You can re-roll the random characteristic rolls for the Move characteristic of friendly **^^Skryre War Machines^^** while they are wholly within 13&quot; of this unit. In addition, each time a friendly **^^Skryre War Machine^^** wholly within 18&quot; of this unit uses the ‘Rolling Doom’ or ‘Whirling Doom’ ability, add 1 to the amount of mortal damage inflicted, if any.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fced-deab-3976-d8b3" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8343-a31a-8727-4c63"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0be3-2b3f-fc09-4e3e" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="0be3-2b3f-fc09-4e3e">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -481,6 +616,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -539,6 +675,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -597,6 +734,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -731,6 +869,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -945,6 +1084,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1003,6 +1143,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1315,12 +1456,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1407,12 +1555,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ecc8-7506-0ac3-ca80" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5a48-e3a1-625c-dae1" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e0fb-7194-508-f33b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1477,12 +1632,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1568,12 +1730,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1661,12 +1830,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="a2e1-6655-23f6-6533" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1707,12 +1883,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="3244-98f3-bb61-b9d3" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1765,12 +1948,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e9fa-30a7-a728-b45e" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1813,12 +2003,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e9fa-30a7-a728-b45e" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1870,12 +2067,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="3244-98f3-bb61-b9d3" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -1919,12 +2123,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2005,12 +2216,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2102,6 +2320,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2114,6 +2333,12 @@ Start of Battle Round</characteristic>
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2161,12 +2386,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e0fb-7194-508-f33b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2210,12 +2442,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2300,12 +2539,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2392,12 +2638,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2492,12 +2745,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="a2e1-6655-23f6-6533" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2545,12 +2805,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e9fa-30a7-a728-b45e" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2597,12 +2864,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e9fa-30a7-a728-b45e" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2647,12 +2921,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e0fb-7194-508-f33b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2696,12 +2977,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="a2e1-6655-23f6-6533" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2740,12 +3028,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a894-c0e3-2a4-79d0" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="3244-98f3-bb61-b9d3" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2866,12 +3161,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="e9fa-30a7-a728-b45e" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -2915,6 +3217,7 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2993,12 +3296,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -3084,12 +3394,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -3133,12 +3450,19 @@ Start of Battle Round</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="da36-ed81-79fe-ca75" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
@@ -3209,6 +3533,107 @@ Start of Battle Round</characteristic>
         </modifier>
       </modifiers>
     </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Brood Terror" hidden="false" id="ff80-3cfc-00ae-545f" type="selectionEntry" targetId="3f42-fd25-3ec4-00ec">
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Renown" hidden="false" id="cd62-af06-4133-c54f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8c97-2f1f-0ad1-c7aa" type="selectionEntryGroup" targetId="462c-2914-b583-1688"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1ecf-4632-233e-2ccb" type="selectionEntryGroup" targetId="9e59-94d3-7bfe-3534"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7299-ee25-cfb7-621f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d3e7-d46e-1989-7534" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="96e7-bdfc-d62-5b04" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3b44-18cd-8a0b-5c8" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="88c9-115c-3714-e884" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="ecc8-7506-0ac3-ca80" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="181f-fa52-9a52-12bd" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6b0b-367d-ec80-2727" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2f14-2a09-b928-6a47" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a894-c0e3-2a4-79d0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a9a9-9048-a1b8-3fe7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3400-ae04-6506-1cba" shared="true"/>
+                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3244-98f3-bb61-b9d3" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c011-fb8c-500a-e727" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="7974-c5a2-e00a-f98f" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Grey Seer on Screaming Bell" hidden="false" id="6d74-65c1-0b71-2951" type="selectionEntry" targetId="59d2-a983-aed1-a148">
+      <costs>
+        <cost name="pts" typeId="points" value="310"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Renown" hidden="false" id="9ed5-6a57-8e5f-a946" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="6904-c5ce-7bc6-897c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="c784-f834-12e5-9e7c" type="selectionEntryGroup" targetId="aeac-82cb-a7a7-4ebf"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4aa6-6708-6104-3733" type="selectionEntryGroup" targetId="462c-2914-b583-1688"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="f410-1174-1e10-b7cf" type="selectionEntryGroup" targetId="26fc-3985-5b0a-b181"/>
+        <entryLink import="true" name="Paths" hidden="false" id="08e6-3b8a-bef6-3c96" type="selectionEntryGroup" targetId="9e59-94d3-7bfe-3534"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="29a1-c55f-558c-9a0c"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Grey Seer on Screaming Bell" hidden="false" id="3400-ae04-6506-1cba" type="selectionEntry" targetId="59d2-a983-aed1-a148">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="39e8-c4b0-3680-82c7" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="310"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Renown" hidden="false" id="4cba-cb41-7605-0d20" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="7181-5735-8088-823d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="f7d6-ae56-d686-c435" type="selectionEntryGroup" targetId="aeac-82cb-a7a7-4ebf"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="93af-05ed-a68a-7e11" type="selectionEntryGroup" targetId="462c-2914-b583-1688"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="96c0-dc2c-fabe-5641" type="selectionEntryGroup" targetId="26fc-3985-5b0a-b181"/>
+        <entryLink import="true" name="Paths" hidden="false" id="28d1-bd35-b4dc-2622" type="selectionEntryGroup" targetId="9e59-94d3-7bfe-3534"/>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="ccbd-e1e3-89db-861" defaultAmount="1">
@@ -3225,9 +3650,14 @@ Start of Battle Round</characteristic>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3244,9 +3674,14 @@ Start of Battle Round</characteristic>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3263,9 +3698,14 @@ Start of Battle Round</characteristic>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>

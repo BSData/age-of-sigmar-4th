@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Cities of Sigmar - Library" id="7fae-e658-b76a-fe24" targetId="c83a-4a23-6dc5-fb68"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="91b3-9cb9-fded-8fef" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -160,6 +160,60 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Veteran Cannoneers" hidden="true" id="a574-28e2-35a2-5378" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9780-c139-0ee6-1bfd"/>
+          </constraints>
+          <profiles>
+            <profile name="Canny Crews" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="dc6e-50ac-e432-4f94">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **Ironweld Great Cannon** units to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, each time the target uses a **^^Shoot^^** ability, you can re-roll 1 hit roll, or 1 wound roll, or 1 random characteristic roll for the Damage characteristic</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fearless Exemplars" hidden="true" id="f461-6e4c-945a-d252" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11d0-98fb-a420-e622"/>
+          </constraints>
+          <profiles>
+            <profile name="Front-Line Leader" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4d8e-c223-eecd-eaca">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Cities of Sigmar Human Infantry Hero^^** to use this ability. Then, you can pick up to 1 friendly non-**^^Hero Human Infantry^^** unit and up to 1 friendly **^^Human War Machine^^** unit that are wholly within 12&quot; of that **^^Hero^^** to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">While the targets are wholly within 12&quot; of that **^^Hero^^**, add 1 to the Rend characteristic of the target **^^Infantry^^** unit’s melee weapons and the target **^^War Machine^^** unit’s ranged weapons until the start of your next turn.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="30fd-77cb-aa65-bbb4" includeChildSelections="true" includeChildForces="true"/>
@@ -229,6 +283,89 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
             <modifier type="set" value="-1" field="b7d0-e4c7-d3a2-29bd">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Stormforged Qualities" id="0f20-dbe4-d458-cdf6" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Cosmopolitan Leader" hidden="false" id="360e-5416-0f5a-4757">
+              <profiles>
+                <profile name="Cosmopolitan Leader" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="94a8-f024-6476-93ae">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Cities of Sigmar Infantry^^** or **^^Cavalry^^** unit wholly within 12&quot; of this unit to be the target. If this unit is **^^Human^^**, pick up to 3 eligible units to be the targets instead.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, until the start of your next turn:
+• If the target is **^^Human^^**, add 1 to wound rolls for the target’s combat attacks.
+• If the target is **^^Duardin^^**, add 1 to charge rolls for the target.
+• If the target is **^^Aelf^^**, add 3 to the target’s control score.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="778e-8127-4e7d-6b92" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Draw Steel!" hidden="false" id="c2f7-e525-d69d-2403">
+              <profiles>
+                <profile name="Draw Steel!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="595f-bee7-a9c6-a759">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick a friendly **^^Cities of Sigmar Human^^** unit that charged this turn and is wholly within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fe54-d3c5-971b-610c" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Astute Tactician" hidden="false" id="0b83-ed62-ae41-a335">
+              <profiles>
+                <profile name="Astute Tactician" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="da33-05df-e48f-71e2">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Cities of Sigmar^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to charge rolls for the target and add 2 to run rolls for the target.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f42-dc81-9651-112c" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b84-2c2c-6cb2-16f5"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f758-d63a-c980-bf09" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="f758-d63a-c980-bf09">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -815,6 +952,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -944,6 +1082,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1039,6 +1178,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1134,6 +1274,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1622,6 +1763,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1695,6 +1837,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5189-df8c-c265-88e0" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1851,6 +1994,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2004,6 +2148,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2050,6 +2195,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2097,6 +2243,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="d448-6492-8fc1-ed92" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2240,6 +2387,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c41b-b7fb-996e-45e9" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5189-df8c-c265-88e0" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2342,6 +2490,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="db4f-981-b206-2fc5" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2413,6 +2562,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="db4f-981-b206-2fc5" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b92e-ce68-720b-d9ec" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2492,6 +2642,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2574,6 +2725,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2617,6 +2769,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2632,6 +2785,86 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7242-24db-784f-c8b5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Freeguild Cavaliers" hidden="false" id="c6c4-cfe5-de9b-82b0" type="selectionEntry" targetId="1d9d-c777-641c-68ba">
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="86a3-572-f5f3-aa2c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="702f-db1b-f8b2-c27" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2c9f-2e5e-92d4-4707" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c41b-b7fb-996e-45e9" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="41be-98b4-f3a1-2bae" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f534-437-b727-fa21" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5189-df8c-c265-88e0" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="68be-a563-c70e-652d" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="831a-f506-71e0-607f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="db4f-981-b206-2fc5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="ce10-10a3-4f51-7c58" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="11e8-f723-5c4e-80b7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="a676-2bc6-ff1a-959c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e25d-2f78-f664-8e4b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="ac69-1e25-9bc4-d1e1" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8067-7aa0-651e-1004" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5ef2-a387-79ba-41e5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f74b-5cea-32ac-3048" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Pontifex Zenestra, Matriarch of the Great Wheel" hidden="false" id="d742-9547-9022-52f6" type="selectionEntry" targetId="2e94-0acc-b29b-fb64">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="001e-b711-ddd3-5b4c"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2c8f-2bed-1c86-e30a" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Pontifex Zenestra, Matriarch of the Great Wheel" hidden="false" id="e25d-2f78-f664-8e4b" type="selectionEntry" targetId="2e94-0acc-b29b-fb64">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="97f9-fea2-b8b7-5b92" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="250"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="32d0-7d27-2c1e-03e7" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
@@ -2660,9 +2893,14 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -2679,9 +2917,14 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -2698,9 +2941,14 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>

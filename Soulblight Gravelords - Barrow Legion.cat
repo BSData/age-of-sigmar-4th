@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="BARROW LEGION" id="07ad-5d9a-db7f-270d" hidden="false"/>
     <categoryEntry name="Deathrattle Overseer" id="ca3d-ce07-0388-88b9" hidden="false"/>
@@ -800,4 +800,30 @@ For the rest of the battle, each time an attack targets this unit, if the attack
       </constraints>
     </entryLink>
   </entryLinks>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="de71-f65e-93be-45f3" defaultAmount="1">
+      <entryLinks>
+        <entryLink import="true" name="Manifestation Lores" hidden="false" id="867d-f8bb-f5b4-c799" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="14db-2622-1f46-38d5"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="b8a9-9760-0f6f-dc6b"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="0c4a-b204-0d1e-8646" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </selectionEntries>
 </catalogue>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Nagash, Supreme Lord of the Undead" hidden="false" id="fb77-fec9-42ed-a7fd">
       <categoryLinks>
@@ -3021,6 +3021,237 @@ While a unit is **condemned**:
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scourge of Ghyran Black Coach" hidden="false" id="e4c1-f020-bd21-780a">
+      <profiles>
+        <profile name="Black Coach" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="b96a-b1be-69c5-6039">
+          <characteristics>
+            <characteristic name="Move" id="a416-bc22-325f-98d5" hidden="false" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" id="cbe0-93b7-86b5-b60e" hidden="false" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" id="6d75-d64c-f4cc-d814" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" id="e508-6e3d-bf60-48fb" hidden="false" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Spectral Carriage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cc07-e274-cf13-f27c">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the phase, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+          </attributes>
+        </profile>
+        <profile name="One Stop, No Return" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3994-610b-9176-0436">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective you do not control to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, while enemy units are contesting the target objective, they cannot score critical hits while this unit is also contesting it (hit rolls that would be critical hits score hits instead).</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Control</attribute>
+          </attributes>
+        </profile>
+        <profile name="Evocation of Death" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="916f-9f94-ffe6-4b64">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit destroyed any enemy units this turn, pick a friendly non-**^^Unique Nighthaunt Hero^^** that has been destroyed.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following to apply for the rest of the turn:
+***Noble Blade:*** This unit’s melee weapons, including **Companion weapons**, have **Crit (Mortal)** instead of **Crit (Auto-wound)**.
+***Unholy Grail:*** Pick a friendly **^^Nighthaunt^^** unit wholly within 12&quot; of this unit. Each time that unit uses the ‘Rally’ command, you receive 3 additional rally points.
+***Tome of Undead Lore:*** This unit has **^^Wizard (1)^^**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="DEATH" hidden="false" id="c0e9-1afd-0ed9-a7e4" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="7c63-f7e1-6693-b050" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="NIGHTHAUNT" hidden="false" id="3a51-5d93-766f-2937" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="76c9-7e45-c3bd-d6a1" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="94d0-e37c-65cc-7e2f" targetId="f7bc-b618-4b5d-2bae" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Black Coach" hidden="false" id="12b3-3be5-cef0-699d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Wraiths&apos; Spectral Weapons" hidden="false" id="61dd-ec82-cc94-b4ce">
+              <profiles>
+                <profile name="Wraiths&apos; Spectral Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="340f-1475-8e2c-56ce">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="55a0-2cea-38d4-5cbf"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0dc-60e0-122a-056b"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Black Coach&apos;s Iron-shod Wheels" hidden="false" id="8c16-eb9f-0b62-125e">
+              <profiles>
+                <profile name="Black Coach&apos;s Iron-shod Wheels" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ae30-e593-deb9-3583">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e28c-d53f-2ab9-9c73"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81f9-76a4-9e11-8426"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3100-44c0-d555-7597"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e320-7e8b-3e7e-5799"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="29fe-d90b-4dde-c891" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scourge of Ghyran Kurdoss Valentian, the Craven King" hidden="false" id="4bd5-32fb-6e98-2357">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="7200-9b39-0b25-f93c" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Kurdoss Valentian, the Craven King" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="cf5c-b494-5678-0b41">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="A Traitor&apos;s Legacy" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e23b-11e1-17b2-4341">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat, pick a visible friendly **^^Nighthaunt^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following to apply for the rest of the turn:
+***Regicide and Kinslaying:*** The target’s melee weapons have **Anti‑^^Hero^^ (+1 Rend)**.
+***Usurpation and Larceny:*** Add 5 to the target’s control score.
+***Sedition and Betrayal:*** Enemy units cannot use commands while they
+are in combat with the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Inescapable Mockery" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9c23-de64-a04b-c846">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls and wound rolls for this unit’s combat attacks that target an enemy unit that has a lower Control characteristic than this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="a848-35b8-6eef-e73b" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="DEATH" hidden="false" id="5126-b426-a270-624e" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="UNIQUE" hidden="false" id="f22b-319a-3711-f697" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="2ac9-8f49-b81d-c6a5" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="NIGHTHAUNT" hidden="false" id="1b6c-ec4e-3591-206e" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="84e5-8531-e24b-6b80" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="ee84-3e1a-1ffd-db6a" targetId="70a4-383f-421f-52cd" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c513-f2c3-42f4-9420" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Kurdoss Valentian, the Craven King" hidden="false" id="923e-e1fc-d77f-5e50">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Wraith Heralds’ Spectral Claws" hidden="false" id="d037-8ac0-bbc1-f9a4">
+              <profiles>
+                <profile name="Wraith Heralds’ Spectral Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3f73-8495-9d36-3571">
+                  <characteristics>
+                    <characteristic name="Atk" id="b822-351c-7b46-e253" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" id="76f3-5f08-a389-27da" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" id="9649-3fd0-6219-742c" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" id="e644-2630-a093-9966" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" id="525c-4b07-e56d-5f4b" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" id="36f3-f715-d489-0de5" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbab-9300-693b-1d14"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ba5-da8e-a319-84f8"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sepulchral Sceptre" hidden="false" id="de62-2c73-9719-6abe">
+              <profiles>
+                <profile name="Sepulchral Sceptre" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f5e3-d961-76ed-0ffc">
+                  <characteristics>
+                    <characteristic name="Atk" id="ad8b-f8e2-82ea-f758" hidden="false" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" id="5f5a-c270-6038-62b7" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" id="481a-08d7-0107-3f88" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" id="e78a-b81a-080b-6b53" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" id="d47b-32f1-2192-10fd" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" id="9cee-af8c-0379-3fa9" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dad9-b2fb-ed34-e821"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3551-9e0d-577b-db38"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ae9-8210-6483-9f93"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4034-36f7-5710-dc2d"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="9b2f-951a-816b-94c4" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>

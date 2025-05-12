@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7dd9-f3c9-349a-1f6a" name="Skaven - Thanquol&apos;s Mutated Menagerie" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7dd9-f3c9-349a-1f6a" name="Skaven - Thanquol&apos;s Mutated Menagerie" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Thanquol&apos;s Mutated Menagerie" hidden="false" id="c4ae-1c0b-4448-f38c" publicationId="ff83-b049-91b9-ed05">
       <profiles>
@@ -498,6 +498,43 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="75a6-7b27-f589-e5fe" includeChildSelections="true"/>
       </constraints>
     </entryLink>
+    <entryLink import="true" name="Scourge of Ghyran Brood Terror" hidden="false" id="566a-5091-ec89-29d1" type="selectionEntry" targetId="3f42-fd25-3ec4-00ec">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4e5b-35f2-a619-9427" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="448f-205a-0890-fa6d" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="MUTATED MENAGERIE" hidden="false" id="c213-52c4-e16e-228b" targetId="420f-2e14-2ae1-222c" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="6ad2-58cd-1865-3d59" type="selectionEntryGroup" targetId="03b5-bce3-fac9-ad46"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="079f-c9c1-3240-e4ef" type="selectionEntryGroup" targetId="3c9e-96df-fcd3-acc5"/>
+        <entryLink import="true" name="Renown" hidden="false" id="605b-6e98-c5e0-f6de" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="ef3b-42da-b808-bcc1" defaultAmount="1">
@@ -513,9 +550,14 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -533,9 +575,14 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>

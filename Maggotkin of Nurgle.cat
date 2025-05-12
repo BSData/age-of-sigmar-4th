@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5079-92b5-4879-69f8" name="Maggotkin of Nurgle" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5079-92b5-4879-69f8" name="Maggotkin of Nurgle" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Maggotkin of Nurgle - Library" id="5118-2b4-6e2-3504" targetId="7589-6d2-dadc-bc6"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="08b4-e92c-8190-9cc7" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -316,7 +316,7 @@
         <profile name="Desperate Remedies" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7709-9243-a8b5-ff1e">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If an ability would heal 1 or more damage points or return 1 or more slain models to a **^^Diseased^^** enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the**^^Diseased^^** keyword.
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If an ability would heal or return slain models to a **^^Diseased^^** enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the**^^Diseased^^** keyword.
 **^^Manifestations^^** and faction terrain features cannot be given the **^^Diseased^^** keyword by any friendly abilities.</characteristic>
           </characteristics>
           <attributes>
@@ -384,9 +384,14 @@ the roll.</characteristic>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -414,9 +419,14 @@ the roll.</characteristic>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
