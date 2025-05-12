@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Doralia ven Denst" hidden="false" id="6d6b-cfc7-7011-3be" publicationId="a746-732d-1a22-460">
       <categoryLinks>
@@ -6281,6 +6281,234 @@ If this unit is destroyed, remove its **Relic Envoy** from the battlefield.</cha
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scourge of Ghyran Pontifex Zenestra, Matriarch of the Great Wheel" hidden="false" id="2e94-0acc-b29b-fb64" publicationId="f894-7929-f79a-a269">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="5406-9a32-d096-e020" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="f3d5-20e2-0d78-d758" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="2ded-35a2-b8ef-6d90" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="CITIES OF SIGMAR" hidden="false" id="a64e-95cb-3855-75f6" targetId="4999-8ae2-e1bb-ba5" primary="false"/>
+        <categoryLink name="HUMAN" hidden="false" id="add5-042f-853e-f885" targetId="336b-e559-e958-a83" primary="false"/>
+        <categoryLink name="PRIEST (2)" hidden="false" id="ff91-103f-954c-305c" targetId="e692-853d-6db8-fdbe" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="d65e-ebeb-35d7-ccf5" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (4+)" hidden="false" id="8e13-9add-f012-2e6c" targetId="f99f-98ee-909f-57cd" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="b697-fbbd-f609-fada" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Pontifex Zenestra, Matriarch of the Great Wheel" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d548-daa2-7bbc-e1aa">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">9</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Word of the God-king" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4724-5e9b-7d8e-200f">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"> Pick an enemy **^^Wizard^^**, **^^Priest^^** or **^^Manifestation^^** within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, if the target is a **^^Manifestation^^**, it is banished. Otherwise, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Sigmar&apos;s Will" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="7197-e46a-d08b-94d0">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Make a chanting roll of D6. If the roll is an unmodified 1, you can re-roll the dice.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Pick 1 of the following effects to apply until the start of your next turn. Pick up to 2 different effects instead if the chanting roll was 10+.
+***Hallowed Ground:*** Enemy units using the ‘Normal Move’ ability cannot end that move within 5&quot; of a friendly **^^Cities of Sigmar Human^^** unit that is wholly within 12&quot; of this unit.
+***Fervent Prayers:*** Each time a friendly **^^Cities of Sigmar Human^^** model that is wholly within 12&quot; of this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. On a 6, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.
+***Salvation:*** Pick up to 3 friendly **^^Cities of Sigmar Human^^** units to be the targets. Remove those units from the battlefield and set them up again wholly within 12&quot; of this unit and not in combat. Those units cannot use **^^Charge^^** abilities for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f8c3-8c5e-2527-b2ef" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Pontifex Zenestra, Matriarch of the Great Wheel" hidden="false" id="b013-bc35-399d-0fcf">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sceptre of the Wheel and Acolytes&apos; Weapons" hidden="false" id="8f56-8d83-510b-a359">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc10-0edb-cd54-8b53"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e7b-362f-9bd9-a858"/>
+              </constraints>
+              <profiles>
+                <profile name="Sceptre of the Wheel and Acolytes&apos; Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="84a6-957c-deee-533c">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37c8-17d3-3883-5cec"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64cd-a0f0-8ea7-fa58"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="708d-414f-a3f-3734" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scourge of Ghyran Freeguild Cavaliers" hidden="false" id="1d9d-c777-641c-68ba" publicationId="f894-7929-f79a-a269">
+      <profiles>
+        <profile name="Freeguild Cavaliers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="dc70-aef9-3e77-0bc3">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="The Red Work" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d330-4b14-f643-5dcb">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat and has not charged this turn, pick this unit and up to 1 friendly **Freeguild Cavalier-Marshal** or **Freeguild Marshal on Griffon** within this unit’s combat range to be the targets</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if there are fewer models in this unit than the total number of enemy models in units that are in combat with this unit. On a 4+, for the rest of the turn, the targets count as having charged.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CHAMPION" hidden="false" id="e291-5862-6fb5-8a2a" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="1a65-1578-b014-aab4" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="CITIES OF SIGMAR" hidden="false" id="1057-25d2-5c54-6cb7" targetId="4999-8ae2-e1bb-ba5" primary="false"/>
+        <categoryLink name="HUMAN" hidden="false" id="8b70-ae15-c863-19f8" targetId="336b-e559-e958-a83" primary="false"/>
+        <categoryLink name="CAVALRY" hidden="false" id="a22c-63ad-2d9e-7fed" targetId="926c-df8c-6841-d49e" primary="true"/>
+        <categoryLink name="STANDARD BEARER (1/5)" hidden="false" id="75ae-588b-f0ff-2597" targetId="73c-8e22-9dde-f97" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Freeguild Cavaliers" hidden="false" id="13a4-0458-e1ca-6a90" defaultAmount="1,1,3">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="false" id="fc38-1553-b82f-a25e"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="false" id="5175-f6eb-17be-3999"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="5" field="fc38-1553-b82f-a25e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="1d9d-c777-641c-68ba" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="5" field="5175-f6eb-17be-3999">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="1d9d-c777-641c-68ba" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warhorse’s Steel‑shod Hooves" hidden="false" id="6beb-cfd2-a647-f5c4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="70b0-4112-2da4-9ec9"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ff1-35d7-76b7-7371"/>
+              </constraints>
+              <profiles>
+                <profile name="Warhorse’s Steel‑shod Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2cf1-b88f-1cee-003d">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cavalier Weapon" hidden="false" id="65da-f117-371b-5175">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1f03-e1c7-fa69-13a4"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52ee-cd04-5b2a-f7f7"/>
+              </constraints>
+              <profiles>
+                <profile name="Cavalier Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6573-f466-ac01-ace9">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="7a77-2d61-c94c-8331" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f2a-740a-4106-764d"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="c9ca-d09c-3101-8255" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="1d9d-c777-641c-68ba" shared="true" id="e25e-1a6d-74e6-2c2b" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="105b-d463-7694-6b04"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="bd2a-14a7-0901-3be2" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="1d9d-c777-641c-68ba" shared="true" id="e749-c29a-57b2-5670" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cef3-ceee-ef54-621b"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="e749-c29a-57b2-5670">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="80f5-4df3-c41b-f6f7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
