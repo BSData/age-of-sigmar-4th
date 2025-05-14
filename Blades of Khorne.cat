@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1ede-f90-a661-b6c2" hidden="false">
       <selectionEntryGroups>
@@ -150,6 +150,60 @@
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Tournament of Skulls" hidden="true" id="b17c-c220-7a3d-69c8" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5913-8f62-de56-a610"/>
+          </constraints>
+          <profiles>
+            <profile name="Bloody Competitors" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9473-82ed-fc5f-f420">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Hero Bloodbound^^** unit and a friendly non-**^^Hero Blades of Khorne Daemon^^** unit to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn, while the targets are wholly within 12&quot; of each other, add 1 to wound rolls for the targets&apos; combat attacks.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Goretide" hidden="true" id="5ead-660f-ba1b-f290" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03f2-c6e4-ebc1-b759"/>
+          </constraints>
+          <profiles>
+            <profile name="Tide of Savagery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1285-134e-e185-fc95">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Bloodbound Hero^^** and up to 2 other friendly ^^**Bloodbound^^** units that are wholly within 12&quot; of that **^^Hero^^** to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 2&quot; to the targets&apos; Move characteristic for the rest of the turn.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e1a9-e42b-9f78-9ee4" includeChildSelections="true" includeChildForces="true"/>
@@ -233,7 +287,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Manifestation Lores" id="383d-bbab-49a9-dd66" hidden="false" flatten="true">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Judgements of Khorne" hidden="false" id="3513-9caa-3b2b-db31" publicationId="81a9-3dbf-dbc5-672e">
+        <selectionEntry type="upgrade" import="true" name="Judgements of Khorne" hidden="false" id="3513-9caa-3b2b-db31" publicationId="81a9-3dbf-dbc5-672e" defaultAmount="1">
           <entryLinks>
             <entryLink import="true" name="Judgements of Khorne" hidden="false" id="1a25-7183-1710-20df" type="selectionEntryGroup" targetId="baf8-cb21-a0af-2aec"/>
           </entryLinks>
@@ -252,6 +306,21 @@
           <entryLinks>
             <entryLink import="true" name="Blood Blessings of Khorne" hidden="false" id="c8d6-7d6d-2a76-5a28" type="selectionEntryGroup" targetId="7761-af98-de90-44d8"/>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Gifts of the Blood God" hidden="true" id="4a22-8008-259b-6e32" publicationId="f894-7929-f79a-a269">
+          <entryLinks>
+            <entryLink import="true" name="Gifts of the Blood God" hidden="false" id="3bc5-eb87-29b1-a847" type="selectionEntryGroup" targetId="9a04-7009-3f6c-5a34"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cff-ae83-2c79-a397"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -417,6 +486,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -485,6 +555,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -529,6 +600,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -669,6 +741,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -738,8 +811,15 @@
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -938,6 +1018,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1374,6 +1455,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1405,6 +1487,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="d4b7-ee4a-45ab-18c7" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1446,6 +1529,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="43ef-7759-bb6d-81e4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1495,6 +1579,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1537,6 +1622,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="43ef-7759-bb6d-81e4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1584,6 +1670,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1633,6 +1720,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1677,6 +1765,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1725,6 +1814,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1774,6 +1864,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1902,6 +1993,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1956,6 +2048,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2011,6 +2104,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2053,6 +2147,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2079,6 +2174,93 @@
       </costs>
     </entryLink>
     <entryLink import="true" name="Skull Altar" hidden="false" id="2f8c-2a42-f2c6-9391" type="selectionEntry" targetId="f038-6876-40e8-5093"/>
+    <entryLink import="true" name="Bloodcrushers (Scourge of Ghyran)" hidden="false" id="9e0e-e99e-65ab-a890" type="selectionEntry" targetId="e422-d8f6-2686-c2f8">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bc17-8cf9-ec7-e2a2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b47-5a22-e61b-ab3e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6b18-2904-953d-b406" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3b5f-188e-d4b6-f639" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2a37-2478-7c6-2125" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="43ef-7759-bb6d-81e4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2276-240a-fde6-d60a" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d4b7-ee4a-45ab-18c7" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e0c4-7af2-b0a2-4718" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9c1f-a69f-f507-a1b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="1cfa-e161-736f-b987" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c2b8-8234-4cb1-df41" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="59fe-24fb-18d9-be96" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+        <entryLink import="true" name="Renown" hidden="false" id="03b7-ddd1-c706-d256" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Mighty Lord of Khorne (Scourge of Ghyran)" hidden="false" id="8732-fdfc-fbbf-6b08" type="selectionEntry" targetId="c529-fdee-8056-75d6">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="e1c8-45a4-88d-972a" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="6d57-bb8b-6788-169c"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="0210-35b4-d1a3-ac54" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="f7ee-8cb5-eb89-afdd" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ef08-f552-233a-c082" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d553-37d1-8e4d-384f" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c822-1f22-8a2a-1ae3" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="61f3-466b-41d4-48ba" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Mighty Lord of Khorne (Scourge of Ghyran)" hidden="false" id="9c1f-a69f-f507-a1b5" type="selectionEntry" targetId="c529-fdee-8056-75d6">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="4422-674e-502c-0cc8" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="4e74-3e69-6914-a827" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="60e6-18a2-3d82-ff5b" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0319-7381-7b67-c304" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="46b1-6308-b9da-bfd6" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="c105-ff0a-b320-d214" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="585f-3561-f0a4-068a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Formation" hidden="false" id="3558-eb6c-91f9-7284" defaultAmount="1">
