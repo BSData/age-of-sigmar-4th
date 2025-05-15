@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="6887-883c-79f3-9f8" name="Blades of Khorne - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="6887-883c-79f3-9f8" name="Blades of Khorne - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Skull Cannon" hidden="false" id="597f-3928-bede-9c43" publicationId="81a9-3dbf-dbc5-672e">
       <entryLinks>
@@ -3781,7 +3781,7 @@ Cover, Impassible**</description>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Mighty Lord of Khorne (Scourge of Ghyran)" hidden="false" id="c529-fdee-8056-75d6" publicationId="f894-7929-f79a-a269">
+    <selectionEntry type="unit" import="true" name="Mighty Lord of Khorne (Scourge of Ghyran)" hidden="true" id="c529-fdee-8056-75d6" publicationId="f894-7929-f79a-a269">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="33b7-6d72-07d8-24a2" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -3874,8 +3874,20 @@ Cover, Impassible**</description>
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="d9d9-55ad-2a9f-acf9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Bloodcrushers (Scourge of Ghyran)" hidden="false" id="e422-d8f6-2686-c2f8" publicationId="f894-7929-f79a-a269">
+    <selectionEntry type="unit" import="true" name="Bloodcrushers (Scourge of Ghyran)" hidden="true" id="e422-d8f6-2686-c2f8" publicationId="f894-7929-f79a-a269">
       <profiles>
         <profile name="Bloodcrushers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="1df5-8aa3-e0eb-af60">
           <characteristics>
@@ -4011,6 +4023,18 @@ Cover, Impassible**</description>
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="713c-ba47-3b7f-b1d3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
