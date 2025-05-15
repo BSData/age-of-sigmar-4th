@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="3521-1b3c-7fd9-838b" name="Ossiarch Bonereapers - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="1" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" hidden="false">
+<catalogue library="true" id="3521-1b3c-7fd9-838b" name="Ossiarch Bonereapers - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="1" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" hidden="false">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Vokmortian, Master of the Bone-tithe" hidden="false" id="f92d-b53f-1f6f-1646" publicationId="2f1e-fdf-1ac2-fa38">
       <profiles>
@@ -2357,7 +2357,7 @@ Cover, Unstable**</description>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Mortisan Boneshaper (Scourge of Ghyran)" hidden="false" id="d6c8-ba7b-1a73-9580" publicationId="f894-7929-f79a-a269">
+    <selectionEntry type="unit" import="true" name="Mortisan Boneshaper (Scourge of Ghyran)" hidden="true" id="d6c8-ba7b-1a73-9580" publicationId="f894-7929-f79a-a269">
       <profiles>
         <profile name="Mortisan Boneshaper" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="deb9-090c-9dde-004b">
           <characteristics>
@@ -2431,8 +2431,20 @@ Cover, Unstable**</description>
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="13ec-ca46-9e71-ad2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Mortek Guard (Scourge of Ghyran)" hidden="false" id="84cb-6e61-b905-0d69" publicationId="f894-7929-f79a-a269">
+    <selectionEntry type="unit" import="true" name="Mortek Guard (Scourge of Ghyran)" hidden="true" id="84cb-6e61-b905-0d69" publicationId="f894-7929-f79a-a269">
       <profiles>
         <profile name="Mortek Guard" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="07ad-8210-58c7-fd0c">
           <characteristics>
@@ -2535,6 +2547,18 @@ Cover, Unstable**</description>
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="10d1-4f28-db72-1eb9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
