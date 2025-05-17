@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="28" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="29" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -320,7 +320,7 @@
     <categoryEntry name="Arcane Tome" id="707c-1c04-9af6-2307" hidden="true"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary">
+    <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c63-5bc5-ea14-ff14" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="516a-f060-376f-acab" targetId="3360-1158-e879-9606"/>
@@ -3018,7 +3018,7 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
       </constraints>
     </forceEntry>
-    <forceEntry name="✦ General&apos;s Handbook 2025-26 (Use for Scourge of Ghyran)" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary">
+    <forceEntry name="General&apos;s Handbook 2025-26 (Use for Scourge of Ghyran)" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c63-5bc5-ea14-ff14" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="516a-f060-376f-acab" targetId="3360-1158-e879-9606"/>
@@ -5716,7 +5716,7 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
       </constraints>
     </forceEntry>
-    <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary">
+    <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="64d4-e838-78d0-3a8b" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="9c1f-40d5-f242-64f6" targetId="3360-1158-e879-9606"/>
@@ -7008,7 +7008,7 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="2980-eb35-12cf-8017"/>
       </constraints>
     </forceEntry>
-    <forceEntry name="Path to Glory: Ascension (WIP!)" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary">
+    <forceEntry name="Path to Glory: Ascension (WIP!)" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0ad8-1348-974d-3643" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="d2ae-5c7d-0dda-8343" targetId="3360-1158-e879-9606"/>
