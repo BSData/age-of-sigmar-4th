@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3f9-6c96-b99a-1e71" name="Fyreslayers" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b3f9-6c96-b99a-1e71" name="Fyreslayers" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Fyreslayers - Library" id="e369-f7ec-be14-5c6a" targetId="c401-2e10-cae8-d7f1"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="35dc-9da6-0fd8-1da9" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -16,6 +16,21 @@
           <entryLinks>
             <entryLink import="true" name="Zharrgrim Blessings" hidden="false" id="0939-7a8d-2312-923c" type="selectionEntryGroup" targetId="82ee-bf3d-bf8f-a0c0"/>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Vulkyn Gifts" hidden="true" id="4f7d-d37b-16a6-8ee3" defaultAmount="1" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9134-0edd-3ea7-c8c0"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Vulkyn Gifts" hidden="false" id="277e-b3be-77a3-578d" type="selectionEntryGroup" targetId="e55c-06fb-f23b-5b42"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -309,6 +324,89 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c0d-8e16-6f70-6e75"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Marks of Vulkatrix" id="ec67-3b52-a0d2-135e" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Marks of Vulkatrix: Fyreslayers" id="942b-f41f-5a23-6865" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Incandescent Blaze" hidden="false" id="53ec-07b1-c356-4ad0">
+              <profiles>
+                <profile name="Incandescent Blaze" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="df78-a2cc-f646-7662">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Shooting Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
+• Double the Attacks characteristic of this unit&apos;s **Roaring Fyrestream**.
+• This unit&apos;s **Roaring Fyrestream** has a Damage characteristic of 3.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cea3-f61f-a3b2-dad7" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Peerless Lineage" hidden="false" id="c445-1c10-be3f-bf72">
+              <profiles>
+                <profile name="Peerless Lineage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b853-25be-8c4d-8ffa">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Rampage^^** ability for this unit.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can pick another eligible unit to be a second target of that **^^Rampage^^** ability. If that ability requires a roll, you must roll for each target.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9a73-574d-7f1b-2fc7" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Thickened Scales" hidden="false" id="e35a-5623-823b-c60a">
+              <profiles>
+                <profile name="Thickened Scales" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0dd9-aa7b-1d29-269e">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3c4a-4dbf-792f-85c5" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d08e-4fc6-f3d6-1e4f"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="06af-5eac-d84f-8971" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="06af-5eac-d84f-8971">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Fyreslayers" hidden="false" id="d272-b44a-2b04-4f2b">
@@ -452,6 +550,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
         <entryLink import="true" name="Paths" hidden="false" id="9171-8823-ef9f-771e" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
         <entryLink import="true" name="Warlord" hidden="false" id="bdb7-17ab-3b0a-36c8" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="1c49-dfa4-d50e-eaca" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="be0c-0087-8f70-34c8" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -555,6 +654,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
         <entryLink import="true" name="Paths" hidden="false" id="c58a-fc48-0788-9d47" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
         <entryLink import="true" name="Warlord" hidden="false" id="1e27-bb6c-0ffe-0b66" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="29b7-925f-cba4-5e69" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="8dc7-cfce-03ec-fbf4" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -598,6 +698,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1501-6e2e-8add-4a27" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="76f1-1add-e9e9-82a4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b46-175e-db91-5802" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -635,6 +736,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
         <entryLink import="true" name="Paths" hidden="false" id="dc69-7a98-409f-a51a" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
         <entryLink import="true" name="Warlord" hidden="false" id="b5d7-bdb1-1bae-38de" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="fbfd-d752-2540-4f5c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="4217-649e-c246-3c20" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -700,6 +802,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1501-6e2e-8add-4a27" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="76f1-1add-e9e9-82a4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b46-175e-db91-5802" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -753,6 +856,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1501-6e2e-8add-4a27" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="76f1-1add-e9e9-82a4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b46-175e-db91-5802" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -806,6 +910,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1501-6e2e-8add-4a27" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="76f1-1add-e9e9-82a4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b46-175e-db91-5802" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -859,6 +964,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="1501-6e2e-8add-4a27" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="76f1-1add-e9e9-82a4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6b46-175e-db91-5802" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -944,6 +1050,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
         <entryLink import="true" name="Paths" hidden="false" id="a9c1-8d50-51c9-3602" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
         <entryLink import="true" name="Warlord" hidden="false" id="7269-ca1a-4b11-1fe1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="1f23-61fa-b845-ab44" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="0e79-f4a7-636d-a0c0" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="1c74-4bfb-fe91-fd80" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -992,6 +1099,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
         <entryLink import="true" name="Paths" hidden="false" id="a57b-090f-0691-1b93" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
         <entryLink import="true" name="Warlord" hidden="false" id="13fc-4dbf-d8b8-595c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="73cd-a6f2-34ce-58c9" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="e25c-7f07-16fe-9e29" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="e652-da08-e1b2-4f03" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1024,6 +1132,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
         <entryLink import="true" name="Paths" hidden="false" id="576f-202c-bd78-b22a" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
         <entryLink import="true" name="Warlord" hidden="false" id="07eb-d193-561a-e09a" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="5678-2dc8-a1ec-8dce" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="8732-f9b4-6e49-69d6" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="60ab-193d-35ac-e4db" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -1110,6 +1219,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1150,6 +1260,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1195,6 +1306,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1240,6 +1352,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1285,6 +1398,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1330,6 +1444,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1380,6 +1495,7 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b89-9c2a-22ea-4fdd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="19b2-f461-196e-4992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6443-bbfe-4967-5fd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="bf8b-1886-edbf-3944" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1396,6 +1512,73 @@ For the rest of the battle round, friendly **^^Fyreslayers^^** units have **^^St
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7169-82df-662f-c6bb" type="selectionEntryGroup" targetId="a732-883c-6d30-955e"/>
       </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Auric Runeson on Magmadroth (Scourge of Ghyran)" hidden="false" id="1e0f-9a2b-28b3-dba9" type="selectionEntry" targetId="153d-5d1c-c0c6-54cc">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="0dae-0bc9-631b-b07b" type="selectionEntryGroup" targetId="c7c9-5ee6-491d-cb28"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="de05-93c6-8cd3-5d31" type="selectionEntryGroup" targetId="df19-d97c-b7a6-944"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4a23-1d32-9b53-2c85" type="selectionEntryGroup" targetId="a732-883c-6d30-955e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e8fc-0bd6-f323-a8bc" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9646-89a0-4d4c-c952" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="b48b-2c46-25b8-4fe4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="ffb5-032e-c067-9030" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="8555-7e4f-1473-773b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="a3c8-dafa-188e-854e"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="310"/>
+      </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="e2b4-defb-ae24-3954" field="category"/>
+            <modifier type="set" value="0" field="a3c8-dafa-188e-854e">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="e2b4-defb-ae24-3954" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Auric Runeson on Magmadroth (Scourge of Ghyran)" hidden="false" id="bf8b-1886-edbf-3944" type="selectionEntry" targetId="153d-5d1c-c0c6-54cc">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="2e25-0536-ef67-c61a" type="selectionEntryGroup" targetId="c7c9-5ee6-491d-cb28"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="9fc1-4dcf-92e3-aa50" type="selectionEntryGroup" targetId="df19-d97c-b7a6-944"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="978c-1d49-6a8a-f3dd" type="selectionEntryGroup" targetId="a732-883c-6d30-955e"/>
+        <entryLink import="true" name="Paths" hidden="false" id="bd06-d1e1-d971-3024" type="selectionEntryGroup" targetId="40a9-3a05-80dd-f5ae"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="73f2-829f-be3d-19d9" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="e423-b529-e8d0-a0fe" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Marks of Vulkatrix" hidden="false" id="57e9-af29-cab9-99b6" type="selectionEntryGroup" targetId="ec67-3b52-a0d2-135e"/>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="cc25-0234-f0b4-a97d" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="310"/>
+      </costs>
     </entryLink>
   </entryLinks>
   <categoryEntries>
