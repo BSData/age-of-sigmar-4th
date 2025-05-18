@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="bb28-eb3d-b408-7bb8" name="Disciples of Tzeentch - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="bb28-eb3d-b408-7bb8" name="Disciples of Tzeentch - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Chaos Spawn of Tzeentch" hidden="false" id="d804-1f1-49e2-880" publicationId="72d2-ae0-e519-f2f7">
       <profiles>
@@ -4035,6 +4035,329 @@ In addition, until the start of your next turn, roll a dice each time this unit
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ogroid Thaumaturge (Scourge of Ghyran)" hidden="true" id="1717-5238-e2ba-0f0a" publicationId="f894-7929-f79a-a269">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="0768-be9a-2078-3134" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Ogroid Thaumaturge" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="cf54-4027-65fb-5eb2">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">8</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wrath of the Thaumaturge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2244-841e-8f1c-962c">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick a friendly **^^Arcanite^^** unit in combat to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again within 1&quot; of the target and in combat. This unit has charged.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Charge^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+          </attributes>
+        </profile>
+        <profile name="Soul-Deep Devotion" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="786b-ddf6-c8e5-1698">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is within a friendly non-**^^Hero Arcanite^^** unit’s combat range:
+• This unit has **^^Ward (4+)^^**.
+• Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-**^^Hero Arcanite^^** unit within this unit’s combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points).</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="6b7b-3e4e-f344-3440" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="CHAOS" hidden="false" id="6d93-20a2-9df8-a541" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="DISCIPLES OF TZEENTCH" hidden="false" id="8591-959b-d1ac-8827" targetId="d64d-ec64-3cf-cc4" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="539b-5ec4-4592-e5cb" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="ARCANITE" hidden="false" id="ebc2-a306-d54e-ac5b" targetId="4fa7-56fe-431f-fd98" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="9906-ac78-d00a-84f2" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="0b4d-b50e-a6d5-c07f" targetId="70a4-383f-421f-52cd" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ogroid Thaumaturge" hidden="false" id="e2b4-532c-48b0-8658">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Thaumaturge Staff" hidden="false" id="4697-36cd-f5c1-3bf4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c18f-5ef3-2a08-e457"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5bf-40a8-8189-5bbe"/>
+              </constraints>
+              <profiles>
+                <profile name="Thaumaturge Staff" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="9cbf-b48b-9679-c71c">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Great Horns and Cloven Hooves" hidden="false" id="77d1-0e93-30f9-e77d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3589-6efa-3cdd-45dd"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90fc-0a62-b09d-acd6"/>
+              </constraints>
+              <profiles>
+                <profile name="Great Horns and Cloven Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b6e7-16f1-9409-b9ec">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="ab17-c597-dd83-c912"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c7bc-c9a0-8a6f-a78e"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="a004-88b6-b2eb-5879" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Kairic Acolytes (Scourge of Ghyran)" hidden="true" id="d579-7115-f773-b5c9" publicationId="f894-7929-f79a-a269">
+      <profiles>
+        <profile name="Kairic Acolytes" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="aa16-f0d7-d5e0-043e">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Empowered by Magic" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="45ca-d7be-b2d5-6bfb">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Damage characteristic of this unit’s melee weapons while this unit is wholly within 12&quot; of any **^^Manifestations^^** (friendly or enemy).</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Vulcharc" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9d56-3a41-e31e-215e">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by friendly **Kairic Acolytes** units for attacks that target that enemy unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="f43f-be18-ce4b-681e" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="CHAMPION" hidden="false" id="602a-be85-5b0d-c92a" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="cdfb-d96b-057c-e1ea" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="DISCIPLES OF TZEENTCH" hidden="false" id="56a5-5561-765f-f377" targetId="d64d-ec64-3cf-cc4" primary="false"/>
+        <categoryLink name="ARCANITE" hidden="false" id="fe60-7bb8-6a7d-0c52" targetId="4fa7-56fe-431f-fd98" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Kairic Acolyte" hidden="false" id="65e7-7c4c-984d-d9ff" defaultAmount="1,1,3,5">
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="false" id="6e2d-0dbe-6f2d-0803"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="false" id="4bd0-7369-28e9-a3ca"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="10" field="6e2d-0dbe-6f2d-0803">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="d579-7115-f773-b5c9" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="4bd0-7369-28e9-a3ca">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="d579-7115-f773-b5c9" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sorcerous Bolt" hidden="false" id="06cc-fabf-1df7-74f5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da48-083b-8778-b3f6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0f1-71af-02d8-3d0e"/>
+              </constraints>
+              <profiles>
+                <profile name="Sorcerous Bolt" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7650-9976-8d0a-fb4e">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdflame</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cursed Glaive" hidden="false" id="fa0d-9529-0ab9-915a" defaultAmount="0,0,1,0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b5a-05e9-8a02-7fc8"/>
+                <constraint type="max" value="3" field="selections" scope="d579-7115-f773-b5c9" shared="true" id="4c1d-ca16-16dc-b3b8" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Cursed Glaive" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c06a-ed3e-bcba-8972">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="increment" value="3" field="4c1d-ca16-16dc-b3b8">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="d579-7115-f773-b5c9" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vulcharc" hidden="false" id="e067-fa29-c386-fc7b" defaultAmount="0,1,0,0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd02-5c3b-d154-ad6f"/>
+                <constraint type="max" value="1" field="selections" scope="d579-7115-f773-b5c9" shared="true" id="af8d-0879-0b89-580c" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="af8d-0879-0b89-580c">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="d579-7115-f773-b5c9" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="0" field="cd02-5c3b-d154-ad6f">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9c21-1746-9873-a5b5" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="fa0d-9529-0ab9-915a" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scroll of Dark Arts" hidden="false" id="7853-7779-f239-4d09" defaultAmount="0,1,0,0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adc8-1b40-4ef5-653b"/>
+                <constraint type="max" value="1" field="selections" scope="d579-7115-f773-b5c9" shared="true" id="b2d3-ab37-635a-60f9" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="b2d3-ab37-635a-60f9">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="d579-7115-f773-b5c9" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="0" field="adc8-1b40-4ef5-653b">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9c21-1746-9873-a5b5" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="fa0d-9529-0ab9-915a" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cursed Blade" hidden="false" id="d8cb-fe55-2cf0-3ffc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="77fb-c7ce-c12f-35b6" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dea1-2f51-8fb6-0777" automatic="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Cursed Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8872-bd1a-fc6b-a0a7">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="fa0d-9529-0ab9-915a" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="77fb-c7ce-c12f-35b6">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="fa0d-9529-0ab9-915a" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="dea1-2f51-8fb6-0777">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="fa0d-9529-0ab9-915a" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="ab58-37d8-a589-6e08" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="750a-af8e-be1c-3c5b"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="e657-1d22-d57f-3a0e" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="d579-7115-f773-b5c9" shared="true" id="9ee8-abbf-b0d3-fac8" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="d92a-3a96-6ee3-3a39" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
