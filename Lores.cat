@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="0a11-cd61-2a4e-8e04" name="❖ Lores" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="15" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="0a11-cd61-2a4e-8e04" name="❖ Lores" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="15" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Horrors of the Necropolis" id="7a39-a3c2-695a-3753" hidden="false" publicationId="2f1e-fdf-1ac2-fa38">
       <entryLinks>
@@ -9482,6 +9482,101 @@ In addition, if the chanting roll was 8+, add 2 to the Attacks characteristic of
           </constraints>
           <modifiers>
             <modifier type="set" value="1" field="bc1b-b3a3-e746-596f">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="707c-1c04-9af6-2307" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Bloodshadow Rites" id="e69f-5f9b-a600-30c7" hidden="true" publicationId="f894-7929-f79a-a269">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Scáthscale" hidden="false" id="1eee-daa4-8e74-c6f3">
+          <profiles>
+            <profile name="Scáthscale" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="e78d-9757-94a6-31d9">
+              <characteristics>
+                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">3</characteristic>
+                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Daughters of Khaine Priest^^** to chant this prayer, pick a friendly **^^Daughters of Khaine Aelf Infantry^^** unit wholly within 12&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
+                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Until the start of your next turn, subtract 1 from wound rolls for combat attacks that target that friendly unit. If the chanting roll was 8+, until the start of your next turn, subtract 1 from wound rolls for combat attacks that target friendly **^^Daughters of Khaine Aelf Infantry^^** units while they are wholly within 12&quot; of the target of this ability instead.</characteristic>
+                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+                <attribute name="Type" typeId="c63c-196d-34a7-cec3">Defensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0a3d-bfc2-9704-5af9" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8037-8a23-114a-0eea" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="0a3d-bfc2-9704-5af9">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="707c-1c04-9af6-2307" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shadowstep" hidden="false" id="48cb-d662-cce1-539e">
+          <profiles>
+            <profile name="Shadowstep" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="65a9-c142-1d30-89da">
+              <characteristics>
+                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">3</characteristic>
+                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Daughters of Khaine Priest^^** to chant this prayer, pick a visible friendly **^^Daughters of Khaine Aelf Infantry^^** unit wholly within 12&quot; of them and that has not been picked to be the target of this prayer this turn to be the target, then make a chanting roll of D6.</characteristic>
+                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">The target can move up to 6&quot;. It can move through the combat ranges of enemy units but cannot end that move in combat. If the chanting roll was 8+, you can pick another eligible unit to be a second target.</characteristic>
+                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**, **^^Unlimited^^**</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+                <attribute name="Type" typeId="c63c-196d-34a7-cec3">Movement</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a160-9540-91cd-53c8" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1f0-afa4-7bb6-cead" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="a160-9540-91cd-53c8">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="707c-1c04-9af6-2307" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Exultation of Murder" hidden="false" id="3424-cffc-56e1-a194">
+          <profiles>
+            <profile name="Exultation of Murder" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="1f08-226a-22d0-3716">
+              <characteristics>
+                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Daughters of Khaine Priest^^** to chant this prayer, pick a friendly **^^Daughters of Khaine Aelf Infantry^^** unit wholly within 12&quot; of them to be the target, then make a chanting roll of D6.</characteristic>
+                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Until the start of your next turn, add 1 to wound rolls for the target’s combat attacks. In addition, if the chanting roll was 9+, until the start of your next turn, add 1 to the Attacks characteristic of the target’s melee weapons.</characteristic>
+                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+                <attribute name="Type" typeId="c63c-196d-34a7-cec3">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5857-13be-bbc8-6da8" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fef7-f9df-3515-643c" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="5857-13be-bbc8-6da8">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="707c-1c04-9af6-2307" shared="true"/>
               </conditions>
