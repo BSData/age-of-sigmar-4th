@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5232-3bab-5562-3172" name="Daughters of Khaine" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5232-3bab-5562-3172" name="Daughters of Khaine" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="784d-e1b4-30d5-3167" hidden="false">
       <selectionEntryGroups>
@@ -161,6 +161,57 @@
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Coven Zealots" hidden="true" id="a7f0-1e8f-cc20-6172" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc66-b197-cc2a-abad"/>
+          </constraints>
+          <profiles>
+            <profile name="Higher Purpose" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="82fa-30fa-566a-2151">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Return D3 slain models to each friendly **^^Daughters of Khaine Aelf Infantry^^** unit.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Arena Veterans" hidden="true" id="b133-7d21-cc81-a5fc" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fcb-9921-1ec4-07d3"/>
+          </constraints>
+          <profiles>
+            <profile name="Graceful Elusion" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d407-ea4f-1420-6686">
+              <characteristics>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">For the rest of the phase, friendly **^^Daughters of Khaine Aelf Infantry^^** units have **^^Ward (5+)^^** until they have used a Fight ability</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a81-8a0a-748-c922" includeChildSelections="true" includeChildForces="true"/>
@@ -262,6 +313,18 @@
           <entryLinks>
             <entryLink import="true" name="Prayers of the Khainite Cult" hidden="false" id="9a9f-c586-8c19-3c50" type="selectionEntryGroup" targetId="5dfc-a7d2-eb4d-dce1"/>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bloodshadow Rites" hidden="true" id="db89-a46a-f5a9-64f4" defaultAmount="1">
+          <entryLinks>
+            <entryLink import="true" name="Bloodshadow Rites" hidden="false" id="7832-8a4b-ce81-23fd" type="selectionEntryGroup" targetId="e69f-5f9b-a600-30c7"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -474,6 +537,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2bd-d397-2d50-a020" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -615,6 +680,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2bd-d397-2d50-a020" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -892,6 +959,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b371-6047-e6ef-f9f9" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2bd-d397-2d50-a020" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -959,6 +1027,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a559-1df9-4395-7cfc" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b371-6047-e6ef-f9f9" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1000,6 +1069,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2bd-d397-2d50-a020" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1038,6 +1109,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a559-1df9-4395-7cfc" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b371-6047-e6ef-f9f9" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1074,6 +1146,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1117,6 +1191,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a559-1df9-4395-7cfc" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b371-6047-e6ef-f9f9" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1159,6 +1234,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1197,6 +1274,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a559-1df9-4395-7cfc" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b371-6047-e6ef-f9f9" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1239,6 +1317,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1281,6 +1361,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1323,6 +1405,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1398,6 +1482,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1437,6 +1523,8 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f56c-2b0-3850-5a51" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="41c2-c9ac-fec4-84fb" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="f9e8-542c-3020-b170" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="7d05-eae8-c968-ba91" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="aba6-7367-0213-ad8e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1485,6 +1573,82 @@
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2a14-2dbe-5287-7a1c" type="selectionEntryGroup" targetId="d34a-59ba-2762-3d65"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Bloodwrack Shrine (Scourge of Ghyran)" hidden="false" id="790e-c3cc-5985-834c" type="selectionEntry" targetId="d171-03d5-bbc5-9fae">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="172a-8548-b3d9-1558"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="8516-8a4d-d697-fa6b" type="selectionEntryGroup" targetId="9734-20e7-d9c1-322e"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="a80d-0855-2262-7200" type="selectionEntryGroup" targetId="784d-e1b4-30d5-3167"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0214-639b-246c-6b52" type="selectionEntryGroup" targetId="a78f-4d81-534c-3aeb"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b047-b38a-d1a4-d271" type="selectionEntryGroup" targetId="d34a-59ba-2762-3d65"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="1902-13f7-9966-7aff" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d061-5a5e-3776-5452" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="230"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Bloodwrack Shrine (Scourge of Ghyran)" hidden="false" id="aba6-7367-0213-ad8e" type="selectionEntry" targetId="d171-03d5-bbc5-9fae">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="bdaf-58eb-2bf1-2271" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="2672-37c2-e4f6-ca19" type="selectionEntryGroup" targetId="9734-20e7-d9c1-322e"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="e957-970e-accf-3be7" type="selectionEntryGroup" targetId="784d-e1b4-30d5-3167"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e0f8-5793-3258-88e9" type="selectionEntryGroup" targetId="a78f-4d81-534c-3aeb"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5d86-d768-839b-e1df" type="selectionEntryGroup" targetId="d34a-59ba-2762-3d65"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9fef-7e97-b44b-a88c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4887-12ae-25ff-fc1d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="230"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Krethusa the Croneseer (Scourge of Ghyran)" hidden="false" id="6144-b39f-bcc4-a22d" type="selectionEntry" targetId="a82e-fdd6-9a05-fe91">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3b82-42f8-efa8-2b2e"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7835-a0c9-885a-2f13" type="selectionEntryGroup" targetId="d34a-59ba-2762-3d65"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Krethusa the Croneseer (Scourge of Ghyran)" hidden="false" id="7d05-eae8-c968-ba91" type="selectionEntry" targetId="a82e-fdd6-9a05-fe91">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="f92b-a4a5-35fc-32dd" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="864c-0af3-92ce-0ce9" type="selectionEntryGroup" targetId="d34a-59ba-2762-3d65"/>
       </entryLinks>
     </entryLink>
   </entryLinks>
