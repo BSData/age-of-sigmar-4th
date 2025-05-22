@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="18f-620a-1c2f-b6b2" name="Seraphon - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="18f-620a-1c2f-b6b2" name="Seraphon - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Bastiladon with Solar Engine" hidden="false" id="4fee-26df-ea45-a2d6" publicationId="e9d0-a23-6a15-1fcb">
       <categoryLinks>
@@ -4141,6 +4141,147 @@ Cover, Unstable**</description>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Saurus Oldblood on Carnosaur (Scourge of Ghyran)" hidden="true" id="9a0f-114d-138a-ff72" publicationId="f894-7929-f79a-a269">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="3d57-d8f0-fd21-b521" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="4ea4-0d5e-5a88-a7f3" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="SERAPHON" hidden="false" id="29bb-2c29-66cd-3715" targetId="9554-d069-a0dd-4f2d" primary="false"/>
+        <categoryLink name="MONSTER" hidden="false" id="a14e-8c1f-0292-90a8" targetId="6d54-625c-d063-13e2" primary="false"/>
+        <categoryLink name="SAURUS" hidden="false" id="47f1-f4aa-2740-ac32" targetId="fb8b-128-28e4-5e0a" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="a480-ac1c-f6c7-03b7" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Saurus Oldblood on Carnosaur" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="4227-4d1a-22a7-003e">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">14</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Alpha Predator" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ec96-1ed3-0e01-13c3">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **Aggradon Lancers** do not lose **rage tokens** at the end of the turn while they are wholly within 12&quot; of this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5366-1a5f-db65-4cca">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Carnosaur’s Massive Jaws** is 2.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Damage</attribute>
+          </attributes>
+        </profile>
+        <profile name="Frenzied by Blood" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b53e-fafe-e5d8-eb99">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Damage characteristic of this unit’s **Companion** weapons while it is within 6&quot; of any damaged enemy units or while it is within 6&quot; of any enemy units that had any models slain in the same turn.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Thunderous Roar" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8afc-87de-1b15-81ca">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Saurus Oldblood on Carnosaur" hidden="false" id="1745-670b-2d26-a073">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sunstone Spear and Sunbolt Gauntlet" hidden="false" id="dec9-d47a-b6d4-9e47">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d51-e79d-bf12-6943"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="657f-cc32-dcbe-3e4b"/>
+              </constraints>
+              <profiles>
+                <profile name="Sunstone Spear and Sunbolt Gauntlet" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="4278-771f-6a22-da01">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Carnosaur’s Massive Jaws" hidden="false" id="5b1a-a2b0-e14f-25fe">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e63-37c3-5576-f205"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e72-dcbe-f7d2-02f5"/>
+              </constraints>
+              <profiles>
+                <profile name="Carnosaur’s Massive Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2edf-9d9b-95a7-a384">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Carnosaur’s Clawed Forelimbs" hidden="false" id="eb75-1f22-78c7-a8b4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e10a-33b4-dde0-23ce"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9d0-b84f-e027-d6fb"/>
+              </constraints>
+              <profiles>
+                <profile name="Carnosaur’s Clawed Forelimbs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c4d5-948a-62c4-c933">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3cc0-123c-204a-39b2"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d64-76bd-fad1-be9c"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="21e1-6ffe-85a6-7d9a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
