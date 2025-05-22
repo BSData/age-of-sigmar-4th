@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="4e3-e1a7-a8d4-8719" name="Seraphon" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="4e3-e1a7-a8d4-8719" name="Seraphon" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Seraphon - Library" id="bac9-83e-a88b-8274" targetId="18f-620a-1c2f-b6b2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="bbff-c662-3555-9914" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -240,6 +240,84 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Servants of the Cosmic Order" id="8c71-f9d9-8a6b-0743" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Child of the Stars" hidden="false" id="4753-793a-0fe1-6a71">
+              <profiles>
+                <profile name="Child of the Stars" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e915-c0db-e390-8a3a">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (D3) this unit. This unit cannot use this ability again for the rest of the battle.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aea3-c3c1-cb25-9cd0" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Keepers of the Old Ways" hidden="false" id="4ecd-3b70-2c8b-45b4">
+              <profiles>
+                <profile name="Keepers of the Old Ways" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="424e-49c7-8e78-8ea0">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: You declared the ‘Further
+the Great Plan’ ability</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can pick 2 different Asterism abilities instead of 1. They are both used in addition to the one you picked in the deployment phase.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a756-1e47-cf5e-42d7" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Chosen of Quetzel" hidden="false" id="a455-fecd-67f1-38cb">
+              <profiles>
+                <profile name="Chosen of Quetzel" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8d70-1383-edb2-9fcb">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly non-**^^Monster Skink^^** unit that is in combat and is wholly within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target can move up to 8&quot;. It can move through the combat ranges of enemy units but cannot end that move in combat.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="35f7-2fa9-522a-472e" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aabf-0afb-eac9-51c3"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="85d4-bb9a-aadf-e88f" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="85d4-bb9a-aadf-e88f">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="1564-e06a-5576-4aaa" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
@@ -315,6 +393,84 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b61-42fb-98b4-3ed7"/>
       </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Monstrous Traits" id="38fe-485c-1e16-e591" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Monstrous Traits: Seraphon" id="1e41-b814-c31e-1c79" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Armour Cruncher" hidden="false" id="f9c3-b052-704b-318e">
+              <profiles>
+                <profile name="Armour Cruncher" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e0c1-d243-5f63-31fc">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll equals or exceeds the target’s Save characteristic, subtract 1 from save rolls for the target for the rest of the turn.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="222d-acb2-82aa-6f2c" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ancient Defender" hidden="false" id="8a16-6139-0eec-ceb1">
+              <profiles>
+                <profile name="Ancient Defender" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="77b6-b07f-4108-4e61">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls for attacks made by this unit’s **Companion** weapons.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3076-23bd-af6e-09f0" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Titan of the Land" hidden="false" id="100d-3876-65f9-ec3c">
+              <profiles>
+                <profile name="Titan of the Land" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b0be-108b-6a47-f999">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit counts as a terrain piece for the purpose of picking targets for the **Realmshaper Engine**’s ‘Power Unleashed’ ability. Do not inflict any mortal damage on this unit as part of that ability</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="558c-bdf8-1136-76cc" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f659-0b40-7a3d-c3ee"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e84b-f88f-2390-4df9" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="e84b-f88f-2390-4df9">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
@@ -466,6 +622,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b998-aa23-d4b1-5347" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ca8-136-e6a1-e7fe" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="74bb-6987-d78-6035" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -618,6 +775,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3992-b989-cc6c-72f0" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="1a5f-37d9-3255-924b" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="233b-d02a-d0cc-688c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="b701-4aa7-a242-6c58" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -672,6 +830,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0528-0ef1-3303-b845" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="2c31-d4a0-5ea4-7e39" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="3036-30cf-ba78-3ec2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="3bc4-21fd-0a6d-719b" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -699,6 +858,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f0c9-5f0f-65e8-6540" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="d156-9e10-fa65-bc4b" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="8a10-d704-d774-b53d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="cc2e-415a-fd5a-29d6" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
@@ -817,6 +977,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e26b-5ea1-2a51-dabe" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="d840-1a2d-7684-fbf4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="c815-0936-09e0-cf04" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="d257-a098-3b5b-144d" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -892,6 +1053,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dfd4-747c-faae-ddb1" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="d297-04a8-36ea-4782" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="74fb-0b59-46c7-0ac7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="f8c4-d262-f01a-0446" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -924,6 +1086,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e0ec-3753-c5ef-4ea8" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="5746-15a6-ebd7-8f8c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="915e-4584-563a-3d15" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="73e3-0911-07a2-df3b" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
@@ -940,6 +1103,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="93c9-056d-cad5-3ed8" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="1a15-c770-64d3-bf37" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="430a-e83d-8549-0723" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="4627-7cd2-9428-4ac8" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
@@ -1004,6 +1168,7 @@
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="edb7-0b91-2400-a587" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Warlord" hidden="false" id="9720-1495-bc22-5105" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="5d06-101c-f1de-1f1f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="2336-559b-f15a-d15f" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
@@ -1050,6 +1215,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b998-aa23-d4b1-5347" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ca8-136-e6a1-e7fe" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="74bb-6987-d78-6035" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1094,6 +1260,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1160,6 +1327,7 @@
         <entryLink import="true" name="Paths" hidden="false" id="db60-619f-155f-ad26" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9b4c-eb4d-13db-96e2" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Renown" hidden="false" id="c52a-8a54-8a1e-72d8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="4e31-2f89-79c3-9a19" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Bastiladon with Solar Engine" hidden="false" id="49be-f24a-60af-3040" type="selectionEntry" targetId="4fee-26df-ea45-a2d6">
@@ -1167,6 +1335,7 @@
         <entryLink import="true" name="Paths" hidden="false" id="a571-b80a-b8a6-d6b6" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1dbb-9fb6-265c-c4bc" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Renown" hidden="false" id="bb0a-5777-36c9-3209" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="33b6-5a2e-24e8-75cd" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1192,6 +1361,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1280,6 +1450,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1346,6 +1517,7 @@
         <entryLink import="true" name="Paths" hidden="false" id="6b15-0e04-6888-2098" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="862c-5877-270c-c140" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Renown" hidden="false" id="bbbc-1377-79de-a4f8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="7eea-cec6-c388-406e" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Hunters of Huanchi with Dartpipes" hidden="false" id="2f78-9b69-50ea-bd78" type="selectionEntry" targetId="85bb-bb0c-b1e9-e870">
@@ -1369,6 +1541,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1409,6 +1582,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1455,6 +1629,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1496,6 +1671,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1539,6 +1715,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1582,6 +1759,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1625,6 +1803,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1662,6 +1841,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1720,6 +1900,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b998-aa23-d4b1-5347" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ca8-136-e6a1-e7fe" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="74bb-6987-d78-6035" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1760,6 +1941,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b998-aa23-d4b1-5347" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ca8-136-e6a1-e7fe" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="74bb-6987-d78-6035" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1801,6 +1983,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1838,6 +2021,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1911,6 +2095,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1977,6 +2162,7 @@
         <entryLink import="true" name="Paths" hidden="false" id="abb7-790b-6392-b157" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cd44-a702-eb79-f8fb" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
         <entryLink import="true" name="Renown" hidden="false" id="7d52-52ab-8f26-f536" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="a4ac-c2e8-54ab-b72b" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Terradon Riders" hidden="false" id="7b4a-4062-99dc-3d6b" type="selectionEntry" targetId="66ed-4817-f929-7c3e">
@@ -2009,6 +2195,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2047,6 +2234,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2101,6 +2289,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c64-36a1-f31e-e470" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2173,6 +2362,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="bbc9-9865-e2d4-3fa1" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="67d7-1699-bf81-674e" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="468c-feee-6e22-e7b3" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2208,6 +2398,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="b998-aa23-d4b1-5347" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="ca8-136-e6a1-e7fe" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="74bb-6987-d78-6035" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="facd-865e-de5b-f578" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2221,6 +2412,51 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9aad-6e76-96bb-9872" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
       </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Saurus Oldblood on Carnosaur (Scourge of Ghyran)" hidden="false" id="1bb3-29d7-73be-6fb4" type="selectionEntry" targetId="9a0f-114d-138a-ff72">
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="a515-73cb-6329-a79c"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="6045-fba6-14c4-f156" type="selectionEntryGroup" targetId="e4fd-c74-e5ab-f18d"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="15bb-099d-ec24-1ca6" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
+        <entryLink import="true" name="Paths" hidden="false" id="e923-2b04-8ffb-c457" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="18eb-e48f-6857-6710" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="36dc-6fc2-b031-9989" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c850-cbd0-bd1e-46fa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="ae15-1db7-e94b-0ade" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="340"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Saurus Oldblood on Carnosaur (Scourge of Ghyran)" hidden="false" id="facd-865e-de5b-f578" type="selectionEntry" targetId="9a0f-114d-138a-ff72">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="8626-8ac8-b7ea-e96f" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="3f69-f0ce-f222-0ac6" type="selectionEntryGroup" targetId="e4fd-c74-e5ab-f18d"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="0f78-ea58-b23f-f288" type="selectionEntryGroup" targetId="5eb0-445-d519-2e79"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a56b-cbad-8182-bd95" type="selectionEntryGroup" targetId="1571-5ff6-d10e-404f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7744-d35d-3c22-4b4f" type="selectionEntryGroup" targetId="c566-6b60-fe90-0b24"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="ed6c-b9f0-5371-a5c5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="db4a-2852-8a94-887e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Monstrous Traits" hidden="false" id="f131-a2c6-2145-6300" type="selectionEntryGroup" targetId="38fe-485c-1e16-e591"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="340"/>
+      </costs>
     </entryLink>
   </entryLinks>
   <categoryEntries>
