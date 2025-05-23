@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="c580-f07a-aa35-f79f" name="Slaves to Darkness - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="c580-f07a-aa35-f79f" name="Slaves to Darkness - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Archaon the Everchosen" hidden="false" id="8f2a-58f3-5fab-a1a" publicationId="6357-5d77-a2b2-f86b">
       <categoryLinks>
@@ -8410,6 +8410,154 @@ combat and can pass through models in the target unit, but it must end that mov
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="51e0-64d6-7618-8259" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Abraxia, Spear of the Everchosen (Scourge of Ghyran)" hidden="false" id="8210-03e6-551d-66b0" publicationId="f894-7929-f79a-a269">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="08b7-ba19-3b75-e845" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="7a9c-b216-6449-af32" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="MONSTER" hidden="false" id="83b6-b4d6-b03b-2e33" targetId="6d54-625c-d063-13e2" primary="false"/>
+        <categoryLink name="WARMASTER" hidden="false" id="548f-9f2c-7658-6ed4" targetId="c203-51a0-3d44-6b07" primary="false"/>
+        <categoryLink name="SLAVES TO DARKNESS" hidden="false" id="c030-71c9-ee88-a35d" targetId="94d9-cc36-9083-1bea" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="a19f-c9ff-07b7-5f2f" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="WARRIORS OF CHAOS" hidden="false" id="a371-0f38-28a6-9fcc" targetId="e06-cc4d-8589-c273" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="4801-2cb8-8293-2abf" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="3d3a-d921-8147-1211" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Abraxia, Spear of the Everchosen" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="c1a8-3509-bffd-39de">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">14</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="17a0-e314-4091-0fd0">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **The Thanatorg’s Vicious Claws** is 4.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Damage</attribute>
+          </attributes>
+        </profile>
+        <profile name="Mutative Spear" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="39b1-9440-0581-c1a4">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that had any damage points allocated to it this turn by this unit’s combat attacks to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target has a maximum control score of 1 for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Control</attribute>
+          </attributes>
+        </profile>
+        <profile name="Champion of the Undivided" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="65e3-742c-cd71-5824">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Slaves to Darkness^^** unit wholly within 12&quot; of this unit and that does not have a **Pledge to Chaos** keyword to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by the target while they are contesting an objective you do not control.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Unending Will to Conquer" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="617a-e05c-8f07-8130">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is contesting an objective you do not control. **Heal (D6)** this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Unstoppable Invasion" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2872-7fdb-d4f8-c451">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Inflict D3 mortal damage on the target. Then, roll 2D6. This unit can move a distance up to the value of the roll. It can pass through models in the target unit but must end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1a56-5b3e-1102-2d62" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Abraxia, Spear of the Everchosen" hidden="false" id="01c5-535f-16fc-2323">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gorbolga the Accurs&apos;d" hidden="false" id="2613-4f12-166f-3e3e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f187-7c56-8889-bcbc"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71f1-410b-f1a9-8b0f"/>
+              </constraints>
+              <profiles>
+                <profile name="Gorbolga the Accurs&apos;d" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1c09-0443-d72f-d44f">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti‑**^^Hero^^** (+1 Rend), Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Thanatorg’s Vicious Claws" hidden="false" id="d60e-adc9-b1c4-b2e1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5e78-7c38-7f7a-70d2"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94a3-19a5-be69-9450"/>
+              </constraints>
+              <profiles>
+                <profile name="The Thanatorg’s Vicious Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="922c-4398-b0e2-3044">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="035b-1afb-2f37-94d6"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81c3-bb1b-0fa8-56e6"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3843-8ca1-6cd7-70e1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>
