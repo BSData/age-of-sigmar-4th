@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="2c23-a678-196b-ad69" name="Slaves to Darkness" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="2c23-a678-196b-ad69" name="Slaves to Darkness" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="76d4-19e8-38b1-d8c9" hidden="false" flatten="true">
       <selectionEntries>
@@ -90,6 +90,84 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Fell Artefacts" id="7a3f-cf1d-9728-b43f" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="The Varanite Shackle" hidden="false" id="fa3a-e2f8-5de5-bed3">
+              <profiles>
+                <profile name="The Varanite Shackle" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="aa1f-d50c-9239-ca9a">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly non-**^^Warriors of Chaos Slaves to Darkness^^** units have **^^Ward (6+)^^** while they are wholly within 12&quot; of this unit.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="087d-5856-a569-1eac" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Amulet of Chaos" hidden="false" id="9c8e-9032-e90b-4296">
+              <profiles>
+                <profile name="Amulet of Chaos" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f1e0-2a1d-7dc6-46fd">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the enemy target. Then, you can pick a friendly **^^Darkoath Infantry^^** unit in combat with that enemy unit to be the friendly target.
+
+</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+:
+• Inflict an amount of mortal damage on the enemy target equal to the roll.
+• If there is a friendly target, return a number of slain models to it equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0950-4e7f-9474-da49" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Head of the Unworthy" hidden="false" id="07d3-c4ca-40bc-41e6">
+              <profiles>
+                <profile name="Head of the Unworthy" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="561b-d18d-81a8-1198">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If a friendly **^^Slaves to Darkness Hero^^** with any **Dark Apotheosis** points is destroyed, give this unit 8 **Dark Apotheosis** points.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c5d4-c78c-92b6-6adb" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5a2-b230-0605-bb21"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="49a4-6d54-8aae-1cc0" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="49a4-6d54-8aae-1cc0">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="925e-9907-8eb0-da04" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
@@ -173,6 +251,57 @@
               </attributes>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chaos Horde" hidden="true" id="0662-366c-6c73-8cf2" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d453-2e61-9db5-abc0"/>
+          </constraints>
+          <profiles>
+            <profile name="Devotees of Ruin" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="19fd-0701-ec9e-c542">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Warriors of Chaos^^** unit. Then, pick up to 2 visible friendly **^^Darkoath^^** units that do not have a **Pledge to Chaos** keyword and are wholly within 12&quot; of that **^^Warriors of Chaos^^** unit to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn, the targets have the same **Pledge to Chaos** keyword as that **^^Warriors of Chaos^^** unit.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Champions of Chaos" hidden="true" id="5521-eb00-1f3b-5a59" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ad6-dd9e-e245-add2"/>
+          </constraints>
+          <profiles>
+            <profile name="Paragons of Darkness" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c211-67db-4b56-a418">
+              <characteristics>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2 to the Attacks characteristic of melee weapons used by friendly non-**^^Monster Slaves to Darkness Heroes^^**.</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -771,6 +900,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -843,6 +973,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -942,6 +1073,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1113,6 +1245,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1403,6 +1536,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6d91-4f08-7e90-3b50" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c2e6-d2ef-87aa-2d55" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1815,6 +1949,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -1877,6 +2012,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -1930,6 +2066,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -1987,6 +2124,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2038,6 +2176,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2094,6 +2233,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2151,6 +2291,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2207,6 +2348,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2262,6 +2404,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2315,6 +2458,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2364,6 +2508,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2ea9-d799-4ed9-7920" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2477,6 +2622,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2ea9-d799-4ed9-7920" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2585,6 +2731,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2630,6 +2777,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="6ae-10fb-92fd-affb" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2688,6 +2836,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2ea9-d799-4ed9-7920" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2793,6 +2942,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2849,6 +2999,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -2899,6 +3050,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2ea9-d799-4ed9-7920" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3147,6 +3299,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3195,6 +3348,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3247,6 +3401,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3299,6 +3454,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3351,6 +3507,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2216-442a-cba-5a67" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3404,6 +3561,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3456,6 +3614,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3508,6 +3667,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3560,6 +3720,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3612,6 +3773,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3664,6 +3826,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3723,6 +3886,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3774,6 +3938,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="143b-fc8a-815e-cafd" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="fea3-f47e-ccf3-f97f" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="a1f2-1808-4a74-c167" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3826,6 +3991,7 @@ The target has that keyword for the rest of the battle.</characteristic>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="2332-5544-532f-b77b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e664-cf6d-9d6a-74df" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="29a2-9f72-5dc2-cd4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1857-6ed7-6d64-5831" shared="true"/>
                   </conditions>
                   <localConditionGroups>
                     <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
@@ -3896,6 +4062,39 @@ The target has that keyword for the rest of the battle.</characteristic>
           </conditions>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Abraxia, Spear of the Everchosen (Scourge of Ghyran)" hidden="false" id="9d77-bc29-525a-c800" type="selectionEntry" targetId="8210-03e6-551d-66b0">
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="0bb9-3bad-4999-c072"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="360"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0bfa-4a89-88de-0168" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Abraxia, Spear of the Everchosen (Scourge of Ghyran)" hidden="false" id="1857-6ed7-6d64-5831" type="selectionEntry" targetId="8210-03e6-551d-66b0">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="5813-0a3c-f3bb-09f0" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="360"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9c0c-68f7-580d-78f7" type="selectionEntryGroup" targetId="20bb-e408-9d25-ffc6"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
   <categoryEntries>
