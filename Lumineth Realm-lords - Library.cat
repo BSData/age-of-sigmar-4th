@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f864-1661-71bb-41bb" name="Lumineth Realm-lords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f864-1661-71bb-41bb" name="Lumineth Realm-lords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Vanari Starshard Ballista" hidden="false" id="ac41-4a7-88c5-9ab2" publicationId="9ed1-cf74-eb97-dee2">
       <categoryLinks>
@@ -2906,6 +2906,206 @@ Cover, Impassible**</description>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Vanari Bannerblade (Scourge of Ghyran)" hidden="true" id="eec0-758b-4528-e3b5" publicationId="f894-7929-f79a-a269">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="f7b6-c6b8-44fc-bfac" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="e55e-3ac0-5dcf-a6bf" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="8e3d-e05a-35b5-1fcf" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="bcc2-20d3-9774-d463" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="VANARI" hidden="false" id="d5b2-9e41-4f8d-d473" targetId="9958-c5c0-c246-8010" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="6912-5b3c-f9eb-8f50" targetId="75d6-6995-dfcc-3898" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="6d3b-d599-4c44-a30a" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Vanari Bannerblade" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="df86-3b3b-3e1c-7b19">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Defend the Banner" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3c2b-4a30-e0ae-532e">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to save rolls for friendly **^^Vanari Infantry^^** units while they are contesting the same objective as this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Vanari Bannerblade" hidden="false" id="f6a7-a05c-3cf4-c5af">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bannerblade’s Sword" hidden="false" id="0759-f998-2fa0-e3ce">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d715-2fb4-e3ec-55dd"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1d7-33ba-8dc5-6268"/>
+              </constraints>
+              <profiles>
+                <profile name="Bannerblade’s Sword" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e37e-ad7f-8ef2-0715">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="328b-2b13-33f4-c41e"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f41-d085-e021-4897"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2df7-ab5b-fecc-341b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="The Light of Eltharion (Scourge of Ghyran)" hidden="true" id="2f0e-de34-fd64-39a6" publicationId="f894-7929-f79a-a269">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="205e-70a6-b990-ebb6" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="c3a8-7d9a-aeaf-a643" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="f952-0747-acf5-baf6" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="801a-d0b6-fb14-c519" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="daaa-5114-c64f-d997" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="4e0f-031e-dd59-636b" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (4+)" hidden="false" id="8444-c848-93bc-cb70" targetId="f99f-98ee-909f-57cd" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="9c2e-18e2-8565-7682" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="The Light of Eltharion" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="cbf4-ac7a-6754-4ac0">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Supreme Swordmaster" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7aed-7c9e-0257-513b">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to hit rolls and wound rolls for this unit’s attacks. In addition, ignore negative modifiers to the characteristics of this unit’s melee weapons.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Eternal Light" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c39e-72bf-59da-8505">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That **^^Summon^^** ability has no effect. Instead, if that spell is cast, you can set up a replacement unit for this unit more than 9&quot; from all enemy units and wholly within 12&quot; of the unit that used that **^^Summon^^** ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="042c-c1df-371f-fac8" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="The Light of Eltharion" hidden="false" id="1f35-3e67-91b3-91e3">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Celennari Blade" hidden="false" id="4edb-f57d-0b7a-3959">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="879e-22a0-26c5-46c2"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a306-820d-1464-c507"/>
+              </constraints>
+              <profiles>
+                <profile name="Celennari Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a2fb-876b-278d-003e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend), Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fangsword of Eltharion" hidden="false" id="b660-73ea-57d7-1969">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9856-ab65-5919-6d18"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26e2-bcec-3692-0fb1"/>
+              </constraints>
+              <profiles>
+                <profile name="Fangsword of Eltharion" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6817-4fba-b44a-ed8e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">3</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Searing Darts of Light" hidden="false" id="0626-65d4-cc3a-39e8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3dd-f449-c5f7-c8eb"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2a0-5775-2700-e4e4"/>
+              </constraints>
+              <profiles>
+                <profile name="Searing Darts of Light" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="6325-cf28-c074-e6b5">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="98eb-88da-82b1-2d39"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1c3-6f01-501d-2e6f"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="d19-ee8b-af86-b163" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
