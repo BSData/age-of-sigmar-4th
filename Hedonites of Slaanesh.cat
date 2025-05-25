@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Hedonites of Slaanesh - Library" id="253b-dcd3-c7aa-eab" targetId="34e0-2290-e185-efd2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fbec-3fce-0906-d052" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -201,6 +201,58 @@ At the end of the battle round, any temptation dice that have not been used ar
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Pretenders" hidden="true" id="9b9b-eb34-8ecc-8054" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2be1-17a7-5b56-996f"/>
+          </constraints>
+          <profiles>
+            <profile name="Prodigy of Excess" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c985-af0b-d9d7-b502">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hedonites of Slaanesh Hero^^** that has an artefact of power to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Give the target a heroic trait from the ‘Figureheads of the Dark Prince’ or ‘Hedonistic Obsessions’ tables.
+**Designer’s Note:** *This heroic trait is given to the target during the deployment phase, not during army composition.*</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Invaders" hidden="true" id="3adc-4841-c235-4584" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="272f-20a3-5321-8ea5"/>
+          </constraints>
+          <profiles>
+            <profile name="Ecstatic Revellers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0184-bec1-4f4f-b17e">
+              <characteristics>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of melee weapons used by friendly **^^Sybarite Infantry^^** units while they are wholly outside friendly territory</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="93d3-2663-cb7e-8088" includeChildSelections="true" includeChildForces="true"/>
@@ -270,6 +322,83 @@ At the end of the battle round, any temptation dice that have not been used ar
             <modifier type="set" value="-1" field="7bdb-9aa4-d073-43f1">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Ruinous Realm-Gnawers" id="ddd8-a70f-9706-3bb8" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Master of Temptation" hidden="false" id="406b-c168-21e5-f447">
+              <profiles>
+                <profile name="Master of Temptation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3ed9-08bc-66d2-6512">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Enemy Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if your opponent has any temptation dice. Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, while your opponent has not used any of their temptation dice to replace a roll for the target this turn, the target can only use **^^Core^^** abilities.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3477-c216-8ecd-983c" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Celebrity Warlord" hidden="false" id="a759-a125-4840-f353">
+              <profiles>
+                <profile name="Celebrity Warlord" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="8d98-f250-278f-6375">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Battle, Your Movement Phase</characteristic>
+                    <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+                    <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly non-**^^Hero Sybarite^^** unit that has been destroyed to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
+                    <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Gray</attribute>
+                    <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Rallying</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d701-f3d7-325b-97a5" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Need For Perfection" hidden="false" id="5a58-c300-cb07-d02f">
+              <profiles>
+                <profile name="The Need For Perfection" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0ed2-3afc-dd9e-7669">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The first time each turn that an unmodified charge roll, casting roll, unbinding roll or banishment roll for a friendly non-**^^Euphoric^^** unit wholly within 12&quot; of this unit is 5 or less, that unit has the **^^Euphoric^^** keyword for the rest of the turn.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c7a4-0536-10f3-63c9" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ecf-4042-80d1-3013"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="316f-e257-16ab-82d3" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="-1" field="316f-e257-16ab-82d3">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -493,6 +622,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -577,6 +707,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -641,6 +772,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -881,6 +1013,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -895,7 +1028,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="bf83-8936-c723-921a" field="category"/>
-            <modifier type="set" value="0" field="f825-683e-6681-c7b8">
+            <modifier type="set" value="0" field="81a1-7711-dc08-b726">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -1140,6 +1273,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1189,6 +1323,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1233,6 +1368,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1276,6 +1412,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1320,6 +1457,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1362,6 +1500,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="79d9-f325-d2c0-538b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e3d9-a963-625b-cc36" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1411,6 +1550,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1457,6 +1597,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e3d9-a963-625b-cc36" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="79d9-f325-d2c0-538b" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1502,6 +1643,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1545,6 +1687,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1588,6 +1731,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1631,6 +1775,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1806,6 +1951,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="79d9-f325-d2c0-538b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="e3d9-a963-625b-cc36" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1844,6 +1990,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1884,6 +2031,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1900,6 +2048,83 @@ At the end of the battle round, any temptation dice that have not been used ar
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c477-c90b-3cd8-7504" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
       </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Syll&apos;Esske, the Vengeful Allegiance (Scourge of Ghyran)" hidden="false" id="d043-c823-dca0-bff6" type="selectionEntry" targetId="8d85-ce05-2e48-02e9">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="676f-8392-4c8f-19bf"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="230"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b22f-7b56-f105-ddbd" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Syll&apos;Esske, the Vengeful Allegiance (Scourge of Ghyran)" hidden="false" id="d9c2-48f7-cb40-ca34" type="selectionEntry" targetId="8d85-ce05-2e48-02e9">
+      <categoryLinks>
+        <categoryLink name="Regimental Leader" hidden="false" id="1d1a-ccfb-726a-73e6" targetId="d1f3-921c-b403-1106" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="230"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dc14-3c31-514a-21b9" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
+      </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Slaangor Fiendbloods" hidden="false" id="0b5c-79f3-7a55-970a" type="selectionEntry" targetId="de32-60a4-2468-ea8a">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="b71e-c7e7-0b35-3b28" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="792e-e417-f5e4-1c8f" type="selectionEntryGroup" targetId="3036-9f76-bbb9-e18a"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2a2f-c6bd-1cd7-0e56" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f769-d65c-7386-bfc7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
     </entryLink>
   </entryLinks>
   <selectionEntries>
