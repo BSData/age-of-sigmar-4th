@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="EVERGREEN HUNT" id="637b-b903-6980-34cf" hidden="false"/>
     <categoryEntry name="Forest Sentinel" id="121e-0fc2-daa6-2e08" hidden="false"/>
@@ -307,6 +307,44 @@
     </entryLink>
     <entryLink import="true" name="Awakened Wyldwood" hidden="false" id="f15b-e609-1c95-f717" type="selectionEntry" targetId="cda9-53e5-99de-f836"/>
     <entryLink import="true" name="Battle Traits: The Evergreen Hunt" hidden="false" id="dd18-148c-7efe-0edf" type="selectionEntry" targetId="8a8e-e599-64f9-6079"/>
+    <entryLink import="true" name="Revenant Seekers (Scourge of Ghyran)" hidden="false" id="87c5-cc83-24f4-f750" type="selectionEntry" targetId="4f4f-8ec1-d16d-880e">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="e1e8-c3eb-3f11-7e83" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="411a-69eb-b505-3556" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1f37-f94c-cadc-7aef" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4008-0815-80c3-372d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9f39-e566-d3f3-81e2" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="230"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" hidden="false" id="ce3f-a3d4-57ab-88d5" targetId="637b-b903-6980-34cf" primary="false"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Sylvaneth - Library" id="b61-d53b-4131-554a" targetId="7e0b-8a19-260-5b58"/>

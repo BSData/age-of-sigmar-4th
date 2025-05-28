@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="7e0b-8a19-260-5b58" name="Sylvaneth - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="7e0b-8a19-260-5b58" name="Sylvaneth - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Branchwych" hidden="false" id="e410-e36e-9cea-2482" publicationId="61ee-fae0-f1da-2591">
       <categoryLinks>
@@ -3090,6 +3090,269 @@ Cover, Unstable, Obscuring**</description>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Drycha Hamadreth (Scourge of Ghyran)" hidden="true" id="5e13-9952-d316-087c" publicationId="f894-7929-f79a-a269">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="0e63-3d27-ebb2-269d" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="5460-09da-ba9f-21e5" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="MONSTER" hidden="false" id="7657-543e-bc52-62c8" targetId="6d54-625c-d063-13e2" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="6255-e9e9-6793-ebb5" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="SYLVANETH" hidden="false" id="3f55-1f33-ca09-9cc0" targetId="9190-23b-eab9-9904" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="d4d1-c8c4-e184-3046" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="7756-1f5e-7aec-e4b9" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Drycha Hamadreth" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="3b66-0b02-67cd-8af8">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Strength From Spite" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="19a7-e0f1-c0f2-289d">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for damage points inflicted by this unit’s attacks.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Twisted Spirit-Song" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="044b-1d61-0bf6-457a">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly **^^Sylvaneth^^** unit wholly within 12&quot; of this unit to be the target. Then, make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, add 1 to wound rolls for the target’s combat attacks, including those made with **Companion** weapons.
+In addition, if the target is non-**^^Kurnothi^^**, add 1 to the Attacks characteristics of the target’s melee weapons.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+            <attribute typeId="da27-8d61-f955-5031" name="Type">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Vicious Spiteswarms" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4099-6c73-3033-a5c4">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a Charge ability for a unit within 18&quot; of this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Your opponent must pick 1 of the following: 
+***Avoid the Swarm***: Subtract D3 from the charge roll. In addition, if your opponent re-rolls that charge roll, subtract D3 from that roll.
+***Charge Through the Swarm***: Subtract 1 from hit rolls for that unit’s attacks for the rest of the turn, and add 1 to hit rolls for attacks that target that unit for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b1c-3444-b973-f82f" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Drycha Hamadreth" hidden="false" id="bf98-d598-814e-eb11">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Slashing Talons" hidden="false" id="d5dd-b181-8f11-110e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24aa-1ba1-8697-ad1e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca4b-3e1e-b552-5bfb"/>
+              </constraints>
+              <profiles>
+                <profile name="Slashing Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="beab-b851-f4e2-b037">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="211c-b7df-fe79-1b6b"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e88-0274-770f-c947"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b3b6-f91d-754d-af73" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Revenant Seekers (Scourge of Ghyran)" hidden="true" id="4f4f-8ec1-d16d-880e" publicationId="f894-7929-f79a-a269">
+      <profiles>
+        <profile name="Revenant Seekers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="5737-15de-c051-eea3">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lamentiri Life Energies" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a2e4-9bf6-aaec-d4e8">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Sylvaneth^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target has **^^Ward (5+)^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Forest Fighters" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2bcb-78e7-0a13-30a5">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has a coherency range of 2&quot;.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CAVALRY" hidden="false" id="22d8-c3c6-2274-ddff" targetId="926c-df8c-6841-d49e" primary="true"/>
+        <categoryLink name="CHAMPION" hidden="false" id="dc50-64ee-2391-ac31" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="STANDARD BEARER (1/3)" hidden="false" id="6918-56c0-d0ef-ac58" targetId="9072-b48-3dd7-2cbc" primary="false"/>
+        <categoryLink name="MUSICIAN (1/3)" hidden="false" id="3c6c-e78a-ff2f-2dc0" targetId="6cae-9aa2-6245-ab11" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="bf2d-ed93-bdca-2edc" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="b846-2c95-3f1a-2387" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="SYLVANETH" hidden="false" id="e789-671a-07a6-8afa" targetId="9190-23b-eab9-9904" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="5e72-0c38-5168-35b8" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Revenant Seeker" hidden="false" id="6501-274d-9433-2a42" defaultAmount="1,1,1">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f553-5520-e4a7-d1a4"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="a472-27c5-b96e-4a26"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scourge Sickles" hidden="false" id="d681-bbfc-e602-3604">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="98dc-b136-0237-5936"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef0c-b36e-3773-55dd"/>
+              </constraints>
+              <profiles>
+                <profile name="Scourge Sickles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="894d-47cc-def5-ab7c">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sharpened Mandibles" hidden="false" id="d034-87d3-6d96-60ec">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a06b-13d5-4369-e1e8"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="605d-fa68-1d83-4b47"/>
+              </constraints>
+              <profiles>
+                <profile name="Sharpened Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c4c7-0494-b75c-032d">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="3" field="f553-5520-e4a7-d1a4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="4f4f-8ec1-d16d-880e" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="3" field="a472-27c5-b96e-4a26">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="4f4f-8ec1-d16d-880e" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="8bea-a1de-84a6-3a29" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1df0-bef4-7c88-3e66" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="4114-df89-d227-8896" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="4f4f-8ec1-d16d-880e" shared="true" id="71c1-f100-f659-221e" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="907d-f571-cb9c-376d"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="71c1-f100-f659-221e">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="4f4f-8ec1-d16d-880e" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Musician" hidden="false" id="eaad-e2bc-f759-bf66" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="042d-f99c-4b6c-96b2">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="4f4f-8ec1-d16d-880e" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="4f4f-8ec1-d16d-880e" shared="true" id="042d-f99c-4b6c-96b2" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e47c-a505-a935-1613"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Champion" hidden="false" id="6c3b-a9ec-434e-da74" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97c1-f17a-4da8-e46c"/>
+                    <constraint type="max" value="1" field="selections" scope="4f4f-8ec1-d16d-880e" shared="true" id="1173-b279-b228-13e8" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="766a-54f1-440b-b878" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
