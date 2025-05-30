@@ -8263,6 +8263,7 @@
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="abcb-73d0-2b6c-4f17" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="force" childId="4063-b3a6-e7e1-383f" shared="true"/>
                 <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="3e4e-3e0e-10c4-a6f6" shared="true"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
@@ -9514,6 +9515,15 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           </attributes>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Renown" hidden="true" id="e7d5-5062-46d5-38dd">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
