@@ -108,6 +108,14 @@
         <characteristicType name="Banishment" hidden="false" id="97a2-d412-9ac-6a37"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10">
+      <characteristicTypes>
+        <characteristicType name="Card" id="67f1-ce6d-1cf4-a4df"/>
+        <characteristicType name="Affray" id="1047-3e43-674d-dc6c"/>
+        <characteristicType name="Strike" id="94d4-173e-0f65-c569"/>
+        <characteristicType name="Domination" id="e1d7-1d3c-f001-62e0"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry name="DEATH" hidden="false" id="d484-a2d7-cf4f-c4a0"/>
@@ -3018,7 +3026,7 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
       </constraints>
     </forceEntry>
-    <forceEntry name="✦ General&apos;s Handbook 2025-26 (Use for Scourge of Ghyran)" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
+    <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c63-5bc5-ea14-ff14" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="516a-f060-376f-acab" targetId="3360-1158-e879-9606"/>
@@ -9786,7 +9794,7 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
         </rule>
       </rules>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b07-18fc-eb03-7460"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b07-18fc-eb03-7460" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hide Core Abilities" hidden="false" id="8f44-a403-e9a1-0aa3">
@@ -9801,6 +9809,144 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="ea0c-2329-c2e2-1a8f" targetId="676-2b78-7bbf-ba9c" primary="true"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battle Tactic Cards" hidden="true" id="1668-6989-2470-5e10" defaultAmount="1">
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="eff8-1962-b82c-4e44" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="12b0-6cb0-f5a9-185d-min" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="12b0-6cb0-f5a9-185d-max" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Battle Tactic Cards" id="e3d8-8106-a496-2ece" hidden="false" flatten="true" defaultSelectionEntryId="none">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Master the Paths" hidden="false" id="f5d1-f1d9-1dd5-5061" sortIndex="1" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68d6-02a5-2080-eb32"/>
+              </constraints>
+              <profiles>
+                <profile name="Master the Paths" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="c45f-dc73-39f3-24c9">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Cut Off The Head: 
+You complete this battle tactic at the end of your turn if an enemy **^^Hero^^** has been destroyed this battle.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Seize the Paths: 
+You complete this battle tactic at the end of your turn if there are more friendly units in neutral territory than enemy units. 
+If there is no neutral territory in the battleplan you are playing, you complete this tactic at the end of your turn if there are no enemy units within friendly territory.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Envelop and Strangle:
+You complete this battle tactic at the end of your turn if at least three different friendly units are each wholly within 9&quot; of a different corner of the battlefield and only 1 of those corners is wholly within friendly territory. No more than 1 of those units can have been set up this turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Restless Energy" hidden="false" id="5ab4-540d-4e00-5c62" sortIndex="2" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ca2-bae5-733f-9c3d"/>
+              </constraints>
+              <profiles>
+                <profile name="Restless Energy" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="7978-d16f-1a08-39e6">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Water With Blood:
+You complete this battle tactic at the end of your turn if you control an objective that was controlled by your opponent at the start of the turn.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Invasive Species:
+You complete this battle tactic at the end of your turn if you control every objective within enemy territory. If there are no objectives within enemy territory, you complete this battle tactic at the end of your turn if you control every objective that was controlled by your opponent at the start of your turn.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">All Roots Entwined:
+You complete this battle tactic at the end of your turn if you control every objective on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Intercept and Recover" hidden="false" id="545c-5467-b8b6-2b1b" sortIndex="3" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="267c-8452-a744-5760"/>
+              </constraints>
+              <profiles>
+                <profile name="Intercept and Recover" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="a365-06ad-19a1-528d">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">• At the start of the battle, your opponent must pick 3 of their units on the battlefield to be carrying a Ghyranite Treasure. They cannot pick faction terrain features or **^^Manifestations^^**. A unit can only carry 1 Ghyranite Treasure. If your opponent has fewer than 3 units on the battlefield, you automatically complete a number of these battle tactics, starting with the **Domination** battle tactic (followed by the **Strike** and then the **Affray**) until the number of remaining uncompleted battle tactics equals the number of enemy units on the battlefield.
+• If you went second in the previous battle round and choose to go first in the current battle round, your opponent can remove 1 Ghyranite Treasure from one of their units at the start of the battle round.</characteristic>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Stolen Seedpod:
+You complete this battle tactic at the end of your turn if at least 1 enemy unit carrying a Ghyranite Treasure has been destroyed this battle.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Contraband Aqua Ghyranis:
+You complete this battle tactic at the end of your turn if at least 2 enemy units carrying a Ghyranite Treasure have been destroyed this battle.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Ley Line Taproot:
+You complete this battle tactic at the end of your turn if at least 3 enemy units carrying a Ghyranite Treasure have been destroyed this battle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Wrathful Cycles" hidden="false" id="f55e-5058-7696-bf7a" sortIndex="4" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbbf-4f2b-8fc5-321f"/>
+              </constraints>
+              <profiles>
+                <profile name="Wrathful Cycles" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="23e0-e35a-83c2-1c6e">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Defiant Surge:
+You complete this battle tactic at the end of your turn if you control more objectives than your opponent.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Daring Resurgence:
+You complete this battle tactic at the end of your turn if you are the underdog this battle round, there is at least 1 friendly unit on the battlefield, and at least half of the friendly units on the battlefield (rounding up) used a **^^Fight^^** ability this turn.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Master of Strategy:
+You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units contesting any objectives that you control.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scouting Force" hidden="false" id="2adf-8d5d-6fd6-9bb4" sortIndex="5" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75f3-1f73-31eb-e109"/>
+              </constraints>
+              <profiles>
+                <profile name="Scouting Force" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="5fc5-3a71-00e9-29f6">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, every friendly non-**^^Hero Infantry^^** and non-**^^Hero Cavalry^^** unit wholly within friendly territory becomes a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
+You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
+You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Attuned to Ghyran" hidden="false" id="71aa-cea6-7469-01dd" sortIndex="6" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6410-127c-5cb7-4d12"/>
+              </constraints>
+              <profiles>
+                <profile name="Attuned to Ghyran" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="85c3-aaa3-373c-c2ad">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Sacred Centrality:
+You complete this battle tactic at the end of your turn if there are at least 2 friendly units within 3&quot; of the centre of the battlefield that are not in combat.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Fey Strikes:
+You complete this battle tactic at the end of your turn if all of the following are true:
+• At least 2 friendly units used a **^^Retreat^^** ability this turn. Those units are the lure units.
+• At least 2 other friendly units used a **^^Charge^^** ability this turn and at least 1 of those units ended the charge move in combat with an enemy unit from which any of the lure units retreated.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Purification Rites:
+You complete this battle tactic at the end of your turn if there are no enemy units within friendly territory and no enemy units within neutral territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a5de-514a-b9c1-194f"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="86de-6157-7098-49ff"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
