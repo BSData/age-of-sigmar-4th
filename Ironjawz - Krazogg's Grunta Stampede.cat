@@ -1,39 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="72df-3dd1-89c1-ce14" name="Ironjawz - Krazogg&apos;s Grunta Stampede" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="72df-3dd1-89c1-ce14" name="Ironjawz - Krazogg&apos;s Grunta Stampede" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
-    <entryLink import="true" name="Tuskboss on Maw-grunta" hidden="false" id="f4a0-1b6a-592a-4d17" type="selectionEntry" targetId="3520-fc6a-d4fc-1c1f">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="5a8d-4ee0-a5b3-4cb8"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="fe36-bdfd-9b2b-1462" type="selectionEntryGroup" targetId="0ebc-b5a3-6ee4-f3aa"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="93-d5fb-dfe8-bd4a" type="selectionEntryGroup" targetId="a3b6-e4bc-1285-8e84"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="048c-ae5a-44da-02c2" type="selectionEntryGroup" targetId="1598-3c56-ed87-50c7"/>
-        <entryLink import="true" name="Paths" hidden="false" id="f409-37be-18b4-83c2" type="selectionEntryGroup" targetId="ae0e-8a84-1ae4-74e8"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="a1da-aa6e-c492-19a3" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="bf8f-7d4f-bec3-5d32" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="260"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GRUNTA STAMPEDE" hidden="false" id="2b66-9ac2-2a55-6dad" targetId="b64f-85cf-cc50-4197" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Tuskboss on Maw-grunta" hidden="false" id="c8ad-3fa1-3674-1855" type="selectionEntry" targetId="3520-fc6a-d4fc-1c1f">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="9197-fe72-a25d-69ac" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GRUNTA STAMPEDE" hidden="false" id="3be9-702e-2988-a4cf" targetId="b64f-85cf-cc50-4197" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -47,6 +16,24 @@
       <costs>
         <cost name="pts" typeId="points" value="260"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Maw-grunta Gougers" hidden="false" id="dd8f-f17f-ab4-21d3" type="selectionEntry" targetId="ce75-dedf-3b6f-9a7c">
       <modifiers>
@@ -167,7 +154,6 @@
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="GRUNTA STAMPEDE" id="b64f-85cf-cc50-4197" hidden="false"/>
-    <categoryEntry name="Tusk Wrangler" id="f464-8f97-8044-35fc" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Krazogg&apos;s Grunta Stampede" hidden="false" id="536b-7de9-5300-72b5">

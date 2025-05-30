@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d048-1146-2bdf-cf78" name="Gloomspite Gitz - Trugg&apos;s Troggherd" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d048-1146-2bdf-cf78" name="Gloomspite Gitz - Trugg&apos;s Troggherd" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
-    <entryLink import="true" name="Dankhold Troggboss" hidden="false" id="5e93-9ecb-8c5f-daa" type="selectionEntry" targetId="c1d2-33ca-c5f3-56af">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="83f3-af26-f4b3-836f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="28b-9e0e-f8d8-3b77"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="fc8c-c154-26a7-69e2" type="selectionEntryGroup" targetId="24ec-6860-93dc-35de">
-          <entryLinks>
-            <entryLink import="true" name="Artefacts of Power" hidden="false" id="8292-d4db-7cea-e1b8" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="28e1-632e-e4cf-9137" type="selectionEntryGroup" targetId="e97b-5407-8051-4d14">
-          <entryLinks>
-            <entryLink import="true" name="Heroic Traits" hidden="false" id="d652-18eb-4976-39fc" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="Paths" hidden="false" id="7d13-3c50-dc55-fd5d" type="selectionEntryGroup" targetId="4d51-f8e0-5cc1-b93c"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="db0c-fa04-e35d-df3c" type="selectionEntryGroup" targetId="6cf2-b737-c12a-a5b9"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="4852-c581-4771-bafc" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="8b0d-1415-ee2f-dafa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="240"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Restrict General" hidden="false" id="2e44-30fb-a12-6da7" targetId="abcb-73d0-2b6c-4f17" primary="false"/>
-        <categoryLink name="TRUGG&apos;S TROGGHERD" hidden="false" id="f8a-a220-6893-c4b0" targetId="d960-e20e-e995-7986" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Dankhold Troggboss" hidden="false" id="5ea5-9699-f874-4850" type="selectionEntry" targetId="c1d2-33ca-c5f3-56af">
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="2bdd-c717-ee4a-e3bd" targetId="d1f3-921c-b403-1106" primary="true"/>
@@ -64,6 +18,53 @@
       <costs>
         <cost name="pts" typeId="points" value="240"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="afc0-3b1f-8342-617c">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="83f3-af26-f4b3-836f" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="83f3-af26-f4b3-836f" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="afc0-3b1f-8342-617c" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Dankhold Troggoth" hidden="false" id="d45b-250e-cd54-3dc0" type="selectionEntry" targetId="9be3-6dc9-3f14-4553">
       <modifiers>
@@ -151,31 +152,24 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="62f8-760f-5255-699b" type="selectionEntryGroup" targetId="6cf2-b737-c12a-a5b9"/>
       </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Trugg the Troggoth King" hidden="false" id="aa7e-4c8c-dd30-8ece" type="selectionEntry" targetId="94c-5126-509a-168f">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="e628-1395-e169-4dcb"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="380"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="TRUGG&apos;S TROGGHERD" hidden="false" id="4eb2-5990-fdb6-71b9" targetId="d960-e20e-e995-7986" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0843-2605-1c95-b22b" type="selectionEntryGroup" targetId="6cf2-b737-c12a-a5b9"/>
-      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Rockgut Troggoths" hidden="false" id="fb37-b269-44f8-1af3" type="selectionEntry" targetId="6b55-8302-d5fe-f8b">
       <entryLinks>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5be9-f24d-b606-6c24" name="Skaven - The Great-grand Gnawhorde" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5be9-f24d-b606-6c24" name="Skaven - The Great-grand Gnawhorde" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: The Great-grand Gnawhorde" hidden="false" id="d1dc-504d-44e7-6c6f" publicationId="ff83-b049-91b9-ed05">
       <profiles>
@@ -320,39 +320,8 @@
         <categoryLink name="GNAWHORDE" hidden="false" id="2972-4c92-154e-cd35" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Arch-Warlock" hidden="false" id="f138-ff73-a4ee-e2a1" type="selectionEntry" targetId="a566-7135-d418-bc59">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="892c-7371-ca24-0161"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="3642-9689-d4fd-9bb9" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="bf02-5865-05ac-a467" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Paths" hidden="false" id="b1da-0d0b-6cd7-4450" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="585f-30c0-746b-abcc" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="048a-3ec2-a471-8de2" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="f5bd-5dc1-fdc1-fa8a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="170"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="b2ed-3063-f666-beec" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Arch-Warlock" hidden="false" id="3e12-c43b-6ea7-00fb" type="selectionEntry" targetId="a566-7135-d418-bc59">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="af61-136b-cb99-eb36" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="d633-a440-623b-6f21" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -366,6 +335,24 @@
       <costs>
         <cost name="pts" typeId="points" value="170"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Battle Traits: The Great-grand Gnawhorde" hidden="false" id="a7db-1784-adf3-e00e" type="selectionEntry" targetId="d1dc-504d-44e7-6c6f">
       <constraints>
@@ -477,66 +464,8 @@
         <categoryLink name="GNAWHORDE" hidden="false" id="d1a4-ca86-12ef-2ecd" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Clawlord" hidden="false" id="f22d-8399-325e-d5ad" type="selectionEntry" targetId="966e-f5f4-99e0-58cf">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="6821-6d48-629a-d1c2"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="73ab-e9ef-65d0-92bd" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="01c8-b863-d5f4-e763" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="989a-19d5-08cd-c734" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="17a9-4a70-1240-a993" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2fcd-73c8-be34-f6a8" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6313-09cd-86b1-9be3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="619c-bc35-d4c5-7671" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="5211-bae1-7dbf-3102" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="9b77-c5a0-6eff-a288" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7642-1b6c-7ac4-36d0" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="2057-073b-0e59-fcd7" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="b1c3-a06d-d16f-7a05" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="649-9363-e350-48f4" field="category"/>
-            <modifier type="set" value="0" field="6821-6d48-629a-d1c2">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="4b81-153f-a579-7e83" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="b281-181a-bd14-4a69" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Clawlord" hidden="false" id="8e9f-6e0e-aef0-2a33" type="selectionEntry" targetId="966e-f5f4-99e0-58cf">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="497a-ffac-5515-1e72" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="521a-14cc-be2d-5ff1" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -550,66 +479,92 @@
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Clawlord on Gnaw-beast" hidden="false" id="485e-6324-081c-f579" type="selectionEntry" targetId="2f2b-ecf3-badb-696d">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="23b9-2d5f-b153-a116"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="73ab-e9ef-65d0-92bd" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="01c8-b863-d5f4-e763" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="17a9-4a70-1240-a993" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2fcd-73c8-be34-f6a8" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6313-09cd-86b1-9be3" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="4b81-153f-a579-7e83" shared="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="86b8-2006-6475-79bb" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="9c92-bca2-2ed7-3190" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="12e9-4d80-2407-eef0" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bf8a-1762-08a7-e5a3" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="977e-7fd5-b086-854a" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="ea7b-fb32-4bc1-acd1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="649-9363-e350-48f4" field="category"/>
-            <modifier type="set" value="0" field="23b9-2d5f-b153-a116">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="4b81-153f-a579-7e83" shared="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="add" value="4b81-153f-a579-7e83" field="category"/>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="a30b-a1a3-f691-6e65" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Clawlord on Gnaw-beast" hidden="false" id="87ff-644b-e2a6-25de" type="selectionEntry" targetId="2f2b-ecf3-badb-696d">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="a75d-2122-fdb4-5a8d" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="d7c9-b7dd-2baf-a62a" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -623,6 +578,89 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="4b81-153f-a579-7e83" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="4b81-153f-a579-7e83" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Doom-flayers" hidden="false" id="578e-319f-ceff-33a9" type="selectionEntry" targetId="c759-c695-2cf9-5d59">
       <modifiers>
@@ -772,39 +810,8 @@
         <entryLink import="true" name="Renown" hidden="false" id="7dc9-59cf-6edc-3bb3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Grey Seer" hidden="false" id="4477-f04f-786a-7a61" type="selectionEntry" targetId="a451-d214-7ed8-75ca">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="2f2c-be46-d239-d784"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="8d93-3778-ec2e-3cbd" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="699d-eb17-5ec7-11f5" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="cba7-ef14-cf12-fe11" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8fe8-61b7-0f13-53f4" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="2056-3da4-d7e8-15b3" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="678c-bfcf-996f-11d8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="1f01-3d28-a624-3591" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Grey Seer" hidden="false" id="73ab-e9ef-65d0-92bd" type="selectionEntry" targetId="a451-d214-7ed8-75ca">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="593b-3c83-0cf1-3271" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="e320-8f72-26a7-0c3c" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -818,40 +825,27 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Grey Seer on Screaming Bell" hidden="false" id="4654-4add-9a00-0e8c" type="selectionEntry" targetId="dc6a-710a-58a4-3c7b">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="d0f3-bf12-62d7-805a"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="7aaf-df2e-9904-8d0d" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="d100-076a-6113-b5dc" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="8002-4f9f-e078-c5c2" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3ff5-0ed3-2277-38db" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="97e0-8a86-8ffb-55eb" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="e9b0-5bbd-fbe2-807b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="350"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="dfbc-f3e1-8461-ff1e" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Grey Seer on Screaming Bell" hidden="false" id="01c8-b863-d5f4-e763" type="selectionEntry" targetId="dc6a-710a-58a4-3c7b">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="8da1-cd0b-148f-a1c8" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="76e9-a2e2-1c24-0629" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -865,6 +859,24 @@
       <costs>
         <cost name="pts" typeId="points" value="350"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Hell Pit Abomination" hidden="false" id="d78c-0df7-0754-99c4" type="selectionEntry" targetId="375a-e09f-9459-5237">
       <modifiers>
@@ -906,65 +918,8 @@
         <entryLink import="true" name="Renown" hidden="false" id="1ff3-5b6f-d5e5-e011" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Master Moulder" hidden="false" id="bcea-e324-fe33-09a5" type="selectionEntry" targetId="4b86-5244-fe24-99c6">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="96af-e981-5cbe-d787"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="73ab-e9ef-65d0-92bd" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="01c8-b863-d5f4-e763" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="17a9-4a70-1240-a993" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2fcd-73c8-be34-f6a8" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6313-09cd-86b1-9be3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="5fbe-86f3-1d7c-56bb" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="12f1-7611-9096-104a" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="78a5-9ece-fa04-c82b" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8f4a-14ac-c3ab-e016" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="e585-206a-b7cc-4ccc" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="8680-df49-d372-9625" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="100"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="c366-f763-c46e-d88d" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="649-9363-e350-48f4" field="category"/>
-            <modifier type="set" value="0" field="96af-e981-5cbe-d787">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="4b81-153f-a579-7e83" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
     <entryLink import="true" name="Master Moulder" hidden="false" id="abdd-e263-8b85-fc5e" type="selectionEntry" targetId="4b86-5244-fe24-99c6">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="e3df-142d-54af-8a87" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="3436-3de9-930f-3bb7" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -978,6 +933,89 @@
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="4b81-153f-a579-7e83" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="4b81-153f-a579-7e83" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Rat Ogors" hidden="false" id="ee04-9897-e08a-2ccf" type="selectionEntry" targetId="1301-b79e-7b2a-1a48">
       <entryLinks>
@@ -1260,39 +1298,8 @@
         <categoryLink name="GNAWHORDE" hidden="false" id="3480-095f-8e13-3d7f" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Verminlord Warbringer" hidden="false" id="0314-8886-d5f0-8148" type="selectionEntry" targetId="6848-b440-5959-a43">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="4953-85ee-b5b4-3dfc"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="ecfe-d655-e299-84cf" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="377c-8f1a-f74c-b714" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="17bb-e3c0-8ff3-2898" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cbfa-1960-34e2-8ec8" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="bf40-f50b-cc9a-fa81" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="d87f-97c8-9e8f-c09d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="320"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="5a4c-979f-3a05-f58c" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Verminlord Warbringer" hidden="false" id="989a-19d5-08cd-c734" type="selectionEntry" targetId="6848-b440-5959-a43">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="e85a-4141-c11f-0037" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="cbd3-558f-ad5d-509a" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -1306,40 +1313,27 @@
       <costs>
         <cost name="pts" typeId="points" value="320"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Verminlord Warpseer" hidden="false" id="5717-fa8c-bee8-ee62" type="selectionEntry" targetId="8dad-1c7-e47c-b608">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="54b3-1e5a-fedc-6239"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="74d6-e655-9451-0591" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="8f3c-5822-ab30-2f53" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="3fb9-78d1-ca73-0dad" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a492-75da-b7c4-a3ba" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="9750-cd14-8ef9-5682" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="a5fd-4bff-57eb-121d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="340"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="30ab-6558-0001-92ec" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Verminlord Warpseer" hidden="false" id="17a9-4a70-1240-a993" type="selectionEntry" targetId="8dad-1c7-e47c-b608">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="6e37-f761-7d99-f971" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="4b5f-8269-66cd-7b72" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -1353,67 +1347,27 @@
       <costs>
         <cost name="pts" typeId="points" value="340"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Warlock Bombardier" hidden="false" id="7f40-4a48-6d7f-081d" type="selectionEntry" targetId="c11b-a255-cd5e-cb23">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="af74-3201-2de9-b220"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="73ab-e9ef-65d0-92bd" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="01c8-b863-d5f4-e763" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="989a-19d5-08cd-c734" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="17a9-4a70-1240-a993" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2fcd-73c8-be34-f6a8" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6313-09cd-86b1-9be3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="8327-3c00-5b30-a935" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="4406-869e-804e-417d" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="681b-8dcf-aef0-bf6b" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5c58-6f06-315e-5047" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="aacb-7820-28ef-5cb1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="42c2-b6cb-641b-4bbb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="cf4e-a348-4909-417f" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="649-9363-e350-48f4" field="category"/>
-            <modifier type="set" value="0" field="af74-3201-2de9-b220">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="4b81-153f-a579-7e83" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Warlock Bombardier" hidden="false" id="8a79-9068-40bb-b1d5" type="selectionEntry" targetId="c11b-a255-cd5e-cb23">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="81ef-baa8-3c60-f3f4" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="5d22-6185-dd2a-7f73" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -1427,67 +1381,92 @@
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Warlock Engineer" hidden="false" id="a428-4217-a5e1-0ad0" type="selectionEntry" targetId="e77c-c9e7-720e-86e2">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="db3c-3d9a-1cb6-b121"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="73ab-e9ef-65d0-92bd" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="01c8-b863-d5f4-e763" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="989a-19d5-08cd-c734" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="17a9-4a70-1240-a993" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2fcd-73c8-be34-f6a8" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6313-09cd-86b1-9be3" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="4b81-153f-a579-7e83" shared="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="4cee-d471-d367-c1bb" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="fe77-a126-2923-7093" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="b535-aa01-5d24-831c" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="82dc-22c6-cc16-8ae7" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="c52f-2dad-abdb-95ab" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="5e7c-06f5-b352-fcf7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="a216-17bc-39e3-d907" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="649-9363-e350-48f4" field="category"/>
-            <modifier type="set" value="0" field="db3c-3d9a-1cb6-b121">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="4b81-153f-a579-7e83" shared="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="add" value="4b81-153f-a579-7e83" field="category"/>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Warlock Engineer" hidden="false" id="c30b-6d96-5301-d876" type="selectionEntry" targetId="e77c-c9e7-720e-86e2">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="ce05-0dcd-adff-9e0a" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="aa16-26db-5e50-0ae0" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -1501,67 +1480,92 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Warlock Galvaneer" hidden="false" id="ed76-7129-86d1-044e" type="selectionEntry" targetId="05dd-ab28-998d-8cca">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b13b-d64e-6cf7-1fb0"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="73ab-e9ef-65d0-92bd" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="01c8-b863-d5f4-e763" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="989a-19d5-08cd-c734" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="17a9-4a70-1240-a993" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="2fcd-73c8-be34-f6a8" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="6313-09cd-86b1-9be3" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="4b81-153f-a579-7e83" shared="true"/>
                   </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="f482-f1d7-e270-132f" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="4b23-1bc6-663e-09c7" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Paths" hidden="false" id="89d4-b639-213f-d968" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c923-82bc-027f-7bf9" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="6547-489b-ac68-aef8" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="a491-5e6b-ae20-c825" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="140"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="da39-5c83-cf16-f79f" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="649-9363-e350-48f4" field="category"/>
-            <modifier type="set" value="0" field="b13b-d64e-6cf7-1fb0">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="4b81-153f-a579-7e83" shared="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="add" value="4b81-153f-a579-7e83" field="category"/>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Warlock Galvaneer" hidden="false" id="1fbe-298b-5e4f-adcc" type="selectionEntry" targetId="05dd-ab28-998d-8cca">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="db61-d51d-81b1-396a" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="cc05-36cf-6423-42d9" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -1575,6 +1579,89 @@
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="4b81-153f-a579-7e83" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="4b81-153f-a579-7e83" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Warp Lightning Cannon" hidden="false" id="d251-412e-56de-475c" type="selectionEntry" targetId="3133-1d09-96d0-9a9b">
       <modifiers>
@@ -1859,34 +1946,8 @@
         <categoryLink name="GNAWHORDE" hidden="false" id="9017-adae-b862-a5d6" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Vizzik Skour, Prophet of the Horned Rat" hidden="false" id="c969-f1b9-ac1b-986b" type="selectionEntry" targetId="2a51-7859-e014-cecd">
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="5d17-275e-011b-ddf6"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="450"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="0d38-d2be-7eb5-4210" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c3bb-cba6-25da-a116" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-      </entryLinks>
-    </entryLink>
     <entryLink import="true" name="Vizzik Skour, Prophet of the Horned Rat" hidden="false" id="2fcd-73c8-be34-f6a8" type="selectionEntry" targetId="2a51-7859-e014-cecd">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="0dd5-6118-3fa2-1ff5" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="d671-8c3f-ef08-4000" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <costs>
@@ -1895,8 +1956,26 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d177-7975-e607-f04e" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
-    <entryLink import="true" name="Scourge of Ghyran Brood Terror" hidden="false" id="9b56-5835-e9dc-2e29" type="selectionEntry" targetId="3f42-fd25-3ec4-00ec">
+    <entryLink import="true" name="Brood Terror (Scourge of Ghyran)" hidden="false" id="9b56-5835-e9dc-2e29" type="selectionEntry" targetId="3f42-fd25-3ec4-00ec">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -1936,39 +2015,8 @@
         <entryLink import="true" name="Renown" hidden="false" id="ad9f-7d42-1314-22d0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Scourge of Ghyran Grey Seer on Screaming Bell" hidden="false" id="25bf-bddc-7f06-7ef9" type="selectionEntry" targetId="59d2-a983-aed1-a148">
-      <costs>
-        <cost name="pts" typeId="points" value="310"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Renown" hidden="false" id="7914-8fc0-b0a4-33aa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="c022-c0dc-a820-3396" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="4f0c-7258-efce-7d66" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5132-b391-e111-494d" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="55ae-25c4-8338-fbca" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
-        <entryLink import="true" name="Paths" hidden="false" id="9075-dbda-b39a-d2ab" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="358a-e2a5-297f-85b0"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+    <entryLink import="true" name="Grey Seer on Screaming Bell (Scourge of Ghyran)" hidden="false" id="6313-09cd-86b1-9be3" type="selectionEntry" targetId="59d2-a983-aed1-a148">
       <categoryLinks>
-        <categoryLink name="GNAWHORDE" hidden="false" id="9d80-0867-69a4-17b9" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Scourge of Ghyran Grey Seer on Screaming Bell" hidden="false" id="6313-09cd-86b1-9be3" type="selectionEntry" targetId="59d2-a983-aed1-a148">
-      <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="c0bb-e5ae-aa4d-ad28" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="GNAWHORDE" hidden="false" id="bca7-349a-7449-7274" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
       <costs>
@@ -1982,6 +2030,24 @@
         <entryLink import="true" name="Heroic Traits" hidden="false" id="607a-5203-f5a5-b6b1" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
         <entryLink import="true" name="Paths" hidden="false" id="c6db-b593-f485-3102" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <selectionEntries>
@@ -2061,7 +2127,57 @@
     </selectionEntry>
   </selectionEntries>
   <categoryEntries>
-    <categoryEntry name="Skaven Overclaw" id="4b81-153f-a579-7e83" hidden="false"/>
+    <categoryEntry name="Skaven Overclaw" id="4b81-153f-a579-7e83" hidden="false">
+      <modifiers>
+        <modifier type="set" value="1" field="c07a-3f81-6fa2-c9f7">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="73ab-e9ef-65d0-92bd" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="01c8-b863-d5f4-e763" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="6313-09cd-86b1-9be3" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="989a-19d5-08cd-c734" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="17a9-4a70-1240-a993" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="2fcd-73c8-be34-f6a8" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="c07a-3f81-6fa2-c9f7" includeChildSelections="true"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry name="GNAWHORDE" id="84cc-ef1d-62cd-3fd9" hidden="false"/>
   </categoryEntries>
 </catalogue>
