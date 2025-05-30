@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="874b-f2c3-6829-7c1c" name="Stormcast Eternals - Draconith Skywing" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="874b-f2c3-6829-7c1c" name="Stormcast Eternals - Draconith Skywing" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Draconith Skywing" hidden="false" id="c858-458e-9b28-569e">
       <profiles>
@@ -242,34 +242,8 @@
   </catalogueLinks>
   <entryLinks>
     <entryLink import="true" name="Battle Traits: Draconith Skywing" hidden="false" id="70aa-a2aa-7b73-4275" type="selectionEntry" targetId="c858-458e-9b28-569e"/>
-    <entryLink import="true" name="Ionus Cryptborn, Warden of Lost Souls" hidden="false" id="776d-654d-6727-335f" type="selectionEntry" targetId="f96a-5448-b667-1ed5">
-      <categoryLinks>
-        <categoryLink name="DRACONITH SKYWING" hidden="false" id="2703-bc61-7e91-d64f" targetId="7159-6f7a-df4f-7e88" primary="false"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="a69f-14e4-4acc-45b3"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="400"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6327-3478-efef-5891" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
-      </entryLinks>
-    </entryLink>
     <entryLink import="true" name="Ionus Cryptborn, Warden of Lost Souls" hidden="false" id="384a-a6a3-4bec-40f4" type="selectionEntry" targetId="f96a-5448-b667-1ed5">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="542a-9df2-bf12-1f4c" targetId="d1f3-921c-b403-1106" primary="false"/>
         <categoryLink name="DRACONITH SKYWING" hidden="false" id="c375-641a-b4a5-125b" targetId="7159-6f7a-df4f-7e88" primary="false"/>
       </categoryLinks>
       <costs>
@@ -278,35 +252,27 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fdf7-2abe-bbda-94a6" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
       </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Krondys, Son of Dracothion" hidden="false" id="59dc-b01e-d5a7-2510" type="selectionEntry" targetId="9c0f-13c7-e2c1-55a">
-      <categoryLinks>
-        <categoryLink name="DRACONITH SKYWING" hidden="false" id="e88a-4e58-aa9c-e04c" targetId="7159-6f7a-df4f-7e88" primary="false"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8b6b-617c-2678-0b82"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="560"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9bfb-1889-f949-2097" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
-      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Krondys, Son of Dracothion" hidden="false" id="dc76-6b67-a910-9f4f" type="selectionEntry" targetId="9c0f-13c7-e2c1-55a">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="86c9-1176-b248-0d93" targetId="d1f3-921c-b403-1106" primary="false"/>
         <categoryLink name="DRACONITH SKYWING" hidden="false" id="cb30-3ef4-1c1d-58a3" targetId="7159-6f7a-df4f-7e88" primary="false"/>
       </categoryLinks>
       <costs>
@@ -315,35 +281,27 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b1dd-1f44-db3c-4c69" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
       </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Karazai the Scarred" hidden="false" id="3033-8b18-8533-f979" type="selectionEntry" targetId="c6c-d912-2899-5073">
-      <categoryLinks>
-        <categoryLink name="DRACONITH SKYWING" hidden="false" id="9d4d-d795-a783-4708" targetId="7159-6f7a-df4f-7e88" primary="false"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="5fca-ef21-c276-fe84"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="480"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="614b-5595-d5c3-335a" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
-      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Karazai the Scarred" hidden="false" id="afab-36d9-2dc4-b1d4" type="selectionEntry" targetId="c6c-d912-2899-5073">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="4700-bafd-a71b-6900" targetId="d1f3-921c-b403-1106" primary="false"/>
         <categoryLink name="DRACONITH SKYWING" hidden="false" id="e83a-fed8-aa36-a248" targetId="7159-6f7a-df4f-7e88" primary="false"/>
       </categoryLinks>
       <costs>
@@ -352,40 +310,27 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8521-2959-50bf-30fb" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
       </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Knight-Draconis" hidden="false" id="c554-7658-5c9d-663c" type="selectionEntry" targetId="1b67-5ed1-5c9d-388f">
-      <categoryLinks>
-        <categoryLink name="DRACONITH SKYWING" hidden="false" id="be27-71f6-3e7a-1e9d" targetId="7159-6f7a-df4f-7e88" primary="false"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="bde8-b28e-0f89-cb9c"/>
-      </constraints>
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="240"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f6ce-be04-5a37-026d" type="selectionEntryGroup" targetId="b95c-4cad-8a89-8ae4"/>
-        <entryLink import="true" name="Paths" hidden="false" id="b573-a8c5-2b01-4fb1" type="selectionEntryGroup" targetId="205e-1673-7c4f-cb81"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="8278-fd54-ea80-632c" type="selectionEntryGroup" targetId="08bd-9915-fd55-eaf2"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="d715-95da-4f0e-a968" type="selectionEntryGroup" targetId="628c-54bf-5131-1ab2"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="2e10-96da-d829-31b1" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="fabf-0093-78f4-2e6e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Knight-Draconis" hidden="false" id="15eb-af56-e00c-c21f" type="selectionEntry" targetId="1b67-5ed1-5c9d-388f">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="5d57-1065-04c5-11ca" targetId="d1f3-921c-b403-1106" primary="false"/>
         <categoryLink name="DRACONITH SKYWING" hidden="false" id="2554-c8a8-3819-f7a1" targetId="7159-6f7a-df4f-7e88" primary="false"/>
       </categoryLinks>
       <costs>
@@ -399,6 +344,24 @@
         <entryLink import="true" name="Warlord" hidden="false" id="c610-8c23-0e9b-ea8d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="4c44-e5f0-010a-9bad" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Stormdrake Guard" hidden="false" id="ccef-8f1a-8345-b325" type="selectionEntry" targetId="4fcf-b770-62ff-9013">
       <categoryLinks>
@@ -464,7 +427,6 @@
         </modifier>
         <modifier type="increment" value="1" field="fdbf-06a1-9829-be4b">
           <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="c554-7658-5c9d-663c" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
             <repeat value="1" repeats="1" field="selections" scope="roster" childId="15eb-af56-e00c-c21f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
@@ -483,6 +445,11 @@
       <constraints>
         <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="fdbf-06a1-9829-be4b"/>
       </constraints>
+    </entryLink>
+    <entryLink import="true" name="Stormreach Portal" hidden="false" id="5703-5153-b2f6-e14e" type="selectionEntry" targetId="8c5f-f4d2-f160-89ec" defaultAmount="1">
+      <entryLinks>
+        <entryLink import="true" name="Renown" hidden="false" id="f8f2-95e6-d063-f8f2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
   <categoryEntries>

@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="BARROW LEGION" id="07ad-5d9a-db7f-270d" hidden="false"/>
-    <categoryEntry name="Deathrattle Overseer" id="ca3d-ce07-0388-88b9" hidden="false"/>
+    <categoryEntry name="Deathrattle Overseer" id="ca3d-ce07-0388-88b9" hidden="false">
+      <modifiers>
+        <modifier type="set" value="1" field="d51e-035b-8070-d91c">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="3c7c-a43e-6b90-c029" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="d51e-035b-8070-d91c" includeChildSelections="true"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="❖ Lores" id="b4d1-8e09-bab9-846e" targetId="0a11-cd61-2a4e-8e04"/>
@@ -338,7 +358,6 @@ For the rest of the battle, each time an attack targets this unit, if the attack
   <entryLinks>
     <entryLink import="true" name="Wight Lord on Skeletal Steed" hidden="false" id="081d-053c-fcbe-bda8" type="selectionEntry" targetId="ce3f-1647-a605-05c9">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="2762-c245-92f2-092d" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="BARROW LEGION" hidden="false" id="f572-793b-5dbe-36ae" targetId="07ad-5d9a-db7f-270d" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -352,62 +371,62 @@ For the rest of the battle, each time an attack targets this unit, if the attack
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Wight King" hidden="false" id="dd36-80b3-9c91-1f21" type="selectionEntry" targetId="8dc4-aa60-df82-d6a5">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3c7c-a43e-6b90-c029" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="ca3d-ce07-0388-88b9" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="3c7c-a43e-6b90-c029" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="d037-219e-8129-4ba3" type="selectionEntryGroup" targetId="8184-d1b7-67cf-4021"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="68cb-3e6a-d6f3-04e3" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7a78-a7c1-58c2-9648" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
-        <entryLink import="true" name="Paths" hidden="false" id="93b9-6465-2204-9391" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="9ac2-cfaa-b7b1-1420" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="4336-239f-ea04-382d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="100"/>
-      </costs>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="ca3d-ce07-0388-88b9" field="category"/>
-            <modifier type="set" value="0" field="a59b-6c41-91e4-ffa0">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="ca3d-ce07-0388-88b9" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="a59b-6c41-91e4-ffa0"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink name="BARROW LEGION" hidden="false" id="f7e2-47c2-d82c-aae8" targetId="07ad-5d9a-db7f-270d" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Wight King" hidden="false" id="2e20-024c-edc1-57d0" type="selectionEntry" targetId="8dc4-aa60-df82-d6a5">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="d81a-4950-7088-a7d9" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="BARROW LEGION" hidden="false" id="c932-d684-621c-cdbc" targetId="07ad-5d9a-db7f-270d" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -421,43 +440,62 @@ For the rest of the battle, each time an attack targets this unit, if the attack
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Wight King on Skeletal Steed" hidden="false" id="6557-9628-eac9-b784" type="selectionEntry" targetId="dfe3-12e9-b0d4-3603">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and"/>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="ca3d-ce07-0388-88b9" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="3c7c-a43e-6b90-c029" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="fe67-d9d0-249e-bc25" type="selectionEntryGroup" targetId="8184-d1b7-67cf-4021"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="9754-d1b9-3476-36f8" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e581-2d3d-4170-021b" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
-        <entryLink import="true" name="Paths" hidden="false" id="e29f-ed39-68b3-208f" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="af36-a25a-0f2d-67e5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="7f5c-ffea-01e5-b4b1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="220"/>
-      </costs>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="0c87-258f-1c36-709f"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink name="BARROW LEGION" hidden="false" id="2510-5bdd-d4df-9232" targetId="07ad-5d9a-db7f-270d" primary="false"/>
-      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="ca3d-ce07-0388-88b9" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Wight King on Skeletal Steed" hidden="false" id="3c7c-a43e-6b90-c029" type="selectionEntry" targetId="dfe3-12e9-b0d4-3603">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="4a62-f9c4-98da-b6c1" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="BARROW LEGION" hidden="false" id="66a1-aed5-8819-510c" targetId="07ad-5d9a-db7f-270d" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -471,90 +509,62 @@ For the rest of the battle, each time an attack targets this unit, if the attack
       <costs>
         <cost name="pts" typeId="points" value="220"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Wight Lord on Skeletal Steed" hidden="false" id="d792-2359-ce40-0307" type="selectionEntry" targetId="ce3f-1647-a605-05c9">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3c7c-a43e-6b90-c029" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="ca3d-ce07-0388-88b9" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="3c7c-a43e-6b90-c029" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="e4aa-4e43-d6a5-94cf" type="selectionEntryGroup" targetId="8184-d1b7-67cf-4021"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="c1e1-e268-a114-7720" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f92f-bbf2-38e8-0fbf" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
-        <entryLink import="true" name="Paths" hidden="false" id="4318-add7-dcfa-61c9" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="f578-d32b-613f-2640" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="8347-77a7-5f3c-1849" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="14e3-79f9-4d5a-de9e"/>
-      </constraints>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="ca3d-ce07-0388-88b9" field="category"/>
-            <modifier type="set" value="0" field="14e3-79f9-4d5a-de9e">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="ca3d-ce07-0388-88b9" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-      <categoryLinks>
-        <categoryLink name="BARROW LEGION" hidden="false" id="940f-1ae7-fef4-2725" targetId="07ad-5d9a-db7f-270d" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Watch Captain Halgrim" hidden="false" id="7f7c-d6e7-25e6-36bb" type="selectionEntry" targetId="a502-5f4e-6d32-43bd">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and"/>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="e8b7-dbb6-a8a5-0985"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f5e1-78c9-b1cb-0078" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
-      </entryLinks>
-      <categoryLinks>
-        <categoryLink name="BARROW LEGION" hidden="false" id="a268-8437-b300-adf7" targetId="07ad-5d9a-db7f-270d" primary="false"/>
-      </categoryLinks>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Watch Captain Halgrim" hidden="false" id="18b7-c54f-ce1a-be9d" type="selectionEntry" targetId="a502-5f4e-6d32-43bd">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="778b-4146-4518-e89e" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="BARROW LEGION" hidden="false" id="bcee-0b30-68ae-5a0b" targetId="07ad-5d9a-db7f-270d" primary="false"/>
       </categoryLinks>
       <costs>
@@ -563,6 +573,24 @@ For the rest of the battle, each time an attack targets this unit, if the attack
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c8e7-f80f-e755-d788" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="The Sons of Velmorn" hidden="false" id="e051-d43f-a4b0-9da7" type="selectionEntry" targetId="061f-62b5-05f0-d8cd">
       <modifiers>
@@ -746,7 +774,7 @@ For the rest of the battle, each time an attack targets this unit, if the attack
         <categoryLink name="BARROW LEGION" hidden="false" id="4ac0-2d0d-6e6e-619a" targetId="07ad-5d9a-db7f-270d" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Cursed Sepulchre" hidden="false" id="bd13-8626-1af3-95dc" type="selectionEntry" targetId="4ab6-d0f5-d7b0-1b38"/>
+    <entryLink import="true" name="Cursed Sepulchre" hidden="false" id="bd13-8626-1af3-95dc" type="selectionEntry" targetId="4ab6-d0f5-d7b0-1b38" defaultAmount="1"/>
     <entryLink import="true" name="Deathrattle Skeletons" hidden="false" id="7692-ee3d-a46a-6620" type="selectionEntry" targetId="849b-3125-85cd-a864">
       <modifiers>
         <modifier type="set" value="true" field="hidden">

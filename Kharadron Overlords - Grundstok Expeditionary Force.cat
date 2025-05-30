@@ -1,39 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b4bd-d94d-281f-afef" name="Kharadron Overlords - Grundstok Expeditionary Force" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b4bd-d94d-281f-afef" name="Kharadron Overlords - Grundstok Expeditionary Force" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
-    <entryLink import="true" name="Arkanaut Admiral" hidden="false" id="8995-3eec-ade5-158c" type="selectionEntry" targetId="1b27-b5aa-79ae-4130">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="c15f-4f05-73fd-ffca"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="e409-b501-f7d9-2fc4" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="8516-fe72-3876-c681" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2c82-1340-3987-f259" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="d452-3e57-33bf-9576" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="06bf-30ab-a25b-1c51" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="fb6a-fc4b-2ecf-ffb7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="140"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="1722-221d-6f90-7e13" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Arkanaut Admiral" hidden="false" id="351d-bf28-bd95-9ee3" type="selectionEntry" targetId="1b27-b5aa-79ae-4130">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="7fe8-3fe9-c82c-a8b5" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="9778-a2a3-6d97-a74b" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -47,10 +16,27 @@
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Aetheric Navigator" hidden="false" id="8b20-f707-fced-76df" type="selectionEntry" targetId="145-80eb-ca00-b9f">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="b1f-8fcd-9b10-444" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="558a-bf68-51be-cd0" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -64,62 +50,62 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Aetheric Navigator" hidden="false" id="caf2-6f1e-a8a7-331b" type="selectionEntry" targetId="145-80eb-ca00-b9f">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="351d-bf28-bd95-9ee3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="dcc3-6e50-cf23-65fb" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="df-8bf7-8993-5370"/>
-      </constraints>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
-            <modifier type="set" value="0" field="df-8bf7-8993-5370">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="dcc3-6e50-cf23-65fb" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="7ffe-202f-7a8d-a55a" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="8376-682c-960a-1d0c" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f27f-b2f2-dd89-263d" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="be35-f90e-6c2a-aa01" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="4f1d-c47a-2709-82dd" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="55b0-06e5-26fc-b492" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="d665-d840-5007-b72e" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Endrinmaster with Endrinharness" hidden="false" id="562c-4756-1b00-8840" type="selectionEntry" targetId="3124-cf12-7803-f34b">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="6866-4046-ed60-a06a" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="1a4a-29d3-983-4368" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -133,10 +119,62 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="dcc3-6e50-cf23-65fb" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Endrinmaster with Dirgible Suit" hidden="false" id="c83-7da9-9280-77d5" type="selectionEntry" targetId="a505-e76e-45f8-7874">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="f493-5528-1c73-1d78" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="62cc-483a-dcc0-480b" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -150,166 +188,62 @@
       <costs>
         <cost name="pts" typeId="points" value="180"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Endrinmaster with Endrinharness" hidden="false" id="34d6-92f9-1066-1560" type="selectionEntry" targetId="3124-cf12-7803-f34b">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="351d-bf28-bd95-9ee3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="dcc3-6e50-cf23-65fb" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8a12-165c-bee0-4c0b"/>
-      </constraints>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
-            <modifier type="set" value="0" field="8a12-165c-bee0-4c0b">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="dcc3-6e50-cf23-65fb" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="883f-a660-4e95-1737" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="8eb7-7570-da1b-e2cb" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dabd-3444-c20e-9502" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="49f5-209c-a01c-3317" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="9878-c36a-eb0d-e750" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="aced-bcda-3aeb-a7ce" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="b90e-5132-40e2-49ac" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Endrinmaster with Dirgible Suit" hidden="false" id="1837-81b5-c13a-e6b5" type="selectionEntry" targetId="a505-e76e-45f8-7874">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="351d-bf28-bd95-9ee3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b304-6809-2a7b-9fab"/>
-      </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
-            <modifier type="set" value="0" field="b304-6809-2a7b-9fab">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="dcc3-6e50-cf23-65fb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
         </modifierGroup>
       </modifierGroups>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="e70d-f8ad-9078-4ee6" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="d19a-adfe-f644-281" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a91a-8531-c05f-f191" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="5f68-2b2c-5681-e922" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="4fac-0002-53f6-aace" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="44a3-0b52-2083-0c0c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="180"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="c63c-5e2c-e9d-cccb" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Codewright" hidden="false" id="72a-883c-15f8-6956" type="selectionEntry" targetId="bed0-dd91-c45b-71df">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="351d-bf28-bd95-9ee3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="f77c-2fae-807-d552"/>
-      </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
-            <modifier type="set" value="0" field="f77c-2fae-807-d552">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="dcc3-6e50-cf23-65fb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="cffe-ae04-41d6-5ea8" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="2795-3b33-5055-5928" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1880-e2e7-44ca-7c6a" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="8ffd-fe83-6790-6c1e" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="3503-dcf2-2a30-d4d3" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="32a1-4c0c-597f-38f6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="9142-967a-7b5d-b11f" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Codewright" hidden="false" id="3d08-de63-5d1f-3a05" type="selectionEntry" targetId="bed0-dd91-c45b-71df">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="5ea6-29d2-1ff3-8641" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="7d77-6c09-1aa6-7ec0" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -323,10 +257,62 @@
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="dcc3-6e50-cf23-65fb" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Aether-Khemist" hidden="false" id="8739-73c0-8fc2-e313" type="selectionEntry" targetId="26a7-80ea-22a-21ca">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="1e49-dc05-7a9b-4bc3" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="1785-592c-2e3e-1f98" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -340,58 +326,59 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
-    </entryLink>
-    <entryLink import="true" name="Aether-Khemist" hidden="false" id="579c-5806-be6f-5ba4" type="selectionEntry" targetId="26a7-80ea-22a-21ca">
       <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="351d-bf28-bd95-9ee3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="dcc3-6e50-cf23-65fb" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="dd62-ba1d-b84-a7a5"/>
-      </constraints>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
-            <modifier type="set" value="0" field="dd62-ba1d-b84-a7a5">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="dcc3-6e50-cf23-65fb" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
-      <entryLinks>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="da5-b719-be21-bd06" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="79a9-11fc-ec96-5d41" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="48cd-67a1-8d93-c84b" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="ca3a-5762-9797-1a76" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="12db-c1ad-1ef9-8dd4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="9e45-f357-c5b7-d2b6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="8d51-7ebc-4923-1a40" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Grundstok Thunderers" hidden="false" id="cf09-6d8-6e21-a37e" type="selectionEntry" targetId="9f81-a727-f6ab-e7cc">
       <entryLinks>
@@ -487,61 +474,8 @@
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Grundstok Expeditionary Force" hidden="false" id="33ff-6991-525f-53cd" type="selectionEntry" targetId="91ef-e148-b1ee-1b98"/>
-    <entryLink import="true" name="Codewright (Scourge of Ghyran)" hidden="false" id="d9b7-3c4e-a6d5-67d4" type="selectionEntry" targetId="bfc1-e4ca-5c68-6a8a">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="351d-bf28-bd95-9ee3" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="f9a9-dbe4-9f56-80ad"/>
-      </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
-            <modifier type="set" value="0" field="f9a9-dbe4-9f56-80ad">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="dcc3-6e50-cf23-65fb" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="7134-283f-9d56-9679" type="selectionEntryGroup" targetId="368f-3a32-9792-9d54"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="962d-d837-48d8-a890" type="selectionEntryGroup" targetId="93fc-cbd9-3de1-fb14"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5178-9791-790d-3429" type="selectionEntryGroup" targetId="e0ee-1c1f-177a-9aa5"/>
-        <entryLink import="true" name="Paths" hidden="false" id="8b77-1e3f-e616-a761" type="selectionEntryGroup" targetId="793c-ba67-863b-5131"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="02cf-8347-84bd-9a32" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="99f2-29c6-2f8c-8323" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="27dd-5491-ddb3-2355" targetId="d143-5973-f856-3384" primary="false"/>
-      </categoryLinks>
-    </entryLink>
     <entryLink import="true" name="Codewright (Scourge of Ghyran)" hidden="false" id="f26a-7159-e472-b0c4" type="selectionEntry" targetId="bfc1-e4ca-5c68-6a8a">
       <categoryLinks>
-        <categoryLink name="Regimental Leader" hidden="false" id="65ff-aa3d-ca0a-9f28" targetId="d1f3-921c-b403-1106" primary="true"/>
         <categoryLink name="EXPEDITIONARY FORCE" hidden="false" id="3d59-b257-5ec6-449b" targetId="d143-5973-f856-3384" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -555,6 +489,59 @@
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="dcc3-6e50-cf23-65fb" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="dcc3-6e50-cf23-65fb" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Grundstok Gunhauler (Scourge of Ghyran)" hidden="false" id="5517-b943-b8b8-99d9" type="selectionEntry" targetId="7794-c2d1-ee85-acc3">
       <entryLinks>
@@ -615,7 +602,27 @@
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="5c6a-fabf-6dd6-3721" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
   </catalogueLinks>
   <categoryEntries>
-    <categoryEntry name="Guild Officer" id="dcc3-6e50-cf23-65fb" hidden="false"/>
+    <categoryEntry name="Guild Officer" id="dcc3-6e50-cf23-65fb" hidden="false">
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6e16-edc9-6b19-b93a" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="6e16-edc9-6b19-b93a">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="351d-bf28-bd95-9ee3" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
     <categoryEntry name="EXPEDITIONARY FORCE" id="d143-5973-f856-3384" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>

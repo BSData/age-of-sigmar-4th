@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="30" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="31" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -106,6 +106,14 @@
         <characteristicType name="Health" hidden="false" id="d1b9-3068-515-131e"/>
         <characteristicType name="Save" hidden="false" id="80c7-7691-b6ed-d6a6"/>
         <characteristicType name="Banishment" hidden="false" id="97a2-d412-9ac-6a37"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10">
+      <characteristicTypes>
+        <characteristicType name="Card" id="67f1-ce6d-1cf4-a4df"/>
+        <characteristicType name="Affray" id="1047-3e43-674d-dc6c"/>
+        <characteristicType name="Strike" id="94d4-173e-0f65-c569"/>
+        <characteristicType name="Domination" id="e1d7-1d3c-f001-62e0"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -3018,7 +3026,7 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
       </constraints>
     </forceEntry>
-    <forceEntry name="✦ General&apos;s Handbook 2025-26 (Use for Scourge of Ghyran)" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
+    <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c63-5bc5-ea14-ff14" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="516a-f060-376f-acab" targetId="3360-1158-e879-9606"/>
@@ -5764,6 +5772,7 @@
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -5800,6 +5809,7 @@
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -8638,7 +8648,7 @@
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">10&quot;</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">12</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">8+</characteristic>
           </characteristics>
         </profile>
@@ -8705,7 +8715,7 @@
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">8&quot;</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">10</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
@@ -8722,10 +8732,10 @@
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
           </attributes>
         </profile>
-        <profile name="Necrotic Vortex" hidden="false" id="c99-9240-9da1-d029" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+        <profile name="Pull of the Nadir" hidden="false" id="c99-9240-9da1-d029" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
-            <characteristic name="Keywords" id="d78a-7452-d2fd-d430" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="3122-a017-ecd3-e131" hidden="false" typeId="fd7f-888d-3257-a12b">Subtract 1 from save rolls for enemy units while they are within 3&quot; of this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from save rolls for friendly and enemy units while they are within 3&quot; of this **^^Manifestation^^**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -8735,7 +8745,7 @@
         <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
           <characteristics>
             <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
             <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
             <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
             <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
@@ -8755,7 +8765,7 @@
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">6</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
@@ -8797,7 +8807,7 @@
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">12</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
@@ -8838,7 +8848,7 @@
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">8&quot;</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">6</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
@@ -8878,7 +8888,7 @@
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">6</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
@@ -8915,35 +8925,35 @@
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
           </characteristics>
         </profile>
-        <profile name="Dancing Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c08-79dc-f4d5-dc9f">
+        <profile name="Burning Up" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c08-79dc-f4d5-dc9f">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^**uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this MANIFESTATION (ward rolls cannot be made for that damage point).</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^**uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this **^^Manifestation^^** (ward rolls cannot be made for that damage point).</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Shooting</attribute>
           </attributes>
         </profile>
         <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
           <characteristics>
-            <characteristic name="Rng" id="6450-3ecf-55e3-c5f9" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-            <characteristic name="Atk" id="7fb3-4e62-f6bb-248f" hidden="false" typeId="aa17-4296-2887-e05d">D6</characteristic>
-            <characteristic name="Hit" id="fe8a-e579-8c8c-afce" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
-            <characteristic name="Wnd" id="beee-ba5e-b27c-bbcd" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-            <characteristic name="Rnd" id="efad-96a3-21c3-4c0e" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
-            <characteristic name="Dmg" id="25dd-ea24-dd6-e8d2" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-            <characteristic name="Ability" id="15cb-97de-41d8-b213" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
+            <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+            <characteristic name="Atk" typeId="aa17-4296-2887-e05d">D6</characteristic>
+            <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+            <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+            <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+            <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+            <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
           </characteristics>
         </profile>
         <profile name="Flaming Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="64ae-5cff-df66-8a57">
           <characteristics>
-            <characteristic name="Atk" id="748c-6d49-32ec-6c3e" hidden="false" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" id="55d-7e5d-a388-5073" hidden="false" typeId="26dc-168-b2fd-cb93">2+</characteristic>
-            <characteristic name="Wnd" id="c0f1-6ce9-7e5b-8dab" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" id="4168-d28b-2d84-2222" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-            <characteristic name="Dmg" id="42b8-d9c1-8b81-cd8d" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" id="6aec-c94e-c3df-b09a" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8989,13 +8999,13 @@
         </profile>
         <profile name="Scream of Terror" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="263b-a289-2895-1180">
           <characteristics>
-            <characteristic name="Rng" id="ce40-c4d0-f060-bb5b" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-            <characteristic name="Atk" id="3851-81f5-3add-b9ad" hidden="false" typeId="aa17-4296-2887-e05d">6</characteristic>
-            <characteristic name="Hit" id="c6ad-558d-fa4b-a02d" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
-            <characteristic name="Wnd" id="5d96-3d1c-8ca0-4f21" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-            <characteristic name="Rnd" id="9613-fe12-ea1f-613b" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
-            <characteristic name="Dmg" id="9fd8-58ab-c2db-eea4" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-            <characteristic name="Ability" id="d792-39ea-e5bd-837" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)</characteristic>
+            <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+            <characteristic name="Atk" typeId="aa17-4296-2887-e05d">6</characteristic>
+            <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+            <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+            <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+            <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+            <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9031,11 +9041,11 @@
         </profile>
         <profile name="Necrotic Vortex" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c711-ce6-1fb6-7abc">
           <characteristics>
-            <characteristic name="Keywords" id="6dcb-e0f0-1dc-de42" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="fa89-665d-7613-4784" hidden="false" typeId="fd7f-888d-3257-a12b">Give this **^^Manifestation^^** 1 **maelstrom point**:
-• Each time this **^^Manifestation^^** is set up.
-• Each time a unit successfully casts a spell while it is within 12&quot; of this **^^Manifestation^^**.
-• Each time a model is slain within 12&quot; of this **^^Manifestation^^**.
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Give this **^^Manifestation^^** 1 **maelstrom point** each time:
+• This **^^Manifestation^^** is set up.
+• A unit successfully casts a spell while it is within 12&quot; of this **^^Manifestation^^**.
+• A model is slain within 12&quot; of this **^^Manifestation^^**.
 This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once.</characteristic>
           </characteristics>
           <attributes>
@@ -9045,12 +9055,12 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
           <characteristics>
-            <characteristic name="Atk" hidden="false" id="f212-632-e490-7e88" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" hidden="false" id="a222-2580-91fe-52e3" typeId="26dc-168-b2fd-cb93">2+</characteristic>
-            <characteristic name="Wnd" hidden="false" id="6e5a-2b17-5419-a645" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" hidden="false" id="b896-722d-bc7d-f83e" typeId="eccc-10fa-6958-fb73">-</characteristic>
-            <characteristic name="Dmg" hidden="false" id="352-afc2-584b-a53a" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" hidden="false" id="d240-195f-8fa2-e599" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9073,7 +9083,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <profile name="Phantasmal Translocation" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="425b-721a-d7a1-26d4">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a part of this **Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a part of this **Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part and not in combat.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -9092,8 +9102,8 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Ensnaring Soul-drain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9d0c-ae55-1df5-ec0e">
           <characteristics>
-            <characteristic name="Keywords" id="89d2-b95c-d2f9-285b" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="5041-5fbe-a87c-6e8e" hidden="false" typeId="fd7f-888d-3257-a12b">Each time an enemy unit uses a **^^Move^^** ability while it is within 6&quot; of any parts of this Manifestation, the effects of the ‘Fly’ ability do not apply to that unit. Enemy units cannot be set up within 6&quot; of either part of this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an enemy unit uses a **^^Move^^** ability while it is within 9&quot; of any parts of this Manifestation, the effects of the ‘Fly’ ability do not apply to that unit. Enemy units cannot be set up within 9&quot; of either part of this **^^Manifestation^^**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -9112,18 +9122,18 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
       <profiles>
         <profile name="Lauchon the Soulseeker" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="aba2-9339-7892-5db5">
           <characteristics>
-            <characteristic name="Move" hidden="false" id="8633-3e76-4f3e-8e4d" typeId="c28a-6000-2a0b-e7cf">12&quot;</characteristic>
-            <characteristic name="Health" hidden="false" id="18af-6aee-5a64-bb60" typeId="d1b9-3068-515-131e">10</characteristic>
-            <characteristic name="Save" hidden="false" id="1096-2d7a-1b3a-c33d" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
-            <characteristic name="Banishment" hidden="false" id="2a37-dff2-8e9d-148f" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">12&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">10</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
         <profile name="Traverse the Tides of Death" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2e3f-3b03-af72-7a50">
           <characteristics>
-            <characteristic name="Timing" id="91a9-c771-909f-2d97" hidden="false" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" id="2965-413a-1979-820c" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Infantry Wizard Hero^^** within 3&quot; of this **^^Manifestation^^** to be the target</characteristic>
-            <characteristic name="Effect" id="697-e4de-dc67-c893" hidden="false" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move. Then, remove the target from the battlefield and set them up again on the battlefield within 3&quot; of this **^^Manifestation^^** and not in combat. Then, inflict 1 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" id="10c3-9bec-a51e-9041" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move**^^</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Infantry Wizard Hero^^** within 3&quot; of this **^^Manifestation^^** to be the target</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic. It can pass through models during that move but cannot end that move in combat. Then, remove the target from the battlefield and set them up again on the battlefield within 3&quot; of this **^^Manifestation^^** and not in combat. Then, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move**^^</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -9153,10 +9163,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
       <profiles>
         <profile name="Quicksilver Swords" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="b9ce-ff7d-278e-63a4">
           <characteristics>
-            <characteristic name="Move" hidden="false" id="644f-1128-8ff1-4897" typeId="c28a-6000-2a0b-e7cf">8&quot;</characteristic>
-            <characteristic name="Health" hidden="false" id="25ef-e099-943c-d48b" typeId="d1b9-3068-515-131e">6</characteristic>
-            <characteristic name="Save" hidden="false" id="261-7186-8495-3881" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
-            <characteristic name="Banishment" hidden="false" id="444c-d252-ed25-21ef" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">8&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">6</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
         <profile name="Dancing Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7b11-c623-fc14-4639">
@@ -9171,12 +9181,12 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         </profile>
         <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
           <characteristics>
-            <characteristic name="Atk" hidden="false" id="50d2-e059-4608-205" typeId="60e-35aa-31ed-e488">12</characteristic>
-            <characteristic name="Hit" hidden="false" id="e557-5ee7-497d-26f" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-            <characteristic name="Wnd" hidden="false" id="abd6-b4e8-bb4-e965" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" hidden="false" id="e4d-1200-feac-fdae" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" hidden="false" id="9100-fed7-4aae-8971" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" hidden="false" id="bfff-3b78-15cd-8547" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">12</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9318,7 +9328,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">3D6&quot;</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">10</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
@@ -9379,7 +9389,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
           <characteristics>
             <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
             <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
             <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
             <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
@@ -9404,7 +9414,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
           </characteristics>
         </profile>
-        <profile name="Tendrils of Shadow and Light" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7752-7084-5da1-812b">
+        <profile name="Tendrils of Light and Shadow" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7752-7084-5da1-812b">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot use commands while they are within 3&quot; of either part of this **^^Manifestation^^**&apos;.</characteristic>
@@ -9417,7 +9427,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
           <characteristics>
             <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
             <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
             <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
             <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
@@ -9449,7 +9459,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">5+</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
           </characteristics>
         </profile>
@@ -9487,10 +9497,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <profiles>
         <profile name="Prismatic Palisade" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="05da-2fbd-a0cb-4d2a">
           <characteristics>
-            <characteristic name="Move" hidden="false" id="8938-9158-1bbc-23b4" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
-            <characteristic name="Health" hidden="false" id="dbba-e15e-f87d-3e21" typeId="d1b9-3068-515-131e">8</characteristic>
-            <characteristic name="Save" hidden="false" id="49ae-154e-f4aa-5b32" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
-            <characteristic name="Banishment" hidden="false" id="c1db-4920-c155-cfd8" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
         </profile>
         <profile name="Blinding Light" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fc0c-9252-758c-533c">
@@ -9681,6 +9691,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e8c9-ac55-8289-416f" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1bfb-7fa9-fe89-f491" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7acb-3141-6008-1c09" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -9782,7 +9794,7 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
         </rule>
       </rules>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b07-18fc-eb03-7460"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b07-18fc-eb03-7460" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hide Core Abilities" hidden="false" id="8f44-a403-e9a1-0aa3">
@@ -9797,6 +9809,144 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="ea0c-2329-c2e2-1a8f" targetId="676-2b78-7bbf-ba9c" primary="true"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battle Tactic Cards" hidden="true" id="1668-6989-2470-5e10" defaultAmount="1">
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="eff8-1962-b82c-4e44" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="12b0-6cb0-f5a9-185d-min" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="12b0-6cb0-f5a9-185d-max" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Battle Tactic Cards" id="e3d8-8106-a496-2ece" hidden="false" flatten="true" defaultSelectionEntryId="none">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Master the Paths" hidden="false" id="f5d1-f1d9-1dd5-5061" sortIndex="1" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68d6-02a5-2080-eb32"/>
+              </constraints>
+              <profiles>
+                <profile name="Master the Paths" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="c45f-dc73-39f3-24c9">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Cut Off The Head: 
+You complete this battle tactic at the end of your turn if an enemy **^^Hero^^** has been destroyed this battle.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Seize the Paths: 
+You complete this battle tactic at the end of your turn if there are more friendly units in neutral territory than enemy units. 
+If there is no neutral territory in the battleplan you are playing, you complete this tactic at the end of your turn if there are no enemy units within friendly territory.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Envelop and Strangle:
+You complete this battle tactic at the end of your turn if at least three different friendly units are each wholly within 9&quot; of a different corner of the battlefield and only 1 of those corners is wholly within friendly territory. No more than 1 of those units can have been set up this turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Restless Energy" hidden="false" id="5ab4-540d-4e00-5c62" sortIndex="2" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ca2-bae5-733f-9c3d"/>
+              </constraints>
+              <profiles>
+                <profile name="Restless Energy" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="7978-d16f-1a08-39e6">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Water With Blood:
+You complete this battle tactic at the end of your turn if you control an objective that was controlled by your opponent at the start of the turn.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Invasive Species:
+You complete this battle tactic at the end of your turn if you control every objective within enemy territory. If there are no objectives within enemy territory, you complete this battle tactic at the end of your turn if you control every objective that was controlled by your opponent at the start of your turn.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">All Roots Entwined:
+You complete this battle tactic at the end of your turn if you control every objective on the battlefield.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Intercept and Recover" hidden="false" id="545c-5467-b8b6-2b1b" sortIndex="3" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="267c-8452-a744-5760"/>
+              </constraints>
+              <profiles>
+                <profile name="Intercept and Recover" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="a365-06ad-19a1-528d">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">• At the start of the battle, your opponent must pick 3 of their units on the battlefield to be carrying a Ghyranite Treasure. They cannot pick faction terrain features or **^^Manifestations^^**. A unit can only carry 1 Ghyranite Treasure. If your opponent has fewer than 3 units on the battlefield, you automatically complete a number of these battle tactics, starting with the **Domination** battle tactic (followed by the **Strike** and then the **Affray**) until the number of remaining uncompleted battle tactics equals the number of enemy units on the battlefield.
+• If you went second in the previous battle round and choose to go first in the current battle round, your opponent can remove 1 Ghyranite Treasure from one of their units at the start of the battle round.</characteristic>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Stolen Seedpod:
+You complete this battle tactic at the end of your turn if at least 1 enemy unit carrying a Ghyranite Treasure has been destroyed this battle.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Contraband Aqua Ghyranis:
+You complete this battle tactic at the end of your turn if at least 2 enemy units carrying a Ghyranite Treasure have been destroyed this battle.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Ley Line Taproot:
+You complete this battle tactic at the end of your turn if at least 3 enemy units carrying a Ghyranite Treasure have been destroyed this battle.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Wrathful Cycles" hidden="false" id="f55e-5058-7696-bf7a" sortIndex="4" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbbf-4f2b-8fc5-321f"/>
+              </constraints>
+              <profiles>
+                <profile name="Wrathful Cycles" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="23e0-e35a-83c2-1c6e">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Defiant Surge:
+You complete this battle tactic at the end of your turn if you control more objectives than your opponent.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Daring Resurgence:
+You complete this battle tactic at the end of your turn if you are the underdog this battle round, there is at least 1 friendly unit on the battlefield, and at least half of the friendly units on the battlefield (rounding up) used a **^^Fight^^** ability this turn.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Master of Strategy:
+You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units contesting any objectives that you control.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scouting Force" hidden="false" id="2adf-8d5d-6fd6-9bb4" sortIndex="5" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75f3-1f73-31eb-e109"/>
+              </constraints>
+              <profiles>
+                <profile name="Scouting Force" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="5fc5-3a71-00e9-29f6">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, every friendly non-**^^Hero Infantry^^** and non-**^^Hero Cavalry^^** unit wholly within friendly territory becomes a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
+You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
+You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Attuned to Ghyran" hidden="false" id="71aa-cea6-7469-01dd" sortIndex="6" defaultAmount="0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6410-127c-5cb7-4d12"/>
+              </constraints>
+              <profiles>
+                <profile name="Attuned to Ghyran" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="85c3-aaa3-373c-c2ad">
+                  <characteristics>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
+                    <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Sacred Centrality:
+You complete this battle tactic at the end of your turn if there are at least 2 friendly units within 3&quot; of the centre of the battlefield that are not in combat.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Fey Strikes:
+You complete this battle tactic at the end of your turn if all of the following are true:
+• At least 2 friendly units used a **^^Retreat^^** ability this turn. Those units are the lure units.
+• At least 2 other friendly units used a **^^Charge^^** ability this turn and at least 1 of those units ended the charge move in combat with an enemy unit from which any of the lure units retreated.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Purification Rites:
+You complete this battle tactic at the end of your turn if there are no enemy units within friendly territory and no enemy units within neutral territory.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a5de-514a-b9c1-194f"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="86de-6157-7098-49ff"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
