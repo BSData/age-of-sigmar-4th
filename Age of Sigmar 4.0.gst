@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="31" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="32" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -7,6 +7,8 @@
         <modifier type="set" value="false" field="hidden"/>
       </modifiers>
     </costType>
+    <costType name="Force Category - PTG" id="e63c-79ff-93ba-c5eb" defaultCostLimit="-1" hidden="true"/>
+    <costType name="Force Category - GHB" id="de92-2099-fbf7-a156" defaultCostLimit="-1" hidden="true"/>
   </costTypes>
   <profileTypes>
     <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4">
@@ -3025,6 +3027,12 @@
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="1"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
       <categoryLinks>
@@ -5723,6 +5731,12 @@
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="1bba-5ca1-4d9a-962d"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
+      </costs>
     </forceEntry>
     <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
       <categoryLinks>
@@ -7017,12 +7031,19 @@
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="2980-eb35-12cf-8017"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
+      </costs>
     </forceEntry>
     <forceEntry name="Path to Glory: Ascension (WIP!)" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0ad8-1348-974d-3643" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="d2ae-5c7d-0dda-8343" targetId="3360-1158-e879-9606"/>
         <categoryLink name="Army Composition" hidden="false" id="dba1-ff7e-38cd-b296" targetId="ac97-b27c-7e35-7ab9"/>
+        <categoryLink name="Order of Battle" hidden="false" id="3398-e874-e3c3-e113" targetId="8e18-320c-b5bb-7cc6"/>
         <categoryLink name="FACTION TERRAIN" hidden="false" id="1a84-3b80-5b02-3a17" targetId="cdd6-ffa1-9b32-4cb8">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d10b-cafd-2c03-5589"/>
@@ -8229,6 +8250,12 @@
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d9f0-e1a8-61e0-008c"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="1"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
     </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
@@ -8236,6 +8263,7 @@
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="3dc2-1807-bdc5-eebf-min" includeChildSelections="true" includeChildForces="true"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3dc2-1807-bdc5-eebf-max" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="min" value="-1" field="selections" scope="root-entry" shared="true" id="d955-45d5-85d8-893e"/>
       </constraints>
       <modifiers>
         <modifier type="add" value="If you include any WARMASTER units in your roster, one of them must be your general." field="error">
@@ -8263,12 +8291,10 @@
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="abcb-73d0-2b6c-4f17" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="force" childId="4063-b3a6-e7e1-383f" shared="true"/>
                 <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="3e4e-3e0e-10c4-a6f6" shared="true"/>
               </conditions>
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditionGroups>
@@ -9515,6 +9541,15 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Renown" hidden="true" id="e7d5-5062-46d5-38dd">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Crit (2 Hits)" hidden="false" id="ccb6-2643-88c1-9357">
@@ -9896,8 +9931,17 @@ You complete this battle tactic at the end of your turn if at least 3 enemy unit
 You complete this battle tactic at the end of your turn if you control more objectives than your opponent.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Daring Resurgence:
 You complete this battle tactic at the end of your turn if you are the underdog this battle round, there is at least 1 friendly unit on the battlefield, and at least half of the friendly units on the battlefield (rounding up) used a **^^Fight^^** ability this turn.</characteristic>
-                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Master of Strategy:
-You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing any objectives that you control.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+Master of Strategy:
+You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units coning any objectives that you control.                    </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9912,10 +9956,28 @@ You complete this battle tactic at the end of your turn if there is a different 
                     <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, every friendly non-**^^Hero Infantry^^** and non-**^^Hero Cavalry^^** unit wholly within friendly territory becomes a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
 You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
-                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
-You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ed by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
-                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
-You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+Bold Explorers:
+You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being coned by any friendly scout units. Those objectives and terrain features must be within enemy territory.                    </characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+Courageous Adventurers:
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is coning a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.                    </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9950,7 +10012,3 @@ You complete this battle tactic at the end of your turn if there are no enemy un
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
-
-
-
-
