@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="32" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="33" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -9956,28 +9956,10 @@ You complete this battle tactic at the end of your turn if there is a different 
                     <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, every friendly non-**^^Hero Infantry^^** and non-**^^Hero Cavalry^^** unit wholly within friendly territory becomes a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
 You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
-                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-Bold Explorers:
-You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being coned by any friendly scout units. Those objectives and terrain features must be within enemy territory.                    </characteristic>
-                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-Courageous Adventurers:
-You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is coning a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.                    </characteristic>
+                    <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
+You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is coning a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
