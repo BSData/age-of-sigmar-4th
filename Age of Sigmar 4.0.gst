@@ -7038,7 +7038,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
       </costs>
     </forceEntry>
-    <forceEntry name="Path to Glory: Ascension (WIP!)" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
+    <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0ad8-1348-974d-3643" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="d2ae-5c7d-0dda-8343" targetId="3360-1158-e879-9606"/>
@@ -9985,7 +9985,3 @@ You complete this battle tactic at the end of your turn if there are no enemy un
     </selectionEntry>
   </selectionEntries>
 </gameSystem>
-
-
-
-
