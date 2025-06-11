@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="bb28-eb3d-b408-7bb8" name="Disciples of Tzeentch - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="bb28-eb3d-b408-7bb8" name="Disciples of Tzeentch - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Chaos Spawn of Tzeentch" hidden="false" id="d804-1f1-49e2-880" publicationId="72d2-ae0-e519-f2f7">
       <profiles>
@@ -84,7 +84,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="bb64-e4a2-79c-243c">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its ** Curved Beaks** is 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Staff of Tomorrow and Beaks** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -101,11 +101,11 @@
         </profile>
         <profile name="Oracle of Eternity" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="632c-3ca6-184a-3150">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Reaction: You declared the ‘Tactical Gambit’ ability</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Start of Your Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
-***Read the Past:*** You can pick 1 battle tactic that you have already attempted.
-***Read the Future:*** You can pick 2 battle tactics that you have not yet attempted, but you can only complete 1 of them (even if you meet the conditions to complete both). The other does not count as having been attempted. If you do not complete either battle tactic, you can pick which does not count as having been attempted.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 battle tactics card that is on your roster and discard it. Then, for the rest of the battle, replace it with a battle tactics card that is not on your roster.
+If that new battle tactics card requires either player to pick something, they must do so immediately when the new battle tactics card is picked.
+The combined total of victory points earned by both the discarded battle tactics card and the new battle tactics card is 15. Any additional victory points beyond 15 that are earned by completing the battle tactics on both of those battle tactics cards are lost.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -166,38 +166,39 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Kairos Fateweaver" hidden="false" id="abf-32ec-4a01-f5ea">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Curved Beaks" hidden="false" id="dda3-6821-6972-d970">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9847-2d03-1bc-15a5"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ac4-6682-7746-e3a4"/>
-              </constraints>
-              <profiles>
-                <profile name="Curved Beaks" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8549-f543-9879-b7f1">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Staff of Tomorrow" hidden="false" id="6547-5c5-d8dc-fe97">
+            <selectionEntry type="upgrade" import="true" name="Staff of Tomorrow and Beaks" hidden="false" id="6547-5c5-d8dc-fe97">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4cc9-cb8f-6ed9-982d"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="722e-9434-13bb-5f5b"/>
               </constraints>
               <profiles>
-                <profile name="Staff of Tomorrow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="80c-452f-393b-85e5">
+                <profile name="Staff of Tomorrow and Beaks" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="80c-452f-393b-85e5">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">9</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bolts of Change" hidden="false" id="b0fe-9eaf-84fe-509a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6198-bef9-a746-7587"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d07-7e11-dcbd-676e"/>
+              </constraints>
+              <profiles>
+                <profile name="Bolts of Change" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="5844-4b88-daf1-5047">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">9</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdflame</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4257,7 +4258,3 @@ In addition, until the start of your next turn, roll a dice each time this unit
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
-
-
-
-

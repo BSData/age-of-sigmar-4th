@@ -39,3 +39,7 @@ It's being worked on. Unlike Path to Glory: Ravaged Coast, Ascension uses a spli
 
 
 
+
+
+
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="EVERGREEN HUNT" id="637b-b903-6980-34cf" hidden="false"/>
     <categoryEntry name="Forest Sentinel" id="121e-0fc2-daa6-2e08" hidden="false">
@@ -37,7 +37,14 @@
       </entryLinks>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -54,7 +61,7 @@
     </entryLink>
     <entryLink import="true" name="Arch-Revenant" hidden="false" id="9f39-e566-d3f3-81e2" type="selectionEntry" targetId="c21d-479c-e8ef-b406">
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="208-401-eed8-e6ab" type="selectionEntryGroup" targetId="d065-9be7-8088-3e87"/>
@@ -70,7 +77,14 @@
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -152,6 +166,27 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -168,15 +203,24 @@
         <entryLink import="true" name="Renown" hidden="false" id="4f92-0cfe-bdd4-105c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9f39-e566-d3f3-81e2" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -184,11 +228,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <costs>
@@ -206,15 +245,30 @@
         <entryLink import="true" name="Renown" hidden="false" id="7eb0-1d8c-3901-e4cd" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9f39-e566-d3f3-81e2" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="9f39-e566-d3f3-81e2" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -222,11 +276,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <costs>
@@ -244,15 +293,30 @@
         <entryLink import="true" name="Renown" hidden="false" id="d3ec-104f-967e-fdf8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9f39-e566-d3f3-81e2" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="9f39-e566-d3f3-81e2" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -260,11 +324,6 @@
               </conditions>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
         </modifier>
       </modifiers>
       <costs>
@@ -287,10 +346,20 @@
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9f39-e566-d3f3-81e2" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="9f39-e566-d3f3-81e2" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -343,6 +412,27 @@
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -621,7 +711,3 @@
     </selectionEntry>
   </selectionEntries>
 </catalogue>
-
-
-
-

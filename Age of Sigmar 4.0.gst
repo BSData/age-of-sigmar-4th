@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="33" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="34" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -7038,7 +7038,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
       </costs>
     </forceEntry>
-    <forceEntry name="Path to Glory: Ascension (WIP!)" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
+    <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0ad8-1348-974d-3643" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="d2ae-5c7d-0dda-8343" targetId="3360-1158-e879-9606"/>
@@ -9931,17 +9931,8 @@ You complete this battle tactic at the end of your turn if at least 3 enemy unit
 You complete this battle tactic at the end of your turn if you control more objectives than your opponent.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Daring Resurgence:
 You complete this battle tactic at the end of your turn if you are the underdog this battle round, there is at least 1 friendly unit on the battlefield, and at least half of the friendly units on the battlefield (rounding up) used a **^^Fight^^** ability this turn.</characteristic>
-                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-Master of Strategy:
-You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units coning any objectives that you control.                    </characteristic>
+                    <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Master of Strategy:
+You complete this battle tactic at the end of your turn if there is a different friendly unit wholly within each large quarter of the battlefield, you control more objectives than your opponent, and there are no enemy units contesting any objectives that you control.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9959,7 +9950,7 @@ You complete this battle tactic at the end of your turn if there are 3 or more f
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
 You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
                     <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
-You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is coning a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
