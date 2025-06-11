@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="8c7-eee2-e358-ba1e" name="Ironjawz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="8c7-eee2-e358-ba1e" name="Ironjawz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Weirdnob Shaman" hidden="false" id="e824-4e07-12f6-309c" publicationId="8b1b-f2c7-890e-2bbe">
       <entryLinks>
@@ -974,7 +974,16 @@ Until the end of the next turn, add 1 to the Attacks characteristic of this uni
         <profile name="You Messin&apos;?" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="84e0-ee80-ff6f-2999">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy models with a Health characteristic of 1 or 2 cannot con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups> objectives while they are in combat with this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+Enemy models with a Health characteristic of 1 or 2 cannot conobjectives while they are in combat with this unit.            </characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
@@ -1968,32 +1977,32 @@ Cover, Impassible**</description>
                     </modifier>
                     <modifier type="append" value="Anti-**^^Infantry^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e58a-dbdb-c1da-7258" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e58a-dbdb-c1da-7258" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Anti-**^^Cavalry^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="76d4-e118-3631-22c2" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="76d4-e118-3631-22c2" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Anti-**^^Monster^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9861-ae04-5703-9d5f" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9861-ae04-5703-9d5f" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Anti-**^^War Machine^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b7b7-78c1-2d07-396f" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b7b7-78c1-2d07-396f" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Anti-**^^Wizard^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0aef-30d2-3640-b5b5" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0aef-30d2-3640-b5b5" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Anti-**^^Priest^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ee73-6bbe-e2f9-497e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ee73-6bbe-e2f9-497e" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="append" value="Charge (+1 Damage)" field="eda3-7332-5db1-4159" join=", ">
@@ -2003,7 +2012,7 @@ Cover, Impassible**</description>
                     </modifier>
                     <modifier type="append" value="Crit (Mortal)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="941f-934e-1b50-1faa" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="941f-934e-1b50-1faa" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="set" value="3" field="e948-9c71-12a6-6be4">
@@ -2387,7 +2396,16 @@ Cover, Impassible**</description>
                     <profile name="Roaring Bully" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="690f-3300-fdcf-15b3">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit cannot con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups> objectives that are being con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ed by enemy **^^Unique Heroes^^**.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+This unit cannot conobjectives that are being contested by enemy **^^Unique Heroes^^**.                        </characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -3433,7 +3451,3 @@ Cover, Impassible**</description>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>
-
-
-
-

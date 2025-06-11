@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Hedonites of Slaanesh - Library" id="253b-dcd3-c7aa-eab" targetId="34e0-2290-e185-efd2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fbec-3fce-0906-d052" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -92,6 +92,12 @@ At the end of the battle round, any temptation dice that have not been used ar
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5575-472b-472a-ffcf" includeChildSelections="true"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Threnody Voicebox" hidden="false" id="8b0b-791a-7873-1a61" publicationId="95fc-e96f-a916-bba1">
               <profiles>
@@ -567,6 +573,18 @@ At the end of the battle round, any temptation dice that have not been used ar
                             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="e3d9-a963-625b-cc36" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="1ad6-bbe6-59c2-0716" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
                       </localConditionGroups>
                     </conditionGroup>
                   </conditionGroups>
@@ -603,7 +621,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="c820-8de2-15df-21a7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -639,7 +657,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="ba5e-388d-5c99-498e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -667,7 +685,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Dexcessa, Talon of Slaanesh" hidden="false" id="fa3c-59e-ef8e-d133" type="selectionEntry" targetId="7c43-7c1e-d92c-f199">
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="777a-ab00-f18d-0e24" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -745,7 +763,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="2dc9-cd75-7079-f773" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -822,6 +840,18 @@ At the end of the battle round, any temptation dice that have not been used ar
                             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="1ad6-bbe6-59c2-0716" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="e3d9-a963-625b-cc36" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
                       </localConditionGroups>
                     </conditionGroup>
                   </conditionGroups>
@@ -893,7 +923,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="cc21-f649-8229-baf6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -988,7 +1018,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="c2dd-eabd-9f5b-8395" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1142,7 +1172,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Sigvald, Prince of Slaanesh" hidden="false" id="c193-2e94-c3ab-ca05" type="selectionEntry" targetId="a172-db1d-3ad4-c354">
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3289-4f66-d1e4-478a" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1263,7 +1293,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Synessa, the Voice of Slaanesh" hidden="false" id="c3d7-ea6c-249e-8e86" type="selectionEntry" targetId="eb63-b209-7932-2b43">
       <costs>
-        <cost name="pts" typeId="points" value="230"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8dfb-d5be-b5e4-e4ef" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1295,6 +1325,21 @@ At the end of the battle round, any temptation dice that have not been used ar
                   </conditions>
                 </localConditionGroup>
               </localConditionGroups>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <localConditionGroups>
+                    <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d7aa-c392-f0a6-dad9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1322,19 +1367,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1372,19 +1472,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1416,20 +1571,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1461,19 +1676,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1505,20 +1775,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1544,24 +1874,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="8fb0-25a8-5bd2-4d01" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="79d9-f325-d2c0-538b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e3d9-a963-625b-cc36" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1572,7 +1958,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="3f43-962c-f621-92a6" type="selectionEntryGroup" targetId="3036-9f76-bbb9-e18a"/>
@@ -1598,20 +1984,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1643,22 +2083,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="8fb0-25a8-5bd2-4d01" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e3d9-a963-625b-cc36" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="79d9-f325-d2c0-538b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1669,7 +2167,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Seekers" hidden="false" id="98b5-b299-4898-429e" type="selectionEntry" targetId="ebde-c823-a0d7-dce1">
@@ -1690,21 +2188,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1726,11 +2283,6 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="ed59-93fa-6bc1-123b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
@@ -1749,6 +2301,87 @@ At the end of the battle round, any temptation dice that have not been used ar
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
                   </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1780,19 +2413,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1824,19 +2512,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -1860,7 +2603,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="43f6-c688-3c3f-0d71" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1931,20 +2674,11 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="ebfc-ba8f-6a7f-5253" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Viceleader, Herald of Slaanesh" hidden="false" id="4460-bcb4-613c-63f5" type="selectionEntry" targetId="5886-d643-7104-b3be">
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
           <conditionGroups>
             <conditionGroup type="and">
@@ -1963,6 +2697,67 @@ At the end of the battle round, any temptation dice that have not been used ar
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="bf83-8936-c723-921a" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <localConditionGroups>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="8fb0-25a8-5bd2-4d01" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </localConditionGroup>
+                      </localConditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -1981,6 +2776,22 @@ At the end of the battle round, any temptation dice that have not been used ar
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="bf83-8936-c723-921a" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Exalted Chariot" hidden="false" id="9001-8978-4c6f-601e" type="selectionEntry" targetId="08e6-7dfb-f60e-6fc0">
       <entryLinks>
@@ -2000,22 +2811,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="8fb0-25a8-5bd2-4d01" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="79d9-f325-d2c0-538b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e3d9-a963-625b-cc36" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -2026,7 +2895,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="The Thricefold Discord" hidden="false" id="f75f-ed1e-2167-1d54" type="selectionEntry" targetId="a2e9-3905-f6de-5053">
@@ -2041,20 +2910,80 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fc94-72c-a558-c907" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c24-aded-3430-9992" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4460-bcb4-613c-63f5" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fc94-72c-a558-c907" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c24-aded-3430-9992" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4460-bcb4-613c-63f5" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -2083,19 +3012,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="b2ba-e9f5-44b1-5b29" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -2143,7 +3127,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
     </entryLink>
-    <entryLink import="true" name="Slaangor Fiendbloods" hidden="false" id="0b5c-79f3-7a55-970a" type="selectionEntry" targetId="de32-60a4-2468-ea8a">
+    <entryLink import="true" name="Slaangor Fiendbloods (Scourge of Ghyran)" hidden="false" id="0b5c-79f3-7a55-970a" type="selectionEntry" targetId="3e9a-0e86-a7fa-ec3d">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="b71e-c7e7-0b35-3b28" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="792e-e417-f5e4-1c8f" type="selectionEntryGroup" targetId="3036-9f76-bbb9-e18a"/>
@@ -2161,19 +3145,74 @@ At the end of the battle round, any temptation dice that have not been used ar
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="fa3c-59e-ef8e-d133" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e6cc-9cda-6e08-4921" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="e120-58a7-b8ef-ab66" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="5c9a-9bc-17a5-10c4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="3dc-2b50-5aef-e9d4" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d62-3e9e-6c66-6e2c" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c193-2e94-c3ab-ca05" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d9c2-48f7-cb40-ca34" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="c3d7-ea6c-249e-8e86" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="de65-6b19-da44-4b2b" shared="true"/>
-                  </conditions>
+                  <localConditionGroups>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="fa3c-59e-ef8e-d133" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e6cc-9cda-6e08-4921" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4dd8-2eb6-1e7d-ba23" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="e120-58a7-b8ef-ab66" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="5c9a-9bc-17a5-10c4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d62-3e9e-6c66-6e2c" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c193-2e94-c3ab-ca05" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="de65-6b19-da44-4b2b" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="c3d7-ea6c-249e-8e86" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d9c2-48f7-cb40-ca34" shared="true"/>
+                      </conditions>
+                    </localConditionGroup>
+                  </localConditionGroups>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
@@ -2281,6 +3320,18 @@ At the end of the battle round, any temptation dice that have not been used ar
                 <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="self" childId="3dc-2b50-5aef-e9d4" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="e3d9-a963-625b-cc36" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1ad6-bbe6-59c2-0716" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </localConditionGroup>
@@ -2413,3 +3464,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </categoryEntry>
   </categoryEntries>
 </catalogue>
+
+
+
+

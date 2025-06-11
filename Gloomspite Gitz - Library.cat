@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="9fb4-c9d6-3da7-5b5d" name="Gloomspite Gitz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="9fb4-c9d6-3da7-5b5d" name="Gloomspite Gitz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Dankhold Troggoth" hidden="false" id="9be3-6dc9-3f14-4553" publicationId="a395-7bc4-71eb-46df">
       <profiles>
@@ -3954,7 +3954,7 @@ Cover, Impassible**</description>
         <profile name="Quest&apos;s End" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a62f-0bf0-ac07-b8de">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Start of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if you control the object of this unit’s quest and this unit is con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing it.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if you control the object of this unit’s quest and this unit is contesting it.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle, this unit has **^^Strike-first^^** and **^^Ward (4+)^^**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -4706,7 +4706,16 @@ are in combat with this unit.
         <profile name="Marking Your Territory" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c0d9-6a6a-4d36-b76e">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit’s **Wolfgit Weapons** while it con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>s an objective you control that is not con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ed by any other friendly units.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+Add 1 to the Rend characteristic of this unit’s **Wolfgit Weapons** while it cons an objective you control that is not contested by any other friendly units.            </characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -5807,7 +5816,7 @@ are in combat with this unit.
                     </modifier>
                     <modifier type="append" value="Charge (+1 Damage)" field="eda3-7332-5db1-4159" join=", ">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ecbd-f7fd-aa5c-e1e1" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ecbd-f7fd-aa5c-e1e1" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="increment" value="2" field="60e-35aa-31ed-e488">
@@ -6606,7 +6615,7 @@ are in combat with this unit.
                     <profile name="Incredibly Annoying" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3fae-c22a-656d-7274">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While your hero is con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing an objective, subtract 1 from the control scores of enemy units while they are in combat with your hero.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While your hero is contesting an objective, subtract 1 from the control scores of enemy units while they are in combat with your hero.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
@@ -7150,7 +7159,7 @@ are in combat with this unit.
                     <profile name="Incredibly Annoying" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="afaf-21cb-0008-c3da">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While your hero is con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing an objective, subtract 1 from the control scores of enemy units while they are in combat with your hero.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While your hero is contesting an objective, subtract 1 from the control scores of enemy units while they are in combat with your hero.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
@@ -7934,7 +7943,7 @@ are in combat with this unit.
                     <profile name="The Angriest Git Around" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2c5f-9cdb-648a-dc5e">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of all friendly units while this unit is con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing an objective.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of all friendly units while this unit is contesting an objective.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
@@ -8006,7 +8015,7 @@ are in combat with this unit.
                     <profile name="Notorious and Vicious" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f9d1-c65b-5232-4e6c">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 2 from the control scores of enemy units while they are con<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>ing the same objective as this unit.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 2 from the control scores of enemy units while they are contesting the same objective as this unit.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
@@ -8212,7 +8221,3 @@ are in combat with this unit.
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>
-
-
-
-
