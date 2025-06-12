@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7dd9-f3c9-349a-1f6a" name="Skaven - Thanquol&apos;s Mutated Menagerie" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7dd9-f3c9-349a-1f6a" name="Skaven - Thanquol&apos;s Mutated Menagerie" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Thanquol&apos;s Mutated Menagerie" hidden="false" id="c4ae-1c0b-4448-f38c" publicationId="ff83-b049-91b9-ed05">
       <profiles>
@@ -270,6 +270,17 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.cce6-9e5a-dd33-a755"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.45a0-8569-62b0-1882"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Master Moulder" hidden="false" id="4e5b-35f2-a619-9427" type="selectionEntry" targetId="4b86-5244-fe24-99c6">
       <categoryLinks>
@@ -304,26 +315,8 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="45a0-8569-62b0-1882" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <localConditionGroups>
-                        <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="448f-205a-0890-fa6d" shared="true" includeChildSelections="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </localConditionGroup>
-                      </localConditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -343,6 +336,14 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
             </conditionGroup>
           </conditionGroups>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.3244-98f3-bb61-b9d3"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
       </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Rat Ogors" hidden="false" id="0a5b-1cd8-3ccf-4289" type="selectionEntry" targetId="1301-b79e-7b2a-1a48">
@@ -361,26 +362,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4e5b-35f2-a619-9427" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="448f-205a-0890-fa6d" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -403,26 +387,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4e5b-35f2-a619-9427" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="448f-205a-0890-fa6d" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -450,26 +417,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4e5b-35f2-a619-9427" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="448f-205a-0890-fa6d" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -495,37 +445,20 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <entryLink import="true" name="Renown" hidden="false" id="d1f9-17aa-e38a-a591" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4e5b-35f2-a619-9427" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="448f-205a-0890-fa6d" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="multiply" value="2" field="points">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
           </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <costs>
@@ -550,26 +483,9 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <localConditionGroups>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="4e5b-35f2-a619-9427" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                    <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="self" childId="448f-205a-0890-fa6d" shared="true"/>
-                      </conditions>
-                    </localConditionGroup>
-                  </localConditionGroups>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -664,7 +580,3 @@ After this ability has been resolved, this unit cannot use any other **^^Rampage
     </categoryEntry>
   </categoryEntries>
 </catalogue>
-
-
-
-
