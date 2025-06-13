@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Cities of Sigmar - Library" id="7fae-e658-b76a-fe24" targetId="c83a-4a23-6dc5-fb68"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="91b3-9cb9-fded-8fef" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -1799,6 +1799,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2f34-4997-c176-2d70" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="5d5b-849c-eb2b-096d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Infantry" hidden="false" id="18e9-3b55-aac0-1b5a" targetId="4acc-87fa-ee52-4e51" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Gyrocopter" hidden="false" id="3f68-b234-e29d-bcb6" type="selectionEntry" targetId="a641-c2fa-e6d1-40ff">
       <modifiers>
@@ -1959,6 +1962,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2c3a-721c-5847-670a" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="796d-1ffb-fc88-170b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Infantry" hidden="false" id="17c1-1683-5134-51ec" targetId="4acc-87fa-ee52-4e51" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Dreadspears" hidden="false" id="4b7-7f01-f22c-bd1a" type="selectionEntry" targetId="a787-69e-f77f-18d9">
       <modifiers>
@@ -2093,6 +2099,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="225a-692f-f15f-2370" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="4579-29b9-87e1-fa1c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Cavalry" hidden="false" id="e7eb-7ab6-f204-4405" targetId="23cf-37c8-a8bb-b74d" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Fusiliers" hidden="false" id="7d66-e49c-3e22-d942" type="selectionEntry" targetId="5fac-f8bc-2c88-9252">
       <modifiers>
@@ -2121,6 +2130,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4926-168d-8016-3ba5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="7655-7c6b-606e-9bd2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Infantry" hidden="false" id="b26f-7d42-6aff-af6a" targetId="4acc-87fa-ee52-4e51" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Hammerers" hidden="false" id="b14e-1b5c-500e-ff16" type="selectionEntry" targetId="e8a7-8dbf-12ec-5753">
       <modifiers>
@@ -2357,6 +2369,14 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
               </conditions>
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="f534-437-b727-fa21" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
             </conditionGroup>
           </conditionGroups>
         </modifier>
@@ -2394,6 +2414,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="33be-3854-5b6b-d377" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="23ff-123c-22cb-d20a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Infantry" hidden="false" id="eb5e-2833-ef8c-6132" targetId="4acc-87fa-ee52-4e51" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="War Hydra" hidden="false" id="7890-bf9c-b4ea-a2e7" type="selectionEntry" targetId="7031-9a79-bad7-203a">
       <costs>
@@ -2446,6 +2469,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fc57-728f-5b8a-627e" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Infantry" hidden="false" id="8d57-ddd3-debd-a7e2" targetId="4acc-87fa-ee52-4e51" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Hexbane&apos;s Hunters" hidden="false" id="37b5-0dca-5729-3e0a" type="selectionEntry" targetId="f5eb-ec64-66d7-0df9">
       <modifiers>
@@ -2471,6 +2497,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7242-24db-784f-c8b5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Infantry" hidden="false" id="7f84-714d-a011-4f3f" targetId="4acc-87fa-ee52-4e51" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Cavaliers (Scourge of Ghyran)" hidden="false" id="c6c4-cfe5-de9b-82b0" type="selectionEntry" targetId="1d9d-c777-641c-68ba">
       <modifiers>
@@ -2499,6 +2528,9 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5ef2-a387-79ba-41e5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="f74b-5cea-32ac-3048" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Human Cavalry" hidden="false" id="1a7b-f6ef-6b17-11c9" targetId="23cf-37c8-a8bb-b74d" primary="false"/>
+      </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Pontifex Zenestra, Matriarch of the Great Wheel (Scourge of Ghyran)" hidden="false" id="e25d-2f78-f664-8e4b" type="selectionEntry" targetId="2e94-0acc-b29b-fb64">
       <costs>
