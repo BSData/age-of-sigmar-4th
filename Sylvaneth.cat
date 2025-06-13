@@ -515,7 +515,7 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
   <entryLinks>
     <entryLink import="true" name="Arch-Revenant" hidden="false" id="1baa-e7d7-61a1-95f3" type="selectionEntry" targetId="c21d-479c-e8ef-b406">
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="7b32-a5c2-5631-b1bf" type="selectionEntryGroup" targetId="4994-cf8a-db5d-b87d"/>
@@ -724,6 +724,17 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
               <conditions>
                 <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
