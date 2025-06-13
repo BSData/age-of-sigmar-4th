@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="34" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="35" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -328,6 +328,8 @@
     <categoryEntry name="Enhancement Configuration" id="8fa2-f5fc-18d9-e5d0" hidden="true"/>
     <categoryEntry name="Order of Battle" id="8e18-320c-b5bb-7cc6" hidden="false"/>
     <categoryEntry name="Arcane Tome" id="707c-1c04-9af6-2307" hidden="true"/>
+    <categoryEntry name="Regimental Option" id="db3a-7199-c92e-f3cf" hidden="true"/>
+    <categoryEntry name="Regimental Hero" id="8f4b-1fa6-3128-8405" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
@@ -9686,6 +9688,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome: Soulblight Gravelords" id="e3a0-cfae-cbb3-0215" hidden="false"/>
     <publication name="Battletome Supplement: Soulblight Gravelords" id="05a6-726c-4748-8360" hidden="false"/>
     <publication name="Scourge of Ghyran" id="f894-7929-f79a-a269" hidden="false"/>
+    <publication name="White Dwarf Issue 513" id="c75a-c95c-5410-4446" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
