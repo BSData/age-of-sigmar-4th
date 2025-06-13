@@ -329,6 +329,7 @@
     <categoryEntry name="Order of Battle" id="8e18-320c-b5bb-7cc6" hidden="false"/>
     <categoryEntry name="Arcane Tome" id="707c-1c04-9af6-2307" hidden="true"/>
     <categoryEntry name="Regimental Option" id="db3a-7199-c92e-f3cf" hidden="true"/>
+    <categoryEntry name="Regimental Hero" id="8f4b-1fa6-3128-8405" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
