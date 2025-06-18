@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5232-3bab-5562-3172" name="Daughters of Khaine" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5232-3bab-5562-3172" name="Daughters of Khaine" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="784d-e1b4-30d5-3167" hidden="false">
       <selectionEntryGroups>
@@ -443,11 +443,6 @@
   <entryLinks>
     <entryLink import="true" name="The Shadow Queen" hidden="false" id="56fe-6dd5-2064-4ac4" type="selectionEntry" targetId="c732-c4e6-a2ad-371">
       <modifiers>
-        <modifier type="set" value="1" field="893b-1691-1be9-c13f">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="b371-6047-e6ef-f9f9" shared="true"/>
-          </conditions>
-        </modifier>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
           <conditionGroups>
             <conditionGroup type="and">
@@ -467,10 +462,29 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="f611-efd9-758e-4df4">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="b371-6047-e6ef-f9f9" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="set" value="test" field="name">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="b371-6047-e6ef-f9f9" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="b416-ef0c-8b3d-cce6"/>
-        <constraint type="min" value="-1" field="selections" scope="force" shared="true" id="893b-1691-1be9-c13f"/>
+        <constraint type="min" value="-1" field="selections" scope="force" shared="true" id="f611-efd9-758e-4df4"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1285-7abc-4512-19b5" type="selectionEntryGroup" targetId="d34a-59ba-2762-3d65"/>
