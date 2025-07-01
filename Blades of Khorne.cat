@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1ede-f90-a661-b6c2" hidden="false">
       <selectionEntryGroups>
@@ -239,7 +239,16 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4728-7cbe-831d-cd17" includeChildSelections="true"/>
               </constraints>
               <modifiers>
-                <modifier type="add" value="3fe-84f4-cec6-a1c1" field="category" scope="unit"/>
+                <modifier type="add" value="3fe-84f4-cec6-a1c1" field="category" scope="root-entry">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="3fe-84f4-cec6-a1c1" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="e692-853d-6db8-fdbe" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Favoured of Khorne" hidden="false" id="e92f-179d-6fac-e594" publicationId="81a9-3dbf-dbc5-672e">
