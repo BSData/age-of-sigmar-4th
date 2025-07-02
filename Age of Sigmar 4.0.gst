@@ -8259,7 +8259,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
-    <forceEntry name="Path to Glory: Freeform [UNOFFICIAL, WIP]" id="78a1-f6c2-71b8-270a" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
+    <forceEntry name="Path to Glory: Freeform [UNOFFICIAL, WIP]" id="78a1-f6c2-71b8-270a" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="487a-7a7b-9657-d26f" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="4ba2-1c29-5d96-41f0" targetId="3360-1158-e879-9606"/>
@@ -8649,7 +8649,7 @@
             <categoryLink name="BEAST" hidden="false" id="89d1-d4f0-319e-4e4a" targetId="b224-8c8e-ca93-9860"/>
           </categoryLinks>
         </forceEntry>
-        <forceEntry name="Regiment" id="e8ee-56b4-5143-4f93" hidden="false">
+        <forceEntry name="Regiment" id="376a-6b97-8699-dd59" hidden="false">
           <categoryLinks>
             <categoryLink name="Regimental Leader" hidden="false" id="9511-2079-c4e4-e81f" targetId="d1f3-921c-b403-1106">
               <constraints>
@@ -8688,6 +8688,1864 @@
             <constraint type="max" value="5" field="forces" scope="roster" shared="true" id="a4f9-cfd6-f551-1b20"/>
             <constraint type="max" value="4" field="selections" scope="self" shared="true" id="da43-3df6-4e57-c274"/>
           </constraints>
+        </forceEntry>
+        <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="2309-d5c4-9742-508c" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="7261-5e8d-d737-0271" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="f9e3-f745-09bf-6f7d" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="dbb5-475c-fad7-ca78" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c74d-06f7-10f7-89af" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="3a76-af0b-e48b-1ee4" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="34bc-234c-9953-831a" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="17a1-1d17-02a2-847f"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="450"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Bundo Whalebiter" id="fb09-ac57-e70e-716d" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="3d38-7d8f-768e-847c" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="0c5e-ac55-209d-0195" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="8bdd-6f5b-ab45-3197" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="eb5c-cf2a-3e8b-1098" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="6eaf-091e-ce16-b03c" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="b83b-94eb-1f92-ac4d" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="f7e9-43b1-243b-5895" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1195-2191-5671-3f0f"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="400"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="One-eyed Grunnock" id="733b-7b81-c2b-b772" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="dc0d-5933-a156-ae73" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="8e85-ac07-7e21-0662" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="d06a-24aa-82ac-f70f" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="f4f8-7c50-1ea2-00cf" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="17f4-a2c9-96b2-273d" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="a0e9-e261-9da1-3e78" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="e948-44d4-8742-d503" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="71ed-aac3-febd-f69b"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="410"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Elthwin&apos;s Thorns" id="e484-c06-d856-2921" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="20cc-9aac-d63e-2b24" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="1a33-4375-a36f-8c7e" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="c5c7-3206-f5ff-4139" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="37e3-d44e-8903-4385" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="3f9b-3fd1-7404-ea66" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="57d5-92cd-8b3b-1747" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="ab67-9631-ab6d-6246" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="115b-4e86-d926-ba4c"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="240"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Fjori&apos;s Flamebearers" id="a723-1314-55da-86d8" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="19fe-5f9b-573c-64ae" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="a58e-269f-e3cc-1903" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="b4f2-bbee-384b-6621" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="55ad-35a3-898e-86f8" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="5a36-3070-36ab-5f4a" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="3f76-1aeb-5e4c-dde7" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="e711-63f9-8fca-5494" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="24de-c757-2b68-0d0c"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="470"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Gotrek Gurnisson" id="d72a-3662-14bd-40d9" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="8027-35d0-5e73-0576" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="198d-e050-8912-8cef" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="cbbd-23f7-7c4b-e4f8" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="f8cf-d0ae-2cf2-762d" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="eb68-1547-4566-ed2b" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="2942-1a4d-6aaf-f4e8" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="7b3a-1c71-c044-e873" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9f6a-bdc0-39c8-49da"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="340"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Norgrimm&apos;s Rune Throng" id="c7eb-8e6c-a032-4e04" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="3738-a5e5-db26-813a" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="ba49-6ce0-cc94-ab4a" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="e19c-f799-06da-3c61" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="103f-6674-d443-70f8" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="88cc-af1f-a1ba-801d" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="8f66-3b5d-d4f8-80ce" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="cd45-5cca-cbc4-422a" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="096f-7644-c0a6-eda8"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="330"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Saviors of Cinderfall" id="4585-a85c-ebec-6527" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="4861-cd92-5d04-5804" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="33ed-069d-c4a6-2819" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="abcf-43a5-0012-493b" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="9d64-37b6-f8cb-0fac" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="ef3f-ffb4-d241-7f5a" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="9cdb-0366-ee0e-39ff" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="504c-d1c2-ff41-015b" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5335-cd7b-a3ce-f44e"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="270"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Blacktalons" id="bced-df96-fcc3-5cf6" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="bbcb-a2d7-e557-94c3" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="9f9a-11f3-57a4-82b8" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="a9eb-3622-9223-33e7" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="221b-4a14-4cb2-d3af" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="78d3-a333-d968-3fc3" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="690d-f7a8-8304-6884" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="e3ff-d9fe-5106-4e02" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1840-8f84-ff65-46b1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="320"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Brand&apos;s Oathbound" id="bced-df96-fcc3-5cf6" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="dd3b-6a47-c3f7-5b89" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="e4a4-b203-42d3-dee1" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="59f6-7f84-aa19-db89" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="1779-d369-2f34-3b74" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="27ac-dd36-8c71-e6d8" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="baa1-42dc-617d-1a3a" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="86d5-5189-71b8-14e0" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f7c-277e-b359-b2c3"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="250"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Hargax&apos;s Pit-beasts" id="1339-980d-ee74-fe0b" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="3823-9ea8-7635-4f1e" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="7c21-fa2f-0f29-9ddf" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="d30f-1dfb-53db-7cb4" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="c6e4-c057-aec0-45ea" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="dbb9-b55e-eecd-3db7" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="2051-ab1c-8f67-d938" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="9ddf-cf29-3a58-5237" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3d94-c221-bea1-6f43"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="460"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Phulgoth&apos;s Shudderhood" id="69d0-b9be-62a8-5ae4" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="339c-571a-bc60-580f" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="2ff9-5875-c197-1172" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="9aa9-af00-df5c-b2e0" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="71c4-f29c-d095-e600" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="f547-f7c5-4c1b-6c9a" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="bd2b-0c87-d43d-2453" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="dfa3-d770-e184-a05e" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0892-a438-3f83-d4c0"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="530"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Coven of Thryx" id="6f98-8771-7752-c86e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="26be-9780-9c00-f422" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="d00b-87c4-fe28-ec4d" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="942f-53b8-214a-e47b" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="8d1d-2365-ba65-45ad" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="a034-06d8-053f-ec66" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="d6af-51df-e8a9-6fb3" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="46ef-1ea2-93fa-cd3f" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3072-e2d9-143a-0095"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Jerrion&apos;s Delegation" id="b0c-f2cd-9cc3-8b9f" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="ac37-8f31-b350-6976" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="491a-9870-2cbc-b55c" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="86a6-2838-2a49-9268" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="d68c-d3e1-a5f6-1a27" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="b127-2c3b-dcbd-db31" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="143e-2077-e6e4-9fe4" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="9c98-c95e-66d5-e23d" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2fd9-3889-ff47-771d"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="480"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Neferata&apos;s Royal Echelon" id="e071-126a-fb3e-1462" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="3d84-5e81-8d32-7054" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="85e2-ccaa-5f0b-382e" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="be56-b89f-264e-ca6a" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="313c-e997-c45c-5b91" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="117e-6c9f-4243-da33" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="d4a8-9d49-606c-5980" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="0a89-7736-f90d-b586" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a39f-bc8d-12aa-5b08"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="760"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Scions of the Necropolis" id="4790-92d-f8a7-bd55" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="a5f9-da02-952e-04c0" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="b222-6412-dfc5-81cd" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="a8c1-b802-bc2e-a1bf" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="9225-3649-4c60-c85b" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="2ec5-7888-e557-e93c" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="5e18-b5f0-634e-184c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="4e24-ea4a-9b32-f826" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ced3-6299-d275-c61c"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="810"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Liche&apos;s Hand" id="9136-a422-571c-c77c" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="a445-8d61-50ca-eb9f" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="ae6b-c23b-913c-a7a9" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="0c06-0c76-2dec-75d1" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="ca66-0469-5049-3fb6" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="4c19-9f34-571d-17fb" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="df6b-1e6d-53c8-6227" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="fbcd-4a67-0aa7-83b4" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bccc-b88e-3872-ff85"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="830"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Sorrowmourn Choir" id="60b7-2797-5b4-8101" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="511a-4b32-9574-a8a6" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="6f91-377b-3910-c501" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="b3f1-a5ba-5fa8-f570" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="9758-4191-a4c8-181b" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c1cf-6876-9192-df0f" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="7b4a-850e-a3d1-cdd2" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="dd2c-1223-3678-fa38" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="71ad-4ed8-015a-d9d1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="590"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Sterneiste Garrison" id="9030-4036-8c77-84e5" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="a19c-967f-63ab-e45e" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="f5ea-238f-4816-5906" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="7f52-3dba-5f3f-c2b2" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="6d05-ce9f-c481-88a1" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="3b09-5126-ddf6-22f8" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="705e-dbee-f088-8cc8" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="86b4-9a68-511c-b613" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1004-33f0-c6a8-0107"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="700"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Summerking&apos;s Entourage" id="de70-1b54-66b4-c010" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="1951-fd90-1806-ce3e" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="dd71-d77a-57f2-9ec8" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="48db-a741-17ac-ced7" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="b9bf-5589-9b6b-8c03" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="4067-3d50-a8a7-8dd3" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="94bf-2e74-2b60-d841" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="b7b5-de31-2d8d-c43e" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="47ea-fef6-4690-9e85"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="640"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Veremord&apos;s Shamblers" id="c43c-4ed-d97a-b72" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="8688-80e1-f4b4-640a" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="a906-a3cd-93fe-3fed" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="268b-381b-e501-4061" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="8632-16fc-dec2-6a9b" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="e76f-39a3-1e7b-f506" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="2a04-c21a-7c32-54a5" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="cab8-cfe1-b673-e342" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="42d5-8512-3566-de7f"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="220"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Odo Godswallow" id="8a04-83ad-bc2-5354" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="5184-6cd3-57c9-bcc5" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="b685-f56e-a540-e6ba" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="423f-3744-79e4-db2f" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="441c-8cef-5358-cc96" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="beb5-53e7-ce84-9326" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="78d8-40d0-c43a-e146" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="4b13-918c-d05f-143b" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3ae5-d0b9-e6a1-8335"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="420"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Big Grikk&apos;s Kruleshots" id="a11c-1f80-1875-4639" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="e76d-a716-d1ca-0e7b" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="0f8f-04c5-ca4a-6f56" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="eb29-258c-b0a8-f6e5" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="f31b-ddfd-6f50-a010" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="ffa2-4526-7ddf-5395" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="865d-bf15-79ca-40e9" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="934f-5cf0-a6b2-f714" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d767-fd91-0a48-fc3e"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="340"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Braggit&apos;s Bottle-snatchaz" id="d704-19f-a3d0-5edd" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="2a12-8574-0cef-ed65" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="70d8-931b-27cf-58fa" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="9be9-4e73-1e90-caa8" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="1070-3976-f931-afcc" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c2c0-b6d7-5bb3-9d24" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="d18c-e61b-a2ec-1f48" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="1b65-3c72-9cdc-85df" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1d4b-a9ee-ee57-21a7"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="490"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Volt-Klaw&apos;s Enginecoven" id="ffc1-e2cb-f2f0-f72e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="1600-d2b6-d844-04fa" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="a9fc-954c-44cc-e9be" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="5564-2561-e603-663d" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="b74b-f346-20c3-07ae" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="0532-157c-389c-4fe6" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="8638-ca39-89f4-2447" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="0c75-c2ea-d0d3-0221" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="81b8-419d-17a5-b876"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="460"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Krittok&apos;s Clawpack" id="d0d8-3ec6-4b57-16fd" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="b1cb-93d6-d486-3407" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="5c11-3087-18f2-d7c6" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="ba83-d794-c2f2-c5d1" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="7b89-d458-47fe-c177" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="5771-d0b5-c06f-85e1" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="09f9-6bdc-10b8-7e5c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="2eff-9386-77ac-9621" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d427-6816-e6a7-e560"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="390"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Horizon Seekers" id="435e-269e-899d-3f7e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="fbf7-dfa6-c5c2-9e5f" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="35cd-a8de-00e7-85b5" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="a868-ed3e-9357-7053" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="5e87-0d7b-33a2-bfae" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="2d21-4479-2968-08e1" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="f115-6198-feba-6970" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="c394-9222-904f-8087" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5e0e-e189-e086-c4f7"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="500"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Valnir&apos;s Stormwing" id="2eec-326e-528c-8473" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="70a6-548a-c833-7d3d" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="766f-8ae6-13d1-f3b8" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="5af2-2f22-d723-c59e" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="d1ee-e7c2-c787-9e34" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="0986-7990-4d79-dd8f" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="305e-0b1e-5f9e-6706" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="d342-9e06-3762-727f" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0c6d-2b92-6e3d-dcb2"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="370"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Lord Skaldior&apos;s Chosen" id="ba3f-fa41-97d3-2c0f" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="38ab-5e21-2ae3-da99" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="fc91-0476-92ca-522c" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="5241-9aa5-821d-4b4c" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="dc35-2dd4-c559-6ecd" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="7c07-b0a6-5ecc-9da8" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="f70d-f167-ca04-d09c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="c508-f186-95c2-6dbd" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d09a-850c-295c-731a"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="570"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Godmarked Ascendant" id="ab5a-af59-e05f-2daa" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="ce6e-9181-24fd-3fb1" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="49c7-410f-6304-89eb" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="3444-de02-dcc1-1aa1" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="61ee-9cf4-4849-fdbc" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="0e2c-bb3d-f4b5-b0e1" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="975f-61f9-759d-9948" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="6d21-4421-8c87-0660" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b9a9-0f40-f733-785f"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="260"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Enforcers of the Tithe" id="162a-f77e-f5f8-041b" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="b564-1293-901f-3f2d" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="aa36-c486-6cba-c7a7" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="189f-1cd9-3f65-1a4e" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="883c-d293-699e-3c86" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="393e-ddd9-226a-b1cb" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="ddf7-2074-2aec-f4c9" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="0502-4c76-baa8-da55" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fd60-a925-2a3f-852d"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="490"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Exile Scavengers" id="c09c-6726-db25-549b" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="4aea-356b-2341-cc22" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="60c0-93d1-fbb5-b363" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="c5f8-7d72-3a78-70c6" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="72d0-b083-7252-1376" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="8ef6-3af2-fb31-0422" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="f370-5c13-7eaa-6d5c" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="449e-3ebc-a7d6-a6ed" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac9f-8256-461a-09c4"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="430"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Squires of the Everchosen" id="2b2d-a5c6-4595-5468" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="fbcc-4def-85f0-842f" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="229a-8c8a-081a-f7f5" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="2494-ee51-03b7-0522" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="023f-7437-577d-a69e" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c446-231e-0934-eb59" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="657b-66d8-b08c-49d6" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="7424-71ac-2c2e-554b" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="01d8-7401-cebf-f9e8"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Lost-Song Spirits" id="147d-a572-a516-94c5" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="e018-8a9a-3ae8-dfa0" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="c22a-06cf-2a28-a709" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="734f-12a7-813d-4004" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="8006-a94d-9718-ecc1" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="1298-58dd-64bd-f8b3" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="5abe-ba4b-6905-d8d9" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="99df-19a8-c957-c20c" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9fec-4e1d-4fb2-46c1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="430"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Nurgle&apos;s Gift" id="0fec-ccda-3904-c0ce" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="f904-7108-5f8c-4dab" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="ad45-41b2-9df4-ab0f" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="a9d3-1ae7-5c87-e2cb" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="4540-7e83-57c4-49fe" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="e610-7d8e-16aa-21f6" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="cd13-bb5b-b71a-337f" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="16cb-0f93-d13b-dba7" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="df5e-550b-961c-228b"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="180"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Stumblefoot Gargant" id="e974-53fd-481c-5345" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="ef30-0198-8bd8-cc06" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="10ed-d02f-7167-58ed" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="b792-4d01-344c-9055" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="baf1-33bc-2e04-5c25" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="db8e-ab83-f331-6e8c" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="6e44-336a-8e41-04c1" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="da73-382a-082e-e541" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7ecc-9f15-e1bc-86ca"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="140"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Snerk&apos;s Trogg-fer-Hire" id="9d39-ae0e-afc9-f982" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="7296-67ac-2de8-c515" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="de14-68c7-688e-f5dc" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="84bc-31c3-3dae-49bb" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="3940-77ae-ae68-97a5" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="7d50-de42-0b3d-edbf" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="7256-0970-c234-bfdf" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="dc15-b88d-a4db-cf48" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="99d5-d4e4-afb9-f193"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="230"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Goroan Scions" id="d7f8-513c-ea3d-bc9e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="bf41-653d-2834-2559" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="37a4-e5b7-746a-d7ca" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="e472-7bca-9e47-acb1" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="08cf-46b7-3d50-f417" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="4770-a074-9c89-54b1" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="9c18-6546-18af-a89f" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="26ae-8e97-befb-fa19" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="79f7-1ed7-7be5-1252"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="470"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Da Hurtlin&apos; Hogz" id="3cd2-b31b-43c8-e42c" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="854c-a2a6-3e85-186b" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="30d8-37dd-c08a-dc79" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="a51f-c948-7cbc-ad01" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="e11f-7009-358a-c59d" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="6824-bbf5-3706-0ec8" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="3db4-6f6a-e4cc-981a" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="6a3e-5735-34e4-811d" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0c4a-e9a7-fc13-d72b"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="420"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Da Kountin&apos; Krew" id="1d9c-5fbb-bb1e-bdb8" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="74ca-b951-5549-fb9c" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="e7b7-1797-8338-a7c5" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="ec7d-325a-bb3a-0669" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="4026-8323-58f6-0d8d" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="ed3e-77af-6638-ee1a" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="3906-8b91-f00a-b36f" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="fd60-a2e8-383c-08d7" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d884-c055-593c-61bb"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="360"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Shinestealaz" id="11e8-d326-7125-4e5e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="456f-b66a-0670-da03" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="6e74-99d8-fdab-e4a8" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="99b1-18c5-9453-338e" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="fec3-49d5-7282-4860" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="c35c-e861-08ac-b195" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="aa76-c8ca-753a-b039" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="0e76-7b07-c7a9-ea42" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5962-745e-f902-d601"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="500"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Skulkrik&apos;s Loonladz" id="2e3e-7081-a0db-9079" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="211e-e063-0140-2a7e" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="b308-e59c-4ef7-8541" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="5492-0f45-38a4-053b" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="6297-3164-b43d-c1d6" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="7421-8ccd-0025-6fbf" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="ec95-6791-b1ca-d77d" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="f557-6bdc-9f73-0e5c" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6017-0606-f3df-5f74"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="340"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="Blades of the Hollow King" id="26c8-fdae-c6b6-e347" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="dc50-4e57-11c2-2657" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="a86d-53e1-441c-5b0c" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="41f4-3ead-641b-7793" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="b6b1-dfa1-e428-16ed" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="f94e-c37e-78a6-863d" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="f412-be51-0fcf-c632" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="3156-5234-2278-d904" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="509f-ec61-ebbd-f8ff"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="280"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
+        </forceEntry>
+        <forceEntry name="The Beast of Castle Sterneiste" id="6e65-4c2e-132e-4c1e" hidden="true">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="HERO" hidden="false" id="010f-4bbf-4005-fd34" targetId="6e72-1656-d554-528a"/>
+            <categoryLink name="INFANTRY" hidden="false" id="d1b3-5c08-21ea-2939" targetId="75d6-6995-dfcc-3898"/>
+            <categoryLink name="MONSTER" hidden="false" id="03d0-641f-801c-0cac" targetId="6d54-625c-d063-13e2"/>
+            <categoryLink name="WAR MACHINE" hidden="false" id="384f-e7cd-e5cc-a41e" targetId="f7bc-b618-4b5d-2bae"/>
+            <categoryLink name="CAVALRY" hidden="false" id="e02f-3d74-1da4-3398" targetId="926c-df8c-6841-d49e"/>
+            <categoryLink name="BEAST" hidden="false" id="aa18-e267-887b-42dc" targetId="b224-8c8e-ca93-9860"/>
+            <categoryLink name="Reference" hidden="false" id="2fd0-9d76-c520-0133" targetId="3360-1158-e879-9606"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7481-2a43-9129-10bf"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="240"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+          </costs>
         </forceEntry>
       </forceEntries>
       <modifiers>
