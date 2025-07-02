@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="8c7-eee2-e358-ba1e" name="Ironjawz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="8c7-eee2-e358-ba1e" name="Ironjawz - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Weirdnob Shaman" hidden="false" id="e824-4e07-12f6-309c" publicationId="8b1b-f2c7-890e-2bbe">
       <entryLinks>
@@ -2800,7 +2800,7 @@ This unit cannot conobjectives that are being contested by enemy **^^Unique Hero
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gore-gruntas (Scourge of Ghyran)" hidden="false" id="f0c2-47b3-2266-1a6f" publicationId="f894-7929-f79a-a269">
+    <selectionEntry type="unit" import="true" name="Gore-gruntas (Scourge of Ghyran)" hidden="true" id="f0c2-47b3-2266-1a6f" publicationId="f894-7929-f79a-a269">
       <profiles>
         <profile name="Gore-gruntas" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="f86c-962b-5a17-1191">
           <characteristics>
@@ -2903,8 +2903,20 @@ This unit cannot conobjectives that are being contested by enemy **^^Unique Hero
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f4bd-9f1c-cc46-5b5e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Weirdbrute Wrekkaz (Scourge of Ghyran)" hidden="false" id="9582-7259-1066-5bb5" publicationId="f894-7929-f79a-a269">
+    <selectionEntry type="unit" import="true" name="Weirdbrute Wrekkaz (Scourge of Ghyran)" hidden="true" id="9582-7259-1066-5bb5" publicationId="f894-7929-f79a-a269">
       <profiles>
         <profile name="Weirdbrute Wrekkaz" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d77e-2fed-840f-0b00">
           <characteristics>
@@ -2978,6 +2990,18 @@ This unit cannot conobjectives that are being contested by enemy **^^Unique Hero
           </selectionEntries>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Ghyran variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="c08c-f42b-30bb-ccd" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
