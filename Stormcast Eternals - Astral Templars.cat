@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="26d8-61fd-4bf1-5323" name="Stormcast Eternals - Astral Templars [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" publicationId="4a1e-2c36-6a96-9434">
+<catalogue library="false" id="26d8-61fd-4bf1-5323" name="Stormcast Eternals - Astral Templars [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" publicationId="4a1e-2c36-6a96-9434">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="5db7-c496-c81d-b814" hidden="false" flatten="true">
       <selectionEntries>
@@ -139,9 +139,14 @@
     <selectionEntryGroup name="Battle Wounds + Scars" id="3bf0-2b0d-f73b-cfc3" hidden="true" collapsible="true">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <entryLinks>
@@ -171,14 +176,9 @@
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
