@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="37" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="38" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -3032,8 +3032,8 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
-        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="1"/>
-        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
       </costs>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
@@ -7036,8 +7036,8 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
-        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
-        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="1"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
