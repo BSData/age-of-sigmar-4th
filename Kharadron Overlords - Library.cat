@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="7e5e-7934-c23b-c35e" name="Kharadron Overlords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="7e5e-7934-c23b-c35e" name="Kharadron Overlords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Aether-Khemist" hidden="false" id="26a7-80ea-22a-21ca" publicationId="d4a9-b568-9525-d6ac">
       <entryLinks>
@@ -2802,9 +2802,21 @@ Roll a dice. On a 3+:
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb65-035e-1ea1-088e"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c780-fdcf-ada9-d618"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb65-035e-1ea1-088e" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c780-fdcf-ada9-d618" automatic="true"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="cb65-035e-1ea1-088e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="c780-fdcf-ada9-d618">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <modifiers>
