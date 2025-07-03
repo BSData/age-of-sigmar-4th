@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="63fb-d677-eb4c-b148" name="þ Big Waaagh!" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="4" revision="26" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="63fb-d677-eb4c-b148" name="þ Big Waaagh!" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="4" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Big Waaagh!" hidden="false" id="5f83-4fe9-9e63-f951" publicationId="8b1b-f2c7-890e-2bbe">
       <profiles>
@@ -99,14 +99,19 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4b4-e772-dea9-6237"/>
-          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="af1a-86a1-d5bc-2f86" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5d82-1287-4309-bb8f" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="c5eb-52c6-1b82-5209"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="-1" field="5d82-1287-4309-bb8f">
+          <conditions>
+            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Battle Wounds + Scars" id="2c9a-a9ac-2c3e-6120" hidden="true" collapsible="true">
       <modifiers>
@@ -229,7 +234,15 @@
       </selectionEntryGroups>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5e95-9eb7-f732-dfa2" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="87dd-dbe8-feba-daa4"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="-1" field="5e95-9eb7-f732-dfa2">
+          <conditions>
+            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Manifestation Lores" id="1187-72d3-09f9-a410" hidden="false" flatten="true">
       <selectionEntries>
