@@ -718,6 +718,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1083,6 +1101,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3510,6 +3546,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -3875,6 +3929,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6619,6 +6691,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -6972,6 +7062,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -7952,6 +8060,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -8335,6 +8461,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -9159,6 +9303,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -9853,6 +10015,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -13403,6 +13583,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Scourge of Ghyran" id="f894-7929-f79a-a269" hidden="false"/>
     <publication name="White Dwarf Issue 513" id="c75a-c95c-5410-4446" hidden="false"/>
     <publication name="Battletome: Idoneth Deepkin" id="9866-239b-07f0-d92b" hidden="false"/>
+    <publication name="White Dwarf Issue 515" id="8b18-3cdd-0e4a-bfd4" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
