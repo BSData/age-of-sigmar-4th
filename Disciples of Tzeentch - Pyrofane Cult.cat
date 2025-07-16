@@ -1382,7 +1382,7 @@ If any damage points were allocated to a terrain feature by those attacks, after
         <categoryLink name="PYROFANE" hidden="false" id="ed14-0273-f175-c57b" targetId="60b9-92bf-f040-aa8a" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Freeguild Steelhelms" hidden="false" id="4df0-c55e-add7-1b35" type="selectionEntry" targetId="b4ce-0751-dfc6-6ddd">
+    <entryLink import="true" name="Pyrofane Steelhelms" hidden="false" id="4df0-c55e-add7-1b35" type="selectionEntry" targetId="b4ce-0751-dfc6-6ddd">
       <modifiers>
         <modifier type="multiply" value="2" field="points">
           <conditions>
@@ -1684,5 +1684,61 @@ If any damage points were allocated to a terrain feature by those attacks, after
         <categoryLink name="PYROFANE" hidden="false" id="fbe3-a941-7791-41ce" targetId="60b9-92bf-f040-aa8a" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Battle Traits: Pyrofane Cult" hidden="false" id="7ff9-6881-5345-3546" type="selectionEntry" targetId="716f-5eea-ddb9-2966">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5772-3776-befa-d5ba" includeChildSelections="true"/>
+      </constraints>
+    </entryLink>
   </entryLinks>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="bc87-6900-4da4-96f9" defaultAmount="1">
+      <entryLinks>
+        <entryLink import="true" name="Manifestation Lores" hidden="false" id="5f9e-c356-013b-bac6" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
+        <entryLink import="true" name="Manifestation Lores" hidden="false" id="bf1f-983e-4d47-d258" type="selectionEntryGroup" targetId="f104-afde-7ad5-2fad" flatten="true"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e7d2-b4aa-a07b-6edc"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="237d-ea55-5d3c-5ad6"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="6fa8-3b6c-de71-9466" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Spell Lore" hidden="true" id="7239-283d-2bb4-d05f" defaultAmount="1">
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="a5dd-9d97-8383-9830" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d43c-4e70-8d96-d141"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="0382-c4cc-3fbf-42a8"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Spell Lores" hidden="false" id="ede4-d9f6-bc6c-e9b7" type="selectionEntryGroup" targetId="2928-c8e4-94cf-070b" flatten="true" collective="false"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </selectionEntries>
 </catalogue>
