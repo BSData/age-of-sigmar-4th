@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d6ed-ac84-d78f-73e6" name="Idoneth Deepkin - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d6ed-ac84-d78f-73e6" name="Idoneth Deepkin - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Lotann, Warden of the Soul Ledgers" hidden="false" id="50be-c90a-20c4-66ed">
+    <selectionEntry type="unit" import="true" name="Lotann, Warden of the Soul Ledgers" hidden="false" id="50be-c90a-20c4-66ed" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="1554-d002-1c0e-fc74" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -14,10 +14,13 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Fount of Willpower" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9b53-a348-d9e3-1988">
+        <profile name="Fount of Willpower" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9b53-a348-d9e3-1988">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for friendly **^^Isharann^^** units while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: You declared a **^^Spell^^** ability for a friendly **^^Isharann^^** unit wholly within 12&quot; of this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove 1 of this unit&apos;s **soul-quota tokens**. Then, you can re-roll the casting roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -27,11 +30,24 @@
         <profile name="Catalogue of Souls" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2bdb-3ae0-8d10-2ab0">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of friendly **^^Idoneth Deepkin^^** units while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an enemy unit is destroyed, give this unit a **soul-quota token**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Empowered by Memory" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="8df6-a78f-8299-c7c6">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly **^^Idoneth Deepkin^^** unit wholly within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target&apos;s melee weapons have **Crit (Auto-wound)** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Type" typeId="da27-8d61-f955-5031">Offensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -44,6 +60,7 @@
         <categoryLink name="ORDER" hidden="false" id="81f6-e8d0-1788-7f74" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="6e35-80d6-43cf-c6be" targetId="75d6-6995-dfcc-3898" primary="false"/>
         <categoryLink name="ISHARANN" hidden="false" id="d065-6025-13ef-a804" targetId="c96-48d5-fd6d-b079" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="eb52-fbbc-64ff-0b42" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6482-726-9cd3-8265" includeChildSelections="true"/>
@@ -51,9 +68,9 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lotann, Warden of the Soul Ledgers" hidden="false" id="f61a-e48-47a4-fdf6">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Ochtar’s Tentacles and Weapons" hidden="false" id="2e94-41b8-bb33-9bae">
+            <selectionEntry type="upgrade" import="true" name="Meloch’s Tentacles and Weapons" hidden="false" id="2e94-41b8-bb33-9bae">
               <profiles>
-                <profile name="Ochtar’s Tentacles and Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="93a0-d162-c808-b985">
+                <profile name="Meloch’s Tentacles and Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="93a0-d162-c808-b985">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -77,7 +94,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Eidolon of Mathlann, Aspect of the Storm" hidden="false" id="2f12-e371-2aa-baa2">
+    <selectionEntry type="unit" import="true" name="Eidolon of Mathlann, Aspect of the Storm" hidden="false" id="2f12-e371-2aa-baa2" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="f60-347c-31ee-92f1" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -141,7 +158,7 @@
               <profiles>
                 <profile name="Spear of Repressed Fury and Crulhook" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2c89-939f-f0ae-9fa3">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">7</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
@@ -155,24 +172,6 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f1d-fdfa-bfef-3dd0"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Stormshoal’s Fangs" hidden="false" id="901c-51c5-a421-e78a">
-              <profiles>
-                <profile name="Stormshoal’s Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9c6f-345f-11ca-5291">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d4d-6b74-e038-a673"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e13-4795-a781-9943"/>
-              </constraints>
-            </selectionEntry>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="418b-cf26-fa84-93ed"/>
@@ -181,7 +180,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian Allopex" hidden="false" id="91f6-6340-d95c-b89d">
+    <selectionEntry type="unit" import="true" name="Akhelian Allopex" hidden="false" id="91f6-6340-d95c-b89d" publicationId="9866-239b-07f0-d92b">
       <profiles>
         <profile name="Akhelian Allopex" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="e8c1-2db8-acf1-40a6">
           <characteristics>
@@ -332,7 +331,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Eidolon of Mathlann, Aspect of the Sea" hidden="false" id="9ca1-3e30-fb7-44c0">
+    <selectionEntry type="unit" import="true" name="Eidolon of Mathlann, Aspect of the Sea" hidden="false" id="9ca1-3e30-fb7-44c0" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="db46-ad93-306a-50cc" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -381,7 +380,7 @@
         <profile name="Tsunami of Terror" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="d4b3-bede-2080-6771">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick up to 3 different visible enemy units within 12&quot; of this unit to be the targets, then make a casting roll of 2D6.</characteristic>
             <characteristic name="Effect" typeId="1cb9-a-1345-907f">Subtract 1 from save rolls for combat attacks that target those units until the start of your next turn.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
@@ -425,29 +424,11 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="778d-fbfb-7bd6-900d"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Stormshoal’s Fangs" hidden="false" id="e24c-747b-76a-a538">
-              <profiles>
-                <profile name="Stormshoal’s Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="93ef-b26c-a4fc-5b45">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c7c-b11-5e74-d71e"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abaa-e681-6133-135f"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Psi-trident and Deep-sea Sceptre" hidden="false" id="4b4f-f610-2036-603a">
               <profiles>
                 <profile name="Psi-trident and Deep-sea Sceptre" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="fcf4-7cc8-450e-d655">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">7</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -469,7 +450,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian King" hidden="false" id="1d8e-2553-5bf3-901b">
+    <selectionEntry type="unit" import="true" name="Akhelian King" hidden="false" id="1d8e-2553-5bf3-901b" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="bb5a-f5e4-9ec2-4ca5" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -497,11 +478,11 @@
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
           </attributes>
         </profile>
-        <profile name="Akhelian Paragon" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b5af-fe01-6e8c-7afd">
+        <profile name="Crest of the Wave" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b5af-fe01-6e8c-7afd">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a Fight ability for this unit</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly non-**^^Hero Akhelian Cavalry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit charged this turn, add 1 to the Rend characteristic of melee weapons used by other friendly **^^Idoneth Deepkin^^** units for attacks that target enemy units in combat with this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -567,17 +548,17 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Volturnos, High King of the Deep" hidden="false" id="301e-efbe-65c3-bf78">
+    <selectionEntry type="unit" import="true" name="Volturnos, High King of the Deep" hidden="false" id="301e-efbe-65c3-bf78" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="9530-75b4-e590-226d" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
       <profiles>
         <profile name="Volturnos, High King of the Deep" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="e505-845c-55d7-c2b1">
           <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">8</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="First Among Akhelians" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="97b1-a57f-b683-7dcb">
@@ -593,7 +574,7 @@
         <profile name="Cealith, the High King&apos;s Shield" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="349-2ec8-553b-a79f">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has Ward (3+) against mortal damage inflicted by Spell abilities, Prayer abilities or abilities used by Manifestations.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (3+)^^** against mortal damage inflicted by **^^Spell^^** abilities, **^^Prayer^^** abilities or abilities used by **^Manifestations^^**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -638,7 +619,7 @@
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
                   </characteristics>
@@ -675,7 +656,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Isharann Tidecaster" hidden="false" id="b3e9-4dba-c419-550">
+    <selectionEntry type="unit" import="true" name="Isharann Tidecaster" hidden="false" id="b3e9-4dba-c419-550" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="3b11-5cbe-191c-4196" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -716,29 +697,11 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Isharann Tidecaster" hidden="false" id="16e5-8a0f-c8d3-57e2">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Ethershark’s Vicious Bite" hidden="false" id="1bf3-644c-eb89-54ce">
-              <profiles>
-                <profile name="Ethershark’s Vicious Bite" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="303d-d9e1-8c64-68d0">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4c1-61b-17fb-2f83"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79c1-d752-dc69-44dd"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Pelagic Staff" hidden="false" id="3189-b6d0-a6e-574e">
               <profiles>
                 <profile name="Pelagic Staff" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="64df-3c57-8bd4-1813">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -760,7 +723,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Isharann Soulscryer" hidden="false" id="1296-cd3a-b6fc-f28f">
+    <selectionEntry type="unit" import="true" name="Isharann Soulscryer" hidden="false" id="1296-cd3a-b6fc-f28f" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="6ddb-4f7d-87e3-84c5" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -775,28 +738,15 @@
         </profile>
         <profile name="Finder of Ways" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="56b0-5ffe-baa0-cc9f">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Idoneth Deepkin^^** unit that is **travelling the ethersea** to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up the target wholly within 12&quot; of this unit and more than 7&quot; from all enemy units.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared the &apos;unpredictable Tide&apos; ability or the &apos;Steed of Tides&apos; ability</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Instead of setting up the targets as described in the ability used, set them up on the battlefield wholly within 12&quot; of this unit and more than 7&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-          </attributes>
-        </profile>
-        <profile name="Cyfar Compass" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="935e-34b3-a378-602f">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** within 18&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly **^^Idoneth Deepkin^^** units that target that unit for the rest of the turn</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -812,30 +762,11 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Isharann Soulscryer" hidden="false" id="b7c1-2274-4e24-efcb">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Scryfish Shoal" hidden="false" id="704f-1f6b-6af5-d596">
-              <profiles>
-                <profile name="Scryfish Shoal" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="43e1-5a6a-d363-441a">
-                  <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">8</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">5+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">5+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b338-aa26-d9a5-6fe5"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9cee-1df3-836-b24c"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Abyssal Touch" hidden="false" id="3c92-b41a-14c6-ff5">
               <profiles>
                 <profile name="Abyssal Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b4ee-73fb-3df-62f8">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
@@ -857,7 +788,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Isharann Soulrender" hidden="false" id="b597-c539-60f-da1f">
+    <selectionEntry type="unit" import="true" name="Isharann Soulrender" hidden="false" id="b597-c539-60f-da1f" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="40e9-b3b2-2cae-f339" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -873,8 +804,8 @@
         <profile name="Lurelight" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6822-231b-cd10-d7f0">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 different friendly **^^Namarti^^** units wholly within 12&quot; of this unit to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn. Make a lurelight roll of D3 for each target unit.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">On a 2+, return a number of slain models to the target unit equal to the roll.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 different friendly **^^Namarti^^** units wholly within 12&quot; of this unit to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a lurelight roll of D3 for each target unit. On a 2+, return a number of slain models to the target unit equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -885,7 +816,7 @@
         </profile>
         <profile name="Hangman&apos;s Knot" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="15ce-dda6-8aec-5f94">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** in combat with this unit to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 2D6. If the roll exceeds the target’s Health characteristic, it is automatically destroyed.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -952,7 +883,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian Ishlaen Guard" hidden="false" id="4a97-b100-c4de-f706">
+    <selectionEntry type="unit" import="true" name="Akhelian Ishlaen Guard" hidden="false" id="4a97-b100-c4de-f706" publicationId="9866-239b-07f0-d92b">
       <profiles>
         <profile name="Akhelian Ishlaen Guard" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="1c08-8b74-296c-d5a1">
           <characteristics>
@@ -1032,7 +963,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti‑**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1100,7 +1031,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian Morrsarr Guard" hidden="false" id="f3a8-6043-25e2-51ea">
+    <selectionEntry type="unit" import="true" name="Akhelian Morrsarr Guard" hidden="false" id="f3a8-6043-25e2-51ea" publicationId="9866-239b-07f0-d92b">
       <profiles>
         <profile name="Akhelian Morrsarr Guard" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="afc1-ddc2-ed59-f97d">
           <characteristics>
@@ -1113,8 +1044,8 @@
         <profile name="Biovoltaic Blast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d3ed-4483-2a5c-a44a">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit within 1&quot; of it to be the target, then roll a number of dice equal to the number of models in this unit.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For each 4-5, inflict 1 mortal damage on the target. For each 6+, inflict D3 mortal damage on the target. Add 1 to each roll if there are more models in the target unit than this unit.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of models in this unit. Add 1 to each roll if there are more models in the target unit than this unit. For each 3+, inflict 1 mortal damage on the target.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1170,7 +1101,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Anti‑**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Anti‑**^^Cavalry^^** (+1 Rend)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1238,7 +1169,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian Leviadon" hidden="false" id="8e30-fc7b-3b12-a269">
+    <selectionEntry type="unit" import="true" name="Akhelian Leviadon" hidden="false" id="8e30-fc7b-3b12-a269" publicationId="9866-239b-07f0-d92b">
       <profiles>
         <profile name="Akhelian Leviadon" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="2458-7ea4-73c-f61f">
           <characteristics>
@@ -1357,7 +1288,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian Thrallmaster" hidden="false" id="8b16-dadd-dd26-1c6d">
+    <selectionEntry type="unit" import="true" name="Akhelian Thrallmaster" hidden="false" id="8b16-dadd-dd26-1c6d" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="bc77-4380-4231-7995" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -1387,15 +1318,13 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects to apply to this unit and any friendly **^^Namarti^^** units wholly within 12&quot; of this unit for the rest of the turn.
-***Way of the Riptide:*** Those units’ melee weapons have **Crit (2 Hits)**.
-***Way of the Vortex:*** Subtract 1 from wound rolls for attacks that target those units.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Melee weapons used by friendly **^^Namarti^^** units have **Crit (2 Hits)** while they are wholly within 12&quot; of this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -1410,29 +1339,11 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Akhelian Thrallmaster" hidden="false" id="b228-f5df-8575-adeb">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Snapjaw’s Vicious Bite" hidden="false" id="f43a-a779-7d24-60fd">
-              <profiles>
-                <profile name="Snapjaw’s Vicious Bite" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b8a9-b8be-2df8-502d">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ddf-5260-ed8e-df76"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e3e-e84d-5d38-6183"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Esoteric Weapons" hidden="false" id="a352-a9f-80ea-ccae">
               <profiles>
                 <profile name="Esoteric Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3092-713d-b6f5-324f">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -1454,7 +1365,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Namarti Thralls" hidden="false" id="719d-2822-d67a-2ec8">
+    <selectionEntry type="unit" import="true" name="Namarti Thralls" hidden="false" id="719d-2822-d67a-2ec8" publicationId="9866-239b-07f0-d92b">
       <profiles>
         <profile name="Namarti Thralls" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="8967-4b61-68dc-7e7e">
           <characteristics>
@@ -1464,14 +1375,17 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Sweeping Blows" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3782-7a87-8350-a8d8">
+        <profile name="Sweeping Blows" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3782-7a87-8350-a8d8">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Damage characteristic of this unit’s **Lanmari** for attacks that target enemy **^^Monsters^^**.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Fight^^** ability for this unit.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If any damage points inflicted by attacks made as part of that **^^Fight^^** ability are allocated to any enemy units, subtract 1 from wound rolls for attacks made by those enemy units for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -1518,7 +1432,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti‑**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti‑**^^Infantry^^** (+1 Rend), Anti-**^^Monster^^** (+1 Rend)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1542,7 +1456,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Namarti Reavers" hidden="false" id="f462-e74d-b319-9dbc">
+    <selectionEntry type="unit" import="true" name="Namarti Reavers" hidden="false" id="f462-e74d-b319-9dbc" publicationId="9866-239b-07f0-d92b">
       <profiles>
         <profile name="Namarti Reavers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="7855-7da0-1950-4f6f">
           <characteristics>
@@ -1649,7 +1563,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gloomtide Shipwreck" hidden="false" id="cdd1-4012-45ab-ed95">
+    <selectionEntry type="unit" import="true" name="Gloomtide Shipwreck" hidden="false" id="cdd1-4012-45ab-ed95" publicationId="9866-239b-07f0-d92b">
       <categoryLinks>
         <categoryLink name="FACTION TERRAIN" hidden="false" id="4730-ccc7-9abf-8a7b" targetId="cdd6-ffa1-9b32-4cb8" primary="true"/>
         <categoryLink name="ORDER" hidden="false" id="8f6b-313f-e1c-794d" targetId="ee22-3575-6590-25c" primary="false"/>
@@ -1659,7 +1573,7 @@
         <profile name="Rise from the Depths" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="85e9-b38c-d016-840b">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This ability must be used instead of the &apos;Deploy Faction Terrain&apos; ability.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up this faction terrain either as 1 terrain feature consisting of 2 scenery pieces (that must be set up within 3&quot; of each other) or as 2 separate terrain features. Set up each terrain feature wholly within friendly territory and more than 3&quot; from all objectives and other terrain features. After you have done so, it has been deployed.
 If this faction terrain is set up as 1 terrain feature consisting of 2 scenery pieces, it has a Health characteristic of 14 instead of 7.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy Terrain^^**</characteristic>
@@ -1686,6 +1600,17 @@ If this faction terrain is set up as 1 terrain feature consisting of 2 scenery 
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Phantasmal Ruin" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e135-2afc-f787-00c9">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Models can pass through this terrain feature but cannot be set up on or end moves on any part of this terrain feature.
+Each time an enemy unit ends a move that passed through or across this terrain feature, roll a D3. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -2096,7 +2021,7 @@ Cover, Impassable, Obscuring**</description>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e28f-4773-3719-9457" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Akhelian Thrallmaster (Scourge of Ghyran)" hidden="true" id="3122-775d-c511-8960">
+    <selectionEntry type="unit" import="true" name="Akhelian Thrallmaster (Scourge of Ghyran)" hidden="true" id="3122-775d-c511-8960" publicationId="f894-7929-f79a-a269">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="aec1-1820-9800-3cca" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -2187,7 +2112,7 @@ Cover, Impassable, Obscuring**</description>
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Namarti Thralls (Scourge of Ghyran)" hidden="true" id="6b6f-f17c-9f9d-0ce1">
+    <selectionEntry type="unit" import="true" name="Namarti Thralls (Scourge of Ghyran)" hidden="true" id="6b6f-f17c-9f9d-0ce1" publicationId="f894-7929-f79a-a269">
       <profiles>
         <profile name="Namarti Thralls" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="299b-340d-a98f-733f">
           <characteristics>
@@ -2295,5 +2220,2046 @@ Cover, Impassable, Obscuring**</description>
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Abyssal Tendril" hidden="false" id="dab7-b1f5-b4ae-ecba" publicationId="9866-239b-07f0-d92b">
+      <profiles>
+        <profile name="Abyssal Tendril" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="0857-d5bb-f988-fc8b">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">6</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Crushing Coil" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3998-27ac-3099-5966">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls for this **^^Manifestation^^*&apos;s attacks that target an ensnared enemy unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Watery Clutch" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6024-5e68-fd77-b0d2">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this **^^Manifestation^^**to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll exceeds the target&apos;s Health characteristic, the target is **ensnared** for the rest of the turn.
+A unit cannot use commands while it is **ensnared**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="0369-d3b9-5e39-a9a6" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="5a63-d91e-5e06-9761" targetId="bff0-8be9-719f-4afc" primary="true"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="da64-8e2b-d81f-d3b5" targetId="e7bc-543-4076-553c" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="9473-fec8-11f7-ff1b" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="IDONETH DEEPKIN" hidden="false" id="7a5d-0a1f-0b12-87d2" targetId="c8fc-7a72-6665-2f34" primary="false"/>
+        <categoryLink name="INCARNATE" hidden="false" id="7594-d679-74b7-009b" targetId="a1b1-39d1-f6ed-bf2" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Freezing Grasp" hidden="false" id="e939-b6ee-fafd-13d8">
+          <profiles>
+            <profile name="Freezing Grasp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5e55-299f-c342-2a2c">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1cc4-e2dd-2a00-e2e1"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5001-3730-063b-5d6a"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Incarnate of the Deep" hidden="false" id="57e2-8574-3a89-5b81" publicationId="9866-239b-07f0-d92b">
+      <profiles>
+        <profile name="Incarnate of the Deep" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="93ea-b16d-77bd-28de">
+          <characteristics>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">10&quot;</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">12</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">8+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Surrender to the Sea" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="32a1-55c0-e4b3-fe71">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When this **^^Manifestation^^** is removed from play, each friendly **Abyssal Tendril** on the battlefield is automatically removed from play.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Grasping Tendrils" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7496-ba44-98bd-da2f">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if it is your turn.
+On a 4+:
+• You can remove 1 friendly **Abyssal Tendril** from the battlefield.
+• If there are fewer than 2 friendly Abyssal Tendrils on the battlefield, you can set up an **Abyssal Tendril** wholly within 9&quot; of this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Wild Form" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="cf59-e609-1520-5a5c">
+          <characteristics>
+            <characteristic name="Keywords" id="3c5e-7c0a-e6da-c4b3" hidden="false" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" id="8b19-9c71-98d7-d2ae" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the ‘Banish Manifestation’ ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="WARD (6+)" hidden="false" id="9b8c-5ac4-9814-24eb" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="MANIFESTATION" hidden="false" id="766a-d7ae-6382-9ab1" targetId="bff0-8be9-719f-4afc" primary="true"/>
+        <categoryLink name="ENDLESS SPELL" hidden="false" id="2a3a-cd64-95e3-c29a" targetId="e7bc-543-4076-553c" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="7dba-4e7a-dcc9-9064" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="5f19-d501-3d75-a29a" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="IDONETH DEEPKIN" hidden="false" id="5851-7f2c-a390-558d" targetId="c8fc-7a72-6665-2f34" primary="false"/>
+        <categoryLink name="INCARNATE" hidden="false" id="a96c-f39c-3035-80a0" targetId="a1b1-39d1-f6ed-bf2" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Crushing Maw and Scything Waves" hidden="false" id="ab1d-68aa-60cb-7c84">
+          <profiles>
+            <profile name="Crushing Maw and Scything Waves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f64a-41b0-7923-5888">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Faction Terrain^^** (+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed88-8d81-dd71-bc7b"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f9e-7ae4-a746-f794"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ikon of the Sea" hidden="false" id="565b-35a6-8589-d10b" publicationId="9866-239b-07f0-d92b">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="1c10-2b6c-0097-7634" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Ikon of the Sea" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="1720-796f-4329-456e">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Storm of Blades" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ce62-bd37-6e12-5a87">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and up to 1 friendly unit within this unit&apos;s combat range to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for the targets, to a maximum of 3.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orance</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+          </attributes>
+        </profile>
+        <profile name="Raid Approach" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a726-0d53-4693-99cc">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can use a **^^Run^^** ability and still use **^^Charge^^** abilities later in the turn</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="7eea-ee8c-bd1c-3960" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="IDONETH DEEPKIN" hidden="false" id="e60f-e4ff-0c79-7212" targetId="c8fc-7a72-6665-2f34" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="da73-5388-d0d9-9045" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="6c9e-148f-cbdd-3b33" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="fe70-e8e1-b824-8a76" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="AKHELIAN" hidden="false" id="7f7f-0869-0360-7cd1" targetId="108a-4ad6-bb90-a5ea" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4b1a-68e4-be11-8106" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ikon of the Sea" hidden="false" id="4c23-eeec-1852-7fae">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tidal Glaive" hidden="false" id="356d-623c-e190-77c0">
+              <profiles>
+                <profile name="Tidal Glaive" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c7f2-65a2-bdf6-591c">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a241-f689-3297-454d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2ae-4357-00dd-f91a"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e156-581a-6b29-cf90"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fde2-7aba-3f56-9329"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mathaela, Oracle of the Abyss" hidden="false" id="bf44-ec35-5b38-b2db" publicationId="9866-239b-07f0-d92b">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="89aa-fcf2-feb3-4629" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Mathaela, Oracle of the Abyss" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="82a7-8c68-1508-275d">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Fount of Willpower" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="50e1-8aa1-f3a6-c6c5">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Idoneth Deepkin^^** units wholly within 12&quot; of this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Attacks characteristic of the targets&apos; **Companion** weapons.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Crushing Pressure" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="ac62-c51d-02e8-6c17">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a number of dice equal to the target&apos;s Health characteristic, to a maximum of 10. For each 4+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Type" typeId="da27-8d61-f955-5031">Offensive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="4232-3c80-a612-cd32" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="IDONETH DEEPKIN" hidden="false" id="1390-b2ae-46ea-27b0" targetId="c8fc-7a72-6665-2f34" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="5816-d582-5336-1933" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="UNIQUE" hidden="false" id="335c-aea2-b35a-b932" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="e905-7d63-07f9-cb46" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="01aa-8e72-7cf4-2113" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="ISHARANN" hidden="false" id="ccc6-5c5d-fba8-df56" targetId="c96-48d5-fd6d-b079" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="4974-0aae-bf3a-ec85" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="cce9-226e-114a-8c4f" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="261f-f97f-78b6-37cc" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mathaela, Oracle of the Abyss" hidden="false" id="fb19-7c28-128b-2826">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Riptide Blast" hidden="false" id="29c8-7f56-4be7-25fe">
+              <profiles>
+                <profile name="Riptide Blast" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="61c2-3db9-5788-49b7">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="870d-23b7-f1d5-c07d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b4e-78e9-3e94-62b4"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Staff of the Abyss" hidden="false" id="d3e9-e6aa-d5ea-b02c">
+              <profiles>
+                <profile name="Staff of the Abyss" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6ed0-570c-8770-5d60">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="95c2-3bd5-a530-5771"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0c9-ef97-c640-aa59"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dark Shoal’s Ferocious Bites" hidden="false" id="f8dd-c55e-3c82-2a68">
+              <profiles>
+                <profile name="Dark Shoal’s Ferocious Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5a6e-1164-02bc-f8af">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="77c4-47a3-8030-caa3"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="321d-eae1-7b81-082b"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b73c-2194-37ef-3503"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7225-3149-a7de-5752"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ikon of the Storm" hidden="false" id="ef74-f822-eae2-d57c" publicationId="9866-239b-07f0-d92b">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="1ce8-f171-f87c-8a50" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Ikon of the Storm" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="cff4-df93-1538-fa5d">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Storm of Blades" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="20f6-1028-da75-9e2b">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Whirlpool&apos;s Fury" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2ebc-7312-3b2a-5b80">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot use **^^Retreat^^** abilities while they are in combat with this unit.
+Friendly units that use a **^^Retreat^^** ability while they are wholly within 12&quot; of this unit can still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="6b66-be66-11fe-bbf6" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="IDONETH DEEPKIN" hidden="false" id="cab9-6318-4012-bae7" targetId="c8fc-7a72-6665-2f34" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="74ac-8fb0-b9ec-d230" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="d9b9-f698-374d-2daa" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="e432-0219-56f3-6dca" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="AKHELIAN" hidden="false" id="eecc-dc19-b853-3d85" targetId="108a-4ad6-bb90-a5ea" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0eae-4c81-ef5a-9691" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ikon of the Storm" hidden="false" id="c0dd-4ccf-b18a-d36c">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Maelstrom Blades" hidden="false" id="facd-a351-3ba3-0983">
+              <profiles>
+                <profile name="Maelstrom Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c98d-7a03-d00a-1d0e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">7</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b0b-8ea0-071f-651d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a6a-3623-b260-ca96"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4552-69f3-8ef8-0ac6"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="711d-bf94-7393-31ee"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Anvil of Apotheosis: Idoneth Deepkin Hero" hidden="true" id="c503-9c05-6feb-29c6" publicationId="9866-239b-07f0-d92b" flatten="false" collapsible="true">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Anvil of Apotheosis: Idoneth Deepkin Hero" hidden="false" id="b2fd-84b7-7776-22da">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Thassalic Weapon" hidden="false" id="dd8d-9354-71ce-1085">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1073-a5d3-8621-4694"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="30f3-692f-1c57-3790"/>
+              </constraints>
+              <profiles>
+                <profile name="Thassalic Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e731-dc13-bdfe-b612">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159"/>
+                  </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="5" field="60e-35aa-31ed-e488">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1713-ff4f-5820-34cf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="-" field="eda3-7332-5db1-4159">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="54b7-e93e-8376-1552" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="5ae1-2150-da0c-8c69" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="2+" field="26dc-168-b2fd-cb93">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f07c-4954-5569-e220" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Anti-**^^Infantry^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="720c-0e28-9c79-f520" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Anti-**^^Cavalry^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4e20-2b6a-734d-f635" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Anti-**^^Monster^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="079a-5e74-fb2b-b3af" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Anti-**^^War Machine^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6a65-f4d7-c47e-22fb" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Anti-**^^Wizard^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fe1e-d108-047f-af2f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Anti-**^^Priest^^** (+1 Rend)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="80da-0b87-a068-dca5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="append" value="Charge (+1 Damage)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="54b7-e93e-8376-1552" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shoal of Zephyrfish" hidden="true" id="3eb9-adf0-2d34-fa8b" defaultAmount="0">
+              <profiles>
+                <profile name="Shoal of Zephyrfish" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="eada-3f64-896b-6c80">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">8</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">5+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Companion</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="229d-a274-4c32-df95" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="ac90-da4d-e7d5-cdda" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ada1-f365-83c7-a16d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="ac90-da4d-e7d5-cdda"/>
+                    <modifier type="set" value="1" field="229d-a274-4c32-df95"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Allopex&apos;s Ferocious Bite" hidden="true" id="9d2e-12c7-f192-2064" defaultAmount="0">
+              <profiles>
+                <profile name="Allopex&apos;s Ferocious Bite" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="50c1-052c-2307-8694">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Monster^^** (+1 Rend), Companion</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="94a6-fa33-d28e-a5d0" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="0c81-d333-1290-292c" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c807-02a4-2eae-f64d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="0c81-d333-1290-292c"/>
+                    <modifier type="set" value="1" field="94a6-fa33-d28e-a5d0"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sea-steed&apos;s Fangs" hidden="true" id="819d-148a-768d-a7f3" defaultAmount="0">
+              <profiles>
+                <profile name="Sea-steed&apos;s Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1019-4495-a813-3f77">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4f29-8511-fc44-f29d" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="6cd2-c1a5-b0d6-19eb" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9326-3558-8545-7de3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="6cd2-c1a5-b0d6-19eb"/>
+                    <modifier type="set" value="1" field="4f29-8511-fc44-f29d"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mighty Sea-beast&apos;s Jaws" hidden="true" id="57ce-dc9a-188d-9ddd" defaultAmount="0">
+              <profiles>
+                <profile name="Mighty Sea-beast&apos;s Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="fcc9-927b-157e-2f8b">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8a6a-c48f-92cb-3609" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="85bd-5dd9-6a58-c71d" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6d71-b7d5-eacc-49d8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="85bd-5dd9-6a58-c71d"/>
+                    <modifier type="set" value="1" field="8a6a-c48f-92cb-3609"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Deep-sea Companion&apos;s Bite" hidden="false" id="55f3-7f70-dc73-b8ea">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed8b-933f-acf6-331f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72a9-9a2b-5226-a9d7"/>
+              </constraints>
+              <profiles>
+                <profile name="Deep-sea Companion&apos;s Bite" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e966-e68e-5422-cf45">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="3" field="60e-35aa-31ed-e488">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6b23-1868-7186-6194" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="3+" field="61c1-22cc-40af-2847">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1960-22a0-d7e0-01da" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="eccc-10fa-6958-fb73">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7143-2714-3c54-438d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Razorshell Harpoon Launchers" hidden="true" id="2c85-91f6-3aff-5f6f" defaultAmount="0">
+              <profiles>
+                <profile name="Razorshell Harpoon Launchers" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="a3a9-2df5-9720-c331">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="81e0-c827-ece9-55c8" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="0ff2-b517-0471-d9bd" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7d7c-0a13-356c-6b18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="0ff2-b517-0471-d9bd"/>
+                    <modifier type="set" value="1" field="81e0-c827-ece9-55c8"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crew&apos;s Spears and Harpoons" hidden="true" id="ef40-95e5-9f67-ca13" defaultAmount="0">
+              <profiles>
+                <profile name="Crew&apos;s Spears and Harpoons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="42ff-3788-e9ac-eba8">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d41d-da6d-e58e-b410" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="4c7f-848d-c14a-93ce" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7d7c-0a13-356c-6b18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="4c7f-848d-c14a-93ce"/>
+                    <modifier type="set" value="1" field="d41d-da6d-e58e-b410"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ebc-7cb0-cc06-e997"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e4a-f73e-9a67-ca2b"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="f1ac-88a7-529c-e971" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Anvil of Apotheosis: Idoneth Deepkin Hero" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="0c22-bf36-9226-ab07">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="feca-4fa9-057d-9223" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="INFANTRY" hidden="false" id="c124-e872-295c-31ac" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="98ec-c0e4-2479-763d" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="IDONETH DEEPKIN" hidden="false" id="ac21-88dd-16b4-98bc" targetId="c8fc-7a72-6665-2f34" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="b7ad-3ca3-46d6-c1dd" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Destiny point limit exceeded." field="error">
+          <conditions>
+            <condition type="lessThan" value="0" field="bc33-05f5-8d3f-af43" scope="self" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="The Anvil of Apotheosis" id="769d-0b7e-d8ad-89e5" hidden="false" sortIndex="1">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Archetype" id="018c-3dff-e55e-7247" hidden="false" sortIndex="2" collapsible="true" defaultSelectionEntryId="none">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7cd-60f7-9fdf-c6a0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a02-fa4b-00e2-fd2f"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Akhelian" hidden="false" id="1713-ff4f-5820-34cf" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="add" value="108a-4ad6-bb90-a5ea" field="category" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Isharann" hidden="false" id="0b93-b1a8-ed56-a9f5" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="add" value="6f28-c3f6-4b1b-8aff" field="category" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Destiny Point Limit" id="34c1-4d65-cda6-c2bd" hidden="false" sortIndex="1" collapsible="true" defaultSelectionEntryId="none">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Young Noble" hidden="false" id="f422-f7b4-bf40-7a60" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="150"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="10"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Lord of the Enclave" hidden="false" id="2e73-e666-62b8-4aec" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="250"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="30"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Ethersea Regent" hidden="false" id="7c25-001c-8a3f-891f" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="350"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="50"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="698f-63ee-1f4f-9617"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ef1-f6ba-4f50-8867"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Battle Mount" id="305c-b514-f3f0-f279" hidden="false" sortIndex="6" collapsible="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44d0-c967-4e16-853c"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e4d2-c69e-6d68-1d9b"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Sea-steed" hidden="false" id="9326-3558-8545-7de3" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="7" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="12&quot;" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="remove" value="75d6-6995-dfcc-3898" field="category" scope="root-entry"/>
+                    <modifier type="add" value="926c-df8c-6841-d49e" field="category" scope="root-entry"/>
+                    <modifier type="set" value="4+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Mighty Sea-beast" hidden="false" id="6d71-b7d5-eacc-49d8" sortIndex="3">
+                  <profiles>
+                    <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5c70-ea68-cdb8-023b">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Mighty Sea-beast&apos;s Jaws** is 3.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-25"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="16" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="5" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="remove" value="75d6-6995-dfcc-3898" field="category" scope="root-entry"/>
+                    <modifier type="add" value="6d54-625c-d063-13e2" field="category" scope="root-entry"/>
+                    <modifier type="add" value="b979-4c3e-7d0e-6921" field="category" scope="root-entry"/>
+                    <modifier type="set" value="10&quot;" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Allopex" hidden="false" id="c807-02a4-2eae-f64d" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-8"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="10" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="12&quot;" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="remove" value="75d6-6995-dfcc-3898" field="category" scope="root-entry"/>
+                    <modifier type="add" value="926c-df8c-6841-d49e" field="category" scope="root-entry"/>
+                    <modifier type="set" value="4+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Bloodthirsty Predators" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="58ae-9f63-b103-7124">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit’s** Allopex’s Ferocious Bite** while it is within 6&quot; of any damaged enemy units or while it is within 6&quot; of any enemy units that had any models slain in the same turn.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
+                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Origins" id="e152-d868-e95a-0bbd" hidden="false" sortIndex="4" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Swift as the Great Current" hidden="false" id="8915-7ee5-954e-64f3" sortIndex="3">
+                  <profiles>
+                    <profile name="Swift as the Great Current" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="58b3-a300-d98a-3c12">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 2 to the roll if this unit is **^^Infantry^^**. On a 4+, this unit has **^^Strike-first^^** for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Prodigy of the Asydrazor" hidden="false" id="8ba3-a93f-4c55-f322" sortIndex="2">
+                  <profiles>
+                    <profile name="Prodigy of the Asydrazor" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4c06-6900-6d1c-6911">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is **^^Akhelian^^**, add a number equal to the number of ranks this unit has earned on its Path to the Attacks characteristic of its **Thalassic Weapon**.
+*For example, if this unit has earned the Legendary rank on its Path, add 4 to the Attacks characteristic of its **Thalassic Weapon**.*</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Royal Lineage" hidden="false" id="db44-cfa5-b900-e0c5" sortIndex="1">
+                  <profiles>
+                    <profile name="Royal Lineage" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="33e7-a4ee-3ccc-6122">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the control scores of friendly **^^Idoneth Deepkin^^** units while they are wholly within 12&quot; of this unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Prodigy of the Túrscoll" hidden="false" id="ce63-9e53-4e8e-62ad" sortIndex="4">
+                  <profiles>
+                    <profile name="Prodigy of the Túrscoll" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4fe8-1fb1-8725-dfa7">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Reaction: You declared a **^^Spell^^** ability for this unit</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is **^^Isharann^^**, re-roll 1 of the dice in the casting roll.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db05-7449-c287-9c2d"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Flaws" id="471f-74ad-ff2b-8528" hidden="false" sortIndex="5" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Isolationist" hidden="false" id="1d63-2fff-30fa-5486" sortIndex="4">
+                  <profiles>
+                    <profile name="Isolationist" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2fc7-7bdd-87db-6f5e">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit cannot be set up within 9&quot; of any friendly units. In addition, friendly units cannot be set up within 9&quot; of this unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="4"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Overly Cautious" hidden="false" id="eb5b-9b54-7bff-9ae3" sortIndex="3">
+                  <profiles>
+                    <profile name="Overly Cautious" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="edfc-d027-b197-d989">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit is targeted by an attack, if you have any command points and a friendly unit has not already used the &apos;All-out Defence&apos; command this phase, this unit must use the &apos;All-out Defence&apos; command.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="2"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Legacy of Slaanesh" hidden="false" id="e873-8762-d5f2-41e5" sortIndex="1">
+                  <profiles>
+                    <profile name="Legacy of Slaanesh" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9da8-0a28-856a-c711">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit must use this ability at the end of each turn.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, allocate 1 damage point to this unit (a ward roll cannot be made for that damage point).</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="4"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Pride and Arrogance" hidden="false" id="80f0-7cc5-ba8c-f23c" sortIndex="2">
+                  <profiles>
+                    <profile name="Pride and Arrogance" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fef3-1a93-eeb3-de6f">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is in combat with any enemy **^^Heroes^^**, all of its combat attacks must target an enemy **^^Hero^^**.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="2"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1e7-2cad-660d-a2e2"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Battle Mount Upgrades" id="5d21-cd1d-d3bc-a908" hidden="false" sortIndex="7" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Formidable Bulk" hidden="false" id="c03a-5629-19a8-5231" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="364d-bc1c-d535-e803"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rapid Striker" hidden="false" id="fd89-ccc7-66bb-568d" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="2" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="926c-df8c-6841-d49e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f367-602a-1351-af19"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Mighty Biovoltaic Blast" hidden="false" id="dd5e-e10e-478b-9a82" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c62-7d19-b359-faf4"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Mighty Biovoltaic Blast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a1b0-5d8d-acb9-90b7">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Void Drummer" hidden="false" id="0f9b-d23d-d877-9add" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="add" value="52cc-95fd-6cd3-8f72" field="category" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab0b-b9d1-34de-6691"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Feed on Sorcery" hidden="false" id="ea90-85b0-7732-2947" sortIndex="6">
+                  <profiles>
+                    <profile name="Feed on Sorcery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ab54-66b0-6952-2d61">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Monster^^** within 1&quot; of this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, inflict 3 mortal damage on the target. In addition, on a 6, the target has **^^Strike-last^^** for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="807e-464a-76f4-aae5"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Mounted Crew" hidden="false" id="7d7c-0a13-356c-6b18" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-10"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eef6-cf2b-d4a7-4bcb"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Upgrades" id="b63b-9dfc-7890-0c44" hidden="false" sortIndex="8" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Tactical Acumen" hidden="false" id="0190-0a2b-0f47-3408" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a199-ed0e-8117-273e"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Martial Grace" hidden="false" id="9e8e-1ab5-9b5a-c845" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35a8-4577-16c1-afc8"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Grim Resolve" hidden="false" id="7eca-9602-effe-4402" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5b3-9a83-a6f8-daee"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Warding Currents" hidden="false" id="8a4b-8c6c-a9f0-52fa" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="add" value="70a4-383f-421f-52cd" field="category" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e749-7acd-421b-4c88"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Focused Hunter" hidden="false" id="5ae1-2150-da0c-8c69" sortIndex="6">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9685-5ae7-9cfd-cda7"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="New Group" id="f76a-453f-0506-ade2" hidden="false" flatten="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e0ec-be9f-58da-832c"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d835-1d0c-e8ca-865e"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="INFANTRY" hidden="false" id="720c-0e28-9c79-f520" sortIndex="1"/>
+                        <selectionEntry type="upgrade" import="true" name="CAVALRY" hidden="false" id="4e20-2b6a-734d-f635" sortIndex="2"/>
+                        <selectionEntry type="upgrade" import="true" name="MONSTER" hidden="false" id="079a-5e74-fb2b-b3af" sortIndex="3"/>
+                        <selectionEntry type="upgrade" import="true" name="WAR MACHINE" hidden="false" id="6a65-f4d7-c47e-22fb" sortIndex="4"/>
+                        <selectionEntry type="upgrade" import="true" name="WIZARD" hidden="false" id="fe1e-d108-047f-af2f" sortIndex="5"/>
+                        <selectionEntry type="upgrade" import="true" name="PRIEST" hidden="false" id="80da-0b87-a068-dca5" sortIndex="6"/>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Duellist" hidden="false" id="f07c-4954-5569-e220" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0032-d882-d94e-a2cd"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Ornate Armour" hidden="false" id="425b-a4f6-9808-da78" sortIndex="8">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6963-b715-6396-eb27"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Shining Blade" hidden="false" id="54b7-e93e-8376-1552" sortIndex="7">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b2c5-b9b2-d532-89a0"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Deep-sea Companion" hidden="false" id="897f-c620-8169-6a8d" sortIndex="9">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec97-d790-2514-e64d"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Serrated Bill" hidden="false" id="7143-2714-3c54-438d" sortIndex="13">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a994-610f-1a27-9fa8"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Become the Swarm" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="529b-5f23-92f4-586a">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When this unit is destroyed, roll a D3 for each enemy unit in combat with it. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="897f-c620-8169-6a8d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Flurry of Attacks" hidden="false" id="6b23-1868-7186-6194" sortIndex="10">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="897f-c620-8169-6a8d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e75d-de02-d91d-7ac2"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Vicious Bite" hidden="false" id="1960-22a0-d7e0-01da" sortIndex="12">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77ac-2b9a-f1d2-0f94"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="897f-c620-8169-6a8d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Oracle of the Enclave" hidden="false" id="bead-8153-e95c-55ed" sortIndex="14">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-8"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6f28-c3f6-4b1b-8aff" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="8179-697a-9f4c-91d4" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="remove" value="6f28-c3f6-4b1b-8aff" field="category" scope="root-entry"/>
+                    <modifier type="add" value="8179-697a-9f4c-91d4" field="category" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d47c-17e9-210c-a064"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Companion" id="6fd3-1035-2f0d-203d" hidden="false" sortIndex="3" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Sea-beast Familiar" hidden="false" id="7a5f-345e-58ba-8b7c">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Deep-sea Aid" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="aacf-52eb-f646-deaa">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You can reroll 1 hit roll, 1 wound roll, 1 save roll, 1 casting roll, or 1 unbinding roll for this unit. After you have done so, remove this unit&apos;s **Sea-beast Familiar** from the battlefield.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                      </attributes>
+                    </profile>
+                    <profile name="Sea-beast Familiar" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="736d-5aeb-9226-dd02">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s **Sea-beast Familiar** is a token. If it is removed from the battlefield, this unit cannot use the &apos;Deep-sea Aid&apos; ability.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Abyssal Cephalopod" hidden="false" id="5cab-fff8-7971-244f">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Abyssal Cephalopod" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fd09-ee41-4c62-a57d">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s **Abyssal Cephalopod** is a token. If it is removed from the battlefield, this unit cannot use the &apos;Pelagic Defender&apos; ability.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                      </attributes>
+                    </profile>
+                    <profile name="Pelagic Defender" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="37f8-6cdb-991f-baac">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
+• Pick an enemy unit in combat with this unit to be the target, then roll 8 dice. For each 5+, inflict 1 mortal damage on the target.
+• This unit has **^^Ward (5+)^^** for the rest of the turn.
+After resolving either effect, remove this unit&apos;s **Abyssal Cephalopod** from the battlefield.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Shoal of Zephyrfish" hidden="false" id="ada1-f365-83c7-a16d">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71e7-3337-fef5-30f9"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7a72-ab7d-730d-f9ad"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6e2e-6ada-7594-4006" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.c8fc-7a72-6665-2f34"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Paths" id="fded-249a-cccc-374e" hidden="false" flatten="true" publicationId="8b1b-f2c7-890e-2bbe">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Path of the Perpetual Deep" hidden="true" id="8538-c1bf-30d7-2b95" publicationId="9866-239b-07f0-d92b">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="8e03-0a2c-28b7-339e" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Blade of the Cythai" hidden="false" id="7dd4-6c94-a738-0fa5">
+                  <profiles>
+                    <profile name="Blade of the Cythai" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0864-baa6-25a0-11f7">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls for this unit&apos;s combat attacks</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32df-aae4-3f3b-c006"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Blessing of Mathlaan" hidden="false" id="6758-c78e-fb20-74a3">
+                  <profiles>
+                    <profile name="Blessing of Mathlaan" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5565-3211-1fdf-ba89">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^Ward (6+)^^**</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d7b-2081-d6d7-640a"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08b2-5393-1e5b-5036"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="a859-6a1a-c57c-fc8a" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Void Strike" hidden="false" id="ecd5-b180-d384-bec0">
+                  <profiles>
+                    <profile name="Void Strike" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e6f4-8cc3-02a1-513f">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s melee weapons have **Crit (Mortal)** for the rest of the turn.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e4c-389c-f991-c8ef"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Soul Stealer" hidden="false" id="a4ad-d3bd-cbab-992c">
+                  <profiles>
+                    <profile name="Soul Stealer" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6991-b574-a896-fc0c">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is in combat, **Heal (D3)** this unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c13-cb1a-7804-014f"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3006-b213-4c47-d8d9"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="6fad-be2d-b56b-9c35" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Rapid Attacker" hidden="false" id="70d7-d356-996e-29ee">
+                  <profiles>
+                    <profile name="Rapid Attacker" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="173a-eaab-e46d-fef4">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da8e-a4b0-4c6d-3021"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Guardian of the Phalanx" hidden="false" id="5f45-759b-b6a3-6d69">
+                  <profiles>
+                    <profile name="Guardian of the Phalanx" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="04ee-6eb0-c15c-3c85">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to save rolls for this unit and friendly **^^Namarti^^** units while they are within this unit&apos;s combat range.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a61-df1d-1ca7-1855"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dcbc-3c90-cdac-8ca2"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="1b2e-484b-0a55-3d18" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Paragon of Battle" hidden="false" id="ae50-130e-e4dc-7047">
+                  <profiles>
+                    <profile name="Paragon of Battle" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0016-2d5c-bfa5-5fe5">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of this unit&apos;s melee weapons. Add D3 to the Attacks characteristic of that weapon for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba8a-1c7c-bf12-4d20"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Ride the Maelstrom" hidden="false" id="d352-76eb-165d-5511">
+                  <profiles>
+                    <profile name="Ride the Maelstrom" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bb33-3d24-1e1f-6165">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8761-377e-6f8f-0e04"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9369-aea2-6f85-4a5a"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Path of the Enclave" hidden="true" id="a0f6-a0ce-4768-4fed" publicationId="9866-239b-07f0-d92b">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="47d6-2696-57db-93f3" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Reaping Strikes" hidden="false" id="580e-cec3-48d4-874f">
+                  <profiles>
+                    <profile name="Reaping Strikes" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4b7a-036f-6b4b-1db3">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to wound rolls for this unit&apos;s combat attacks that target enemy **^^Infantry^^** units.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91d1-15b1-8963-2072"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Swift Sea-Raiders" hidden="false" id="d17d-74b6-b40e-506f">
+                  <profiles>
+                    <profile name="Swift Sea-Raiders" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="614d-2d74-4b05-11fb">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1&quot; to this unit&apos;s Move characteristic.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb55-41aa-b39b-af9b"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c9a0-8b7b-9ee7-9ef4"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="42bd-6e4c-a633-0d03" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Deep Stalkers" hidden="false" id="b77d-e9ae-9585-4d14">
+                  <profiles>
+                    <profile name="Deep Stalkers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c10b-6273-1d01-8b42">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is a non-reinforced, non-**^^Monster^^** unit, it is not visible to enemy units more than 12&quot; from it.
+If this unit is a reinforced unit or a **^^Monster^^**, subtract 1 from hit rolls for attacks that target this unit made by units more than 12&quot; from it.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36aa-406a-3f9c-698b"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="The First Wave" hidden="false" id="d9b8-6043-8b65-eb25">
+                  <profiles>
+                    <profile name="The First Wave" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c8e1-6884-754f-3d39">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can immediately use the &apos;Normal Move&apos; ability as if it were your movement phase.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c86d-bb8e-0800-e54c"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e4c-f4d9-c4b4-32bc"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="8d3e-a21a-ccad-dc9b" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fury of the Sea" hidden="false" id="28cc-a4a3-5d90-05ae">
+                  <profiles>
+                    <profile name="Fury of the Sea" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5755-2a87-aec6-c047">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2 to charge rolls for this unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="362d-2b99-e392-ba18"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Fury of the Storm" hidden="false" id="5a09-f261-5097-cafc">
+                  <profiles>
+                    <profile name="Fury of the Storm" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9457-57ec-7fde-bfff">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s melee weapons have **Crit (2 Hits)**.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0600-117d-a095-3b63"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="967d-e880-c0ef-23bf"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="b51e-9979-4c3c-629c" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="The Crashing Wave" hidden="false" id="4218-f719-a8d8-caa0">
+                  <profiles>
+                    <profile name="The Crashing Wave" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f210-f5a7-c7ec-62bb">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Strike-first^^**</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f604-f2df-6808-1ab2"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Guarded Stance" hidden="false" id="a2fc-1d8c-9856-11e4">
+                  <profiles>
+                    <profile name="Guarded Stance" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5d48-163b-9f97-4d42">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)^^** against damage points inflicted by combat attacks if it has not used a **^^Fight^^** ability in the same phase.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2376-3c4b-8a69-138e"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52fa-7019-7ad0-a962"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e42-3c75-4cb5-337a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>
