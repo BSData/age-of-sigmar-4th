@@ -13559,7 +13559,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome Supplement: Beasts of Chaos" id="3cc2-31d3-9dd2-f858" hidden="false"/>
     <publication name="Warhammer Legends" id="9dee-a6b2-4b42-bfee" hidden="false"/>
     <publication name="Faction Pack: Fyreslayers" id="693f-85d0-db98-543c" hidden="false"/>
-    <publication name="Faction Pack: Kharadron Overlords" id="d4a9-b568-9525-d6ac" hidden="false"/>
+    <publication name="Battletome: Kharadron Overlords" id="d4a9-b568-9525-d6ac" hidden="false"/>
     <publication name="General&apos;s Handbook 2024-25" id="ec12-a5ee-5304-af7" hidden="false"/>
     <publication name="Regiments of Renown" id="27d9-b0c5-1ecc-ba2f" hidden="false"/>
     <publication name="Faction Pack: Lumineth Realmlords" id="9ed1-cf74-eb97-dee2" hidden="false"/>
@@ -13590,7 +13590,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Scourge of Ghyran" id="f894-7929-f79a-a269" hidden="false"/>
     <publication name="White Dwarf Issue 513" id="c75a-c95c-5410-4446" hidden="false"/>
     <publication name="Battletome: Idoneth Deepkin" id="9866-239b-07f0-d92b" hidden="false"/>
-    <publication name="White Dwarf Issue 515" id="8b18-3cdd-0e4a-bfd4" hidden="false"/>
+    <publication name="White Dwarf Issue 514" id="8b18-3cdd-0e4a-bfd4" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
