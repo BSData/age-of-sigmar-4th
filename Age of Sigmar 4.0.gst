@@ -118,6 +118,21 @@
         <characteristicType name="Domination" id="e1d7-1d3c-f001-62e0"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Ability (Blood Tithe)" hidden="false" id="5453-37d7-6d37-db1b" sortIndex="11">
+      <characteristicTypes>
+        <characteristicType id="13a2-dcf4-38ba-ff59" name="Timing"/>
+        <characteristicType id="85a7-1eff-2a27-7d21" name="Declare"/>
+        <characteristicType id="277c-dbd2-179f-36f4" name="Effect"/>
+        <characteristicType id="5329-0c08-0400-de40" name="Keywords"/>
+        <characteristicType id="5252-c26f-597b-4f23" name="Used By"/>
+        <characteristicType name="Blood Tithe Points" id="937f-e9e7-e332-d608"/>
+        <characteristicType name="Unlock Condition" id="8359-f915-24d8-23c4"/>
+      </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="9019-1a17-dfdb-d171"/>
+        <attributeType name="Type" id="ba97-56ed-9674-f836"/>
+      </attributeTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry name="DEATH" hidden="false" id="d484-a2d7-cf4f-c4a0"/>
@@ -13647,7 +13662,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Faction Pack: Cities of Sigmar" id="a746-732d-1a22-460" hidden="false"/>
     <publication name="Faction Pack: Daughters of Khaine" id="df1f-ba81-775f-acfd" hidden="false"/>
     <publication name="Faction Pack: Disciples of Tzeentch" id="72d2-ae0-e519-f2f7" hidden="false"/>
-    <publication name="Faction Pack: Blades of Khorne" id="81a9-3dbf-dbc5-672e" hidden="false"/>
+    <publication name="Battletome: Blades of Khorne" id="81a9-3dbf-dbc5-672e" hidden="false"/>
     <publication name="Battletome Supplement: Beasts of Chaos" id="3cc2-31d3-9dd2-f858" hidden="false"/>
     <publication name="Warhammer Legends" id="9dee-a6b2-4b42-bfee" hidden="false"/>
     <publication name="Faction Pack: Fyreslayers" id="693f-85d0-db98-543c" hidden="false"/>

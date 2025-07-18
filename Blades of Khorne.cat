@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1ede-f90-a661-b6c2" hidden="false">
       <selectionEntryGroups>
@@ -411,12 +411,16 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Blades of Khorne" hidden="false" id="1c5d-907-fd0c-c8a4">
       <profiles>
-        <profile name="Spelleater Curse" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d739-397b-a186-daaf" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Blood-drenched" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="eb7f-4967-8702-afca">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a **^^Spell^^** ability</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you have not used any **^^Blood Tithe^^** abilities this phase. Spend 2 **blood tithe points**.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That spell is unbound.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can use this ability if at least half the number of units on both player&apos; army rosters combined (rounding up) have been destroyed. For example, if your roster had 9 units and your opponent&apos;s roster had 4 units, then 7 units would need to have been destroyed.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The following effects apply for the rest of the battle:
+***Wild-eyed Brutality:*** Ignore positive modifiers to save rolls for friendly **^^Blades of Khorne^^** units.
+***Blood Haze:*** **Blood-hungry** weapons used by friendly **^^Bloodbound^^** units have **Crit (Mortal)**.
+***Weapons of Murder:*** Add 1 to the Rend characteristic of **Blood-hungry** weapons used by friendly **^^Blades of Khorne^^** non-**^^Monster^^ Daemon^^** units, including **Blood-hungry Companion** weapons.
+***Bloodlords Supreme:*** Add 1 to the Damage characteristic of **Blood-hungry** weapons used by friendly **^^Blades of Khorne Monster^^** units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -424,74 +428,124 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
           </attributes>
         </profile>
-        <profile name="The Blood Tithe" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="394d-bccb-ffa4-118c" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Blood for the Blood God" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="394d-bccb-ffa4-118c" publicationId="81a9-3dbf-dbc5-672e">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You start the battle with 0 **blood tithe points**. Earn 1 **blood tithe point** each time a unit (friendly or enemy) is destroyed.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Earn 1 blood tithe point each time a unit (friendly or enemy) is destroyed. Blood tithe points are spent to unlock **^^Blood Tithe^^** abilities. You can only use **^^Blood Tithe^^** abilities that are unlocked. Once a **^^Blood Tithe^^** ability is unlocked, you do not need to spend further blood tithe points to use it.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
           </attributes>
         </profile>
-        <profile name="Brass Skull Meteor" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6b75-fef6-982a-cb17" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Skulls for the Skull Throne" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3c67-66e4-25ed-6b12" publicationId="81a9-3dbf-dbc5-672e">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you have not used any **^^Blood Tithe^^** abilities this phase. Spend 4 **blood tithe points** and pick an enemy unit that is visible to a friendly **^^Blades of Khorne Hero^^** to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 8 dice. For each 3+, inflict 1 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Blood Tithe^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a **^^Blood Tithe^^** ability that you have not unlocked and spend the number of blood tithe points required to unlock that ability. That **^^Blood Tithe^^** ability is now unlocked for the rest of the battle.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
           </attributes>
         </profile>
-        <profile name="Heads Must Roll" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="66c-4a47-b2ee-10f" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Murderlust" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="6d28-b92b-4fb1-bb0e">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you have not used any **^^Blood Tithe^^** abilities this phase. Spend 6 **blood tithe points**.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by friendly **^^Blades of Khorne^^** units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Blood Tithe^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59">Once Per Turn (Army), Reaction: You declared a **^^Charge^^** ability.</characteristic>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21"/>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4">Roll a dice. You can replace one of the dice in the charge roll with that value. If you do so, inflict D3 mortal damage on the unit using that **^^Charge^^** ability after that ability is resolved.</characteristic>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608">0</characteristic>
+            <characteristic name="Unlock Condition" typeId="8359-f915-24d8-23c4">You do not need to unlock this ability. It is already unlocked.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Divine Scorn" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="4ad6-054b-9e41-1df8">
+          <characteristics>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59">Once Per Turn, Start of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21">Pick up to 3 enemy **^^Wizards^^** or **^^Priests^^** within 6&quot; of any friendly **^^Blades of Khorne^^** units to be the target(s).</characteristic>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4">Roll a dice for each target. On a 3+, subtract 1 from the target&apos;s power level, to a minimum of 0, until the start of the next turn.</characteristic>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608">1</characteristic>
+            <characteristic name="Unlock Condition" typeId="8359-f915-24d8-23c4"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Color" typeId="9019-1a17-dfdb-d171">Black</attribute>
+            <attribute name="Type" typeId="ba97-56ed-9674-f836">Special</attribute>
           </attributes>
         </profile>
-        <profile name="Slaughter Triumphant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1a6e-f758-dbdd-5e66" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Punish the Pacifist" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="9fd3-0eec-9806-d3c8">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you have not used any **^^Blood Tithe^^** abilities this phase. Spend 8 **blood tithe points**.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
-• Add 1 to the Attacks characteristic of melee weapons used by friendly **^^Blades of Khorne^^** units for the rest of the battle.
-• Pick a friendly non-**^^Unique Bloodthirster^^** unit that has been destroyed. Set up an identical replacement unit on the battlefield more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Blood Tithe^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59">Your Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21">Each unit (friendly and enemy) and enemy **^^Manifestation^^** that is not in combat is a target.</characteristic>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4">Roll a dice. On a 1-2, inflict 1 mortal damage on each target. On a 3+, inflict 1 mortal damage on each enemy target.</characteristic>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608">1</characteristic>
+            <characteristic name="Unlock Condition" typeId="8359-f915-24d8-23c4"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Color" typeId="9019-1a17-dfdb-d171">Red</attribute>
+            <attribute name="Type" typeId="ba97-56ed-9674-f836">Offensive</attribute>
           </attributes>
         </profile>
-        <profile name="Murderlust" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7be9-f0a5-620c-5de2" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Murder the Mystic" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="8385-c7fa-9ff7-7b88">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you have not used any **^^Blood Tithe^^** abilities this phase. Spend 1 **blood tithe point** and pick a friendly **^^Blades of Khorne^^** unit that is not in combat to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target can move 3&quot;. It can move into combat.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Blood Tithe^^**, **^^Move^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59">Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21">Pick up to 4 enemy **^^Manifestations^^** to be the target(s).</characteristic>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4">Make a **banishment roll** of 2D6 for each target. If the banishment roll equals or exceeds the banishment value listed on that **^^Manifestation^^**&apos;s warscroll, inflict D3 mortal damage on each enemy unit within 3&quot; of it and then it is **banished** and removed from play.</characteristic>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608">2</characteristic>
+            <characteristic name="Unlock Condition" typeId="8359-f915-24d8-23c4">You can only unlock this ability if you have unlocked &apos;Divine Scorn&apos;.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Color" typeId="9019-1a17-dfdb-d171">Yellow</attribute>
+            <attribute name="Type" typeId="ba97-56ed-9674-f836">Special</attribute>
           </attributes>
+        </profile>
+        <profile name="Battle Traits: Blades of Khorne" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="2b69-3316-d2c2-1441">
+          <characteristics>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59"/>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21"/>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4"/>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608"/>
+            <characteristic typeId="8359-f915-24d8-23c4" name="Unlock Condition"/>
+          </characteristics>
+        </profile>
+        <profile name="Battle Traits: Blades of Khorne" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="83d6-6dad-ffeb-c430">
+          <characteristics>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59"/>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21"/>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4"/>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608"/>
+            <characteristic typeId="8359-f915-24d8-23c4" name="Unlock Condition"/>
+          </characteristics>
+        </profile>
+        <profile name="Battle Traits: Blades of Khorne" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="47d5-9e49-402b-b936">
+          <characteristics>
+            <characteristic name="Timing" typeId="13a2-dcf4-38ba-ff59"/>
+            <characteristic name="Declare" typeId="85a7-1eff-2a27-7d21"/>
+            <characteristic name="Effect" typeId="277c-dbd2-179f-36f4"/>
+            <characteristic name="Keywords" typeId="5329-0c08-0400-de40">**^^Blood Tithe^^**</characteristic>
+            <characteristic name="Used By" typeId="5252-c26f-597b-4f23"/>
+            <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608"/>
+            <characteristic typeId="8359-f915-24d8-23c4" name="Unlock Condition"/>
+          </characteristics>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="Reference" hidden="false" id="42dd-d6e7-9620-968e" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
+      <rules>
+        <rule id="187e-b194-1066-8484" hidden="false">
+          <description>**Designer&apos;s Note** Unlocking a **^^Blood Tithe^^** ability does not lock you out of the other abilities on the same tier. For an ability to become available to unlock, one of the previous abilities noted in the Unlock Conditions needs to already be unlocked.</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
