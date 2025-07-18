@@ -10,7 +10,7 @@
                 <profile name="Collar of Contempt" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="defa-ab8a-3572-9d77">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can use **^^Unbind^^** abilities as if it had **^^Wizard (1)^^**. Each time this unit unbinds a spell, inflict D3 mortal damage on the caster.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can use **^^Unbind^^** abilities as if it had **^^Wizard (1)^^**. Each time this unit successfully unbinds a spell, inflict D3 mortal damage on the caster.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
@@ -22,16 +22,19 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2439-e9a6-9bb2-c34" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Halo of Blood" hidden="false" id="7ec3-3828-3c35-bccf">
+            <selectionEntry type="upgrade" import="true" name="Butcher&apos;s Blade" hidden="false" id="7ec3-3828-3c35-bccf">
               <profiles>
-                <profile name="Halo of Blood" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3a4f-9b6b-b406-e3da">
+                <profile name="Butcher&apos;s Blade" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3a4f-9b6b-b406-e3da">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to this unit’s control score and to hit rolls and wound rolls for this unit’s attacks.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Your Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit that had any damage points allocated to it this turn by this unit&apos;s combat attacks to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
-                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -87,11 +90,11 @@
             <profile name="Obliterating Charge" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d6d0-b1cf-2231-15b9">
               <characteristics>
                 <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If the unmodified charge roll for a friendly **^^Blades of Khorne Cavalry^^** unit is 8+, it has **^^Strike-first^^** for the rest of the turn.</characteristic>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add **X** to charge rolls for friendly **^^Blades of Khorne Cavalry^^** or **^^Monster^^** units that have already charged this phase and that are wholly within 12&quot; of the unit being rolled for.</characteristic>
               </characteristics>
               <attributes>
-                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
-                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
               </attributes>
             </profile>
           </profiles>
@@ -104,31 +107,34 @@
             <profile name="Butchers of Nations" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bc8a-d722-6a86-4161">
               <characteristics>
                 <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for a friendly **^^Blades of Khorne Daemon^^** unit</characteristic>
-                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">The target can move 3&quot;. It can move into combat.</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                 <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **^^Bloodbound^^** unit that has not used a **^^Fight^^** ability this turn and is within 12&quot; of the unit using this ability to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b">The unit using that **^^Fight^^** ability.</characteristic>
               </characteristics>
               <attributes>
-                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                 <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Murder Host" hidden="false" id="5ccf-b9a-18d6-e621" publicationId="81a9-3dbf-dbc5-672e">
+        <selectionEntry type="upgrade" import="true" name="Murderhost" hidden="false" id="5ccf-b9a-18d6-e621" publicationId="81a9-3dbf-dbc5-672e">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1d0-4637-461e-c661"/>
           </constraints>
           <profiles>
-            <profile name="Strength Through Slaughter" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="989c-d958-d667-7b15">
+            <profile name="Eager Killers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="989c-d958-d667-7b15">
               <characteristics>
-                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If a friendly non-**^^Monster Blades of Khorne Daemon^^** uses a **^^Fight^^** ability, it has **^^Ward (5+)^^** for the rest of the turn.</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Enf of Your Turn</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each friendly **Blades of Khorne Daemon^^** unit that has used a **^^Fight^^** ability this turn and is not in combat can move D6&quot;. It cannot end that move in combat.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
-                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
               </attributes>
             </profile>
           </profiles>
@@ -232,12 +238,13 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
       <selectionEntryGroups>
         <selectionEntryGroup name="Commanders of the Blood Legions" id="1464-5b7b-d510-3d9d" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Firebrand" hidden="false" id="7c75-846e-f3f9-a551" publicationId="81a9-3dbf-dbc5-672e">
+            <selectionEntry type="upgrade" import="true" name="Magical Scorn" hidden="false" id="7c75-846e-f3f9-a551" publicationId="81a9-3dbf-dbc5-672e">
               <profiles>
-                <profile name="Firebrand" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5b7-2469-41a5-fdd6">
+                <profile name="Magical Scorn" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5b7-2469-41a5-fdd6">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is not a **^^Priest^^**, it has **^^Priest (1)^^**. If this unit is already a **^^Priest^^**, add 1 to banishment rolls for it instead.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from casting rolls for **^^Wizards^^** while they are within 12&quot; of this unit.
+Subtract 1 from chanting rolls for enemy **^^Priests^^** while they are within 12&quot; of this unit.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
@@ -248,28 +255,21 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4728-7cbe-831d-cd17" includeChildSelections="true"/>
               </constraints>
-              <modifiers>
-                <modifier type="add" value="3fe-84f4-cec6-a1c1" field="category" scope="root-entry">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="e692-853d-6db8-fdbe" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Favoured of Khorne" hidden="false" id="e92f-179d-6fac-e594" publicationId="81a9-3dbf-dbc5-672e">
+            <selectionEntry type="upgrade" import="true" name="Skull Collector" hidden="false" id="e92f-179d-6fac-e594" publicationId="81a9-3dbf-dbc5-672e">
               <profiles>
-                <profile name="Favoured of Khorne" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e2dc-52bb-fc82-1e9d">
+                <profile name="Skull Collector" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e2dc-52bb-fc82-1e9d">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You begin the battle with 1 **blood tithe point**.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If any damage points were allocated to an enemy **^^Hero^^** by this unit&apos;s combat attacks this turn and that enemy **^^Hero^^** has been destroyed, add 1 to the Attacks characteristic of this unit&apos;s melee weapons for the rest of the battle.
+This unit can be affected by this ability multiple times and the effects are cumulative.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
-                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -277,16 +277,19 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4e9c-aeda-c3ca-9c2d" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Relentless Hunter" hidden="false" id="4c69-c9fd-b060-aff8" publicationId="81a9-3dbf-dbc5-672e">
+            <selectionEntry type="upgrade" import="true" name="Frenzied Taskmaster" hidden="false" id="4c69-c9fd-b060-aff8" publicationId="81a9-3dbf-dbc5-672e">
               <profiles>
-                <profile name="Relentless Hunter" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5f0a-7fd8-8235-9604">
+                <profile name="Frenzied Taskmaster" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5f0a-7fd8-8235-9604">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is picked to be the target of the ‘Murderlust’ ability, it can move 6&quot; instead of 3&quot;.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Blades of Khorne Infantry^^** or **^^Cavalry^^** unit within this unit&apos;s combat range that is not in combat to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target can move D6&quot; but cannot end that move in combat. If the target ends that move within this unit&apos;s combat range, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6"/>
-                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4"/>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                   </attributes>
                 </profile>
               </profiles>
