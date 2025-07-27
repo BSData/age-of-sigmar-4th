@@ -157,6 +157,19 @@
             <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
             <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Deep-Sea Stalkers" hidden="true" id="e75d-4d4c-3bca-2596" publicationId="f894-7929-f79a-a269">
           <constraints>
@@ -447,6 +460,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="4919-8977-4c50-3eec" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="5cd8-a949-0719-3d77" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2ea6-026e-d02c-22a8" type="selectionEntryGroup" targetId="fded-249a-cccc-374e" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -1502,6 +1516,39 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Idoneth Deepkin Hero" hidden="false" id="00dc-b8dd-25aa-4d3a" type="selectionEntry" targetId="c503-9c05-6feb-29c6">
+      <entryLinks>
+        <entryLink import="true" name="Renown" hidden="false" id="4151-931c-16c1-fbec" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="f4b2-9143-026c-7c34" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="941d-6981-64f6-2fb6" type="selectionEntryGroup" targetId="d151-d105-9199-1667"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ba7c-86c0-bcdd-b942" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="2711-f4de-3cb6-1701" type="selectionEntryGroup" targetId="c55d-2c39-f6fa-f8fb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="df2c-90dd-9d3e-0daf" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <selectionEntries>
