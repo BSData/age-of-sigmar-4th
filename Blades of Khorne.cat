@@ -3069,6 +3069,67 @@ This unit can be affected by this ability multiple times and the effects are cum
         <cost name="pts" typeId="points" value="310"/>
       </costs>
     </entryLink>
+    <entryLink import="true" name="Deathbringer" hidden="false" id="dca7-a51b-8501-6e91" type="selectionEntry" targetId="9c54-dbf9-f5be-a8b3">
+      <costs>
+        <cost name="pts" typeId="points" value="10000"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="f883-aab8-3fe4-e6c9" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="7d41-3af4-7d55-6783" type="selectionEntryGroup" targetId="1ede-f90-a661-b6c2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="1f53-0c18-109d-6655" type="selectionEntryGroup" targetId="8e28-9445-463a-5883"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d860-33fe-ceb2-ee89" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="846f-4ad9-df1d-42b5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="5e81-e5f5-3c0b-d68f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="9a4a-9555-d827-3700" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.971a-1bec-c9dc-f9c4"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
   </entryLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Formation" hidden="false" id="3558-eb6c-91f9-7284" defaultAmount="1">

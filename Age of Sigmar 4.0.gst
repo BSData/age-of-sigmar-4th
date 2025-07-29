@@ -13720,7 +13720,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="false" name="Allow Legends" hidden="false" id="7e59-2237-4890-a80a">
+    <selectionEntry type="upgrade" import="true" name="Allow Legends" hidden="false" id="7e59-2237-4890-a80a">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ef2f-8b2e-0a27-0708"/>
       </constraints>
