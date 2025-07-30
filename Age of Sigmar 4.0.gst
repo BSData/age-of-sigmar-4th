@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="41" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="42" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -14146,6 +14146,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 513" id="c75a-c95c-5410-4446" hidden="false"/>
     <publication name="Battletome: Idoneth Deepkin" id="9866-239b-07f0-d92b" hidden="false"/>
     <publication name="White Dwarf Issue 514" id="8b18-3cdd-0e4a-bfd4" hidden="false"/>
+    <publication name="Battletome Supplement: Blades of Khorne" id="de00-5d7f-9409-d250" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
