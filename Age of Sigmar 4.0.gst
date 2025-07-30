@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="42" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="43" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -380,49 +380,49 @@
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true" includeChildForces="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true" includeChildForces="true" includeChildSelections="false"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="6" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -445,7 +445,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
       </costs>
       <forceEntryLinks>
-        <forceEntryLink name="Regiment" id="d4ad-4c31-c4fd-babd" hidden="false" targetId="3af3-e044-789b-97c5" type="forceEntry">
+        <forceEntryLink name="Regiment" id="d4ad-4c31-c4fd-babd" hidden="false" targetId="376a-6b97-8699-dd59" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -1273,49 +1273,49 @@
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true" includeChildForces="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true" includeChildForces="true" includeChildSelections="false"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="6" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1338,7 +1338,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="1"/>
       </costs>
       <forceEntryLinks>
-        <forceEntryLink name="Regiment" id="48a1-e075-c797-5605" hidden="false" targetId="3af3-e044-789b-97c5" type="forceEntry">
+        <forceEntryLink name="Regiment" id="48a1-e075-c797-5605" hidden="false" targetId="376a-6b97-8699-dd59" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -2318,49 +2318,49 @@
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true" includeChildForces="true"/>
                     <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true" includeChildForces="true" includeChildSelections="false"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="6" field="forces" scope="roster" childId="any" shared="true"/>
                     <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2383,7 +2383,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
       <forceEntryLinks>
-        <forceEntryLink name="Regiment" id="a153-5f24-3305-12d2" hidden="false" targetId="3af3-e044-789b-97c5" type="forceEntry">
+        <forceEntryLink name="Regiment" id="a153-5f24-3305-12d2" hidden="false" targetId="376a-6b97-8699-dd59" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -3822,62 +3822,62 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="7" field="forces" scope="roster" childId="any" shared="true" includeChildForces="false"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="8" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
-                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
-                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true" includeChildForces="true"/>
-                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true" includeChildForces="true" includeChildSelections="false"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
                   </conditions>
                 </conditionGroup>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="6" field="forces" scope="roster" childId="any" shared="true"/>
-                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
-                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="3af3-e044-789b-97c5" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3900,7 +3900,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
       <forceEntryLinks>
-        <forceEntryLink name="Regiment" id="008f-df97-1a31-e799" hidden="false" targetId="3af3-e044-789b-97c5" type="forceEntry">
+        <forceEntryLink name="Regiment" id="008f-df97-1a31-e799" hidden="false" targetId="376a-6b97-8699-dd59" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -5044,7 +5044,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
       <forceEntryLinks>
-        <forceEntryLink name="Regiment" id="f8f4-3e65-bf5c-dc4f" hidden="false" targetId="3af3-e044-789b-97c5" type="forceEntry">
+        <forceEntryLink name="Regiment" id="f8f4-3e65-bf5c-dc4f" hidden="false" targetId="376a-6b97-8699-dd59" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditionGroups>
@@ -8284,7 +8284,7 @@
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
-    <forceEntry name="Regiment" id="3af3-e044-789b-97c5" hidden="true" sortIndex="102">
+    <forceEntry name="Regiment" id="376a-6b97-8699-dd59" hidden="true" sortIndex="102">
       <categoryLinks>
         <categoryLink name="Regimental Leader" hidden="false" id="7849-0c9c-7a4c-e4b9" targetId="d1f3-921c-b403-1106">
           <constraints>
