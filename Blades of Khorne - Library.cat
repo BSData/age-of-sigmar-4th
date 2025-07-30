@@ -436,9 +436,7 @@
         <profile name="Lord of the Brass Stampede" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1b61-fb90-f68a-a754">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit charged this turn, for the rest of the turn, the following effects apply to friendly **^^Blades of Khorne Cavalry^^** units while they are wholly within 18&quot; of this unit:
-• Add 1 to charge rolls for those units.
-• You can re-roll crushing charge rolls for those units.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit charged this turn, for the rest of the turn, add 1 to charge rolls for **^^Blades of Khorne Cavalry^^** units while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
@@ -448,8 +446,8 @@
         <profile name="Slaughterous Charge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d7c0-d49c-ff0c-f39d">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick a visible enemy unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -483,7 +481,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Blood-hungry</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -513,13 +511,6 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Karanak" hidden="false" id="182c-a6ee-9890-fe8e" publicationId="81a9-3dbf-dbc5-672e">
       <constraints>
@@ -1111,88 +1102,6 @@ Your opponent must resolve combat attacks for the target using the melee weapon 
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Exalted Deathbringer" hidden="false" id="4ac3-575f-5bc8-7da2" publicationId="81a9-3dbf-dbc5-672e">
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="35bc-ba3b-3528-17e6" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
-      </entryLinks>
-      <profiles>
-        <profile name="Exalted Deathbringer" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="6eb8-46f7-ba8f-a9b0">
-          <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="First of the Gorechosen" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f921-e507-d745-9b9f">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If any damage points were allocated to an enemy unit by this unit’s combat attacks this turn and that enemy unit has been destroyed, **Heal (5)** this unit and give this unit a **glorious ascent token**.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
-          </attributes>
-        </profile>
-        <profile name="Glorious Ascent" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="658f-f8f3-a5f7-cfb0">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit’s **Deathbringer Weapon** for each **glorious ascent token** it has.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
-          </attributes>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink name="HERO" hidden="false" id="b352-3f1f-50da-45f5" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="CHAOS" hidden="false" id="b2f3-e713-7d44-ea67" targetId="319b-38ee-d10d-e800" primary="false"/>
-        <categoryLink name="BLADES OF KHORNE" hidden="false" id="36ab-7e44-4366-68ae" targetId="34e2-3c11-76bc-a2e" primary="false"/>
-        <categoryLink name="INFANTRY" hidden="false" id="950e-f985-665d-4f" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="BLOODBOUND" hidden="false" id="66c0-bb7e-2720-57ba" targetId="971a-1bec-c9dc-f9c4" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="841b-acac-2855-1c1a" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
-        <categoryLink name="Legends" hidden="false" id="f709-1028-a1d0-49b4" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Exalted Deathbringer" hidden="false" id="6f41-abee-1525-c7e3">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Deathbringer Weapon" hidden="false" id="f591-5a18-d43b-4925">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfb8-9ee-a72b-3f3d"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7473-a59e-16f7-c292"/>
-              </constraints>
-              <profiles>
-                <profile name="Deathbringer Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="57df-b93c-95d4-c731">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="7494-713e-e0b-d0e3"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c261-e475-ed82-91ea"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skarr Bloodwrath" hidden="false" id="79a6-3d8a-8302-cc13" publicationId="81a9-3dbf-dbc5-672e">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5a9a-1208-be6d-7569" includeChildSelections="true"/>
@@ -1212,7 +1121,7 @@ Your opponent must resolve combat attacks for the target using the melee weapon 
         <profile name="The Slaughterborn" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e0eb-6e2d-e02f-b34">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can use this ability if it has been destroyed.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if it has been destroyed.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 2D6. On an 8+, set up a replacement unit on the battlefield more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -1225,7 +1134,7 @@ Your opponent must resolve combat attacks for the target using the melee weapon 
         <profile name="Murderous Paragon" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e872-86a9-d886-36d3">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is in combat, add 1 to the Attacks characteristic of melee weapons used by friendly Wrathmongers units while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is in combat, add 1 to the Attacks characteristic of melee weapons used by friendly **Wrathmongers** units while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
@@ -1259,7 +1168,7 @@ Your opponent must resolve combat attacks for the target using the melee weapon 
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Blood-hungry, Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1271,13 +1180,6 @@ Your opponent must resolve combat attacks for the target using the melee weapon 
           </constraints>
         </selectionEntry>
       </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flesh Hounds" hidden="false" id="4c6b-352c-715-cda7" publicationId="81a9-3dbf-dbc5-672e">
       <profiles>
@@ -1624,8 +1526,8 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
         <profile name="Slaughterous Charge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="15b3-5960-41e5-9a52">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a crushing charge roll of D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick a visible enemy unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1636,7 +1538,7 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
         </profile>
         <profile name="Herald of Trampling Death" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ca97-fd3e-772d-e23b">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Charge Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Bloodcrushers** unit within this unit’s combat range to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, weapons used by this unit and the target have **Charge (+1 Damage)**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -1671,9 +1573,9 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend), Crit (Mortal)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Blood-hungry, Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1691,7 +1593,7 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Cavalry^^** +1 Rend), Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1703,13 +1605,6 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
           </constraints>
         </selectionEntry>
       </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skulltaker" hidden="false" id="62-1d37-fc6c-515f" publicationId="81a9-3dbf-dbc5-672e">
       <constraints>
@@ -2691,77 +2586,6 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
           </constraints>
         </selectionEntry>
       </selectionEntries>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Aspiring Deathbringer" hidden="false" id="886-9e3f-ed95-f1e7" publicationId="81a9-3dbf-dbc5-672e">
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="106e-a622-bbaa-e73d" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
-      </entryLinks>
-      <profiles>
-        <profile name="Aspiring Deathbringer" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="4960-d130-bcd2-dd86">
-          <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Furious Warleader" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c0cb-ee6b-3cc5-a0f6">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a Fight ability for this unit</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **Blood Warriors** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. Add 1 to wound rolls for attacks made by this unit and the target for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
-          </attributes>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink name="HERO" hidden="false" id="4c8-518e-e26c-1c28" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="CHAOS" hidden="false" id="723e-a481-b9a3-8e46" targetId="319b-38ee-d10d-e800" primary="false"/>
-        <categoryLink name="BLADES OF KHORNE" hidden="false" id="50bf-8ec1-9825-9333" targetId="34e2-3c11-76bc-a2e" primary="false"/>
-        <categoryLink name="INFANTRY" hidden="false" id="2930-97ff-8ed3-9e48" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="BLOODBOUND" hidden="false" id="3b14-e88b-8e7b-9aa2" targetId="971a-1bec-c9dc-f9c4" primary="false"/>
-        <categoryLink name="Legends" hidden="false" id="95d0-c83d-a257-b369" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Aspiring Deathbringer" hidden="false" id="7916-a562-7b9f-d548">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Goreaxe and Skullhammer" hidden="false" id="a9ea-d05b-6a0c-b82f">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60b1-c374-4c50-5e6a"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="faf5-2d2b-a7f5-380f"/>
-              </constraints>
-              <profiles>
-                <profile name="Goreaxe and Skullhammer" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="be74-8c00-868-8d97">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">7</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="acb-5cc5-53b7-b9cf"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="41d1-14ac-e277-b79f"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Bloodstoker" hidden="false" id="bed-461e-b0ef-6bc3" publicationId="81a9-3dbf-dbc5-672e">
       <entryLinks>
@@ -5007,7 +4831,7 @@ Cover, Impassible**</description>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ca7-d460-e670-6c76"/>
                   </constraints>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="" id="297f-b1a8-d447-53f0" hidden="false" flatten="true">
+                    <selectionEntryGroup id="297f-b1a8-d447-53f0" hidden="false" flatten="true">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c298-b961-67b6-aa42"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0daf-54f6-5edd-8aa4"/>
