@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="5eab-d5d8-2e11-fd7e" name="þ The Duardin Ascendant [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="5eab-d5d8-2e11-fd7e" name="þ The Duardin Ascendant [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Grombrindal, the White Dwarf" hidden="false" id="5264-60cd-4218-9783" publicationId="e47d-cde6-bbd2-9db9">
       <entryLinks>
@@ -770,10 +770,6 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2639-972b-b900-4396" includeChildSelections="true"/>
       </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Paths" hidden="false" id="af22-d154-537c-ef33" type="selectionEntryGroup" targetId="f8a3-9a58-b0a7-91a9"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4539-1b6c-af52-8202" type="selectionEntryGroup" targetId="8b61-58c5-cef8-e89a"/>
-      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Brokk Grungsson, Lord-Magnate of Barak-Nar" hidden="false" id="3852-f7d2-5d9c-398f" type="selectionEntry" targetId="e071-391c-e920-ac59">
       <categoryLinks>
@@ -2316,6 +2312,16 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.72e3-7b1b-cb94-4cbd"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Warden King" hidden="false" id="b833-b65d-a3ec-1fb0" type="selectionEntry" targetId="962e-f3fb-717c-d408">
       <categoryLinks>
@@ -2382,7 +2388,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="d849-40ca-6072-5304" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
@@ -2830,8 +2836,6 @@
     <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="214c-8798-c11f-fedd" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="e806-53c2-459f-20f9" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
-        <entryLink import="true" name="Paths" hidden="false" id="2c65-71ac-7b5a-7c7d" type="selectionEntryGroup" targetId="f8a3-9a58-b0a7-91a9"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7e5c-ba6c-f011-3300" type="selectionEntryGroup" targetId="8b61-58c5-cef8-e89a"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7057-46bb-e32c-3b4f"/>
@@ -2839,6 +2843,30 @@
       </constraints>
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="0145-e00a-bf8f-5ebb" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Prayer Lore" hidden="true" id="48b8-2e23-5354-22f1" defaultAmount="1">
+      <entryLinks>
+        <entryLink import="true" name="Prayer Lores" hidden="false" id="1182-640d-65f9-485b" type="selectionEntryGroup" targetId="2f5f-e784-ac3f-72e5" flatten="true"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bdc1-3f81-18c6-f0d7"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="027c-33da-c773-0f13"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="9771-2094-6c1c-10a7" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
