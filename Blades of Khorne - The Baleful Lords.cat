@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1a14-ef58-23a1-e471" name="Blades of Khorne - The Baleful Lords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="41" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1a14-ef58-23a1-e471" name="Blades of Khorne - The Baleful Lords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="41" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: The Baleful Lords" hidden="false" id="3b90-5dd6-8d17-de59" publicationId="81a9-3dbf-dbc5-672e">
       <profiles>
@@ -277,7 +277,7 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="92d4-ce46-a0f2-3df6" field="category"/>
+            <modifier type="add" value="a795-92b4-87df-85ac" field="category"/>
           </modifiers>
           <conditionGroups>
             <conditionGroup type="and">
@@ -292,7 +292,6 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.34e2-3c11-76bc-a2e"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.67bd-e89-e604-d3ab"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -341,7 +340,7 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="92d4-ce46-a0f2-3df6" field="category"/>
+            <modifier type="add" value="a795-92b4-87df-85ac" field="category"/>
           </modifiers>
           <conditionGroups>
             <conditionGroup type="and">
@@ -356,7 +355,6 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.34e2-3c11-76bc-a2e"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.67bd-e89-e604-d3ab"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -405,8 +403,7 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.34e2-3c11-76bc-a2e"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.67bd-e89-e604-d3ab"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.92d4-ce46-a0f2-3df6"/>
+            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.a795-92b4-87df-85ac"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -451,7 +448,6 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.34e2-3c11-76bc-a2e"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.67bd-e89-e604-d3ab"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -497,5 +493,26 @@ That unit can move 2D6&quot;. It can end that move in combat with any units that
   </selectionEntries>
   <categoryEntries>
     <categoryEntry name="BALEFUL LORDS" id="9e24-2cad-6beb-a9e6" hidden="false"/>
+    <categoryEntry name="Baleful Lord" id="a795-92b4-87df-85ac" hidden="false">
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="68ca-e955-0519-eba4" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="68ca-e955-0519-eba4">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="c33b-a438-0c12-3614" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
   </categoryEntries>
 </catalogue>
