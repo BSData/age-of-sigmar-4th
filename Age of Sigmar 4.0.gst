@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="46" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="47" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -165,8 +165,6 @@
     <categoryEntry name="MORTISAN" hidden="false" id="a2d-c08d-4d7d-fe93"/>
     <categoryEntry name="UNIQUE" hidden="false" id="72ce-2188-70bf-2dbd"/>
     <categoryEntry name="WIZARD (2)" hidden="false" id="8179-697a-9f4c-91d4"/>
-    <categoryEntry name="SPELL" hidden="false" id="1561-8696-f1a1-555a"/>
-    <categoryEntry name="SUMMON" hidden="false" id="b379-3877-7f00-8d0e"/>
     <categoryEntry name="Configuration" hidden="false" id="676-2b78-7bbf-ba9c"/>
     <categoryEntry name="CHAMPION" hidden="false" id="f679-3bcb-d664-9ac3"/>
     <categoryEntry name="STANDARD BEARER (1/10)" hidden="false" id="1f17-ad98-ada0-ccf"/>
