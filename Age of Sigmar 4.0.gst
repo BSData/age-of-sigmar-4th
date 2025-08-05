@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="45" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="46" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -286,7 +286,6 @@
     <categoryEntry name="BLADES OF KHORNE" id="34e2-3c11-76bc-a2e" hidden="false"/>
     <categoryEntry name="BLOODBOUND" id="971a-1bec-c9dc-f9c4" hidden="false"/>
     <categoryEntry name="BLOODTHIRSTER" id="ee38-20ac-f92f-50e5" hidden="false"/>
-    <categoryEntry name="GORECHOSEN" id="916b-ca14-decf-5845" hidden="false"/>
     <categoryEntry name="WIZARD (4)" id="1c0-eb0b-bbd5-4731" hidden="false"/>
     <categoryEntry name="LUMINETH REALM-LORDS" id="879-a29f-5c33-2e92" hidden="false"/>
     <categoryEntry name="VANARI" id="9958-c5c0-c246-8010" hidden="false"/>
