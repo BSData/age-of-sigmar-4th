@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="47" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="48" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -9883,6 +9883,40 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <rule name="Shoot In Combat" hidden="false" id="1b4d-1f46-a7f9-bcee">
       <description>This weapon can be used to make shooting attacks even if the attacking unit is in combat.</description>
     </rule>
+    <rule name="Cover" id="df46-5d90-8a18-6608" hidden="false">
+      <description>Subtract 1 from hit rolls for attacks that target a unit that is behind or wholly on this terrain feature, unless that unit charged this turn or has the **^^Fly^^** keyword.</description>
+    </rule>
+    <rule name="Impassible" id="fd0b-e72f-a215-64e2" hidden="false">
+      <description>Models cannot move across, be set up on or end moves on any part of this terrain feature.</description>
+    </rule>
+    <rule name="Obscuring" id="bcd4-2c7b-5338-82f8" hidden="true">
+      <description>A unit cannot be targeted by shooting attacks if it is behind or wholly on this terrain feature, unless it has the **^^Fly^^** keyword.</description>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Obscuring" id="e40f-b982-0721-291b" hidden="true">
+      <description>While every model in a non-**^^Monster^^** unit that does not have the **Fly^^** keyword is within 1&quot; of this terrain feature, the following apply:
+• That unit is only visible to enemy units that are within its combat range.
+• The Range characteristic of that unit&apos;s weapons is halved (rounding down to the nearest inch).</description>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+    <rule name="Place of Power" id="bc59-9616-faae-992c" hidden="false">
+      <description>**^^Heroes^^** within 3&quot; of this terrain feature can use the ‘Activate Place of Power’ ability.</description>
+    </rule>
+    <rule name="Unstable" id="8182-41a0-866a-ff5f" hidden="false">
+      <description>Models can move across but cannot be set up on or end any type of move on any part of this terrain feature that is more than 1&quot; tall.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile name="Fly" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8e01-c601-8a44-8f74">
@@ -9944,6 +9978,51 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="8f44-a403-e9a1-0aa3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
+    <profile name="Activate Place of Power" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="true" id="6968-28a3-3f2c-dfcc">
+      <characteristics>
+        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Start of Any Turn</characteristic>
+        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hero^^** within 3&quot; of a **Place of Power** to use this ability, then pick that **Place of Power** to be the target.</characteristic>
+        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 1, inflict D3 mortal damage on that **^^Hero^^**. On a 2+:
+• If that **^^Hero^^** is a **^^Wizard^^** or **^^Priest^^**, add 1 to casting rolls or chanting rolls for that **^^Hero^^** this turn.
+• If that **^^Hero^^** is not a **^^Wizard^^** or **^^Priest^^**, they can use the ‘Unbind’ or ‘Banish Manifestation’ ability this turn as if they had **^^Wizard (1)^^**.</characteristic>
+        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+      </characteristics>
+      <attributes>
+        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+      </attributes>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="f079-501a-2738-6845" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
+    <profile name="Activate Place of Power" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="true" id="83a0-e945-ccde-9525">
+      <characteristics>
+        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Any Turn</characteristic>
+        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hero^^** within 3&quot; of a **Place of Power** to use this ability, then pick that **Place of Power** to be the target.</characteristic>
+        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
+• ***Cauterising Pollen:*** Roll a dice. On a 1, inflict 1 mortal damage on each unit (friendly and enemy) within 6&quot; of any **Places of Power**. On a 3+, **Heal (2)** each unit (friendly and enemy) wholly within 6&quot; of the target.
+• ***Rapid Sprouting:*** Pick a Ghyranite objective or visible terrain feature within 12&quot; of that **^^Hero^^** and roll a dice. On a 3+, that objective or terrain feature has the ‘Obscuring’ ability (see 1.2) for the rest of the battle.
+• ***Tap the Ley Lines:*** For the rest of the turn, if that **^^Hero^^** is not a **^^Wizard^^** or **^^Priest^^**, they can use the ‘Unbind’ or ‘Banish Manifestation’ ability as if they had **^^Wizard (1)^^**.</characteristic>
+        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+      </characteristics>
+      <attributes>
+        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+      </attributes>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f079-501a-2738-6845" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
