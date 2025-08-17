@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="6887-883c-79f3-9f8" name="Blades of Khorne - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="6887-883c-79f3-9f8" name="Blades of Khorne - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Skull Cannon" hidden="false" id="597f-3928-bede-9c43" publicationId="81a9-3dbf-dbc5-672e">
       <entryLinks>
@@ -1796,7 +1796,7 @@ If the chanting roll for an enemy priest within 12&quot; of this unit is an unmo
         </profile>
         <profile name="Blood Sacrifice" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2f51-3ca9-a7cb-c3c3">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Any Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a unit (friendly or enemy) within this unit’s combat range to be the target</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+:
 • Inflict an amount of mortal damage on the target equal to the roll.
@@ -4190,8 +4190,8 @@ Cover, Impassible**</description>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blood-slick Weapon" hidden="false" id="8e9b-3d4c-8f65-e819">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41de-cca4-7721-86ff"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="078a-0616-af70-81f8"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41de-cca4-7721-86ff" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="078a-0616-af70-81f8" automatic="true"/>
               </constraints>
               <profiles>
                 <profile name="Blood-slick Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0b8b-28d1-93a7-4868">
@@ -4256,6 +4256,23 @@ Cover, Impassible**</description>
                   </modifiers>
                 </profile>
               </profiles>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="41de-cca4-7721-86ff"/>
+                    <modifier type="set" value="0" field="078a-0616-af70-81f8"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7810-580d-c5b7-2f3f" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="353c-e908-7839-9082" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Juggernaut&apos;s Brass-shod Hooves" hidden="false" id="9a86-c07a-b0f3-97bd">
               <constraints>
@@ -4853,17 +4870,14 @@ Cover, Impassible**</description>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fb2-1e93-f09e-2a5b"/>
                   </constraints>
                   <profiles>
-                    <profile name="Hasty Repairist" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="fd12-303b-6f74-7dd5">
+                    <profile name="Brass Collar" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7cee-6921-de9e-5a8a">
                       <characteristics>
-                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Skyvessel^^** or **Zontari Endrin Dock** within this unit&apos;s combat range to be the target.</characteristic>
-                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D3)** the target.</characteristic>
-                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from casting rolls for **^^Wizards^^** while they are within 12&quot; of this unit.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
                       </attributes>
                     </profile>
                   </profiles>
