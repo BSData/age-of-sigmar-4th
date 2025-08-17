@@ -9886,7 +9886,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <rule name="Cover" id="df46-5d90-8a18-6608" hidden="false">
       <description>Subtract 1 from hit rolls for attacks that target a unit that is behind or wholly on this terrain feature, unless that unit charged this turn or has the **^^Fly^^** keyword.</description>
     </rule>
-    <rule name="Impassible" id="fd0b-e72f-a215-64e2" hidden="false">
+    <rule name="Impassable" id="fd0b-e72f-a215-64e2" hidden="false">
       <description>Models cannot move across, be set up on or end moves on any part of this terrain feature.</description>
     </rule>
     <rule name="Obscuring" id="bcd4-2c7b-5338-82f8" hidden="true">
