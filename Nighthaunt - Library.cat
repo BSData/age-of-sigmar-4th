@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Nagash, Supreme Lord of the Undead" hidden="false" id="fb77-fec9-42ed-a7fd">
       <categoryLinks>
@@ -78,7 +78,7 @@
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18&quot; of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.</characteristic>
             <characteristic name="Effect" typeId="1cb9-a-1345-907f">If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly **^^Death^^** unit, pick 1 of the following effects:
 • Return a number of slain models to the target unit with a combined Health characteristic of up to 3.
-• The target has **^^Ward (5+)^^** until the start of your next turn</characteristic>
+• If the target was not set up this turn and is not in combat, it can move up to 3&quot;. It cannot move into combat.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -144,24 +144,22 @@
       <profiles>
         <profile name="Reikenor the Grimhailer" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="fece-57b4-eef6-cebd">
           <characteristics>
-            <characteristic name="Move" id="8755-39ef-bc07-45bb" hidden="false" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
-            <characteristic name="Health" id="bd84-23ab-3347-bb74" hidden="false" typeId="96be-54ae-ce7b-10b7">7</characteristic>
-            <characteristic name="Save" id="38d5-b1-d01f-254d" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="89ab-6f56-47d9-b20" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Corpse Candles" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3698-696e-ea48-4852">
           <characteristics>
-            <characteristic name="Timing" id="4424-cf5-d525-9399" hidden="false" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
-            <characteristic name="Declare" id="9d5d-b4f1-6fd1-c8d2" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick either this unit or a visible
-enemy unit within 12&quot; of this unit to be
-the target.</characteristic>
-            <characteristic name="Effect" id="25c5-d723-8925-7a41" hidden="false" typeId="b6f1-ba36-6cd-3b03">Allocate 1 damage point to the target.
-If you picked an enemy unit, add 1 to casting rolls for this unit for the rest of the turn. 
-If you picked this unit, for the rest of the turn:
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick either this unit or a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Allocate 1 damage point to the target.
+If you picked this unit, allocate 1 damage point to this unit and add 1 to casting rolls for this unit for the rest of the turn (ward rolls cannot be made for that damage point). 
+If you picked an enemy unit, roll a dice. On a 3+, inflict 1 mortal damage on that enemy unit and for the rest of the turn:
 • Add 1 to casting rolls for this unit.
 • Add 1 to this unit’s power level.</characteristic>
-            <characteristic name="Keywords" id="a386-e81a-3cba-de7e" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -181,11 +179,11 @@ If you picked this unit, for the rest of the turn:
         </profile>
         <profile name="Wraithstorm" hidden="false" id="d09b-1ffa-f0e5-636b" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)">
           <characteristics>
-            <characteristic name="Timing" id="44b8-a4e1-2cb4-4dd0" hidden="false" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" id="67fc-f5f0-bc0b-295c" hidden="false" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-            <characteristic name="Declare" id="597b-2fa6-6c6f-a48e" hidden="false" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" id="adeb-57b7-5a65-a0ff" hidden="false" typeId="1cb9-a-1345-907f">Inflict D3 mortal damage on the target. If any models are slain by this ability, inflict an additional D3 mortal damage on the target</characteristic>
-            <characteristic name="Keywords" id="927c-8dd1-e953-2acc" hidden="false" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict D3 mortal damage on the target. If any models are slain as a result of this ability, inflict a further D3 mortal damage on the target</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
@@ -199,9 +197,9 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="UNIQUE" hidden="false" id="82a9-3e40-bb95-573" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="ffeb-8e6f-2f63-5357" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="407a-f38f-e39c-f9b" targetId="e3a4-4581-9f76-4215" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="53e6-4731-30a-3b0" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="5be8-8b25-d0ea-a5be" targetId="926c-df8c-6841-d49e" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="19d4-5f81-3ccd-2724" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="7043-6d19-4f59-4d98" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4dd3-1978-1d04-66d0" includeChildSelections="true"/>
@@ -262,7 +260,7 @@ If you picked this unit, for the rest of the turn:
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
@@ -296,7 +294,7 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="FLY" hidden="false" id="77a0-4d15-b2de-d905" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="a242-ed86-d8fc-dac4" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="d1f8-8149-9a2b-3a31" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="bf91-490b-51a-817e" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="2bff-74d9-b178-e82d" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Knight of Shrouds" hidden="false" id="8cc6-a3c7-c5c-9562">
@@ -334,18 +332,31 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Kurdoss Valentian, the Craven King" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="2d78-6df3-292d-6c4d">
           <characteristics>
-            <characteristic name="Move" id="75a3-debb-9a11-bd0" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="9cf1-e4d6-277e-e55c" hidden="false" typeId="96be-54ae-ce7b-10b7">7</characteristic>
-            <characteristic name="Save" id="116d-5fc-8ac4-58af" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="15ac-adf2-ac04-5709" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="If I Cannot Rule, None Shall Rule!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7b27-efd7-5737-650a">
+        <profile name="Hail Kurdoss! King of Nothing!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7b27-efd7-5737-650a">
           <characteristics>
-            <characteristic name="Timing" id="8ab4-c323-12cb-29ae" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: Opponent declared a command for a unit within 12&quot; of this unit</characteristic>
-            <characteristic name="Declare" id="f09f-432e-56c2-4cfa" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="fcc5-5698-ca41-245f" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost.</characteristic>
-            <characteristic name="Keywords" id="9793-291a-aa56-a99b" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: Opponent declared a command for a unit within 12&quot; of this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick a friendly **Craventhrone Guard** unit that is not in combat to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target can immediately use a **^^Shoot^^** ability as if it were your shooting phase, but all of its attacks must target an enemy unit in combat with this unit. The target cannot use **^^Charge^^** abilities for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+          </attributes>
+        </profile>
+        <profile name="If I Cannot Rule, None Shall Rule!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="20f8-9166-47fb-43d9">
+          <characteristics>
+            <characteristic name="Timing" id="2bcc-9ce7-63d8-a92b" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: Opponent declared a command for a unit within 12&quot; of this unit</characteristic>
+            <characteristic name="Declare" id="f139-5560-683d-59a7" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" id="bda1-63f8-ee44-8e7d" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost.</characteristic>
+            <characteristic name="Keywords" id="f749-2e46-1370-9033" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -361,7 +372,7 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="FLY" hidden="false" id="8f90-20fa-8188-5120" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="31b8-3fe2-1ebf-8828" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="6797-5755-8b7e-5ba" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="7a02-62cd-68d3-9118" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="15b4-6acb-4f51-85b2" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1e96-4128-3d06-e08e" includeChildSelections="true"/>
@@ -369,34 +380,16 @@ If you picked this unit, for the rest of the turn:
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Kurdoss Valentian, the Craven King" hidden="false" id="df3c-5057-46de-287c">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Wraith Heralds’ Spectral Claws" hidden="false" id="ab1f-c4ba-1274-b7d1">
-              <profiles>
-                <profile name="Wraith Heralds’ Spectral Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e3b-d2a0-de0c-eba4">
-                  <characteristics>
-                    <characteristic name="Atk" id="7a9b-6af4-b89a-3b84" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" id="a21e-cc9-699b-1239" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="c966-1ae7-145b-f97f" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="a4d2-c656-d8ff-7273" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="5235-fd80-50d3-f133" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="5e2d-def-74aa-9dd5" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a4b-6271-3f8e-e0a5"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f04-f729-845-be9"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sepulchral Sceptre" hidden="false" id="7cbb-7b73-f960-f13a">
               <profiles>
                 <profile name="Sepulchral Sceptre" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="16c7-a3d9-f502-3c83">
                   <characteristics>
-                    <characteristic name="Atk" id="7be4-5f8-51c2-957b" hidden="false" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" id="6ff6-5baf-a314-b26c" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="509d-93bb-d767-36f7" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="ba12-634e-ecee-2f31" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="5f84-9960-45c3-e76f" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
-                    <characteristic name="Ability" id="408-b98b-3b9c-f627" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -420,18 +413,31 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Awlrach the Drowner" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="9553-e4ac-8c8a-cc6a">
           <characteristics>
-            <characteristic name="Move" id="4e91-a6a3-df74-6ff4" hidden="false" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" id="366-a958-95dc-f35" hidden="false" typeId="96be-54ae-ce7b-10b7">7</characteristic>
-            <characteristic name="Save" id="e30b-6b66-d12d-b6d8" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="fe28-71ae-c639-c76c" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Passage Through the Underworlds" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d455-67e0-aa4e-ad3a">
+        <profile name="Drifting on Spectral Tides" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d455-67e0-aa4e-ad3a">
           <characteristics>
-            <characteristic name="Timing" id="f043-acd5-139-d4e6" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
-            <characteristic name="Declare" id="c834-3892-118f-297d" hidden="false" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick a friendly non-**^^Hero Nighthaunt^^** unit that is not in combat and is wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" id="42e4-5e1-8ee0-16ee" hidden="false" typeId="b6f1-ba36-6cd-3b03">Remove this unit and the target from the battlefield, then set them up again on the battlefield wholly within 6&quot; of each other and more than 7&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" id="6fd6-9d32-b5ec-34e7" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, this unit can immediately use the &apos;Normal Move&apos; or the &apos;Retreat&apos; ability as if it were your movement phase.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+          </attributes>
+        </profile>
+        <profile name="Passage Through the Underworlds" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="859a-f549-5b04-032d">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick a friendly non-**^^Hero Nighthaunt^^** unit that is not in combat and is wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit and the target from the battlefield, then set them up again on the battlefield wholly within 6&quot; of each other and more than 7&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -446,8 +452,8 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="UNIQUE" hidden="false" id="76f2-a6b7-1f34-2db2" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="5b51-d7ba-6f50-e411" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="a6e3-e3c6-a91-ac7e" targetId="e3a4-4581-9f76-4215" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="de6-5714-ef1a-2acc" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="WAR MACHINE" hidden="false" id="7141-3be2-92e8-63aa" targetId="f7bc-b618-4b5d-2bae" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="8544-3141-bf9d-f0a2" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43bd-83b-236d-d8a1" includeChildSelections="true"/>
@@ -459,12 +465,12 @@ If you picked this unit, for the rest of the turn:
               <profiles>
                 <profile name="Deathwood Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="61d-8bc3-32a2-4720">
                   <characteristics>
-                    <characteristic name="Atk" id="bd87-e8be-ab3f-f796" hidden="false" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" id="a751-4163-4ad4-f227" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="7bb9-4617-d76c-cab1" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="f6dc-2c9a-8b0b-d6a5" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="72b3-df3-adaa-41c1" hidden="false" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" id="8e0e-fe7b-acdd-28b7" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -488,10 +494,10 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Lady Olynder, Mortarch of Grief" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="a416-8369-6fe2-db17">
           <characteristics>
-            <characteristic name="Move" id="f8e9-94c5-7b21-11ec" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="a585-a8be-80d8-3ca9" hidden="false" typeId="96be-54ae-ce7b-10b7">7</characteristic>
-            <characteristic name="Save" id="5096-6e63-c785-cf42" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="7d70-7246-3287-5c5e" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="No Rest for the Wicked" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f367-31f5-d9dc-6d28">
@@ -509,8 +515,8 @@ If you picked this unit, for the rest of the turn:
         </profile>
         <profile name="Mortarch of Grief" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="608b-2465-cbf2-96b5">
           <characteristics>
-            <characteristic name="Keywords" id="1439-fd5e-8da4-5aeb" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="2912-2cf9-105c-cdbb" hidden="false" typeId="fd7f-888d-3257-a12b">Subtract 3 from the control scores of enemy units while they are within 12&quot; of this unit</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If the unmodified hit roll or unmodified wound roll for an attack that targets this unit is 1-4, the attack fails and the attack sequence ends</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
@@ -522,7 +528,7 @@ If you picked this unit, for the rest of the turn:
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Ignore positive modifiers to hit rolls, wound rolls and save rolls for the target for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Ignore positive modifiers to the target&apos;s control score and to hit rolls, wound rolls and save rolls for the target for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -539,8 +545,8 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="WARMASTER" hidden="false" id="f15e-3668-6b27-9b96" targetId="c203-51a0-3d44-6b07" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="c298-a34e-1860-b4a" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="WIZARD (2)" hidden="false" id="2345-87d1-c499-f94b" targetId="8179-697a-9f4c-91d4" primary="false"/>
-        <categoryLink name="WARD (4+)" hidden="false" id="6e0-3265-1e90-df4e" targetId="f99f-98ee-909f-57cd" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="490b-6f86-15a8-ba9c" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="bd23-366a-5766-10c4" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fe30-6367-5c3e-9dd7" includeChildSelections="true"/>
@@ -548,34 +554,16 @@ If you picked this unit, for the rest of the turn:
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lady Olynder, Mortarch of Grief" hidden="false" id="7369-4fe0-7e03-ce1f">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Handmaidens’ Spectral Claws" hidden="false" id="9b0d-9e3e-aad9-36d">
-              <profiles>
-                <profile name="Handmaidens’ Spectral Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3c8d-42aa-f009-d33">
-                  <characteristics>
-                    <characteristic name="Atk" id="b3b4-c67a-19fd-67bc" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" id="4bff-7634-cbc6-8066" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="90c5-6769-481-5c4d" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="d952-9512-e842-2d56" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="47db-465b-1b0e-a616" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="a223-f09c-e9c1-6d02" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8249-7214-e787-c4c0"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1df1-1b37-7658-8c4e"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Staff of Midnight" hidden="false" id="6277-4264-6065-9b5b">
               <profiles>
                 <profile name="Staff of Midnight" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d2a-ecc4-517b-dcc5">
                   <characteristics>
-                    <characteristic name="Atk" id="9215-5c0b-b9c4-408b" hidden="false" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" id="f2ef-e6a9-76a6-f957" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="81b1-b105-e6c-c9e1" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="3b47-8b46-1ac2-a0f7" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="ea25-f1bf-a918-6e7b" hidden="false" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" id="6655-3032-341b-8967" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -588,13 +576,13 @@ If you picked this unit, for the rest of the turn:
               <profiles>
                 <profile name="Horrifying Visage" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="61c5-1c42-cb0e-2ac7">
                   <characteristics>
-                    <characteristic name="Rng" id="9fc6-7e64-d91f-ec0b" hidden="false" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" id="955c-4962-efdb-593f" hidden="false" typeId="aa17-4296-2887-e05d">1</characteristic>
-                    <characteristic name="Hit" id="924d-1c16-ae1d-40c4" hidden="false" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
-                    <characteristic name="Wnd" id="1e09-4194-8a87-ec16" hidden="false" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" id="f8a3-55d4-b1f1-1a6f" hidden="false" typeId="d03f-a9ae-3eec-755">3</characteristic>
-                    <characteristic name="Dmg" id="74c-6869-4c14-eeca" hidden="false" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
-                    <characteristic name="Ability" id="eb2-e1d0-1c5-6718" hidden="false" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">3</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -711,10 +699,10 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Knight of Shrouds on Ethereal Steed" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="e9a1-fd5-d218-b90b">
           <characteristics>
-            <characteristic name="Move" id="2572-90cc-d1d4-2d1e" hidden="false" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
-            <characteristic name="Health" id="b5f5-486-ff12-86dd" hidden="false" typeId="96be-54ae-ce7b-10b7">7</characteristic>
-            <characteristic name="Save" id="6458-b761-7476-1ffd" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="e582-700c-4f56-e64d" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Stolen Hours" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9130-aa67-559c-e554">
@@ -746,8 +734,8 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="DEATH" hidden="false" id="7de8-31ed-4d3c-cfc8" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="fe03-a1d8-683a-ccb7" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="28a4-fcdc-f21b-9a27" targetId="e3a4-4581-9f76-4215" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="8df8-e417-ec1e-8c97" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="8caf-c61-f454-725f" targetId="926c-df8c-6841-d49e" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="179f-f0e3-d8ec-cdcc" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Knight of Shrouds on Ethereal Steed" hidden="false" id="1589-56e5-16-6407">
@@ -864,10 +852,10 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Krulghast Cruciator" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="5755-ed16-295d-ac70">
           <characteristics>
-            <characteristic name="Move" id="cc13-53a2-d1a9-90a0" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="da81-3720-415e-47cb" hidden="false" typeId="96be-54ae-ce7b-10b7">5</characteristic>
-            <characteristic name="Save" id="81f8-4b53-100b-c227" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="4ceb-8a48-b8bc-2a38" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Empowered Through Excruciation" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3320-cf43-9061-7602">
@@ -887,7 +875,7 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="FLY" hidden="false" id="c169-6e40-f40e-5c48" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="7870-8c53-a45c-17df" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="1e93-4f71-6cc7-a40f" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="2e9-44a2-c938-e3d0" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="5ad4-c2e8-8824-319e" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Krulghast Cruciator" hidden="false" id="6405-24-fb8e-dc4c">
@@ -914,13 +902,13 @@ If you picked this unit, for the rest of the turn:
               <profiles>
                 <profile name="Phantasmal Torture" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="f832-697b-dd88-f981">
                   <characteristics>
-                    <characteristic name="Rng" id="51e0-3198-6dbb-5d0f" hidden="false" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" id="2e46-6d4c-51c7-a2e" hidden="false" typeId="aa17-4296-2887-e05d">4</characteristic>
-                    <characteristic name="Hit" id="23d5-459-67e4-65a2" hidden="false" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
-                    <characteristic name="Wnd" id="71fd-805e-8ea8-322a" hidden="false" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                    <characteristic name="Rnd" id="321a-95ab-d18b-f13" hidden="false" typeId="d03f-a9ae-3eec-755">2</characteristic>
-                    <characteristic name="Dmg" id="43cc-ed0c-6063-627" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                    <characteristic name="Ability" id="83fe-e785-792c-49fc" hidden="false" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -944,18 +932,31 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Lord Executioner" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="67f1-4837-f27-5d5">
           <characteristics>
-            <characteristic name="Move" id="d129-3e-11c9-bfe0" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="8e62-9b41-d83c-cc12" hidden="false" typeId="96be-54ae-ce7b-10b7">6</characteristic>
-            <characteristic name="Save" id="ed6b-3c94-e449-2513" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="1739-c6f2-379c-c5e8" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Staring Death in the Face" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="992a-6d5c-2c0a-6089">
+        <profile name="Ghastly Descent" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="992a-6d5c-2c0a-6089">
           <characteristics>
-            <characteristic name="Timing" id="ffc6-adaa-9d17-662" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn, Any Combat Phase</characteristic>
-            <characteristic name="Declare" id="6967-7206-8256-3794" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" id="e5bc-7ff2-f620-144f" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn. In addition, if the target is a **^^Hero^^**, subtract 5 from the target’s control score for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" id="28d0-50f3-85b3-f0d4" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Infantry^^** or ^^**Cavalry Hero^^** that had any damage points allocated to it this turn by this unit&apos;s attacks to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if the target is a **^^Sentenced^^** unit. On a 5+, the target is automatically destroyed.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="Staring Death in the Face" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d6e0-77e0-67c5-a989">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn. In addition, if the target is a **^^Hero^^**, subtract 5 from the target’s control score for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1005,10 +1006,10 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Dreadblade Harrows" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="5d3e-6c35-b47e-3892">
           <characteristics>
-            <characteristic name="Move" id="20ef-e989-757d-2183" hidden="false" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
-            <characteristic name="Health" id="d5bc-1423-1624-1a7e" hidden="false" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" id="71e3-cca3-bf24-e967" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="121c-103e-8986-dd70" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Curse of Loyalty" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3dff-20f4-7cb0-218e">
@@ -1023,7 +1024,7 @@ If you picked this unit, for the rest of the turn:
         </profile>
         <profile name="Phantasmal Discorporation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f784-69a6-d7fa-a95d">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
@@ -1039,8 +1040,8 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="DEATH" hidden="false" id="7707-9430-2c38-98f" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="8082-5493-d6e5-da45" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="825b-cb80-9bd7-9d53" targetId="e3a4-4581-9f76-4215" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="5faf-917e-da1e-8ecd" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="705b-7859-39d0-e8c" targetId="926c-df8c-6841-d49e" primary="true"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="5459-a68b-3c25-97cc" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Dreadblade Harrow" hidden="false" id="7b08-a126-485b-3c27">
@@ -1108,10 +1109,10 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Spirit Torment" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="61a6-532a-6b13-4dc7">
           <characteristics>
-            <characteristic name="Move" id="6b0a-df8f-8fdb-62b" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="a1ff-f442-761a-25aa" hidden="false" typeId="96be-54ae-ce7b-10b7">6</characteristic>
-            <characteristic name="Save" id="99af-9eb8-72fd-5a74" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="3f83-3ef1-8c2-d969" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Captured Soul Energy" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2b8c-5e87-fcec-9686">
@@ -1131,7 +1132,7 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="FLY" hidden="false" id="5b47-d144-6ac1-1eec" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="5c13-1099-56fd-c71" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="8f9b-3e25-e9bb-eafc" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="80cd-b184-508e-4740" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="e0c7-769c-b7dd-c1f3" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Spirit Torment" hidden="false" id="d5a4-f5bd-be92-83ea">
@@ -1169,16 +1170,19 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Guardian of Souls" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="7750-21f-513e-1e3d">
           <characteristics>
-            <characteristic name="Move" id="b03d-cdd2-38f1-57dd" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="4264-8f79-13fd-ad6f" hidden="false" typeId="96be-54ae-ce7b-10b7">5</characteristic>
-            <characteristic name="Save" id="eab9-4354-b711-5927" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="f720-db5c-ba92-7c1d" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Nightmare Lantern" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9325-4f4a-2b34-573c">
+        <profile name="Nightmare Lantern" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9325-4f4a-2b34-573c">
           <characteristics>
-            <characteristic name="Keywords" id="1de3-8ec6-8990-42ff" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="1994-4cfb-6d5d-582a" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit is in combat, add 1 to wound rolls for combat attacks made by friendly **^^Nighthaunt^^** units while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Nighthaunt^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to wound rolls for the target&apos;s attacks for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -1192,8 +1196,8 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="FLY" hidden="false" id="7723-6f33-dc8a-e6d1" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="3015-8b35-bfa4-5a8d" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="189-7e83-d4e3-2289" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="79a5-92da-e05-dd3c" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="9f48-ddd9-7bb3-ccf3" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="f5f6-eba7-be15-e83b" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Guardian of Souls" hidden="false" id="b813-5b3e-2749-b5fb">
@@ -1231,18 +1235,18 @@ If you picked this unit, for the rest of the turn:
       <profiles>
         <profile name="Scriptor Mortis" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="685d-ac81-3436-48c0">
           <characteristics>
-            <characteristic name="Move" id="9c4e-f1f0-970b-f2d8" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="7df8-ab07-9cc5-aa80" hidden="false" typeId="96be-54ae-ce7b-10b7">6</characteristic>
-            <characteristic name="Save" id="19c-4102-241d-18b6" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="9ae6-d846-ccd2-282" hidden="false" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
         <profile name="Sentenced to Eternal Torment" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c18c-b122-75cf-8a50">
           <characteristics>
-            <characteristic name="Timing" id="da5-580-1e63-113d" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
-            <characteristic name="Declare" id="feb3-244e-8d03-86c6" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" id="f678-b78a-8263-ffa3" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target has the **^^Sentenced^^** keyword for the rest of the battle.</characteristic>
-            <characteristic name="Keywords" id="efa8-91b0-a932-9f1f" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, inflict 1 mortal damage on the target and the target has the **^^Sentenced^^** keyword until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1250,17 +1254,14 @@ If you picked this unit, for the rest of the turn:
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
           </attributes>
         </profile>
-        <profile name="Judge, Jury and Executioner" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="66a6-ad62-8655-a1d2">
+        <profile name="Judge, Jury and Executioner" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="66a6-ad62-8655-a1d2">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Your Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each **^^Sentenced^^** enemy unit on the battlefield. On a 4+, inflict an amount of mortal damage equal to the current battle round number on that **^^Sentenced^^** unit.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly **^^Nighthaunt Infantry^^** unit uses a **^^Fight^^** ability, if all of its attacks target the same **^^Sentenced^^** enemy unit, that friendly unit&apos;s melee weapons have *Crit (Mortal)** for that **^^Fight^^** ability.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -1270,7 +1271,7 @@ If you picked this unit, for the rest of the turn:
         <categoryLink name="FLY" hidden="false" id="b1e9-9c66-84d5-4a10" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="46bd-4668-2242-799f" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="84dc-da37-9c8f-d9a4" targetId="75d6-6995-dfcc-3898" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="a0e2-2201-165a-d8da" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="855a-468c-b9cc-73f4" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Scriptor Mortis" hidden="false" id="c9d2-3f2d-43b2-241a">
@@ -1279,12 +1280,12 @@ If you picked this unit, for the rest of the turn:
               <profiles>
                 <profile name="Malicious Quill" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="dd16-1564-3e5b-17a2">
                   <characteristics>
-                    <characteristic name="Atk" id="e3c1-2e42-1b09-74f" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="bea8-977d-b8bc-93a" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="9dbb-f272-745d-49e2" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="cb5f-f959-82a6-7b88" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="1e04-3184-3382-a8b7" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="161d-7759-73d0-691e" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1304,19 +1305,19 @@ If you picked this unit, for the rest of the turn:
     <selectionEntry type="unit" import="true" name="Pyregheists" hidden="false" id="5f08-4648-c0e8-e7d9">
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="56df-65b6-5cfc-f5fe" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="f1c7-aecd-fad-d294" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="34cf-16e4-f7c4-20d0" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="CHAMPION (1/8)" hidden="false" id="866-30e-1c66-16e8" targetId="d131-3bfe-3ff4-a703" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="6ef3-8759-24c2-386e" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="3515-1295-4d-4311" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="8d6d-35d8-ed75-9d30" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <profiles>
         <profile name="Pyregheists" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="be8e-3eaa-27a-96a6">
           <characteristics>
-            <characteristic name="Move" id="4836-a122-8772-4ac5" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="6e93-ebc4-858b-cd36" hidden="false" typeId="96be-54ae-ce7b-10b7">1</characteristic>
-            <characteristic name="Save" id="f25-3f46-30c1-a541" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="8e41-8d09-1715-1a8c" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Light a Pyre" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7d8b-56c2-1f81-1c04">
@@ -1373,13 +1374,13 @@ objective, pick a visible enemy unit within
               <profiles>
                 <profile name="Gout of Balefire" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="5dbd-55be-e119-1459">
                   <characteristics>
-                    <characteristic name="Rng" id="5949-9c55-ef3f-4bd0" hidden="false" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                    <characteristic name="Atk" id="b754-65d8-1fed-1676" hidden="false" typeId="aa17-4296-2887-e05d">2</characteristic>
-                    <characteristic name="Hit" id="5d34-7c2d-7524-e8b" hidden="false" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" id="4e5c-f9f3-f29c-b9ff" hidden="false" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
-                    <characteristic name="Rnd" id="d4e7-88b8-c3f2-e1f9" hidden="false" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" id="a25d-3ec6-3617-9cc3" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                    <characteristic name="Ability" id="b76b-7893-df63-f957" hidden="false" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1426,29 +1427,29 @@ objective, pick a visible enemy unit within
       <profiles>
         <profile name="Bladegheist Revenants" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="758f-1518-8ca9-9304">
           <characteristics>
-            <characteristic name="Move" id="aca5-f224-d083-7b5d" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="7d31-5ea2-fbe2-ee80" hidden="false" typeId="96be-54ae-ce7b-10b7">1</characteristic>
-            <characteristic name="Save" id="2aaf-4b2d-1687-8e4e" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="29bb-fae8-ced2-6dd7" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Thrashing Desperation" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e484-2485-5950-b4ba">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit charged this turn, add 1 to the Attacks characteristic of this unit’s melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit contests an objective you control, enemy units cannot finish a charge move within 1/2&quot; of a model in this unit unless the unmodified charge roll was 7 or more.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="19b4-a29c-cd33-9291" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="87c8-25f5-cf75-49a7" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="13ea-43be-6acb-9736" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="79c6-e9a6-64f2-1320" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="9f1c-e544-574c-9587" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="4a86-afc3-150d-0abb" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="a63-7998-dc93-200e" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1500,7 +1501,7 @@ objective, pick a visible enemy unit within
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
@@ -1517,10 +1518,10 @@ objective, pick a visible enemy unit within
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="d290-c006-3457-1cba" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="c2a4-67e9-c847-5337" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="3181-abb8-914a-aad1" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="a25d-47ca-c94b-d84b" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="de6-91ed-5282-31a6" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="ff83-eb48-c2e8-047b" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="78a5-2eeb-ccab-30b2" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1570,30 +1571,33 @@ objective, pick a visible enemy unit within
       <profiles>
         <profile name="Chainrasps" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="ab6d-b64c-ec77-daa0">
           <characteristics>
-            <characteristic name="Move" id="e4af-a4ce-7cb1-bf65" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="b509-c9bf-339f-ccea" hidden="false" typeId="96be-54ae-ce7b-10b7">1</characteristic>
-            <characteristic name="Save" id="500c-31a2-cd16-de9b" hidden="false" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
-            <characteristic name="Control" id="14df-b7be-9f37-a028" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Chilling Horde" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6179-3fc4-8e4-7fcd">
+        <profile name="Chilling Horde" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6179-3fc4-8e4-7fcd">
           <characteristics>
-            <characteristic name="Keywords" id="a2e8-f7de-43ad-b45e" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="eb99-7b45-24ac-2fab" hidden="false" typeId="fd7f-888d-3257-a12b">Add 1 to wound rolls for this unit’s combat attacks if it charged in the same turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **Chainrasp** units to be the targets,</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each target can move 6&quot; but cannot end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="b4a8-15c3-6e10-d7e1" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="75eb-6d08-f92e-98b8" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="73da-90ef-8280-8c1c" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="a167-e3e9-1ac-209d" targetId="f679-3bcb-d664-9ac3" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="3eb3-8e58-66c1-b888" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="d96f-3f55-7e9b-d1d2" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="d5c3-e588-7859-fce5" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="188c-a7ff-fc23-dbca" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1678,10 +1682,10 @@ objective, pick a visible enemy unit within
       <profiles>
         <profile name="Black Coach" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="6cf5-1a8f-18a3-2514">
           <characteristics>
-            <characteristic name="Move" id="3a3e-cb16-fdcd-87bb" hidden="false" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" id="77aa-b25c-707f-f8c5" hidden="false" typeId="96be-54ae-ce7b-10b7">12</characteristic>
-            <characteristic name="Save" id="66f7-1a89-a873-3665" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="8db1-52ef-e839-3722" hidden="false" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
         <profile name="Runaway Coach" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8e30-3a62-8d8d-689e">
@@ -1699,10 +1703,10 @@ objective, pick a visible enemy unit within
         </profile>
         <profile name="Nimbus of Power" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bcd8-1993-c889-100b">
           <characteristics>
-            <characteristic name="Timing" id="c9d6-3faa-8f79-961f" hidden="false" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" id="1660-2ad1-47ad-8bf0" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="d7c5-f436-5842-1545" hidden="false" typeId="b6f1-ba36-6cd-3b03">If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" id="d13c-fe9e-50d9-68d1" hidden="false" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1712,10 +1716,10 @@ objective, pick a visible enemy unit within
         </profile>
         <profile name="Evocation of Death" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2e01-d5f2-5c3b-ff14">
           <characteristics>
-            <characteristic name="Timing" id="c4b6-552a-c9c0-8395" hidden="false" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" id="6446-aadd-1f98-297f" hidden="false" typeId="bad3-f9c5-ba46-18cb">If this unit destroyed any enemy units this turn, pick a friendly non-**^^Unique Nighthaunt Hero^^** that has been destroyed.</characteristic>
-            <characteristic name="Effect" id="7551-2007-539-412d" hidden="false" typeId="b6f1-ba36-6cd-3b03">Set up a replacement unit wholly within 12&quot; of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.</characteristic>
-            <characteristic name="Keywords" id="ab50-b6f7-114b-12f8" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If any damage points were allocated to an enemy unit by this unit&apos;s combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-**^^Unique Nighthaunt Hero^^** that has been destroyed.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up a replacement unit wholly within 12&quot; of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1728,8 +1732,8 @@ objective, pick a visible enemy unit within
         <categoryLink name="DEATH" hidden="false" id="1c79-60dc-ab04-801d" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="5122-ab6-c8dd-f195" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="9f70-4872-b12f-e6f6" targetId="e3a4-4581-9f76-4215" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="da68-e3c9-ef6a-d3cd" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="WAR MACHINE" hidden="false" id="1549-184b-5b77-2838" targetId="f7bc-b618-4b5d-2bae" primary="true"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="c6b7-50b8-01aa-44cf" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Black Coach" hidden="false" id="5040-528d-3558-f4">
@@ -1753,16 +1757,16 @@ objective, pick a visible enemy unit within
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87b6-a423-d995-b8c3"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wraith Weapons" hidden="false" id="3c19-424-9a07-ebbe">
+            <selectionEntry type="upgrade" import="true" name="Wraith&apos;s Spectral Weapons" hidden="false" id="3c19-424-9a07-ebbe">
               <profiles>
-                <profile name="Wraith Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="affe-7641-859-b6cd">
+                <profile name="Wraith&apos;s Spectral Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="affe-7641-859-b6cd">
                   <characteristics>
-                    <characteristic name="Atk" id="a0bf-f9f-4d60-462a" hidden="false" typeId="60e-35aa-31ed-e488">5</characteristic>
-                    <characteristic name="Hit" id="bd56-3d89-ccf6-ef18" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="6144-556e-eb69-abe4" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="cb33-937c-31d0-8b21" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="da69-fd9f-20d4-8e32" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="704d-e9e-b64a-9efc" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend), Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1771,40 +1775,22 @@ objective, pick a visible enemy unit within
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7778-d135-afad-b5b9"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ethereal Steed’s Ghostly Hooves and Teeth" hidden="false" id="2349-d0-ed9b-7a10">
+            <selectionEntry type="upgrade" import="true" name="Relic Bearers’ Claws and Ethereal Steeds’ Hooves" hidden="false" id="2349-d0-ed9b-7a10">
               <profiles>
-                <profile name="Ethereal Steed’s Ghostly Hooves and Teeth" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="298a-195-e649-aeec">
+                <profile name="Relic Bearers’ Claws and Ethereal Steeds’ Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="298a-195-e649-aeec">
                   <characteristics>
-                    <characteristic name="Atk" id="846a-14d8-6939-4a8a" hidden="false" typeId="60e-35aa-31ed-e488">8</characteristic>
-                    <characteristic name="Hit" id="1265-43a4-9af8-9c1c" hidden="false" typeId="26dc-168-b2fd-cb93">5+</characteristic>
-                    <characteristic name="Wnd" id="9a63-78db-cdeb-5981" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="4c84-b7f6-525a-32e" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="10cd-44b1-1528-ddc7" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="42f-5063-42ef-c361" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">14</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44ed-3b6-83b8-133b"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1648-3abc-750a-22e3"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Relic Bearers’ Spectral Claws" hidden="false" id="f49-fac-62f4-5b39">
-              <profiles>
-                <profile name="Relic Bearers’ Spectral Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="946b-53b8-f445-2238">
-                  <characteristics>
-                    <characteristic name="Atk" id="6100-1132-4df4-41e8" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" id="2d98-d19f-afb1-c598" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="1061-ade3-287c-61af" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="f0d3-3f05-a9c4-391e" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="f5d5-2cba-be60-378b" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="1ad2-421-db2e-d72b" hidden="false" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="52b3-6373-80e2-5b9e"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9437-bb2b-30ac-6861"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -1819,15 +1805,15 @@ objective, pick a visible enemy unit within
       <profiles>
         <profile name="Chainghasts" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="ba48-d831-8512-52db">
           <characteristics>
-            <characteristic name="Move" id="beee-d9e1-681-2451" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="2348-dbbe-fcf8-d7b" hidden="false" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" id="f498-45e0-350f-2782" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="da5a-b6cb-5737-263" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Another Link in the Chain" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ab3a-556-1d70-684">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Combat Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if this unit is wholly within 12&quot; of any friendly **Spirit Torments**. On a 3+, for the rest of the turn, add 1 to hit rolls for combat attacks made by friendly **^^Nighthaunt^^** units while they are wholly within 12&quot; of this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -1841,11 +1827,11 @@ objective, pick a visible enemy unit within
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="6c55-d2d8-aba3-d01f" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="f468-adf2-47df-c3e8" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="56d-9992-4674-6da" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="e45b-2268-7cd-fe74" targetId="f679-3bcb-d664-9ac3" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="c54d-aca7-2c5b-2a19" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="3268-6719-abdf-5930" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="989b-0b6f-0db3-c847" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="7a6e-fa14-f884-c31d" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1902,16 +1888,19 @@ objective, pick a visible enemy unit within
       <profiles>
         <profile name="Grimghast Reapers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d4ca-6d2f-2987-4ae9">
           <characteristics>
-            <characteristic name="Move" id="69f1-455a-d818-e2e8" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="c41c-e3fe-e894-c05d" hidden="false" typeId="96be-54ae-ce7b-10b7">1</characteristic>
-            <characteristic name="Save" id="e020-34e8-2d90-6b0d" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="17cd-ac44-d04f-e759" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Reaped Like Corn" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3925-6ca6-264e-4f4c">
+        <profile name="Reaped Like Corn" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3925-6ca6-264e-4f4c">
           <characteristics>
-            <characteristic name="Keywords" id="382b-38ca-2d0c-6626" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="c3ab-a758-6b8b-ec20" hidden="false" typeId="fd7f-888d-3257-a12b">This unit’s combat attacks score critical hits on unmodified hit rolls of 5+ while the target unit has 5 or more models.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that is within the combat ranges of 5 or more models in this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on the target. If the target unit has 20 or more models, inflict 1 mortal damage on the target for each 5+ instead.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -1921,11 +1910,11 @@ objective, pick a visible enemy unit within
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="62eb-5e6b-3414-a3f3" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="67be-34aa-fe77-63d8" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="cae4-825e-418a-71cb" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="335b-ba-e50a-8298" targetId="f679-3bcb-d664-9ac3" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="50e0-5f99-d19c-9329" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="5749-f1a-5427-a9cc" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="fd23-3fc8-0b6f-e7a3" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="322f-fc7f-26ac-c112" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1991,30 +1980,33 @@ objective, pick a visible enemy unit within
         <profile name="Craventhrone Guard" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="279f-886b-b020-793">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Spectral Bolts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="853d-cca-6173-554a">
+        <profile name="Black-hearted Lackeys" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="853d-cca-6173-554a">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can pick enemy units to be the targets of shooting attacks even if they are not visible to this unit. In addition, ignore negative modifiers to hit rolls for this unit’s shooting attacks.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, this unit immediately uses the &apos;Retreat&apos; ability without any mortal damage being inflicted on it. Then, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Blue</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Shooting</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="31a-7f8c-919b-3c4b" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="d7e2-66f-4ad-10a6" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="c5f5-2b8f-ea52-5cd2" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="cfdd-b817-cc47-d72" targetId="f679-3bcb-d664-9ac3" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="ced5-c34e-d368-5e2b" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="7026-8b1c-ab4e-64a1" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="STANDARD BEARER (1/5)" hidden="false" id="691c-8d28-2302-4fb5" targetId="73c-8e22-9dde-f97" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="7e4a-9d26-96dc-8f4d" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="2f16-ddae-430e-9ea2" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -2034,7 +2026,7 @@ objective, pick a visible enemy unit within
               <profiles>
                 <profile name="Wicked Sidearm" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="451d-4173-322c-82bb">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
@@ -2211,7 +2203,7 @@ objective, pick a visible enemy unit within
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
@@ -2231,10 +2223,10 @@ objective, pick a visible enemy unit within
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="e639-a806-78f4-bb13" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="17b6-571c-75b9-cf79" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="1a0f-6af1-ef97-4108" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="9f54-4725-e652-cda0" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="8b5-8acf-47cc-9cfc" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="5fb1-9701-2165-f129" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="e54c-d46c-aa29-c031" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -2257,7 +2249,7 @@ objective, pick a visible enemy unit within
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
@@ -2284,40 +2276,30 @@ objective, pick a visible enemy unit within
       <profiles>
         <profile name="Dreadscythe Harridans" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="83e5-7806-b11f-8c8b">
           <characteristics>
-            <characteristic name="Move" id="58a6-ee5b-4a44-dd11" hidden="false" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" id="4d0b-29a3-f3cf-1e27" hidden="false" typeId="96be-54ae-ce7b-10b7">1</characteristic>
-            <characteristic name="Save" id="9106-6e2e-6145-88e7" hidden="false" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" id="922e-fb96-d5dd-d3b6" hidden="false" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Murderous Bloodlust" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="95cd-58f8-7af3-bfb1">
+        <profile name="Harrowing Shrieks" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="95cd-58f8-7af3-bfb1">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls and wound rolls for this unit’s combat attacks while it is in combat with any damaged enemy units or while it is in combat with any enemy units that had any models slain in the same turn.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot be healed or have slain models returned to them while they are in combat with this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-          </attributes>
-        </profile>
-        <profile name="Harrowing Shriek" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ef9e-6b63-ed7c-3f21">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit charged in the same turn, subtract 1 from wound rolls for attacks made by enemy units while they are in combat with this unit.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="INFANTRY" hidden="false" id="f95b-3467-f07f-39a0" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="81ab-7e62-8d92-fb9a" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="25d6-cc1b-d1-405c" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="2bea-65cd-edbe-1b02" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="NIGHTHAUNT" hidden="false" id="de7c-bfba-f72d-8547" targetId="e3a4-4581-9f76-4215" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="4229-bdb5-5a60-25d4" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="cdd4-68cd-49de-5b76" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="540b-c66b-11f1-8140" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -2384,7 +2366,7 @@ objective, pick a visible enemy unit within
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
@@ -2428,7 +2410,7 @@ objective, pick a visible enemy unit within
               <profiles>
                 <profile name="Ethereal Steed’s Ghostly Hooves and Teeth" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8b0d-be41-df8b-d7e6">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
@@ -2500,7 +2482,7 @@ objective, pick a visible enemy unit within
         <profile name="Siphon Souls" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e9c3-54ad-5080-a0f5">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model (friendly or enemy) is slain within 12&quot; of this **^^Manifestation^^**, give this **^^Manifestation^^** a **soul point**, to a maximum of 6.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model from a friendly or enemy unit is slain within 12&quot; of this **^^Manifestation^^**, give this **^^Manifestation^^** a **soul point**, to a maximum of 6.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -2511,7 +2493,7 @@ objective, pick a visible enemy unit within
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this **^^Manifestation^^** has 6 **soul points**, pick any number of enemy units within 6&quot; of this unit to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 3+, inflict an amount of mortal damage on the target equal to the roll. Then, reset this **^^Manifestation^^**’s **soul points** to 0.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 6 dice for each target. For each 4+, inflict 1 mortal damage on the target. Then, reset this **^^Manifestation^^**’s **soul points** to 0.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2595,7 +2577,7 @@ objective, pick a visible enemy unit within
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Nighthaunt^^** unit within 3&quot; of this **^^Manifestation^^** to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, pick 1 of the following effects:
-• Add 1 to run rolls and charge rolls for target for the rest of the turn.
+• Add 1 to run rolls and charge rolls for the target for the rest of the turn.
 • **Heal (3)** the target.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -3311,6 +3293,95 @@ are in combat with the target.</characteristic>
 Cover, Impassable**</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Lord Vitriolic" hidden="false" id="202c-c298-11c5-361e">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="77e0-9441-2de9-ff7f" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Lord Vitriolic" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="4044-c845-5f5a-55fb">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Spectral Alchemy" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cce3-8b7f-aef3-62de">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 10&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, pick 1 of the following effects or roll two dice and apply both corresponding effects in an order of your choosing, including duplicate effects:
+**1 *Phantasmal Solvent:*** If the target has a Move characteristic of &apos;-&apos;, inflict 6 mortal damage on the target.
+**2 *Acidic Fug:*** Inflict D3 mortal damage on the target.
+**3 *Fling Concoctions:** Add 1 to the Attacks characteristic of this unit&apos;s **Hurled Vial** this phase but all attacks made by this unit this phase must target that enemy unit.
+**4 *Choking Vapours:*** If the target is a **^^Wizard^^**, subtract 1 from its power level until the start of your next turn.
+**5 *Fear-laced Hallucinogen:*** If the target is a **^^Priest^^**, remove D3 ritual points from it.
+**6 *Unholy Prescription:*** Ward rolls cannot be made for the target for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="706e-4044-e160-5de1" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="DEATH" hidden="false" id="d278-7470-8767-e7e8" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="807e-8fbb-7e18-b3d4" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="NIGHTHAUNT" hidden="false" id="a7f6-6306-b8bb-240e" targetId="e3a4-4581-9f76-4215" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="2f50-b81d-9bfa-994b" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="a03f-71e7-236a-93cc" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Lord Vitriolic" hidden="false" id="feda-8622-eb2f-2e00">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hurled Vial" hidden="false" id="38e9-5101-d1c2-5cb7">
+              <profiles>
+                <profile name="Hurled Vial" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="29ce-2b3c-0389-1512">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4210-8ae9-86a8-f6d3"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67d7-a5b6-1981-cabc"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Culler&apos;s Sickle" hidden="false" id="c8f4-3126-79fe-4970">
+              <profiles>
+                <profile name="Culler&apos;s Sickle" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9223-d5fc-4235-e24e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="121a-09cf-1810-27f6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbee-9ed4-cdcc-12b8"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4681-49d5-ed9c-5910"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a509-d53b-cb92-a9e8"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
