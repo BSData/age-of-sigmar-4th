@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="e441-1f62-6bdb-7dc1" name="Kharadron Overlords - The Magnate&apos;s Crew" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="40" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="e441-1f62-6bdb-7dc1" name="Kharadron Overlords - The Magnate&apos;s Crew" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="40" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: The Magnate&apos;s Crew" hidden="false" id="ddc9-e3b4-cc55-9fe8" publicationId="d4a9-b568-9525-d6ac">
       <profiles>
@@ -438,102 +438,50 @@ The target(s) cannot use **^^Charge^^** abilities for the rest of the turn.</cha
         <entryLink import="true" name="Renown" hidden="false" id="c573-ab2d-f9d5-3257" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
         <entryLink import="true" name="Paths" hidden="false" id="4f8a-d51d-efbd-959e" type="selectionEntryGroup" targetId="fd4f-ac20-87e7-f06d"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b152-58b6-aae2-c80c" type="selectionEntryGroup" targetId="53af-b652-4f93-d0a3"/>
+        <entryLink import="true" name="General" hidden="false" id="612b-7561-97df-6eac" type="selectionEntry" targetId="a56b-952e-ad15-7868">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b416-d126-e4d4-7a55-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b416-d126-e4d4-7a55-max"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="56f4-9c0c-7add-88d0" type="selectionEntryGroup" targetId="7b7e-7e6b-ba1d-f5bf"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="0185-1de7-1819-947c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="589b-eb3c-9e18-259e" type="selectionEntryGroup" targetId="5dbb-1839-404f-4656"/>
       </entryLinks>
       <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="d621-baec-9f08-716b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="67c0-b930-e9ca-b7eb" includeChildSelections="true"/>
-      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="460"/>
       </costs>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="Regiment has too many selections of SKYVESSEL (max 1)" field="error">
-              <conditions>
-                <condition type="atLeast" value="2" field="selections" scope="force" childId="594-e51e-83f-4187" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="1" field="67c0-b930-e9ca-b7eb"/>
-            <modifier type="set" value="0" field="67c0-b930-e9ca-b7eb">
-              <localConditionGroups>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="594-e51e-83f-4187" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="2b23-328b-3916-4947" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </localConditionGroup>
-              </localConditionGroups>
-            </modifier>
-          </modifiers>
-          <conditionGroups>
-            <conditionGroup type="or">
-              <localConditionGroups>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="201-4924-5e0a-4515" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="f560-4986-ccff-c086" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="4409-20da-fa37-a3e0" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="29c5-5f6d-9c4e-6026" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="b0ca-f650-7020-858d" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1e09-20c6-e001-f984" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1f2b-4916-646e-a0c7" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-              </localConditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifierGroup>
-      </modifierGroups>
       <categoryLinks>
         <categoryLink name="MAGNATE&apos;S CREW" hidden="false" id="f563-5d25-61a4-d2c2" targetId="f6a3-f0dc-a863-aba3" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="f237-a053-8e2f-edaa" targetId="6e72-1656-d554-528a" primary="true"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Arkanaut Frigate" hidden="false" id="53a1-2ef2-1f65-754c" type="selectionEntry" targetId="fb94-3fa7-35ae-7a3c">
@@ -983,6 +931,110 @@ The target(s) cannot use **^^Charge^^** abilities for the rest of the turn.</cha
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faaf-8be3-cb88-c5d2" includeChildSelections="true"/>
       </constraints>
+    </entryLink>
+    <entryLink import="true" name="Arkanaut Ironclad" hidden="false" id="e0c0-6b29-fd7c-9e8c" type="selectionEntry" targetId="2b23-328b-3916-4947">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="29b8-81a9-de86-078b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Renown" hidden="false" id="fcfc-b12e-74c7-7e52" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Paths" hidden="false" id="77e0-3a8e-b8dc-a1e0" type="selectionEntryGroup" targetId="fd4f-ac20-87e7-f06d"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2112-f2a8-deff-e5dc" type="selectionEntryGroup" targetId="53af-b652-4f93-d0a3"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="abe7-20d2-b9bb-791a" includeChildSelections="true"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="460"/>
+      </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="Regiment has too many selections of SKYVESSEL (max 1)" field="error">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="594-e51e-83f-4187" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="abe7-20d2-b9bb-791a"/>
+            <modifier type="set" value="0" field="abe7-20d2-b9bb-791a">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="594-e51e-83f-4187" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="2b23-328b-3916-4947" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="201-4924-5e0a-4515" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="f560-4986-ccff-c086" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="4409-20da-fa37-a3e0" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="29c5-5f6d-9c4e-6026" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="b0ca-f650-7020-858d" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1e09-20c6-e001-f984" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1f2b-4916-646e-a0c7" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink name="MAGNATE&apos;S CREW" hidden="false" id="86e8-e073-c64a-70d5" targetId="f6a3-f0dc-a863-aba3" primary="false"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>
