@@ -9082,6 +9082,7 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="self" childId="c203-51a0-3d44-6b07" shared="true"/>
                         <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="abcb-73d0-2b6c-4f17" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
                       </conditions>
                     </localConditionGroup>
                   </localConditionGroups>
