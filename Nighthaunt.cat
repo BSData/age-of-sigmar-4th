@@ -195,6 +195,25 @@
               </attributes>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+            <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+            <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Death Stalkers" hidden="false" id="ca91-2d4e-9ff4-c24">
           <constraints>
@@ -437,7 +456,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75a2-cbc1-9e7-d845"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Cthonic Sorceries" hidden="false" id="313a-4c63-f822-ff52" type="selectionEntryGroup" targetId="c004-e5d2-e331-f5a6"/>
+            <entryLink import="true" name="Infernal Sorceries" hidden="false" id="313a-4c63-f822-ff52" type="selectionEntryGroup" targetId="c004-e5d2-e331-f5a6"/>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -458,6 +477,7 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="64f7-c71c-62fe-de26" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="213e-963a-4531-762a" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2410-9d93-4b05-1bcd" type="selectionEntryGroup" targetId="7fe4-98b1-b164-c0d9"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -1938,6 +1958,39 @@ allows you to set up a second and third such terrain feature and is used in Ste
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Nighthaunt Hero" hidden="false" id="b206-021f-e56e-d9c3" type="selectionEntry" targetId="7f6e-2573-2d85-dc51">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="2d0d-c81e-ed6c-0b12" type="selectionEntryGroup" targetId="9e6d-5798-809e-8d02"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="311a-c522-53a3-9afb" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9e43-2443-3ad4-be55" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3674-4a8f-0600-05df" type="selectionEntryGroup" targetId="b01c-51e0-7c8b-0df5"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9253-d202-aa2c-9ae8" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="fa91-5169-1889-9d49" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <categoryEntries>
