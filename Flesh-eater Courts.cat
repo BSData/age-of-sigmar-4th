@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b53b-1217-df2e-66d2" name="Flesh-eater Courts" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b53b-1217-df2e-66d2" name="Flesh-eater Courts" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Abhorrant Ghoul King" hidden="false" id="4cd-a82-97ba-ff0b" type="selectionEntry" targetId="e3c-b6aa-e6eb-d03f">
       <entryLinks>
@@ -2377,13 +2377,13 @@ Each time a friendly **^^Flesh-eater Courts Wizard Hero^^** uses a **^^Spell^^*
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
           </attributes>
         </profile>
-        <profile name="Summon Loyal Subjects" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="90f3-2f42-7021-6c34">
+        <profile name="Summon Loyal Subjects" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="90f3-2f42-7021-6c34">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Abhorrant Hero^^** that has 6 **noble deeds points** to use this ability, then pick a friendly **^^Serfs^^** or **^^Knights^^** unit that has been destroyed to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend all of that **^^Hero^^**’s **noble deeds points**. Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6&quot; of a battlefield edge and more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Turn (Army) Your Movement Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Abhorrant^^** to use this ability, then pick a friendly **^^Serfs^^** or **^^Knights^^** unit that has been destroyed to be the target.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6&quot; of a battlefield edge and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
@@ -2392,9 +2392,12 @@ Each time a friendly **^^Flesh-eater Courts Wizard Hero^^** uses a **^^Spell^^*
         </profile>
         <profile name="Muster Guard" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4800-bf55-2c3e-a583">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Courtier Hero^^** that has 1 or more **noble deeds points** to use this ability, then pick a friendly unit wholly within 12&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend any of that **^^Hero^^**’s **noble deeds points**. If the target is a **^^Serfs^^** unit, for each **noble deeds point** spent, return 1 slain model to it. If the target is a **^^Knights^^** unit, for every 2 **noble deeds points** spent, return 1 slain model to it.’</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick any number of friendly **^^Nobles^^** to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For each target, pick 1 of the following:
+• Return up to 3 slain models to a friendly **^^Serfs^^** unit wholly within 12&quot; of it.
+• Return 1 slain model to a friendly **^^Knights^^** unit wholly within 12&quot; of it.
+The same unit cannot have models returned to it by this ability more than once per turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2403,10 +2406,13 @@ Each time a friendly **^^Flesh-eater Courts Wizard Hero^^** uses a **^^Spell^^*
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Rallying</attribute>
           </attributes>
         </profile>
-        <profile name="Feeding Frenzy" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1e44-2af5-e615-9adc">
+        <profile name="Feeding Frenzy" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1e44-2af5-e615-9adc">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of melee weapons, including **Companion** weapons, used by friendly **^^Flesh-eater Courts^^** units while they are wholly within 12&quot; of any friendly **^^Heroes^^** that have 6 noble deeds points.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Flesh-eater Courts Hero^^** in combat to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Attacks characteristic of melee weapons, including **Companion** weapons, used by friendly **^^Flesh-eater Courts^^** units while they are wholly within 12&quot; of the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -2415,20 +2421,25 @@ Each time a friendly **^^Flesh-eater Courts Wizard Hero^^** uses a **^^Spell^^*
         </profile>
         <profile name="Address Loyal Subjects" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="616a-b307-3551-d5ee">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Flesh-eater Courts Hero^^** to use this ability.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each other friendly **^^Flesh-eater Courts^^** unit wholly within 12&quot; of that **^^Hero^^**. For each 5+, give 1 **noble deeds point** to that **^^Hero^^**.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You must use this ability at the start of each turn. If it is the first turn of the battle, pick a **^^Delusion^^** from these battle traits or, unless otherwise specified, from the warscroll of a friendly unit on the battlefield. If it is not the first turn, make a delusion roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">On a delusion roll of 1-2, you must pick a different **^^Delusion^^** to the one you picked last turn. On a 3-4, you must pick the same **^^Delusion^^** as the one you picked last turn, even if it is on the warscroll of a unit that has been destroyed. On a 5-6, you must pick a **^^Delusion^^** like you did in the first turn. For the rest of the turn, you believe the **^^Delusion^^** you picked.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="Reference" hidden="false" id="d8c1-f3c0-7538-c9e8" targetId="3360-1158-e879-9606" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Delusion Tracker" hidden="false" id="2eac-b4eb-541b-deab">
+      <categoryLinks>
+        <categoryLink name="Reference" hidden="false" id="c8d7-bd19-a5a4-0baa" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -2518,4 +2529,16 @@ Each time a friendly **^^Flesh-eater Courts Wizard Hero^^** uses a **^^Spell^^*
       </modifiers>
     </selectionEntry>
   </selectionEntries>
+  <sharedProfiles>
+    <profile name="New Profile" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b76f-37ac-6e07-8d4e">
+      <characteristics>
+        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b"/>
+      </characteristics>
+      <attributes>
+        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+      </attributes>
+    </profile>
+  </sharedProfiles>
 </catalogue>
