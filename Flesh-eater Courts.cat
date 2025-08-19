@@ -1864,35 +1864,28 @@
               </constraints>
               <modifiers>
                 <modifier type="add" value="3fe-84f4-cec6-a1c1" field="category" scope="root-entry"/>
-                <modifier type="set" value="0" field="points">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
               </modifiers>
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
                 <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Grim Garland" hidden="false" id="2f1e-638e-7ac8-61e7">
+            <selectionEntry type="upgrade" import="true" name="The Grisly Pennant" hidden="false" id="2f1e-638e-7ac8-61e7">
               <profiles>
-                <profile name="The Grim Garland" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1afe-7b26-f6c5-ab1d">
+                <profile name="The Grisly Pennant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1afe-7b26-f6c5-ab1d">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 2 from the control scores of enemy units while they are within 12&quot; of this unit.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit in combat with it to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll is greater than the target&apos;s control characteristic of is a 6, the following effects apply for the rest of the turn:
+• Subtract 1 from hit rolls for the target&apos;s combat attacks.
+• Add 1 to hit rolls for combat attacks made by friendly units that target that enemy unit.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -1900,19 +1893,22 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="12c5-8eec-3a3e-31a2" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heart of the Gargant" hidden="false" id="2f7-9c0b-259d-d775">
+            <selectionEntry type="upgrade" import="true" name="The Splintered Femur" hidden="false" id="2f7-9c0b-259d-d775">
               <profiles>
-                <profile name="Heart of the Gargant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="96b4-989e-8ca0-5867">
+                <profile name="The Splintered Femur" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="96b4-989e-8ca0-5867">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Your Turn</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is in combat, add 1 to the Attacks characteristic of its melee weapons for the rest of the turn. This ability also affects **Companion** weapons.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3: On a 2+, pick 1 of the following:
+• Inflict an amount of mortal damage on the target equal to the roll.
+• Subtract 1 from the target&apos;s power level, to a minimum of 0, until the start of your next turn.
+• If the target is a **^^Manifestation^^**, it is banished.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -1960,54 +1956,55 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3764-a5f2-e374-bfeb"/>
           </constraints>
           <profiles>
-            <profile name="Meat for the Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="251-e2-1282-4e44">
+            <profile name="Indulge, My Pretties" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="251-e2-1282-4e44">
               <characteristics>
-                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Combat Phase</characteristic>
-                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Flesh-eater Courts Monster^^** to be the target.</characteristic>
-                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target has **^^Strike-first^^** for the rest of the turn.</characteristic>
-                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly non-**^^Hero Flesh-eater Courts Monster^^** or **^^Beast^^** is wholly within 12&quot; of any friendly **^^Flesh-eater Courts Heroes^^**:
+• That non-**^^Hero^^** can use a **^^Rampage^^** ability on its warscroll even if that ability has already been used by another friendly **^^Monster^^** in the same turn.
+• If that non-**^^Hero^^** unit charged in the same turn and the unmodified charge roll was 9+, it has **^^Strike-first^^** for the rest of the turn.</characteristic>
               </characteristics>
               <attributes>
-                <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-                <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Cannibal Court" hidden="false" id="8efa-7855-fa42-107f" publicationId="6281-1a88-8f4-946">
+        <selectionEntry type="upgrade" import="true" name="Knightly Echelon" hidden="false" id="8efa-7855-fa42-107f" publicationId="6281-1a88-8f4-946">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2759-27bc-d67e-c07d"/>
           </constraints>
           <profiles>
-            <profile name="A Hunger for Glory" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ef22-66e4-2c51-1883">
+            <profile name="Sound the Charge" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ef22-66e4-2c51-1883">
               <characteristics>
-                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
-                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Give 1 **noble deeds point** to each friendly **^^Flesh-eater Courts Hero^^** wholly outside friendly territory.</characteristic>
-                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of melee weapons that charged in the same turn while they are wholly within 12&quot; of any friendly **^^Flesh-eater Courts Heroes^^**.</characteristic>
               </characteristics>
               <attributes>
-                <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-                <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Ghoul Patrol" hidden="false" id="be68-2ab8-be60-2150" publicationId="6281-1a88-8f4-946">
+        <selectionEntry type="upgrade" import="true" name="The Royal Hunt" hidden="false" id="be68-2ab8-be60-2150" publicationId="6281-1a88-8f4-946">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8378-8eb6-d702-5a1"/>
           </constraints>
           <profiles>
-            <profile name="Gore-splattered Hunters" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="dd54-f265-45a3-561d">
+            <profile name="Like Snapping Hounds" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="dd54-f265-45a3-561d">
               <characteristics>
-                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When players are alternating picking units to use a **^^Fight^^** ability, when it is your turn to pick a unit, you can pick 2 **Crypt Ghouls** units instead of 1. Neither unit can have **^^Strike-last^^**. Resolve the second **^^Fight^^** ability immediately after the first.</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each friendly **^^Serfs^^** unit in combat to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For each target:
+• Make a pile-in move.
+• Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-                <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
               </attributes>
             </profile>
           </profiles>
@@ -2023,8 +2020,8 @@
                 <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an ability returns at least 1 slain model to a friendly unit that is not in combat, after that ability has been resolved, if that unit is a **^^Serfs^^** unit, you can return 1 additional slain model to it, and if it is a **^^Knights^^** unit, roll a dice. On a 4+, you can return 1 additional slain model to it.</characteristic>
               </characteristics>
               <attributes>
-                <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-                <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
               </attributes>
             </profile>
           </profiles>
@@ -2101,14 +2098,17 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Cruel Taskmaster" hidden="false" id="e1c7-c8f0-854d-65dc">
               <profiles>
-                <profile name="Cruel Taskmaster" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1e2e-6527-227e-9c12">
+                <profile name="Cruel Taskmaster" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1e2e-6527-227e-9c12">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly unit wholly within 12&quot; of this unit uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Hero Flesh-eater Courts^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, you can re-roll charge rolls for the target.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -2116,31 +2116,18 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b93-6192-636e-e512" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
                 <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="0" field="points">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Stronger in Madness" hidden="false" id="fc56-d61d-3c54-e2fb">
               <profiles>
                 <profile name="Stronger in Madness" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a16b-19c-cacb-2d6e">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2 to this unit’s Health characteristic. In addition, while this unit has 6 **noble deeds points**, it has **^^Ward (5+)^^**.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore the first damage point that would be allocated to this unit each phase.
+In addition, other than the **Companion** weapon ability, weapon abilities for combat attacks that target this unit have no effect.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -2157,7 +2144,7 @@
                 <profile name="Savage Beyond Reason" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="16fd-e79c-b264-dc22">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has fewer than 6 **noble deeds points**, its melee weapons have Crit (2 Hits). While it has 6 **noble deeds points**, its melee weapons have Crit (Mortal).</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons, including **Companion** weapons, if it did not use a **^^Fight^^** ability in the previous turn. Add 2 to the Attacks characteristic of those weapons instead while this unit has not used a **^^Fight^^** ability this battle.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -2436,11 +2423,19 @@ The same unit cannot have models returned to it by this ability more than once p
       <categoryLinks>
         <categoryLink name="Reference" hidden="false" id="d8c1-f3c0-7538-c9e8" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="A Glorious Banquet" id="f026-00e1-bdfe-7372" hidden="false" type="profile" targetId="c124-d108-88cd-cc6f"/>
+        <infoLink name="A Splendid Pageant" id="9e44-eb2e-04aa-372b" hidden="false" type="profile" targetId="b76f-37ac-6e07-8d4e"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Delusion Tracker" hidden="false" id="2eac-b4eb-541b-deab">
       <categoryLinks>
         <categoryLink name="Reference" hidden="false" id="c8d7-bd19-a5a4-0baa" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="A Splendid Pageant" id="c175-ebba-cec6-1a4a" hidden="false" type="profile" targetId="b76f-37ac-6e07-8d4e"/>
+        <infoLink name="A Glorious Banquet" id="6897-f34c-dfed-8ed1" hidden="false" type="profile" targetId="c124-d108-88cd-cc6f"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
@@ -2530,14 +2525,26 @@ The same unit cannot have models returned to it by this ability more than once p
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
-    <profile name="New Profile" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b76f-37ac-6e07-8d4e">
+    <profile name="A Splendid Pageant" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b76f-37ac-6e07-8d4e">
       <characteristics>
-        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b"/>
+        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e">**^^Delusion^^**</characteristic>
+        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While you believe this **^^Delusion^^**:
+• Each time a friendly **^^Flesh-eater Courts^^** unit wholly within 12&quot; of a friendly **^^Flesh-eater Courts Hero^^** uses a **^^Run^^** ability, if you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.
+• While a friendly **^^Flesh-eater Courts Infantry Hero^^** unit is within the combat range of a friendly **^^Flesh-eater Courts Infantry^^** unit that has 5 or more models, that **^^Hero^^** is not visible to enemy units more than 6&quot; away.</characteristic>
       </characteristics>
       <attributes>
         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+      </attributes>
+    </profile>
+    <profile name="A Glorious Banquet" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c124-d108-88cd-cc6f">
+      <characteristics>
+        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e">**^^Delusion^^**</characteristic>
+        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While you believe this **^^Delusion^^**, add 1 to hit rolls for combat attacks made by friendly **^^Flesh-eater Courts^^** units that charged in the same turn while they are wholly within 12&quot; of any friendly **^^Flesh-eater Courts Heroes^^**.</characteristic>
+      </characteristics>
+      <attributes>
+        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
       </attributes>
     </profile>
   </sharedProfiles>
