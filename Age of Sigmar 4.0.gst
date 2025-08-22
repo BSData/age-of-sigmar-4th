@@ -1332,6 +1332,10 @@
         <forceEntryLink name="The Summerking&apos;s Entourage" id="3e5c-1e48-fe54-a749" hidden="false" targetId="de70-1b54-66b4-c010" type="forceEntry"/>
         <forceEntryLink name="Valnir&apos;s Stormwing" id="84c3-0b01-d581-882a" hidden="false" targetId="2eec-326e-528c-8473" type="forceEntry"/>
         <forceEntryLink name="Veremord&apos;s Shamblers" id="e0c9-bfb8-4ce5-3ffe" hidden="false" targetId="c43c-4ed-d97a-b72" type="forceEntry"/>
+        <forceEntryLink name="Craventhrone Executioners" id="53b2-bb76-6f07-3154" hidden="false" targetId="6b4d-e3a9-5521-9022" type="forceEntry"/>
+        <forceEntryLink name="The Horror of Hallow&apos;s Watch" id="7ee7-9154-7530-6835" hidden="false" targetId="efb1-eac2-1024-e0cb" type="forceEntry"/>
+        <forceEntryLink name="The Scarlet Jury" id="1598-6aaf-540c-b761" hidden="false" targetId="bfa0-f3bb-5a25-48cd" type="forceEntry"/>
+        <forceEntryLink name="Casket of Resurrections" id="35eb-48d9-a785-9004" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
@@ -2321,6 +2325,10 @@
         <forceEntryLink name="The Sterneiste Garrison" id="262c-ac07-89b5-d79d" hidden="false" targetId="9030-4036-8c77-84e5" type="forceEntry"/>
         <forceEntryLink name="The Summerking&apos;s Entourage" id="d51c-1060-fd57-cd0f" hidden="false" targetId="de70-1b54-66b4-c010" type="forceEntry"/>
         <forceEntryLink name="Valnir&apos;s Stormwing" id="df5f-9bf1-8e4f-ef11" hidden="false" targetId="2eec-326e-528c-8473" type="forceEntry"/>
+        <forceEntryLink name="The Horror of Hallow&apos;s Watch" id="2e68-9c94-e6e7-9134" hidden="false" targetId="efb1-eac2-1024-e0cb" type="forceEntry"/>
+        <forceEntryLink name="The Scarlet Jury" id="6e0c-f239-7ccb-d3c3" hidden="false" targetId="bfa0-f3bb-5a25-48cd" type="forceEntry"/>
+        <forceEntryLink name="Casket of Resurrections" id="221c-b566-2f5c-818d" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
+        <forceEntryLink name="Craventhrone Executioners" id="da46-bfad-defa-b4d3" hidden="false" targetId="6b4d-e3a9-5521-9022" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
@@ -6631,6 +6639,10 @@
         <forceEntryLink name="Valnir&apos;s Stormwing" id="6ea7-0d74-f4e5-75a8" hidden="false" targetId="2eec-326e-528c-8473" type="forceEntry"/>
         <forceEntryLink name="Veremord&apos;s Shamblers" id="a0cc-d5ca-89e8-a286" hidden="false" targetId="c43c-4ed-d97a-b72" type="forceEntry"/>
         <forceEntryLink name="Volt-Klaw&apos;s Enginecoven" id="6308-1e6e-a04c-e648" hidden="false" targetId="ffc1-e2cb-f2f0-f72e" type="forceEntry"/>
+        <forceEntryLink name="Craventhrone Executioners" id="b5f5-2a5e-96c6-0cc4" hidden="false" targetId="6b4d-e3a9-5521-9022" type="forceEntry"/>
+        <forceEntryLink name="The Horror of Hallow&apos;s Watch" id="6b29-ab94-afa5-4056" hidden="false" targetId="efb1-eac2-1024-e0cb" type="forceEntry"/>
+        <forceEntryLink name="The Scarlet Jury" id="9492-8138-ac8f-0d05" hidden="false" targetId="bfa0-f3bb-5a25-48cd" type="forceEntry"/>
+        <forceEntryLink name="Casket of Resurrections" id="90ea-4717-560f-ed76" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
