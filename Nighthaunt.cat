@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="f997-403-7b2e-60c6" hidden="false">
       <selectionEntryGroups>
@@ -11,7 +11,7 @@
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is in combat, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Nighthaunt^^** units wholly within 12&quot; of this unit for the rest of the turn.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is in combat, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Nighthaunt^^** units while they are wholly within 12&quot; of this unit for the rest of the turn.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -44,19 +44,21 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Soulfire Ring" hidden="false" id="2fbe-f99e-c102-ecb7">
+            <selectionEntry type="upgrade" import="true" name="Mirror of Echoing Failures" hidden="false" id="2fbe-f99e-c102-ecb7">
               <profiles>
-                <profile name="Soulfire Ring" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2522-ecf2-4b2c-8fce">
+                <profile name="Mirror of Echoing Failures" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2522-ecf2-4b2c-8fce">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If any enemy models were slain by this unit’s combat attacks this turn, **Heal (D6)** this unit.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a **^^Spell^^** or **^^Prayer^^** ability for a **^^Wizard^^** or **^^Priest^^** within 12&quot; of this unit.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy **^^Wizard^^** and ^^**Priest^^** within 12&quot; of this unit to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, for the rest of the phase:
+• Subtract 1 from casting rolls and chanting rolls for the targets.
+• Each time any of the targets fails to cast a spell or chant a prayer, inflict 1 mortal damage on the target.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -64,19 +66,19 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="47b3-38c3-7bd9-555" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Covetous Familiar" hidden="false" id="8e03-ae4e-54e7-ec49">
+            <selectionEntry type="upgrade" import="true" name="Brazier of Nagashizzar" hidden="false" id="8e03-ae4e-54e7-ec49">
               <profiles>
-                <profile name="Covetous Familiar" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="33ec-3999-fe8b-9dce">
+                <profile name="Brazier of Nagashizzar" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="33ec-3999-fe8b-9dce">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a **^^Fight^^** ability for a unit in combat with this unit</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared the &apos;Redeploy&apos; command for a friendly **^^Nighthaunt Infantry^^** unit wholly within 12&quot; of this unit.</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -174,17 +176,17 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="Battle Formations: Nighthaunt" id="5114-443c-4c98-b35c" hidden="false" flatten="true">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Vanishing Phantasms" hidden="false" id="4194-8ce-eb86-80c2">
+        <selectionEntry type="upgrade" import="true" name="Quicksilver Gheists" hidden="false" id="4194-8ce-eb86-80c2">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e75-79df-8146-4e18"/>
           </constraints>
           <profiles>
-            <profile name="Ethereal Translocation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cdeb-961b-c43f-5603">
+            <profile name="Vanish and Reappear" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cdeb-961b-c43f-5603">
               <characteristics>
                 <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
-                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt^^** unit that is not in combat to use this ability.</characteristic>
-                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove that unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units</characteristic>
-                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt^^** unit that is in combat to use this ability.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. The unit using this ability can move a distance up to its Move characteristic added to the roll. It can pass through other models and the combat ranges of enemy units, and it can end that move in combat.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
                 <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
@@ -193,6 +195,25 @@
               </attributes>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+            <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+            <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Death Stalkers" hidden="false" id="ca91-2d4e-9ff4-c24">
           <constraints>
@@ -203,50 +224,55 @@
               <characteristics>
                 <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt^^** unit to be the target.</characteristic>
-                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, the target unit can still use **^^Charge^^** abilities even if it used a **^^Run^^** or **^^Retreat^^** ability in the same turn. In addition, for the rest of the turn, no mortal damage is inflicted on that unit by **^^Retreat^^** abilities.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
+• The target unit can still use **^^Charge^^** and **^^Shoot^^** abilities even if it has used a **^^Retreat^^** ability in the same turn.
+• The target can use the &apos;Retreat&apos; ability without any mortal damage being inflicted on it.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                 <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
-                <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Procession of Death" hidden="false" id="df99-d456-63a5-931">
+        <selectionEntry type="upgrade" import="true" name="Royal Procession" hidden="false" id="df99-d456-63a5-931">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c05-de20-b8a2-8f0c"/>
           </constraints>
           <profiles>
-            <profile name="Cavalcade of Death" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="974a-2312-95e2-bfb2">
+            <profile name="Lethal Rancour" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="974a-2312-95e2-bfb2">
               <characteristics>
-                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Nighthaunt Infantry^^** units have **^^Ward (5+)^^** while they are wholly within 6&quot; of a friendly **Black Coach**.</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 2 friendly **^^Nighthaunt^^** units to be the targets,</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The targets&apos; melee weapons have **Anti-charge (+1 Rend)** for the rest of the turn.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-                <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hunters of the Accursed" hidden="false" id="b5bd-1e28-d13-d5de">
+        <selectionEntry type="upgrade" import="true" name="Shrieker Host" hidden="false" id="b5bd-1e28-d13-d5de">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fdc-7103-affe-4b7b"/>
           </constraints>
           <profiles>
-            <profile name="Vengeful Malison" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cd6d-ac39-652b-f9ee">
+            <profile name="Petrify" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cd6d-ac39-652b-f9ee">
               <characteristics>
-                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Hero Phase</characteristic>
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 enemy **^^Heroes^^** each within 12&quot; of a different friendly **^^Nighthaunt Hero^^** to be the targets</characteristic>
                 <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                 <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-                <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
               </attributes>
             </profile>
           </profiles>
@@ -324,16 +350,19 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Shades of Death" id="f65d-235-63e4-2c61" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Cloaked in Shadow" hidden="false" id="4b9a-d8b5-b02b-4b47">
+            <selectionEntry type="upgrade" import="true" name="Deathly Possessor" hidden="false" id="4b9a-d8b5-b02b-4b47">
               <profiles>
-                <profile name="Cloaked in Shadow" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3803-8726-ccc5-b2a2">
+                <profile name="Deathly Possessor" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3803-8726-ccc5-b2a2">
                   <characteristics>
-                    <characteristic name="Keywords" id="a15e-ad1a-6590-6e95" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" id="1dcd-ac1d-15df-1353" hidden="false" typeId="fd7f-888d-3257-a12b">If the unmodified hit roll for an attack that targets this unit is 1-3, the attack fails and the attack sequence ends.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** in combat with this unit to be the target, then pick another enemy unit within the target&apos;s combat range to be the victim.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, pick 1 of the target&apos;s melee weapons. Immediately resolve combat attacks for the target with that weapon against the victim.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -343,13 +372,15 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Ruler of the Spectral Hosts" hidden="false" id="eabf-168d-e0bf-bd61">
               <profiles>
-                <profile name="Ruler of the Spectral Hosts" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="f5f1-dc77-3a1c-e173">
+                <profile name="Ruler of the Spectral Hosts" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f5f1-dc77-3a1c-e173">
                   <characteristics>
-                    <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Battle, Your Movement Phase</characteristic>
-                    <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
-                    <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Nighthaunt^^** unit that started the battle with 3 or more models and that has been destroyed to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
-                    <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly non-**^^Hero Nighthaunt^^** units wholly within 12&quot; of this unit to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+:
+• If the target is damaged, **Heal (X)** the target, where **X** is an amount equal to the roll.
+• If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to X, where X is an amount equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
                     <attribute typeId="5c69-e4b9-19bc-e801" name="Color">Gray</attribute>
@@ -380,16 +411,19 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Terrifying Entity" hidden="false" id="e525-1726-65ce-607f">
+            <selectionEntry type="upgrade" import="true" name="Shadowy Aura" hidden="false" id="e525-1726-65ce-607f">
               <profiles>
-                <profile name="Terrifying Entity" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1145-27b4-48a1-261b">
+                <profile name="Shadowy Aura" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1145-27b4-48a1-261b">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can use any of the **^^Aura of Dread^^** abilities, even if it doesn’t have the required keyword(s) for that ability.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared the &apos;Redeploy&apos; command for a friendly **^^Nighthaunt^^** unit wholly within 12&quot; of this unit</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, subtract 1 from hit rolls for attacks that target this unit.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
                   </attributes>
                 </profile>
               </profiles>
@@ -422,7 +456,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75a2-cbc1-9e7-d845"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Cthonic Sorceries" hidden="false" id="313a-4c63-f822-ff52" type="selectionEntryGroup" targetId="c004-e5d2-e331-f5a6"/>
+            <entryLink import="true" name="Infernal Sorceries" hidden="false" id="313a-4c63-f822-ff52" type="selectionEntryGroup" targetId="c004-e5d2-e331-f5a6"/>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -443,6 +477,7 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="64f7-c71c-62fe-de26" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="213e-963a-4531-762a" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2410-9d93-4b05-1bcd" type="selectionEntryGroup" targetId="7fe4-98b1-b164-c0d9"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -500,76 +535,34 @@
         <profile name="Ethereal" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ca03-ec11-f370-b66d">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore all modifiers to save rolls (positive and negative) for friendly **^^Nighthaunt^^** units, excluding **Nagash**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to save rolls for friendly **^^Nighthaunt^^** units, excluding **Nagash**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
           </attributes>
         </profile>
-        <profile name="Discorporate" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="c6d2-2b92-5367-7b43">
+        <profile name="Ethereal Translocation" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="c6d2-2b92-5367-7b43">
           <characteristics>
-            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Any Hero Phase</characteristic>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Turn (Army), Your Movement Phase</characteristic>
             <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
-            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Nighthaunt^^** unit to use this ability.</characteristic>
-            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">That unit has **^^Ward (5+)^^** for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Nighthaunt^^** unit that is not in combat to use this ability.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Remove that unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5c69-e4b9-19bc-e801" name="Color">Yellow</attribute>
-            <attribute typeId="2bd5-08f1-f3d1-86f7" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Grey</attribute>
+            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Movement</attribute>
           </attributes>
         </profile>
-        <profile name="Wave of Terror" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="fc5b-13e9-6116-364b">
+        <profile name="Mounting Dread" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fc5b-13e9-6116-364b">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Friendly **^^Nighthaunt^^** units that are in combat can use **^^Charge^^** abilities this phase. However, if a unit that is in combat uses a **^^Charge^^** ability and the charge roll is 3 or less, that unit does not count as having charged that turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract the current battle round number from the control scores of enemy units while they are in combat with any friendly **^^Nighthaunt^^** units.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-          </attributes>
-        </profile>
-        <profile name="Stun" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9829-3a36-9352-c552">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt War Machine^^** or **^^Cavalry^^** unit that has not used an **^^Aura of Dread^^** ability this turn and that charged this turn to use this ability, then pick an enemy unit within 1&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from save rolls for the target for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Aura of Dread^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-          </attributes>
-        </profile>
-        <profile name="Shriek" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="55b1-638d-3469-4301">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt^^** unit that has not used an **^^Aura of Dread^^** ability this turn and that charged this turn to use this ability, then pick an enemy unit within 1&quot; of it to be the target. The number of models in the friendly **^^Nighthaunt^^** unit must be greater than the number of models in the target unit.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from hit rolls for the target’s attacks for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Aura of Dread^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-          </attributes>
-        </profile>
-        <profile name="Petrify" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad5-a2be-cad6-bb84">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt Hero^^** that has not used an **^^Aura of Dread^^** ability this turn and that charged this turn to use this ability, then pick an enemy unit within 1&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target has **^^Strike-last^^** for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Aura of Dread^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
           </attributes>
         </profile>
         <profile name="Sepulchral Apparitions" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="67e0-33db-1c0a-6797">
@@ -757,7 +750,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="77dc-084d-cffc-2bc7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1130,7 +1123,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="805f-ad57-a6a3-ba9d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1193,7 +1186,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="77cd-48fb-187b-2e03" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1321,12 +1314,68 @@ allows you to set up a second and third such terrain feature and is used in Ste
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="5383-844c-da86-b7bd">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="7648-12f1-95fd-fcd2" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="5672-e1eb-f03c-a494" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="c81c-805a-e4d7-583e" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1500-8766-b518-a243" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="7b5d-b482-d599-789f" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="670f-bd2f-5c28-4e4a" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="8bfb-70bb-a67c-d606" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="fdd-8e34-a253-8e6c" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5383-844c-da86-b7bd"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="5383-844c-da86-b7bd"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="230"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7520-66b8-e174-5656" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -1359,7 +1408,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="6560-242b-3b9f-951a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Chainghasts" hidden="false" id="89e-e44e-1563-a04a" type="selectionEntry" targetId="4550-ab13-9a71-205c">
@@ -1414,7 +1463,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="565c-4fc9-9c17-b5e2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Craventhrone Guard" hidden="false" id="7bc4-fd43-a3fe-4f5" type="selectionEntry" targetId="88e9-d216-bef6-b4fe">
@@ -1470,7 +1519,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="cd3e-b66a-9ec2-15e0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Dreadscythe Harridans" hidden="false" id="782b-e882-501f-5a3a" type="selectionEntry" targetId="1a20-8b80-4ae3-5168">
@@ -1498,7 +1547,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="7dfa-e2e7-a7f6-c9c7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Glaivewraith Stalkers" hidden="false" id="4489-e8a7-ddcb-2e42" type="selectionEntry" targetId="43ee-d90-fdd8-e998">
@@ -1554,7 +1603,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="552a-30da-ec97-3e82" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="210"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Hexwraiths" hidden="false" id="134b-dda7-eda7-4b9a" type="selectionEntry" targetId="66a0-f02f-2616-3c62">
@@ -1610,7 +1659,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="855f-0ded-57d1-8b5a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Pyregheists" hidden="false" id="a654-7ec1-2bbb-b470" type="selectionEntry" targetId="5f08-4648-c0e8-e7d9">
@@ -1632,7 +1681,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d818-9ba1-a496-9533" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -1665,7 +1714,7 @@ allows you to set up a second and third such terrain feature and is used in Ste
         <entryLink import="true" name="Renown" hidden="false" id="2563-efb8-b767-1371" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Battle Traits: Nighthaunt" hidden="false" id="619f-b41c-341a-dbff" type="selectionEntry" targetId="53c5-1078-24f5-3301">
@@ -1777,9 +1826,65 @@ allows you to set up a second and third such terrain feature and is used in Ste
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="dbb5-365b-685a-c201">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="7648-12f1-95fd-fcd2" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="5672-e1eb-f03c-a494" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="c81c-805a-e4d7-583e" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="1500-8766-b518-a243" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="7b5d-b482-d599-789f" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="670f-bd2f-5c28-4e4a" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="8bfb-70bb-a67c-d606" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="fdd-8e34-a253-8e6c" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7818-679d-ef08-2f79"/>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="dbb5-365b-685a-c201"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="280"/>
@@ -1791,6 +1896,102 @@ allows you to set up a second and third such terrain feature and is used in Ste
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Nexus of Grief" hidden="false" id="1475-38bb-e6a9-5fb1" type="selectionEntry" targetId="ca5e-5353-81bc-4e13" defaultAmount="1"/>
+    <entryLink import="true" name="Lord Vitriolic" hidden="false" id="670f-bd2f-5c28-4e4a" type="selectionEntry" targetId="202c-c298-11c5-361e">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="a416-cc32-d118-1c21" type="selectionEntryGroup" targetId="9e6d-5798-809e-8d02"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="c1d7-67cf-f421-7cd0" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="19c2-36c2-fc32-a758" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
+        <entryLink import="true" name="Paths" hidden="false" id="22e5-aeb0-f639-46a4" type="selectionEntryGroup" targetId="b01c-51e0-7c8b-0df5"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="11e6-a4d7-b4ae-f3e5" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="82f6-c8e1-9dd2-7deb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="3fb9-4ad6-b87c-48e6" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.75d6-6995-dfcc-3898"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.50b6-cef0-6119-85df"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.98c9-e4bf-b35d-bdca"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Nighthaunt Hero" hidden="false" id="b206-021f-e56e-d9c3" type="selectionEntry" targetId="7f6e-2573-2d85-dc51">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="2d0d-c81e-ed6c-0b12" type="selectionEntryGroup" targetId="9e6d-5798-809e-8d02"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="311a-c522-53a3-9afb" type="selectionEntryGroup" targetId="f997-403-7b2e-60c6"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9e43-2443-3ad4-be55" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3674-4a8f-0600-05df" type="selectionEntryGroup" targetId="b01c-51e0-7c8b-0df5"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="9253-d202-aa2c-9ae8" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="fa91-5169-1889-9d49" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
   </entryLinks>
   <categoryEntries>
     <categoryEntry name="Cursed Soul" id="3fb9-4ad6-b87c-48e6" hidden="false">

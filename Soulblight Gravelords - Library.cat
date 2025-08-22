@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="dff3-13f8-82b5-3347" name="Soulblight Gravelords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="42" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="dff3-13f8-82b5-3347" name="Soulblight Gravelords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="43" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Neferata, Mortarch of Blood" hidden="false" id="ca26-c079-31bc-38a8" publicationId="e3a0-cfae-cbb3-0215">
       <entryLinks>
@@ -578,7 +578,7 @@
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18&quot; of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.</characteristic>
             <characteristic name="Effect" typeId="1cb9-a-1345-907f">If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly **^^Death^^** unit, pick 1 of the following effects:
 • Return a number of slain models to the target unit with a combined Health characteristic of up to 3.
-• The target has **^^Ward (5+)^^** until the start of your next turn</characteristic>
+• The target has **^^Ward (5+)^^** until the start of your next turn.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -2355,13 +2355,6 @@ More than 1 effect can apply to a unit at the same time; however, each effect c
         <categoryLink name="SOULBLIGHT GRAVELORDS" hidden="false" id="73cd-aed3-17ee-67d5" targetId="f7c2-3a00-4ae6-667" primary="false"/>
         <categoryLink name="VAMPIRE" hidden="false" id="7645-4ef0-46c4-6f3c" targetId="e8eb-b490-6da8-d51e" primary="false"/>
       </categoryLinks>
-      <rules>
-        <rule name="Askurgan Trueblades" id="3f02-e69a-a82-e7db" hidden="false">
-          <description>*Each model in this unit is armed with Askurgan Weapons.
-• 1/8 models is a Curseblood and must replace their Askurgan Weapons with Elongated Claws and Slavering Maw.
-• The champion is an Askurgan Exemplar and cannot replace their weapons.*</description>
-        </rule>
-      </rules>
       <profiles>
         <profile name="Askurgan Trueblades" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="e737-1bb2-297-de18">
           <characteristics>
@@ -6232,16 +6225,19 @@ Each part of this **^^Manifestation^^** is armed with **Leeching Bites**.</chara
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Beast Form" hidden="false" id="30bb-7ec0-6846-462a" sortIndex="3">
                   <profiles>
-                    <profile name="Beast Form" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0a2e-6e5b-8b2a-7078">
+                    <profile name="Beast Form" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0a2e-6e5b-8b2a-7078">
                       <characteristics>
-                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick 1 of the following units to be this unit&apos;s **beast form**:
-
-
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following units to be this unit&apos;s **beast form**:
+• A **Dire Wolves** unit with 1 model.
+• A **Fell Bats** unit with 1 model.
 Set up the **beast form** unit within 1&quot; of this unit, then remove this unit from the battlefield. The **Beast Form** unit can use **^^Move^^** and **^^Core^^** abilities in your next movement phase.
 If the **beast form is destroyed**, before it is removed from play, set up this unit on the battlefield once more within 1&quot; of it.
-In addition, in any combat phase before **^^Fight^^** abilities are used, or at the end of any turn, you can have the **beast form** unit transform back into this unit. If you do so, set up this unit within 1&quot; of the **beast form++ unit and remove the **beast form** unit from the battlefield.
+In addition, in any combat phase before **^^Fight^^** abilities are used, or at the end of any turn, you can have the **beast form** unit transform back into this unit. If you do so, set up this unit within 1&quot; of the **beast form** unit and remove the **beast form** unit from the battlefield.
 This ability can only be used by an **^^Infantry^^** hero.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
@@ -6456,7 +6452,7 @@ This ability can only be used by an **^^Infantry^^** hero.</characteristic>
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="2b0b-49af-0288-adbd" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2b0b-49af-0288-adbd" shared="true" includeChildSelections="true"/>
                             <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
@@ -6504,9 +6500,14 @@ This ability can only be used by an **^^Infantry^^** hero.</characteristic>
                   </costs>
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c939-d674-0a88-ab26" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c939-d674-0a88-ab26" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                   <constraints>
@@ -6551,6 +6552,13 @@ This ability can only be used by an **^^Infantry^^** hero.</characteristic>
                   </constraints>
                 </selectionEntry>
               </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="29f7-f38a-7572-59c9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Upgrades" id="ecf2-4307-3126-e40d" hidden="false" sortIndex="7" collapsible="true">
               <selectionEntries>
@@ -6719,7 +6727,7 @@ This ability can only be used by an **^^Infantry^^** hero.</characteristic>
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
                       <conditionGroups>
-                        <conditionGroup type="and">
+                        <conditionGroup type="or">
                           <conditionGroups>
                             <conditionGroup type="and">
                               <conditions>
