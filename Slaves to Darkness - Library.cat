@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="c580-f07a-aa35-f79f" name="Slaves to Darkness - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="31" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="c580-f07a-aa35-f79f" name="Slaves to Darkness - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Archaon, the Everchosen" hidden="false" id="8f2a-58f3-5fab-a1a" publicationId="6357-5d77-a2b2-f86b">
       <categoryLinks>
@@ -68,8 +68,7 @@
 ***Filth-spewer:*** Pick an enemy unit within 6&quot; of this unit and roll a number of dice equal to the number of models in that unit, to a maximum of 7. For each 3+, inflict 1 mortal damage on that unit.
 ***Skull-gorger:*** Pick an enemy unit in combat with this unit and roll a dice. If the roll exceeds that unit’s Health characteristic, 1 model in that unit is slain and you can **Heal (X)** this unit, where **X** is that unit’s Health characteristic.
 ***Spell-eater:*** Pick a **^^Manifestation^^** within 12&quot; of this unit and roll a dice. On a 2+, it is banished and removed from play. In addition, inflict D3 mortal damage on the unit that summoned it.
-
-**Designer&apos;s Note:** *Note the &apos;Wild Form&apos; ability present on some manifestations only works on the &apos;Banish Manifestation&apos; ability, so does not prevent Spell-eater from banishing that manifestation.*</characteristic>
+</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -238,7 +237,7 @@
                 <profile name="The Mounted Skulls of the Fallen" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f87-5e2-fcc-5f7e">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit has a **Trophy Rack**, its **Hellforged Weapons** also have Anti-**^^Hero^^** (+1 Rend).</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit has a **Trophy Rack**, its **Hellforged Weapons** also have Anti-**^^Hero^^ (+1 Rend)**.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -1393,8 +1392,8 @@
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -1533,26 +1532,8 @@
         <profile name="Ruin-blessed Conqueror" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="60f8-d21-c121-4a9a">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-Pick an objective that this unit is contesting.            </characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-Roll a dice. On a 3+, for the rest of the turn, other friendly **^^Darkoath^^** units have **^^Ward 5+)^^** while they are contesting that objective.            </characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective that this unit is contesting.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, for the rest of the turn, other friendly **^^Darkoath^^** units have **^^Ward (5+)^^** while they are contesting that objective.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1847,13 +1828,14 @@ Roll a dice. On a 3+, for the rest of the turn, other friendly **^^Darkoath^^**
           <characteristics>
             <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
             <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
-            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Slaves to Darknes^^** unit wholly within 12&quot; of this unit that shares a Mark of Chaos keyword with this unit to be the target. Then, make a chanting roll of D6.</characteristic>
-            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Apply 1 of the following effects to the target for the rest of the turn depending on which Mark of Chaos keyword this unit has:
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Slaves to Darkness^^** unit wholly within 12&quot; of this unit to be the target. Then, make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Apply 1 of the following effects to the target for the rest of the turn:
 • **^^Undivided:^^** When the target uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.
 • **^^Khorne:^^** Add 1 to hit rolls for the target’s attacks.
-• **^^Tzeentch:^^** The target has Ward (5+).
+• **^^Tzeentch:^^** The target has **^^Ward (5+)^^**.
 • **^^Nurgle:^^** Add 1 to wound rolls for the target’s attacks.
-• **^^Slaanesh:^^** Add 1 to the number of dice rolled when making charge rolls for the target, to a maximum of 3. If the chanting roll was 8+, you can pick up to 2 eligible units to be the targets instead of 1.</characteristic>
+• **^^Slaanesh:^^** Add 1 to the number of dice rolled when making charge rolls for the target, to a maximum of 3. 
+If the chanting roll was 8+, you can pick up to 2 eligible units to be the targets instead of 1.</characteristic>
             <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
           </characteristics>
           <attributes>
@@ -3447,9 +3429,9 @@ If this unit is contesting an objective you control that is wholly within enem
         <categoryLink name="SLAVES TO DARKNESS" hidden="false" id="7b2e-1eff-34d3-951b" targetId="94d9-cc36-9083-1bea" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Realmscorge Rupture" hidden="false" id="2e02-52d1-c3e3-eb13" publicationId="6357-5d77-a2b2-f86b">
+    <selectionEntry type="unit" import="true" name="Realmscourge Rupture" hidden="false" id="2e02-52d1-c3e3-eb13" publicationId="6357-5d77-a2b2-f86b">
       <profiles>
-        <profile name="Realmscorge Rupture" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="8014-e183-973b-c0ca">
+        <profile name="Realmscourge Rupture" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="8014-e183-973b-c0ca">
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">10&quot;</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">7</characteristic>
@@ -4537,7 +4519,7 @@ Add 1 to the Attacks characteristic of this unit’s Rune-etched Weapons while
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if it is in combat with an enemy **^^Hero^^**.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the turn. This unit can only use the second **^^Fight^^** ability if it is in combat with an enemy Hero, and if it does so, it must pick an enemy **^^Hero^^** to be the target of all of its attacks.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the turn. When using the second **^^Fight^^** ability, this unit must pick an enemy **^^Hero^^** to be the target of all of its attacks.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -4992,8 +4974,8 @@ Add 1 to the Attacks characteristic of this unit’s Rune-etched Weapons while
         <profile name="Shattered Gloom Globes" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a960-4737-ffac-ffc9">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit cannot be targeted by shooting attacks for the rest of the turn.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03"/>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit cannot be targeted by shooting attacks for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -5908,10 +5890,13 @@ Add 1 to the Attacks characteristic of this unit’s Rune-etched Weapons while
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Unleash the Beast" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0862-eaac-444b-5d4c">
+        <profile name="Unleash the Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0862-eaac-444b-5d4c">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can use the ‘Normal Move’ ability as if it were your movement phase.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use the ‘Normal Move’ ability as if it were your movement phase.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -7230,8 +7215,7 @@ This unit has **^^Ward (5+)^^** while it is contesting an objective you control.
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move a distance up to the value of the charge roll. During that move, this unit can move into
-combat and can pass through models in the target unit, but it must end that move within 1&quot; of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1&quot; of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**, **^^Charge^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -8564,18 +8548,9 @@ combat and can pass through models in the target unit, but it must end that mov
         </profile>
         <profile name="Champion of the Undivided" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="65e3-742c-cd71-5824">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Slaves to Darkness^^** unit wholly within 12&quot; of this unit and that does not have a **Pledge to Chaos** keyword to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by the target while they are contesting an objective you do not control.            </characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by the target while they are contesting an objective you do not control.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
