@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="30" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1ede-f90-a661-b6c2" hidden="false">
       <selectionEntryGroups>
@@ -44,13 +44,10 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Ar&apos;gath, the King of Blades" hidden="false" id="4e60-c59e-a6eb-2766">
               <profiles>
-                <profile name="Ar&apos;gath, the King of Blades" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6511-6823-aee9-e30c">
+                <profile name="Ar&apos;gath, the King of Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6511-6823-aee9-e30c">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** in combat with this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Ward rolls cannot be made for the target for the rest of the turn.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for enemy **^^Heroes^^** while they are in combat with this unit.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
@@ -281,7 +278,7 @@ This unit can be affected by this ability multiple times and the effects are cum
               <profiles>
                 <profile name="Frenzied Taskmaster" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5f0a-7fd8-8235-9604">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Blades of Khorne Infantry^^** or **^^Cavalry^^** unit within this unit&apos;s combat range that is not in combat to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target can move D6&quot; but cannot end that move in combat. If the target ends that move within this unit&apos;s combat range, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -442,10 +439,13 @@ This unit can be affected by this ability multiple times and the effects are cum
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
           </attributes>
         </profile>
-        <profile name="Skulls for the Skull Throne" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3c67-66e4-25ed-6b12" publicationId="81a9-3dbf-dbc5-672e">
+        <profile name="Skulls for the Skull Throne" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3c67-66e4-25ed-6b12" publicationId="81a9-3dbf-dbc5-672e">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a **^^Blood Tithe^^** ability that you have not unlocked and spend the number of blood tithe points required to unlock that ability. That **^^Blood Tithe^^** ability is now unlocked for the rest of the battle.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round, Start of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a **^^Blood Tithe^^** ability that you have not unlocked and spend the number of blood tithe points required to unlock that ability. That **^^Blood Tithe^^** ability is now unlocked for the rest of the battle.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -462,6 +462,10 @@ This unit can be affected by this ability multiple times and the effects are cum
             <characteristic name="Blood Tithe Points" typeId="937f-e9e7-e332-d608">0</characteristic>
             <characteristic name="Unlock Condition" typeId="8359-f915-24d8-23c4">You do not need to unlock this ability. It is already unlocked.</characteristic>
           </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="9019-1a17-dfdb-d171">Orange</attribute>
+            <attribute name="Type" typeId="ba97-56ed-9674-f836">Movement</attribute>
+          </attributes>
         </profile>
         <profile name="Divine Scorn" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="4ad6-054b-9e41-1df8">
           <characteristics>
