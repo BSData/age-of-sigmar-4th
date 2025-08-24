@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="4631-7997-6da0-7a32" name="Stormcast Eternals - Heroes of the First-Forged" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="4631-7997-6da0-7a32" name="Stormcast Eternals - Heroes of the First-Forged" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="d56b-11b8-0555-b524" hidden="false" flatten="true">
       <selectionEntries>
@@ -1584,6 +1584,43 @@
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Stormcast Eternals Hero" hidden="false" id="467f-9f70-c7cd-6624" type="selectionEntry" targetId="64df-1a09-e8fb-10da">
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="0918-24ef-0dd7-e43d" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="3317-0393-7b7d-0be5" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Paths" hidden="false" id="c538-3d27-77d5-05e0" type="selectionEntryGroup" targetId="a83c-019f-9f8f-cb0b"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="e68e-3b1d-94f0-6bf2" type="selectionEntryGroup" targetId="8492-6a49-6f80-13cf"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="da17-59c3-8c73-c1f0" type="selectionEntryGroup" targetId="139c-16a1-6f0d-0dd1"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="9834-dcf7-c7b5-9dfd" type="selectionEntryGroup" targetId="aa7e-2e2e-c63e-617e"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="FIRST-FORGED" hidden="false" id="809a-c4b3-1413-be9a" targetId="5683-b46f-65e6-4b48" primary="false"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
 </catalogue>

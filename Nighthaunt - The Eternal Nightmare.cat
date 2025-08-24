@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d7dc-8d46-d743-55c3" name="Nighthaunt - The Eternal Nightmare" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="48" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d7dc-8d46-d743-55c3" name="Nighthaunt - The Eternal Nightmare" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="48" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="❖ Lores" id="9b76-1ecd-71d7-93f3" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="Nighthaunt - Library" id="7ede-2c50-4e71-ff40" targetId="4ac4-565f-a06e-893"/>
@@ -202,6 +202,7 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="38a1-1d90-6255-3fc4" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="c4a1-8189-abef-ecef" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Paths" hidden="false" id="fd37-6452-4061-93c6" type="selectionEntryGroup" targetId="7fe4-98b1-b164-c0d9" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -1163,6 +1164,42 @@
       <categoryLinks>
         <categoryLink name="ETERNAL NIGHTMARE" hidden="false" id="8c08-4b8c-af58-996e" targetId="d96a-d8e4-8dbe-eb17" primary="false"/>
         <categoryLink name="Restrict General" hidden="false" id="6799-14b5-96a1-ad90" targetId="abcb-73d0-2b6c-4f17" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Nighthaunt Hero" hidden="false" id="c3ac-2100-f47c-25e7" type="selectionEntry" targetId="7f6e-2573-2d85-dc51">
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="71cd-d25c-e51e-8809" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6ca4-7c50-3278-32b2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="3835-951e-505d-ae49" type="selectionEntryGroup" targetId="d2b0-b473-4b8d-4508"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f532-4951-042b-7393" type="selectionEntryGroup" targetId="ec74-ffee-da0a-55fb"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="9a68-bc78-b442-a3f1" type="selectionEntryGroup" targetId="c254-c9fd-42e2-e8d8"/>
+        <entryLink import="true" name="Paths" hidden="false" id="3fa5-1276-1abc-fb15" type="selectionEntryGroup" targetId="8f39-989b-e420-3c93"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="ETERNAL NIGHTMARE" hidden="false" id="064a-b530-f2f2-400b" targetId="d96a-d8e4-8dbe-eb17" primary="false"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>

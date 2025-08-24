@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="3cd3-38d3-26cb-7a17" name="Skaven - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="34" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="3cd3-38d3-26cb-7a17" name="Skaven - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="35" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Stormfiends" hidden="false" id="64f5-f28b-5aa9-4e18" publicationId="ff83-b049-91b9-ed05">
       <categoryLinks>
@@ -5860,13 +5860,35 @@ If the chanting roll was 12+, you can pick 2 targets instead of 1.</characterist
         <modifier type="set" value="false" field="hidden">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="231a-2a83-26f0-a718" shared="true"/>
-              </conditions>
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="231a-2a83-26f0-a718" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5be9-f24d-b606-6c24" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="The Great-grand Gnawhorde can only contain MASTERCLAN, VERMINUS, SKRYRE, and MOULDER HEROES." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5be9-f24d-b606-6c24" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="7974-c5a2-e00a-f98f" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="e0fb-7194-508-f33b" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="3244-98f3-bb61-b9d3" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="da36-ed81-79fe-ca75" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
