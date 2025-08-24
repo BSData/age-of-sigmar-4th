@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5be9-f24d-b606-6c24" name="Skaven - The Great-grand Gnawhorde" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5be9-f24d-b606-6c24" name="Skaven - The Great-grand Gnawhorde" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: The Great-grand Gnawhorde" hidden="false" id="d1dc-504d-44e7-6c6f" publicationId="ff83-b049-91b9-ed05">
       <profiles>
@@ -901,7 +901,7 @@
         <categoryLink name="GNAWHORDE" hidden="false" id="cb34-2fa2-5ae6-c244" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Ratling Gun" hidden="false" id="6aa0-f35e-22bc-d59a" type="selectionEntry" targetId="536f-8a32-f991-c47a">
+    <entryLink import="true" name="Ratling Guns" hidden="false" id="6aa0-f35e-22bc-d59a" type="selectionEntry" targetId="536f-8a32-f991-c47a">
       <modifiers>
         <modifier type="multiply" value="2" field="points">
           <conditions>
@@ -1470,7 +1470,7 @@
         <categoryLink name="GNAWHORDE" hidden="false" id="3f9d-82e3-4890-340a" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Warpfire Thrower" hidden="false" id="50c5-1a69-5e23-af1f" type="selectionEntry" targetId="3101-8510-5da3-3af">
+    <entryLink import="true" name="Warpfire Throwers" hidden="false" id="50c5-1a69-5e23-af1f" type="selectionEntry" targetId="3101-8510-5da3-3af">
       <modifiers>
         <modifier type="multiply" value="2" field="points">
           <conditions>
@@ -1716,6 +1716,42 @@
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Skaven Hero" hidden="true" id="34b0-a3b5-8c6f-42b2" type="selectionEntry" targetId="c011-fb8c-500a-e727">
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="9c05-8144-7fdb-5649" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="cf29-8625-415c-2fa9" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0112-f9e5-ed38-c3f0" type="selectionEntryGroup" targetId="f7b6-69d7-910d-4510"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="769f-0a4c-127f-5cda" type="selectionEntryGroup" targetId="1166-95d2-2946-9e90"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6dd2-2376-669b-505d" type="selectionEntryGroup" targetId="c26f-7690-e0e2-1b0d"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="3baa-dfb9-c944-f489" type="selectionEntryGroup" targetId="0c3d-daee-125a-2512"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="GNAWHORDE" hidden="false" id="831a-7f32-5a33-c7ce" targetId="84cc-ef1d-62cd-3fd9" primary="false"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3097-36cb-412f-8b60" name="Soulblight Gravelords - Barrow Legion" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="BARROW LEGION" id="07ad-5d9a-db7f-270d" hidden="false"/>
     <categoryEntry name="Deathrattle Overseer" id="ca3d-ce07-0388-88b9" hidden="false">
@@ -747,6 +747,42 @@ For the rest of the battle, each time an attack targets this unit, if the attack
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3d2b-b99d-8c3f-82e2" includeChildSelections="true"/>
       </constraints>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Soulblight Gravelords Hero" hidden="false" id="4042-ce8e-8c9b-10d6" type="selectionEntry" targetId="1456-49e7-220b-2813">
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="1eac-9302-1d87-cc85" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="b572-cfee-fb98-de61" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="c9c6-8f16-1eed-b785" type="selectionEntryGroup" targetId="6fcc-0982-2b8c-c089"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8eec-6afa-5508-861f" type="selectionEntryGroup" targetId="59b8-fca5-4153-b1ed"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="c570-ae9e-228c-6ded" type="selectionEntryGroup" targetId="8184-d1b7-67cf-4021"/>
+        <entryLink import="true" name="Paths" hidden="false" id="098f-a8ec-b246-3669" type="selectionEntryGroup" targetId="9cd2-fcb8-7b92-2889"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="BARROW LEGION" hidden="false" id="583e-47d5-c26c-06d1" targetId="07ad-5d9a-db7f-270d" primary="false"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>
