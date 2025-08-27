@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6353-cb84-ac7f-9a15" name="Ogor Mawtribes" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6353-cb84-ac7f-9a15" name="Ogor Mawtribes" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="daa3-d823-9bac-b8d" hidden="false" flatten="true">
       <selectionEntries>
@@ -1612,6 +1612,68 @@ For the rest of the battle, each time any damage points are allocated to an ene
         <entryLink import="true" name="Paths" hidden="false" id="9ac0-6eda-55fe-b608" type="selectionEntryGroup" targetId="517c-3059-2a24-89dc"/>
         <entryLink import="true" name="Renown" hidden="false" id="9550-42d4-2561-d17b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+    </entryLink>
+    <entryLink import="true" name="Mantrapper" hidden="false" id="6c6d-1fd8-01f2-4ecb" type="selectionEntry" targetId="9167-b1ce-996d-5d19">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="7fc0-0333-91ce-6a56" type="selectionEntryGroup" targetId="b31d-aee-8d55-5892"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="d160-0035-973e-fe02" type="selectionEntryGroup" targetId="30c8-590c-42a7-3c48"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cc36-ceef-b178-8a56" type="selectionEntryGroup" targetId="9b0d-58b7-8982-2128"/>
+        <entryLink import="true" name="Paths" hidden="false" id="8465-eca1-8c79-fbf0" type="selectionEntryGroup" targetId="517c-3059-2a24-89dc"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="6d0f-428c-d5bc-0c6c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="26d4-b867-508a-dc23" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Big Names" hidden="false" id="09f7-ccbe-cc9c-348f" type="selectionEntryGroup" targetId="c097-d461-7bb0-880c"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="130"/>
+      </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="bf4e-4b1b-7055-2ec8" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.1a3d-33f9-c4cc-fe0"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
   </entryLinks>
   <selectionEntries>

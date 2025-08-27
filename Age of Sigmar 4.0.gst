@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="52" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="53" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -8860,7 +8860,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e61d-47e8-a14f-56f6"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="300"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8900,7 +8900,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0031-1ed4-c4a3-4173"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="300"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8940,7 +8940,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cff6-13b9-e826-eba1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="200"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8980,7 +8980,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="11a7-c4fd-baa6-1932"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="230"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -10491,6 +10491,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome: Idoneth Deepkin" id="9866-239b-07f0-d92b" hidden="false"/>
     <publication name="White Dwarf Issue 514" id="8b18-3cdd-0e4a-bfd4" hidden="false"/>
     <publication name="Battletome Supplement: Blades of Khorne" id="de00-5d7f-9409-d250" hidden="false"/>
+    <publication name="Battletome Supplement: Nighthaunt" id="b480-1f20-7f56-1959" hidden="false"/>
+    <publication name="Miscellaneous Download" id="fb5f-170a-00d0-4cf5" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
