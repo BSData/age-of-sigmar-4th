@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="53" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="54" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -101,6 +101,9 @@
         <characteristicType id="1981-ef09-96f6-7aa9" name="Save"/>
         <characteristicType id="6c6f-8510-9ce1-fc6e" name="Control"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Base Size" id="5690-df26-e777-45e9"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40" sortIndex="1">
       <characteristicTypes>
@@ -109,6 +112,9 @@
         <characteristicType name="Save" hidden="false" id="80c7-7691-b6ed-d6a6"/>
         <characteristicType name="Banishment" hidden="false" id="97a2-d412-9ac-6a37"/>
       </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Base Size" id="50db-066e-a3e7-696f"/>
+      </attributeTypes>
     </profileType>
     <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10">
       <characteristicTypes>
@@ -9406,6 +9412,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">8+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Devourer of Magics" hidden="false" id="61af-1ae8-5d5e-d349" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
@@ -9473,6 +9482,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="End Given Form" hidden="false" id="42b5-c322-7e12-371c" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
@@ -9523,6 +9535,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Bound for the Great Oubliette" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6817-e507-443e-1ff4">
           <characteristics>
@@ -9565,6 +9580,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Deathly Passage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f4c4-3de7-898a-b7d8">
           <characteristics>
@@ -9606,6 +9624,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Scything Blade" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54d0-e6a1-c6e8-46a7">
           <characteristics>
@@ -9646,6 +9667,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Mechanisms of Time" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad92-932-6f56-1d97">
           <characteristics>
@@ -9679,6 +9703,9 @@
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Burning Up" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c08-79dc-f4d5-dc9f">
           <characteristics>
@@ -9728,6 +9755,9 @@
             <characteristic name="Save" hidden="false" id="13a3-bbfe-6a7f-9fc0" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" hidden="false" id="73ae-2d2e-3713-527b" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Harbinger of Horror" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a59-1e45-94a8-3c90">
           <characteristics>
@@ -9780,6 +9810,9 @@
             <characteristic name="Save" hidden="false" id="716a-9b8b-1a83-d81e" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" hidden="false" id="e3c1-bff6-1c0b-da0f" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Morbid Detonation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b8a4-541-b62-cf62">
           <characteristics>
@@ -9834,6 +9867,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" hidden="false" id="a49-ebbb-c54a-2c9c" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
             <characteristic name="Banishment" hidden="false" id="c6b4-46b0-c09f-7b9c" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Phantasmal Translocation" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="425b-721a-d7a1-26d4">
           <characteristics>
@@ -9882,6 +9918,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Traverse the Tides of Death" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2e3f-3b03-af72-7a50">
           <characteristics>
@@ -9923,6 +9962,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Dancing Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7b11-c623-fc14-4639">
           <characteristics>
@@ -10033,6 +10075,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Restored Vigour" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2899-7afa-38bc-a40e">
           <characteristics>
@@ -10086,6 +10131,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Ravening Hunger" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9b8b-617a-3c69-2af9">
           <characteristics>
@@ -10127,6 +10175,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Pulled to the Grave" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1fa3-5209-8869-8d58">
           <characteristics>
@@ -10168,6 +10219,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Tendrils of Light and Shadow" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7752-7084-5da1-812b">
           <characteristics>
@@ -10217,6 +10271,9 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">6+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ba4a-41ff-85b6-17e7">
           <characteristics>
@@ -10257,6 +10314,9 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
+          <attributes>
+            <attribute typeId="50db-066e-a3e7-696f" name="New Attribute Type"/>
+          </attributes>
         </profile>
         <profile name="Blinding Light" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fc0c-9252-758c-533c">
           <characteristics>
