@@ -9179,6 +9179,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f9b9-be7e-3827-aaba"/>
       </constraints>
       <costs>
+        <cost name="pts" typeId="points" value="340"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
