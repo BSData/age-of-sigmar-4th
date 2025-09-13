@@ -1448,7 +1448,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Shoot^^** ability for this unit and all of its attacks targeted the same enemy unit</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of **daemonic power points** this unit has for each other enemy unit within the combat range of the target of this unit&apos;s shooting attacks. Tor each 3+, inflict 1 mortal damage on the enemy unit being rolled for.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of **daemonic power points** this unit has for each other enemy unit within the combat range of the target of this unit&apos;s shooting attacks. For each 3+, inflict 1 mortal damage on the enemy unit being rolled for.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1668,6 +1668,833 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Anvil of Apotheosis: Helsmiths of Hashut Hero" hidden="true" id="4f90-3fa4-8f1e-1ef8" publicationId="487d-9798-0633-8040" flatten="false" collapsible="true">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Anvil of Apotheosis: Helsmiths of Hashut Hero" hidden="false" id="cae7-889d-45b8-b814">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hashutite Blade" hidden="false" id="4a07-4717-bcc9-6722">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="276a-4830-8afb-ad51"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6bb0-25a0-5e06-aebf"/>
+              </constraints>
+              <profiles>
+                <profile name="Hashutite Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="97ec-7fba-4dc6-424b">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159"/>
+                  </characteristics>
+                  <modifiers>
+                    <modifier type="set" value="-" field="eda3-7332-5db1-4159">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="d184-06cb-47c7-26f5" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="0cc8-77dc-207c-b74d" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="b221-d35b-96d7-3eff" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="append" value="Crit (Mortal)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d184-06cb-47c7-26f5" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3ba-b3d6-71ae-f96b" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b221-d35b-96d7-3eff" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" value="2" field="60e-35aa-31ed-e488">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d184-06cb-47c7-26f5" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3ba-b3d6-71ae-f96b" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="increment" value="2" field="60e-35aa-31ed-e488">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e5fd-7e84-9ff0-bc55" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="2+" field="26dc-168-b2fd-cb93">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1e41-29ba-099f-b51d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="3+" field="61c1-22cc-40af-2847">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fd42-4cac-95d7-ac6b" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Horns and Hooves" hidden="true" id="a06f-7b47-40a2-c119">
+              <profiles>
+                <profile name="Horns and Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e235-752e-0a04-f4d3">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ab4d-e39f-56bd-8edb" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7870-60e6-648e-aca5" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="7870-60e6-648e-aca5"/>
+                    <modifier type="set" value="1" field="ab4d-e39f-56bd-8edb"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="dda0-b8c2-cab0-d20a" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crushing Horns and Hooves" hidden="true" id="231d-c3d2-7a9d-9dfc">
+              <profiles>
+                <profile name="Crushing Horns and Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="512b-5547-a442-e2af">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7417-3d59-6ec0-b251" automatic="true"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="562b-3df7-499f-f8c5" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="562b-3df7-499f-f8c5"/>
+                    <modifier type="set" value="1" field="7417-3d59-6ec0-b251"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="710a-668b-4cba-e82c" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73fd-beb9-641a-cef4"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd09-6e42-215f-fbc4"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="b8f8-75d4-9d49-9699" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Anvil of Apotheosis: Helsmiths of Hashut Hero" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="f376-9bb8-e3ff-db90">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="eb6e-19d1-e336-23d5" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="INFANTRY" hidden="false" id="5978-5d06-a38e-0333" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="6976-52aa-d282-b49c" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="HELSMITHS OF HASHUT" hidden="false" id="f93e-1679-8212-b433" targetId="905e-30fb-4d0f-4685" primary="false"/>
+        <categoryLink name="DUARDIN" hidden="false" id="16bb-fab1-94d4-11b0" targetId="72e3-7b1b-cb94-4cbd" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Destiny point limit exceeded." field="error">
+          <conditions>
+            <condition type="lessThan" value="0" field="bc33-05f5-8d3f-af43" scope="self" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="Taar&apos;s Grand Forgehost can only contain INFANTRY HEROES." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="The Anvil of Apotheosis" id="8cb7-cc2f-49f7-fe9c" hidden="false" sortIndex="1">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Archetype" id="5e6a-2d4a-78ef-cc22" hidden="false" sortIndex="2" collapsible="true" defaultSelectionEntryId="none">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f25f-0b54-522a-857c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b980-c6f5-c82d-ebf8"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Warlord" hidden="false" id="d184-06cb-47c7-26f5" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Infernal Sorcerer" hidden="false" id="b3ba-b3d6-71ae-f96b" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="add" value="6f28-c3f6-4b1b-8aff" field="category" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scorched Acolyte" hidden="false" id="e3f1-78f9-c861-6029" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Extract Power" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f5d8-ebd6-6de4-6306">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Your Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is contesting an objective, a **Place of Power**, or a terrain feature and that objective, **Place of Power** or terrain feature has a friendly desolation token, give this unit 1 ritual point.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="add" value="3fe-84f4-cec6-a1c1" field="category" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Destiny Point Limit" id="2bde-60a0-38f4-c5fb" hidden="false" sortIndex="1" collapsible="true" defaultSelectionEntryId="none">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Cruel Overlord" hidden="false" id="9ddf-94b3-4e1b-bf1b" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="150"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Hashutite Tyrant" hidden="false" id="f67b-2592-8b73-ac83" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="250"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="30"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Honoured of the Dark Conclave" hidden="false" id="077a-8273-d5f8-27f7" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="350"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="50"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74b6-c4cb-4bea-5b44"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="172e-dbc2-7422-2e0e"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Battle Mounts" id="193d-f56b-4788-6eba" hidden="false" sortIndex="5" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Infernal Taurus" hidden="false" id="dda0-b8c2-cab0-d20a" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-14"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="12" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="10&quot;" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="remove" value="75d6-6995-dfcc-3898" field="category" scope="root-entry"/>
+                    <modifier type="add" value="6d54-625c-d063-13e2" field="category" scope="root-entry"/>
+                    <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="5" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="add" value="b979-4c3e-7d0e-6921" field="category" scope="root-entry"/>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2bff-fc89-3ceb-dff2">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Horns and Hooves** is 5.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                    <profile name="Daemonic Resilience" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5497-763d-30cf-2bd2">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Apply the effect below that corresponds with the number of **daemonic power points** this unit has:
+**1** This unit has **^^Ward (6+)^^**.
+**2** This unit has **^^Ward (5+)^^**.
+**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Venerable Taurus" hidden="false" id="710a-668b-4cba-e82c" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-18"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="14" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="10&quot;" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="remove" value="75d6-6995-dfcc-3898" field="category" scope="root-entry"/>
+                    <modifier type="add" value="6d54-625c-d063-13e2" field="category" scope="root-entry"/>
+                    <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="5" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="add" value="b979-4c3e-7d0e-6921" field="category" scope="root-entry"/>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8f33-ce03-5c3a-719a">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Crushing Horns and Hooves** is 5.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                    <profile name="Daemonic Resilience" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="50e9-e240-f0f2-9ebd">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Apply the effect below that corresponds with the number of **daemonic power points** this unit has:
+**1** This unit has **^^Ward (6+)^^**.
+**2** This unit has **^^Ward (5+)^^**.
+**3** This unit has **^^Ward (4+)^^** against damage inflicted by **^^Spells^^**, **^^Prayers^^**, and abilites used by **^^Manifestations^^**. Otherwise, it has **^^Ward (5+)^^**.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3418-603c-9c6f-702c"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Origins" id="016e-d217-4846-44cf" hidden="false" sortIndex="3" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Power Through Dark Pacts" hidden="false" id="0c36-8c2b-3d8e-3aa9" sortIndex="2">
+                  <profiles>
+                    <profile name="Power Through Dark Pacts" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d904-4428-e0e2-dee6">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You must use this ability in each of your hero phases.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice and apply the corresponding effect:
+**1-3 *Sacrificial Demand:*** Pick another friendly unit within 12&quot; of this unit. 1 model in that unit is slain. Otherwise, inflict D6 mortal damage on this unit.
+**4+ *Forbidden Knowledge:*** Pick 1 of the following effects to apply until the start of your next turn:
+• If this unit is a **^^Wizard^^** or **^^Priest^^**, add 1 to its power level.
+• Add 1 to the Damage characteristic of this unit&apos;s melee weapons.
+• Add 3 to the control scores of friendly units while they are wholly within 12&quot; of this unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Ruthless Industrialist" hidden="false" id="cd08-9c7e-bb6e-4fd7" sortIndex="3">
+                  <profiles>
+                    <profile name="Ruthless Industrialist" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="dc4e-1443-a683-9302">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">During your Path to Glory campaign, keep a tally of the number of **desolation tokens** you give. Each time the tally reaches a multiple of 15, this unit gains the next rank on its Path.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                  </costs>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Desolation Tokens" hidden="false" id="356f-31af-8b99-f75b"/>
+                  </selectionEntries>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Purveyor of Dark Mechanisms" hidden="false" id="c93a-2cc6-63b3-642f" sortIndex="1">
+                  <profiles>
+                    <profile name="Purveyor of Dark Mechanisms" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="dd9f-83a0-b9f8-31cc">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^War Machine^^** within this unit&apos;s combat range to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D3)** the target.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e205-bbd6-e3b0-c077"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Flaws" id="7bef-d48a-c799-b73f" hidden="false" sortIndex="4" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Rigid and Unmoving" hidden="false" id="13dc-e78e-8e01-8c12" sortIndex="3">
+                  <profiles>
+                    <profile name="Rigid and Unmoving" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8957-1ddd-66b1-c68d">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is on the battlefield, friendly units cannot use the &apos;Redeploy&apos; command.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Creeping Petrification" hidden="false" id="0142-d282-75d8-d560" sortIndex="1">
+                  <profiles>
+                    <profile name="Creeping Petrification" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5174-4147-7a1c-58e9">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 2 from run rolls and charge rolls for this unit.
+In addition, at the end of each battle, roll a dice. On a 1, give this unit 1 **stone-flesh point** and note this on your Path to Glory roster. When this unit has 3 **stone-flesh points?**, you must remove this unit from your Path to Glory roster.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="4"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Stone-flesh Points" hidden="false" id="c42e-df69-4b9c-5ba7">
+                      <constraints>
+                        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="74eb-8760-3d91-05b3"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Chained by Obligation" hidden="false" id="d3d0-b504-f507-3daa" sortIndex="2">
+                  <profiles>
+                    <profile name="Chained by Obligation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="eda3-bc34-e935-b1a2">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Start of First Battle Round</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit must use this ability.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice, On a 1-3, your resources have been depleted before the battle to settle a debt. You lose 1 command point.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9dad-76b5-67d2-db00"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Battle Mount Upgrades" id="5ba9-53fd-4f97-5fbd" hidden="false" sortIndex="6" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Reinforcing Cuneiform" hidden="false" id="cd1c-1c60-fe0c-e3b8" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0ae-7b38-4162-8b67"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Body of Hardened Obsidian" hidden="false" id="601f-44ef-d7df-74fe" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3513-7628-5c9a-2266"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Body of Hardened Obsidian" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3282-f44b-b568-dde3">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">For the purposes of the &apos;Daemonic Resilience&apos; ability, this unit always counts as having 1 more **daemonic power point** than the number it actually has, to a maximum of 3.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Flesh-melting Aura" hidden="false" id="c49b-3fbd-e241-5942" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e321-17d9-166d-4430"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Immolating Presence" hidden="false" id="6c48-6664-4185-8225" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="985f-42e4-6f7e-3b0d"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0a7-c44e-c643-0653" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Immolating Presence" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0260-1b43-01f2-efa0">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll exceeds the target&apos;s Health characteristic, 1 model in the target unit is slain.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Trample and Gore" hidden="false" id="d0a7-c44e-c643-0653" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50bb-3740-8424-483f"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6c48-6664-4185-8225" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <profiles>
+                    <profile name="Trample and Gore" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c5c1-70cb-4242-aeb4">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Inflict D3 mortal damage on the target. Then, roll 2D6. This unit can move a distance up to the value of the roll. during that move, this unit can pass through models in the target unit but must end that move in combat.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="193d-f56b-4788-6eba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Upgrades" id="b9d3-0f16-71cd-720e" hidden="false" sortIndex="7">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Dominating Presence" hidden="false" id="7461-f427-9565-9414" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6057-2ac2-bc9c-721e"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Hardy Constitution" hidden="false" id="48ac-9a08-a4b2-0f9c" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5091-d116-efd0-f903"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Foe-seeking Hexes" hidden="false" id="1e41-29ba-099f-b51d" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2de7-9a18-17d5-50e9"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Malignant Brawn" hidden="false" id="fd42-4cac-95d7-ac6b" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="140a-3c06-89d6-f3c2"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Cuneiform-etched Blade" hidden="false" id="b221-d35b-96d7-3eff" sortIndex="6">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e16-3d8d-020d-0bd0"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Spiteful Rivalry" hidden="false" id="0cc8-77dc-207c-b74d" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c38-7676-3123-7338"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="" id="407b-f5d8-c85d-d9f6" hidden="false" flatten="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd92-2faf-9658-e914"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b986-5d12-10e0-a267"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="INFANTRY" hidden="false" id="d237-7925-10f6-675d" sortIndex="1"/>
+                        <selectionEntry type="upgrade" import="true" name="CAVALRY" hidden="false" id="a646-fdf0-cc1a-0e68" sortIndex="2"/>
+                        <selectionEntry type="upgrade" import="true" name="MONSTER" hidden="false" id="036f-8742-96f1-bc7a" sortIndex="3"/>
+                        <selectionEntry type="upgrade" import="true" name="WAR MACHINE" hidden="false" id="a553-1457-c8b2-5c1b" sortIndex="4"/>
+                        <selectionEntry type="upgrade" import="true" name="WIZARD" hidden="false" id="3ceb-fde3-2e68-7d8d" sortIndex="5"/>
+                        <selectionEntry type="upgrade" import="true" name="PRIEST" hidden="false" id="6fb5-301f-f6ad-33f0" sortIndex="6"/>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Hobgrot Advisor" hidden="false" id="9fd3-5985-6d77-08c7" sortIndex="8">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="297a-72d9-4ebd-3f3a"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Hobgrot Advisor" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="507d-72c7-d913-c9bd">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s **Hobgrot Advisor** is a token. While this unit&apos;s **Hobgrot Advisor** is on the battlefield, add 3 to the control scores of friendly **^^Helsmiths of Hashut^^** units wholly within 12&quot; of this unit. If you make an unmodified save roll of 1 for this unit, remove this unit&apos;s **Hobgrod Advisor** from the battlefield, the attack fails, and the attack sequence ends.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rigorously Trained" hidden="false" id="e5fd-7e84-9ff0-bc55" sortIndex="7">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f08c-a715-7fe7-1fad"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Oracle of Hashut" hidden="false" id="5ce3-548a-210b-0894" sortIndex="9">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21ac-53f1-2a6a-2fca"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Oracle of Hashut" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1bcc-9571-c444-f7e6">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can chant prayers from the &apos;Prayers of the Scorched Sect&apos; lore as if it had **^^Priest (1)^^** and it knows all the prayers from that lore.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="3fe-84f4-cec6-a1c1" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="63d6-9c6b-8c41-ec2e" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.905e-30fb-4d0f-4685"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
