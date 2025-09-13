@@ -347,6 +347,7 @@
     <categoryEntry name="Regimental Hero" id="8f4b-1fa6-3128-8405" hidden="true"/>
     <categoryEntry name="AUTO-ENDRIN" id="6c83-ce3d-570e-e833" hidden="false"/>
     <categoryEntry name="HELSMITHS OF HASHUT" id="905e-30fb-4d0f-4685" hidden="false"/>
+    <categoryEntry name="HOBGROT" id="9e60-0037-86f0-036d" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
