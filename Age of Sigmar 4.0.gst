@@ -345,7 +345,6 @@
     </categoryEntry>
     <categoryEntry name="PLEDGED TO TZEENTCH" id="cd13-c472-ceff-5bd8" hidden="false"/>
     <categoryEntry name="PLEDGED TO KHORNE" id="8aac-5207-b454-5ecb" hidden="false"/>
-    <categoryEntry name="LEGION OF THE FIRST PRINCE" id="5942-b473-e229-37cd" hidden="false"/>
     <categoryEntry name="Enhancement Configuration" id="8fa2-f5fc-18d9-e5d0" hidden="true"/>
     <categoryEntry name="Order of Battle" id="8e18-320c-b5bb-7cc6" hidden="false"/>
     <categoryEntry name="Arcane Tome" id="707c-1c04-9af6-2307" hidden="true"/>
