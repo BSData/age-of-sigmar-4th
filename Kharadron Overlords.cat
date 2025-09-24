@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1100-a22f-15c6-bdea" name="Kharadron Overlords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="26" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1100-a22f-15c6-bdea" name="Kharadron Overlords" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Kharadron Overlords - Library" id="c4eb-4566-cf00-726c" targetId="7e5e-7934-c23b-c35e"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="a944-d6c3-2091-dd73" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -12,7 +12,7 @@
         <profile name="Skyvessel Cover" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e798-72bd-b061-35b8" publicationId="d4a9-b568-9525-d6ac">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for attacks that target friendly **^^Kharadron Overlords Infantry^^** units while they are wholly within 6&quot; of a friendly **Arkanaut Ironclad** or **Arkanaut Frigate**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for attacks that target friendly **^^Kharadron Overlords Infantry^^** units that have not charged in the same turn while they are wholly within 6&quot; of a friendly **Arkanaut Ironclad** or **Arkanaut Frigate** that has not charged in the same turn.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
@@ -88,8 +88,8 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
               <profiles>
                 <profile name="Celestium Burst Grenade" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="aa7b-2f0-1fb7-5d2d">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Your Shooting Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Shooting Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Ward rolls cannot be made for the target for the rest of the turn.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -143,6 +143,25 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="95c9-4d29-c191-23e5" includeChildSelections="true"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -293,6 +312,25 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
               </attributes>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+            <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+            <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Pioneers and Scavengers" hidden="false" id="322f-67a2-b775-77de" publicationId="d4a9-b568-9525-d6ac">
           <constraints>
@@ -449,100 +487,6 @@ Remove the targets from the battlefield. After the **^^Skyvessel^^** ends its m
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d51-ca02-4063-2d57"/>
       </constraints>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Skyvessel Upgrades" id="f62f-0eb8-7be4-6603" hidden="false">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Skyvessel Upgrades: Kharadron Overlords" id="e871-0e91-bf14-52b4" hidden="true" publicationId="f894-7929-f79a-a269">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Voidstone Repulser Vents" hidden="false" id="827f-ea2c-7bf0-b6a4">
-              <profiles>
-                <profile name="Voidstone Repulser Vents" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5110-27b7-e570-a935">
-                  <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: A friendly unit within 12&quot; of this unit was picked to be the target of an enemy **^^Spell^^** ability.</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+:
-• Ignore the effect of that spell on that friendly unit.
-• Inflict D3 mortal damage on the caster.
-This unit can use this ability more than once per phase but you can only roll once for each friendly unit per spell cast.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-                  </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d979-5266-781c-66cb" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Zonbarcorp &apos;Dealbreaker&apos; Battle Ram" hidden="false" id="4694-853c-aac5-c4f8">
-              <profiles>
-                <profile name="Zonbarcorp &apos;Dealbreaker&apos; Battle Ram" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bbaf-30ab-7c86-490f">
-                  <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit in combat with it to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the unmodified charge roll. For each 4+, inflict 1 mortal damage on the target.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-                  </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
-                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2449-8acf-d927-1ab9" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blazebeard and Sons Ejector Pod" hidden="false" id="a395-091d-6d72-b2d2">
-              <profiles>
-                <profile name="Blazebeard and Sons Ejector Pod" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e6c3-3f87-cad8-7827">
-                  <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat, pick a visible friendlt **^^Kharadron Overlords Hero^^** wholly within 6&quot; of this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield, then set it up again wholly within 18&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-                  </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cc27-8655-0e0e-6804" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set" value="-1" field="3fd0-ec14-4526-d929">
-          <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3fd0-ec14-4526-d929" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="7fb6-d601-4037-ec9a"/>
-      </constraints>
-    </selectionEntryGroup>
     <selectionEntryGroup name="Great Endrinworks" id="3b40-ad02-7bff-93d2" hidden="false">
       <selectionEntryGroups>
         <selectionEntryGroup name="Great Endrinworks: Kharadron Overlords" id="c613-d6ad-e442-b130" hidden="false" publicationId="d4a9-b568-9525-d6ac">
@@ -656,6 +600,85 @@ This unit can use this ability more than once per phase but you can only roll on
               </constraints>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Great Endrinworks: Kharadron Overlords" id="e871-0e91-bf14-52b4" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Voidstone Repulser Vents" hidden="false" id="827f-ea2c-7bf0-b6a4">
+              <profiles>
+                <profile name="Voidstone Repulser Vents" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5110-27b7-e570-a935">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: A friendly unit within 12&quot; of this unit was picked to be the target of an enemy **^^Spell^^** ability.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+:
+• Ignore the effect of that spell on that friendly unit.
+• Inflict D3 mortal damage on the caster.
+This unit can use this ability more than once per phase but you can only roll once for each friendly unit per spell cast.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d979-5266-781c-66cb" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Zonbarcorp &apos;Dealbreaker&apos; Battle Ram" hidden="false" id="4694-853c-aac5-c4f8">
+              <profiles>
+                <profile name="Zonbarcorp &apos;Dealbreaker&apos; Battle Ram" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bbaf-30ab-7c86-490f">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy unit in combat with it to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the unmodified charge roll. For each 4+, inflict 1 mortal damage on the target.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2449-8acf-d927-1ab9" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Blazebeard and Sons Ejector Pod" hidden="false" id="a395-091d-6d72-b2d2">
+              <profiles>
+                <profile name="Blazebeard and Sons Ejector Pod" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e6c3-3f87-cad8-7827">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat, pick a visible friendlt **^^Kharadron Overlords Hero^^** wholly within 6&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield, then set it up again wholly within 18&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cc27-8655-0e0e-6804" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -1062,7 +1085,7 @@ This unit can use this ability more than once per phase but you can only roll on
         <entryLink import="true" name="Renown" hidden="false" id="dd0e-82e4-4f60-7f6d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1165,7 +1188,6 @@ This unit can use this ability more than once per phase but you can only roll on
         <entryLink import="true" name="Paths" hidden="false" id="80c3-2d75-f52c-317d" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="635f-69cc-bbf3-cc31" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
         <entryLink import="true" name="Renown" hidden="false" id="56ba-0bae-a78a-f33e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Skyvessel Upgrades" hidden="false" id="89ee-8b0c-9209-7552" type="selectionEntryGroup" targetId="f62f-0eb8-7be4-6603"/>
         <entryLink import="true" name="Great Endrinworks" hidden="false" id="c973-de2f-34c1-038b" type="selectionEntryGroup" targetId="3b40-ad02-7bff-93d2"/>
       </entryLinks>
       <modifierGroups>
@@ -1250,7 +1272,6 @@ This unit can use this ability more than once per phase but you can only roll on
         <entryLink import="true" name="Paths" hidden="false" id="5b9e-5966-a4cd-6ac9" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="84b9-def1-fb2e-a75d" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
         <entryLink import="true" name="Renown" hidden="false" id="a9ae-bd7b-e2a2-24ee" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Skyvessel Upgrades" hidden="false" id="88d9-89c3-c19c-f823" type="selectionEntryGroup" targetId="f62f-0eb8-7be4-6603"/>
         <entryLink import="true" name="Great Endrinworks" hidden="false" id="dad9-f25d-f7a6-977e" type="selectionEntryGroup" targetId="3b40-ad02-7bff-93d2"/>
       </entryLinks>
       <modifiers>
@@ -1386,7 +1407,6 @@ This unit can use this ability more than once per phase but you can only roll on
         <entryLink import="true" name="Paths" hidden="false" id="e8b6-4241-3823-c73c" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae59-b44e-7393-7881" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
         <entryLink import="true" name="Renown" hidden="false" id="0f60-f63d-c5bd-e4e7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Skyvessel Upgrades" hidden="false" id="36f4-a435-43ac-b9d8" type="selectionEntryGroup" targetId="f62f-0eb8-7be4-6603"/>
         <entryLink import="true" name="Great Endrinworks" hidden="false" id="f85e-d094-0f0c-d35b" type="selectionEntryGroup" targetId="3b40-ad02-7bff-93d2"/>
       </entryLinks>
       <modifiers>
@@ -1410,7 +1430,7 @@ This unit can use this ability more than once per phase but you can only roll on
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3765-e0a6-3fea-a2b1" includeChildSelections="true"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1549,7 +1569,7 @@ This unit can use this ability more than once per phase but you can only roll on
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Thundrik&apos;s Profiteers" hidden="false" id="e23b-b58f-2c22-eacb" type="selectionEntry" targetId="f8f4-d0c6-cf7c-071d">
@@ -1588,7 +1608,6 @@ This unit can use this ability more than once per phase but you can only roll on
         <entryLink import="true" name="Paths" hidden="false" id="bccb-e8dc-e9e5-e1e9" type="selectionEntryGroup" targetId="89d2-c6e7-76d7-b21b"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9594-4726-2c1f-f462" type="selectionEntryGroup" targetId="bc80-e576-07c4-aac3"/>
         <entryLink import="true" name="Renown" hidden="false" id="f504-e1f2-6443-7d2d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Skyvessel Upgrades" hidden="false" id="30e9-2b3c-0c16-5ca8" type="selectionEntryGroup" targetId="f62f-0eb8-7be4-6603"/>
         <entryLink import="true" name="Great Endrinworks" hidden="false" id="b9ce-e57a-5eeb-4b88" type="selectionEntryGroup" targetId="3b40-ad02-7bff-93d2"/>
       </entryLinks>
       <modifiers>
@@ -1612,7 +1631,7 @@ This unit can use this ability more than once per phase but you can only roll on
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="8de6-57aa-1266-e909" includeChildSelections="true"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <modifierGroups>
         <modifierGroup type="and">
@@ -1881,7 +1900,7 @@ This unit can use this ability more than once per phase but you can only roll on
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Vongrim Harpoon Crew" hidden="false" id="54b0-df0d-569c-85ca" type="selectionEntry" targetId="b38b-f2bc-47a8-658e">
@@ -1916,10 +1935,10 @@ This unit can use this ability more than once per phase but you can only roll on
         </modifierGroup>
       </modifierGroups>
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Zontari Endrin Dock" hidden="false" id="cc73-85db-ce94-dd16" type="selectionEntry" targetId="2c4d-116f-02a1-88ce" defaultAmount="1">
+    <entryLink import="true" name="Zontari Endrin Dock" hidden="false" id="cc73-85db-ce94-dd16" type="selectionEntry" targetId="2c4d-116f-02a1-88ce" defaultAmount="0">
       <entryLinks>
         <entryLink import="true" name="Auto-Endrin" hidden="false" id="203c-20f6-d925-5451" type="selectionEntry" targetId="34f5-2761-de10-6710">
           <constraints>
@@ -1928,6 +1947,22 @@ This unit can use this ability more than once per phase but you can only roll on
           </constraints>
         </entryLink>
       </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="20"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="0" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <categoryEntries>

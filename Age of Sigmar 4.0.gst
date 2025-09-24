@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="56" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="57" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -7115,8 +7115,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9472-695c-5dcc-5240"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="270"/>
+        <cost name="pts" typeId="points" value="290"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Blacktalons" id="bced-df96-fcc3-5cf6" hidden="true">
@@ -8798,7 +8800,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8c01-e8b6-b430-dab1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="290"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -11063,13 +11065,13 @@ You complete this battle tactic at the end of your turn if there is a different 
               <profiles>
                 <profile name="Scouting Force" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="5fc5-3a71-00e9-29f6">
                   <characteristics>
-                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, every friendly non-Hero Infantry and non-Hero Cavalry unit that is on the battlefield becomes a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, pick each friendly non-Hero Infantry and non-Hero Cavalry unit that was not set up in reserve with a **^^Deploy^^** ability to become a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
 You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
-You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
+You complete this battle tactic at the end of your turn if 3 or more objectives or non-**^^Faction Terrain^^** terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
                     <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
-You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a non-**^^Faction Terrain^^** terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
