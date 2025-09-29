@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="58" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="59" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -54,7 +54,7 @@
       <attributeTypes>
         <attributeType name="Color" id="16b6-0911-f549-a4bd"/>
         <attributeType name="Parent Node" id="da27-8d61-f955-5031"/>
-        <attributeType name="New Attribute Type" id="bdab-118f-1803-0a46"/>
+        <attributeType name="Type" id="da27-8d61-f955-5031"/>
       </attributeTypes>
     </profileType>
     <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9">

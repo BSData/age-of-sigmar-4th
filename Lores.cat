@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="0a11-cd61-2a4e-8e04" name="❖ Lores" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="15" revision="33" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="0a11-cd61-2a4e-8e04" name="❖ Lores" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="15" revision="34" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Horrors of the Necropolis" id="7a39-a3c2-695a-3753" hidden="false" publicationId="2f1e-fdf-1ac2-fa38">
       <entryLinks>
@@ -6391,7 +6391,7 @@ If you picked a unit in reserve **as a potential fate**, set it up on the battl
                 <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
                 <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
                 <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">If there is not a friendly **Dreadful Visage** on the battlefield, pick a friendly **^^Hedonites of Slaanesh Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
-                <characteristic name="Effect" typeId="1cb9-a-1345-907f">If there is not a friendly **Dreadful Visage** on the battlefield, pick a friendly **^^Hedonites of Slaanesh Wizard^^** to cast this spell, then make a casting roll of 2D6.</characteristic>
+                <characteristic name="Effect" typeId="1cb9-a-1345-907f">Set up a **Dreadful Visage** wholly within 12&quot; of the caster, visible to them and more than 9&quot; from all enemy units.</characteristic>
                 <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Summon^^**</characteristic>
               </characteristics>
               <attributes>
@@ -11287,6 +11287,38 @@ In addition, if the chanting roll was 8+, add 2 to the Attacks characteristic of
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Prayer Lore: King Brodd&apos;s Stomp" id="2c32-ac4f-c099-9603" hidden="false" publicationId="0578-e89b-7163-86c5">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="High Expectations" hidden="false" id="a229-1fbd-5608-7609">
+          <profiles>
+            <profile name="High Expectations" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="68a5-edea-f505-c2f0">
+              <characteristics>
+                <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+                <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+                <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Brodd&apos;s Stomp Priest^^** to chant this prayer, then make a chanting roll of D6.</characteristic>
+                <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Until the start of your next turn, add 1 to the Attacks characteristic of melee weapons used by friendly **^^Brodd’s Stomp^^** units while they are wholly within 12&quot; of the chanter. If the chanting roll was 9+, add 2 to the Attacks characteristic instead.</characteristic>
+                <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute typeId="7564-4bf0-b34a-b143" name="Color">Yellow</attribute>
+                <attribute typeId="c63c-196d-34a7-cec3" name="Type">Offensive</attribute>
+              </attributes>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="819b-2db4-b832-c106" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="655c-d628-1c4e-f46f" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="819b-2db4-b832-c106">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="707c-1c04-9af6-2307" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Ossiarch Bonereapers - Library" id="d41e-89b0-5cc2-263c" targetId="3521-1b3c-7fd9-838b"/>
@@ -14418,6 +14450,19 @@ In addition, if the chanting roll was 8+, add 2 to the Attacks characteristic of
                 </modifier>
               </modifiers>
             </entryLink>
+            <entryLink import="true" name="Prayer Lore: King Brodd&apos;s Stomp" hidden="true" id="fbdb-ee59-e052-354c" type="selectionEntryGroup" targetId="2c32-ac4f-c099-9603" collapsible="true">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <modifiers>
             <modifier type="add" value="Your Arcane Tome can contain a maximum of 6 SPELL or PRAYER abilities." field="error">
@@ -16232,6 +16277,19 @@ In addition, if the chanting roll was 8+, add 2 to the Attacks characteristic of
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Prayer Lore: King Brodd&apos;s Stomp" hidden="true" id="076a-8feb-2766-99b6" type="selectionEntryGroup" targetId="2c32-ac4f-c099-9603" collapsible="true">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -19401,6 +19459,19 @@ In addition, if the chanting roll was 8+, add 2 to the Attacks characteristic of
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Prayer Lore: King Brodd&apos;s Stomp" hidden="true" id="7067-3a24-ad92-dda6" type="selectionEntryGroup" targetId="2c32-ac4f-c099-9603" collapsible="true">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
