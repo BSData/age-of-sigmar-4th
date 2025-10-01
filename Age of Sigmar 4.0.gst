@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="59" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="60" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -10079,10 +10079,10 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
       <profiles>
         <profile name="Shards of Valagharr" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="332-7949-ffcb-dd41">
           <characteristics>
-            <characteristic name="Move" hidden="false" id="c1de-4303-c863-c2ed" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
-            <characteristic name="Health" hidden="false" id="6367-c409-9ec5-f87" typeId="d1b9-3068-515-131e">8</characteristic>
-            <characteristic name="Save" hidden="false" id="a49-ebbb-c54a-2c9c" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
-            <characteristic name="Banishment" hidden="false" id="c6b4-46b0-c09f-7b9c" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50db-066e-a3e7-696f" name="Base Size"/>
