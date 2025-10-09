@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6600-d1d2-9b0d-a3b9" name="Sons of Behemat - King Brodd&apos;s Stomp" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6600-d1d2-9b0d-a3b9" name="Sons of Behemat - King Brodd&apos;s Stomp" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Beast-smasher Mega-Gargant" hidden="false" id="db1b-6785-f00f-d30a" type="selectionEntry" targetId="4a1b-3873-aa68-6d28">
       <categoryLinks>
@@ -737,7 +737,6 @@ The **^^Mega-Gargant^^** using this **^^Rampage^^** has
     <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="83c6-2dfb-1848-0c62" defaultAmount="1">
       <entryLinks>
         <entryLink import="true" name="Manifestation Lores" hidden="false" id="d2e6-20ca-8a8e-91da" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="acc3-ecb8-dd84-6750" type="selectionEntryGroup" targetId="f903-e486-c038-ed83"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8c3e-9fb9-4a62-b3a3"/>
@@ -745,6 +744,30 @@ The **^^Mega-Gargant^^** using this **^^Rampage^^** has
       </constraints>
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="a273-bcaa-fb22-c951" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6844" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="force" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Prayer Lore" hidden="true" id="7d0e-8df3-aab4-ae77" defaultAmount="1">
+      <entryLinks>
+        <entryLink import="true" name="Prayer Lores" hidden="false" id="706f-beef-52fe-fb69" type="selectionEntryGroup" targetId="6a0e-b8f9-a8fc-b59d" flatten="true"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f2cd-f04e-5355-df28"/>
+        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="0a21-2bf9-c57d-3c37"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Army Composition" hidden="false" id="d56e-a643-861c-2682" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
