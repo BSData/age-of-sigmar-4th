@@ -142,11 +142,6 @@
         <attributeType name="Parent Node" id="540d-cdd1-5262-593f"/>
       </attributeTypes>
     </profileType>
-    <profileType name="test" id="90ac-dec5-32f3-3cd4" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="test" id="0728-6926-c955-13f6"/>
-      </characteristicTypes>
-    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry name="DEATH" hidden="false" id="d484-a2d7-cf4f-c4a0"/>
