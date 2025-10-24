@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="62" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="63" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -11179,14 +11179,7 @@ You complete this battle tactic at the end of your turn if you control every obj
                   <characteristics>
                     <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">• At the start of the battle, your opponent must pick 3 of their units on the battlefield to be carrying a Ghyranite Treasure. They cannot pick faction terrain features or **^^Manifestations^^**. A unit can only carry 1 Ghyranite Treasure. If your opponent has fewer than 3 units on the battlefield, you automatically complete a number of these battle tactics, starting with the **Domination** battle tactic (followed by the **Strike** and then the **Affray**) until the number of remaining uncompleted battle tactics equals the number of enemy units on the battlefield.
 • If you went second in the previous battle round and choose to go first in the current battle round, your opponent can remove 1 Ghyranite Treasure from one of their units at the start of the battle round.
-• If an ability would remove a unit that was carrying treasure from
-the battlefield and that unit is not set up again as part of the same
-ability (e.g. ‘Dark Apotheosis’ or ‘Red Ruin’), before removing that
-unit from the battlefield, your opponent must give the treasure
-it was carrying to another one of their units that does not have a
-Ghyranite treasure within 3&quot; of that unit. If this is not possible,
-that unit counts as having been destroyed for the purpose of this
-battle tactics card.</characteristic>
+• If an ability would remove a unit that was carrying treasure from the battlefield and that unit is not set up again as part of the same ability (e.g. ‘Dark Apotheosis’ or ‘Red Ruin’), before removing that unit from the battlefield, your opponent must give the treasure it was carrying to another one of their units that does not have a Ghyranite treasure within 3&quot; of that unit. If this is not possible, that unit counts as having been destroyed for the purpose of this battle tactics card.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Stolen Seedpod:
 You complete this battle tactic at the end of your turn if at least 1 enemy unit carrying a Ghyranite Treasure has been destroyed this battle.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Contraband Aqua Ghyranis:
@@ -11222,7 +11215,7 @@ You complete this battle tactic at the end of your turn if there is a different 
               <profiles>
                 <profile name="Scouting Force" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="5fc5-3a71-00e9-29f6">
                   <characteristics>
-                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, pick each friendly non-Hero Infantry and non-Hero Cavalry unit that was not set up in reserve with a **^^Deploy^^** ability to become a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, pick each friendly non-**^^Hero Infantry^^** and non-**^^Hero Cavalry^^** unit that was not set up in reserve with a **^^Deploy^^** ability to become a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
 You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
