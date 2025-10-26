@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="9a90-83e7-7a45-6aed" name="Ogor Mawtribes - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="9a90-83e7-7a45-6aed" name="Ogor Mawtribes - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Bloodpelt Hunter" hidden="false" id="a800-1a5b-4097-8f11" publicationId="1ac6-e227-a186-12">
       <entryLinks>
@@ -2861,6 +2861,37 @@
                 </profile>
               </profiles>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ironlock Pistol" hidden="false" id="262e-28e0-3f84-5967">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86a8-34ce-c79a-acf3" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5285-c12f-ecce-bb05" automatic="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Ironlock Pistol" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7386-d945-36a3-ac92">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="0" field="5285-c12f-ecce-bb05">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="31e7-5cb6-3efe-99c3" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="86a8-34ce-c79a-acf3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="31e7-5cb6-3efe-99c3" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup name="Command Models" id="ac09-9b3e-8a4a-d40f" hidden="false">
@@ -2872,29 +2903,8 @@
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="b91b-cba6-89af-7225" shared="true" id="39b7-f889-a2ee-f0ba" includeChildSelections="true"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Ironlock Pistol" hidden="false" id="262e-28e0-3f84-5967">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86a8-34ce-c79a-acf3"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5285-c12f-ecce-bb05"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Ironlock Pistol" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7386-d945-36a3-ac92">
-                          <characteristics>
-                            <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                            <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
-                            <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                            <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                            <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                            <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                            <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                  </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="Standard Bearer" hidden="false" id="5ad5-5d3b-a307-fcac" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="1">
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="5ad5-5d3b-a307-fcac" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0">
                   <constraints>
                     <constraint type="max" value="0" field="selections" scope="b91b-cba6-89af-7225" shared="true" id="11fb-bc3b-b32-7aa7" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="226f-38fb-3432-fa76"/>
@@ -2907,7 +2917,7 @@
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Musician" hidden="false" id="62e5-5365-2d6b-b95c" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="1">
+                <entryLink import="true" name="Musician" hidden="false" id="62e5-5365-2d6b-b95c" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0">
                   <constraints>
                     <constraint type="max" value="0" field="selections" scope="b91b-cba6-89af-7225" shared="true" id="2838-a10e-f05f-71df" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77ee-a6f8-8dc3-6b9d"/>
