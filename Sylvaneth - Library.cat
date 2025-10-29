@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="7e0b-8a19-260-5b58" name="Sylvaneth - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="7e0b-8a19-260-5b58" name="Sylvaneth - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Branchwych" hidden="false" id="e410-e36e-9cea-2482" publicationId="61ee-fae0-f1da-2591">
       <categoryLinks>
@@ -2754,7 +2754,7 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
         <profile name="Overgrown Wilderness" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3e7b-9083-d5ea-2a31">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units can be targeted by shooting attacks made by friendly **^^Sylvaneth^^** units even if every model in that enemy unit is within 1&quot; of this terrain feature. In addition, the Range characteristic of friendly **^^Sylvaneth^^** units’ ranged weapons is not halved while every model in that friendly unit is within 1&quot; of this terrain feature.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units are visible to friendly **^^Sylvaneth^^** units even if every model in that enemy unit is within 1&quot; of this terrain feature. In addition, the Range characteristic of friendly **^^Sylvaneth^^** units’ ranged weapons is not halved while every model in that friendly unit is within 1&quot; of this terrain feature.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Blue</attribute>
@@ -3566,6 +3566,178 @@ In addition, if the target is non-**^^Kurnothi^^**, add 1 to the Attacks charac
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Kurnoth&apos;s Heralds" hidden="false" id="5c29-c1ee-6dd4-a32b" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="ORDER" hidden="false" id="dca4-6ce6-288e-729a" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="UNIQUE" hidden="false" id="01cb-9ef4-734f-6726" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="26c2-8c8b-ce30-93d0" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="c15b-96e3-a7c3-8716" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="KURNOTHI" hidden="false" id="0dd1-03f4-b19d-aaa1" targetId="4926-51d9-e023-1088" primary="false"/>
+        <categoryLink name="CAVALRY" hidden="false" id="c452-39d9-a961-8478" targetId="926c-df8c-6841-d49e" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Kurnoth&apos;s Heralds" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="3167-7fb4-a6fc-3bce">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Graceful Leaps" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="66e3-fc63-291a-5e1b">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit makes a pile-in move:
+• Add 3&quot; to the distance this unit can move.
+• This unit can pass through models in enemy units.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ylarin, Master of the Paths" hidden="false" id="b02d-7395-6ff0-bca0">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d26-a75e-be46-2f61"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53ea-f6f2-7923-b9c8"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hunter Weapons" hidden="false" id="1bb6-80bb-4d9b-aa4e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d67c-ce80-af34-2591"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f11-466f-f771-8263"/>
+              </constraints>
+              <profiles>
+                <profile name="Hunter Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c78c-23c7-d0bc-4d96">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="d51f-d60e-68e5-90f4" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b924-3bd3-9251-5865" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="3b18-3f42-64d2-8f82" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="669f-7714-dc25-277b"/>
+                    <constraint type="max" value="1" field="selections" scope="5c29-c1ee-6dd4-a32b" shared="true" id="314f-e7f6-0d57-94db" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="3e17-4e25-e8f8-ccce" hidden="true">
+              <description>60x35mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Lenwythe, Eye of the Forest" hidden="false" id="4019-862c-88aa-4d52">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99ec-fd32-b607-74b9"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52d9-c65a-acdc-9fd2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Kurnothi Bow" hidden="false" id="15d6-6a3e-287b-a3bc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a844-9d25-7f13-9b43"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd4b-6490-070f-7b8d"/>
+              </constraints>
+              <profiles>
+                <profile name="Kurnothi Bow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="1d40-b796-98e9-9860">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hunter Weapons" hidden="false" id="3134-3d2c-83ca-d29f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fc9-1c57-8cf5-a113"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5be5-bde5-826e-8bb4"/>
+              </constraints>
+              <profiles>
+                <profile name="Hunter Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f98e-69fa-b1d4-cfc0">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="dc9c-cca7-2349-bf18" hidden="true">
+              <description>60x35mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Cullon, Axe of Kurnoth" hidden="false" id="fe57-7847-2f9a-fa1c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8527-c95e-28b9-b04c"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3590-3670-da90-cfbd"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hunter Weapons" hidden="false" id="461c-9b6a-0df0-61b8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce8a-e5b9-6801-2483"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c597-dc59-5be6-69f0"/>
+              </constraints>
+              <profiles>
+                <profile name="Hunter Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="77ec-71f1-38db-409a">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="ed81-ff04-8919-4257" hidden="true">
+              <description>60x35mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e4ee-e844-ca6b-7d77" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

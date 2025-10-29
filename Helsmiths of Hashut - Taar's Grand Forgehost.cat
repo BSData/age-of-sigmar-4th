@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5a77-1371-c897-5db1" name="Helsmiths of Hashut - Taar&apos;s Grand Forgehost" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="56" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5a77-1371-c897-5db1" name="Helsmiths of Hashut - Taar&apos;s Grand Forgehost" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="56" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Taar&apos;s Grand Forgehost" hidden="false" id="6d9c-100e-1ab4-82da">
       <profiles>
@@ -739,6 +739,31 @@
         <categoryLink name="Restrict General" hidden="false" id="210d-0dd8-0267-b386" targetId="abcb-73d0-2b6c-4f17" primary="false"/>
         <categoryLink name="GRAND FORGEHOST" hidden="false" id="113b-5c76-b51a-861d" targetId="78e1-cf19-b339-bed2" primary="false"/>
       </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="The Blood of the Bull" hidden="false" id="00ee-edb2-2dc5-612d" type="selectionEntry" targetId="35e3-f1fc-1f7a-8151">
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bec6-4640-96ae-024a" type="selectionEntryGroup" targetId="f4bf-1aba-c487-77e6"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
     </entryLink>
   </entryLinks>
   <selectionEntries>

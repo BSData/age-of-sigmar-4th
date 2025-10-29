@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="2c07-f0f9-8601-d082" name="Helsmiths of Hashut - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="55" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="2c07-f0f9-8601-d082" name="Helsmiths of Hashut - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="55" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Dominator Engine with Immolation Cannons" hidden="false" id="9c89-4ec9-71db-0026" publicationId="487d-9798-0633-8040">
       <profiles>
@@ -11,10 +11,13 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="All Must Burn" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="99f4-cc8c-ae39-c651">
+        <profile name="All Must Burn" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="99f4-cc8c-ae39-c651">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When picking targets for this unit&apos;s shooting attacks, if you pick more than 1 target to be the target of their attacks, add 2 to the Attacks characteristic of this unit&apos;s **Immolation Cannons** for each target picked. However, those additional attacks must be split evenly between the targets you picked.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick any number of visible enemy units within 8&quot; of this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 2 to the Attacks characteristic of this unit’s **Immolation Cannons** for each unit picked to be the target of this ability, but each time this unit uses a **^^Shoot^^** ability, it must target each of those units with at least 3 of its attacks.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
@@ -468,7 +471,7 @@
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (2 Hits)</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (2 Hits), Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2045,6 +2048,7 @@
                     <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
                     <modifier type="set" value="5" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
                     <modifier type="add" value="b979-4c3e-7d0e-6921" field="category" scope="root-entry"/>
+                    <modifier type="add" value="f7bc-b618-4b5d-2bae" field="category" scope="root-entry"/>
                   </modifiers>
                   <profiles>
                     <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2bff-fc89-3ceb-dff2">
@@ -2087,6 +2091,7 @@
                     <modifier type="set" value="3+" field="1981-ef09-96f6-7aa9" affects="profiles.Unit" scope="root-entry"/>
                     <modifier type="set" value="5" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
                     <modifier type="add" value="b979-4c3e-7d0e-6921" field="category" scope="root-entry"/>
+                    <modifier type="add" value="f7bc-b618-4b5d-2bae" field="category" scope="root-entry"/>
                   </modifiers>
                   <profiles>
                     <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8f33-ce03-5c3a-719a">
@@ -2575,6 +2580,258 @@ In addition, at the end of each battle, roll a dice. On a 1, give this unit 1 **
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="The Blood of the Bull" hidden="false" id="35e3-f1fc-1f7a-8151" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="INFANTRY" hidden="false" id="1860-2ed4-4343-9237" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="3b10-8055-65fc-3111" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="d179-7df4-ec36-c8bc" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="cfeb-6efd-820b-3332" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="85b8-714e-632a-fa70" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="DUARDIN" hidden="false" id="310a-74e4-1344-6074" targetId="72e3-7b1b-cb94-4cbd" primary="false"/>
+        <categoryLink name="STANDARD BEARER (1/5)" hidden="false" id="1e6c-bf89-dece-a8a0" targetId="73c-8e22-9dde-f97" primary="false"/>
+        <categoryLink name="HELSMITHS OF HASHUT" hidden="false" id="8009-77d8-b93d-5199" targetId="905e-30fb-4d0f-4685" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="The Blood of the Bull" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="afb9-4af8-8364-5cc4">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Infernal Empowerment" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b72e-5fda-918b-4bee">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Apply the effect(s) below that corresponds with the number of **daemonic power points** this unit has. These effects are cumulative.
+**1+** Add 1&quot; to this unit&apos;s Move characteristic.
+**2+** Add 1 to wound rolls for this unit&apos;s combat attacks.
+**3+** Add 1 to the Rend characteristic of this unit&apos;s melee weapons.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Zuldrakka the Hateful" hidden="false" id="270d-21f2-7f73-cecd">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="55e7-8e23-55f5-c67e"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2fe1-f64b-ad53-08c0"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonflame Weapons" hidden="false" id="5dbc-6b2c-1d2d-e9b7">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24e8-5cbe-9754-b84e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="472e-d8bf-c617-30c7"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonflame Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b740-2a7d-e6de-88f3">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="570d-cdab-e7c1-012a" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beae-a035-80ee-a127" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="482f-8727-5c23-09f3" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7028-21ae-19f1-2eb7"/>
+                    <constraint type="max" value="1" field="selections" scope="35e3-f1fc-1f7a-8151" shared="true" id="6045-c7f5-5a44-d44b" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="d665-b4a5-438a-0cde" hidden="true">
+              <description>32mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Grisk Back-stabba" hidden="false" id="13e4-3ded-6d8a-8f6f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3db-edb7-aaac-0599"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76d5-6780-1188-08b3"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Blades and Fists" hidden="false" id="886b-bee3-8def-1c7a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4de3-bd99-ec83-b870"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d82a-3c8f-7c58-e69d"/>
+              </constraints>
+              <profiles>
+                <profile name="Blades and Fists" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7af2-357e-74aa-98bf">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="45c8-6b79-02c9-f05d" hidden="true">
+              <description>25mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Tokkor the Immolator" hidden="false" id="549d-c4da-b4cc-ebd5">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ac6-e4e3-4944-b0c2"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cad-5cd6-f5a6-0a83"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Blades and Fists" hidden="false" id="c548-ec5f-ab2e-414b">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b130-8e2b-590e-d126"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c6b-cdc3-7afb-ac12"/>
+              </constraints>
+              <profiles>
+                <profile name="Blades and Fists" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2dfd-8d22-ed8a-91b4">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Master-crafted Flamehurler" hidden="false" id="a968-b74c-d48e-45f4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d115-bdde-3f70-8e8b"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26a1-98b7-a0c9-45b5"/>
+              </constraints>
+              <profiles>
+                <profile name="Master-crafted Flamehurler" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="bd02-9084-6d2f-a8b3">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="78f6-7450-d4f9-58df" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Morudok" hidden="false" id="7e42-8cae-6de5-c7e4">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="385e-6016-06d4-3a7a"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cce-37f7-40a6-d17d"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonflame Weapons" hidden="false" id="2aab-a7d3-3317-66ab">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4cd-5b5a-47b2-3c4c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35ea-0448-1df4-337f"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonflame Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2422-0a5b-082c-aba6">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="28aa-56f5-a22f-24b7" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Imnidrin" hidden="false" id="dc0d-9c2a-2946-32f3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee7c-48c1-74f3-f047"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fee-bee8-8c58-6cf8"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonflame Weapons" hidden="false" id="dec0-a98e-ea24-864a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="03b6-3865-d78c-e131"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f04-7257-d417-67d3"/>
+              </constraints>
+              <profiles>
+                <profile name="Daemonflame Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0f81-2d03-df6f-9623">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="2c6d-6f06-b767-9350" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b313-e632-e6b8-67f3" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="78b2-2688-8a38-8889" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d48-15c9-97e5-51d2"/>
+                    <constraint type="max" value="1" field="selections" scope="35e3-f1fc-1f7a-8151" shared="true" id="3698-af4a-3198-cf6b" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="b1b0-3cda-513f-6109" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b7cd-e844-2725-6cd0" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
