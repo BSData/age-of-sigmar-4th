@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="63" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="64" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -11,7 +11,7 @@
     <costType name="Force Category - GHB" id="de92-2099-fbf7-a156" defaultCostLimit="-1" hidden="true"/>
   </costTypes>
   <profileTypes>
-    <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4">
+    <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4" kind="weapon">
       <characteristicTypes>
         <characteristicType id="60e-35aa-31ed-e488" name="Atk"/>
         <characteristicType id="26dc-168-b2fd-cb93" name="Hit"/>
@@ -21,7 +21,7 @@
         <characteristicType id="eda3-7332-5db1-4159" name="Ability"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ranged Weapon" hidden="false" id="1fd-a42f-41d3-fe05" sortIndex="3">
+    <profileType name="Ranged Weapon" hidden="false" id="1fd-a42f-41d3-fe05" sortIndex="3" kind="weapon">
       <characteristicTypes>
         <characteristicType id="c6b5-908c-a604-1a98" name="Rng"/>
         <characteristicType id="aa17-4296-2887-e05d" name="Atk"/>
@@ -32,7 +32,7 @@
         <characteristicType id="d793-3dd7-9c13-741e" name="Ability"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5">
+    <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5" kind="ability">
       <characteristicTypes>
         <characteristicType id="b977-7c5e-33b2-428e" name="Keywords"/>
         <characteristicType id="fd7f-888d-3257-a12b" name="Effect"/>
@@ -43,7 +43,7 @@
         <attributeType name="Parent Node" id="e2e1-15ca-d345-22b8"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8">
+    <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8" kind="ability">
       <characteristicTypes>
         <characteristicType id="de6f-d57b-248a-83be" name="Timing"/>
         <characteristicType id="9fc7-b0f6-d018-a608" name="Casting Value"/>
@@ -57,7 +57,7 @@
         <attributeType name="Type" id="da27-8d61-f955-5031"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9">
+    <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9" kind="ability">
       <characteristicTypes>
         <characteristicType id="76bf-8126-64d4-c709" name="Timing"/>
         <characteristicType id="f192-6780-8138-9cef" name="Chanting Value"/>
@@ -71,7 +71,7 @@
         <attributeType name="Parent Node" id="5d25-63d6-3935-9312"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7">
+    <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7" kind="ability">
       <characteristicTypes>
         <characteristicType id="736-6e3a-d0b5-a1b0" name="Timing"/>
         <characteristicType id="a49e-3082-e2a6-e802" name="Cost"/>
@@ -85,7 +85,7 @@
         <attributeType name="Parent Node" id="df75-e7dc-12b5-48a8"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6">
+    <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6" kind="ability">
       <characteristicTypes>
         <characteristicType id="652c-3d84-4e7-14f4" name="Timing"/>
         <characteristicType id="bad3-f9c5-ba46-18cb" name="Declare"/>
@@ -99,7 +99,7 @@
         <attributeType name="Parent Node" id="2d74-4dcd-8468-87fa"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2">
+    <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2" kind="model">
       <characteristicTypes>
         <characteristicType id="fed0-d1b3-1bb8-c501" name="Move"/>
         <characteristicType id="96be-54ae-ce7b-10b7" name="Health"/>
@@ -107,7 +107,7 @@
         <characteristicType id="6c6f-8510-9ce1-fc6e" name="Control"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40" sortIndex="1">
+    <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40" sortIndex="1" kind="model">
       <characteristicTypes>
         <characteristicType name="Move" hidden="false" id="c28a-6000-2a0b-e7cf"/>
         <characteristicType name="Health" hidden="false" id="d1b9-3068-515-131e"/>
@@ -118,7 +118,7 @@
         <attributeType name="Base Size" id="50db-066e-a3e7-696f"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10">
+    <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10" kind="rule">
       <characteristicTypes>
         <characteristicType name="Card" id="67f1-ce6d-1cf4-a4df"/>
         <characteristicType name="Affray" id="1047-3e43-674d-dc6c"/>
@@ -126,7 +126,7 @@
         <characteristicType name="Domination" id="e1d7-1d3c-f001-62e0"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Blood Tithe)" hidden="false" id="5453-37d7-6d37-db1b" sortIndex="11">
+    <profileType name="Ability (Blood Tithe)" hidden="false" id="5453-37d7-6d37-db1b" sortIndex="11" kind="ability">
       <characteristicTypes>
         <characteristicType id="13a2-dcf4-38ba-ff59" name="Timing"/>
         <characteristicType id="85a7-1eff-2a27-7d21" name="Declare"/>
@@ -9784,7 +9784,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Arcane Predator" hidden="false" id="9456-22b9-7885-e464" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9795,7 +9795,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Wild Form" hidden="false" id="4f4-6041-9f7e-2585" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9806,7 +9806,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Amberbone Claws and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="245d-e7e2-477e-edb0">
@@ -9857,7 +9857,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Pull of the Nadir" hidden="false" id="c99-9240-9da1-d029" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9868,7 +9868,7 @@
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
@@ -9914,7 +9914,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9e13-160b-4a87-da4e">
@@ -9925,7 +9925,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -9959,7 +9959,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="676c-91fa-8432-ee8d">
@@ -9970,7 +9970,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10005,7 +10005,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="The Pendulum Swings" hidden="false" id="9ec5-1011-c05e-5045" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -10016,7 +10016,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10052,7 +10052,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10084,7 +10084,7 @@
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Shooting</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
@@ -10140,7 +10140,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
@@ -10196,7 +10196,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Necrotic Vortex" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c711-ce6-1fb6-7abc">
@@ -10211,7 +10211,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
@@ -10252,7 +10252,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="86da-767f-a1d7-9b8a">
@@ -10263,7 +10263,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Ensnaring Soul-drain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9d0c-ae55-1df5-ec0e">
@@ -10274,7 +10274,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10309,7 +10309,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
@@ -10351,7 +10351,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
@@ -10376,7 +10376,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10401,7 +10401,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10426,7 +10426,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10471,7 +10471,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Bounteous Healing" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5d6d-9bfb-60e3-db42">
@@ -10485,7 +10485,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Swarming Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9a05-9547-1ad1-2bf8">
@@ -10529,7 +10529,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Gnashing Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="44ec-0340-a597-8bc5">
@@ -10574,7 +10574,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
@@ -10616,7 +10616,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
@@ -10639,7 +10639,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10670,7 +10670,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Arcane Passage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b327-e576-8829-814d">
@@ -10684,7 +10684,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10715,7 +10715,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10797,7 +10797,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
-        <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10815,7 +10815,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-        <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
     </profile>
     <profile name="Ward Save" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ed70-f30-2f5a-747f">
@@ -10826,7 +10826,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-        <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10846,7 +10846,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-        <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10869,7 +10869,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-        <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+        <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -10893,7 +10893,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-        <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+        <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -11022,7 +11022,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Bodyguard" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4a1a-5004-d133-ac9c">
@@ -11038,7 +11038,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Field Sergeant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54eb-6de5-1e82-a796">
@@ -11052,7 +11052,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Prized Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ad6-dccc-c9b9-dabc">
@@ -11066,7 +11066,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Special Assignment" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="99f1-c5a8-8a2e-4d27">
@@ -11086,7 +11086,7 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
-            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
