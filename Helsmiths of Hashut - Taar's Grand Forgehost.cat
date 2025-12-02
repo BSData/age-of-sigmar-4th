@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5a77-1371-c897-5db1" name="Helsmiths of Hashut - Taar&apos;s Grand Forgehost" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="56" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5a77-1371-c897-5db1" name="Helsmiths of Hashut - Taar&apos;s Grand Forgehost" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="56" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Taar&apos;s Grand Forgehost" hidden="false" id="6d9c-100e-1ab4-82da">
       <profiles>
@@ -764,6 +764,102 @@
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+    </entryLink>
+    <entryLink import="true" name="Infernal Cohort with Hashutite Blades (Scourge of Ghyran)" hidden="false" id="a6e0-ce08-8a97-eb65" type="selectionEntry" targetId="42dc-3f22-809b-661d">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="a37e-fad7-5d9c-c2eb" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Renown" hidden="false" id="39e3-d400-6d41-5441" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5add-a6a6-1a3a-568a" type="selectionEntryGroup" targetId="f4bf-1aba-c487-77e6"/>
+        <entryLink import="true" name="Paths" hidden="false" id="18d6-2fea-42b9-35dc" type="selectionEntryGroup" targetId="069c-33c2-8469-a3f9"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="GRAND FORGEHOST" hidden="false" id="c14f-ed0f-2f45-83e4" targetId="78e1-cf19-b339-bed2" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="War Despot (Scourge of Ghyran)" hidden="false" id="8763-4b5e-0c5b-7ef1" type="selectionEntry" targetId="c468-1c57-cdaf-d9c1">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="b158-ce30-1b57-e227" type="selectionEntryGroup" targetId="380e-4de2-819c-615d"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="370d-8631-8e91-c0a3" type="selectionEntryGroup" targetId="5678-a9cd-62b8-84b2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a676-a860-d884-b98f" type="selectionEntryGroup" targetId="069c-33c2-8469-a3f9"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e426-65e6-6dbe-5210" type="selectionEntryGroup" targetId="f4bf-1aba-c487-77e6"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="08ec-39f4-cde4-7975" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="221e-2250-f3bb-d85a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.905e-30fb-4d0f-4685"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b7df-4d4b-6961-6f11" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink name="Restrict General" hidden="false" id="fa50-2a1f-0cb1-eba9" targetId="abcb-73d0-2b6c-4f17" primary="false"/>
+        <categoryLink name="GRAND FORGEHOST" hidden="false" id="aec4-a366-7fae-495d" targetId="78e1-cf19-b339-bed2" primary="false"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>
