@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="65" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="66" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -1385,6 +1385,7 @@
         <forceEntryLink name="Casket of Resurrections" id="35eb-48d9-a785-9004" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
         <forceEntryLink name="Seeker of the Dread Dirge" id="fd77-5462-6906-2547" hidden="false" targetId="3ebb-d680-3249-76ed" type="forceEntry"/>
         <forceEntryLink name="The Curse-Steel Battery" id="1258-4d93-17c0-37a4" hidden="false" targetId="1d6a-1d48-9173-d651" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="a9ac-52f9-996d-cf32" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
@@ -2416,6 +2417,7 @@
         <forceEntryLink name="Craventhrone Executioners" id="da46-bfad-defa-b4d3" hidden="false" targetId="6b4d-e3a9-5521-9022" type="forceEntry"/>
         <forceEntryLink name="The Curse-Steel Battery" id="4f4a-37f6-c989-d900" hidden="false" targetId="1d6a-1d48-9173-d651" type="forceEntry"/>
         <forceEntryLink name="Seeker of the Dread Dirge" id="6d3c-c06f-f4c8-2182" hidden="false" targetId="3ebb-d680-3249-76ed" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="135a-e3a4-753a-2906" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
@@ -3720,6 +3722,7 @@
         <forceEntryLink name="The Sinister Nullifier" id="cdb4-4a23-55eb-3340" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
         <forceEntryLink name="The Warped Saboteur" id="573c-930f-0d96-27a6" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
         <forceEntryLink name="The Weird-Crafta" id="2547-6dc4-902d-10ad" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="e279-8965-7359-1a8f" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="5">
@@ -5065,6 +5068,7 @@
             </modifier>
           </modifiers>
         </forceEntryLink>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="11b6-fba4-ac84-93e1" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Freeform [UNOFFICIAL, WIP]" id="78a1-f6c2-71b8-270a" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="99">
@@ -6737,6 +6741,7 @@
         <forceEntryLink name="The Realmstone Innovator" id="7410-d837-0cac-418e" hidden="false" targetId="8841-fda8-88e1-588b" type="forceEntry"/>
         <forceEntryLink name="The Sinister Nullifier" id="625e-68e7-cb86-e928" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
         <forceEntryLink name="The Warped Saboteur" id="0900-d9c3-25d0-4bff" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="5646-73fe-6d51-443e" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
@@ -10661,7 +10666,53 @@
         <forceEntryLink name="The Sinister Nullifier" id="910f-5e0d-76d8-e438" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
         <forceEntryLink name="The Warped Saboteur" id="3324-e6ce-2ff3-2915" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
         <forceEntryLink name="The Weird-Crafta" id="373f-2a05-7c9f-8248" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="6201-d67f-4d39-2528" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
+    </forceEntry>
+    <forceEntry name="Heroes of the Jade Abbey [LEGENDS]" id="f3c9-ca5d-bd0e-a94e" hidden="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="efb2-10e7-cd01-5070"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="f088-206a-b81c-4f32" targetId="6e72-1656-d554-528a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="3cbe-5a00-1922-b23d" includeChildSelections="true"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="INFANTRY" hidden="false" id="b1a8-d47e-813d-f9e9" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="dfeb-15bf-5d44-b1fa" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="f65d-c421-b75d-919b" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="94bd-fe28-cbd5-8a25" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="a459-737e-7b4b-9f56" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="c7f8-cc78-40aa-9cdd" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
     </forceEntry>
   </forceEntries>
   <sharedSelectionEntries>
@@ -12265,6 +12316,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Miscellaneous Download" id="fb5f-170a-00d0-4cf5" hidden="false"/>
     <publication name="Battletome: Helsmiths of Hashut" id="487d-9798-0633-8040" hidden="false"/>
     <publication name="Path to Glory: Blighted Wilds" id="836f-b899-80c0-0f72" hidden="false"/>
+    <publication name="Grotmas Darkwater Heroes" id="9e18-0b77-d43e-125e" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
