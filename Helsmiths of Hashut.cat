@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b7b7-cf58-4189-56ec" name="Helsmiths of Hashut" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="55" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b7b7-cf58-4189-56ec" name="Helsmiths of Hashut" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="55" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Helsmiths of Hashut - Library" id="8490-04c0-27e7-8d15" targetId="2c07-f0f9-8601-d082"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="2cab-e54e-6f5e-7ada" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
@@ -234,6 +234,67 @@ If the total number of **daemonic power points** that friendly units have is mor
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Domination Force" hidden="true" id="5e90-8471-5fd1-bbd4" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b33a-cd35-b55b-f468"/>
+          </constraints>
+          <profiles>
+            <profile name="Domination Hexes" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2c38-a3cb-bc21-ca71">
+              <characteristics>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Double the Health characteristic of friendly non-**^^Hobgrot Helsmiths of Hashut^^** units for the purposes of the ‘Power Through’ command.
+**Designer’s Note:** *The effect of this ability applies both when you use ‘Power Through’ and when your opponent uses ‘Power Through’.*</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Industrial Polluters" hidden="true" id="e205-0a56-5ded-d73d" publicationId="f894-7929-f79a-a269">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1045-083c-0dfc-a4b0"/>
+          </constraints>
+          <profiles>
+            <profile name="Smog and Smoke" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e732-0826-a697-b5ea">
+              <characteristics>
+                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for shooting attacks that target friendly **^^Helsmiths of Hashut Infantry^^** or **^^Cavalry^^** units while they are wholly within 9&quot; of a friendly **^^Helsmiths of Hashut War Machine^^**.</characteristic>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d768-02ca-f0cd-fd02" includeChildSelections="true" includeChildForces="true"/>
@@ -390,6 +451,104 @@ If the total number of **daemonic power points** that friendly units have is mor
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1be6-256b-5575-93a1" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Accursed Devices" id="d0dc-5188-54c8-6f77" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Accursed Devices: Helsmiths of Hashut" id="0455-04af-0dd9-1719" hidden="true" publicationId="f894-7929-f79a-a269">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Greed Pistons" hidden="false" id="8f46-4718-0522-1964">
+              <profiles>
+                <profile name="Greed Pistons" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6c16-5a5f-502c-e56f">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When making charge rolls for this unit, add 1 to the number of dice rolled, to a maximum of 3, then remove 1 dice of your choice and use the remaining dice as the charge roll.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b234-1f65-b226-4a41" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Breath of Contempt" hidden="false" id="7d87-2cd5-3b26-8ff6">
+              <profiles>
+                <profile name="Breath of Contempt" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8449-d117-8fe3-9cef">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 enemy units in combat with this unit to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="84dc-3c90-b018-f268" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Overdrive Switch" hidden="false" id="04dc-9e32-d512-8e91">
+              <profiles>
+                <profile name="Overdrive Switch" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="53e3-129d-d84c-0346">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared an **^^Attack^^** ability for this unit</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the phase:
+• Add 1 to hit rolls for this unit’s attacks, including those made with **Companion** weapons, that target an enemy unit within 9&quot; of it.
+• Each time an unmodified hit roll for an attack made by this unit is 1, allocate 1 damage point to this unit after the Attack ability has been resolved (ward rolls cannot be made for those damage points).</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="88f4-a309-2ecb-5aaa" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Enhancement Restrictions" id="25d8-da28-3d37-2268" hidden="true">
+              <description>**^^War Machine^^** only</description>
+            </rule>
+          </rules>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="-1" field="2fb0-bb86-a853-a95c">
+          <conditions>
+            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2fb0-bb86-a853-a95c" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="fe87-adcb-23eb-6b87"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -564,6 +723,7 @@ If the total number of **daemonic power points** that friendly units have is mor
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ac2b-0dc2-e8db-dd51" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
         <entryLink import="true" name="Warlord" hidden="false" id="fcf7-c9b9-525e-b031" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
         <entryLink import="true" name="Renown" hidden="false" id="5ccf-6e0c-4e2c-4234" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Accursed Devices" hidden="false" id="0f67-f93f-dec6-c050" type="selectionEntryGroup" targetId="d0dc-5188-54c8-6f77"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="320"/>
@@ -931,6 +1091,7 @@ If the total number of **daemonic power points** that friendly units have is mor
         <entryLink import="true" name="Renown" hidden="false" id="3315-2df7-e33d-25c2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
         <entryLink import="true" name="Paths" hidden="false" id="385d-921e-754f-07ca" type="selectionEntryGroup" targetId="ae1a-3570-f384-785f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7d81-6ffb-a4e7-043c" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
+        <entryLink import="true" name="Accursed Devices" hidden="false" id="7bec-0265-e4df-13a4" type="selectionEntryGroup" targetId="d0dc-5188-54c8-6f77"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -958,6 +1119,7 @@ If the total number of **daemonic power points** that friendly units have is mor
         <entryLink import="true" name="Renown" hidden="false" id="5ba3-eab8-f6c6-c5c7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
         <entryLink import="true" name="Paths" hidden="false" id="2801-f07a-ae65-14f9" type="selectionEntryGroup" targetId="ae1a-3570-f384-785f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="85aa-3829-ea08-09e4" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
+        <entryLink import="true" name="Accursed Devices" hidden="false" id="0aff-f133-d0de-90c9" type="selectionEntryGroup" targetId="d0dc-5188-54c8-6f77"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -985,6 +1147,7 @@ If the total number of **daemonic power points** that friendly units have is mor
         <entryLink import="true" name="Renown" hidden="false" id="b5da-ab6d-d771-556a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
         <entryLink import="true" name="Paths" hidden="false" id="c7b9-8eb8-1a26-a48c" type="selectionEntryGroup" targetId="ae1a-3570-f384-785f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="fe47-330f-dd88-15b2" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
+        <entryLink import="true" name="Accursed Devices" hidden="false" id="0af3-0bf0-c5e1-8a5a" type="selectionEntryGroup" targetId="d0dc-5188-54c8-6f77"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1012,6 +1175,7 @@ If the total number of **daemonic power points** that friendly units have is mor
         <entryLink import="true" name="Renown" hidden="false" id="eded-9808-6f9d-ca98" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
         <entryLink import="true" name="Paths" hidden="false" id="721d-9d88-18cd-e56b" type="selectionEntryGroup" targetId="ae1a-3570-f384-785f"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c2a2-88e4-528f-8a88" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
+        <entryLink import="true" name="Accursed Devices" hidden="false" id="7cb2-a99f-ed71-4ec8" type="selectionEntryGroup" targetId="d0dc-5188-54c8-6f77"/>
       </entryLinks>
       <modifiers>
         <modifier type="multiply" value="2" field="points">
@@ -1101,6 +1265,95 @@ If the total number of **daemonic power points** that friendly units have is mor
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+    </entryLink>
+    <entryLink import="true" name="Infernal Cohort with Hashutite Blades (Scourge of Ghyran)" hidden="false" id="fa56-96ae-ce6d-5138" type="selectionEntry" targetId="42dc-3f22-809b-661d">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="d462-39cc-fbdf-44b9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Renown" hidden="false" id="7011-0daf-495a-617d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Paths" hidden="false" id="f4de-b392-63e8-27d9" type="selectionEntryGroup" targetId="ae1a-3570-f384-785f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3872-e3ac-3481-74a2" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="War Despot (Scourge of Ghyran)" hidden="false" id="0ca8-8433-a2a9-6ad5" type="selectionEntry" targetId="c468-1c57-cdaf-d9c1">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="9a63-375d-37d3-cd1f" type="selectionEntryGroup" targetId="e1aa-ddf7-7018-c6c2"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="19a3-0644-66e3-0cf3" type="selectionEntryGroup" targetId="2be5-91e6-810b-282f"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a982-805a-938d-b6cc" type="selectionEntryGroup" targetId="ae1a-3570-f384-785f"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="bb88-505c-61d1-5bb2" type="selectionEntryGroup" targetId="d453-e284-1776-2b08"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="ceb4-e360-6250-667e" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="133e-1223-ff14-d90f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.905e-30fb-4d0f-4685"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="efe4-8ae8-3397-533d" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
   </entryLinks>
   <categoryEntries>
