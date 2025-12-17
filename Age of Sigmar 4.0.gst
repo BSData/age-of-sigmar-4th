@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="66" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="67" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -3722,7 +3722,6 @@
         <forceEntryLink name="The Sinister Nullifier" id="cdb4-4a23-55eb-3340" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
         <forceEntryLink name="The Warped Saboteur" id="573c-930f-0d96-27a6" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
         <forceEntryLink name="The Weird-Crafta" id="2547-6dc4-902d-10ad" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
-        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="e279-8965-7359-1a8f" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="5">
@@ -5068,7 +5067,6 @@
             </modifier>
           </modifiers>
         </forceEntryLink>
-        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="11b6-fba4-ac84-93e1" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Freeform [UNOFFICIAL, WIP]" id="78a1-f6c2-71b8-270a" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="99">
@@ -6742,6 +6740,7 @@
         <forceEntryLink name="The Sinister Nullifier" id="625e-68e7-cb86-e928" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
         <forceEntryLink name="The Warped Saboteur" id="0900-d9c3-25d0-4bff" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
         <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="5646-73fe-6d51-443e" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
+        <forceEntryLink name="Regiment of Ghyran" id="24a4-4645-fcf7-6e39" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
@@ -10666,7 +10665,7 @@
         <forceEntryLink name="The Sinister Nullifier" id="910f-5e0d-76d8-e438" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
         <forceEntryLink name="The Warped Saboteur" id="3324-e6ce-2ff3-2915" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
         <forceEntryLink name="The Weird-Crafta" id="373f-2a05-7c9f-8248" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
-        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="6201-d67f-4d39-2528" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
+        <forceEntryLink name="Regiment of Ghyran" id="7870-709b-d9da-7d69" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Heroes of the Jade Abbey [LEGENDS]" id="f3c9-ca5d-bd0e-a94e" hidden="true">
@@ -10712,6 +10711,31 @@
         <categoryLink name="CAVALRY" hidden="false" id="94bd-fe28-cbd5-8a25" targetId="926c-df8c-6841-d49e"/>
         <categoryLink name="BEAST" hidden="false" id="a459-737e-7b4b-9f56" targetId="b224-8c8e-ca93-9860"/>
         <categoryLink name="Reference" hidden="false" id="c7f8-cc78-40aa-9cdd" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7983-5dfc-a31c-1833"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="79d1-105c-ac4a-7df3" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="0da6-7240-35b1-262d" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="0c42-1869-71c7-0e93" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="c9ad-bcdc-4baf-e410" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="d32f-1c8b-985a-b365" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="2f8e-cbbe-26cb-52c9" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="f6d9-361e-1dab-b96d" targetId="3360-1158-e879-9606"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>

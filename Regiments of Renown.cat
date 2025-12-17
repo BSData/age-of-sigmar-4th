@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="43" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="44" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Neferata, Mortarch of Blood" hidden="true" id="69dd-9ab3-ca73-65c" type="selectionEntry" targetId="ca26-c079-31bc-38a8">
       <constraints>
@@ -6003,7 +6003,7 @@ The melee weapons of units in this Regiment of Renown have **Anti-charge (+1 Ren
       <profiles>
         <profile name="Dark Resurrection" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="576a-6c05-673d-2ce0">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Onec Per Turn (Army), End of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If any damage points were allocated to an enemy unit by this unit&apos;s combat attacks this turn, pick a friendly non-**^^Unique Death Infantry Hero^^** that has been destroyed to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up a replacement unit identical to the target wholly within 12&quot; of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -6244,6 +6244,596 @@ The first time you use this ability, you can use it without any command points b
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Regiment of Ghyran" hidden="false" id="961b-1bb5-b8d1-7772">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="c2cd-0fd4-d241-906b-min"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c2cd-0fd4-d241-906b-max"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="1d4a-95bf-25a6-549c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="Destiny point limit exceeded." field="error">
+          <conditions>
+            <condition type="lessThan" value="0" field="bc33-05f5-8d3f-af43" scope="force" childId="any" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Idiosyncrasies" id="435d-7b7a-240c-ff34" hidden="false" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="root-entry" shared="true" id="137a-be22-0da8-cb36"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Swift Skirmishers" hidden="false" id="8863-c6ad-ccf5-cc82">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64e3-e29c-329b-0978"/>
+              </constraints>
+              <profiles>
+                <profile name="Swift Skirmishers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3381-2d9b-4310-6524">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round (Army), Start of Battle Round</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You gain 1 **swift point** for each unit in this Regiment of Ghyran that is on the battlefield. Divide those **swift points** among those units in any combination. Then, pick each friendly unit that has any **swift points** to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a **swift move** for each target by rolling a number of D3 equal to the number of **swift points** it has. The target can move a number of inches equal to the swift move roll. It cannot move through or end that move within the combat ranges of enemy units.
+After this ability has been resolved, your **swift points** are reset to 0 (any that have not been used are lost).</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poison-smeared Weapons" hidden="false" id="43a0-7d20-8f37-8b3b">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81c0-8c16-c1b7-4fbf"/>
+              </constraints>
+              <profiles>
+                <profile name="Poison-smeared Weapons" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d527-8d4d-2e35-be30">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of melee weapons used by units in this Regiment of Ghyran while they are wholly within 6&quot; of a **contaminated** terrain feature.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Emboldened by Purity" hidden="false" id="1768-0f70-bc61-8e4d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a734-80d3-a1dd-b900"/>
+              </constraints>
+              <profiles>
+                <profile name="Emboldened by Purity" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ba10-2b62-5d59-f3cc">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 10 to the control scores of units in this Regiment of Ghyran while they are within 6&quot; of a terrain feature that has been **remediated** by your army.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Forest Dwellers" hidden="false" id="217d-37eb-48b5-294f">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7540-f5d2-d476-3244"/>
+              </constraints>
+              <profiles>
+                <profile name="Forest Dwellers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3141-7612-527a-8b9f">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to charge rolls for units in this Regiment of Ghyran.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cyclestone Amulets" hidden="false" id="97d8-4380-bcbf-024c">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="476e-63dd-1a1c-e613"/>
+              </constraints>
+              <profiles>
+                <profile name="Cyclestone Amulets" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3202-07d0-7064-77f7">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore the first damage point that would be allocated to a unit in this Regiment of Ghyran in each phase.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Contaminators" hidden="false" id="bd05-6abd-a93d-b4a7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a875-7130-5182-b4fe"/>
+              </constraints>
+              <profiles>
+                <profile name="Contaminators" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="475b-bb70-8944-ed35">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature that has been **remediated** by your opponent&apos;s army and that is within 3&quot; of a unit in this Regiment of Ghyran to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+. the target is no longer **remediated** by your opponent&apos;s army and your opponent considers the target to be **contaminated**.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Take Cover" hidden="false" id="ff6d-dc93-b36e-9ff6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b51-3be7-2dd4-c7b1"/>
+              </constraints>
+              <profiles>
+                <profile name="Take Cover" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9421-b7e2-1e39-47cb">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: Opponent declared a **^^Shoot^^** ability</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a unit in this Regiment of Ghyran to be the target. For the rest of the turn:
+• If the unmodified hit roll for a shooting attack that targets this unit is 1-5, the attack fails and the attack sequence ends.
+• The target cannot use **^^Charge^^** abilities.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Woodland Trappers" hidden="false" id="0712-0b5f-5d4e-cb5a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="610e-0818-d545-6278"/>
+              </constraints>
+              <profiles>
+                <profile name="Woodland Trappers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="18d3-65e2-86c4-8a35">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Enemy Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 6&quot; of a unit in this Regiment of Ghyran, then pick each enemy unit within 6&quot; of that terrain feature to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target and apply the corresponding effect below until the start of your next turn.
+**1-2** The target cannot use commands.
+**3-4** Halve the target&apos;s Move characteristic.
+**5-6** Subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Spell-breakers" hidden="false" id="f3da-029f-26ee-29a0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc36-7138-4103-8eb5"/>
+              </constraints>
+              <profiles>
+                <profile name="Spell-breakers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ebec-ab64-4acb-f2ea">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Manifestation^^** within 12&quot; of a unit in this Regiment of Ghyran to be the target, then make a banishment roll of 2D6.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the banishment roll equals or exceeds the banishment value listed on the **^^Manifestation^^**&apos;s warscroll, pick 1 of the following effects.
+***Banish:*** Inflict D3 mortal damage on the unit that summoned the target. Then, the target is banished and removed from play.
+***Take Control:*** For the rest of the turn, the target is treated as a friendly **^^Manifestation^^** by your army and as an enemy **^^Manifestation^^** by your opponent&apos;s army.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sinister Saboteurs" hidden="false" id="deb4-20f1-d70a-013d">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b16-61dd-7b6a-37ca"/>
+              </constraints>
+              <profiles>
+                <profile name="Sinister Saboteurs" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5fcc-b242-2897-c211">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 2 from remediation rolls for enemy units while they are within 9&quot; of 2 or more units in this Regiment of Ghyran.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Famed Courage" hidden="false" id="6f76-dcce-a1a3-909c">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="617b-c0ab-e163-6a32"/>
+              </constraints>
+              <profiles>
+                <profile name="Famed Courage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="823d-b6e7-4971-9cb3">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared the &apos;Rally&apos; command for a unit within 12&quot; of and visible to a unit in this Regiment of Ghyran</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After that ability has been resolved, that friendly unit can immediately use the &apos;Rally&apos; command. No command points are spent to use that command.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Jadeflower Seedbombs" hidden="false" id="cd6d-19a5-5d45-a9b4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6139-1b07-1b72-72aa"/>
+              </constraints>
+              <profiles>
+                <profile name="Jadeflower Seedbombs" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9384-ddb6-1d17-73d8">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a faction terrain feature or Landmark of Ghyran that is within 3&quot; of a unit in this Regiment of Ghyran to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Synchronised Attacks" hidden="false" id="102c-0b8e-06f6-073e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c67a-9b27-7e76-97db"/>
+              </constraints>
+              <profiles>
+                <profile name="Synchronised Attacks" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="efbc-6c1f-8a2d-cf7d">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Enemy Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, when players are alternating picking units to use a **^^Fight^^** ability, when it is your turn to pick a unit, you can pick each unit in this Regiment of Ghyran instead of 1. Resolve the **^^Fight^^** abilities one at a time immediately after each other.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Drawn to Corruption" hidden="false" id="4144-5095-bca7-34f8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9d6-86d8-b329-8d6b"/>
+              </constraints>
+              <profiles>
+                <profile name="Drawn to Corruption" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="92a5-46ec-27ac-e9c2">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a unit in this Regiment of Renown that is not in combat to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again wholly within 6&quot; of a **contaminated** terrain feature and more than 9&quot; from all enemy units.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="In It Together" hidden="false" id="e21f-3a26-7e5d-d0cf">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b24c-5aa1-eefb-d503"/>
+              </constraints>
+              <profiles>
+                <profile name="In It Together" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="68a3-7add-d001-7752">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If a **^^Hero^^** in this Regiment of Ghyran is not in combat and has not used any **^^Run^^** or **^^Retreat^^** abilities this turn, pick that **^^Hero^^** and 1 unit in this Regiment of Ghyran within its combat range that is not in combat and has not used any **^Run^^** or **^^Retreat^^** abilities this turn to be the targets. Then, make a charge roll of 2D6.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The targets can each move a distance up to the value of the charge roll. They can move through the combat ranges of enemy units and must end that move within 1/2&quot; of a visible enemy unit. The **^^Hero^^** must move first, and the other target must end that move within the **^^Hero^^**&apos;s combat range. If the **^^Hero^^** is unable to end that move within 1/2&quot; of a visible enemy unit, neither target can move. If they move, the targets have charged.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Vigorous Spirits" hidden="false" id="d14c-9fc8-5371-bfa7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0439-6360-fcf9-11cb"/>
+              </constraints>
+              <profiles>
+                <profile name="Vigorous Spirits" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="88be-3684-dba9-fb34">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a unit in this Regiment of Renown that is not in combat to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll **X**D3, where **X** is the number of enemy units within 12&quot; of the target that used a **^^Move^^** ability this phase. The target can move a number of inches equal to the roll.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Self-Preservation Instincts" hidden="false" id="a953-900a-0994-e961">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f905-2f38-a16c-5bf1"/>
+              </constraints>
+              <profiles>
+                <profile name="Self-Preservation Instincts" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="caed-5dd6-80b4-800c">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an unit in this Regiment of Renown that is in combat with an enemy unit that charged this turn to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 2D6. On a 6+, the target can move a number of inches equal to the roll. It can move through the combat ranges of enemy units but cannot end that move in combat.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Blessings of Bark" hidden="false" id="adb5-8868-c32e-f03b">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fa1-b3ef-df23-12ea"/>
+              </constraints>
+              <profiles>
+                <profile name="Blessings of Bark" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="88fe-f03b-8f91-7f55">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Reaction: Opponent declared an **^^Attack^^** ability.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit has **^^Ward (3+)^^** for the rest of the phase. For each unmodified ward roll of 1 for that unit this phase, after the **^^Attack^^** ability has been resolved:
+• If that unit has a Health characteristic of 1, 2 models in that unit are slain.
+• If that unit has a Health characteristic of 2 or more, 1 model in that unit are slain.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b">A unit in this Regiment of Ghyran targeted by that **^^Attack^^** ability</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Master Cleansers" hidden="false" id="3243-9e3c-2394-4410">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ab1-d4e5-3550-e495"/>
+              </constraints>
+              <profiles>
+                <profile name="Master Cleansers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="aff6-e82d-ed2f-c8f8">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You can re-roll remediation rolls for units in this Regiment of Ghyran.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-5"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Familiar with the Paths" hidden="false" id="f03d-1c01-5412-0c58">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e70-7062-f3f4-754b"/>
+              </constraints>
+              <profiles>
+                <profile name="Familiar with the Paths" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3387-c3b6-d882-ba82">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), End of Your Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a unit n this Regiment of Ghyran to be the **oriented target**, then pick a point on the battlefield beneath the base of 1 of its models to be the **unknown location**. Next, pick a visible enemy unit within 18&quot; of the target to be the **bewildered target**, then pick a point on the battlefield beneath the base on 1 of its models to be the **intended destination**.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the targets from the battlefield. Set up the **oriented target** wholly within 6&quot; of the **intended destination**. It can only be set up in combat with units in your opponent&apos;s army that were within 3&quot; of the bewildered target before it was removed from the battlefield.
+Then your opponent must set up the **bewildered target** wholly within 6&quot; of the **unknown location**. It can only be set up in combat with units in your army that were within 3&quot; of the oriented target before it was removed from the battlefield.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-10"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Destiny Point Limit" id="7d89-c97e-5bd9-126c" hidden="false" collapsible="true" defaultSelectionEntryId="none" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Acclaimed Retinue" hidden="false" id="71fd-73bf-756b-592e" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="150"/>
+                <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pre-eminent Warband" hidden="false" id="e58e-3f67-ccab-125d" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="300"/>
+                <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="30"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Illustrious Battalion" hidden="false" id="cbc6-c0fd-ca1c-c7b2" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="500"/>
+                <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="50"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="240d-90bb-ac59-8010"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64b2-3938-7c97-18cd"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
