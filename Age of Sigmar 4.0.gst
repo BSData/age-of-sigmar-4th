@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="67" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="68" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -6924,8 +6924,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f19c-90de-65b2-c65a"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="220"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Fjori&apos;s Flamebearers" id="a723-1314-55da-86d8" hidden="true">
@@ -6967,8 +6969,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3023-e024-f7db-3f78"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="470"/>
+        <cost name="pts" typeId="points" value="420"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Gotrek Gurnisson" id="d72a-3662-14bd-40d9" hidden="true">
@@ -7011,8 +7015,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9b07-6873-f1a1-6c62"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Norgrimm&apos;s Rune Throng" id="c7eb-8e6c-a032-4e04" hidden="true">
@@ -7184,8 +7190,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4366-39e7-7d0c-c0fc"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="200"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Hargax&apos;s Pit-beasts" id="1339-980d-ee74-fe0b" hidden="true">
@@ -7226,8 +7234,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50d4-e21f-abdc-6bc2"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="460"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Phulgoth&apos;s Shudderhood" id="69d0-b9be-62a8-5ae4" hidden="true">
@@ -7424,8 +7434,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7dfa-3068-7c98-4d8d"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="810"/>
+        <cost name="pts" typeId="points" value="770"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Liche&apos;s Hand" id="9136-a422-571c-c77c" hidden="true">
@@ -7462,8 +7474,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cfc3-8787-6bce-c464"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="830"/>
+        <cost name="pts" typeId="points" value="790"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Sorrowmourn Choir" id="60b7-2797-5b4-8101" hidden="true">
@@ -7538,8 +7552,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fdd-7b45-c8ce-fe87"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="700"/>
+        <cost name="pts" typeId="points" value="680"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Summerking&apos;s Entourage" id="de70-1b54-66b4-c010" hidden="true">
@@ -7614,8 +7630,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="117f-4b0e-399d-721c"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="210"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Odo Godswallow" id="8a04-83ad-bc2-5354" hidden="true">
@@ -7694,8 +7712,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="64d3-d983-dea8-ebb0"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Braggit&apos;s Bottle-snatchaz" id="d704-19f-a3d0-5edd" hidden="true">
@@ -7734,8 +7754,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fcf-10cf-9ed9-1e32"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="490"/>
+        <cost name="pts" typeId="points" value="480"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Volt-Klaw&apos;s Enginecoven" id="ffc1-e2cb-f2f0-f72e" hidden="true">
@@ -7776,8 +7798,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2e45-3a6a-05b4-b79b"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="460"/>
+        <cost name="pts" typeId="points" value="410"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Krittok&apos;s Clawpack" id="d0d8-3ec6-4b57-16fd" hidden="true">
@@ -7818,8 +7842,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a43e-09a8-7e6f-cab9"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="380"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Horizon Seekers" id="435e-269e-899d-3f7e" hidden="true">
@@ -7904,8 +7930,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d0d-3a5b-4950-186d"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="370"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Lord Skaldior&apos;s Chosen" id="ba3f-fa41-97d3-2c0f" hidden="true">
@@ -7946,8 +7974,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0294-85f5-4e7e-f710"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="570"/>
+        <cost name="pts" typeId="points" value="530"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Godmarked Ascendant" id="ab5a-af59-e05f-2daa" hidden="true">
@@ -8032,8 +8062,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="431c-3420-7622-eb2e"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="490"/>
+        <cost name="pts" typeId="points" value="470"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Exile Scavengers" id="c09c-6726-db25-549b" hidden="true">
@@ -8083,8 +8115,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2dbd-ac50-222b-82ed"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="430"/>
+        <cost name="pts" typeId="points" value="410"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Squires of the Everchosen" id="2b2d-a5c6-4595-5468" hidden="true">
@@ -8164,8 +8198,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9bb9-3027-f399-60aa"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="430"/>
+        <cost name="pts" typeId="points" value="370"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Nurgle&apos;s Gift" id="0fec-ccda-3904-c0ce" hidden="true">
@@ -8333,8 +8369,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a28a-3566-79e0-41b8"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="230"/>
+        <cost name="pts" typeId="points" value="220"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Goroan Scions" id="d7f8-513c-ea3d-bc9e" hidden="true">
@@ -8374,8 +8412,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9480-14d5-5092-6179"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="470"/>
+        <cost name="pts" typeId="points" value="420"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Da Hurtlin&apos; Hogz" id="3cd2-b31b-43c8-e42c" hidden="true">
@@ -8414,8 +8454,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c50-db58-c938-1aab"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="420"/>
+        <cost name="pts" typeId="points" value="430"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Da Kountin&apos; Krew" id="1d9c-5fbb-bb1e-bdb8" hidden="true">
@@ -8453,8 +8495,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e98f-84e8-4faf-1d69"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="360"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Shinestealaz" id="11e8-d326-7125-4e5e" hidden="true">
@@ -8531,8 +8575,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f5c-01bd-679c-9a5d"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="310"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Blades of the Hollow King" id="26c8-fdae-c6b6-e347" hidden="true">
@@ -8569,8 +8615,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="acf8-e36d-3ec2-e0f9"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="260"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Beast of Castle Sterneiste" id="6e65-4c2e-132e-4c1e" hidden="true">
@@ -8607,8 +8655,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cbf6-d72a-35f2-a573"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="190"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Bloodthirsty Shiver" id="0bd1-a3d9-9fa6-87a1" hidden="true">
@@ -8695,7 +8745,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="df45-5ec0-06e8-a5be"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="270"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8789,7 +8839,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8c01-e8b6-b430-dab1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8833,7 +8883,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="01d1-a8ea-0480-18c6"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="430"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8877,7 +8927,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b354-a7ff-10a2-e68c"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="380"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9010,7 +9060,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0031-1ed4-c4a3-4173"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="290"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9178,7 +9228,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f9b9-be7e-3827-aaba"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="380"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
