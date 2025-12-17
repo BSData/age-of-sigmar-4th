@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="68" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="69" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -9413,7 +9413,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8de0-9114-24ee-4e8d"/>
       </constraints>
     </forceEntry>
-    <forceEntry name="Path to Glory: Blighted Wilds" id="8e6f-2dd7-a7ed-489e" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
+    <forceEntry name="Path to Glory: Blighted Wilds [WIP]" id="8e6f-2dd7-a7ed-489e" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="063d-f3ff-e1f8-b549" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="21af-6d80-63c3-999a" targetId="3360-1158-e879-9606"/>
