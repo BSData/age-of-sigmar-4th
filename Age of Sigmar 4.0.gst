@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="70" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="71" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -354,6 +354,8 @@
     <categoryEntry name="HELSMITHS OF HASHUT" id="905e-30fb-4d0f-4685" hidden="false"/>
     <categoryEntry name="HOBGROT" id="9e60-0037-86f0-036d" hidden="false"/>
     <categoryEntry name="AUTOMATON" id="acb5-f7cf-ee4f-1f00" hidden="false"/>
+    <categoryEntry name="STANDARD BEARER" id="8ae9-b42e-5611-f8f8" hidden="false"/>
+    <categoryEntry name="MUSICIAN" id="afd5-9600-b663-39a2" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
@@ -10743,7 +10745,6 @@
               </conditionGroups>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

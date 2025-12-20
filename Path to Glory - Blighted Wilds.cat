@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -1457,23 +1457,368 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
         </selectionEntryGroup>
         <selectionEntryGroup name="Upgrades" id="b23c-9470-e041-df8d" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Aura of the Damned" hidden="false" id="c9cb-b967-a94e-baaa" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="c9cb-b967-a94e-baaa" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
-                <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
               <modifiers>
-                <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
-                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="add" value="f679-3bcb-d664-9ac3" field="category" scope="root-entry"/>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="83fb-28b9-48d5-2c8e"/>
               </constraints>
               <rules>
-                <rule name="Aura of the Damned" id="c370-0766-092d-1fad" hidden="true">
-                  <description>Add 1 to your hero&apos;s Control characteristic.</description>
+                <rule name="Champion" id="c370-0766-092d-1fad" hidden="true">
+                  <description>This unit has a champion and the **^^Champion^^** keyword.</description>
                 </rule>
               </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="7c62-4655-9dc8-965c" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="add" value="afd5-9600-b663-39a2" field="category" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b224-8c8e-ca93-9860" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3fa-f9b6-b99e-dbdf"/>
+              </constraints>
+              <rules>
+                <rule name="Musician" id="b37c-dfad-1d30-ce10" hidden="true">
+                  <description>Non-**^^Beast^^** only. This unit has a musician and the **^^Musician^^** keyword.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="c537-26f5-d5d1-e20f" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="add" value="8ae9-b42e-5611-f8f8" field="category" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b224-8c8e-ca93-9860" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4cd-8bf5-937d-12ec"/>
+              </constraints>
+              <rules>
+                <rule name="Standard Bearer" id="1538-fcd2-ec5f-55a8" hidden="true">
+                  <description>Non-**^^Beast^^** only. This unit has a standard bearer and the **^^Standard Bearer^^** keyword.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Influential" hidden="false" id="5d63-34ff-ff2d-6deb" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" scope="root-entry" affects="profiles.Unit"/>
+              </modifiers>
+              <rules>
+                <rule name="Influential" id="b5c9-3d18-0952-a8e3" hidden="true">
+                  <description>Add 1 to this unit&apos;s Control characteristic.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crit (Auto-wound)" hidden="false" id="9f07-7b66-543b-c594" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Crit (Auto-wound)" id="acaf-3f32-f742-3b76" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. That weapon has **Crit (Auto-wound)**.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="dc03-d3dd-a818-d7f3" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b73-a09a-acee-19bd"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c73c-fb00-ddd5-6eff"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crit (2 Hits)" hidden="false" id="b7fc-056f-b086-bd78" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Crit (2 Hits)" id="37e0-fab8-d580-7596" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. That weapon has **Crit (2 Hits)**.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="83b3-950e-084a-ce20" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e06-42ab-2aba-6a5f"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f69-f932-b96a-7298"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Brawny" hidden="false" id="6306-a933-e45d-83c1" sortIndex="8">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Brawny" id="22c5-6ce1-c451-462b" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. Improve that weapon&apos;s Wound characteristic by 1 (for example, 4+ becomes 3+).</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="1e05-92a7-7649-eab0" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b2b-ba28-3ef8-cc2f"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5bd-e6ea-afdf-a35f"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Skilled Warriors" hidden="false" id="e9ea-680b-a6fc-6abb" sortIndex="7">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Skilled Warriors" id="2399-24ae-9e0d-c88b" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. Improve that weapon&apos;s Hit characteristic by 1 (for example, 4+ becomes 3+).</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="ca61-144c-c48d-b8c3" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="742a-6101-205b-c01b"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="827f-a2f3-212a-b70b"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ghyranite Long-range Weapon" hidden="false" id="6cfc-64cf-22bb-3d09" sortIndex="10">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1082-c623-0f2d-dbc3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c139-9034-ccb1-16fb"/>
+              </constraints>
+              <rules>
+                <rule name="Ghyranite Long-range Weapon" id="1c93-230b-d605-d289" hidden="true">
+                  <description>Add the **Ghyranite Long-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.
+</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ghyranite Close-range Weapon" hidden="false" id="1082-c623-0f2d-dbc3" sortIndex="9">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ad0-6b89-080c-9f7c"/>
+              </constraints>
+              <rules>
+                <rule name="Ghyranite Close-range Weapon" id="59a5-05e7-2e16-5a2a" hidden="true">
+                  <description>Add the **Ghyranite Close-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.
+</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6cfc-64cf-22bb-3d09" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fleet" hidden="false" id="4341-6d92-cf2f-40e3" sortIndex="11">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="increment" value="1" field="fed0-d1b3-1bb8-c501" scope="root-entry" affects="profiles.Unit"/>
+              </modifiers>
+              <rules>
+                <rule name="Fleet" id="67e2-bee1-3e6c-ebe2" hidden="true">
+                  <description>Add 1&quot; to this unit&apos;s Move characteristic.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fearsome Weapons" hidden="false" id="d524-3885-828d-df02" sortIndex="12">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Fearsome Weapons" id="4bdd-9c49-4600-b7eb" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. Add 1 to that weapon&apos;s Rend characteristic.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="1e3d-7f05-a4b4-97a0" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aaa-5d27-4e91-42c0"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36f5-83a3-caa2-a3c1"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Swift Strikes" hidden="false" id="6a52-b674-55b9-9a9b" sortIndex="13">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Swift Strikes" id="fbed-e3f9-fd42-5b3f" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. Add 1 to that weapon&apos;s Attacks characteristic.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="5caa-922c-0453-ed34" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5911-da08-e69f-8a6e"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0107-a48a-d77a-ecb5"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Healthy Physique" hidden="false" id="c049-0b76-190f-4bd9" sortIndex="14">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" scope="root-entry" affects="profiles.Unit"/>
+              </modifiers>
+              <rules>
+                <rule name="Healthy Physique" id="8dd6-2d80-5112-65be" hidden="true">
+                  <description>Add 1 to this unit&apos;s Control characteristic.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Armourers" hidden="false" id="fe94-a968-a222-a457" sortIndex="15">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="increment" value="1" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
+              </modifiers>
+              <rules>
+                <rule name="Armourers" id="2a68-9c0e-693f-12cc" hidden="true">
+                  <description>Improve this unit&apos;s Save characteristic by 1 (for example, 5+ becomes 4+).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crit (Mortal)" hidden="false" id="9d06-4eb2-1007-55f5" sortIndex="16">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Crit (Mortal)" id="d074-a075-d8bd-b235" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. That weapon has **Crit (Mortal)**.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="04b6-f347-6e3c-f9a8" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2893-9b7a-586d-1435"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d3b7-b744-db7f-ae1d"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Charge (+1 Damage)" hidden="false" id="7bd4-c078-723b-39a8" sortIndex="17">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Charge (+1 Damage)" id="93ea-e322-6b21-365c" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. That weapon has **Charge (+1 Damage)**.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="8291-5b60-1e24-22f0" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0170-5c8c-b9c9-0bec"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5415-dc24-2b26-7423"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Brutal Strikes" hidden="false" id="ba19-5940-8a80-0998" sortIndex="18">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Brutal Strikes" id="895f-c12c-13e4-2068" hidden="true">
+                  <description>Pick 1 of this unit&apos;s melee weapons. Add 1 to that weapon&apos;s Damage characteristic.</description>
+                </rule>
+              </rules>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="" id="2e9a-71f7-640d-2842" hidden="false" flatten="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e5e-2315-bc35-61e9"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="278f-03a3-174f-5a70"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1808,9 +2153,6 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="0f11-ef75-18f3-cdd2"/>
-                  </constraints>
                   <rules>
                     <rule name="Razor-sharp Weapon" id="2657-9451-ba74-a05e" hidden="true">
                       <description>Pick 1 of your Regiment Hero&apos;s melee weapons. That weapon has **Crit (Mortal)**.</description>
@@ -1842,6 +2184,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="3b71-aeaa-5d86-0512"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Ghyranite Monstrosity&apos;s Claws" hidden="true" id="218b-143d-eba8-92ce">
                           <profiles>
@@ -1866,6 +2211,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="b75a-8dd7-dfa6-c972"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Ghyranite Monstrosity&apos;s Maw" hidden="true" id="437c-999d-e32e-527f">
                           <modifierGroups>
@@ -1878,6 +2226,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="5503-dbf7-00fa-f645"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Ghyranite Steed&apos;s Teeth, Hooves, or Claws" hidden="true" id="3daf-1291-35e9-70d8">
                           <modifierGroups>
@@ -1890,6 +2241,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="c68d-81c9-5282-5dfb"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Great Weapon of Renown" hidden="true" id="cf34-8979-59e4-79d4">
                           <modifierGroups>
@@ -1902,6 +2256,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="9500-b80c-fb64-9ed7"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Holy Sceptre" hidden="true" id="8527-e287-b375-5c9f">
                           <modifierGroups>
@@ -1914,6 +2271,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="cc58-e52c-f831-67da"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Massive Punches or Kicks" hidden="true" id="5edf-66a0-45d7-1349">
                           <modifierGroups>
@@ -1926,6 +2286,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="c0d3-49c3-09ce-9d0b"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Monstrous Weapon of Renown" hidden="true" id="4465-dbd4-1c8b-9103">
                           <modifierGroups>
@@ -1938,6 +2301,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="d1ee-7e54-44be-fa41"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Weapon of Renown" hidden="false" id="28ab-f4f0-7b8a-c8ef">
                           <modifierGroups>
@@ -1957,6 +2323,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditionGroups>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="5f49-f9fa-3390-63d0"/>
+                          </constraints>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Wizard&apos;s Staff" hidden="true" id="29d9-7a1a-6152-0b08">
                           <profiles>
@@ -1981,6 +2350,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                               </conditions>
                             </modifierGroup>
                           </modifierGroups>
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="35f8-bafc-969f-4d2f"/>
+                          </constraints>
                         </selectionEntry>
                       </selectionEntries>
                       <constraints>
