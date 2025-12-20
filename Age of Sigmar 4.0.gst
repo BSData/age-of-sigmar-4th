@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="69" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="70" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -11265,6 +11265,11 @@
         <categoryLink targetId="70a4-383f-421f-52cd" id="b526-6820-5eca-8a4f" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="b979-4c3e-7d0e-6921" id="4494-b9a6-2e65-65c8" primary="false" name="FLY"/>
       </categoryLinks>
+      <rules>
+        <rule name="Base Size" id="6069-170b-1024-1001" hidden="true">
+          <description>130mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Purple Sun of Shyish" hidden="false" id="e7a5-e611-4c13-22d0">
       <categoryLinks>
@@ -11321,6 +11326,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="9997-dae6-c46a-0a72" hidden="true">
+          <description>100x70mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Soulsnare Shackles" hidden="false" id="dee3-92a0-27e7-252a">
       <categoryLinks>
@@ -11368,6 +11378,11 @@
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="9579-4528-2ee0-5785" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Soulscream Bridge" hidden="false" id="523f-bd78-e418-9922">
       <categoryLinks>
@@ -11413,6 +11428,11 @@
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="da7d-dc38-4ff8-5450" hidden="true">
+          <description>120x92mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Aethervoid Pendulum" hidden="false" id="fcb6-ae80-2e58-aadb">
       <categoryLinks>
@@ -11459,6 +11479,11 @@
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="1030-b362-0e3d-5ebb" hidden="true">
+          <description>64x42mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chronomantic Cogs" hidden="false" id="1aba-bc38-e988-d79f">
       <categoryLinks>
@@ -11495,6 +11520,11 @@
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="b0e0-0c3f-c197-05a3" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="The Burning Head" hidden="false" id="e1cc-64dc-f765-b9cc">
       <categoryLinks>
@@ -11548,6 +11578,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="f9d8-557a-983b-bbd8" hidden="true">
+          <description>50mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Horrorghast" hidden="false" id="f935-2383-94ba-3be2">
       <categoryLinks>
@@ -11604,6 +11639,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="0dad-8b93-b703-7548" hidden="true">
+          <description>50mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Malevolent Maelstrom" hidden="false" id="e699-49b7-d2b8-d5fc">
       <categoryLinks>
@@ -11664,6 +11704,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="af23-a99e-a3dc-53dd" hidden="true">
+          <description>50mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Shards of Valagharr" hidden="false" id="94f6-4321-fd80-f20e">
       <categoryLinks>
@@ -11717,6 +11762,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="ccd9-0845-c53b-7080" hidden="true">
+          <description>105x70mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lauchon the Soulseeker" hidden="false" id="a26b-cd08-8f9d-90b0">
       <categoryLinks>
@@ -11762,6 +11812,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="6ad3-655c-c52a-bba7" hidden="true">
+          <description>90x52mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Quicksilver Swords" hidden="false" id="8cde-fafe-2b2a-ced5">
       <categoryLinks>
@@ -11804,6 +11859,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="fb86-9d67-8315-d94b" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7f34-77c9-597-62c3">
       <profiles>
@@ -11938,6 +11998,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="e549-a70c-2b95-b175" hidden="true">
+          <description>64x42mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="41c4-2f6a-0d3c-a23e">
       <categoryLinks>
@@ -11982,6 +12047,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="adec-2317-0d4a-b7f6" hidden="true">
+          <description>100x70mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Suffocating Gravetide" hidden="false" id="1885-a1aa-bf5d-6d0d">
       <categoryLinks>
@@ -12027,6 +12097,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="ac33-18e2-33b5-5df5" hidden="true">
+          <description>Use model</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Geminids of Uhl-Gysh" hidden="false" id="d420-1699-5ad9-1956">
       <categoryLinks>
@@ -12082,6 +12157,11 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="e6d5-331c-b60b-c229" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Umbral Spellportal" hidden="false" id="0552-183c-1b2a-d117">
       <categoryLinks>
@@ -12127,6 +12207,11 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="2d58-c5a6-0d12-1916" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Prismatic Palisade" hidden="false" id="015a-4e4f-322f-ccff">
       <categoryLinks>
@@ -12158,6 +12243,11 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="89e2-e07f-520b-f0b3" hidden="true">
+          <description>Use model</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Renown" hidden="true" id="e7d5-5062-46d5-38dd">
       <modifiers>
