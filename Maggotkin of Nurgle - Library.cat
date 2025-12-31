@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="7589-6d2-dadc-bc6" name="Maggotkin of Nurgle - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="7589-6d2-dadc-bc6" name="Maggotkin of Nurgle - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Horticulous Slimux" hidden="false" id="6393-ad97-81d9-ccbe" publicationId="9c71-86cb-e1d0-ec8d">
       <constraints>
@@ -13,7 +13,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If there are fewer than 3 friendly **Feculent Gnarlmaws** on the battlefield, you can set up a **Feculent Gnarlmaw** wholly within 12&quot; of this unit, more than 3&quot; from all enemy units, objectives and other terrain features.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If there is no more than 1 friendly **Feculent Gnarlmaw** on the battlefield, you can set up a **Feculent Gnarlmaw** wholly within 12&quot; of this unit and more than 3&quot; from all enemy units, objectives and other terrain features.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -33,9 +33,23 @@
         </profile>
         <profile name="Beast Handler" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b226-8a5b-e21b-6393">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Beasts of Nurgle** unit that has been destroyed.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Beast of Nurgle** unit that has been destroyed.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, set up a replacement unit wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Gnarlmaw Whisperer" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2a32-11d3-c7bd-5b40">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Your Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Feculent Gnarlmaw** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again wholly within 12&quot; of this unit and more than 3&quot; from all enemy units, objectives, and other terrain features.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -123,8 +137,8 @@
         <profile name="Sevenfold Slaughter" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8d36-892d-9940-32ea">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Putrid Blightkings** unit that charged this turn and is wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target’s **Blighted Weapons** for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Rotswords** unit that did not charge this turn and is wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target’s **Ruined Master-crafted Weapons** for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -134,25 +148,25 @@
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Lord of the Blightkings" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="62bc-578a-c14f-7d60">
+        <profile name="Lord of the Infected Legions" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="62bc-578a-c14f-7d60">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to charge rolls for friendly **Putrid Blightkings** units while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to wound rolls for combat attacks made by friendly **Rotswords** units that did not charge this turn while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="993f-a491-20d1-3a19" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="a19c-e4d3-15ab-5656" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="4469-d2c5-30aa-bb3f" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="9b41-7186-55db-5c6a" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="88-98d7-d4f9-8b19" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="72f0-481f-97c6-82e6" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="4548-1c2f-2001-8515" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lord of Plagues" hidden="false" id="3398-ea0d-f6e8-ec77">
@@ -219,7 +233,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target. You cannot pick a **^^Manifestation^^** or terrain feature. Then, make a casting roll of 2D6.</characteristic>
             <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target has the **^^Diseased^^** keyword.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
@@ -228,13 +242,13 @@
             <attribute typeId="da27-8d61-f955-5031" name="Parent Node">Special</attribute>
           </attributes>
         </profile>
-        <profile name="Locus of Nurgle" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="384-bcf1-cb38-aae0">
+        <profile name="Locus of Nurgle" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="384-bcf1-cb38-aae0">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Maggotkin of Nurgle Daemon^^** unit that started the battle with 3 or more models and that has been destroyed to be the target</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Maggotkin of Nurgle Daemon^^** unit that started the battle with 3 or more models and that has been destroyed to be the target</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6&quot; of this unit or a friendly **Feculent Gnarlmaw** and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
@@ -266,24 +280,6 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Great Unclean One" hidden="false" id="ae51-81d-58ac-7259">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Host of Nurglings" hidden="false" id="f6e7-d23c-5f9d-13d2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f5fd-370-1f55-1d7"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df3b-bad2-ed65-9de1"/>
-              </constraints>
-              <profiles>
-                <profile name="Host of Nurglings" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7940-d064-e979-bf5e">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Noxious Bile" hidden="false" id="641a-a008-7b06-9ca6">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ee2-cfd3-ab27-5985"/>
@@ -345,7 +341,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9826-92d8-2722-c66b">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Ghurk&apos;s Tentacle** is 2.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Ghurk&apos;s Tentacle** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -380,7 +376,7 @@
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a number of dice equal to the target’s Health characteristic. For each 5+, inflict 1 mortal damage on the target, to a maximum of 7 mortal damage.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a number of dice equal to the target’s Health characteristic. For each 5+, inflict 1 mortal damage on the target, to a maximum of 7 mortal damage. If any mortal damage was inflicted on the target, and the target was not a **^^Manifestation^^** or terrain feature, it has the **^^Diseased^^** keyword.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -391,12 +387,28 @@
         <profile name="Horrific Opponent" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="440a-2060-8677-10d8">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 3 from the control scores of enemy units while they are in combat with this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 5 from the control scores of enemy units while they are in combat with this unit.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Tentacle Trap" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="423e-40ae-d550-e8ed">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, for the rest of the turn:
+• The target cannot move and cannot be removed from the battlefield by an ability that would allow it to be set up elsewhere on the battlefield. 
+• Add 1 to hit rolls for combat attacks that target that enemy unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
@@ -407,9 +419,9 @@
         <categoryLink name="CHAOS" hidden="false" id="342a-c22f-7be2-6ec9" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="864c-b985-9f38-3e06" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="MONSTER" hidden="false" id="bd2-b8d1-c55a-877" targetId="6d54-625c-d063-13e2" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="1455-4a27-a71-d4bd" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="28dc-a550-52d6-b1a7" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="e797-b674-8ae2-c1ff" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="3c40-6524-432b-094e" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="The Glottkin" hidden="false" id="c01a-e8e8-275b-dffc">
@@ -444,7 +456,7 @@
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3+3</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">5</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -462,7 +474,7 @@
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -498,15 +510,29 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Plaguebearers** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D6. On a 2+, pick 1 of the following effects to apply until the start of your next turn:
-***Tally of Blows:*** Add 1 to the Attacks characteristic of the target’s melee weapons.
-***Recorded Stamina:*** Add 1 to save rolls for the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, pick 1 of the following effects to apply until the start of your next turn:
+***Tally of Blows:*** Add 1 to wound rolls for the target&apos;s combat attacks.
+***Recorded Stamina:*** Add 5 to the target&apos;s control score.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Dtupefying Sneezes" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c1c4-0a94-911b-c32a">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Monster^^** that had any damage points allocated to it this phase by this unit&apos;s shooting attacks to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target cannot use **^^Rampage^^** abilities until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -588,11 +614,11 @@
         <profile name="Jolly Gutpipes" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d45a-f55b-6b34-4733">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Maggotkin of Nurgle Daemon^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn:
-***A-Stabbing We Will Go!:*** Add 1 to wound rolls for the target’s attacks.
-***Early One Evening My Pustule Was Seeping:*** Ward rolls cannot be made for damage points inflicted by the target’s combat attacks.
-***My Love Is Like a Ripe, Ripe Fart:*** Subtract 1 from hit rolls for attacks made by enemy units that target the target unit.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Maggotkin of Nurgle Daemon^^** unit wholly within 12&quot; of this unit or a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If you picked a friendly unit to be the target, roll a dice. If the roll equals or exceeds the target&apos;s Control characteristic, add 2 to run rolls and charge rolls for the target until the start of your next turn.
+If you picked an enemy unit to be the target, roll a dice. If the roll equals or exceeds the target&apos;s Control characteristic, until the start of your next turn, while this unit is on the battlefield, inflict D3 mortal damage on the target:
+• Each time the target ends a move further from this unit than it was at the start of the move, after the ability used by the target has been resolved.
+• Each time the target is removed from the battlefield and set up again on the battlefield further from the unit than it was before it was removed, after the ability used by the target has been resolved.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -645,7 +671,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Beasts of Nurgle" hidden="false" id="8197-2f04-e647-f5c" publicationId="9c71-86cb-e1d0-ec8d">
+    <selectionEntry type="unit" import="true" name="Beast of Nurgle" hidden="false" id="8197-2f04-e647-f5c" publicationId="9c71-86cb-e1d0-ec8d">
       <profiles>
         <profile name="Beast of Nurgle" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="b756-df5-c86e-f5a1">
           <characteristics>
@@ -657,9 +683,9 @@
         </profile>
         <profile name="Attention Seekers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4d31-aae1-861a-da68">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1&quot; of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1&quot; of the target. Then, inflict D3 mortal damage on the target. This unit has charged.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**, **^^Charge^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -681,7 +707,7 @@
         <cost name="‎" id="655c-b4a9-b5d9-4130" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Beasts of Nurgle" hidden="false" id="e848-7195-c93b-9fd">
+        <selectionEntry type="model" import="true" name="Beast of Nurgle" hidden="false" id="e848-7195-c93b-9fd">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="236c-7d6-d3e-9cb9"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9970-ba66-73f9-40e3"/>
@@ -723,24 +749,28 @@
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Bloated Bulk" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7ff5-538a-f5b7-e4f">
+        <profile name="Discomfiting Stench" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7ff5-538a-f5b7-e4f">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to this unit’s control score while each model in this unit is contesting an objective you control.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy **^^Wizard^^** or **^^Priest^^** within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice.
+• If the target is a **^^Wizard^^** and the roll exceeds the target&apos;s power level, until the start of your next turn, each time a casting roll for the target includes 2 or more rolls of 1, 2 or more rolls of 2 or 2 or more rolls of 3, the spell is miscast.
+• If the target is a **^^Priest^^** and the roll exceeds the target&apos;s power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink name="WARD (5+)" hidden="false" id="305a-71c5-de3d-14a0" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="1437-9320-5816-1d05" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="93f1-bf38-355e-15ed" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="CHAMPION" hidden="false" id="6d47-5b19-a01-742" targetId="f679-3bcb-d664-9ac3" primary="false"/>
@@ -748,6 +778,7 @@
         <categoryLink name="ROTBRINGERS" hidden="false" id="6365-cf14-cb87-70a1" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="STANDARD BEARER (1/5)" hidden="false" id="34b1-bde4-42af-438a" targetId="73c-8e22-9dde-f97" primary="false"/>
         <categoryLink name="MUSICIAN (1/5)" hidden="false" id="e10c-c464-f584-ddcd" targetId="dd6f-27e9-b16e-24ee" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="66a1-d327-cc19-92ce" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="203-74f0-dad-ad49" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -765,14 +796,14 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab9b-f399-6adc-83fe"/>
               </constraints>
               <profiles>
-                <profile name="Blighted Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="390b-69af-84a5-dbf2">
+                <profile name="Pox-blighted Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="390b-69af-84a5-dbf2">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Priest^^** (+1 Rend), Anti-**^^Wizard^^** (+1 Rend)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -851,25 +882,25 @@
         </profile>
         <profile name="Endless Swarm" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="76de-92b8-f0da-704a">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (3)** this unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if it has been destroyed.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up a replacement unit wholly within 6&quot; of a friendly **Feculent Gnarlmaw** and more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink name="INFANTRY" hidden="false" id="e89d-9b32-af59-f575" targetId="75d6-6995-dfcc-3898" primary="true"/>
         <categoryLink name="WARD (5+)" hidden="false" id="d3da-c2b4-ed6d-eb4c" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="5cb8-4332-c9ce-932a" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="fc69-e943-91f0-6125" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="DAEMON" hidden="false" id="5fc3-9fed-47a8-2bcd" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="BEAST" hidden="false" id="562b-f4eb-0186-0822" targetId="b224-8c8e-ca93-9860" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="9d3c-9574-ea6-89e4" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -919,6 +950,9 @@
           </rules>
         </selectionEntry>
       </selectionEntries>
+      <infoLinks>
+        <infoLink name="Beast" id="1995-fd71-8d5d-233a" hidden="false" type="profile" targetId="8e01-c681-8a44-8f44"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Pusgoyle Blightlords" hidden="false" id="fef0-a956-3083-4cf3" publicationId="9c71-86cb-e1d0-ec8d">
       <profiles>
@@ -933,7 +967,7 @@
         <profile name="Relentless Attackers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f605-733a-b0d1-87b5">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit’s **Flyrider’s Arsenal** for attacks that target units contesting an objective you do not control.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit’s **Flyrider’s Arsenal** for attacks that target enemy units contesting an objective.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -954,12 +988,12 @@
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink name="WARD (5+)" hidden="false" id="1776-803a-c6c8-b809" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="7ec7-9d50-e0d1-aff7" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="46d2-5977-178f-b0e8" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="5bd4-6214-b802-70ee" targetId="926c-df8c-6841-d49e" primary="true"/>
         <categoryLink name="FLY" hidden="false" id="d063-8d00-bc43-5961" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="baeb-fda6-677-8a3d" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="3bff-58a9-4e93-31ef" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="59ea-bb77-6cf4-6dbc" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1068,7 +1102,7 @@
         <profile name="Mountain of Loathsome Flesh" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2507-a15e-756a-428d">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, roll a dice. On a 3+, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, roll a dice. On a 3+, pick an enemy unit within 1&quot; of it to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -1082,7 +1116,7 @@
         <profile name="Bringer of Plenty" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c4ca-1f85-2f0a-d219">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for friendly **^^Maggotkin of Nurgle^^** units while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -1094,10 +1128,8 @@
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick each **^^Diseased^^** enemy unit on the battlefield and each friendly **^^Maggotkin of Nurgle^^** unit in combat with any **^^Diseased^^** enemy units to be the targets. Then, make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a D3 for each target On a 2+:
-• If the target is an enemy unit, inflict an amount of mortal damage on the target equal to the roll.
-• If the target is a friendly unit, **Heal (X)** the target, where **X** is an amount equal to the roll.</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick each enemy unit within 18&quot; of this unit to be the enemy targets, then pick each friendly **^^Maggotkin of Nurgle^^** unit within 18&quot; of this unit to be the friendly targets. Then, make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 1 mortal damage on each enemy target and **Heal (1)** each friendly target. Then, until the start of your next turn, while they are within 18&quot; of this unit, enemy units cannot use or be picked to be the target of any abilities that heal or return slain models to a unit.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -1146,30 +1178,12 @@
               <profiles>
                 <profile name="Fanged Maws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="368c-3019-9d61-e99d">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Host of Nurglings" hidden="false" id="db64-40cb-5fc4-b77">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a2e-242f-f6cc-9f60"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7476-7d92-8297-a1c5"/>
-              </constraints>
-              <profiles>
-                <profile name="Host of Nurglings" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a4d8-9c8b-1031-1507">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound), Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1251,9 +1265,9 @@
         <categoryLink name="UNIQUE" hidden="false" id="5aca-b59d-4371-b9c3" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="81d-959d-7a97-8c51" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="634-8025-f997-32ed" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="c155-1cdf-51f5-4f72" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="8496-99db-690f-4ad3" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="4fd4-93d1-4c7a-569b" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="6a06-8413-cf61-e14d" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Gutrot Spume" hidden="false" id="f5e2-2b72-f4bb-a7a4">
@@ -1271,7 +1285,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Anti-Hero (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-Hero (+1 Rend), Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1300,7 +1314,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7595-2783-c489-4ea3">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Tripletongue’s Claws and Maw** is 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Tripletongue’s Claws** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -1333,8 +1347,10 @@
         <profile name="Tide of Nurglings" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d621-1c2a-97a3-270e">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Nurglings** unit within this unit’s combat range to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, the target’s melee weapons have **Crit (Mortal)** for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up tp 2 friendly **Nurglings** unit wholly within 12&quot; of this unit’s to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 2+:
+• If the target is not in combat, it can move a number of inches equal to the roll but cannot end that move in combat.
+• If the target is in combat, it can make a pile-in move.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1347,9 +1363,9 @@
         <profile name="Lord of Nurglings" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a9b6-ff51-8ca0-cb78">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While any friendly **Nurglings** units are wholly within 12&quot; of this unit:
-• Ignore the first damage point that would be allocated to each of those units each phase.
-• Add 3 to those units’ control scores</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While afriendly **Nurglings** units is wholly within 12&quot; of this unit:
+• Ignore the first damage point that would be allocated to that **Nurglings* unit each phase.
+• That **Nurglings** unit can ignore the effect of the &apos;Beast&apos; ability.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -1364,8 +1380,8 @@
         <categoryLink name="CHAOS" hidden="false" id="3de2-a26-1fa1-8452" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="2701-8c3d-b6b8-daa1" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="MONSTER" hidden="false" id="2529-227f-63f3-ae91" targetId="6d54-625c-d063-13e2" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="57fb-d564-2595-cc7" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="1afc-45ea-651e-cc2a" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="fb63-3cda-9778-487c" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Morbidex Twiceborn" hidden="false" id="586e-ae3f-7908-9d6b">
@@ -1407,13 +1423,13 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Tripletongue’s Claws and Maw" hidden="false" id="939-a628-e00-f11c">
+            <selectionEntry type="upgrade" import="true" name="Tripletongue’s Claws" hidden="false" id="939-a628-e00-f11c">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="444-7d56-6a0b-c1aa"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f851-b9dc-94d1-e29d"/>
               </constraints>
               <profiles>
-                <profile name="Tripletongue’s Claws and Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6233-c2a6-405c-29ea">
+                <profile name="Tripletongue’s Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6233-c2a6-405c-29ea">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -1449,7 +1465,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="af6d-d533-ed12-742d">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Bilespurter&apos;s Claws and Maw** is 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Bilespurter&apos;s Claws** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -1468,16 +1484,14 @@
         <profile name="Daemon Flies" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="576f-cfd2-8ae-b640">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit within 7&quot; of this unit to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 4+:
-• Inflict 1 mortal damage on the target.
-• Subtract 1 from hit rolls for the target’s combat attacks for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Monster^^** in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target&apos;s melee weapons for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1485,13 +1499,14 @@
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, each time a friendly ability is used that resulted in any damage points being allocated to the target, roll a dice. On a 4+, allocate 1 additional damage point to the target (ward rolls cannot be made for that damage point).</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly unit wholly within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, other than the **Companion** ability, weapon abilities for attacks that target that friendly unit have no effect.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2"/>
           </characteristics>
           <attributes>
-            <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
-            <attribute typeId="da27-8d61-f955-5031" name="Parent Node">Offensive</attribute>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Defensive</attribute>
+            <attribute name="Type" typeId="da27-8d61-f955-5031"/>
           </attributes>
         </profile>
       </profiles>
@@ -1501,9 +1516,9 @@
         <categoryLink name="CHAOS" hidden="false" id="6cb-980-ebc-e51f" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="1747-71c4-881b-14b9" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="MONSTER" hidden="false" id="997c-b0a1-af06-192" targetId="6d54-625c-d063-13e2" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="d933-231e-2b9-e8c" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="7074-7437-aaf6-7e06" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="772c-1820-13cb-fc24" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="046a-4525-a7ca-f63f" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Bloab Rotspawned" hidden="false" id="f40a-e06c-77b3-5f92">
@@ -1551,7 +1566,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6222-e9ee-49f1-ea49"/>
               </constraints>
               <profiles>
-                <profile name="Bilespurter’s Claws and Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f184-dc22-ce28-dc09">
+                <profile name="Bilespurter’s Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f184-dc22-ce28-dc09">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -1593,7 +1608,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Fight^^** ability for this unit</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **Plaguebearers** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target’s attacks for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **Plaguebearers** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target&apos;s melee weapons for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1616,13 +1631,13 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Poxbringer, Herald of Nurgle" hidden="false" id="6279-7e3d-25a4-f212">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Balesword" hidden="false" id="a490-1dd0-e5f-154e">
+            <selectionEntry type="upgrade" import="true" name="Corrupted Balesword" hidden="false" id="a490-1dd0-e5f-154e">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75dc-9bc8-9e66-7b78"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="912c-c26f-363a-ed27"/>
               </constraints>
               <profiles>
-                <profile name="Balesword" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ed3e-4b2c-7395-415d">
+                <profile name="Corrupted Balesword" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ed3e-4b2c-7395-415d">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -1658,7 +1673,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5a68-280b-b2a5-53aa">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Whippermaw&apos;s Claws and Maw** is 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Whippermaw&apos;s Claws** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -1691,7 +1706,7 @@
         <profile name="Acid Ichor" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5cee-b370-b704-f43a">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the Fight ability has been resolved.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -1706,8 +1721,8 @@
         <categoryLink name="CHAOS" hidden="false" id="4ff0-32a3-82e8-a19f" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="13ab-e75-66cb-3b03" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="MONSTER" hidden="false" id="909b-3e-19a8-6241" targetId="6d54-625c-d063-13e2" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="9973-56f7-8381-3923" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="dc95-9514-d7fa-663" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="2230-48b3-7c9b-ab0e" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Orghotts Daemonspew" hidden="false" id="f0a6-d0d7-3ef8-3099">
@@ -1718,7 +1733,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce28-1c1b-aa4a-8841"/>
               </constraints>
               <profiles>
-                <profile name="Tripletongue’s Slabrous Tongues" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="fbcb-776b-90d7-430">
+                <profile name="Whippermaw&apos;s Grasping Tongue" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="fbcb-776b-90d7-430">
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">7&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
@@ -1749,13 +1764,13 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Whippermaw&apos;s Claws and Maw" hidden="false" id="c8e0-cfa7-acb9-5772">
+            <selectionEntry type="upgrade" import="true" name="Whippermaw&apos;s Claws" hidden="false" id="c8e0-cfa7-acb9-5772">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="707-7be-f5ec-811a"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="964b-4985-6db-d17c"/>
               </constraints>
               <profiles>
-                <profile name="Whippermaw&apos;s Claws and Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d4e4-fab7-163f-fa38">
+                <profile name="Whippermaw&apos;s Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d4e4-fab7-163f-fa38">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -1810,12 +1825,12 @@
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="74a2-b1f3-689d-bbc0" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="e439-131c-32c7-caf0" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="3203-6f78-6aee-14d8" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="5ab-ac0d-d2b9-8b33" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="d8e1-fc81-c258-476d" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="2fbc-d37e-4b53-f9b1" targetId="75d6-6995-dfcc-3898" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="26f9-9546-340e-f768" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="98d3-9637-632c-d969" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Rotbringer Sorcerer" hidden="false" id="36b6-320c-7e7c-16db">
@@ -1868,7 +1883,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick this unit and up to 2 friendly **Pusgoyle Blightlords** units wholly within 12&quot; of this unit to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the Rend characteristic of the targets’ **Companion** melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the Rend characteristic of the targets’ **Rot Fly&apos;s Mouthparts and Sting** melee weapons for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1895,12 +1910,12 @@
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="99f0-595f-f244-c8dc" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="50d-d184-4dc9-7ed3" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="4561-26db-b002-4208" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="814e-9d1f-8193-66df" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="8e4a-4336-2cff-1527" targetId="926c-df8c-6841-d49e" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="ef97-3dc3-6d4e-f303" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="201d-185f-4895-3777" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="05f0-9b57-70d0-6629" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lord of Afflictions" hidden="false" id="e70b-293d-979b-b0ed">
@@ -1969,15 +1984,15 @@
         </profile>
         <profile name="Knell of Doom" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="58c7-6283-dae7-7900">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Enemy Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 enemy units within 24&quot; of this unit to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn, subtract 1&quot; from the Move characteristic of each target and subtract 1 from run rolls and charge rolls for each target.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. If the target is within 6&quot; of a friendly **Sloven Knights** unit, you can roll a D6 instead. If the roll equals or exceeds the target&apos;s Control characteristic, subtract 1 from wound rolls for the target&apos;s attacks until the start of your next turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1998,12 +2013,12 @@
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="e948-f526-ddae-bc58" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="6385-4f13-14ea-fc29" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="4b74-c55a-6674-c7e4" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="a13d-72eb-b142-c243" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="3bc1-42ea-1833-f3a5" targetId="926c-df8c-6841-d49e" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="6100-1abf-84da-dd13" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="PRIEST (1)" hidden="false" id="f28d-36c7-321a-b03e" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="b4cc-eb1a-fd56-993d" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Harbinger of Decay" hidden="false" id="e283-dac2-a856-4589">
@@ -2073,7 +2088,7 @@
         <profile name="Thrice-ripened Death&apos;s Heads" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="62e8-d90f-82bb-4f1e">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that charged this turn and is in combat with this unit to be the target.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that charged this turn and is in combat with this unit or with a friendly **Plague Drones** wholly within 12&quot; of this unit to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll D3. On 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -2084,25 +2099,28 @@
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Festering Bulwark" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="cd47-668b-9fe5-10e4">
+        <profile name="Festering Bulwark" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cd47-668b-9fe5-10e4">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The **Blighted Weapons** used by friendly **Putrid Blightkings** units have **Anti-charge (+1 Rend)** while those units are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and a friendly **Putrid Blightkings** unit within 3&quot; of this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, ignore negative modifiers to save rolls for the targets for the rest of the turn</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="6cdc-3385-3855-7ab6" targetId="6e72-1656-d554-528a" primary="true"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="d055-a393-5c18-2fdc" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="76bf-1b83-8a8-1efc" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="6320-4f7e-75a-6d0e" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="5c2d-af75-8fd9-c442" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="4c1d-60bb-a21-d89a" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="1ff1-9f7d-5270-d195" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lord of Blights" hidden="false" id="5c7a-6e61-42b6-3db0">
@@ -2216,7 +2234,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14be-4be4-b12-73dd"/>
               </constraints>
               <profiles>
-                <profile name="Rot Fly Limbs and Sting" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3613-aeec-b724-bada">
+                <profile name="Rot Fly&apos;s Mouthparts and Sting" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3613-aeec-b724-bada">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -2303,7 +2321,7 @@
         <profile name="Virulent Concoctions" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f050-577f-21fb-ef3d">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When using the ‘Blessed by the Plaguefather’ ability, if you choose to infect an enemy unit, you can pick an enemy unit that had any damage points allocated to it by this unit’s shooting attacks this turn to be the target even if that unit is not in combat with a friendly **^^Maggotkin of Nurgle^^** unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When picking an enemy unit to be the target of the &apos;infect&apos; effect of the &apos;Blessed by the Plaguefather&apos; ability, you can pick an enemy unit that had any damage points allocated to it by this unit&apos;s shooting attacks this turn to be the target, even if that unit is not within 7&quot; of any friendly **^^Maggotkin of Nurgle^^** units. You cannot pick a **^^Manifestation^^** or terrain feature.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
@@ -2313,12 +2331,12 @@
         </profile>
       </profiles>
       <categoryLinks>
-        <categoryLink name="WARD (5+)" hidden="false" id="d5f2-f5bb-e5cd-c936" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="a896-3ca1-715e-933c" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="a723-994c-c046-e40a" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="f7b0-a99a-dae7-c3cf" targetId="75d6-6995-dfcc-3898" primary="true"/>
         <categoryLink name="CHAMPION (1/10)" hidden="false" id="1325-b8f4-bc2e-1de5" targetId="3a1c-4c88-277c-ea0a" primary="false"/>
         <categoryLink name="ROTBRINGERS" hidden="false" id="39a3-fbe1-76e2-4a05" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="cb46-a83e-1866-10f8" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="f5c5-3a7c-c4-7788" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -2425,7 +2443,7 @@
         <profile name="Cloud of Flies" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="dcaa-ab9e-a697-68c8">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for shooting attacks that target this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for attacks that target this unit while it is contesting an objective you control.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -2550,18 +2568,41 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">-</characteristic>
           </characteristics>
         </profile>
-        <profile name="Riddled With Disease" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b317-f6d-70d1-8ea6">
+        <profile name="Rot-Blossom" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b317-f6d-70d1-8ea6">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit within 6&quot; of this terrain feature to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, the target has the **^^Diseased^^** keyword.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Rotbringers^^** units have **^^Ward (5+)^^** while they are wholly within 12&quot; of this terrain feature.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Tendrils of Corruption" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c4c1-e2d7-d20e-e01e">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the phase, this terrain feature has a Move characteristic of 3&quot; and can immediately move 3&quot;. It cannot move through or end that move within the combat ranges of enemy units and it cannot end that move on an objective or another terrain feature.
+**Designer&apos;s Note:** *This terrain feature cannot use* **^^Run^^***,* **^^Retreat^^** *or* **^^Charge^^** *abilities.*</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Riddled With Disease" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0c1d-0610-8d71-7842">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly **^^Maggotkin of Nurgle Daemon^^** unit wholly within 12&quot; Of this terrain feature uses the &apos;Rally&apos; command, you can make 1 additional rally roll of D6. If that unit is a non-**^^Hero^^** unit, you can make 3 additional rally rolls of D6 instead.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -3386,6 +3427,1029 @@ Then, inflict 1 mortal damage on each enemy unit within range of that ability.
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Shaman Foulhoof" hidden="false" id="e676-1e6d-0d6e-f9de" publicationId="9c71-86cb-e1d0-ec8d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4bfa-af9b-9c12-f3e5" includeChildSelections="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="5108-5f61-d915-af62" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Purulent Profusion" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="fe0a-8192-be57-e0ee">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Subtract 1 from the Rend characteristic of the target&apos;s melee weapons until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Parent Node" typeId="da27-8d61-f955-5031"/>
+            <attribute name="Type" typeId="da27-8d61-f955-5031">Defensive</attribute>
+          </attributes>
+        </profile>
+        <profile name="Shaman Foulhoof" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="b22b-8df3-3d27-58fe">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Rampant Defilement" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="77f1-6c99-a2f6-8d9f">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Pestigors** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to the Attacks characteristic of the target&apos;s melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="d67e-78ec-49c9-7661" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="0819-25ed-d194-5044" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="8471-a234-ee0b-aa83" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="7d0e-a3a3-067b-6fb9" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="90ae-37b1-cc36-be29" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="ROTBRINGERS" hidden="false" id="76cc-0f0b-c73f-ab96" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="a9cd-7127-f33b-85a6" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="574c-9950-1762-f2ae" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Shaman Foulhoof" hidden="false" id="52da-4bc9-e9f8-26ea">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rotstave" hidden="false" id="d8ac-9d22-9651-dcce">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51fc-fa9c-117a-9fd7"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97bf-9ac3-383d-e69e"/>
+              </constraints>
+              <profiles>
+                <profile name="Rotstave" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="20a0-04e2-6253-e13d">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a176-6269-71b9-44b8"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fdcd-fe93-ea18-221e"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="c2dd-ab3c-a6b7-b0b6" hidden="true">
+              <description>40mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Festus the Leechlord" hidden="false" id="3226-6035-594a-b682" publicationId="9c71-86cb-e1d0-ec8d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a0cd-e3c6-026e-9aae" includeChildSelections="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="9f49-8377-84af-236c" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="dfcb-be8b-6baf-8d54">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Gathoblyt&apos;s Fanged Maw** is 3.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Damage</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Festus the Leechlord" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d15e-3c73-be84-66c7">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">14</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vile Poisons and Debilitating Toxins" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="70b2-9f11-c002-3a95">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit did not charge this turn, pick an enemy unit in combat with it to be the target. You cannot pick a **^^Manifestation^^** or terrain feature.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You and your opponent must roll off. Add this unit&apos;s Control characteristic to your roll and the target&apos;s Control characteristic to your opponent&apos;s roll. If your roll is higher, apply the corresponding effect:
+• If the target is a **^^Hero^^** or **^^Monster^^**, inflict an amount of mortal damage on the target equal to the difference between your roll and your opponent&apos;s roll.
+• If the target is a non-**^^Hero^^** non-**^^Monster^^** unit, 1 model in the target unit is slain.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Annelid Engorgement" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d9a3-fed2-4082-1def">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">For each enemy unit that was in combat with this unit this turn and was destroyed this turn, this unit gains D3 **leech points** for the rest of the battle. Add 1 to this unit&apos;s Control characteristic for each **leech point** it has.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="The Leechlord&apos;s Curse" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="8249-26ab-f1d2-4fac">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">This unit gains 1 **leech point**. Until the start of your next turn, each time the target uses a **^^Core^^** ability or command, after that ability has been resolved, roll a dice. On a 3+, inflict 1 mortal damage on the target. Then, if any damage points were allocated to the target by this ability, **Heal (1)** this unit.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
+            <attribute typeId="da27-8d61-f955-5031" name="Parent Node">Special</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="69be-0eaf-7f33-63d6" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="aaef-2db4-6d70-b1cf" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="885c-cacf-ef2a-62ca" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="3d2d-c2c2-c580-45e4" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="DAEMON" hidden="false" id="015e-e478-28cc-d700" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="MONSTER" hidden="false" id="a163-d7fb-273c-3d49" targetId="6d54-625c-d063-13e2" primary="false"/>
+        <categoryLink name="WIZARD (2)" hidden="false" id="a1af-48b5-72d1-1575" targetId="8179-697a-9f4c-91d4" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="b8e1-6902-8c12-f7c8" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Festus the Leechlord" hidden="false" id="8e18-4f65-476a-8181">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gnarled Plague Staff" hidden="false" id="aedd-99d7-4870-9c29">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="383a-2f03-99cd-01e9"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d091-0980-cb35-f82b"/>
+              </constraints>
+              <profiles>
+                <profile name="Gnarled Plague Staff" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f058-3552-d0c2-2810">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gathoblyt&apos;s Fanged Maw" hidden="false" id="1004-8b6b-e205-aafd">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81a8-8916-5c55-d286"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="28eb-5cac-115d-d8c2"/>
+              </constraints>
+              <profiles>
+                <profile name="Gathoblyt&apos;s Fanged Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="670a-3acd-ab44-5584">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5e79-46bf-6582-2740"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fc4f-0944-16fa-7f7c"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="c1cf-7382-9014-2b7b" hidden="true">
+              <description/>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gelgus Pust, the Prince of Sores" hidden="false" id="5fef-f075-9e25-ee6a" publicationId="9c71-86cb-e1d0-ec8d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0012-d513-da9e-2e33" includeChildSelections="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="a12c-7e44-d28e-d590" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Grin of the Grandfather" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2c64-0b69-a998-05b4">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit in combat with this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. If the roll equals or exceeds the target&apos;s Control characteristic, pick 1 of the following to apply for the rest of the turn:
+• Subtract 1 from hit rolls for the target&apos;s combat attacks.
+• Subtract 1 from wound rolls for the target&apos;s combat attacks.
+• Subtract 1 from the target&apos;s Control characteristic.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Gelgus Pust, the Prince of Sores" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="bf30-faeb-e19a-6785">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">8</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Parasitic Infestation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="384f-9982-27fa-b17b">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit that charged this turn and is in combat with this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Polluting Aura" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4fb3-d88c-6100-61ae">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly **^^Maggotkin of Nurgle^^** unit is wholly within 6&quot; of a **^^Polluted^^** terrain feature, each time that unit uses or is the target of an ability that would heal 1 or more damage points, add 1 to the number of damage points healed.
+While an enemy unit is within 6&quot; of a **^^Polluted^^** terrain feature, each time that unit uses or is the target of an ability that would heal 1 or more damage points, subtract 1 from the number of damage points healed, to a minimum of 0.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Master Contaminator" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4371-1994-3a10-553a">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 6&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target has the **^^Polluted^^** keyword for the rest of the battle.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="e601-218e-8a01-6838" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="2c08-8179-20a1-d9d9" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="953c-d789-0dd0-30c4" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="32c8-1e78-606e-f48f" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="DAEMON" hidden="false" id="cc96-f68f-4412-69be" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="4116-f16b-ff14-c88d" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="936a-17b7-96f0-98bb" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="c4bc-dfc0-1211-d424" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Gelgus Pust, the Prince of Sores" hidden="false" id="ab96-174d-6d88-6ca9">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Malady and Contagion" hidden="false" id="b4ae-172f-e5c3-ccac">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49a3-f5d9-bba8-c874"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6649-358f-90be-6824"/>
+              </constraints>
+              <profiles>
+                <profile name="Malady and Contagion" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="eee7-a9f5-3b51-3f6e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">7</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="7bac-b1a1-ff82-c2a4"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6899-0e6a-e9b6-1272"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="cc05-66af-5a23-830e" hidden="true">
+              <description>50mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Cankerborn" hidden="false" id="d82c-ba5b-b703-0ab7" publicationId="9c71-86cb-e1d0-ec8d">
+      <profiles>
+        <profile name="Cankerborn" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="4bbe-7272-507e-4a71">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Utter Defilement" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3cd1-743b-840f-e3a7">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit&apos;s **Pestilent Pollutants** are tokens. This unit has 2 **Pestilent Pollutants**. Pick an objective or terrain feature within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Place 2 of this unit&apos;s **Pestilent Pollutants** next to the target. If both of this unit&apos;s **Pestilent Pollutants** are already on the battlefield, pick 1 of them, remove it from the battlefield and place it next to the target instead.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="From the Tainted Earth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="db42-b099-38fd-0d85">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again more than 9&quot; from all enemy units and wholly within 3&quot; of:
+• An objective or terrain feature that has a friendly **Pestilent Pollutant**, or
+• A **^^Polluted^^** terrain feature (see Gelgus Pust&apos;s &apos;Master Contaminator&apos; ability), or
+• An objective you control</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Entropy Endures" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3b04-d902-db70-f233">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit has 2 models and would be automatically destroyed, it is not automatically destroyed. Instead, 1 model in this unit is slain.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CHAOS" hidden="false" id="7b72-1600-08f1-fdc9" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="8d05-377e-1d72-4a7e" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="9719-93ce-a5c9-67df" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="DAEMON" hidden="false" id="faf7-9406-72ba-aee6" targetId="dc0b-e417-51f4-10f0" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="936c-8919-68c5-a723" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+        <categoryLink name="UNIQUE" hidden="false" id="0221-1a90-054e-7e42" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="a9d2-53ea-793a-6333" targetId="6e72-1656-d554-528a" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="d79a-0d21-92cc-47f9" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Cankerborn" hidden="false" id="4f14-0682-fd86-bd91" defaultAmount="2">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="7077-be9e-a7cf-101a"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b3bc-ae03-aa8e-fa15"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Blightblades" hidden="false" id="e5c9-4645-b26a-4d6d">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ff1-c6e5-3e09-cb92"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14d3-a324-6eed-c3e0"/>
+              </constraints>
+              <profiles>
+                <profile name="Blightblades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f3e4-5622-bc2f-7db8">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="cf95-0d93-cf2c-9500" hidden="true">
+              <description>40mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Pestigors" hidden="false" id="63e1-62af-0f98-29f4" publicationId="9c71-86cb-e1d0-ec8d">
+      <profiles>
+        <profile name="Pestigors" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="9272-3512-2b28-e481">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bestial Desecration" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5265-c888-9a95-4fcf">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit&apos;s melee weapons while it is not within enemy territory.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CHAOS" hidden="false" id="464d-26b7-0052-28a4" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="76e2-6320-14d6-6939" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="a6d0-ca3b-7ece-4f8e" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="b156-2950-73ed-69c6" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="STANDARD BEARER (1/10)" hidden="false" id="10eb-2e03-06e3-9921" targetId="1f17-ad98-ada0-ccf" primary="false"/>
+        <categoryLink name="MUSICIAN (1/10)" hidden="false" id="dfa2-4ef0-c94e-cb6f" targetId="eeed-ef77-b0d-fa9d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="6362-24c7-f338-83d5" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="ROTBRINGERS" hidden="false" id="6996-3f7a-f296-cf1a" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="f7d1-e83d-b291-da7e" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Pestigor" hidden="false" id="f048-3602-a851-30e7" defaultAmount="1,1,1,7">
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="6ac8-6ed5-6762-1f2a"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="38b4-0ee0-8feb-8ba2"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Corroded Weapons" hidden="false" id="d824-73d0-eeb5-6bfa">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="48c3-1cb1-ad2f-08c1"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7af8-e7df-5be6-cce9"/>
+              </constraints>
+              <profiles>
+                <profile name="Corroded Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2eee-7211-db7a-a810">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="10" field="6ac8-6ed5-6762-1f2a">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="63e1-62af-0f98-29f4" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="38b4-0ee0-8feb-8ba2">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="63e1-62af-0f98-29f4" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="48b6-1dfa-346e-22cc" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="292e-a5a6-0da7-e592" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="9e55-1070-6f2f-d421" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="63e1-62af-0f98-29f4" shared="true" id="5b8c-7e52-ab79-ed1f" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5f5-5521-eef7-21ac"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="5b8c-7e52-ab79-ed1f">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="63e1-62af-0f98-29f4" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Musician" hidden="false" id="f815-a754-3710-cd1d" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0,0">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="350d-4205-187a-3c28">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="63e1-62af-0f98-29f4" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="63e1-62af-0f98-29f4" shared="true" id="350d-4205-187a-3c28" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c394-47af-58ae-3b26"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Champion" hidden="false" id="f25f-e56f-1707-20d9" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="63e1-62af-0f98-29f4" shared="true" id="18b4-973a-2915-caf7" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5f9-13c3-1e4a-c20f"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="cfd8-2cd3-28aa-5076" hidden="true">
+              <description>32mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sloven Knights" hidden="false" id="16b5-3022-8c0f-976e" publicationId="9c71-86cb-e1d0-ec8d">
+      <profiles>
+        <profile name="Sloven Knights" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="a0c9-167b-b6ce-f263">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">4</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pall of Exhaustion" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7d79-7386-38c7-c7d8">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if the target is in combat with any other friendly **^^Rotbringers^^** units. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CHAOS" hidden="false" id="eaec-2584-77a4-17ee" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="d67b-a19f-5dcf-6f57" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="afed-f15b-c851-fcf9" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="ROTBRINGERS" hidden="false" id="213d-545d-096a-c068" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="7c8a-90a8-2cb3-d016" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="CAVALRY" hidden="false" id="9dd3-2c3b-6b65-7479" targetId="926c-df8c-6841-d49e" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="b55e-8ec0-bb6f-1ef3" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Sloven Knight" hidden="false" id="40a6-066c-b28a-86bf" defaultAmount="1,4">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ae34-0f74-4756-6d9f"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="d375-ff7f-7a72-d5ac"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Entropic Bludgeons" hidden="false" id="bbfd-d378-ac93-c044">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5948-edab-4f6b-039a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bcfd-85f6-04c5-3b6c"/>
+              </constraints>
+              <profiles>
+                <profile name="Entropic Bludgeons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9ce2-3651-0d5f-b02e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Foetid Nag&apos;s Hooves" hidden="false" id="e39c-f2a4-918b-506f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="679c-c810-102d-f881"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8ce-21e1-0be5-1925"/>
+              </constraints>
+              <profiles>
+                <profile name="Foetid Nag&apos;s Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f794-a5a5-5330-a32b">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="5" field="ae34-0f74-4756-6d9f">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="16b5-3022-8c0f-976e" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="5" field="d375-ff7f-7a72-d5ac">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="16b5-3022-8c0f-976e" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="44a7-9f0a-d196-48d4" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="973f-8823-b0e2-154e" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="93a4-9feb-221c-6d70" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="16b5-3022-8c0f-976e" shared="true" id="7964-62e3-bb69-4bc5" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0fa-8e00-af94-2b5d"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="4310-6a09-0753-d715" hidden="true">
+              <description>75x42mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Pox-Wretches" hidden="false" id="27c3-be21-f827-610f" publicationId="9c71-86cb-e1d0-ec8d">
+      <profiles>
+        <profile name="Pox-Wretches" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="12f8-4ffd-9ecb-8772">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mire Kelpies" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8443-bb86-7d52-b424">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s **Mire Kelpies** are tokens. There are 6 **Mire Kelpies** for every 14 models in this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Black</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Contagious Catarrh" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4249-80b3-770b-17f7">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit has any **Mire Kelpies**, pick an enemy unit in combat with this unit to be the target. You cannot pick a **^^Manifestation^^** or terrain feature.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick any number of this unit&apos;s **Mire Kelpies** and remove them from the battlefield. Then, roll a dice, adding 1 to the roll for each **Mire Kelpie** you removed this phase. On an unmodified roll of 1, this ability has no effect. On a 6+, the target has the **^^Diseased^^** keyword.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CHAOS" hidden="false" id="ca42-3965-11b9-c230" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="002e-d168-17fc-9598" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="69e2-49fb-ccab-29cc" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="c94d-7a61-7ae7-6408" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="6abb-ebe6-ed3e-e57b" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="ROTBRINGERS" hidden="false" id="e40f-4012-ee45-dbde" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="52bb-8074-b3c1-ca6c" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Pox-Wretch" hidden="false" id="1d9e-9ddb-da31-789c" defaultAmount="1,13">
+          <constraints>
+            <constraint type="min" value="14" field="selections" scope="parent" shared="true" id="aace-8cb5-e0fb-df40"/>
+            <constraint type="max" value="14" field="selections" scope="parent" shared="true" id="84b2-a84f-7411-c6f8"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Decaying Weapons" hidden="false" id="6df6-526a-4ab7-427a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf52-8d3f-493b-4a31"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb02-0e29-de1c-1344"/>
+              </constraints>
+              <profiles>
+                <profile name="Decaying Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="336b-17e1-51ff-26e8">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="14" field="aace-8cb5-e0fb-df40">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="27c3-be21-f827-610f" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="14" field="84b2-a84f-7411-c6f8">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="27c3-be21-f827-610f" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="7647-22dd-7930-9911" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afd9-d5bc-cf45-1cda" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="7f12-66c4-7ca2-8dac" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="27c3-be21-f827-610f" shared="true" id="2b79-6c36-d3bf-c739" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c06f-ffa1-697e-66ed"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="2b79-6c36-d3bf-c739">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="27c3-be21-f827-610f" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Musician" hidden="false" id="4df9-f61c-0950-0bd9" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0,0">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="bd90-3b2d-0ab3-fbe8">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="27c3-be21-f827-610f" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="27c3-be21-f827-610f" shared="true" id="bd90-3b2d-0ab3-fbe8" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f62b-7885-8ce9-e859"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Champion" hidden="false" id="415f-a428-9ffa-35f9" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="27c3-be21-f827-610f" shared="true" id="373c-23a7-9746-6db3" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c0f-8d95-7521-587a"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="affc-aa94-35cb-077a" hidden="true">
+              <description>32mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Belga the Cystwitch" hidden="false" id="ac24-667b-4672-4e78" publicationId="9c71-86cb-e1d0-ec8d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7047-d341-4eab-09d7" includeChildSelections="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="219c-c89c-986d-b630" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Ruptured Cysts" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="c6f6-fd80-0b88-1517">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible **^^Diseased^^** enemy unit within 18&quot; of this unit to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Inflict D3 mortal damage on the target. Then, inflict 1 mortal damage on each other **^^Diseased^^** enemy unit within 3&quot; of the target. If the chanting roll is 9+, you can also pick a friendly **Plaguebearers** unit within 12&quot; of the target. For each enemy **^^Infantry^^** model slain by this ability this turn, you can return 1 slain model to that friendly unit.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Special</attribute>
+            <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
+          </attributes>
+        </profile>
+        <profile name="Belga the Cystwitch" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="99db-5bca-e01d-8a89">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scry the Filth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="294b-89a4-c70d-57b3">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects to apply for the rest of the turn:
+• Add 1 to casting rolls for friendly **^^Maggotkin of Nurgle Wizards^^** while they are within 3&quot; of this unit.
+• Add 1 to chanting rolls for friendly **^^Maggotkin of Nurgle Priests^^** while they are within 3&quot; of this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="1dc3-cc7f-95e9-99f2" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="6484-18f3-3807-65e1" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="637e-8d4c-7a89-628c" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="f040-7376-1bd7-1469" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="70b0-6cc1-da83-cc92" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="PRIEST (1)" hidden="false" id="4790-3c40-67ce-40ca" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
+        <categoryLink name="ROTBRINGERS" hidden="false" id="72bd-fbfd-b657-2b13" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="40fc-6575-aa60-ab84" targetId="70a4-383f-421f-52cd" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Belga the Cystwitch" hidden="false" id="3dca-edd0-82e1-9fbb">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Thrice-tainted Staff" hidden="false" id="b4e2-336f-351e-eea5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24f9-1806-7ea0-ccf1"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14ca-bcec-a8a8-dc4b"/>
+              </constraints>
+              <profiles>
+                <profile name="Thrice-tainted Staff" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9dc0-aed3-6263-0a96">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="22f4-1a69-85a9-967e"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3453-68f6-52b1-e23f"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="f009-7742-54e2-d6ef" hidden="true">
+              <description>40mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Rotswords" hidden="false" id="17cc-0dd4-0154-7db5" publicationId="9c71-86cb-e1d0-ec8d">
+      <profiles>
+        <profile name="Rotswords" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="dcbe-f9fe-9cf8-f6d9">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sweat-Soaked and Reeking" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="61ea-7852-450e-c9ab">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that charged this turn and is in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="CHAOS" hidden="false" id="3c3b-4c97-9ba7-9e52" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="MAGGOTKIN OF NURGLE" hidden="false" id="4649-2bf6-eacd-5e95" targetId="ca3c-6c3b-4887-3a9d" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="cc2b-2bb8-7d40-1be2" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="de5c-96f0-9bfd-fb8f" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="STANDARD BEARER (1/10)" hidden="false" id="9629-3818-cbd6-53c9" targetId="1f17-ad98-ada0-ccf" primary="false"/>
+        <categoryLink name="MUSICIAN (1/10)" hidden="false" id="b657-fe55-fdf5-9cf7" targetId="eeed-ef77-b0d-fa9d" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="dd90-6294-c7d7-6cbe" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="ROTBRINGERS" hidden="false" id="096e-cce6-8430-f123" targetId="b665-bb9e-c89c-ad7d" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="f51c-cf73-eafd-11aa" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Rotsword" hidden="false" id="02e3-299b-2964-b7cd" defaultAmount="1,1,1,7">
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="37c3-c206-2ca7-911c"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="f257-6ec3-9202-1254"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ruined Master-crafted Weapons" hidden="false" id="5e83-1baa-28c3-5385">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="59d2-3494-545b-b838"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef1e-2223-6799-59db"/>
+              </constraints>
+              <profiles>
+                <profile name="Ruined Master-crafted Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a318-f935-19c9-0eb0">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="10" field="37c3-c206-2ca7-911c">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="17cc-0dd4-0154-7db5" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="f257-6ec3-9202-1254">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="17cc-0dd4-0154-7db5" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="9f26-1ded-3e6f-acca" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cae6-f824-45f8-9e76" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="5ecb-06d8-4d0b-b2ae" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="17cc-0dd4-0154-7db5" shared="true" id="ed7f-ee14-a9ae-9312" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5dc5-d444-6934-249f"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="ed7f-ee14-a9ae-9312">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="17cc-0dd4-0154-7db5" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Musician" hidden="false" id="ed71-053e-8f63-22b8" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0,0">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="ba6f-c1dc-73fa-a5b4">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="17cc-0dd4-0154-7db5" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="17cc-0dd4-0154-7db5" shared="true" id="ba6f-c1dc-73fa-a5b4" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb95-51ae-764e-4e85"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Champion" hidden="false" id="236b-fde7-fd5a-35fd" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="17cc-0dd4-0154-7db5" shared="true" id="4966-c30e-3320-cf28" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ec4-68f3-4282-ad7b"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="d974-da49-f8f9-7378" hidden="true">
+              <description>32mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>
