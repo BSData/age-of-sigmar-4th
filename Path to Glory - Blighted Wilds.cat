@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -826,7 +826,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -972,7 +972,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1115,7 +1115,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1314,7 +1314,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1527,6 +1527,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <selectionEntry type="upgrade" import="true" name="Influential" hidden="false" id="5d63-34ff-ff2d-6deb" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1542,6 +1543,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <selectionEntry type="upgrade" import="true" name="Crit (Auto-wound)" hidden="false" id="9f07-7b66-543b-c594" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1551,17 +1553,25 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="dc03-d3dd-a818-d7f3" hidden="false" flatten="true">
+                <selectionEntryGroup id="dc03-d3dd-a818-d7f3" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b73-a09a-acee-19bd"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c73c-fb00-ddd5-6eff"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Crit (2 Hits)" hidden="false" id="b7fc-056f-b086-bd78" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1571,13 +1581,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="83b3-950e-084a-ce20" hidden="false" flatten="true">
+                <selectionEntryGroup id="83b3-950e-084a-ce20" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e06-42ab-2aba-6a5f"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f69-f932-b96a-7298"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brawny" hidden="false" id="6306-a933-e45d-83c1" sortIndex="8">
               <costs>
@@ -1591,13 +1608,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="1e05-92a7-7649-eab0" hidden="false" flatten="true">
+                <selectionEntryGroup id="1e05-92a7-7649-eab0" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b2b-ba28-3ef8-cc2f"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5bd-e6ea-afdf-a35f"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Skilled Warriors" hidden="false" id="e9ea-680b-a6fc-6abb" sortIndex="7">
               <costs>
@@ -1611,13 +1635,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="ca61-144c-c48d-b8c3" hidden="false" flatten="true">
+                <selectionEntryGroup id="ca61-144c-c48d-b8c3" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="742a-6101-205b-c01b"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="827f-a2f3-212a-b70b"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Ghyranite Long-range Weapon" hidden="false" id="6cfc-64cf-22bb-3d09" sortIndex="10">
               <costs>
@@ -1642,8 +1673,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </constraints>
               <rules>
                 <rule name="Ghyranite Long-range Weapon" id="1c93-230b-d605-d289" hidden="true">
-                  <description>Add the **Ghyranite Long-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.
-</description>
+                  <description>Add the **Ghyranite Long-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -1658,8 +1688,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </constraints>
               <rules>
                 <rule name="Ghyranite Close-range Weapon" id="59a5-05e7-2e16-5a2a" hidden="true">
-                  <description>Add the **Ghyranite Close-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.
-</description>
+                  <description>Add the **Ghyranite Close-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.</description>
                 </rule>
               </rules>
               <modifiers>
@@ -1678,6 +1707,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <selectionEntry type="upgrade" import="true" name="Fleet" hidden="false" id="4341-6d92-cf2f-40e3" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1702,13 +1732,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="1e3d-7f05-a4b4-97a0" hidden="false" flatten="true">
+                <selectionEntryGroup id="1e3d-7f05-a4b4-97a0" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aaa-5d27-4e91-42c0"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36f5-83a3-caa2-a3c1"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="2" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Swift Strikes" hidden="false" id="6a52-b674-55b9-9a9b" sortIndex="13">
               <costs>
@@ -1722,13 +1759,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="5caa-922c-0453-ed34" hidden="false" flatten="true">
+                <selectionEntryGroup id="5caa-922c-0453-ed34" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5911-da08-e69f-8a6e"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0107-a48a-d77a-ecb5"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="2" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Healthy Physique" hidden="false" id="c049-0b76-190f-4bd9" sortIndex="14">
               <costs>
@@ -1738,6 +1782,11 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </costs>
               <modifiers>
                 <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" scope="root-entry" affects="profiles.Unit"/>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Healthy Physique" id="8dd6-2d80-5112-65be" hidden="true">
@@ -1753,6 +1802,11 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </costs>
               <modifiers>
                 <modifier type="increment" value="1" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Armourers" id="2a68-9c0e-693f-12cc" hidden="true">
@@ -1772,13 +1826,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="04b6-f347-6e3c-f9a8" hidden="false" flatten="true">
+                <selectionEntryGroup id="04b6-f347-6e3c-f9a8" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2893-9b7a-586d-1435"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d3b7-b744-db7f-ae1d"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Charge (+1 Damage)" hidden="false" id="7bd4-c078-723b-39a8" sortIndex="17">
               <costs>
@@ -1792,13 +1853,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="8291-5b60-1e24-22f0" hidden="false" flatten="true">
+                <selectionEntryGroup id="8291-5b60-1e24-22f0" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0170-5c8c-b9c9-0bec"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5415-dc24-2b26-7423"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brutal Strikes" hidden="false" id="ba19-5940-8a80-0998" sortIndex="18">
               <costs>
@@ -1812,13 +1880,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="2e9a-71f7-640d-2842" hidden="false" flatten="true">
+                <selectionEntryGroup id="2e9a-71f7-640d-2842" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e5e-2315-bc35-61e9"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="278f-03a3-174f-5a70"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1826,10 +1901,29 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Importing From Older Campaign" hidden="false" id="7d4b-92ee-0e64-a903">
+    <selectionEntry type="upgrade" import="true" name="Importing From Older Campaign" hidden="true" id="7d4b-92ee-0e64-a903">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca28-0a34-01ab-89ff" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="27e5-1ee5-4bc3-35d8" targetId="676-2b78-7bbf-ba9c" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -2020,12 +2114,29 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Renowned Warrior" hidden="false" id="7e76-6385-4f86-3063" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
-                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="power" value="1" field="bc33-05f5-8d3f-af43">
+                      <conditionGroups>
+                        <conditionGroup type="add">
+                          <conditions>
+                            <condition type="always" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+                          </conditions>
+                          <localConditionGroups>
+                            <localConditionGroup type="atLeast" value="1" scope="root-entry" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="self" childId="7e76-6385-4f86-3063" shared="true"/>
+                                <condition type="before" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+                              </conditions>
+                            </localConditionGroup>
+                          </localConditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
                   <rules>
                     <rule name="Renowned Warrior" id="fb30-9b23-72ca-a466" hidden="true">
@@ -2036,6 +2147,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Back to Back" hidden="false" id="289d-3f2c-f21c-c298" sortIndex="13">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2067,6 +2179,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Aura of Immortality" hidden="false" id="2c58-205a-3c5b-facf" sortIndex="12">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2085,12 +2198,12 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Realm Wanderer" hidden="false" id="4227-0d10-96b6-dbe8" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="increment" value="1" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
-                    <modifier type="set" value="true" field="hidden"/>
                   </modifiers>
                   <rules>
                     <rule name="Realm Wanderer" id="dba4-4be3-200d-a3c8" hidden="true">
@@ -2101,6 +2214,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Sky-born" hidden="false" id="c240-c1c3-4043-3102" sortIndex="11">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2119,6 +2233,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Ironoak Armour" hidden="false" id="e53c-901f-b31a-43d1" sortIndex="10">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2134,12 +2249,12 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Imposing Presence" hidden="false" id="b624-4af7-f482-4828" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
-                    <modifier type="set" value="true" field="hidden"/>
                   </modifiers>
                   <rules>
                     <rule name="Imposing Presence" id="6463-f6a9-ada4-ceb6" hidden="true">
@@ -2150,6 +2265,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Razor-sharp Weapon" hidden="false" id="c646-37cc-9651-2c98" sortIndex="9">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2365,6 +2481,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Expert Fighter" hidden="false" id="6387-43d0-1728-6aea" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2574,6 +2691,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Powerful Strikes" hidden="false" id="59d6-12c1-39f0-33a6" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2783,6 +2901,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Specialist Training" hidden="false" id="4210-8cf2-5df3-0ff7" sortIndex="8">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2952,6 +3071,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Muscular Physique" hidden="false" id="43d0-6a68-acdc-a5e0" sortIndex="6">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -3161,6 +3281,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Local Knowledge" hidden="false" id="dfe7-4f5a-817d-c858" sortIndex="7">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -3189,6 +3310,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Ghyranite Ranged Weapon" hidden="false" id="404f-4613-668d-16b5" sortIndex="14">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -3211,6 +3333,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Ghyranite Heavy Ranged Weapon" hidden="false" id="e2b2-bdeb-3d73-7de7" sortIndex="15">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -4769,7 +4892,8 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
