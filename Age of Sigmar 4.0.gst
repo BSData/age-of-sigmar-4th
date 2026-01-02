@@ -9423,8 +9423,15 @@
         <categoryLink name="Order of Battle" hidden="false" id="04dc-7d9c-2f78-04db" targetId="8e18-320c-b5bb-7cc6"/>
         <categoryLink name="FACTION TERRAIN" hidden="false" id="5518-0038-5ba1-0c92" targetId="cdd6-ffa1-9b32-4cb8">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ec72-5566-3382-839d"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6e0b-47e7-46a5-5a22"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="6e0b-47e7-46a5-5a22">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="37d3-9d2b-13ba-a002" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
       <modifiers>
@@ -10764,7 +10771,7 @@
         <categoryLink name="Reference" hidden="false" id="c7f8-cc78-40aa-9cdd" targetId="3360-1158-e879-9606"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="false">
+    <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7983-5dfc-a31c-1833"/>
         <constraint type="max" value="3" field="selections" scope="self" shared="true" id="cba7-7e7f-754a-08ee"/>
