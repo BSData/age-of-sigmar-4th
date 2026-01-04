@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="48" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="49" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Nagash, Supreme Lord of the Undead" hidden="false" id="fb77-fec9-42ed-a7fd">
       <categoryLinks>
@@ -3728,6 +3728,15 @@ Cover, Impassable**</description>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45c0-e09a-bc81-ce2d" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="append" value="Crit (Auto-wound)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b49b-2188-71bf-7fba" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
                 </profile>
               </profiles>
@@ -4007,7 +4016,7 @@ Cover, Impassable**</description>
                   </profiles>
                   <rules>
                     <rule name="Knight of Shrouds" id="e1c7-4f27-ab74-5def" hidden="true">
-                      <description>Your hero&apos;s **Malignant Weapon** has an Attacks characteristics of 5 and **Crit (Auto-wound)**. In addition, your hero gains the &apos;Stolen Hours&apos; ability and the following regiment options:
+                      <description>Your hero&apos;s **Malignant Blade** has an Attacks characteristics of 5 and **Crit (Auto-wound)**. In addition, your hero gains the &apos;Stolen Hours&apos; ability and the following regiment options:
 Any **^^Nighthaunt^^** units</description>
                     </rule>
                   </rules>
@@ -4193,6 +4202,10 @@ In addition, make the following changes to your hero&apos;s warscroll:
                           </profiles>
                         </selectionEntry>
                       </selectionEntries>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb68-25e0-a407-3c11-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb68-25e0-a407-3c11-max"/>
+                      </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <rules>

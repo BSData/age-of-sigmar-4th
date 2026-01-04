@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="74" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="75" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -219,7 +219,7 @@
     </categoryEntry>
     <categoryEntry name="MUSICIAN (1/4)" id="fe9c-1d27-a698-5f31" hidden="false"/>
     <categoryEntry name="FLESH-EATER COURTS" id="8d10-dc24-7ece-50df" hidden="false"/>
-    <categoryEntry name="ABHORRENT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
+    <categoryEntry name="ABHORRANT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
     <categoryEntry name="NOBLE" id="887c-f52e-a855-53ec" hidden="false"/>
     <categoryEntry name="MUSICIAN (1/3)" id="6cae-9aa2-6245-ab11" hidden="false"/>
     <categoryEntry name="STANDARD BEARER (1/3)" id="9072-b48-3dd7-2cbc" hidden="false"/>
