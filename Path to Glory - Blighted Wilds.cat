@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -2411,6 +2411,13 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a80f-8c81-6613-e51b"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ca6e-1326-008c-1208" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Upgrades" id="cd43-8915-d828-bb58" hidden="false" sortIndex="3">
               <selectionEntries>
@@ -3743,6 +3750,25 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                   </modifiers>
                 </profile>
               </profiles>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="1" field="9edb-39b9-3f95-e2a9"/>
+                    <modifier type="set" value="1" field="4a65-2c64-db1c-cd7c"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5aec-6c71-28d6-0fdd" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2ff2-7267-fb22-384b" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c73b-6d84-14c8-ff75" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ca6e-1326-008c-1208" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Ghyranite Monstrosity&apos;s Claws" hidden="true" id="13c3-8674-d692-57c8">
               <profiles>
