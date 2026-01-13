@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="73" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="76" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -11,7 +11,7 @@
     <costType name="Force Category - GHB" id="de92-2099-fbf7-a156" defaultCostLimit="-1" hidden="true"/>
   </costTypes>
   <profileTypes>
-    <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4" kind="weapon">
+    <profileType name="Melee Weapon" hidden="false" id="9074-76b6-9e2f-81e3" sortIndex="4">
       <characteristicTypes>
         <characteristicType id="60e-35aa-31ed-e488" name="Atk"/>
         <characteristicType id="26dc-168-b2fd-cb93" name="Hit"/>
@@ -21,7 +21,7 @@
         <characteristicType id="eda3-7332-5db1-4159" name="Ability"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ranged Weapon" hidden="false" id="1fd-a42f-41d3-fe05" sortIndex="3" kind="weapon">
+    <profileType name="Ranged Weapon" hidden="false" id="1fd-a42f-41d3-fe05" sortIndex="3">
       <characteristicTypes>
         <characteristicType id="c6b5-908c-a604-1a98" name="Rng"/>
         <characteristicType id="aa17-4296-2887-e05d" name="Atk"/>
@@ -32,7 +32,7 @@
         <characteristicType id="d793-3dd7-9c13-741e" name="Ability"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5" kind="ability">
+    <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5">
       <characteristicTypes>
         <characteristicType id="b977-7c5e-33b2-428e" name="Keywords"/>
         <characteristicType id="fd7f-888d-3257-a12b" name="Effect"/>
@@ -43,7 +43,7 @@
         <attributeType name="Parent Node" id="e2e1-15ca-d345-22b8"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8" kind="ability">
+    <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8">
       <characteristicTypes>
         <characteristicType id="de6f-d57b-248a-83be" name="Timing"/>
         <characteristicType id="9fc7-b0f6-d018-a608" name="Casting Value"/>
@@ -57,7 +57,7 @@
         <attributeType name="Type" id="da27-8d61-f955-5031"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9" kind="ability">
+    <profileType name="Ability (Prayer)" hidden="false" id="5946-234-d7b4-6195" sortIndex="9">
       <characteristicTypes>
         <characteristicType id="76bf-8126-64d4-c709" name="Timing"/>
         <characteristicType id="f192-6780-8138-9cef" name="Chanting Value"/>
@@ -71,7 +71,7 @@
         <attributeType name="Parent Node" id="5d25-63d6-3935-9312"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7" kind="ability">
+    <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7">
       <characteristicTypes>
         <characteristicType id="736-6e3a-d0b5-a1b0" name="Timing"/>
         <characteristicType id="a49e-3082-e2a6-e802" name="Cost"/>
@@ -85,7 +85,7 @@
         <attributeType name="Parent Node" id="df75-e7dc-12b5-48a8"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6" kind="ability">
+    <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6">
       <characteristicTypes>
         <characteristicType id="652c-3d84-4e7-14f4" name="Timing"/>
         <characteristicType id="bad3-f9c5-ba46-18cb" name="Declare"/>
@@ -99,7 +99,7 @@
         <attributeType name="Parent Node" id="2d74-4dcd-8468-87fa"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2" kind="model">
+    <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2">
       <characteristicTypes>
         <characteristicType id="fed0-d1b3-1bb8-c501" name="Move"/>
         <characteristicType id="96be-54ae-ce7b-10b7" name="Health"/>
@@ -107,7 +107,7 @@
         <characteristicType id="6c6f-8510-9ce1-fc6e" name="Control"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40" sortIndex="1" kind="model">
+    <profileType name="Manifestation" hidden="false" id="1287-3a-9799-7e40" sortIndex="1">
       <characteristicTypes>
         <characteristicType name="Move" hidden="false" id="c28a-6000-2a0b-e7cf"/>
         <characteristicType name="Health" hidden="false" id="d1b9-3068-515-131e"/>
@@ -118,7 +118,7 @@
         <attributeType name="Base Size" id="50db-066e-a3e7-696f"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10" kind="rule">
+    <profileType name="Battle Tactic Card" id="abf8-a239-9e66-54c1" hidden="false" sortIndex="10">
       <characteristicTypes>
         <characteristicType name="Card" id="67f1-ce6d-1cf4-a4df"/>
         <characteristicType name="Affray" id="1047-3e43-674d-dc6c"/>
@@ -126,7 +126,7 @@
         <characteristicType name="Domination" id="e1d7-1d3c-f001-62e0"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ability (Blood Tithe)" hidden="false" id="5453-37d7-6d37-db1b" sortIndex="11" kind="ability">
+    <profileType name="Ability (Blood Tithe)" hidden="false" id="5453-37d7-6d37-db1b" sortIndex="11">
       <characteristicTypes>
         <characteristicType id="13a2-dcf4-38ba-ff59" name="Timing"/>
         <characteristicType id="85a7-1eff-2a27-7d21" name="Declare"/>
@@ -219,7 +219,7 @@
     </categoryEntry>
     <categoryEntry name="MUSICIAN (1/4)" id="fe9c-1d27-a698-5f31" hidden="false"/>
     <categoryEntry name="FLESH-EATER COURTS" id="8d10-dc24-7ece-50df" hidden="false"/>
-    <categoryEntry name="ABHORRENT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
+    <categoryEntry name="ABHORRANT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
     <categoryEntry name="NOBLE" id="887c-f52e-a855-53ec" hidden="false"/>
     <categoryEntry name="MUSICIAN (1/3)" id="6cae-9aa2-6245-ab11" hidden="false"/>
     <categoryEntry name="STANDARD BEARER (1/3)" id="9072-b48-3dd7-2cbc" hidden="false"/>
@@ -9549,8 +9549,15 @@
         <categoryLink name="Order of Battle" hidden="false" id="04dc-7d9c-2f78-04db" targetId="8e18-320c-b5bb-7cc6"/>
         <categoryLink name="FACTION TERRAIN" hidden="false" id="5518-0038-5ba1-0c92" targetId="cdd6-ffa1-9b32-4cb8">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ec72-5566-3382-839d"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6e0b-47e7-46a5-5a22"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="6e0b-47e7-46a5-5a22">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="37d3-9d2b-13ba-a002" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
       <modifiers>
@@ -10914,9 +10921,10 @@
         <categoryLink name="Reference" hidden="false" id="c7f8-cc78-40aa-9cdd" targetId="3360-1158-e879-9606"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="false">
+    <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7983-5dfc-a31c-1833"/>
+        <constraint type="max" value="3" field="selections" scope="self" shared="true" id="cba7-7e7f-754a-08ee"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -11966,10 +11974,13 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="50db-066e-a3e7-696f" name="Base Size"/>
           </attributes>
         </profile>
-        <profile name="Phantasmal Translocation" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="425b-721a-d7a1-26d4">
+        <profile name="Phantasmal Translocation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="425b-721a-d7a1-26d4">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a part of this **Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part and more than 3&quot; from all enemy units.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a part of this **^^Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part and more than 3&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -12490,9 +12501,14 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <selectionEntry type="upgrade" import="true" name="Renown" hidden="true" id="e7d5-5062-46d5-38dd">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -13022,6 +13038,30 @@ You complete this battle tactic at the end of your turn if there are no enemy un
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Glory Points" hidden="true" id="d519-2ff7-aa43-80c7" defaultAmount="1">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9440-acc3-da2b-1365"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Glory Points" hidden="false" id="6fa0-dd32-a985-f381"/>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Order of Battle" hidden="false" id="596a-e8f5-e9b6-baff" targetId="8e18-320c-b5bb-7cc6" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>

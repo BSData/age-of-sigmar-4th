@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -56,6 +56,23 @@
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="094c-964a-5c48-fbc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Elite" id="5f4b-9fc6-b0d5-bef4" hidden="false" sortIndex="2">
@@ -71,9 +88,9 @@
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
-                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
-                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -103,6 +120,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ecf3-2a08-aca5-0f30"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Mighty" id="1d5c-5af6-7453-6c53" hidden="false" sortIndex="3">
               <selectionEntries>
@@ -132,7 +168,7 @@
                     <profile name="Shield of Thorns" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0f0d-de68-d7d8-958c">
                       <characteristics>
                         <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that charged this turn and is in combat with this unit to be the target,</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that charged this turn and is in combat with this unit to be the target.</characteristic>
                         <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Attacks characteristic of the target&apos;s melee weapons for the rest of the turn.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -152,6 +188,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc6e-70fb-7c8d-e086"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Legendary" id="2074-6bad-2f2a-474c" hidden="false" sortIndex="4">
               <selectionEntries>
@@ -190,9 +245,9 @@
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
-                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Shooting</attribute>
-                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -204,6 +259,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b7d-72bc-8426-6373"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
@@ -262,6 +336,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d19b-c915-d5a7-55ba"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Elite" id="1a42-a541-f261-3871" hidden="false" sortIndex="2">
               <selectionEntries>
@@ -308,6 +401,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e46-9657-3fca-aa37"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Mighty" id="f429-baae-dcf0-bcf2" hidden="false" sortIndex="3">
               <selectionEntries>
@@ -315,7 +427,7 @@
                   <profiles>
                     <profile name="An Offering in Kind" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="95cf-5367-efde-360f">
                       <characteristics>
-                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4"/>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
                         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                         <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If an enemy unit was destroyed this turn by this unit&apos;s combat attacks, **Heal (5)** this unit. If that enemy unit was a **^^Hero^^**, **Heal (X)** this unit, where **X** is the number of damage points allocated to this unit.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -357,6 +469,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43ca-6441-ac98-9ed6"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Legendary" id="a9b2-a8c3-76d6-5f11" hidden="false" sortIndex="4">
               <selectionEntries>
@@ -406,6 +537,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f25-7ea0-32b4-c73b"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
@@ -444,10 +594,13 @@
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Defensive Thicket" hidden="false" id="692b-66f1-39f5-f634">
                   <profiles>
-                    <profile name="Defensive Thicket" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3643-873d-989f-0c08">
+                    <profile name="Defensive Thicket" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3643-873d-989f-0c08">
                       <characteristics>
-                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit did not charge this turn, roll a dice. On a 3+, for the rest of the turn, subtract 1 from wound rolls for combat attacks that target this unit.</characteristic>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit did not charge this turn, roll a dice. On a 3+, for the rest of the turn, subtract 1 from wound rolls for combat attacks that target this unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
@@ -469,6 +622,23 @@
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="094c-964a-5c48-fbc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
@@ -520,6 +690,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a95-d9fe-9116-b91c"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Mighty" id="430d-57b5-6777-4a59" hidden="false" sortIndex="3">
               <selectionEntries>
@@ -566,6 +755,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d892-424a-50bd-5977"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Legendary" id="c3e5-b6e2-0ba5-cb56" hidden="false" sortIndex="4">
               <selectionEntries>
@@ -612,12 +820,31 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="981e-0807-1e92-bdde"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -666,6 +893,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd3a-f48d-9558-e971"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Elite" id="620d-019d-252c-26b9" hidden="false" sortIndex="2">
               <selectionEntries>
@@ -709,6 +955,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc63-07ed-c260-01da"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Mighty" id="48fb-0de6-f818-44d0" hidden="false" sortIndex="3">
               <selectionEntries>
@@ -741,8 +1006,8 @@
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is destroyed, before removing it from play, inflict D6 damage on each enemy unit in combat with it.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
-                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -755,6 +1020,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b78-7bc8-cae2-c7dc"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Legendary" id="ec39-2478-2fb7-b69c" hidden="false" sortIndex="4">
               <selectionEntries>
@@ -804,6 +1088,25 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="760a-17ce-9b47-297f"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <modifiers>
@@ -826,7 +1129,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -972,7 +1275,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1115,7 +1418,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1314,7 +1617,7 @@
             <conditionGroup type="or">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01b1-5112-ab45-1afc" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1527,6 +1830,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <selectionEntry type="upgrade" import="true" name="Influential" hidden="false" id="5d63-34ff-ff2d-6deb" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1542,6 +1846,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <selectionEntry type="upgrade" import="true" name="Crit (Auto-wound)" hidden="false" id="9f07-7b66-543b-c594" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1551,17 +1856,25 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="dc03-d3dd-a818-d7f3" hidden="false" flatten="true">
+                <selectionEntryGroup id="dc03-d3dd-a818-d7f3" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b73-a09a-acee-19bd"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c73c-fb00-ddd5-6eff"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Crit (2 Hits)" hidden="false" id="b7fc-056f-b086-bd78" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1571,13 +1884,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="83b3-950e-084a-ce20" hidden="false" flatten="true">
+                <selectionEntryGroup id="83b3-950e-084a-ce20" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e06-42ab-2aba-6a5f"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f69-f932-b96a-7298"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brawny" hidden="false" id="6306-a933-e45d-83c1" sortIndex="8">
               <costs>
@@ -1591,13 +1911,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="1e05-92a7-7649-eab0" hidden="false" flatten="true">
+                <selectionEntryGroup id="1e05-92a7-7649-eab0" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b2b-ba28-3ef8-cc2f"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5bd-e6ea-afdf-a35f"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Skilled Warriors" hidden="false" id="e9ea-680b-a6fc-6abb" sortIndex="7">
               <costs>
@@ -1611,13 +1938,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="ca61-144c-c48d-b8c3" hidden="false" flatten="true">
+                <selectionEntryGroup id="ca61-144c-c48d-b8c3" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="742a-6101-205b-c01b"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="827f-a2f3-212a-b70b"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Ghyranite Long-range Weapon" hidden="false" id="6cfc-64cf-22bb-3d09" sortIndex="10">
               <costs>
@@ -1642,8 +1976,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </constraints>
               <rules>
                 <rule name="Ghyranite Long-range Weapon" id="1c93-230b-d605-d289" hidden="true">
-                  <description>Add the **Ghyranite Long-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.
-</description>
+                  <description>Add the **Ghyranite Long-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -1658,8 +1991,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </constraints>
               <rules>
                 <rule name="Ghyranite Close-range Weapon" id="59a5-05e7-2e16-5a2a" hidden="true">
-                  <description>Add the **Ghyranite Close-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.
-</description>
+                  <description>Add the **Ghyranite Close-range Weapon** to a unit&apos;s warscroll. You cannot pick this upgrade for a unit that already has a ranged weapon.</description>
                 </rule>
               </rules>
               <modifiers>
@@ -1678,6 +2010,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <selectionEntry type="upgrade" import="true" name="Fleet" hidden="false" id="4341-6d92-cf2f-40e3" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
               </costs>
@@ -1702,13 +2035,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="1e3d-7f05-a4b4-97a0" hidden="false" flatten="true">
+                <selectionEntryGroup id="1e3d-7f05-a4b4-97a0" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aaa-5d27-4e91-42c0"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36f5-83a3-caa2-a3c1"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="2" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Swift Strikes" hidden="false" id="6a52-b674-55b9-9a9b" sortIndex="13">
               <costs>
@@ -1722,13 +2062,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="5caa-922c-0453-ed34" hidden="false" flatten="true">
+                <selectionEntryGroup id="5caa-922c-0453-ed34" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5911-da08-e69f-8a6e"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0107-a48a-d77a-ecb5"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="2" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Healthy Physique" hidden="false" id="c049-0b76-190f-4bd9" sortIndex="14">
               <costs>
@@ -1738,6 +2085,11 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </costs>
               <modifiers>
                 <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" scope="root-entry" affects="profiles.Unit"/>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Healthy Physique" id="8dd6-2d80-5112-65be" hidden="true">
@@ -1753,6 +2105,11 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </costs>
               <modifiers>
                 <modifier type="increment" value="1" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Armourers" id="2a68-9c0e-693f-12cc" hidden="true">
@@ -1772,13 +2129,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="04b6-f347-6e3c-f9a8" hidden="false" flatten="true">
+                <selectionEntryGroup id="04b6-f347-6e3c-f9a8" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2893-9b7a-586d-1435"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d3b7-b744-db7f-ae1d"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Charge (+1 Damage)" hidden="false" id="7bd4-c078-723b-39a8" sortIndex="17">
               <costs>
@@ -1792,13 +2156,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="8291-5b60-1e24-22f0" hidden="false" flatten="true">
+                <selectionEntryGroup id="8291-5b60-1e24-22f0" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0170-5c8c-b9c9-0bec"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5415-dc24-2b26-7423"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brutal Strikes" hidden="false" id="ba19-5940-8a80-0998" sortIndex="18">
               <costs>
@@ -1812,13 +2183,20 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 </rule>
               </rules>
               <selectionEntryGroups>
-                <selectionEntryGroup name="" id="2e9a-71f7-640d-2842" hidden="false" flatten="true">
+                <selectionEntryGroup id="2e9a-71f7-640d-2842" hidden="false" flatten="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e5e-2315-bc35-61e9"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="278f-03a3-174f-5a70"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="3" field="bc33-05f5-8d3f-af43">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1826,10 +2204,29 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Importing From Older Campaign" hidden="false" id="7d4b-92ee-0e64-a903">
+    <selectionEntry type="upgrade" import="true" name="Importing From Older Campaign" hidden="true" id="7d4b-92ee-0e64-a903">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca28-0a34-01ab-89ff" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="27e5-1ee5-4bc3-35d8" targetId="676-2b78-7bbf-ba9c" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -2020,12 +2417,29 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Renowned Warrior" hidden="false" id="7e76-6385-4f86-3063" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="increment" value="1" field="6c6f-8510-9ce1-fc6e" affects="profiles.Unit" scope="root-entry"/>
-                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="power" value="1" field="bc33-05f5-8d3f-af43">
+                      <conditionGroups>
+                        <conditionGroup type="add">
+                          <conditions>
+                            <condition type="always" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+                          </conditions>
+                          <localConditionGroups>
+                            <localConditionGroup type="atLeast" value="1" scope="root-entry" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                              <conditions>
+                                <condition type="instanceOf" value="1" field="selections" scope="self" childId="7e76-6385-4f86-3063" shared="true"/>
+                                <condition type="before" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+                              </conditions>
+                            </localConditionGroup>
+                          </localConditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
                   <rules>
                     <rule name="Renowned Warrior" id="fb30-9b23-72ca-a466" hidden="true">
@@ -2036,6 +2450,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Back to Back" hidden="false" id="289d-3f2c-f21c-c298" sortIndex="13">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2067,6 +2482,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Aura of Immortality" hidden="false" id="2c58-205a-3c5b-facf" sortIndex="12">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2085,12 +2501,12 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Realm Wanderer" hidden="false" id="4227-0d10-96b6-dbe8" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="increment" value="1" field="fed0-d1b3-1bb8-c501" affects="profiles.Unit" scope="root-entry"/>
-                    <modifier type="set" value="true" field="hidden"/>
                   </modifiers>
                   <rules>
                     <rule name="Realm Wanderer" id="dba4-4be3-200d-a3c8" hidden="true">
@@ -2101,6 +2517,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Sky-born" hidden="false" id="c240-c1c3-4043-3102" sortIndex="11">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2119,6 +2536,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Ironoak Armour" hidden="false" id="e53c-901f-b31a-43d1" sortIndex="10">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2134,12 +2552,12 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Imposing Presence" hidden="false" id="b624-4af7-f482-4828" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="increment" value="1" field="96be-54ae-ce7b-10b7" affects="profiles.Unit" scope="root-entry"/>
-                    <modifier type="set" value="true" field="hidden"/>
                   </modifiers>
                   <rules>
                     <rule name="Imposing Presence" id="6463-f6a9-ada4-ceb6" hidden="true">
@@ -2150,6 +2568,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Razor-sharp Weapon" hidden="false" id="c646-37cc-9651-2c98" sortIndex="9">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2365,6 +2784,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Expert Fighter" hidden="false" id="6387-43d0-1728-6aea" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2574,6 +2994,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Powerful Strikes" hidden="false" id="59d6-12c1-39f0-33a6" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2783,6 +3204,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Specialist Training" hidden="false" id="4210-8cf2-5df3-0ff7" sortIndex="8">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -2952,6 +3374,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Muscular Physique" hidden="false" id="43d0-6a68-acdc-a5e0" sortIndex="6">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -3161,6 +3584,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Local Knowledge" hidden="false" id="dfe7-4f5a-817d-c858" sortIndex="7">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-1"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -3189,6 +3613,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Ghyranite Ranged Weapon" hidden="false" id="404f-4613-668d-16b5" sortIndex="14">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -3211,6 +3636,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Ghyranite Heavy Ranged Weapon" hidden="false" id="e2b2-bdeb-3d73-7de7" sortIndex="15">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-4"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -4769,7 +5195,8 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5255,7 +5682,9 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
                 <selectionEntry type="upgrade" import="true" name="Hidden Within" hidden="false" id="3b40-76e1-84eb-38fe" sortIndex="12">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-6"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-8"/>
+                    <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                    <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78ee-9f27-1a2e-93f3"/>
@@ -5280,7 +5709,7 @@ If the target is a **^^Hero^^**, **^^War Machine^^** or **^^Monster^^**, you mus
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="10f9-7116-6526-a969" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="10f9-7116-6526-a969" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -5460,7 +5889,7 @@ If the target is a **^^Hero^^**, **^^War Machine^^** or **^^Monster^^**, you mus
                     <profile name="Chained Magic" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="737f-a696-5158-c0b6">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this terrain feature has a Curator when it is destroyed, after setting up the Curator on the battlefield, set up a friendly **^^Manifestation^^** that can be summoned using a **^^Summon^^** spell from your Arcane Tome on the battlefield within 3&quot; of this unit and not in combat. That unit has summoned that ^^Manifestation^^**. If there is already a friendly **^^Manifestation^^** of the same type on the battlefield, it is immediately banished and then set up as described above.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this terrain feature has a Curator when it is destroyed, after setting up the Curator on the battlefield, set up a friendly **^^Manifestation^^** that can be summoned using a **^^Summon^^** spell from your Arcane Tome on the battlefield within 3&quot; of this unit and not in combat. That unit has summoned that **^^Manifestation^^**. If there is already a friendly **^^Manifestation^^** of the same type on the battlefield, it is immediately banished and then set up as described above.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>

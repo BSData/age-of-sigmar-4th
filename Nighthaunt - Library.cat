@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="44" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="4ac4-565f-a06e-893" name="Nighthaunt - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="50" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Nagash, Supreme Lord of the Undead" hidden="false" id="fb77-fec9-42ed-a7fd">
       <categoryLinks>
@@ -3263,7 +3263,7 @@ While a unit is **condemned**:
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3ac8-4191-29ed-257f"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Black Coach (Scourge of Ghyran)" hidden="false" id="e4c1-f020-bd21-780a">
+    <selectionEntry type="unit" import="true" name="Black Coach (Scourge of Ghyran)" hidden="true" id="e4c1-f020-bd21-780a">
       <profiles>
         <profile name="Black Coach" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="b96a-b1be-69c5-6039">
           <characteristics>
@@ -3395,7 +3395,7 @@ While a unit is **condemned**:
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Kurdoss Valentian, the Craven King (Scourge of Ghyran)" hidden="false" id="4bd5-32fb-6e98-2357">
+    <selectionEntry type="unit" import="true" name="Kurdoss Valentian, the Craven King (Scourge of Ghyran)" hidden="true" id="4bd5-32fb-6e98-2357">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="7200-9b39-0b25-f93c" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
@@ -3690,6 +3690,7 @@ Cover, Impassable**</description>
                           <conditions>
                             <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="43dd-b3a5-a000-f03a" shared="true" includeChildSelections="true"/>
                             <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="338b-a270-eeed-71c2" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b49b-2188-71bf-7fba" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -3727,6 +3728,15 @@ Cover, Impassable**</description>
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45c0-e09a-bc81-ce2d" shared="true" includeChildSelections="true"/>
                       </conditions>
+                    </modifier>
+                    <modifier type="append" value="Crit (Auto-wound)" field="eda3-7332-5db1-4159" join=", ">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b49b-2188-71bf-7fba" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                 </profile>
@@ -4007,7 +4017,7 @@ Cover, Impassable**</description>
                   </profiles>
                   <rules>
                     <rule name="Knight of Shrouds" id="e1c7-4f27-ab74-5def" hidden="true">
-                      <description>Your hero&apos;s **Malignant Weapon has an Attacks characteristics of 5 and **Crit (Auto-wound)**. In addition, your hero gains the &apos;Stolen Hours&apos; ability and the following regiment options:
+                      <description>Your hero&apos;s **Malignant Blade** has an Attacks characteristics of 5 and **Crit (Auto-wound)**. In addition, your hero gains the &apos;Stolen Hours&apos; ability and the following regiment options:
 Any **^^Nighthaunt^^** units</description>
                     </rule>
                   </rules>
@@ -4068,7 +4078,7 @@ Any **^^Nighthaunt^^** units</description>
                   </costs>
                   <rules>
                     <rule name="Baleful Horror" id="7ffd-8ba5-ca10-db55" hidden="true">
-                      <description>Your hero gains the **Balefire-laced Scream** ability and the following regiment options:
+                      <description>Your hero gains the **Balefire-laced Scream** weapon and the following regiment options:
 Any **^^Nighthaunt^^** units</description>
                     </rule>
                   </rules>
@@ -4193,6 +4203,10 @@ In addition, make the following changes to your hero&apos;s warscroll:
                           </profiles>
                         </selectionEntry>
                       </selectionEntries>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb68-25e0-a407-3c11-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb68-25e0-a407-3c11-max"/>
+                      </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                   <rules>
@@ -4200,7 +4214,7 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <description>Pick the &apos;Fright Train&apos; or &apos;Chthonic Juggernaut&apos; ability to add to your hero&apos;s warscroll. 
 In addition, make the following changes to your hero&apos;s warscroll:
 • Change the Health characteristic to 7.
-• You can replace the **^^Infantry^^** keyword with the **^^Cavalry^^** keyword.</description>
+• You can replace the **^^Infantry^^** keyword with the **^^War Machine^^** keyword.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -4491,6 +4505,13 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <description>**^^War Machine^^** only. Your hero gains **Attendants&apos; Deadly Weapons**.</description>
                     </rule>
                   </rules>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="f7bc-b618-4b5d-2bae" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Unholy Knight" hidden="false" id="43dd-b3a5-a000-f03a" sortIndex="6">
                   <costs>
@@ -4637,6 +4658,13 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <description>Add 3 to the Attacks characteristic of your hero&apos;s **Balefire-laced Scream**</description>
                     </rule>
                   </rules>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="90aa-265f-93a3-0584" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Malicious Urges" hidden="false" id="885b-54c5-4950-57ab" sortIndex="8">
                   <costs>
@@ -4651,7 +4679,7 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <characteristics>
                         <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
                         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">‘For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3,</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
@@ -4849,7 +4877,7 @@ In addition, make the following changes to your hero&apos;s warscroll:
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Paths" id="7fe4-98b1-b164-c0d9" hidden="false" flatten="true" publicationId="8b1b-f2c7-890e-2bbe">
+    <selectionEntryGroup name="Paths" id="7fe4-98b1-b164-c0d9" hidden="false" publicationId="8b1b-f2c7-890e-2bbe" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Path of the Dark Judge" hidden="true" id="e13f-c774-e22a-5c2b" publicationId="67f7-aa7f-294f-880d">
           <selectionEntryGroups>
@@ -4906,9 +4934,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4964,9 +4999,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5025,9 +5067,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5086,9 +5135,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5162,9 +5218,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5223,9 +5286,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5281,9 +5351,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -5318,9 +5395,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>

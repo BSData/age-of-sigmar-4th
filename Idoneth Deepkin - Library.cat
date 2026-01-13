@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d6ed-ac84-d78f-73e6" name="Idoneth Deepkin - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d6ed-ac84-d78f-73e6" name="Idoneth Deepkin - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Lotann, Warden of the Soul Ledgers" hidden="false" id="50be-c90a-20c4-66ed" publicationId="9866-239b-07f0-d92b">
       <entryLinks>
@@ -3078,6 +3078,18 @@ No mortal damage is inflicted on friendly **^^Idoneth Deepkin^^** units by **^^
                   </modifiers>
                 </profile>
               </profiles>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="897f-c620-8169-6a8d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="false" field="hidden"/>
+                    <modifier type="set" value="1" field="ed8b-933f-acf6-331f"/>
+                    <modifier type="set" value="1" field="72a9-9a2b-5226-a9d7"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Razorshell Harpoon Launchers" hidden="true" id="2c85-91f6-3aff-5f6f" defaultAmount="0">
               <profiles>
@@ -3665,6 +3677,13 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <description>**^^Cavalry^^** only. Add the &apos;Mighty Biovoltaic Blast&apos; ability to your hero&apos;s warscroll.</description>
                     </rule>
                   </rules>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="926c-df8c-6841-d49e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Void Drummer" hidden="false" id="0f9b-d23d-d877-9add" sortIndex="5">
                   <costs>
@@ -3751,6 +3770,13 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   </rules>
                 </selectionEntry>
               </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="305c-b514-f3f0-f279" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Upgrades" id="b63b-9dfc-7890-0c44" hidden="false" sortIndex="8" collapsible="true">
               <selectionEntries>
@@ -3855,7 +3881,7 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   </selectionEntryGroups>
                   <rules>
                     <rule name="Focused Hunter" id="f99b-2526-99c0-6c6f" hidden="true">
-                      <description>Your hero&apos;s **Thalassic Weapon** has **Anti-X (+1 Rend)**, where **X** is 1 of the following keywords: **^^Infantry^^**, **~~Cavalry^^**, **^^Monster^^**, **^^War Machine^^**, **^^Wizard^^** or **^^Priest^^**.</description>
+                      <description>Your hero&apos;s **Thalassic Weapon** has **Anti-X (+1 Rend)**, where **X** is 1 of the following keywords: **^^Infantry^^**, **^^Cavalry^^**, **^^Monster^^**, **^^War Machine^^**, **^^Wizard^^** or **^^Priest^^**.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -4084,7 +4110,7 @@ The Wound characteristic of your hero&apos;s **Deep-sea Companion&apos;s Bite** 
                   </profiles>
                   <rules>
                     <rule name="Sea-beast Familiar" id="1ccc-926d-6979-95f6" hidden="true">
-                      <description>**Infantry^^** only. Add the &apos;Sea-beast Familiar&apos; and &apos;Deep-sea Aid&apos; abilities to your hero&apos;s warscroll.</description>
+                      <description>**^^Infantry^^** only. Add the &apos;Sea-beast Familiar&apos; and &apos;Deep-sea Aid&apos; abilities to your hero&apos;s warscroll.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -4227,9 +4253,16 @@ After resolving either effect, remove this unit&apos;s **Abyssal Cephalopod** fr
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4285,9 +4318,16 @@ After resolving either effect, remove this unit&apos;s **Abyssal Cephalopod** fr
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4343,9 +4383,16 @@ After resolving either effect, remove this unit&apos;s **Abyssal Cephalopod** fr
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4404,9 +4451,16 @@ After resolving either effect, remove this unit&apos;s **Abyssal Cephalopod** fr
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4483,8 +4537,13 @@ After resolving either effect, remove this unit&apos;s **Abyssal Cephalopod** fr
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4539,9 +4598,16 @@ If this unit is a reinforced unit or a **^^Monster^^**, subtract 1 from hit roll
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4594,9 +4660,16 @@ If this unit is a reinforced unit or a **^^Monster^^**, subtract 1 from hit roll
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -4649,9 +4722,16 @@ If this unit is a reinforced unit or a **^^Monster^^**, subtract 1 from hit roll
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="40" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="44" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Liberators" hidden="false" id="e914-877f-21fe-8db9" publicationId="43cd-e9ef-5d4d-87c4">
       <profiles>
@@ -11261,9 +11261,9 @@ In addition, make the following changes to your hero&apos;s warscroll:
                 </selectionEntry>
               </selectionEntries>
               <modifiers>
-                <modifier type="set" value="1" field="bdc8-1ed6-abb4-4f8a">
+                <modifier type="set" value="1" field="2604-d98f-d66c-4299">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="fc06-9da0-fb8c-285f" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="042f-73ed-a4ad-62aa" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -11558,6 +11558,11 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="889a-6c48-61e6-0de1" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7930-acda-c590-4f0b"/>
@@ -11595,6 +11600,11 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6ca2-2875-08ec-aa51" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6d54-625c-d063-13e2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c1b-84c8-1b51-0d24"/>
@@ -11627,6 +11637,13 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   </rules>
                 </selectionEntry>
               </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="dc1b-1164-9ed3-f792" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntryGroup>
             <selectionEntryGroup name="Upgrades" id="bff8-49a5-9cee-ba3f" hidden="false" sortIndex="7" collapsible="true">
               <selectionEntries>
@@ -11882,6 +11899,19 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <description>**^^Infantry^^** only. Your hero has the &apos;Loyal Companion&apos; ability.</description>
                     </rule>
                   </rules>
+                  <profiles>
+                    <profile name="Loyal Companion" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0ee7-095c-8869-ceed">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s **Loyal Companion** is a token. This unit has **^^Ward (5+)^^** while its **Loyal Companion** is on the battlefield. If you make an unmodified save roll of 1 for this unit, remove its **Loyal Companion** from the battlefield.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Blade Master" hidden="false" id="f8ed-d83a-25cb-eb1b" sortIndex="12">
                   <costs>
@@ -12163,8 +12193,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to wound rolls for this unit&apos;s attacks.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12181,8 +12211,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to this unit&apos;s Health characteristic.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12205,9 +12235,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12226,8 +12263,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12244,8 +12281,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s melee weapons have **Crit (Mortal)**.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12263,9 +12300,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12284,8 +12328,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12302,8 +12346,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)^^**</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12321,9 +12365,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12337,13 +12388,13 @@ In addition, make the following changes to your hero&apos;s warscroll:
                       <characteristics>
                         <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
                         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn/</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12363,8 +12414,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12382,9 +12433,16 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12430,8 +12488,8 @@ In addition, make the following changes to your hero&apos;s warscroll:
 Add 1 to hit rolls for combat attacks made by this unit that target an enemy unit that is contesting an objective.                        </characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12451,8 +12509,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12470,9 +12528,16 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12488,8 +12553,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. For each 4+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12506,8 +12571,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2&quot; to the Move characteristic of this unit.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12525,9 +12590,16 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12546,8 +12618,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12567,8 +12639,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
@@ -12586,9 +12658,16 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -12604,8 +12683,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to this unit&apos;s Health characteristic.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12622,8 +12701,8 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from the Rend characteristic of melee weapons used for attacks that target this unit.</characteristic>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color"/>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type"/>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
                         <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
@@ -12641,9 +12720,16 @@ Add 1 to hit rolls for combat attacks made by this unit that target an enemy uni
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
