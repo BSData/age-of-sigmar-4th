@@ -12520,7 +12520,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <description>If an attack made with this weapon scores a critical hit, that attack scores 2 hits on the target instead of 1. Make a wound roll for each hit.</description>
     </rule>
     <rule name="Companion" hidden="false" id="6eda-6036-78c5-2076">
-      <description>This weapon is not affected by friendly abilities that affect the Attacks characteristic or the attack sequence.</description>
+      <description>Unless otherwise specified, attacks made by this weapon are not affected by friendly abilities that modify hit rolls, wound rolls or weapon characteristics, except for those that apply negative modifiers (e.g. ‘Covering Fire’)</description>
     </rule>
     <rule name="Anti-X (+1 Rend)" hidden="false" id="5daf-bfb3-e495-dae6">
       <description>Add 1 to this weapon&apos;s Rend characteristic if the target has the keyword after &apos;Anti-&apos; or fulfils the condition after &apos;Anti-&apos;. Multiples of this ability are cumulative. For example, if a weapon has both Anti-charge (+1 Rend) and Anti-HERO (+1 Rend), then add 2 to the Rend characteristic of the weapon for attacks that target a HERO that charged in the same turn.</description>
