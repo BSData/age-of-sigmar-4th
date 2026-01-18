@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="55" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="77" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -40,6 +40,7 @@
       <attributeTypes>
         <attributeType name="Color" id="50fe-4f29-6bc3-dcc6"/>
         <attributeType name="Type" id="bf11-4e10-3ab1-06f4"/>
+        <attributeType name="Parent Node" id="e2e1-15ca-d345-22b8"/>
       </attributeTypes>
     </profileType>
     <profileType name="Ability (Spell)" hidden="false" id="7312-8367-c171-f2ef" sortIndex="8">
@@ -52,6 +53,7 @@
       </characteristicTypes>
       <attributeTypes>
         <attributeType name="Color" id="16b6-0911-f549-a4bd"/>
+        <attributeType name="Parent Node" id="da27-8d61-f955-5031"/>
         <attributeType name="Type" id="da27-8d61-f955-5031"/>
       </attributeTypes>
     </profileType>
@@ -66,6 +68,7 @@
       <attributeTypes>
         <attributeType name="Color" id="7564-4bf0-b34a-b143"/>
         <attributeType name="Type" id="c63c-196d-34a7-cec3"/>
+        <attributeType name="Parent Node" id="5d25-63d6-3935-9312"/>
       </attributeTypes>
     </profileType>
     <profileType name="Ability (Command)" hidden="false" id="55ac-f837-dded-5872" sortIndex="7">
@@ -79,6 +82,7 @@
       <attributeTypes>
         <attributeType name="Color" id="5c69-e4b9-19bc-e801"/>
         <attributeType name="Type" id="2bd5-08f1-f3d1-86f7"/>
+        <attributeType name="Parent Node" id="df75-e7dc-12b5-48a8"/>
       </attributeTypes>
     </profileType>
     <profileType name="Ability (Activated)" hidden="false" id="59b6-d47a-a68a-5dcc" sortIndex="6">
@@ -92,6 +96,7 @@
       <attributeTypes>
         <attributeType name="Color" id="5a11-eab3-180c-ddf5"/>
         <attributeType name="Type" id="6d16-c86b-2698-85a4"/>
+        <attributeType name="Parent Node" id="2d74-4dcd-8468-87fa"/>
       </attributeTypes>
     </profileType>
     <profileType name="Unit" hidden="false" id="ff03-376e-972f-8ab2" sortIndex="2">
@@ -134,6 +139,7 @@
       <attributeTypes>
         <attributeType name="Color" id="9019-1a17-dfdb-d171"/>
         <attributeType name="Type" id="ba97-56ed-9674-f836"/>
+        <attributeType name="Parent Node" id="540d-cdd1-5262-593f"/>
       </attributeTypes>
     </profileType>
   </profileTypes>
@@ -213,7 +219,7 @@
     </categoryEntry>
     <categoryEntry name="MUSICIAN (1/4)" id="fe9c-1d27-a698-5f31" hidden="false"/>
     <categoryEntry name="FLESH-EATER COURTS" id="8d10-dc24-7ece-50df" hidden="false"/>
-    <categoryEntry name="ABHORRENT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
+    <categoryEntry name="ABHORRANT" id="b59b-b9ff-5e6e-87b2" hidden="false"/>
     <categoryEntry name="NOBLE" id="887c-f52e-a855-53ec" hidden="false"/>
     <categoryEntry name="MUSICIAN (1/3)" id="6cae-9aa2-6245-ab11" hidden="false"/>
     <categoryEntry name="STANDARD BEARER (1/3)" id="9072-b48-3dd7-2cbc" hidden="false"/>
@@ -339,13 +345,17 @@
     </categoryEntry>
     <categoryEntry name="PLEDGED TO TZEENTCH" id="cd13-c472-ceff-5bd8" hidden="false"/>
     <categoryEntry name="PLEDGED TO KHORNE" id="8aac-5207-b454-5ecb" hidden="false"/>
-    <categoryEntry name="LEGION OF THE FIRST PRINCE" id="5942-b473-e229-37cd" hidden="false"/>
     <categoryEntry name="Enhancement Configuration" id="8fa2-f5fc-18d9-e5d0" hidden="true"/>
     <categoryEntry name="Order of Battle" id="8e18-320c-b5bb-7cc6" hidden="false"/>
     <categoryEntry name="Arcane Tome" id="707c-1c04-9af6-2307" hidden="true"/>
     <categoryEntry name="Regimental Option" id="db3a-7199-c92e-f3cf" hidden="true"/>
     <categoryEntry name="Regimental Hero" id="8f4b-1fa6-3128-8405" hidden="true"/>
     <categoryEntry name="AUTO-ENDRIN" id="6c83-ce3d-570e-e833" hidden="false"/>
+    <categoryEntry name="HELSMITHS OF HASHUT" id="905e-30fb-4d0f-4685" hidden="false"/>
+    <categoryEntry name="HOBGROT" id="9e60-0037-86f0-036d" hidden="false"/>
+    <categoryEntry name="AUTOMATON" id="acb5-f7cf-ee4f-1f00" hidden="false"/>
+    <categoryEntry name="STANDARD BEARER" id="8ae9-b42e-5611-f8f8" hidden="false"/>
+    <categoryEntry name="MUSICIAN" id="afd5-9600-b663-39a2" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
@@ -859,6 +869,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1279,6 +1319,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1339,6 +1409,11 @@
         <forceEntryLink name="The Horror of Hallow&apos;s Watch" id="7ee7-9154-7530-6835" hidden="false" targetId="efb1-eac2-1024-e0cb" type="forceEntry"/>
         <forceEntryLink name="The Scarlet Jury" id="1598-6aaf-540c-b761" hidden="false" targetId="bfa0-f3bb-5a25-48cd" type="forceEntry"/>
         <forceEntryLink name="Casket of Resurrections" id="35eb-48d9-a785-9004" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
+        <forceEntryLink name="Seeker of the Dread Dirge" id="fd77-5462-6906-2547" hidden="false" targetId="3ebb-d680-3249-76ed" type="forceEntry"/>
+        <forceEntryLink name="The Curse-Steel Battery" id="1258-4d93-17c0-37a4" hidden="false" targetId="1d6a-1d48-9173-d651" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="a9ac-52f9-996d-cf32" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
+        <forceEntryLink name="Diseased Revellers" id="4b0b-ed4d-c404-a472" hidden="false" targetId="c30e-bf48-fe89-8d48" type="forceEntry"/>
+        <forceEntryLink name="The Pustules" id="e066-b420-2934-709a" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
@@ -1852,6 +1927,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="eb68-ccf6-0b38-bdf6" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -2272,6 +2377,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -2332,9 +2467,14 @@
         <forceEntryLink name="The Scarlet Jury" id="6e0c-f239-7ccb-d3c3" hidden="false" targetId="bfa0-f3bb-5a25-48cd" type="forceEntry"/>
         <forceEntryLink name="Casket of Resurrections" id="221c-b566-2f5c-818d" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
         <forceEntryLink name="Craventhrone Executioners" id="da46-bfad-defa-b4d3" hidden="false" targetId="6b4d-e3a9-5521-9022" type="forceEntry"/>
+        <forceEntryLink name="The Curse-Steel Battery" id="4f4a-37f6-c989-d900" hidden="false" targetId="1d6a-1d48-9173-d651" type="forceEntry"/>
+        <forceEntryLink name="Seeker of the Dread Dirge" id="6d3c-c06f-f4c8-2182" hidden="false" targetId="3ebb-d680-3249-76ed" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="135a-e3a4-753a-2906" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
+        <forceEntryLink name="Diseased Revellers" id="259a-eeea-c79c-24c3" hidden="false" targetId="c30e-bf48-fe89-8d48" type="forceEntry"/>
+        <forceEntryLink name="The Pustules" id="da45-33a0-5589-9187" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
-    <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
+    <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="64d4-e838-78d0-3a8b" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="9c1f-40d5-f242-64f6" targetId="3360-1158-e879-9606"/>
@@ -2346,157 +2486,6 @@
           </constraints>
         </categoryLink>
       </categoryLinks>
-      <forceEntries>
-        <forceEntry name="The Realmstone Innovator" id="8841-fda8-88e1-588b" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="205-60d5-d221-d158" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="edc3-d297-701c-6643" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b4bd-d94d-281f-afef" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874b-f2c3-6829-7c1c" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3cb-53fb-b710-87f5" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink name="HERO" hidden="false" id="c8b6-142c-ec81-51e1" targetId="6e72-1656-d554-528a"/>
-            <categoryLink name="Reference" hidden="false" id="470f-776e-94a2-153d" targetId="3360-1158-e879-9606"/>
-          </categoryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3a09-be10-0e75-ccb9"/>
-          </constraints>
-        </forceEntry>
-        <forceEntry name="The Warped Saboteur" id="ca92-b591-c6c1-6707" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb3-81d1-72cc-ea89" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb8-8a68-368a-d066" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink name="HERO" hidden="false" id="3762-ebbc-d468-beb8" targetId="6e72-1656-d554-528a"/>
-            <categoryLink name="Reference" hidden="false" id="0d17-1811-ccb3-70f8" targetId="3360-1158-e879-9606"/>
-          </categoryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e7ae-9da8-7dcc-88d3"/>
-          </constraints>
-        </forceEntry>
-        <forceEntry name="The Sinister Nullifier" id="f037-558a-ec08-6af4" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b19a-fc9-a980-29b5" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a06d-4e09-7a23-05bf" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink name="HERO" hidden="false" id="aa35-a538-4ecb-1582" targetId="6e72-1656-d554-528a"/>
-            <categoryLink name="Reference" hidden="false" id="5608-4825-7400-2791" targetId="3360-1158-e879-9606"/>
-          </categoryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2759-4c85-ef3e-b908"/>
-          </constraints>
-        </forceEntry>
-        <forceEntry name="The Weird-Crafta" id="a1c0-ca80-06e3-65c0" hidden="true">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d048-1146-2bdf-cf78" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72df-3dd1-89c1-ce14" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink name="HERO" hidden="false" id="a2f9-c170-aff2-6828" targetId="6e72-1656-d554-528a"/>
-            <categoryLink name="Reference" hidden="false" id="38c6-5933-8cd9-12e7" targetId="3360-1158-e879-9606"/>
-          </categoryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8de0-9114-24ee-4e8d"/>
-          </constraints>
-        </forceEntry>
-      </forceEntries>
       <modifiers>
         <modifier type="add" value="Your list can have a maximum of 5 regiments, including up to 1 Regiment of Renown." field="error">
           <conditionGroups>
@@ -2604,6 +2593,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2622,6 +2612,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2704,6 +2695,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2786,6 +2778,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -2911,6 +2904,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -3003,6 +2997,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -3021,6 +3016,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -3311,6 +3307,49 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6750-ccad-1640-666f" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3721,15 +3760,49 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
         </forceEntryLink>
+        <forceEntryLink name="The Realmstone Innovator" id="3caa-bf2b-acbf-0591" hidden="false" targetId="8841-fda8-88e1-588b" type="forceEntry"/>
+        <forceEntryLink name="The Sinister Nullifier" id="cdb4-4a23-55eb-3340" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
+        <forceEntryLink name="The Warped Saboteur" id="573c-930f-0d96-27a6" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
+        <forceEntryLink name="The Weird-Crafta" id="2547-6dc4-902d-10ad" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
-    <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
+    <forceEntry name="Path to Glory: Ascension" id="1bed-ddb5-0c50-16d2" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0ad8-1348-974d-3643" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="d2ae-5c7d-0dda-8343" targetId="3360-1158-e879-9606"/>
@@ -4610,6 +4683,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -5030,6 +5133,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -5038,7 +5171,7 @@
         </forceEntryLink>
       </forceEntryLinks>
     </forceEntry>
-    <forceEntry name="Path to Glory: Freeform [UNOFFICIAL, WIP]" id="78a1-f6c2-71b8-270a" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="5">
+    <forceEntry name="Path to Glory: Freeform [UNOFFICIAL, WIP]" id="78a1-f6c2-71b8-270a" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="99">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="487a-7a7b-9657-d26f" targetId="676-2b78-7bbf-ba9c"/>
         <categoryLink name="Reference" hidden="false" id="4ba2-1c29-5d96-41f0" targetId="3360-1158-e879-9606"/>
@@ -5457,6 +5590,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5475,6 +5609,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5557,6 +5692,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5639,6 +5775,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5764,6 +5901,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5856,6 +5994,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -5874,6 +6013,7 @@
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                             <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -6164,6 +6304,49 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6750-ccad-1640-666f" shared="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6586,6 +6769,36 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -6646,6 +6859,16 @@
         <forceEntryLink name="The Horror of Hallow&apos;s Watch" id="6b29-ab94-afa5-4056" hidden="false" targetId="efb1-eac2-1024-e0cb" type="forceEntry"/>
         <forceEntryLink name="The Scarlet Jury" id="9492-8138-ac8f-0d05" hidden="false" targetId="bfa0-f3bb-5a25-48cd" type="forceEntry"/>
         <forceEntryLink name="Casket of Resurrections" id="90ea-4717-560f-ed76" hidden="false" targetId="3706-08ed-3870-450d" type="forceEntry"/>
+        <forceEntryLink name="Seeker of the Dread Dirge" id="0a4c-5db4-a50f-edc7" hidden="false" targetId="3ebb-d680-3249-76ed" type="forceEntry"/>
+        <forceEntryLink name="The Curse-Steel Battery" id="9378-d024-4c63-8581" hidden="false" targetId="1d6a-1d48-9173-d651" type="forceEntry"/>
+        <forceEntryLink name="The Weird-Crafta" id="6a51-33b6-4d06-360b" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
+        <forceEntryLink name="The Realmstone Innovator" id="7410-d837-0cac-418e" hidden="false" targetId="8841-fda8-88e1-588b" type="forceEntry"/>
+        <forceEntryLink name="The Sinister Nullifier" id="625e-68e7-cb86-e928" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
+        <forceEntryLink name="The Warped Saboteur" id="0900-d9c3-25d0-4bff" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
+        <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="5646-73fe-6d51-443e" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
+        <forceEntryLink name="Regiment of Ghyran" id="24a4-4645-fcf7-6e39" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry"/>
+        <forceEntryLink name="The Pustules" id="4c61-18e6-24c1-29d4" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry"/>
+        <forceEntryLink name="Diseased Revellers" id="7740-e9c0-761f-9400" hidden="false" targetId="c30e-bf48-fe89-8d48" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
@@ -6762,6 +6985,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -6828,8 +7052,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f19c-90de-65b2-c65a"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="220"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Fjori&apos;s Flamebearers" id="a723-1314-55da-86d8" hidden="true">
@@ -6871,8 +7097,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3023-e024-f7db-3f78"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="470"/>
+        <cost name="pts" typeId="points" value="420"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Gotrek Gurnisson" id="d72a-3662-14bd-40d9" hidden="true">
@@ -6915,8 +7143,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9b07-6873-f1a1-6c62"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Norgrimm&apos;s Rune Throng" id="c7eb-8e6c-a032-4e04" hidden="true">
@@ -7001,8 +7231,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9472-695c-5dcc-5240"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="270"/>
+        <cost name="pts" typeId="points" value="290"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Blacktalons" id="bced-df96-fcc3-5cf6" hidden="true">
@@ -7062,6 +7294,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7085,8 +7318,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4366-39e7-7d0c-c0fc"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="200"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Hargax&apos;s Pit-beasts" id="1339-980d-ee74-fe0b" hidden="true">
@@ -7103,6 +7338,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7126,8 +7362,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50d4-e21f-abdc-6bc2"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="460"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Phulgoth&apos;s Shudderhood" id="69d0-b9be-62a8-5ae4" hidden="true">
@@ -7145,6 +7383,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7323,8 +7562,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7dfa-3068-7c98-4d8d"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="810"/>
+        <cost name="pts" typeId="points" value="770"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Liche&apos;s Hand" id="9136-a422-571c-c77c" hidden="true">
@@ -7361,8 +7602,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cfc3-8787-6bce-c464"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="830"/>
+        <cost name="pts" typeId="points" value="790"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Sorrowmourn Choir" id="60b7-2797-5b4-8101" hidden="true">
@@ -7437,8 +7680,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fdd-7b45-c8ce-fe87"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="700"/>
+        <cost name="pts" typeId="points" value="680"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Summerking&apos;s Entourage" id="de70-1b54-66b4-c010" hidden="true">
@@ -7513,8 +7758,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="117f-4b0e-399d-721c"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="210"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Odo Godswallow" id="8a04-83ad-bc2-5354" hidden="true">
@@ -7593,8 +7840,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="64d3-d983-dea8-ebb0"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Braggit&apos;s Bottle-snatchaz" id="d704-19f-a3d0-5edd" hidden="true">
@@ -7633,8 +7882,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8fcf-10cf-9ed9-1e32"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="490"/>
+        <cost name="pts" typeId="points" value="480"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Volt-Klaw&apos;s Enginecoven" id="ffc1-e2cb-f2f0-f72e" hidden="true">
@@ -7675,8 +7926,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2e45-3a6a-05b4-b79b"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="460"/>
+        <cost name="pts" typeId="points" value="410"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Krittok&apos;s Clawpack" id="d0d8-3ec6-4b57-16fd" hidden="true">
@@ -7717,8 +7970,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a43e-09a8-7e6f-cab9"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="380"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Horizon Seekers" id="435e-269e-899d-3f7e" hidden="true">
@@ -7803,8 +8058,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4d0d-3a5b-4950-186d"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="370"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Lord Skaldior&apos;s Chosen" id="ba3f-fa41-97d3-2c0f" hidden="true">
@@ -7821,6 +8078,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7844,8 +8102,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0294-85f5-4e7e-f710"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="570"/>
+        <cost name="pts" typeId="points" value="530"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Godmarked Ascendant" id="ab5a-af59-e05f-2daa" hidden="true">
@@ -7906,6 +8166,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -7929,8 +8190,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="431c-3420-7622-eb2e"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="490"/>
+        <cost name="pts" typeId="points" value="470"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Exile Scavengers" id="c09c-6726-db25-549b" hidden="true">
@@ -7980,8 +8243,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2dbd-ac50-222b-82ed"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="430"/>
+        <cost name="pts" typeId="points" value="410"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Squires of the Everchosen" id="2b2d-a5c6-4595-5468" hidden="true">
@@ -8061,8 +8326,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9bb9-3027-f399-60aa"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="430"/>
+        <cost name="pts" typeId="points" value="370"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Nurgle&apos;s Gift" id="0fec-ccda-3904-c0ce" hidden="true">
@@ -8090,6 +8357,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8150,6 +8418,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8228,8 +8497,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a28a-3566-79e0-41b8"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="230"/>
+        <cost name="pts" typeId="points" value="220"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Goroan Scions" id="d7f8-513c-ea3d-bc9e" hidden="true">
@@ -8269,8 +8540,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9480-14d5-5092-6179"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="470"/>
+        <cost name="pts" typeId="points" value="420"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Da Hurtlin&apos; Hogz" id="3cd2-b31b-43c8-e42c" hidden="true">
@@ -8309,8 +8582,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c50-db58-c938-1aab"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="420"/>
+        <cost name="pts" typeId="points" value="430"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Da Kountin&apos; Krew" id="1d9c-5fbb-bb1e-bdb8" hidden="true">
@@ -8348,8 +8623,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e98f-84e8-4faf-1d69"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="360"/>
+        <cost name="pts" typeId="points" value="320"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Shinestealaz" id="11e8-d326-7125-4e5e" hidden="true">
@@ -8426,8 +8703,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f5c-01bd-679c-9a5d"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="310"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Blades of the Hollow King" id="26c8-fdae-c6b6-e347" hidden="true">
@@ -8464,8 +8743,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="acf8-e36d-3ec2-e0f9"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="260"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="The Beast of Castle Sterneiste" id="6e65-4c2e-132e-4c1e" hidden="true">
@@ -8502,8 +8783,10 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cbf6-d72a-35f2-a573"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="190"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="Bloodthirsty Shiver" id="0bd1-a3d9-9fa6-87a1" hidden="true">
@@ -8590,7 +8873,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="df45-5ec0-06e8-a5be"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="270"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8684,7 +8967,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8c01-e8b6-b430-dab1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="290"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8704,6 +8987,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8727,7 +9011,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="01d1-a8ea-0480-18c6"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="430"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8747,6 +9031,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8770,7 +9055,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b354-a7ff-10a2-e68c"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="380"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8903,7 +9188,7 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0031-1ed4-c4a3-4173"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="290"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8984,6 +9269,1768 @@
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Seeker of the Dread Dirge" id="3ebb-d680-3249-76ed" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="2d0d-bdf8-104f-a585" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="7d7d-bfba-c724-3421" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="d531-575f-57f6-4ce7" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="d350-5942-7d6f-4c36" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="93e7-4bac-1ef1-0514" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="e343-c29f-fe47-25c7" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="038e-c82e-90f0-0306" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dc7a-9f9a-159f-82c1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="260"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="The Curse-Steel Battery" id="1d6a-1d48-9173-d651" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="e66e-4c6d-36a9-82af" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="c01f-e95e-f5e0-a8bf" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="c9a8-6032-1cd1-be56" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="3971-40e7-3d79-d976" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="d9ed-e0e7-92fa-06ca" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="7410-c51e-02b9-9291" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="f680-7b76-8462-cc0a" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f9b9-be7e-3827-aaba"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="380"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="The Realmstone Innovator" id="8841-fda8-88e1-588b" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="205-60d5-d221-d158" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="edc3-d297-701c-6643" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b4bd-d94d-281f-afef" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874b-f2c3-6829-7c1c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3cb-53fb-b710-87f5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5eab-d5d8-2e11-fd7e" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bfb-7fa9-fe89-f491" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e8c9-ac55-8289-416f" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72f8-da06-f04a-e271" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="28bf-c667-bb7e-770e" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e441-1f62-6bdb-7dc1" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="c8b6-142c-ec81-51e1" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="Reference" hidden="false" id="470f-776e-94a2-153d" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3a09-be10-0e75-ccb9"/>
+      </constraints>
+    </forceEntry>
+    <forceEntry name="The Warped Saboteur" id="ca92-b591-c6c1-6707" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb3-81d1-72cc-ea89" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb8-8a68-368a-d066" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1a14-ef58-23a1-e471" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="142f-2b79-8c00-7c5d" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="3762-ebbc-d468-beb8" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="Reference" hidden="false" id="0d17-1811-ccb3-70f8" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e7ae-9da8-7dcc-88d3"/>
+      </constraints>
+    </forceEntry>
+    <forceEntry name="The Sinister Nullifier" id="f037-558a-ec08-6af4" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b19a-fc9-a980-29b5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="cb57-0a54-334f-17be" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7dc-8d46-d743-55c3" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="eb68-ccf6-0b38-bdf6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="aa35-a538-4ecb-1582" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="Reference" hidden="false" id="5608-4825-7400-2791" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2759-4c85-ef3e-b908"/>
+      </constraints>
+    </forceEntry>
+    <forceEntry name="The Weird-Crafta" id="a1c0-ca80-06e3-65c0" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d048-1146-2bdf-cf78" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72df-3dd1-89c1-ce14" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0d43-6f63-b305-42ae" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1517-f7af-14f7-64de" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2123-49d1-fd7e-c8c1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="ee11-1e0f-9354-8acf" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="a2f9-c170-aff2-6828" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="Reference" hidden="false" id="38c6-5933-8cd9-12e7" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8de0-9114-24ee-4e8d"/>
+      </constraints>
+    </forceEntry>
+    <forceEntry name="Path to Glory: Blighted Wilds [WIP]" id="8e6f-2dd7-a7ed-489e" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="2">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="063d-f3ff-e1f8-b549" targetId="676-2b78-7bbf-ba9c"/>
+        <categoryLink name="Reference" hidden="false" id="21af-6d80-63c3-999a" targetId="3360-1158-e879-9606"/>
+        <categoryLink name="Army Composition" hidden="false" id="f949-d341-67fa-a461" targetId="ac97-b27c-7e35-7ab9"/>
+        <categoryLink name="Order of Battle" hidden="false" id="04dc-7d9c-2f78-04db" targetId="8e18-320c-b5bb-7cc6"/>
+        <categoryLink name="FACTION TERRAIN" hidden="false" id="5518-0038-5ba1-0c92" targetId="cdd6-ffa1-9b32-4cb8">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6e0b-47e7-46a5-5a22"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="6e0b-47e7-46a5-5a22">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="37d3-9d2b-13ba-a002" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="Your list can have a maximum of 5 regiments, including up to 1 Regiment of Renown." field="error">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="7" field="forces" scope="roster" childId="any" shared="true" includeChildForces="false"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="8" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="3" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                    <condition type="lessThan" value="1" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="4" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                    <condition type="lessThan" value="2" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="5" field="forces" scope="roster" childId="any" shared="true" includeChildForces="true"/>
+                    <condition type="equalTo" value="0" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true" includeChildForces="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="6" field="forces" scope="roster" childId="any" shared="true"/>
+                    <condition type="equalTo" value="1" field="forces" scope="roster" childId="8732-47c4-9f1c-e71e" shared="true"/>
+                    <condition type="lessThan" value="3" field="forces" scope="roster" childId="376a-6b97-8699-dd59" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="To add units to your roster, you need to add a regiment. These can be added under the Forces selector - select your top-level force for your army and then click the + on mobile or check the sidebar panel on desktop." field="error">
+          <conditions>
+            <condition type="atMost" value="1" field="forces" scope="roster" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="9cd3-e9bf-08db-7259"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="1"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+      <forceEntryLinks>
+        <forceEntryLink name="Regiment" id="f508-6f7a-058f-8c75" hidden="false" targetId="376a-6b97-8699-dd59" type="forceEntry">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d545-cdca-9e60-ad27" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5232-3bab-5562-3172" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="205-60d5-d221-d158" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="205-60d5-d221-d158" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="edc3-d297-701c-6643" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="edc3-d297-701c-6643" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="9baf-c109-f621-e60" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d048-1146-2bdf-cf78" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d048-1146-2bdf-cf78" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72df-3dd1-89c1-ce14" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72df-3dd1-89c1-ce14" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1100-a22f-15c6-bdea" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874b-f2c3-6829-7c1c" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b4bd-d94d-281f-afef" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b4bd-d94d-281f-afef" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="efc5-b8d-894c-67c6" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5079-92b5-4879-69f8" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="640e-6bc1-c83d-13c" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="2c23-a678-196b-ad69" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7bb8-8a68-368a-d066" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb8-8a68-368a-d066" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7bb3-81d1-72cc-ea89" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb3-81d1-72cc-ea89" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="405e-c5f4-8579-b05c" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b19a-fc9-a980-29b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b19a-fc9-a980-29b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="874b-f2c3-6829-7c1c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874b-f2c3-6829-7c1c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b3cb-53fb-b710-87f5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3cb-53fb-b710-87f5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5be9-f24d-b606-6c24" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4631-7997-6da0-7a32" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1bfb-7fa9-fe89-f491" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bfb-7fa9-fe89-f491" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f8-da06-f04a-e271" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72f8-da06-f04a-e271" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e8c9-ac55-8289-416f" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e8c9-ac55-8289-416f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0d43-6f63-b305-42ae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0d43-6f63-b305-42ae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1517-f7af-14f7-64de" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1517-f7af-14f7-64de" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="2123-49d1-fd7e-c8c1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2123-49d1-fd7e-c8c1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="ee11-1e0f-9354-8acf" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="ee11-1e0f-9354-8acf" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d215-65e4-50b1-c64c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d215-65e4-50b1-c64c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b155-f3bd-2dfc-d638" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b155-f3bd-2dfc-d638" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1a14-ef58-23a1-e471" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1a14-ef58-23a1-e471" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="28bf-c667-bb7e-770e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="28bf-c667-bb7e-770e" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e441-1f62-6bdb-7dc1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e441-1f62-6bdb-7dc1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="142f-2b79-8c00-7c5d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="142f-2b79-8c00-7c5d" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cb57-0a54-334f-17be" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="cb57-0a54-334f-17be" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7dc-8d46-d743-55c3" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7dc-8d46-d743-55c3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="eb68-ccf6-0b38-bdf6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="eb68-ccf6-0b38-bdf6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6750-ccad-1640-666f" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntryLink>
+        <forceEntryLink name="Auxillary Units" id="19d1-d7b2-73be-4666" hidden="false" targetId="8732-47c4-9f1c-e71e" type="forceEntry">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6cc-9eb2-c5b4-2877" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d545-cdca-9e60-ad27" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7acb-3141-6008-1c09" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7acb-3141-6008-1c09" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5232-3bab-5562-3172" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="205-60d5-d221-d158" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="205-60d5-d221-d158" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b53b-1217-df2e-66d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="edc3-d297-701c-6643" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="edc3-d297-701c-6643" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="9baf-c109-f621-e60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d048-1146-2bdf-cf78" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d048-1146-2bdf-cf78" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="832c-fd6-a535-ffae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72df-3dd1-89c1-ce14" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72df-3dd1-89c1-ce14" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1100-a22f-15c6-bdea" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b4bd-d94d-281f-afef" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b4bd-d94d-281f-afef" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="efc5-b8d-894c-67c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5079-92b5-4879-69f8" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="640e-6bc1-c83d-13c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6353-cb84-ac7f-9a15" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="231a-2a83-26f0-a718" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="2c23-a678-196b-ad69" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7bb8-8a68-368a-d066" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb8-8a68-368a-d066" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7bb3-81d1-72cc-ea89" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7bb3-81d1-72cc-ea89" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6600-d1d2-9b0d-a3b9" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="405e-c5f4-8579-b05c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b19a-fc9-a980-29b5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b19a-fc9-a980-29b5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="874b-f2c3-6829-7c1c" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="874b-f2c3-6829-7c1c" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b3cb-53fb-b710-87f5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3cb-53fb-b710-87f5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="26d8-61fd-4bf1-5323" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a06d-4e09-7a23-05bf" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dd9-f3c9-349a-1f6a" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5be9-f24d-b606-6c24" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5be9-f24d-b606-6c24" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4631-7997-6da0-7a32" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4631-7997-6da0-7a32" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c9d1-f1c0-84d1-a75d" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1bfb-7fa9-fe89-f491" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bfb-7fa9-fe89-f491" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e8c9-ac55-8289-416f" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e8c9-ac55-8289-416f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f8-da06-f04a-e271" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="72f8-da06-f04a-e271" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0d43-6f63-b305-42ae" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0d43-6f63-b305-42ae" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1517-f7af-14f7-64de" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1517-f7af-14f7-64de" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="2123-49d1-fd7e-c8c1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2123-49d1-fd7e-c8c1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="ee11-1e0f-9354-8acf" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="ee11-1e0f-9354-8acf" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="a00b-ece9-a93d-7ca4" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3097-36cb-412f-8b60" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3097-36cb-412f-8b60" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e821-9778-03c4-66c6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e821-9778-03c4-66c6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="0473-cd8f-7161-ac72" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="0473-cd8f-7161-ac72" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78e4-8918-6980-9d52" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1a14-ef58-23a1-e471" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1a14-ef58-23a1-e471" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="28bf-c667-bb7e-770e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="28bf-c667-bb7e-770e" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="e441-1f62-6bdb-7dc1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e441-1f62-6bdb-7dc1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="142f-2b79-8c00-7c5d" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="142f-2b79-8c00-7c5d" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="cb57-0a54-334f-17be" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="cb57-0a54-334f-17be" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7dc-8d46-d743-55c3" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7dc-8d46-d743-55c3" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="eb68-ccf6-0b38-bdf6" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="eb68-ccf6-0b38-bdf6" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6750-ccad-1640-666f" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6750-ccad-1640-666f" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5a77-1371-c897-5db1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5a77-1371-c897-5db1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="01c9-f58e-60df-9ade" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01c9-f58e-60df-9ade" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4cb4-298b-bb1b-58d1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1be3-6bdd-1bb2-d2e0" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </forceEntryLink>
+        <forceEntryLink name="The Realmstone Innovator" id="5755-43f8-a059-d1c8" hidden="false" targetId="8841-fda8-88e1-588b" type="forceEntry"/>
+        <forceEntryLink name="The Sinister Nullifier" id="910f-5e0d-76d8-e438" hidden="false" targetId="f037-558a-ec08-6af4" type="forceEntry"/>
+        <forceEntryLink name="The Warped Saboteur" id="3324-e6ce-2ff3-2915" hidden="false" targetId="ca92-b591-c6c1-6707" type="forceEntry"/>
+        <forceEntryLink name="The Weird-Crafta" id="373f-2a05-7c9f-8248" hidden="false" targetId="a1c0-ca80-06e3-65c0" type="forceEntry"/>
+        <forceEntryLink name="Regiment of Ghyran" id="7870-709b-d9da-7d69" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry"/>
+      </forceEntryLinks>
+    </forceEntry>
+    <forceEntry name="Heroes of the Jade Abbey [LEGENDS]" id="f3c9-ca5d-bd0e-a94e" hidden="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="efb2-10e7-cd01-5070"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="f088-206a-b81c-4f32" targetId="6e72-1656-d554-528a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="3cbe-5a00-1922-b23d" includeChildSelections="true"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="INFANTRY" hidden="false" id="b1a8-d47e-813d-f9e9" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="dfeb-15bf-5d44-b1fa" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="f65d-c421-b75d-919b" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="94bd-fe28-cbd5-8a25" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="a459-737e-7b4b-9f56" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="c7f8-cc78-40aa-9cdd" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7983-5dfc-a31c-1833"/>
+        <constraint type="max" value="3" field="selections" scope="self" shared="true" id="cba7-7e7f-754a-08ee"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="79d1-105c-ac4a-7df3" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="0da6-7240-35b1-262d" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="0c42-1869-71c7-0e93" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="c9ad-bcdc-4baf-e410" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="d32f-1c8b-985a-b365" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="2f8e-cbbe-26cb-52c9" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="f6d9-361e-1dab-b96d" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry name="Diseased Revellers" id="c30e-bf48-fe89-8d48" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="aff3-2956-3f30-6e84" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="df45-b522-421c-c714" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="ba8f-894b-ac9c-741f" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="f281-0fc2-d170-849c" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="2f3e-be67-9d22-f5a8" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="c90e-5fcc-9f77-33cc" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="91c8-e45b-2499-a694" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="681e-6f0a-9f02-b6b4"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="310"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="The Pustules" id="a88b-8da0-2e5e-a398" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d545-cdca-9e60-ad27" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="afdb-68a1-283e-3bf2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="747c-104a-4d8d-c9a5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="9679-e407-3c26-1059" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="94c4-6d8d-a996-c86c" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="89d8-9ece-a68b-8d05" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="8027-a7ab-847c-f128" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="9449-8f47-9b66-b44a" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="8098-6077-c6d9-c41c" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="FACTION TERRAIN" hidden="false" id="a73b-2384-cd18-2fe2" targetId="cdd6-ffa1-9b32-4cb8"/>
+        <categoryLink name="Reference" hidden="false" id="17f9-95f1-ec54-4922" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e530-2190-5d5a-905c"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="200"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9424,6 +11471,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Arcane Predator" hidden="false" id="9456-22b9-7885-e464" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9434,6 +11482,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Wild Form" hidden="false" id="4f4-6041-9f7e-2585" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9444,6 +11493,7 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Amberbone Claws and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="245d-e7e2-477e-edb0">
@@ -9463,6 +11513,11 @@
         <categoryLink targetId="70a4-383f-421f-52cd" id="b526-6820-5eca-8a4f" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="b979-4c3e-7d0e-6921" id="4494-b9a6-2e65-65c8" primary="false" name="FLY"/>
       </categoryLinks>
+      <rules>
+        <rule name="Base Size" id="6069-170b-1024-1001" hidden="true">
+          <description>130mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Purple Sun of Shyish" hidden="false" id="e7a5-e611-4c13-22d0">
       <categoryLinks>
@@ -9494,6 +11549,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Pull of the Nadir" hidden="false" id="c99-9240-9da1-d029" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9504,6 +11560,7 @@
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
@@ -9517,6 +11574,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="9997-dae6-c46a-0a72" hidden="true">
+          <description>100x70mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Soulsnare Shackles" hidden="false" id="dee3-92a0-27e7-252a">
       <categoryLinks>
@@ -9549,6 +11611,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9e13-160b-4a87-da4e">
@@ -9559,9 +11622,15 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="9579-4528-2ee0-5785" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Soulscream Bridge" hidden="false" id="523f-bd78-e418-9922">
       <categoryLinks>
@@ -9592,6 +11661,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="676c-91fa-8432-ee8d">
@@ -9602,9 +11672,15 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="da7d-dc38-4ff8-5450" hidden="true">
+          <description>120x92mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Aethervoid Pendulum" hidden="false" id="fcb6-ae80-2e58-aadb">
       <categoryLinks>
@@ -9636,6 +11712,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="The Pendulum Swings" hidden="false" id="9ec5-1011-c05e-5045" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -9646,9 +11723,15 @@
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="1030-b362-0e3d-5ebb" hidden="true">
+          <description>64x42mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chronomantic Cogs" hidden="false" id="1aba-bc38-e988-d79f">
       <categoryLinks>
@@ -9681,9 +11764,15 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="b0e0-0c3f-c197-05a3" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="The Burning Head" hidden="false" id="e1cc-64dc-f765-b9cc">
       <categoryLinks>
@@ -9707,11 +11796,12 @@
         <profile name="Burning Up" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c08-79dc-f4d5-dc9f">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^**uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this **^^Manifestation^^** (ward rolls cannot be made for that damage point).</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** uses a **^^Shoot^^** ability, after that ability has been resolved, allocate 1 damage point to this **^^Manifestation^^** (ward rolls cannot be made for that damage point).</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Shooting</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
@@ -9736,6 +11826,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="f9d8-557a-983b-bbd8" hidden="true">
+          <description>50mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Horrorghast" hidden="false" id="f935-2383-94ba-3be2">
       <categoryLinks>
@@ -9767,6 +11862,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
@@ -9791,6 +11887,11 @@
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="0dad-8b93-b703-7548" hidden="true">
+          <description>50mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Malevolent Maelstrom" hidden="false" id="e699-49b7-d2b8-d5fc">
       <categoryLinks>
@@ -9822,6 +11923,7 @@
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Necrotic Vortex" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c711-ce6-1fb6-7abc">
@@ -9836,6 +11938,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
@@ -9849,6 +11952,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="af23-a99e-a3dc-53dd" hidden="true">
+          <description>50mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Shards of Valagharr" hidden="false" id="94f6-4321-fd80-f20e">
       <categoryLinks>
@@ -9859,23 +11967,27 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
       <profiles>
         <profile name="Shards of Valagharr" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="332-7949-ffcb-dd41">
           <characteristics>
-            <characteristic name="Move" hidden="false" id="c1de-4303-c863-c2ed" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
-            <characteristic name="Health" hidden="false" id="6367-c409-9ec5-f87" typeId="d1b9-3068-515-131e">8</characteristic>
-            <characteristic name="Save" hidden="false" id="a49-ebbb-c54a-2c9c" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
-            <characteristic name="Banishment" hidden="false" id="c6b4-46b0-c09f-7b9c" typeId="97a2-d412-9ac-6a37">7+</characteristic>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">8</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">6+</characteristic>
+            <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50db-066e-a3e7-696f" name="Base Size"/>
           </attributes>
         </profile>
-        <profile name="Phantasmal Translocation" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="425b-721a-d7a1-26d4">
+        <profile name="Phantasmal Translocation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="425b-721a-d7a1-26d4">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick a part of this **Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part and more than 3&quot; from all enemy units.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a part of this **^^Manifestation^^**, remove it from the battlefield and set it up again on the battlefield wholly within 9&quot; of the other part and more than 3&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="86da-767f-a1d7-9b8a">
@@ -9886,6 +11998,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Ensnaring Soul-drain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9d0c-ae55-1df5-ec0e">
@@ -9896,9 +12009,15 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="ccd9-0845-c53b-7080" hidden="true">
+          <description>105x70mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lauchon the Soulseeker" hidden="false" id="a26b-cd08-8f9d-90b0">
       <categoryLinks>
@@ -9930,6 +12049,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
@@ -9943,6 +12063,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="6ad3-655c-c52a-bba7" hidden="true">
+          <description>90x52mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Quicksilver Swords" hidden="false" id="8cde-fafe-2b2a-ced5">
       <categoryLinks>
@@ -9971,6 +12096,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
@@ -9984,6 +12110,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="fb86-9d67-8315-d94b" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7f34-77c9-597-62c3">
       <profiles>
@@ -9995,6 +12126,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10019,6 +12151,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10043,6 +12176,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10087,6 +12221,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Bounteous Healing" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5d6d-9bfb-60e3-db42">
@@ -10100,6 +12235,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Swarming Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9a05-9547-1ad1-2bf8">
@@ -10113,6 +12249,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="e549-a70c-2b95-b175" hidden="true">
+          <description>64x42mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="41c4-2f6a-0d3c-a23e">
       <categoryLinks>
@@ -10143,6 +12284,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Gnashing Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="44ec-0340-a597-8bc5">
@@ -10156,6 +12298,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="adec-2317-0d4a-b7f6" hidden="true">
+          <description>100x70mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Suffocating Gravetide" hidden="false" id="1885-a1aa-bf5d-6d0d">
       <categoryLinks>
@@ -10187,6 +12334,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
@@ -10200,6 +12348,11 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="ac33-18e2-33b5-5df5" hidden="true">
+          <description>Use model</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Geminids of Uhl-Gysh" hidden="false" id="d420-1699-5ad9-1956">
       <categoryLinks>
@@ -10228,6 +12381,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
@@ -10250,9 +12404,15 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="e6d5-331c-b60b-c229" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Umbral Spellportal" hidden="false" id="0552-183c-1b2a-d117">
       <categoryLinks>
@@ -10280,6 +12440,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Arcane Passage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b327-e576-8829-814d">
@@ -10293,9 +12454,15 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="2d58-c5a6-0d12-1916" hidden="true">
+          <description>40mm</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Prismatic Palisade" hidden="false" id="015a-4e4f-322f-ccff">
       <categoryLinks>
@@ -10323,16 +12490,27 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Base Size" id="89e2-e07f-520b-f0b3" hidden="true">
+          <description>Use model</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Renown" hidden="true" id="e7d5-5062-46d5-38dd">
       <modifiers>
         <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -10342,7 +12520,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <description>If an attack made with this weapon scores a critical hit, that attack scores 2 hits on the target instead of 1. Make a wound roll for each hit.</description>
     </rule>
     <rule name="Companion" hidden="false" id="6eda-6036-78c5-2076">
-      <description>This weapon is not affected by friendly abilities that affect the Attacks characteristic or the attack sequence.</description>
+      <description>Unless otherwise specified, attacks made by this weapon are not affected by friendly abilities that modify hit rolls, wound rolls or weapon characteristics, except for those that apply negative modifiers (e.g. ‘Covering Fire’)</description>
     </rule>
     <rule name="Anti-X (+1 Rend)" hidden="false" id="5daf-bfb3-e495-dae6">
       <description>Add 1 to this weapon&apos;s Rend characteristic if the target has the keyword after &apos;Anti-&apos; or fulfils the condition after &apos;Anti-&apos;. Multiples of this ability are cumulative. For example, if a weapon has both Anti-charge (+1 Rend) and Anti-HERO (+1 Rend), then add 2 to the Rend characteristic of the weapon for attacks that target a HERO that charged in the same turn.</description>
@@ -10404,6 +12582,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10421,6 +12600,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
     </profile>
     <profile name="Ward Save" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ed70-f30-2f5a-747f">
@@ -10431,6 +12611,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10450,6 +12631,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
         <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+        <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -10472,6 +12654,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+        <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -10495,6 +12678,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <attributes>
         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+        <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
       </attributes>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -10521,7 +12705,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Faction Pack: Lumineth Realmlords" id="9ed1-cf74-eb97-dee2" hidden="false"/>
     <publication name="Faction Pack: Ogor Mawtribes" id="1ac6-e227-a186-12" hidden="false"/>
     <publication name="Faction Pack: Hedonites of Slaanesh" id="95fc-e96f-a916-bba1" hidden="false"/>
-    <publication name="Faction Pack: Maggotkin of Nurgle" id="9c71-86cb-e1d0-ec8d" hidden="false"/>
+    <publication name="Battletome: Maggotkin of Nurgle" id="9c71-86cb-e1d0-ec8d" hidden="false"/>
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
     <publication name="Faction Pack: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
     <publication name="Faction Pack: Ossiarch Bonereapers" id="2f1e-fdf-1ac2-fa38" hidden="false"/>
@@ -10550,6 +12734,9 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome Supplement: Blades of Khorne" id="de00-5d7f-9409-d250" hidden="false"/>
     <publication name="Battletome Supplement: Nighthaunt" id="b480-1f20-7f56-1959" hidden="false"/>
     <publication name="Miscellaneous Download" id="fb5f-170a-00d0-4cf5" hidden="false"/>
+    <publication name="Battletome: Helsmiths of Hashut" id="487d-9798-0633-8040" hidden="false"/>
+    <publication name="Path to Glory: Blighted Wilds" id="836f-b899-80c0-0f72" hidden="false"/>
+    <publication name="Grotmas Darkwater Heroes" id="9e18-0b77-d43e-125e" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
@@ -10592,6 +12779,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="704d-d7c8-b9a9-f8b6" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6cc-9eb2-c5b4-2877" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7acb-3141-6008-1c09" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -10621,6 +12809,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Bodyguard" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4a1a-5004-d133-ac9c">
@@ -10636,6 +12825,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Field Sergeant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54eb-6de5-1e82-a796">
@@ -10649,6 +12839,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Prized Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ad6-dccc-c9b9-dabc">
@@ -10662,6 +12853,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Special Assignment" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="99f1-c5a8-8a2e-4d27">
@@ -10681,6 +12873,7 @@ In any turn in which that **honour guard** charged, that unit’s melee weapons
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
       </profiles>
@@ -10773,14 +12966,7 @@ You complete this battle tactic at the end of your turn if you control every obj
                   <characteristics>
                     <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">• At the start of the battle, your opponent must pick 3 of their units on the battlefield to be carrying a Ghyranite Treasure. They cannot pick faction terrain features or **^^Manifestations^^**. A unit can only carry 1 Ghyranite Treasure. If your opponent has fewer than 3 units on the battlefield, you automatically complete a number of these battle tactics, starting with the **Domination** battle tactic (followed by the **Strike** and then the **Affray**) until the number of remaining uncompleted battle tactics equals the number of enemy units on the battlefield.
 • If you went second in the previous battle round and choose to go first in the current battle round, your opponent can remove 1 Ghyranite Treasure from one of their units at the start of the battle round.
-• If an ability would remove a unit that was carrying treasure from
-the battlefield and that unit is not set up again as part of the same
-ability (e.g. ‘Dark Apotheosis’ or ‘Red Ruin’), before removing that
-unit from the battlefield, your opponent must give the treasure
-it was carrying to another one of their units that does not have a
-Ghyranite treasure within 3&quot; of that unit. If this is not possible,
-that unit counts as having been destroyed for the purpose of this
-battle tactics card.</characteristic>
+• If an ability would remove a unit that was carrying treasure from the battlefield and that unit is not set up again as part of the same ability (e.g. ‘Dark Apotheosis’ or ‘Red Ruin’), before removing that unit from the battlefield, your opponent must give the treasure it was carrying to another one of their units that does not have a Ghyranite treasure within 3&quot; of that unit. If this is not possible, that unit counts as having been destroyed for the purpose of this battle tactics card.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Stolen Seedpod:
 You complete this battle tactic at the end of your turn if at least 1 enemy unit carrying a Ghyranite Treasure has been destroyed this battle.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Contraband Aqua Ghyranis:
@@ -10816,13 +13002,13 @@ You complete this battle tactic at the end of your turn if there is a different 
               <profiles>
                 <profile name="Scouting Force" typeId="abf8-a239-9e66-54c1" typeName="Battle Tactic Card" hidden="false" id="5fc5-3a71-00e9-29f6">
                   <characteristics>
-                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, every friendly non-Hero Infantry and non-Hero Cavalry unit that is on the battlefield becomes a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
+                    <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">At the start of the battle, pick each friendly non-**^^Hero Infantry^^** and non-**^^Hero Cavalry^^** unit that was not set up in reserve with a **^^Deploy^^** ability to become a scout unit. You cannot complete these battle tactics with scout units that are in combat. Replacement units that replace scout units are also scout units.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Raiding Party:
 You complete this battle tactic at the end of your turn if there are 3 or more friendly scout units wholly outside friendly territory.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Bold Explorers:
-You complete this battle tactic at the end of your turn if 3 or more objectives or terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
+You complete this battle tactic at the end of your turn if 3 or more objectives or non-**^^Faction Terrain^^** terrain features that you control, in any combination, are being contested by any friendly scout units. Those objectives and terrain features must be within enemy territory.</characteristic>
                     <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Courageous Adventurers:
-You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
+You complete this battle tactic at the end of your turn if a friendly scout unit that was not set up this turn is contesting a non-**^^Faction Terrain^^** terrain feature that you control that is wholly within enemy territory and more than 6&quot; from friendly territory.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10854,6 +13040,30 @@ You complete this battle tactic at the end of your turn if there are no enemy un
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Glory Points" hidden="true" id="d519-2ff7-aa43-80c7" defaultAmount="1">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9440-acc3-da2b-1365"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Glory Points" hidden="false" id="6fa0-dd32-a985-f381"/>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Order of Battle" hidden="false" id="596a-e8f5-e9b6-baff" targetId="8e18-320c-b5bb-7cc6" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>

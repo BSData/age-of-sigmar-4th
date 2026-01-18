@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="3a8b-7496-526f-feab" name="✦ Path to Glory - Ascension" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="20" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="3a8b-7496-526f-feab" name="✦ Path to Glory - Ascension" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="20" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Ascension Paths" id="9b2e-ad88-381f-5c49" hidden="true" flatten="true" publicationId="1297-79e6-1009-53df">
       <selectionEntries>
@@ -20,6 +20,7 @@
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -37,6 +38,7 @@
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -53,9 +55,16 @@
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -73,6 +82,7 @@
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -93,6 +103,7 @@
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -109,9 +120,16 @@
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -124,11 +142,12 @@
                     <profile name="Frenzy" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a0a8-1a8a-2469-0ba0">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)** if it used a **^^Fight^^** ability in the same phase.</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)^^** if it used a **^^Fight^^** ability in the same phase.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -155,6 +174,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -171,9 +191,16 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -191,6 +218,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -208,6 +236,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -224,9 +253,16 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -260,8 +296,9 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color"/>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type"/>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -282,6 +319,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -303,9 +341,16 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -326,6 +371,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -343,6 +389,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -359,9 +406,16 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -379,6 +433,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -396,6 +451,7 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -412,9 +468,16 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -427,11 +490,12 @@ Add 3 to the control score of this unit while it is contesting an objective cont
                     <profile name="Destined for Greatness" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e875-5182-19ee-b3ac">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **^^Hero^^** has **^^Ward (4+)^^*</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **^^Hero^^** has **^^Ward (4+)^^**.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -458,6 +522,7 @@ Add 3 to the control scores of other friendly units while they are contesting th
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -474,9 +539,16 @@ Add 3 to the control scores of other friendly units while they are contesting th
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -508,6 +580,7 @@ Add 3 to the control scores of other friendly units while they are contesting th
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -525,6 +598,7 @@ Add 3 to the control scores of other friendly units while they are contesting th
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -566,6 +640,7 @@ Add 3 to the control scores of other friendly units while they are contesting th
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -595,6 +670,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -631,6 +707,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -643,11 +720,12 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                     <profile name="Master-Crafted Armour" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c138-3d04-44bf-a20a">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to save rolls for this **^^Hero^^**</characteristic>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to save rolls for this **^^Hero^^**.</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -674,9 +752,9 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
             </selectionEntryGroup>
             <selectionEntryGroup name="Legendary" id="9fe2-5cd3-a9de-6ded" hidden="false" sortIndex="4">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Warrior Without Equal" hidden="false" id="0152-0294-9b05-7d08">
+                <selectionEntry type="upgrade" import="true" name="Unparalleled Duelist" hidden="false" id="0152-0294-9b05-7d08">
                   <profiles>
-                    <profile name="Warrior Without Equal" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="efa2-8e2c-46b4-6e1f">
+                    <profile name="Unparalleled Duelist" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="efa2-8e2c-46b4-6e1f">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **^^Hero^^** has **^^Strike-first^^**.</characteristic>
@@ -684,6 +762,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -691,9 +770,9 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ddb6-492d-2145-90a4"/>
                   </constraints>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Decisive Strike" hidden="false" id="df49-381d-9cae-1242">
+                <selectionEntry type="upgrade" import="true" name="Warrior Without Equal" hidden="false" id="df49-381d-9cae-1242">
                   <profiles>
-                    <profile name="Decisive Strike" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f2b5-e081-2716-f8a2">
+                    <profile name="Warrior Without Equal" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f2b5-e081-2716-f8a2">
                       <characteristics>
                         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
                         <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **^^Hero^^** has **^^Ward (4+)^^**.</characteristic>
@@ -701,6 +780,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -751,6 +831,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -768,6 +849,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -784,9 +866,16 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -807,6 +896,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -820,13 +910,14 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <characteristics>
                         <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
                         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit has **^^Ward (6+)^^.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit has **^^Ward (6+)^^**.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -843,9 +934,16 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -863,6 +961,7 @@ Pick this **^^Hero^^** to use this ability if it is contesting an objective that
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -889,6 +988,7 @@ Add 3 to the control score of this unit while it is contesting an objective you 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -905,9 +1005,16 @@ Add 3 to the control score of this unit while it is contesting an objective you 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -934,6 +1041,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -951,6 +1059,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -967,9 +1076,16 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -1005,6 +1121,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1022,6 +1139,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1038,8 +1156,13 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1061,6 +1184,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
                         <attribute name="Type" typeId="c63c-196d-34a7-cec3">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1081,6 +1205,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
                         <attribute name="Type" typeId="c63c-196d-34a7-cec3">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1097,8 +1222,13 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1117,6 +1247,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1134,6 +1265,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1150,8 +1282,13 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1173,6 +1310,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
                         <attribute name="Type" typeId="c63c-196d-34a7-cec3">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1193,6 +1331,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
                         <attribute name="Type" typeId="c63c-196d-34a7-cec3">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1209,8 +1348,13 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1252,6 +1396,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1269,6 +1414,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
                         <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1285,9 +1431,16 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -1297,17 +1450,18 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Arcane Conduit" hidden="false" id="9eca-c720-1b18-ac52">
                   <profiles>
-                    <profile name="Arcane Conduit" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="be30-effc-b5dd-e999">
+                    <profile name="Arcane Conduit" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="be30-effc-b5dd-e999">
                       <characteristics>
-                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Make a casting roll of 2D6.</characteristic>
-                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the end of the phase, add 1 to casting rolls for friendly units.</characteristic>
-                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Spell^^**</characteristic>
-                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                        <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+                        <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">3</characteristic>
+                        <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Make a casting roll of 2D6.</characteristic>
+                        <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the end of the phase, add 1 to casting rolls for friendly units.</characteristic>
+                        <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1327,7 +1481,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
-                        <attribute name="Type" typeId="da27-8d61-f955-5031">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Defensive</attribute>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1344,9 +1498,16 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -1367,6 +1528,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1387,6 +1549,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       <attributes>
                         <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1403,9 +1566,16 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -1425,7 +1595,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
-                        <attribute name="Type" typeId="da27-8d61-f955-5031">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Offensive</attribute>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1445,7 +1615,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                       </characteristics>
                       <attributes>
                         <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
-                        <attribute name="Type" typeId="da27-8d61-f955-5031">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Offensive</attribute>
                       </attributes>
                     </profile>
                   </profiles>
@@ -1462,9 +1632,16 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                         <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -1502,6 +1679,7 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bed-ddb5-0c50-16d2" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -1536,29 +1714,6 @@ This unit has **^^Strike-first^^** while it is wholly within friendly territory 
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Glory Points" hidden="true" id="d519-2ff7-aa43-80c7" defaultAmount="1">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9440-acc3-da2b-1365"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Glory Points" hidden="false" id="6fa0-dd32-a985-f381"/>
-      </selectionEntries>
-      <categoryLinks>
-        <categoryLink name="Order of Battle" hidden="false" id="596a-e8f5-e9b6-baff" targetId="8e18-320c-b5bb-7cc6" primary="true"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Quest Log" hidden="true" id="d9ff-8f4f-0f3c-ce2b" defaultAmount="1">
       <categoryLinks>
         <categoryLink name="Order of Battle" hidden="false" id="bde2-5a55-d550-d14d" targetId="8e18-320c-b5bb-7cc6" primary="true"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="40a4-1c1c-8a00-bb65" name="Idoneth Deepkin" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="40a4-1c1c-8a00-bb65" name="Idoneth Deepkin" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="d151-d105-9199-1667" hidden="false">
       <selectionEntryGroups>
@@ -18,6 +18,7 @@
                   <attributes>
                     <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
                     <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+                    <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -35,6 +36,7 @@
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
                     <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -52,6 +54,7 @@
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
                     <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -65,10 +68,16 @@
               </costs>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="07d1-d953-ed95-b0c1" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="05ab-1579-acc0-5d06" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="fc63-4624-5e38-9188" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="7e8e-f995-3c86-97df">
@@ -97,6 +106,7 @@
               <attributes>
                 <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
                 <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -114,6 +124,7 @@
               <attributes>
                 <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
                 <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -131,6 +142,7 @@
               <attributes>
                 <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
                 <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -148,6 +160,7 @@
               <attributes>
                 <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
                 <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -186,6 +199,7 @@
               <attributes>
                 <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
                 <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -218,6 +232,7 @@
               <attributes>
                 <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Purple</attribute>
                 <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Rallying</attribute>
+                <attribute typeId="df75-e7dc-12b5-48a8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -232,7 +247,25 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+            <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+            <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -253,6 +286,7 @@
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
                     <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -273,6 +307,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -289,6 +324,7 @@
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
                     <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -310,6 +346,7 @@ this battle:
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
                     <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -318,6 +355,11 @@ this battle:
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="a96b-fa6a-948c-e5bb" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
         <selectionEntryGroup name="Leaders of the Raid" id="cf21-adf6-e7ab-293d" hidden="true" publicationId="f894-7929-f79a-a269">
           <selectionEntries>
@@ -335,6 +377,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
                   <attributes>
                     <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
                     <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -355,6 +398,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
                   <attributes>
                     <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                     <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -372,6 +416,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
                     <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -392,10 +437,16 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule name="Enhancement Restrictions" id="5039-97d0-f5e1-0945" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="47f5-2604-e284-56c1" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="66c8-01b4-11a4-ef08" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="30d5-359b-5dd7-5b1b">
@@ -439,6 +490,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="41ae-20b6-8d33-c7c9" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="1ccf-deaa-b0a7-f29c" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="1e94-0063-f74e-1f84"/>
@@ -461,6 +513,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="4919-8977-4c50-3eec" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="5cd8-a949-0719-3d77" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="2ea6-026e-d02c-22a8" type="selectionEntryGroup" targetId="fded-249a-cccc-374e" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="5c39-d3d9-9afb-9fdd" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -503,6 +556,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Swift Tide" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0656-4279-7aec-d19b">
@@ -516,6 +570,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa">be04-5479-f37e-a203</attribute>
           </attributes>
         </profile>
         <profile name="Sea&apos;s Embrace" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="12ed-8fb6-93d4-18ac">
@@ -529,6 +584,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa">0656-4279-7aec-d19b</attribute>
           </attributes>
         </profile>
         <profile name="Unpredictable Tide" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad82-dde8-cdb2-9eb5">
@@ -542,19 +598,21 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
           </attributes>
         </profile>
         <profile name="Inexorable Tide" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6721-3e17-45cb-be45">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round, Any Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you used the &apos;Unpredictable Tide&apos; ability in the previous battle round and you have not used any other **^^Tidal^^** abilities this round.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Rend characteristic of weapons used for attacks that target friendly **^^Idoneth Deepkin^^** units for the rest of the battle round</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Rend characteristic of weapons used for attacks that target friendly **^^Idoneth Deepkin^^** units for the rest of the battle round.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Tidal^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa">ad82-dde8-cdb2-9eb5</attribute>
           </attributes>
         </profile>
         <profile name="Storm&apos;s Wrath" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5c7e-29d4-002d-d8f9">
@@ -568,6 +626,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa">6721-3e17-45cb-be45</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -706,7 +765,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="a9a1-4c6b-09fe-17a7" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="350"/>
+        <cost name="pts" typeId="points" value="340"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -753,7 +812,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="ba60-28c7-e48e-678b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="300"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -862,7 +921,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="b163-341f-cf48-704d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -924,7 +983,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="c886-c60b-d2e4-ef9b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -963,7 +1022,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
     </entryLink>
     <entryLink import="true" name="Lotann, Warden of the Soul Ledgers" hidden="false" id="d4dd-cb90-27f2-1bb" type="selectionEntry" targetId="50be-c90a-20c4-66ed">
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="da2e-8a0e-e17f-7c3d" type="selectionEntryGroup" targetId="6690-4b92-7bcf-ecfd"/>
@@ -1065,7 +1124,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="810e-81be-daa2-a9e6" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
@@ -1098,7 +1157,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="3d10-f061-2dbc-564c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Akhelian Leviadon" hidden="false" id="49c3-7c99-7084-c1cb" type="selectionEntry" targetId="8e30-fc7b-3b12-a269">
@@ -1120,7 +1179,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="480"/>
+        <cost name="pts" typeId="points" value="470"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="b4ef-f5d4-04d2-046e" type="selectionEntryGroup" targetId="ffa1-0adf-78bb-b563"/>
@@ -1181,7 +1240,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="7773-3847-a128-12e9" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Namarti Thralls" hidden="false" id="6b15-b693-651b-805e" type="selectionEntry" targetId="719d-2822-d67a-2ec8">
@@ -1209,7 +1268,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="fd15-cb19-64ef-1134" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Gloomtide Shipwreck" hidden="false" id="cf8c-d2d8-cc3f-cbe1" type="selectionEntry" targetId="cdd1-4012-45ab-ed95" defaultAmount="1"/>
@@ -1273,7 +1332,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
         <entryLink import="true" name="Renown" hidden="false" id="e1f9-8eef-7b6b-510f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1618,6 +1677,7 @@ In addition, add 2 to the next casting roll or banishment roll for this unit th
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="4d1b-56be-0d42-57ab" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="3827-b9f7-c3cc-a74c" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="42c9-0bf6-6320-4052" targetId="3a8b-7496-526f-feab"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="2092-4820-e262-32e4" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Akhelian Raidmaster" id="bad0-5cfa-f355-402d" hidden="false">

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="42ad-8ca7-4b48-7df1" name="Cities of Sigmar" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="36" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Cities of Sigmar - Library" id="7fae-e658-b76a-fe24" targetId="c83a-4a23-6dc5-fb68"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="91b3-9cb9-fded-8fef" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="5f01-6353-f346-f0fa" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="f88a-414d-2ddf-3670" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="f717-95f2-8151-97c7" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="d6f1-33e2-673e-c0c8" hidden="false">
@@ -67,12 +68,38 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6ca7-a3fe-87fb-8fcb" includeChildSelections="true"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="7a7a-c75f-42ff-f6ce" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="0c08-2343-179b-4434" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="a827-fe34-0202-8468" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="d7df-ecaf-ca86-146a">
@@ -190,7 +217,25 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+            <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+            <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+          </costs>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Fearless Exemplars" hidden="true" id="f461-6e4c-945a-d252" publicationId="f894-7929-f79a-a269">
           <constraints>
@@ -285,6 +330,11 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="f340-592a-3611-a408" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
         <selectionEntryGroup name="Castelite Veterans" id="0f20-dbe4-d458-cdf6" hidden="true" publicationId="f894-7929-f79a-a269">
           <selectionEntries>
@@ -310,6 +360,26 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="778e-8127-4e7d-6b92" includeChildSelections="true"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Draw Steel!" hidden="false" id="c2f7-e525-d69d-2403">
               <profiles>
@@ -364,10 +434,16 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule name="Enhancement Restrictions" id="9f6d-2459-b0f2-5f4d" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="11d4-b718-3b1e-b51a" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="1701-44c2-368a-a782" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="0a32-3135-4e2e-51da">
@@ -420,6 +496,7 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="e4ed-95dd-9147-784e" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="284a-e22c-4cb8-3946" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="caa2-e2dc-44ef-f1a1"/>
@@ -441,6 +518,7 @@ In addition, in the first battle round, subtract 1 from wound rolls for attacks
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="27f2-8ad9-e77e-1e99" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="a23b-aad1-2f09-4440" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="8b6f-ada1-45dc-83a9" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -522,7 +600,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
   <entryLinks>
     <entryLink import="true" name="Alchemite Warforger" hidden="false" id="86a3-572-f5f3-aa2c" type="selectionEntry" targetId="2678-d067-8e12-84dc">
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="58c1-8ca1-f4fe-4ce4" type="selectionEntryGroup" targetId="d6f1-33e2-673e-c0c8"/>
@@ -621,7 +699,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Battlemage" hidden="false" id="702f-db1b-f8b2-c27" type="selectionEntry" targetId="d1f3-97e9-f50a-d1a4">
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="84e6-82f7-d181-8e72" type="selectionEntryGroup" targetId="d6f1-33e2-673e-c0c8"/>
@@ -667,7 +745,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Battlemage on Celestial Hurricanum" hidden="false" id="2c9f-2e5e-92d4-4707" type="selectionEntry" targetId="52f-1bc0-e898-f1a2">
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="fc2f-9d4d-b18d-f198" type="selectionEntryGroup" targetId="d6f1-33e2-673e-c0c8"/>
@@ -868,7 +946,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Callis and Toll" hidden="false" id="f534-437-b727-fa21" type="selectionEntry" targetId="bead-f727-a5cc-fde1">
       <costs>
-        <cost name="pts" typeId="points" value="210"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -1086,7 +1164,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Freeguild Marshal and Relic Envoy" hidden="false" id="68be-a563-c70e-652d" type="selectionEntry" targetId="326c-d13-626c-cfd">
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="a16f-cc45-8ccc-62b4" type="selectionEntryGroup" targetId="d6f1-33e2-673e-c0c8"/>
@@ -1195,7 +1273,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Fusil-Major on Ogor Warhulk" hidden="false" id="db4f-981-b206-2fc5" type="selectionEntry" targetId="7934-6325-c7ed-3d7b">
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="b301-54ff-eb98-e59f" type="selectionEntryGroup" targetId="d6f1-33e2-673e-c0c8"/>
@@ -1790,7 +1868,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="80"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="b5b1-bcc7-d071-3d8b" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
@@ -1831,7 +1909,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Celestial Hurricanum" hidden="false" id="4908-676b-34f0-f2a4" type="selectionEntry" targetId="d5a5-3182-b4f8-52a">
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1954,7 +2032,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="39b3-b6ee-5b62-83c6" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
@@ -2155,7 +2233,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="32ff-22db-2ace-783f" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
@@ -2288,7 +2366,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Ironweld Great Cannon" hidden="false" id="1792-e391-bd97-34aa" type="selectionEntry" targetId="8186-4957-8449-590c">
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2409,7 +2487,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="056b-d491-61fa-ad0e" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
@@ -2536,7 +2614,7 @@ In addition, if the target is **^^Duardin^^**, subtract 1 from hit rolls for co
     </entryLink>
     <entryLink import="true" name="Pontifex Zenestra, Matriarch of the Great Wheel (Scourge of Ghyran)" hidden="false" id="e25d-2f78-f664-8e4b" type="selectionEntry" targetId="2e94-0acc-b29b-fb64">
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="260"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="32d0-7d27-2c1e-03e7" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>

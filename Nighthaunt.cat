@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="30" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="37" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="f997-403-7b2e-60c6" hidden="false">
       <selectionEntryGroups>
@@ -38,6 +38,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -87,6 +88,11 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="d80d-2785-b16b-42d2" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
         <selectionEntryGroup name="Relics of Dolorum" id="4ea7-50a9-adb5-0619" hidden="true" publicationId="f894-7929-f79a-a269">
           <selectionEntries>
@@ -129,7 +135,7 @@
                 <profile name="Amulet of Waking Nightmares" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e361-90c6-4f95-2523">
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy **^^Hero^^** within 18&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** within 18&quot; of this unit to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the ‘Guarded Hero’ ability or the ‘Obscuring’ terrain ability.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -157,10 +163,16 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule name="Enhancement Restrictions" id="b88b-4550-0ea0-423c" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6ec6-5f7e-d50a-f5a4" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="a3e4-e9f7-561d-949c" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="963e-e312-bc51-9dee">
@@ -203,6 +215,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -222,7 +235,7 @@
           <profiles>
             <profile name="There Is No Escape" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4d0f-d04f-9fa4-4e8d">
               <characteristics>
-                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Nighthaunt^^** unit to be the target.</characteristic>
                 <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
 • The target unit can still use **^^Charge^^** and **^^Shoot^^** abilities even if it has used a **^^Retreat^^** ability in the same turn.
@@ -405,6 +418,7 @@
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -432,10 +446,16 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="0953-5ea6-3025-0ce6" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="258b-466a-ae4d-7be1" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="1a56-d351-8aae-6d25" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="09cc-8522-ae49-3a55">
@@ -477,7 +497,8 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="64f7-c71c-62fe-de26" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="213e-963a-4531-762a" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
-        <entryLink import="true" name="Paths" hidden="false" id="2410-9d93-4b05-1bcd" type="selectionEntryGroup" targetId="7fe4-98b1-b164-c0d9"/>
+        <entryLink import="true" name="Paths" hidden="false" id="2410-9d93-4b05-1bcd" type="selectionEntryGroup" targetId="7fe4-98b1-b164-c0d9" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="bd9d-ffd8-2018-dc15" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -505,6 +526,7 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="c479-9efd-f9a7-3b30" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="2042-88e2-5162-750d" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="be75-6430-3579-b956"/>
@@ -528,6 +550,7 @@
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="6d74-2fcd-273d-ac60" targetId="a434-b1ba-922b-7624" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="22f4-6981-54bb-8697" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="d67e-b4fe-2a02-fe2b" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="833c-3ebe-1247-4f87" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Nighthaunt" hidden="false" id="53c5-1078-24f5-3301">
@@ -588,7 +611,7 @@
   <entryLinks>
     <entryLink import="true" name="Awlrach the Drowner" hidden="false" id="e5fd-27bc-4ac3-4825" type="selectionEntry" targetId="d8ef-7494-db04-b1a9">
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5461-77ac-eabd-2d2c" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -701,7 +724,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="4e4c-4ac8-4ba7-9b9a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -796,7 +819,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="6b6f-1413-bbac-c50a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -843,7 +866,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="e646-092a-396f-3258" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -883,7 +906,7 @@
     </entryLink>
     <entryLink import="true" name="Kurdoss Valentian, the Craven King" hidden="false" id="78cd-3409-a94f-93f9" type="selectionEntry" targetId="9b2f-951a-816b-94c4">
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="26ea-ef58-d82a-e9d9" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -925,7 +948,7 @@
     </entryLink>
     <entryLink import="true" name="Lady Olynder, Mortarch of Grief" hidden="false" id="dc09-dae9-d3da-130e" type="selectionEntry" targetId="ee75-82ec-9c18-397b">
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="320"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b500-325c-a11d-0ff6" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -1072,7 +1095,7 @@
     </entryLink>
     <entryLink import="true" name="Reikenor the Grimhailer" hidden="false" id="df02-2a23-a841-4ce3" type="selectionEntry" targetId="ea83-60f1-bd67-d25">
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="220"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4aa9-1f33-faae-9407" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -1462,7 +1485,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="565c-4fc9-9c17-b5e2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Craventhrone Guard" hidden="false" id="7bc4-fd43-a3fe-4f5" type="selectionEntry" targetId="88e9-d216-bef6-b4fe">
@@ -1490,7 +1513,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="5197-8bf6-1464-ad56" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Dreadblade Harrows" hidden="false" id="c3f5-874e-e747-7454" type="selectionEntry" targetId="8639-e146-50ea-6d7">
@@ -1518,7 +1541,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="cd3e-b66a-9ec2-15e0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Dreadscythe Harridans" hidden="false" id="782b-e882-501f-5a3a" type="selectionEntry" targetId="1a20-8b80-4ae3-5168">
@@ -1574,7 +1597,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="15b7-40ae-755b-f7ab" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="80"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Grimghast Reapers" hidden="false" id="b4c8-f533-7c-68e9" type="selectionEntry" targetId="1cc8-87db-4e0c-223e">
@@ -1630,7 +1653,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="97a7-bbd9-c5e6-2df9" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Myrmourn Banshees" hidden="false" id="e01e-ae3-b250-7f09" type="selectionEntry" targetId="ca83-a38b-b1c6-f4e6">
@@ -1680,7 +1703,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d818-9ba1-a496-9533" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -1773,7 +1796,7 @@
     </entryLink>
     <entryLink import="true" name="Kurdoss Valentian, the Craven King (Scourge of Ghyran)" hidden="false" id="32f6-c36d-e259-ba3b" type="selectionEntry" targetId="4bd5-32fb-6e98-2357">
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="eebf-80f2-4101-9dca" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>
@@ -1886,7 +1909,7 @@
         <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="dbb5-365b-685a-c201"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="310"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3849-3c8e-dd99-c8db" type="selectionEntryGroup" targetId="1cb4-1572-5a03-ef40"/>

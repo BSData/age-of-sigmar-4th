@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="de5f-588b-ea57-d6b5" name="Sons of Behemat" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="de5f-588b-ea57-d6b5" name="Sons of Behemat" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Warstomper Mega-Gargant" hidden="false" id="d1bb-dfda-17e7-3252" type="selectionEntry" targetId="5201-4045-7632-5a40">
       <entryLinks>
@@ -231,7 +231,7 @@
     </entryLink>
     <entryLink import="true" name="Kragnos, the End of Empires" hidden="false" id="c8d4-842d-67ce-e536" type="selectionEntry" targetId="7c7-7226-5b84-b87c">
       <costs>
-        <cost name="pts" typeId="points" value="580"/>
+        <cost name="pts" typeId="points" value="590"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2662-d443-a8c7-082d" type="selectionEntryGroup" targetId="4050-c9ec-780e-5dd6"/>
@@ -353,7 +353,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="3b07-9bc8-2dfe-eba7" type="selectionEntryGroup" targetId="ab13-cdc6-8e89-defd"/>
@@ -375,7 +375,7 @@
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="370"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Paths" hidden="false" id="94d1-1c5e-40a4-7d3d" type="selectionEntryGroup" targetId="ab13-cdc6-8e89-defd"/>
@@ -393,7 +393,7 @@
         <entryLink import="true" name="Renown" hidden="false" id="c707-89ef-6f42-b985" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="480"/>
+        <cost name="pts" typeId="points" value="450"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -451,6 +451,7 @@
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="1b2a-3215-6a84-2ee9" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="e0bd-6afc-a712-2875" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="8080-67f4-f3b4-d629" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="6c95-8d8d-ce07-c029" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Sons of Behemat" hidden="false" id="590e-e726-f603-60eb">
@@ -585,6 +586,11 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="d9e8-63d5-65f7-bee0" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
         <selectionEntryGroup name="Big Personalities" id="2e72-6c6e-7b02-2e9b" hidden="true" publicationId="f894-7929-f79a-a269">
           <selectionEntries>
@@ -655,10 +661,16 @@
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule name="Enhancement Restrictions" id="e90d-d29f-ae81-5ae1" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b1c1-c952-7974-fcb8" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="63f4-a22a-0ab8-ead2" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="de4f-dbc6-bb52-e106">
@@ -746,6 +758,26 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f73-1eb2-2986-6143" includeChildSelections="true"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Mantle of Tusk and Horns" hidden="false" id="b848-e898-1112-5358" publicationId="b765-4747-cddc-385e">
               <profiles>
@@ -766,6 +798,26 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8ad5-3a2c-e2cc-8b92" includeChildSelections="true"/>
               </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Kingslaughter Cowl" hidden="false" id="af21-2013-aa28-2bb4" publicationId="b765-4747-cddc-385e">
               <profiles>
@@ -785,10 +837,16 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="235a-db9c-b5e8-4bd7" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="6776-2338-2904-2bf9" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="1425-ae78-bc9a-42cf" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="1423-3cc1-5626-7a31">
@@ -963,6 +1021,8 @@
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="6869-f2d1-fb3a-c954" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="3696-8573-79bc-9dd1" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="8f1e-20f7-d273-c0ea" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="473a-55fe-cc45-261d"/>
@@ -984,6 +1044,7 @@
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="650e-b728-19a7-7601" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="bdfd-98ab-ce30-28ae" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="9439-b89c-d1cb-29c9" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">

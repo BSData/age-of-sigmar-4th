@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d545-cdca-9e60-ad27" name="Blades of Khorne" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="43" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1ede-f90-a661-b6c2" hidden="false">
       <selectionEntryGroups>
@@ -15,6 +15,7 @@
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
                     <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -35,6 +36,7 @@
                   <attributes>
                     <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
                     <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                    <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -52,6 +54,7 @@
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                     <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -60,10 +63,16 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="2da1-3780-55a4-737f" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="d1a0-321a-467c-1cfd" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="3664-ea7e-6bbf-4ef0" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="e0de-8ed2-494c-9e0b">
@@ -92,6 +101,7 @@
               <attributes>
                 <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
                 <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -105,13 +115,14 @@
               <characteristics>
                 <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for a friendly **^^Blades of Khorne Daemon^^** unit</characteristic>
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **^^Bloodbound^^** unit that has not used a **^^Fight^^** ability this turn and is within 12&quot; of the unit using this ability to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **^^Bloodbound^^** unit that has not used a **^^Fight^^** ability this turn and is wholly within 12&quot; of the unit using this ability to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                 <characteristic name="Used By" typeId="1b32-c9d6-3106-166b">The unit using that **^^Fight^^** ability.</characteristic>
               </characteristics>
               <attributes>
                 <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                 <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -123,7 +134,7 @@
           <profiles>
             <profile name="Eager Killers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="989c-d958-d667-7b15">
               <characteristics>
-                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Enf of Your Turn</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Your Turn</characteristic>
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                 <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each friendly **Blades of Khorne Daemon^^** unit that has used a **^^Fight^^** ability this turn and is not in combat can move D6&quot;. It cannot end that move in combat.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -132,6 +143,7 @@
               <attributes>
                 <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
                 <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -158,6 +170,7 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
               <attributes>
                 <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
                 <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -178,6 +191,7 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
               <attributes>
                 <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
                 <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -210,6 +224,7 @@ Add 1 to hit rolls for combat attacks made by friendly **^^Bloodbound^^** unit
               <attributes>
                 <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
                 <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
               </attributes>
             </profile>
           </profiles>
@@ -246,6 +261,7 @@ Subtract 1 from chanting rolls for enemy **^^Priests^^** while they are within 1
                   <attributes>
                     <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
                     <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -267,6 +283,7 @@ This unit can be affected by this ability multiple times and the effects are cum
                   <attributes>
                     <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
                     <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -287,6 +304,7 @@ This unit can be affected by this ability multiple times and the effects are cum
                   <attributes>
                     <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
                     <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -295,10 +313,16 @@ This unit can be affected by this ability multiple times and the effects are cum
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="2938-d6b0-da51-7b85" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="93e1-fc4f-e913-e13f" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="45e7-5eb6-7971-0068" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="2027-31f9-009c-1cd7">
@@ -374,6 +398,7 @@ This unit can be affected by this ability multiple times and the effects are cum
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="aa8f-4cbb-7e4b-eb5e" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="4a3f-9215-032b-1ed8" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="d906-fb02-4a48-6c73"/>
@@ -396,6 +421,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="a6da-d9ad-7fd5-d221" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="1fa6-a190-6cfb-1f5a" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
         <entryLink import="true" name="Paths" hidden="false" id="bd9a-f47b-6edc-2880" type="selectionEntryGroup" targetId="1669-fe17-fbf3-0b96"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="5c27-97aa-af2e-41a8" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -414,12 +440,12 @@ This unit can be affected by this ability multiple times and the effects are cum
       <profiles>
         <profile name="Blood-drenched" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="eb7f-4967-8702-afca">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can use this ability if at least half the number of units on both player&apos; army rosters combined (rounding up) have been destroyed. For example, if your roster had 9 units and your opponent&apos;s roster had 4 units, then 7 units would need to have been destroyed.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The following effects apply for the rest of the battle:
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared the &apos;Skulls for the Skull Throne&apos; ability</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After that ability has been resolved, if you unlocked a **^^Blood Tithe^^** ability this turn, pick a friendly **^^Blades of Khorne^^** unit to be the target. The following effects apply to the target for the rest of the battle:
 ***Wild-eyed Brutality:*** Ignore positive modifiers to save rolls for friendly **^^Blades of Khorne^^** units.
 ***Blood Haze:*** **Blood-hungry** weapons used by friendly **^^Bloodbound^^** units have **Crit (Mortal)**.
-***Weapons of Murder:*** Add 1 to the Rend characteristic of **Blood-hungry** weapons used by friendly **^^Blades of Khorne^^** non-**^^Monster^^ Daemon^^** units, including **Blood-hungry Companion** weapons.
+***Weapons of Murder:*** Add 1 to the Rend characteristic of **Blood-hungry** weapons used by friendly **^^Blades of Khorne^^** non-**^^Monster Daemon^^** units, including **Blood-hungry Companion** weapons.
 ***Bloodlords Supreme:*** Add 1 to the Damage characteristic of **Blood-hungry** weapons used by friendly **^^Blades of Khorne Monster^^** units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -427,6 +453,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
           </attributes>
         </profile>
         <profile name="Blood for the Blood God" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="394d-bccb-ffa4-118c" publicationId="81a9-3dbf-dbc5-672e">
@@ -437,11 +464,12 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute typeId="e2e1-15ca-d345-22b8" name="New Attribute Type"/>
           </attributes>
         </profile>
         <profile name="Skulls for the Skull Throne" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3c67-66e4-25ed-6b12" publicationId="81a9-3dbf-dbc5-672e">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round, Start of Any Turn</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a **^^Blood Tithe^^** ability that you have not unlocked and spend the number of blood tithe points required to unlock that ability. That **^^Blood Tithe^^** ability is now unlocked for the rest of the battle.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -450,6 +478,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="New Attribute Type"/>
           </attributes>
         </profile>
         <profile name="Murderlust" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="6d28-b92b-4fb1-bb0e">
@@ -465,6 +494,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Orange</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Movement</attribute>
+            <attribute typeId="540d-cdd1-5262-593f" name="New Attribute Type"/>
           </attributes>
         </profile>
         <profile name="Divine Scorn" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="4ad6-054b-9e41-1df8">
@@ -480,6 +510,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Black</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Special</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">6d28-b92b-4fb1-bb0e</attribute>
           </attributes>
         </profile>
         <profile name="Punish the Pacifist" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="9fd3-0eec-9806-d3c8">
@@ -495,6 +526,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Red</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Offensive</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">6d28-b92b-4fb1-bb0e</attribute>
           </attributes>
         </profile>
         <profile name="Murder the Mystic" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="8385-c7fa-9ff7-7b88">
@@ -510,6 +542,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Yellow</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Special</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">4ad6-054b-9e41-1df8</attribute>
           </attributes>
         </profile>
         <profile name="Glorious Combat or Naught" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="2b69-3316-d2c2-1441">
@@ -525,6 +558,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Green</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Defensive</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">4ad6-054b-9e41-1df8, 9fd3-0eec-9806-d3c8</attribute>
           </attributes>
         </profile>
         <profile name="Revel in Battle" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="83d6-6dad-ffeb-c430">
@@ -540,6 +574,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Green</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Defensive</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">9fd3-0eec-9806-d3c8</attribute>
           </attributes>
         </profile>
         <profile name="Slaughter Triumphant" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="47d5-9e49-402b-b936">
@@ -555,6 +590,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Red</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Special</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">8385-c7fa-9ff7-7b88, 2b69-3316-d2c2-1441</attribute>
           </attributes>
         </profile>
         <profile name="Cleave Wide the Grin of Khorne" typeId="5453-37d7-6d37-db1b" typeName="Ability (Blood Tithe)" hidden="false" id="4ec0-1c53-d054-99f3">
@@ -570,6 +606,7 @@ This unit can be affected by this ability multiple times and the effects are cum
           <attributes>
             <attribute name="Color" typeId="9019-1a17-dfdb-d171">Red</attribute>
             <attribute name="Type" typeId="ba97-56ed-9674-f836">Special</attribute>
+            <attribute name="Parent Node" typeId="540d-cdd1-5262-593f">2b69-3316-d2c2-1441, 83d6-6dad-ffeb-c430</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -588,6 +625,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="eb87-eb99-d57c-0fb9" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="6f3c-330d-daa1-69ab" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="e51f-abe2-5214-e787" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="8ab8-0cb7-594a-2fe8" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="Bloodbound Warmonger" id="9a4a-9555-d827-3700" hidden="false">
@@ -720,7 +758,7 @@ This unit can be affected by this ability multiple times and the effects are cum
   <entryLinks>
     <entryLink import="true" name="Wrath of Khorne Bloodthirster" hidden="false" id="2276-240a-fde6-d60a" type="selectionEntry" targetId="3759-4ff4-40bf-6f48">
       <costs>
-        <cost name="pts" typeId="points" value="410"/>
+        <cost name="pts" typeId="points" value="400"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="cdb3-bd0a-5be5-a877" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -814,7 +852,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Bloodsecrator" hidden="false" id="290e-14c1-e70b-667d" type="selectionEntry" targetId="9943-f207-9aef-190c">
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8778-3d8a-1354-28a6" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -936,7 +974,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Bloodthirster of Insensate Rage" hidden="false" id="b47-5a22-e61b-ab3e" type="selectionEntry" targetId="ac0a-f4e1-99b-9562">
       <costs>
-        <cost name="pts" typeId="points" value="420"/>
+        <cost name="pts" typeId="points" value="410"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b448-1d4c-e7c3-d669" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -997,7 +1035,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Bloodthirster of Unfettered Fury" hidden="false" id="6b18-2904-953d-b406" type="selectionEntry" targetId="9aae-e077-190b-d63b">
       <costs>
-        <cost name="pts" typeId="points" value="410"/>
+        <cost name="pts" typeId="points" value="390"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="b38d-45f7-a3d0-47d4" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -1194,7 +1232,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Mighty Lord of Khorne" hidden="false" id="e0c4-7af2-b0a2-4718" type="selectionEntry" targetId="d9d9-55ad-2a9f-acf9">
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="d93f-57d7-dbd9-6230" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -1242,7 +1280,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Realmgore Ritualist" hidden="false" id="73c8-9db7-15d-b03a" type="selectionEntry" targetId="2592-295e-eed8-361b">
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7b10-553e-cadc-6720" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -1288,7 +1326,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Skarbrand" hidden="false" id="3b5f-188e-d4b6-f639" type="selectionEntry" targetId="b1a1-2377-3fa4-f264">
       <costs>
-        <cost name="pts" typeId="points" value="450"/>
+        <cost name="pts" typeId="points" value="410"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4a19-3360-ffc9-1e26" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
@@ -1371,7 +1409,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Skullgrinder" hidden="false" id="4064-c696-b71c-bf4d" type="selectionEntry" targetId="1232-f6cb-9900-bcba">
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="8699-2994-df05-3ebd" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -1609,7 +1647,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bloodcrushers" hidden="false" id="30d8-16aa-d02d-4f25" type="selectionEntry" targetId="713c-ba47-3b7f-b1d3">
@@ -1637,7 +1675,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Renown" hidden="false" id="95cb-c92e-4ebd-ab26" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Daemon Cavalry" hidden="false" id="3f1e-9115-548d-1406" targetId="ce69-658f-fa6e-d047" primary="false"/>
@@ -1668,7 +1706,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Renown" hidden="false" id="d4fc-1131-a27b-75cb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="170"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bloodreavers" hidden="false" id="8b29-3e13-6ac9-32cb" type="selectionEntry" targetId="187b-b09b-5efa-c1e5">
@@ -1833,7 +1871,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Renown" hidden="false" id="4e98-a34c-1b8a-c355" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Mighty Skullcrushers" hidden="false" id="43ab-b78f-ece8-f497" type="selectionEntry" targetId="f1ab-e54f-103c-3c0b">
@@ -1861,7 +1899,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Renown" hidden="false" id="6233-9f59-1674-3343" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Valkia the Bloody" hidden="false" id="c92d-39f9-4a9e-e505" type="selectionEntry" targetId="6bd2-bd18-aef2-ef44">
@@ -2052,7 +2090,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Renown" hidden="false" id="b175-6321-3d39-ec6f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Skull Altar" hidden="false" id="2f8c-2a42-f2c6-9391" type="selectionEntry" targetId="f038-6876-40e8-5093"/>
@@ -2081,7 +2119,7 @@ This unit can be affected by this ability multiple times and the effects are cum
         <entryLink import="true" name="Renown" hidden="false" id="03b7-ddd1-c706-d256" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Daemon Cavalry" hidden="false" id="42eb-8e2b-81b5-c9b5" targetId="ce69-658f-fa6e-d047" primary="false"/>
@@ -2089,7 +2127,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Mighty Lord of Khorne (Scourge of Ghyran)" hidden="false" id="9c1f-a69f-f507-a1b5" type="selectionEntry" targetId="c529-fdee-8056-75d6">
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="4e74-3e69-6914-a827" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -2221,7 +2259,7 @@ This unit can be affected by this ability multiple times and the effects are cum
     </entryLink>
     <entryLink import="true" name="Deathbringer" hidden="false" id="dca7-a51b-8501-6e91" type="selectionEntry" targetId="9c54-dbf9-f5be-a8b3">
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="f883-aab8-3fe4-e6c9" type="selectionEntryGroup" targetId="a357-4cbf-d348-1134"/>
@@ -2324,6 +2362,32 @@ This unit can be affected by this ability multiple times and the effects are cum
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Kamandora&apos;s Blades" hidden="false" id="1c84-6550-08b3-ebef" type="selectionEntry" targetId="44b3-c646-68ef-8dad">
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cc6c-10cc-3971-fc5d" type="selectionEntryGroup" targetId="6dcf-7de6-0f0f-bfc6"/>
+        <entryLink import="true" name="Renown" hidden="false" id="4030-1f67-bcf6-f906" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>

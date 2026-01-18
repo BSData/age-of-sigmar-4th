@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Hedonites of Slaanesh - Library" id="253b-dcd3-c7aa-eab" targetId="34e0-2290-e185-efd2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fbec-3fce-0906-d052" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
     <catalogueLink type="catalogue" name="❖ Lores" id="147f-49b2-d260-5bb8" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="8667-cf1a-91cc-ff1a" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="3bab-a19c-06e1-ff52" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Hedonites of Slaanesh" hidden="false" id="77b8-2e38-40f0-4472">
@@ -34,8 +35,7 @@ At the end of the battle round, any temptation dice that have not been used ar
 • That unit can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.
 
 
-**Designer’s Note:** ***Note that ‘Sadistic Spite’ does not affect
-**Companion** weapons.***</characteristic>
+**Designer’s Note:** ***Note that ‘Sadistic Spite’ does not affect **Companion** weapons.***</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -93,7 +93,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5575-472b-472a-ffcf" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
+                <cost name="pts" typeId="points" value="10"/>
                 <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
                 <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                 <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -106,6 +106,7 @@ At the end of the battle round, any temptation dice that have not been used ar
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -133,10 +134,16 @@ At the end of the battle round, any temptation dice that have not been used ar
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="7e8b-2363-ff4a-406b" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="4700-38d3-e033-6dee" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="e831-3303-a580-ae25" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="805c-6ed4-2659-03b8">
@@ -280,7 +287,25 @@ At the end of the battle round, any temptation dice that have not been used ar
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="0" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+            <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+            <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+            <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -343,6 +368,11 @@ At the end of the battle round, any temptation dice that have not been used ar
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="8c81-7a11-2000-2ec2" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
         <selectionEntryGroup name="Hedonistic Obsessions" id="ddd8-a70f-9706-3bb8" hidden="true" publicationId="f894-7929-f79a-a269">
           <selectionEntries>
@@ -416,10 +446,16 @@ At the end of the battle round, any temptation dice that have not been used ar
               </conditionGroups>
             </modifier>
           </modifiers>
+          <rules>
+            <rule name="Enhancement Restrictions" id="9c49-39e1-590e-8c44" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="64a6-edf0-9b66-f431" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="cb5a-e1b2-1e56-6ad4" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="-1" field="54cc-8a45-9890-1fc1">
@@ -475,6 +511,7 @@ At the end of the battle round, any temptation dice that have not been used ar
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="9523-9d7f-61d5-f3ea" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="6f6c-671d-8c7b-bac8" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="622f-2a4d-022d-5203"/>
@@ -496,6 +533,7 @@ At the end of the battle round, any temptation dice that have not been used ar
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="1f33-461b-b551-c4eb" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="f970-f641-d6a3-fd9e" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
+        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="e30e-af78-05c8-adfb" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -512,7 +550,7 @@ At the end of the battle round, any temptation dice that have not been used ar
   <entryLinks>
     <entryLink import="true" name="The Masque" hidden="false" id="5c24-aded-3430-9992" type="selectionEntry" targetId="19fa-187-b059-ffce">
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="aea2-eb07-8042-ef9a" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -623,7 +661,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="ba5e-388d-5c99-498e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="150"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -662,7 +700,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Dexcessa, the Talon of Slaanesh" hidden="false" id="fa3c-59e-ef8e-d133" type="selectionEntry" targetId="7c43-7c1e-d92c-f199">
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="777a-ab00-f18d-0e24" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -706,7 +744,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Glutos Orscollion, Lord of Gluttony" hidden="false" id="e6cc-9cda-6e08-4921" type="selectionEntry" targetId="fac2-b0a0-feec-f70f">
       <costs>
-        <cost name="pts" typeId="points" value="470"/>
+        <cost name="pts" typeId="points" value="440"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="f632-79d6-f7e6-6e22" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -863,7 +901,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         <entryLink import="true" name="Renown" hidden="false" id="cc21-f649-8229-baf6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <modifiers>
         <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
@@ -977,7 +1015,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Shalaxi Helbane" hidden="false" id="3dc-2b50-5aef-e9d4" type="selectionEntry" targetId="288-b306-7776-96b5">
       <costs>
-        <cost name="pts" typeId="points" value="460"/>
+        <cost name="pts" typeId="points" value="450"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="90c9-926e-8d5c-5e4b" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1066,7 +1104,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Sigvald, Prince of Slaanesh" hidden="false" id="c193-2e94-c3ab-ca05" type="selectionEntry" targetId="a172-db1d-3ad4-c354">
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3289-4f66-d1e4-478a" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1123,7 +1161,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Syll&apos;Esske, the Vengeful Allegiance" hidden="false" id="de65-6b19-da44-4b2b" type="selectionEntry" targetId="89b7-8cfa-f458-12c0">
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="218b-fa91-e045-edac" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1166,7 +1204,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Synessa, the Voice of Slaanesh" hidden="false" id="c3d7-ea6c-249e-8e86" type="selectionEntry" targetId="eb63-b209-7932-2b43">
       <costs>
-        <cost name="pts" typeId="points" value="210"/>
+        <cost name="pts" typeId="points" value="190"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8dfb-d5be-b5e4-e4ef" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
@@ -1410,7 +1448,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Seeker Chariot" hidden="false" id="3cea-692e-73de-99f9" type="selectionEntry" targetId="4b99-af35-44db-7fd8">
@@ -1494,7 +1532,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Slaangor Fiendbloods" hidden="false" id="8a7-1210-c207-e110" type="selectionEntry" targetId="de32-60a4-2468-ea8a">
@@ -1550,7 +1588,7 @@ At the end of the battle round, any temptation dice that have not been used ar
         </modifier>
       </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
     </entryLink>
     <entryLink import="true" name="Bladebringer, Herald on Hellflayer" hidden="false" id="e3d9-a963-625b-cc36" type="selectionEntry" targetId="5c8d-d6ce-1035-6969">
@@ -1803,7 +1841,7 @@ At the end of the battle round, any temptation dice that have not been used ar
     </entryLink>
     <entryLink import="true" name="Syll&apos;Esske, the Vengeful Allegiance (Scourge of Ghyran)" hidden="false" id="d9c2-48f7-cb40-ca34" type="selectionEntry" targetId="8d85-ce05-2e48-02e9">
       <costs>
-        <cost name="pts" typeId="points" value="230"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="dc14-3c31-514a-21b9" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
