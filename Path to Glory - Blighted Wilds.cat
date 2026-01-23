@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -1644,6 +1644,11 @@
                     <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Ghyranite Mount" id="c6a6-c5d4-dcec-35d4" hidden="true">
@@ -1695,6 +1700,16 @@ Then, make the following changes to your Regiment Hero&apos;s warscroll:
                     <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="2752-678a-0e51-69a2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
               <rules>
                 <rule name="Ghyranite Fiend" id="3af9-549c-7ed3-751d" hidden="true">
@@ -1731,7 +1746,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               <rules>
                 <rule name="Ghyranite Colossus" id="fe7b-1562-e618-e1ea" hidden="true">
                   <description>Non-**^^Hero^^** non-**^^Beast^^** unit only.
-If the unit is **^^Infantry^^**, **^^Monster^^**, or a **Ghyranite Bombard**, add the **Ghyranite Monstrosity&apos;s Maw** and **Ghyranite Monstrosity&apos;s Claws** weapons and the &apos;Battle Damaged&apos; ability to your Regiment Hero&apos;s warscroll. If the unit is a **Ghyranite Chariot, replace its **Companion** weapon with the **Ghyranite Monstrosity&apos;s Maw** and **Ghyranite Monstrosity&apos;s Claws** weapons.
+If the unit is **^^Infantry^^**, **^^Monster^^**, or a **Ghyranite Bombard**, add the **Ghyranite Monstrosity&apos;s Maw** and **Ghyranite Monstrosity&apos;s Claws** weapons and the &apos;Battle Damaged&apos; ability to your Regiment Hero&apos;s warscroll. If the unit is a **Ghyranite Chariot**, replace its **Companion** weapon with the **Ghyranite Monstrosity&apos;s Maw** and **Ghyranite Monstrosity&apos;s Claws** weapons.
 In addition, make the following changes to your Regiment Hero&apos;s warscroll:
 • Change the Move characteristic to 12&quot;.
 • Add 5 to the Health characteristic.
@@ -1745,6 +1760,13 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8948-0981-5eec-bc6b"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b224-8c8e-ca93-9860" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Upgrades" id="b23c-9470-e041-df8d" hidden="false" sortIndex="2">
           <selectionEntries>
@@ -2524,9 +2546,14 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1082-c623-0f2d-dbc3" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1082-c623-0f2d-dbc3" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f0b6-b8c7-eb61-76f5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
                   <repeats>
@@ -2559,9 +2586,14 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </rules>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6cfc-64cf-22bb-3d09" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f0b6-b8c7-eb61-76f5" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6cfc-64cf-22bb-3d09" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="decrement" value="1" field="bc33-05f5-8d3f-af43">
                   <repeats>
@@ -2978,7 +3010,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </modifiers>
               <rules>
                 <rule name="Healthy Physique" id="8dd6-2d80-5112-65be" hidden="true">
-                  <description>Add 1 to this unit&apos;s Control characteristic.</description>
+                  <description>Add 1 to this unit&apos;s Health characteristic.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -3327,7 +3359,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
               </costs>
               <rules>
                 <rule name="Brutal Strikes" id="895f-c12c-13e4-2068" hidden="true">
-                  <description>Pick 1 of this unit&apos;s melee weapons. Add 1 to that weapon&apos;s Damage characteristic.</description>
+                  <description>Pick 1 of this unit&apos;s weapons. Add 1 to that weapon&apos;s Damage characteristic.</description>
                 </rule>
               </rules>
               <selectionEntryGroups>
