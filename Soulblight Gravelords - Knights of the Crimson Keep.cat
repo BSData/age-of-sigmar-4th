@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a00b-ece9-a93d-7ca4" name="Soulblight Gravelords - Knights of the Crimson Keep" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a00b-ece9-a93d-7ca4" name="Soulblight Gravelords - Knights of the Crimson Keep" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="18" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Knights of the Crimson Keep" hidden="false" id="be88-5863-24a9-c376" publicationId="e3a0-cfae-cbb3-0215">
       <profiles>
@@ -408,6 +408,37 @@ At the start of the next turn, remove all this unit&apos;s **martial prowess tok
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="33e7-cb3d-bc1b-06a0" includeChildSelections="true"/>
       </constraints>
+    </entryLink>
+    <entryLink import="true" name="Fell Bats" hidden="false" id="7039-8cff-d4dc-52a5" type="selectionEntry" targetId="39a-8a99-a014-7427">
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="87a9-3267-31f3-d62c" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ecaf-ed83-32c0-77f3" type="selectionEntryGroup" targetId="060e-e5b2-5e43-8757"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8739-7200-c7b2-3fb3" type="selectionEntryGroup" targetId="0dc3-325d-f922-28cc"/>
+        <entryLink import="true" name="Renown" hidden="false" id="2bb4-3202-c78d-6353" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="CRIMSON KEEP" hidden="false" id="a0f4-d8c2-6151-fff8" targetId="9e1f-bc4f-fd30-d770" primary="false"/>
+      </categoryLinks>
     </entryLink>
   </entryLinks>
   <selectionEntries>
