@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="a434-b1ba-922b-7624" name="✦ Path to Glory - Ravaged Coast" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="4" revision="35" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="a434-b1ba-922b-7624" name="✦ Path to Glory - Ravaged Coast" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="4" revision="36" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Emberstone Vault" hidden="true" id="9690-5cb8-3ced-af49">
       <selectionEntries>
@@ -89,6 +89,126 @@
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ravaged Coast Abilities" hidden="true" id="18c2-a3b2-58b3-3108">
+      <categoryLinks>
+        <categoryLink name="Reference" hidden="false" id="4635-0b31-7ce9-1153" targetId="3360-1158-e879-9606" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Stalled Reinforcements" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c608-7aa8-9907-2cb8">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a number of friendly units with a combined points value equal to or greater than the surplus value to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up those units in reserve as **stalled reinforcements**. They have now been deployed. If any **stalled reinforcements** are part of a regiment, the other units in that regiment can still be deployed using the &apos;Deploy Regiment&apos; ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Timely Arrival" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9f95-6d0a-0979-008b">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **stalled reinforcement** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, set up the target in friendly territory wholly within 6&quot; of a battlefield edge and more than 9&quot; from all enemy units. If it is not possible to set up the target, it remains in reserve as a **Stalled reinforcement**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Aqshian Anger" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c181-2805-a78a-ce14">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If a unit uses the &apos;All-out Attack&apos; command, add 1 to hit rolls for attacks that target that unit for the rest of the phase.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Poisoned Domain" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9ae5-e4eb-80c8-38e0">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Your Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick all units (friendly and enemy) within 1&quot; of any terrain features to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 1, inflict D6 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Collect Emberstone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ffb2-60af-70cb-abd1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Your Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an emberstone cluster on the battlefield and determine control of it as if it were an objective (Core Rules, 32.2). If you control that emberstone cluster, pick a friendly unit within 3&quot; of it that is not in combat and does not have an **emberstone token** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 1, inflict D3 mortal damage on each unit within 3&quot; of that emberstone cluster, then remove that emberstone cluster from the battlefield. On a 2-6, remove that emberstone cluster from the battlefield and give the target an **emberstone token**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Filled with Fury" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d22c-d8ce-609f-f8fc">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a unit has an emberstone token:
+• Subtract 1 from save rolls for that unit.
+• Add 1 to wound rolls for attacks made by that unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Dig for Emberstone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f3a9-817d-5ca5-62db">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Final Battle Round</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective that you control to be a **dig site**. You cannot pick the same objective more than once per battle. Then, pick a friendly unit that is not in combat and is contesting that **dig site** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 1, inflict 1 battle wound on the target. On a 4+, give the target an **emberstone token**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0556-2b0f-c770-f53a" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>

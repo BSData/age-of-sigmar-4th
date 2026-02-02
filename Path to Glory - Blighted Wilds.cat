@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -4255,6 +4255,120 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
       <categoryLinks>
         <categoryLink name="Army Composition" hidden="false" id="340a-e2e6-6017-170c" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blighted Wilds Abilities" hidden="true" id="d3f2-b089-cd9f-f403">
+      <categoryLinks>
+        <categoryLink name="Reference" hidden="false" id="632c-e32e-d35c-7eaa" targetId="3360-1158-e879-9606" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="78a1-f6c2-71b8-270a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Stalled Reinforcements" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d3fb-3816-9bf2-f3b3">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a number of friendly units with a combined points value equal to or greater than the surplus value to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up those units in reserve as **stalled reinforcements**. They have now been deployed. If any **stalled reinforcements** are part of a regiment, the other units in that regiment can still be deployed using the &apos;Deploy Regiment&apos; ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Timely Arrival" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="437b-df1a-3523-3a33">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can use this ability from the second battle round onwards. Pick a friendly **stalled reinforcement** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Subtract 1 from the roll if the target is a **^^Hero^^** or reinforced unit and subtract 1 from the roll if the target is a **^^Monster^^**. On a 4+, set up the target in friendly territory wholly within 6&quot; of a battlefield edge and more than 9&quot; from all enemy units. If it is not possible to set up the target, it remains in reserve as a **Stalled reinforcement**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Strategic Mastery" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7567-1bf2-0e63-5353">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If your opponent seized the initiative this battle round and you have not seized the initiative this battle, roll a dice for each command point your opponent has. For each 5+, your opponent loses 1 command point and you gain 1 command point.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Blighted Waters" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="892b-57a7-c839-8e4d">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Your Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Randomly pick a **contaminated** terrain feature. If that terrain feature has been **remediated** by your opponent&apos;s army, pick each friendly unit within 3&quot; of that terrain feature to be the targets. Otherwise, pick each unit within 3&quot; of that terrain feature to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a contamination roll of D3 for each target. On a 1, inflict 1 mortal damage on the target. On a 2+, the target has **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Damage</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Purify the Land" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d6b5-b7bf-e3ec-bc0a">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit within 3&quot; of a **contaminated** terrain feature to use this ability, then pick that **contaminated** terrain feature to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a remediation roll of D6. On a 3+:
+• The target is **remediated** by your army for the rest of the battle and you no longer consider it to be contaminated.
+• The unit using this ability gains 2 renown points.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Boon of Vitality" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7dba-aaf2-72b2-83cd">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit that is not in combat and that is within 3&quot; of a terrain feature that has been **remediated** by your army to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice and apply the corresponding effect below.
+1-2 No effect.
+3 Add 1 to run rolls and charge rolls for the target until the start of your next turn.
+4 Subtract 1 from wound rolls for attacks that target that friendly unit until the start of your next turn.
+5 The target has **^^Ward (5+)^^** until the start of your next turn.
+6 The target can immediately use the &apos;Rally&apos; command as if it were your hero phase without any command points being spent. If it does so, you can make 3 additional rally rolls of D6.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b280-ce8f-c517-e045" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
