@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f864-1661-71bb-41bb" name="Lumineth Realm-lords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f864-1661-71bb-41bb" name="Lumineth Realm-lords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Vanari Starshard Ballista" hidden="false" id="ac41-4a7-88c5-9ab2" publicationId="9ed1-cf74-eb97-dee2">
       <categoryLinks>
@@ -19,9 +19,9 @@
         </profile>
         <profile name="Blinding Bolts" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="828b-2328-c7a1-20aa">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Shooting Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If all of this unit’s shooting attacks this turn target the same enemy unit, subtract 1 from hit rolls for the target’s attacks for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), AnyShooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that was targeted by all this unit&apos;s shooting attacks this phase to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if the target is a **^^Monster^^**. On a 3+, subtract 1 from hit rolls for the target&apos;s attacks for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -31,13 +31,10 @@
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Scryhawks" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c482-2503-bb47-ebe6">
+        <profile name="Scryhawks" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c482-2503-bb47-ebe6">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Shooting Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 6&quot; to the Range characteristic of this unit’s **Starshard Bolts** while it is wholly within 12&quot; of any friendly **Vanari Auralan Sentinels** units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 6&quot; to the Range characteristic of this unit’s **Starshard Bolts** while it is wholly within 12&quot; of any friendly **Vanari Auralan Sentinels** units.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
@@ -58,12 +55,12 @@
                 <profile name="Starshard Bolts" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="9e36-87ad-a37d-28f5">
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">24&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (2 Hits), Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">2</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Monster^^** (+1 Rend), Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -81,7 +78,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -127,29 +124,29 @@
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Stonemage Symbiosis" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a3d-e952-1095-e493">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The ‘Battle Damaged’ ability has no effect on this unit while it is wholly within 12&quot; of a friendly **Alarith Stonemage**.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
-        <profile name="Stoneheart Shockwave" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6991-4501-7520-7dca">
+        <profile name="Rain of Stone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6991-4501-7520-7dca">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, the target has **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. Add 2 to the roll if the target charged this turn. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="With the Force of a Landslide" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0405-956c-eb14-4cfe">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit&apos;s **Firestealer Hammers** for each instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="5c69-e4b9-19bc-e801" name="Color">Red</attribute>
+            <attribute typeId="2bd5-08f1-f3d1-86f7" name="Type">Offensive</attribute>
+            <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
           </attributes>
         </profile>
       </profiles>
@@ -165,28 +162,10 @@
                 <profile name="Stoneheart Worldhammer" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2fb6-55bc-565d-d330">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">5</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Cloven Hooves" hidden="false" id="fa6-306c-319-a675">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="851d-8f19-dcb8-5c5f"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="291a-6ab8-b109-cc46"/>
-              </constraints>
-              <profiles>
-                <profile name="Cloven Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d434-6681-3db2-2a0e">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -206,7 +185,7 @@
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -244,7 +223,7 @@
         <profile name="Ellania and Ellathor, Eclipsian Warsages" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="788d-b451-22d5-31c8">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">8</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">10</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">4</characteristic>
           </characteristics>
@@ -254,20 +233,21 @@
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">8</characteristic>
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, the first time an enemy unit uses a command within 18&quot; of this unit, your opponent must spend an additional command point to use that command.</characteristic>
-            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2"/>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, the first time an enemy unit uses a command within 18&quot; of this unit, unless your opponent spends 1 additional command point, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="16b6-0911-f549-a4bd" name="Color">Yellow</attribute>
-            <attribute typeId="da27-8d61-f955-5031" name="Parent Node">Special</attribute>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Parent Node" typeId="da27-8d61-f955-5031"/>
+            <attribute name="Type" typeId="da27-8d61-f955-5031">Special</attribute>
           </attributes>
         </profile>
         <profile name="Equal Prodigies" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7554-33eb-d12a-df05">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick whether Ellania will take the lead or Ellathor will take the lead.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If Ellania takes the lead, until the start of your next turn, add 1 to this unit’s power level and it has **^^Ward (4+)^^**. 
-If Ellathor takes the lead, until the start of your next turn, add the current battle round number to the Damage characteristic of **Altairi**.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick whether Ellania leads or Ellathor leads.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If Ellania leads, until the start of your next turn, add 1 to this unit’s power level and it has **^^Ward (4+)^^**. 
+If Ellathor leads, until the start of your next turn, add the current battle round number to the Damage characteristic of **Altairi**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -280,8 +260,8 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Sudden Translocation" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="819c-d248-d0cc-e6fa">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use this ability if any enemy models were slain by it this turn. **Heal (D6)** this unit. Then, remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units. When using the ‘Equal Prodigies’ ability in your next turn, you must pick Ellania to take the lead.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if any enemy models were slain this turn by this unit&apos;s combat attacks.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D6)** this unit. Then, remove it from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -344,9 +324,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
                   </characteristics>
@@ -389,12 +369,12 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Solar Flare" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="9488-f9c5-3b53-9c80">
+        <profile name="Focused Fury" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="9488-f9c5-3b53-9c80">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit or **^^Manifestation^^** wholly within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">If the target is a **^^Manifestation^^**, inflict 3D6 mortal damage on it. Otherwise, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">5</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Make a casting roll of 2D6. Add 2 to the roll if this unit is in combat.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">This unit has **^^Strike-first^^** for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -402,10 +382,12 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute typeId="da27-8d61-f955-5031" name="Parent Node">Offensive</attribute>
           </attributes>
         </profile>
-        <profile name="Voice of Tyrion" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="748e-d141-8078-193f">
+        <profile name="Champion of the Lord Phoenix" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="748e-d141-8078-193f">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly **^^Lumineth Realm-lords^^** unit wholly within 12&quot; of this unit uses the ‘All-out Attack’ command, no command points are spent.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a visible friendly **^^Vanari^^** unit is wholly within 12&quot; of this unit:
+• You are treated as having 1 additional instance of **Varinor, Rune of Strength** depicted on your **battle scripture** for the purposes of the abilities on that unit&apos;s warscroll.
+• If that unit is picked to be the target of the &apos;Depict Rune&apos; ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Varinor, Rune of Strength** on your **battle scripture**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -428,12 +410,12 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Lyrior’s Sword" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d9a6-8f75-a8fc-a09f">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -447,9 +429,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                 <profile name="Farael’s Horns and Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8420-d37c-4f2f-e5ae">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
@@ -462,17 +444,6 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bd5-7bbe-7ee7-10ae"/>
               </constraints>
               <profiles>
-                <profile name="Daemonbane" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7031-7b54-10c7-c64e">
-                  <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Daemon^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
                 <profile name="Daemonbane" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="da13-8db-1507-22c9">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
@@ -480,7 +451,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Anti-**^^Daemon^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Daemon^^** (+1 Rend), Charge (+1 Damage)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -504,22 +475,19 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">14&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Deathly Furrows" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9151-ceda-9ecf-de24">
+        <profile name="Dawnrider Charge" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9151-ceda-9ecf-de24">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy Infantry unit within 1&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit&apos;s **Dawnrider Lances and Blades** if it charged in the same turn.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -555,18 +523,18 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Charge (+1 Damage)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Stallions’ Dashing Hooves" hidden="false" id="4c43-86c5-45d2-c2f7">
+            <selectionEntry type="upgrade" import="true" name="Stallions’ Hooves" hidden="false" id="4c43-86c5-45d2-c2f7">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6dfd-c3ee-65db-b624"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc2f-6af3-e580-ca4d"/>
               </constraints>
               <profiles>
-                <profile name="Stallions’ Dashing Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="982a-f94d-e732-472f">
+                <profile name="Stallions’ Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="982a-f94d-e732-472f">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
@@ -627,13 +595,12 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Vanari Lord Regent" hidden="false" id="2e0b-1a0a-3d2b-8fef" publicationId="9ed1-cf74-eb97-dee2">
+    <selectionEntry type="unit" import="true" name="Vanari Lord Regent on Lightcourser" hidden="false" id="2e0b-1a0a-3d2b-8fef" publicationId="9ed1-cf74-eb97-dee2">
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="e060-3b1c-2ead-99a4" targetId="6e72-1656-d554-528a" primary="true"/>
         <categoryLink name="ORDER" hidden="false" id="17a6-c6a-e8fe-fb22" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="AELF" hidden="false" id="bb3c-6e53-b5b-f474" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
         <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="4539-ce89-b15-387" targetId="879-a29f-5c33-2e92" primary="false"/>
-        <categoryLink name="WIZARD (1)" hidden="false" id="c413-6909-5220-f2fa" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="13ab-f518-2bed-4cb" targetId="926c-df8c-6841-d49e" primary="false"/>
         <categoryLink name="VANARI" hidden="false" id="614c-9ca5-2f75-a88c" targetId="9958-c5c0-c246-8010" primary="false"/>
       </categoryLinks>
@@ -641,7 +608,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <entryLink import="true" name="General" hidden="false" id="9751-cbf6-657f-a58" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
       </entryLinks>
       <profiles>
-        <profile name="Vanari Lord Regent" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="6910-14d6-213-871a">
+        <profile name="Vanari Lord Regent on Lightcourser" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="6910-14d6-213-871a">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">14&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
@@ -649,25 +616,22 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Charge of the Lumineth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="86ff-4710-5192-752e">
+        <profile name="Lead the Charge" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="86ff-4710-5192-752e">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and up to 2 friendly **Vanari Dawnriders** units within this unit’s combat range to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can re-roll charge rolls for the targets for the rest of the turn. In addition, if a target charges this phase, add 1 to the Attacks characteristic of that target’s weapons for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You can re-roll charge rolls for friendly **^^Lumineth Realm-lords^^** units while they are wholly within 6&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
         <profile name="Purest Aetherquartz" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c2bf-62a8-5c30-a94c">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to casting rolls for this unit and subtract 1 from hit rolls for attacks that target this unit.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to hit rolls for this unit&apos;s attacks and subtract 1 from hit rolls for attacks that target this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -679,7 +643,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Vanari Lord Regent" hidden="false" id="b807-65f7-2fbb-5993">
+        <selectionEntry type="model" import="true" name="Vanari Lord Regent on Lightcourser" hidden="false" id="b807-65f7-2fbb-5993">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Regent’s Sword" hidden="false" id="a445-862b-924d-ebac">
               <constraints>
@@ -708,9 +672,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                 <profile name="Lightcourser’s Horns and Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="710b-2e9a-4b7c-e115">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
@@ -856,10 +820,10 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Swordmasters" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5147-da36-b105-675b">
+        <profile name="Masters of Combat" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5147-da36-b105-675b">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, you must pick either the **Perfect Strike** or **Flurry of Blows** weapon characteristics for all the attacks it makes with its **Sunmetal Blades**. In addition, do not use the attack sequence for an attack made with **Perfect Strike**. Instead, roll a dice. On a 2+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit&apos;s **Sunmental Blades** for each instance of **Varinor, Rune of Strength** depicted on your **battle scripture**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
@@ -867,7 +831,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Guardians" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3dd8-7bf5-1be7-fdac">
+        <profile name="Guardians of the Scinari" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3dd8-7bf5-1be7-fdac">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While any friendly **^^Scinari Heroes^^** are wholly within this unit’s combat range, both this unit and those friendly units have **^^Ward (5+)^^**.</characteristic>
@@ -903,25 +867,14 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22e1-4656-8f14-f0f8"/>
               </constraints>
               <profiles>
-                <profile name="Sunmetal Blade: Perfect Strike" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3cf3-80e1-30ca-4a65">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">⟝See &apos;Swordmasters&apos; ability⟞</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">⟝See &apos;Swordmasters&apos; ability⟞</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">⟝See &apos;Swordmasters&apos; ability⟞</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">⟝See &apos;Swordmasters&apos; ability⟞</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                  <alias/>
-                </profile>
-                <profile name="Sunmetal Blade: Flurry of Blows" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ffbd-435-5d72-ec04">
+                <profile name="Sunmetal Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ffbd-435-5d72-ec04">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Anti-**^^Infantry^^**(+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
                   </characteristics>
                   <alias/>
                 </profile>
@@ -986,18 +939,18 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
         <profile name="World Banner" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1317-908b-4b7c-985a">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of other friendly **^^Lumineth Realm‑lords^^** units while they are wholly within 18&quot; of this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a visible friendly **^^Lumineth Realm-lords^^** unit is wholly within 12&quot; of this unit, it can use the &apos;Rally&apos; command even if it is in combat.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -1013,7 +966,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Bannerblade’s Sword" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="58f3-e122-ad3c-bd16">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -1060,15 +1013,19 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
         <profile name="Realmscribe" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bc86-8dd5-7f16-d5cb">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Summon Spell^^** ability for this unit</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Reaction: You declared the &apos;Depict Rune&apos; ability</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Change the casting roll for that spell to a value of 8 that cannot be modified.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Replace 1 instance of a rune on your **battle scripture** with 1 of the following:
+• **Varinor, Rune of Strength**
+• **Ydriliqi, Rune of the River**
+• **Alaithi, Rune of the Mountain**
+• **Oreali, Rune of the Wind**</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1131,27 +1088,16 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
         <profile name="Darkness of the Soul" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e0f9-31c-a32b-adc0">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, subtract D6 from the target’s control score for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target cannot use commands until the start of your next turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Control</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
-        </profile>
-        <profile name="Absorb Despair" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b8d3-d330-9946-9bab">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to the control scores of friendly **^^Lumineth Realm-lords^^** units while they are wholly within 12&quot; of this unit.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -1211,29 +1157,31 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Lone Agent" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="57de-a9ce-2216-b1ed">
+        <profile name="Arcane Discovery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="57de-a9ce-2216-b1ed">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 5 to this unit’s control score while it is more than 9&quot; from all other friendly units.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a non-**^^Faction Terrain^^** terrain feature within 3&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle, add 1 to casting rolls for units (friendly and enemy) while they are within 3&quot; of the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Independent Operative" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bd1-7b93-5cef-da">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit has not been deployed, set it up anywhere on the battlefield not in combat with any enemy units. This unit has now been deployed.
-**Designer’s Note:** *Enemy units that deploy after this unit can deploy in combat with it.*</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy^^**</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1316,9 +1264,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
         <profile name="Windleap" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7627-b97a-d981-e139">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Hurakan Windchargers** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 3&quot; to the target’s Move characteristic for the rest of the turn and the target has **^^Fly^^** for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 visible friendly **^^Hurakan^^** units wholly within 12&quot; of this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, each target can use a **^^Run^^** ability and still use **^Shoot^^** and/or **^^Charge^^** abilities later in the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1353,7 +1301,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Windblast Vortex" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="3454-708d-765c-698c">
                   <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
@@ -1372,11 +1320,11 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Aspiragillum" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="82c4-43f6-96d3-3e22">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -1408,7 +1356,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Windcharger Arrows" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4fe5-37cf-a30c-9ccb">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ward rolls cannot be made for damage points inflicted by this unit’s shooting attacks.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While you have 2 or more instances of **Oreali, Rune of the Wind** depicted on your **battle scripture**, add 6&quot; to the Range characteristic of this unit&apos;s **Windcharger Bows**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Blue</attribute>
@@ -1460,16 +1408,6 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6ae-93e-3144-63f4"/>
               </constraints>
               <profiles>
-                <profile name="Windcharger Bow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ae0-1960-b116-9503">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
                 <profile name="Windcharger Bow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="266d-fa88-1ab-7681">
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
@@ -1478,7 +1416,25 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Cavalry^^** (+1 Rend), Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Windcharger Blade" hidden="false" id="108c-0bb1-4195-749f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb93-e1ad-4e40-e17e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="705e-5e90-a74c-ac69"/>
+              </constraints>
+              <profiles>
+                <profile name="Windcharger Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c575-c582-e436-3d45">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">^</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1537,10 +1493,10 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <categoryLink name="UNIQUE" hidden="false" id="a86e-308d-10-58c4" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="HERO" hidden="false" id="529b-ad24-3292-e760" targetId="6e72-1656-d554-528a" primary="true"/>
         <categoryLink name="ORDER" hidden="false" id="bede-f5e8-ccb6-d2c" targetId="ee22-3575-6590-25c" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="9354-4c39-ad58-24df" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
         <categoryLink name="AELF" hidden="false" id="cba9-fd8b-4923-b0eb" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
         <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="4480-57db-b810-c254" targetId="879-a29f-5c33-2e92" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="12e4-5a8e-62af-250b" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (4+)" hidden="false" id="efbf-10a8-b444-b33a" targetId="f99f-98ee-909f-57cd" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="1234-df5a-94c0-e0f1" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -1557,7 +1513,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Supreme Swordmaster" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="74ce-4351-6098-e240">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to hit rolls and wound rolls for this unit’s attacks. In addition, ignore negative modifiers to the characteristics of this unit’s melee weapons.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to hit rolls and wound rolls for this unit’s combat attacks.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -1565,15 +1521,18 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Spirit Armour" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ad4-642e-e6f1-aa39">
+        <profile name="Valorous Intervention" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad4-642e-e6f1-aa39">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore all modifiers to save rolls for this unit (positive and negative).</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit cannot use this ability if it is in combat. Pick a friendly unit that is in combat to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again within 1&quot; of the target and in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
@@ -1609,7 +1568,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Fangsword of Eltharion" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5a3a-a7a9-ba7f-7b3f">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">3</characteristic>
@@ -1633,7 +1592,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1673,11 +1632,13 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Stonemage Stance" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="900d-e16e-8651-9da4">
+        <profile name="Strength of Stone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="900d-e16e-8651-9da4">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Alarith Aelf^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to the Rend characteristic of the target’s melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Alarith Stoneguard** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
+• Add 1 to the Rend characteristic of the target&apos;s melee weapons.
+• The target cannot make pile-in moves.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1687,17 +1648,18 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Living Fissure" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="57b3-5b0e-fa2e-7d8c">
+        <profile name="Raise the Earth" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="57b3-5b0e-fa2e-7d8c">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a point on the battlefield within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Draw a straight line between the target and the closest part of this unit’s base. Roll a D3 for each unit (friendly and enemy) that the line passes across. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick an objective within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, each time a non-**^^Fly^^** unit (friendly or enemy) that is contesting the target objective uses a **^^Move^^** ability, inflict D6 mortal damage on that unit after that ability has been resolved.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
-            <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Offensive</attribute>
+            <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Special</attribute>
+            <attribute name="Type" typeId="da27-8d61-f955-5031"/>
           </attributes>
         </profile>
       </profiles>
@@ -1761,10 +1723,11 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
         <profile name="Travel the Waterways" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="dcb0-8779-2edb-4133">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again on the battlefield wholly within 6&quot; of a battlefield edge and more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again on the battlefield wholly within 6&quot; of a battlefield edge and more than 9&quot; from all enemy units.
+If you picked to depict **Ydriliqui, Rune of the River** on your **battle scripture** this battle round, you can instead set up this unit anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1819,7 +1782,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Ydrilan Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f24c-ab6e-7623-2da3">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
@@ -1912,7 +1875,8 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Aura of Celennar" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="e528-7901-d649-e45a">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for other friendly **^^Lumineth Realm‑lords Wizards^^** while they are wholly within 12&quot; of this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls and banishment rolls for friendly **^^Lumineth Realm‑lords Wizards^^** while they are wholly within 12&quot; of this unit.
+In addition, this unit can use **^^Spell^^** abilities from the Lore of Hysh, the Lore of Awakened Realms, and the warscrolls of all friendly **^^Lumineth Realm-lords Wizards^^** on the battlefield.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -1923,7 +1887,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Archmage" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="29d1-1e69-16f6-d780">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Instead of making a casting roll for this unit, you can use a value of 10 for the roll that cannot be modified. In addition, instead of making an unbinding roll or banishment roll for this unit, you can use a value of 8 for the roll that cannot be modified.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Pick 1 of the following:
+***Magical Supremacy:*** Instead of making a casting roll for the next **^^Spell^^** ability used by this unit this turn, you can use a value of 12 for the roll that cannot be modified.
+***Drain Power***: Pick a visible enemy **^^Wizard^^** or **^^Priest^^** within 18&quot; of this unit to be the target. Subtract 1 from the target&apos;s power level, to a minimum of 0, until the start of your next turn.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -1931,26 +1897,28 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Spirit of the Moon" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="599f-e356-c903-3bf1">
+        <profile name="Discs of the Aelementiri" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="599f-e356-c903-3bf1">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Start of Battle Round</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You cannot use this ability in the first battle round.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Depict a rune of your choice on your **battle scripture**.
+**Designer&apos;s Note:** *This allows you to have that rune depicted earlier in the **battle scripture** for the purposes of other abilities. Do not resolve the effect of the &apos;Depict Rune&apos; ability as part of this ability.
+There is a smaller diamond in the battle scripture diamond in the Rules Reference where you can record this extra rune.*</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Storm of Searing White Light" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="70fe-927c-e02c-51c8">
+        <profile name="The Light of Truth" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="70fe-927c-e02c-51c8">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">10</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick any number of different visible enemy units within 18&quot; of this unit to be the targets, then make a casting roll of 2D6 (see the ‘Archmage’ ability).</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick any number of different visible enemy units within 18&quot; of this unit to be the targets, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict D3 mortal damage on each target.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -1977,7 +1945,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
                 </profile>
@@ -1996,7 +1964,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2014,7 +1982,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3+3</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
                 </profile>
@@ -2062,22 +2030,25 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Spirit of the Wind" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="bbae-ee18-f5c3-dcfb">
+        <profile name="Spirit of the Wind" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bbae-ee18-f5c3-dcfb">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While friendly **^^Hurakan^^** units are wholly within 12&quot; of this unit, they can use **^^Shoot^^** and/or **^^Charge^^** abilities even if they used a **^^Run^^** or **^^Retreat^^** ability in the same turn and no mortal damage is inflicted on them by **^^Retreat^^** abilities.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit used a **^^Shoot^^** ability this phase, this unit can move D6&quot;. Add 2 to the roll for each instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**. It cannot end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Move^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Living Cyclone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="72a2-7f6c-d0f1-17ab">
+        <profile name="Hurricane Winds" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="72a2-7f6c-d0f1-17ab">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then this unit can move 6&quot;, but it must end that move in combat.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that had any damage points allocated to it this turn by this unit&apos;s shooting attacks  to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target has **^^Strike-last^^** for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2102,9 +2073,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2117,13 +2088,13 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Bow of the Wind’s Vengeance" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7812-a329-a54b-423c">
                   <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">15&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti‑**^^Monster^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">2</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti‑**^^Monster^^** (+1 Rend), Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2165,9 +2136,9 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
         <profile name="Rune of Enthlai" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6c57-5aa5-62dc-3159">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: You declared the ‘Speed of Hysh’, ‘Overwhelming Heat’ or ‘Ethereal Blessings’ spell for this unit</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared an **^^Unlimited Spell^^** ability for this unit</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If that spell is successfully cast, roll a dice. On a 3+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of **^^Spell^^** abilities this unit can use this turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If that spell is successfully cast, roll a dice. On a 4+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of **^^Spell^^** abilities this unit can use this turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2177,13 +2148,13 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Ethereal Blessings" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c834-b51f-1c56-d710">
+        <profile name="Clarity of Thought" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="c834-b51f-1c56-d710">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly **^^Lumineth Realm‑lords Infantry^^** unit wholly within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Ignore all modifiers to save rolls for the target (positive and negative) until the start of your next turn.</characteristic>
-            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly **^^Lumineth Realm‑lords Infantry^^** unit wholly within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, attacks that target that friendly unit cannot score critical hits (treat them as regular hits instead).</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**, **^^Unlimited^^**</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
@@ -2278,14 +2249,16 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Stonemage Symbiosis" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="144b-b2e8-1747-bfb">
+        <profile name="Call of the Mountains" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="144b-b2e8-1747-bfb">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The ‘Battle Damaged’ ability has no effect on this unit while it is wholly within 12&quot; of a friendly **Alarith Stonemage**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a visible friendly **^^Alarith^^** unit is wholly within 12&quot; of this unit:
+• You are treated as having 1 additional instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture** for the purposes of the abilities on that unit&apos;s warscroll.
+• If that unit is picked to be the target of the &apos;Depict Rune&apos; ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Alaithi, Rune of the Mountain** on your **battle scripture**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -2293,7 +2266,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, subtract 1 from the Rend characteristic of the target’s melee weapons for the rest of the turn and add 1 to the Attacks characteristic of this unit’s melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, for the rest of the turn, while that enemy unit is in combat with this unit, all attacks made by models in that unit within this unit&apos;s combat range must target this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2303,13 +2276,10 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Unshakeable Faith of the Mountains" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="8336-535a-b79f-460e">
+        <profile name="With the Force of a Landslide" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8336-535a-b79f-460e">
           <characteristics>
-            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Your Combat Phase</characteristic>
-            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
-            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick up to 3 different friendly **^^Alarith Aelf^^** units wholly within 12&quot; of this unit to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit&apos;s **Firestealer Hammers** for each instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="5c69-e4b9-19bc-e801" name="Color">Red</attribute>
@@ -2333,28 +2303,10 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                 <profile name="Firestealer Hammers" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6c85-b5f6-d405-6709">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Cloven Hooves" hidden="false" id="983-8c06-3e10-5562">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="290f-62ed-a91c-c20a"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d283-e727-f0df-40ea"/>
-              </constraints>
-              <profiles>
-                <profile name="Cloven Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ab66-5433-b02-6001">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -2374,7 +2326,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2416,21 +2368,12 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
-        <profile name="The Living Gale" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9919-b4f8-3073-c5ad">
+        <profile name="Call of the Winds" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c11a-28a1-b9ae-21b3">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit cannot be targeted by shooting attacks made by enemy units that are more than 9&quot; from this unit.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
-        <profile name="Spirit of the Wind" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c11a-28a1-b9ae-21b3">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While friendly **^^Hurakan^^** units are wholly within 12&quot; of this unit, they can use **^^Shoot^^** and/or **^^Charge^^** abilities even if they used a **^^Run^^** or **^^Retreat^^** ability in the same turn and no mortal damage is inflicted on them by **^^Retreat^^** abilities.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a visible friendly **^^Hurakan^^** unit is wholly within 12&quot; of this unit:
+• You are treated as having 1 additional instance of **Oreali, Rune of the Wind** depicted on your **battle scripture** for the purposes of the abilities on that unit&apos;s warscroll.
+• If that unit is picked to be the target of the &apos;Depict Rune&apos; ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Oreali, Rune of the Wind** on your **battle scripture**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -2441,7 +2384,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Searing Desert Winds" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b5d8-e3c9-dc3e-4839">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 different enemy units in combat with this unit to be the targets.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 visible enemy units within 6&quot; of this unit this unit to be the targets.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll and subtract 1 from wound rolls for the target’s attacks for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -2449,6 +2392,20 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Spirit of the Wind" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a0c0-2a35-9c4e-77c3">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit used a **^^Shoot^^** ability this phase, this unit can move D6&quot;. Add 2 to the roll for each instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**. It cannot end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Move^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -2470,7 +2427,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
@@ -2485,12 +2442,12 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
               <profiles>
                 <profile name="Enathrai, the Howling Death" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="5077-529-2e13-c3a7">
                   <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">15&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">3</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3+1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">3</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
@@ -2522,7 +2479,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Fortitude of the Earth" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5231-14f6-329-5ebf">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)^^** while all of its models are contesting an objective you control.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While you have 2 or more instances of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**, this unit&apos;s Save characteristic is 3+.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -2627,18 +2584,15 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Wall of Blades" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b19f-515c-7a11-3fd9">
+        <profile name="Wall of Blades" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b19f-515c-7a11-3fd9">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit did not charge this turn and is in combat with an enemy unit that charged this turn, roll a dice. Add 1 to the roll if that enemy unit is **^^Cavalry^^**. On a 4+, this unit has **^^Strike-first^^** for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit has not charged this turn, ignore the effect of the **Charge (+1 Damage)** ability for combat attacks made by enemy units that target this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -2673,7 +2627,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Anti-charge (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-charge (+1 Rend), Crit (Mortal)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2730,8 +2684,8 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         <profile name="Turn to Stone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8d31-9528-3294-eb2f">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit within 6&quot; of this Manifestation to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If a target has 3 mortal damage inflicted on it by this ability, it has **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each enemy unit within 6&quot; of this **^^Manifestation^^**. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If a target has 3 mortal damage inflicted on it by this ability, it has **^^Strike-last^^** for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2767,7 +2721,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this terrain feature has a Shrine Guardian:
-• This terrain feature has a Move characteristic of 6&quot; and can use non-command non-**^^Charge^^** **^^Move^^** abilities as if it were a unit.
+• This terrain feature has a Move characteristic of 6&quot; and can use non-command non-**^^Charge^^** **^^Move^^** abilities as if it were a unit. It cannot end a **^^Move^^** ability within the combat range of an enemy unit.
 • The Shrine Guardian cannot use **^^Move^^** abilities and remains on this terrain feature each time it moves.
 • Instead of measuring range or visibility to the Shrine Guardian, measure to this terrain feature instead.
 • All attacks that would target the Shrine Guardian target this terrain feature instead.
@@ -2803,7 +2757,7 @@ If Ellathor takes the lead, until the start of your next turn, add the current�
         </profile>
         <profile name="Cleansing Rituals" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="31ea-1ccc-4a0-fdc6">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: You declared a **^^Spell^^** ability for a unit wholly within 12&quot; of this terrain feature</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: You declared a **^^Spell^^** ability for a **^^Lumineth Realm-lords^^** unit wholly within 12&quot; of this terrain feature</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">While this terrain feature has a Shrine Guardian, you can re-roll the casting roll for that spell.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -2845,8 +2799,8 @@ Cover, Impassable**</description>
         <profile name="Sanctum of Amyntok" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="9603-f742-9147-105e">
           <characteristics>
             <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
-            <characteristic name="Health" typeId="d1b9-3068-515-131e">-</characteristic>
-            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">-</characteristic>
+            <characteristic name="Health" typeId="d1b9-3068-515-131e">6</characteristic>
+            <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
           </characteristics>
           <attributes>
@@ -2856,12 +2810,9 @@ Cover, Impassable**</description>
         <profile name="Sigil of Yngra" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="124f-cb83-7925-536d">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While the unit that was picked to be the target of the ‘Summon Sanctum of Amyntok’ ability is inside the ring formed by this **^^Manifestation^^**:
-• That unit has **^^Ward (4+)^^**.
-• If that unit is a **^^Wizard^^**, add 1 to that unit’s power level.
-• Instead of measuring range or visibility to that unit, measure to this **^^Manifestation^^** instead.
-• This **^^Manifestation^^** cannot be picked to be the target of abilities other than **^^Banish^^** abilities.
-• If that unit uses a **^^Move^^** ability, makes a pile-in move or is removed from the battlefield, this **^^Manifestation^^** is removed from play</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly unit with a Health characteristic of 10 or less is wholly inside the ring formed by this **^^Manifestation^^**:
+• That unit is not visible to enemy units.
+• Enemy abilities that would target this unit must target this **^^Manifestation^^** instead.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -2875,6 +2826,7 @@ Cover, Impassable**</description>
         <categoryLink name="ENDLESS SPELL" hidden="false" id="6f65-5760-84f9-7c33" targetId="e7bc-543-4076-553c" primary="false"/>
         <categoryLink name="ORDER" hidden="false" id="ff81-b4c1-4946-9b7c" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="82cf-9452-883a-5f8" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="525f-4618-8732-f930" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <rules>
         <rule name="Base Size" id="7953-b134-93e8-8972" hidden="true">
@@ -2886,7 +2838,7 @@ Cover, Impassable**</description>
       <profiles>
         <profile name="Hyshian Twinstones" typeId="1287-3a-9799-7e40" typeName="Manifestation" hidden="false" id="a2f7-6057-a75a-e54">
           <characteristics>
-            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">-</characteristic>
+            <characteristic name="Move" typeId="c28a-6000-2a0b-e7cf">5&quot;</characteristic>
             <characteristic name="Health" typeId="d1b9-3068-515-131e">5</characteristic>
             <characteristic name="Save" typeId="80c7-7691-b6ed-d6a6">4+</characteristic>
             <characteristic name="Banishment" typeId="97a2-d412-9ac-6a37">7+</characteristic>
@@ -2898,7 +2850,22 @@ Cover, Impassable**</description>
         <profile name="Reservoir of Power" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="bcc3-492a-e846-cab3">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for friendly **^^Lumineth Realm‑lords^^** units while they are wholly within 6&quot; of this **^^Manifestation^^** or are garrisoning a faction terrain feature within 3&quot; of this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a unit (friendly or enemy) successfullt casts a spell while it is within 12&quot; of this **^^Manifestation^^**, give this **^^Manifestation^^** 1 **arcane charge point**.
+This **^^Manifestation^^** can have a maximum of 6 **arcane charge points**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Release Arcane Charge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="de6f-2a80-b2af-97d0">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Spell^^** or **^^Unbind^^** ability for a **^^Lumineth Realm-lords Wizard^^** within 3&quot; of this **^^Manifestation^^**</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add this **^^Manifestation^^**&apos;s **arcane charge points** to the casting roll or unbinding roll. Then, reset this **^^Manifestation^^**&apos;s arcane charge points to 0.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -2919,6 +2886,26 @@ Cover, Impassable**</description>
           <description>50mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Crackling Energy" hidden="false" id="bd8b-d9c2-7d38-36f6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="236b-2db4-d6d1-04cf"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3262-59cf-8cc3-fbe1"/>
+          </constraints>
+          <profiles>
+            <profile name="Crackling Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="eccd-1cbc-497a-9d18">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Myari&apos;s Purifiers" hidden="false" id="aaa4-905e-4992-feca" publicationId="9dee-a6b2-4b42-bfee">
       <categoryLinks>
@@ -3356,6 +3343,87 @@ Cover, Impassable**</description>
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Vanari Lord Regent" hidden="false" id="69db-94ab-507b-0e92" publicationId="9ed1-cf74-eb97-dee2">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="ddb0-2311-a959-ad39" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="95ff-77ec-75ab-caea" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="ebbe-f376-6c06-1b71" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="3b44-d8c8-26e8-e1cf" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="VANARI" hidden="false" id="7811-a0e8-c486-671c" targetId="9958-c5c0-c246-8010" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="2ac2-bd20-2faa-0eb0" targetId="75d6-6995-dfcc-3898" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="9fe9-7a2c-d188-b4fd" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Vanari Lord Regent" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="91fa-456c-a55c-d279">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Shining Example" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6b0c-5e08-a9d0-0b64">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly **^^Lumineth Realm-lords^^** unit wholly within 12&quot; of this unit uses the &apos;Rally&apos; command, you can make 3 additional rally rolls of D6.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Wall of Blades" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="58df-0773-db4d-95e3">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Vanari Auralan Wardens** unit wholly within 12&quot; of this unit to be the wall of blades. Then, pick an enemy unit in combat with the wall of blades to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each model in the wall of blades that is within 3&quot; Of the target. For each 5+, inflict 1 mortal damage on the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Vanari Lord Regent" hidden="false" id="5ee3-e5e3-a21a-99c7">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Regent’s Sword" hidden="false" id="4d54-236f-95d8-0075">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="08b0-67b5-5f48-87de"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af0f-1fa5-b92c-2928"/>
+              </constraints>
+              <profiles>
+                <profile name="Regent’s Sword" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b9d7-e83c-ae05-b34f">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="85be-42eb-1aa1-32e7"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8e1-ba59-a39a-f875"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="9721-230d-b2e9-1dc8" hidden="true">
+              <description>90x52mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>

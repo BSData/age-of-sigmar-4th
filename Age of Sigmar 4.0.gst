@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="79" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="80" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -140,6 +140,21 @@
         <attributeType name="Color" id="9019-1a17-dfdb-d171"/>
         <attributeType name="Type" id="ba97-56ed-9674-f836"/>
         <attributeType name="Parent Node" id="540d-cdd1-5262-593f"/>
+      </attributeTypes>
+    </profileType>
+    <profileType name="Ability (Fate)" hidden="false" id="9b15-469e-8bf3-70c7" sortIndex="12">
+      <characteristicTypes>
+        <characteristicType id="ee08-f0bb-c101-58d5" name="Timing"/>
+        <characteristicType id="74f4-c00a-61c2-280d" name="Declare"/>
+        <characteristicType id="c24b-9e80-9805-8ccf" name="Effect"/>
+        <characteristicType id="3a10-e240-163d-d34a" name="Keywords"/>
+        <characteristicType id="fb10-043b-0db8-f864" name="Used By"/>
+        <characteristicType name="Fate Points" id="2817-a813-f11c-2961"/>
+      </characteristicTypes>
+      <attributeTypes>
+        <attributeType name="Color" id="7117-6fca-9b35-9a1b"/>
+        <attributeType name="Type" id="bafa-c720-e165-8c34"/>
+        <attributeType name="Parent Node" id="65cf-bbb1-eb30-7049"/>
       </attributeTypes>
     </profileType>
   </profileTypes>
@@ -11985,9 +12000,9 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
-            <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="86da-767f-a1d7-9b8a">
