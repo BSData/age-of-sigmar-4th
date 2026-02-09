@@ -10951,6 +10951,11 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="4" field="cba7-7e7f-754a-08ee">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="79d1-105c-ac4a-7df3" targetId="6e72-1656-d554-528a"/>
