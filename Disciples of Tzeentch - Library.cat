@@ -1932,7 +1932,7 @@ If the spell is unbound, add 1 to casting rolls for this unit for the rest of th
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Wyrdflame</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1949,7 +1949,7 @@ If the spell is unbound, add 1 to casting rolls for this unit for the rest of th
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
@@ -5513,4 +5513,571 @@ In addition, make the following changes to your hero&apos;s warscroll:
       </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Paths" id="0234-bf80-7cbe-2de2" hidden="false" flatten="true" publicationId="8b1b-f2c7-890e-2bbe">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Path of Madness" hidden="true" id="289d-9a92-ad08-bfef" publicationId="1bad-f288-dd88-2d76">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="3975-8b45-be1e-8067" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Spelljaunt" hidden="false" id="3221-7197-0a02-15bd">
+                  <profiles>
+                    <profile name="Spelljaunt" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0a92-7faf-ea43-37b6">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When using the &apos;Smoke and Mirrors&apos; ability, if this unit is **masked by illusion**, you can pick a **^^Manifestation^^** (friendly or enemy) that was not set up in the same turn to be the target instead. If you do so, you must pick this unit to be the substitute. After setting up the substitute, the target is banished instead of being set up in reserve. </characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f318-46e2-c74c-5b5e"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Master of Misdirection" hidden="false" id="91c5-8193-8175-7dc0">
+                  <profiles>
+                    <profile name="Master of Misdirection" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b507-3103-30bc-fdb0">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for attacks that target this unit while it is within the combat range of another friendly **^^Disciples of Tzeentch^^* unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f66a-7283-dd38-e60d"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b880-7277-08ef-fb43"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="8f25-5416-d3ac-6ceb" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Stream of Babble" hidden="false" id="3ef4-7ba7-ff65-5818">
+                  <profiles>
+                    <profile name="Stream of Babble" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="489e-1250-d514-ffb0">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to unbinding rolls for this unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bcee-d831-32b4-f0ea"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Agent of Change" hidden="false" id="24c6-f381-5997-b45a">
+                  <profiles>
+                    <profile name="Agent of Change" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d78b-899a-48d9-a23b">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is contesting an objective you do not control, gain 1 **fate point**.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b6c-fdf3-0584-e524"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6832-ea68-456a-1ac3"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="60ac-36ae-d4e0-4c06" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Splinter Spell" hidden="false" id="3421-9c83-676a-8b2e">
+                  <profiles>
+                    <profile name="Splinter Spell" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1b64-b2a1-3a28-60ff">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: You declared a **^^Spell^^** ability for this unit.</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If that spell is successfully cast, roll a dice. On a 4+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of **^^Spell^^** abilities this unit can use this turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd92-4346-3d1d-51c1"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Driven by Fate" hidden="false" id="4a41-bb1f-d4a1-a6a2">
+                  <profiles>
+                    <profile name="Driven by Fate" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5bc9-434f-59c4-cd3d">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While you have 3 or more **fate points**, add 1 to hit rolls for this unit&apos;s attacks.
+While you have 6 or more **fate points**, add 1 to wound rolls for this unit&apos;s attacks.
+While you have 9 or more **fate points**, add 1 to the Rend characteristic of this unit&apos;s melee weapons.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2644-5247-baef-ad19"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f5b-5767-5850-f6ac"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="dd2b-0e2e-a666-52f5" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Concealed Sorcery" hidden="false" id="fdce-7273-26e2-dff7">
+                  <profiles>
+                    <profile name="Concealed Sorcery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="246a-c273-38b2-60da">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if it is **masked by illusion**. Pick a model in a friendly **^^Disciples of Tzeentch^^** unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can immediately use a **^^Spell^^** ability. When it does so, measure the range and visibility of that **^^Spell^^** ability from the target.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="797a-b9c6-1517-1169"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Eldritch Coven" hidden="false" id="90fd-ce96-75a8-8a38">
+                  <profiles>
+                    <profile name="Eldritch Coven" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c1e5-6eba-24d4-34b2">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Enemy Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each visible friendly **^^Disciples of Tzeentch Wizard^^** wholly within 12&quot; of this unit can use a **^^Spell^^** ability as if it were your hero phase.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b8f-06df-d6a6-09e6"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="959c-666d-4d33-244c"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d64d-ec64-3cf-cc4" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Path Restrictions" id="2024-45dc-4abe-4098" hidden="true">
+              <description>**^^Disciples of Tzeentch Hero^^** only</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Path of Mutation" hidden="true" id="effa-b411-cd33-5c3d" publicationId="72d2-ae0-e519-f2f7">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="e088-befd-960e-6de1" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Silver Skin" hidden="false" id="e32d-ffa7-6460-c65f">
+                  <profiles>
+                    <profile name="Silver Skin" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="346d-cb9a-3284-8d6f">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit in the first battle round.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dfd0-231b-aa44-971e"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bird-like Limbs" hidden="false" id="8c30-3043-967e-5835">
+                  <profiles>
+                    <profile name="Bird-like Limbs" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="be61-8ae2-8e10-d27a">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2 to run rolls for this unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9626-85ea-0856-4692"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56eb-26dd-75cc-546e"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="408b-4d1b-ef1c-96a5" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Telepathic Link" hidden="false" id="bb84-bfba-4fcc-be67">
+                  <profiles>
+                    <profile name="Telepathic Link" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8cf8-a7e4-dcf5-d0a9">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Disciples of Tzeentch Wizard^^** wholly within 12&quot; of this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target can use an additional **^^Spell^^** ability this turn, but this unit must be picked to be the target of that spell.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dca8-592b-f856-6bcc"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Crown of Wyrdflame" hidden="false" id="0a0b-f281-45ca-461d">
+                  <profiles>
+                    <profile name="Crown of Wyrdflame" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7c56-505b-b446-4389">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit in combat with it to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 9 dice. For each 5+, inflict 1 mortal damage on the target.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="921a-3787-2e77-4b6c"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7be2-0664-82f8-b4f9"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="99a0-2f24-4d65-5711" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Temporal Distortion" hidden="false" id="f0d8-0914-3e34-9efb">
+                  <profiles>
+                    <profile name="Temporal Distortion" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5b3a-d35a-17d5-8ed7">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit was set up this turn, it can move D3&quot;. That move cannot pass through or end within the combat range of an enemy unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66e4-dcd6-b7d1-ad5b"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Inhuman Reflexes" hidden="false" id="3e06-78b6-4e7f-578a">
+                  <profiles>
+                    <profile name="Inhuman Reflexes" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b8cd-0cfb-7ea7-ebae">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (5+)^^** if it was set up in the same turn.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dcb2-6a7d-96b4-6165"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ba6-aa4b-06d8-75d5"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="65c9-9081-7389-cef0" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Doppelgänger" hidden="false" id="7b07-b270-bb9a-d519">
+                  <profiles>
+                    <profile name="Doppelgänger" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7ea6-8fd1-99d7-5fcf">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is destroyed, before removing it from play, set up a replacement unit with half the number of models from the target unit (rounding up) in reserve **masked by illusion**</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50b1-7a30-3183-cd50"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Quicksilver Blood" hidden="false" id="2f1d-a930-a834-acec">
+                  <profiles>
+                    <profile name="Quicksilver Blood" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="adae-d297-a30b-c6d5">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in this unit is slain, before removing the model from play, pick an enemy unit in combat with this unit and roll a dice. On a 4+, inflict 1 mortal damage on that enemy unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4cfc-3ea8-d6c1-4b9e"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cbf-eb72-418a-1306"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d64d-ec64-3cf-cc4" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Path Restrictions" id="4603-a037-35cf-103f" hidden="true">
+              <description>Non-**^^Hero Disciples of Tzeentch^^** only</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>
