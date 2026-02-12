@@ -371,6 +371,7 @@
     <categoryEntry name="AUTOMATON" id="acb5-f7cf-ee4f-1f00" hidden="false"/>
     <categoryEntry name="STANDARD BEARER" id="8ae9-b42e-5611-f8f8" hidden="false"/>
     <categoryEntry name="MUSICIAN" id="afd5-9600-b663-39a2" hidden="false"/>
+    <categoryEntry name="AELEMENTOR" id="a336-5554-bb85-134c" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
