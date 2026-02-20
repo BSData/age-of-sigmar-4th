@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="3521-1b3c-7fd9-838b" name="Ossiarch Bonereapers - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="1" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" hidden="false">
+<catalogue library="true" id="3521-1b3c-7fd9-838b" name="Ossiarch Bonereapers - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="1" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" hidden="false">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Vokmortian, Master of the Bone-tithe" hidden="false" id="f92d-b53f-1f6f-1646" publicationId="2f1e-fdf-1ac2-fa38">
       <profiles>
@@ -11,13 +11,13 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Voice of Nagash" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="33cf-317d-ea75-d3ff">
+        <profile name="Voice of Nagash" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="33cf-317d-ea75-d3ff">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, non-**^^Fight Core^^** abilities cost 1 command point for the target to use. Those abilities do not count as commands.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Enemy Hero Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">The target cannot be picked to be the target of or be affected by any non-**^^Core^^** abilities used by other enemy units for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
@@ -28,9 +28,9 @@
         <profile name="Mortal Contract" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="200c-c7f0-9ef9-1c2d">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be bound, pick a visible friendly **^^Ossiarch Bonereapers^^** unit wholly within 18&quot; of this unit to be bound, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, each time the bound friendly unit is picked to the target of an ability used by the bound enemy unit, roll a D3. On a 2+, inflict an amount of mortal damage on the bound enemy unit equal to the roll as a reaction. If the bound enemy unit is destroyed by this ability, do not resolve the effect of the enemy ability.</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, each time the target is picked to use a **^^Core^^** ability, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the target is destroyed by this ability, do not resolve the effect of that **^^Core^^** ability.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -50,6 +50,7 @@
         <categoryLink targetId="70a4-383f-421f-52cd" id="8a2-2d05-913a-7d97" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="d484-a2d7-cf4f-c4a0" id="886a-7527-a50d-1751" primary="false" name="DEATH"/>
         <categoryLink targetId="5603-d1-a021-331e" id="83d8-8a68-f376-9f63" primary="false" name="OSSIARCH BONEREAPERS"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (2)" hidden="false" id="c86d-e7d7-ab95-b1dd" targetId="4d3b-23e7-f8f0-9780" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Vokmortian, Master of the Bone-tithe" hidden="false" id="1804-acc4-77e-7e55">
@@ -58,12 +59,12 @@
               <profiles>
                 <profile name="Staff of Retribution" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="cc35-5f1d-9f86-2676">
                   <characteristics>
-                    <characteristic name="Atk" id="7afc-d0fc-83bf-768f" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="d02e-3c67-d36d-e01" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="8ddb-8be9-93c3-2f8c" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="71c1-e611-6afd-ab62" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="9571-46a-2079-eb1f" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="bf41-3cc5-d29a-125f" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -76,13 +77,13 @@
               <profiles>
                 <profile name="Gaze of Death" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="cc4b-f06a-2635-2fa">
                   <characteristics>
-                    <characteristic name="Rng" id="cfdb-84cf-433-9795" hidden="false" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" id="a38-3b51-43d4-6763" hidden="false" typeId="aa17-4296-2887-e05d">1</characteristic>
-                    <characteristic name="Hit" id="2ce5-3f83-5c5f-f794" hidden="false" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
-                    <characteristic name="Wnd" id="87f9-fd74-342-c3ff" hidden="false" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" id="ba36-806-9023-fc3c" hidden="false" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" id="854a-1c8-dc25-2bcf" hidden="false" typeId="96c2-d0a5-ea1e-653b">2</characteristic>
-                    <characteristic name="Ability" id="6b5-d544-9f03-2df3" hidden="false" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -114,19 +115,28 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Boneshaper" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d898-33a7-8db7-feda">
+        <profile name="Legion Quartermaster" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="af43-b230-4236-2e73">
           <characteristics>
-            <characteristic name="Timing" id="307c-30dd-6095-12b6" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn, Your Hero Phase</characteristic>
-            <characteristic name="Declare" id="88-f777-db1d-18f6" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Ossiarch Bonereapers^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" id="ff1b-6cda-c4d2-1392" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+:
-・If the target is damaged, **Heal (3)** the target.
-・If the target is not damaged, return a number of slain models to the target unit with a combined Health characteristic of up to 3.</characteristic>
-            <characteristic name="Keywords" id="1b04-9774-217c-3091" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly non-**^^Hero Ossiarch Bonereapers^^** unit wholly within 12&quot; of this unit uses the &apos;Rally&apos; command, you can make 3 additional rally rolls of D6.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Rallying</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Boneshaper" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="657a-b5cf-ce10-fcab">
+          <characteristics>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Your Hero Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802"/>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">If this unit is not in combat, pick a friendly **Mortek Guard**  or **Mortek Triaxes** unit that has been destroyed to be the target.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -139,6 +149,7 @@
         <categoryLink targetId="5603-d1-a021-331e" id="e91f-a528-c46a-5e94" primary="false" name="OSSIARCH BONEREAPERS"/>
         <categoryLink targetId="a2d-c08d-4d7d-fe93" id="5368-4fc4-f76c-656f" primary="false" name="MORTISAN"/>
         <categoryLink targetId="d484-a2d7-cf4f-c4a0" id="5acf-d399-a8b4-dc56" primary="false" name="DEATH"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (2)" hidden="false" id="7ce9-7b89-95f4-13ea" targetId="4d3b-23e7-f8f0-9780" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" type="selectionEntry" id="9f99-13bc-8e94-81e7" targetId="a56b-952e-ad15-7868"/>
@@ -150,12 +161,12 @@
               <profiles>
                 <profile name="Ossified Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e1d4-7ebb-74f4-5568">
                   <characteristics>
-                    <characteristic name="Atk" id="7be3-70af-f46d-86d2" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="171c-44ad-133e-d76" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="14c6-7c47-f098-3771" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="64c2-c987-2605-fdc3" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="21fa-921a-1bbe-6b1c" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="21ec-ea2c-80ff-3621" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -187,15 +198,18 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Shieldwall" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a711-a3d9-a7f3-7668">
+        <profile name="Shields of the Legion" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="fc9a-7343-e02a-7974">
           <characteristics>
-            <characteristic name="Keywords" id="fc0e-292f-66-f46c" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="f7fb-31bd-87b0-8d04" hidden="false" typeId="fd7f-888d-3257-a12b">Ignore all modifiers to save rolls for this unit (positive and negative) for the rest of the turn if this unit did not use a **^^Move^^** ability in the same turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Reaction: Opponent declared an **^^Attack^^** ability that targeted a visible **^^Ossiarch Bonereapers^^** unit within this unit&apos;s combat range.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Rend characteristic of weapons used for attacks made as part of that **^^Attack^^** ability that target that friendly unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Green</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
@@ -217,32 +231,32 @@
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="4d5c-e59b-71dd-d207-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="20" field="4d5c-e59b-71dd-d207-min">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true"/>
-              </conditions>
+            <modifier type="increment" value="10" field="4d5c-e59b-71dd-d207-min">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
-            <modifier type="set" value="20" field="4d5c-e59b-71dd-d207-max">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true"/>
-              </conditions>
+            <modifier type="increment" value="10" field="4d5c-e59b-71dd-d207-max">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Nadirite Weapons" hidden="false" id="b8f0-ee8-b9a1-6990">
+            <selectionEntry type="upgrade" import="true" name="Nadirite Blades" hidden="false" id="b8f0-ee8-b9a1-6990">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="96f3-3885-2356-8c4c-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="96f3-3885-2356-8c4c-max"/>
               </constraints>
               <profiles>
-                <profile name="Nadirite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="21d0-dc7c-e584-93ac">
+                <profile name="Nadirite Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="21d0-dc7c-e584-93ac">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-charge (+1 Rend), Crit (2 Hits)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Cavalry^^** (+1 Rend)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -286,46 +300,46 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Teratic Cohort" hidden="false" id="c127-fa89-8519-3af0" publicationId="2f1e-fdf-1ac2-fa38">
       <categoryLinks>
-        <categoryLink targetId="75d6-6995-dfcc-3898" id="3052-d557-7f40-23eb" primary="true" name="INFANTRY"/>
         <categoryLink targetId="5603-d1-a021-331e" id="d656-4dec-1663-8903" primary="false" name="OSSIARCH BONEREAPERS"/>
         <categoryLink targetId="70a4-383f-421f-52cd" id="11d9-b5b1-3a5b-9e88" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="d484-a2d7-cf4f-c4a0" id="c535-539f-1ad-cb55" primary="false" name="DEATH"/>
         <categoryLink targetId="d131-3bfe-3ff4-a703" id="3964-b803-909e-401d" primary="false" name="CHAMPION (1/8)"/>
+        <categoryLink name="BEAST" hidden="false" id="54cd-3ee4-dbab-4608" targetId="b224-8c8e-ca93-9860" primary="true"/>
       </categoryLinks>
       <profiles>
         <profile name="Teratic Cohort" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="67df-59d2-adfe-a3f7">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Predator&apos;s Cunning" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="27a3-4335-125-bd4a">
+        <profile name="Bone-deep Savagery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="27a3-4335-125-bd4a">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit if it has not been deployed.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up this unit in reserve **outflanking the enemy**. It has now been deployed.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move 3&quot;. If it can move into combat, it must. If it was in combat at the start of the move, it must end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Hunters Unleashed" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e7d2-dd70-af98-ee37">
           <characteristics>
-            <characteristic name="Timing" id="d115-e0a8-5703-bd6d" hidden="false" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" id="f70d-f8b3-65eb-a051" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick this unit if it is **outflanking the enemy**.</characteristic>
-            <characteristic name="Effect" id="a6dd-779b-949e-413f" hidden="false" typeId="b6f1-ba36-6cd-3b03">Set up this unit anywhere on the battlefield more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" id="4e8c-de6c-189d-7a7b" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use the &apos;Normal Move&apos; ability as if it were your movement phase.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -334,22 +348,22 @@
         <cost name="‎" typeId="1dd2-2af7-76a2-2423" value="0"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Teratic Cohort" hidden="false" id="dce5-3e43-e53-b347">
+        <selectionEntry type="model" import="true" name="Teratic Cohort" hidden="false" id="dce5-3e43-e53-b347" defaultAmount="1,7">
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="97a6-e2bb-b7df-7b6b-min"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="97a6-e2bb-b7df-7b6b-max"/>
+            <constraint type="min" value="8" field="selections" scope="parent" shared="true" id="97a6-e2bb-b7df-7b6b-min"/>
+            <constraint type="max" value="8" field="selections" scope="parent" shared="true" id="97a6-e2bb-b7df-7b6b-max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Claws and Talons" hidden="false" id="adc5-d13a-2761-4c0f">
+            <selectionEntry type="upgrade" import="true" name="Cohort Weapons" hidden="false" id="adc5-d13a-2761-4c0f">
               <profiles>
-                <profile name="Claws and Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3d7a-77b-ae00-7680">
+                <profile name="Cohort Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3d7a-77b-ae00-7680">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -360,12 +374,12 @@
             </selectionEntry>
           </selectionEntries>
           <modifiers>
-            <modifier type="increment" value="5" field="97a6-e2bb-b7df-7b6b-min">
+            <modifier type="increment" value="8" field="97a6-e2bb-b7df-7b6b-min">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" value="5" field="97a6-e2bb-b7df-7b6b-max">
+            <modifier type="increment" value="8" field="97a6-e2bb-b7df-7b6b-max">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
               </repeats>
@@ -376,106 +390,21 @@
               <description>28.5mm</description>
             </rule>
           </rules>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Mortek Cycloptians" hidden="false" id="457d-3ee8-5c59-1c2a">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a4b1-873-8711-8ce0-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a4b1-873-8711-8ce0-max"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Teratic Weapons" hidden="false" id="f53d-a27c-f48b-4cda">
-              <profiles>
-                <profile name="Teratic Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f696-4fe-ad84-a8e4">
-                  <characteristics>
-                    <characteristic name="Atk" id="5315-5379-87d0-7188" hidden="false" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" id="ce95-1006-3d6d-f13a" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="5de5-15a0-cb86-3b7b" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="fa65-9b06-3001-a845" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="59b1-7168-c040-bcb3" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="6630-4f78-af79-fb83" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2542-ca24-51ac-907-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2542-ca24-51ac-907-max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="increment" value="2" field="a4b1-873-8711-8ce0-min">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="2" field="a4b1-873-8711-8ce0-max">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Base Size" id="5139-89fb-6e5c-e63a" hidden="true">
-              <description>32mm</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Kavalos Centauri" hidden="false" id="f47a-c846-f23e-e357">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Teratic Weapons" hidden="false" id="5c37-2348-198a-330a">
-              <profiles>
-                <profile name="Teratic Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6c12-3305-4bfd-9a01">
-                  <characteristics>
-                    <characteristic name="Atk" id="f535-ffef-8ab0-9efa" hidden="false" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" id="b8f4-2ae4-5288-2aee" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="e4c9-9dcb-eaac-e942" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="fd6d-e078-677c-c98d" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="2b2f-5d33-80ed-b429" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="c42a-d080-5533-9cae" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b6c2-2f38-8fe0-308d-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b6c2-2f38-8fe0-308d-max"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64fb-37db-86fe-15af-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64fb-37db-86fe-15af-max"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="64fb-37db-86fe-15af-min">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="64fb-37db-86fe-15af-max">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Command Models" id="260a-daf5-a565-e3a0" hidden="false">
+            <selectionEntryGroup name="Command Models" id="91b5-5ebe-3db2-2f50" hidden="false">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="635e-94cf-6cab-a953" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1a6-b692-3c1f-282f" includeChildSelections="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Champion" hidden="false" id="ddbb-4f01-485-1247" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                <entryLink import="true" name="Champion" hidden="false" id="2fd8-3ddd-ca46-ad94" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a25a-5842-3ec2-4916-max"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3d3-e70a-6b32-1492"/>
+                    <constraint type="max" value="1" field="selections" scope="c127-fa89-8519-3af0" shared="true" id="2d12-0547-874f-850a" includeChildSelections="true"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <rules>
-            <rule name="Base Size" id="f259-fa1a-0d60-fe6a" hidden="true">
-              <description>60x35mm</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -490,6 +419,7 @@
         <categoryLink targetId="52cc-95fd-6cd3-8f72" id="9ef8-bbc2-abd4-a9f0" primary="false" name="WARD (5+)"/>
         <categoryLink targetId="b979-4c3e-7d0e-6921" id="50c3-613e-2bbf-d939" primary="false" name="FLY"/>
         <categoryLink targetId="c203-51a0-3d44-6b07" id="715d-fe78-c5f3-48de" primary="false" name="WARMASTER"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (3)" hidden="false" id="4a52-e987-1c26-ff00" targetId="2fb7-c843-5c87-f039" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="c6dd-4000-e48-4c31" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -635,7 +565,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a86c-5656-a4ee-fd7b">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Inda-Khaat** is 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the number after its **^^Relentless Discipline^^** keyword is 4.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -648,56 +578,62 @@
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">20</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Mortarch of the Necropolis" hidden="false" id="e18c-9aa-ffab-b18e" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
-            <characteristic name="Keywords" id="821b-c893-315d-8df" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="c429-cc73-54a3-f4d8" hidden="false" typeId="fd7f-888d-3257-a12b">If this unit uses a **^^Relentless Discipline^^** ability, that ability affects friendly **^^OSSIARCH BONEREAPERS^^** units wholly within 18&quot; of this unit instead of wholly within 12&quot;.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of visible friendly **^^Ossiarch Bonereapers^^** units that have used any **^^Relentless Discipline^^** abilities this turn.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
         <profile name="Aviarch Spymaster" hidden="false" id="cd33-c664-d0c4-9474" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: Opponent declared a command for a unit within 18&quot; of this unit</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 5+, that command has no effect, it still counts as having been used and the command points spent to use it are still lost.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Prime Necrophoros" hidden="false" id="46c1-766e-179b-3c1c" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+        <profile name="You Dare?!" hidden="false" id="46c1-766e-179b-3c1c" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of other friendly **^^Ossiarch Bonereapers^^** units while they are wholly within 18&quot; of this unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Start of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if at least half the units from your starting army have been destroyed.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle round:
+• Add 5 to the Attacks characteristic of this unit&apos;s **Inda-Khaat**.
+• Add 3 to the Attacks characteristic of this unit&apos;s **The Shield Immortis**.
+• This unit cannot use the &apos;Supreme Lord of the Bonereaper Legions&apos; ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Supreme Lord of the Bonereaper Legions" hidden="false" id="ec-6c0b-673c-88ee" typeId="55ac-f837-dded-5872" typeName="Ability (Command)">
+        <profile name="Supreme Lord of the Bonereaper Legions" hidden="false" id="ec-6c0b-673c-88ee" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Your Hero Phase</characteristic>
-            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
-            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick up to 3 friendly **^^Ossiarch Bonereapers^^** units wholly within 18&quot; of this unit to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Until the start of your next turn, add 1 to save rolls for the targets while they are wholly within 18&quot; of this unit.</characteristic>
-            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick a visible friendly **^^Ossiarch Bonereapers^^** unit wholly within 12&quot; of this unit that is in combat and has not used a **^^Relentless Discipline^^** ability this phase to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend a number of **relentless discipline** points equal to the target&apos;s Health characteristic. If the target is reinforced and has more than half of its starting models, spend an additional **relentless discipline** point. The target can use 2 **^^Fight^^** abilities this phase. After the first is used, however, the target has **^^Strike-last^^** for the rest of the turn. In addition, the target cannot use **^^Relentless Discipline^^** abilities for the rest of the phase.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5c69-e4b9-19bc-e801" name="Color">Yellow</attribute>
-            <attribute typeId="2bd5-08f1-f3d1-86f7" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Red</attribute>
+            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Offensive</attribute>
             <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
           </attributes>
         </profile>
@@ -710,6 +646,7 @@
         <categoryLink targetId="75d6-6995-dfcc-3898" id="89ca-21ec-ae99-a067" primary="false" name="INFANTRY"/>
         <categoryLink targetId="72ce-2188-70bf-2dbd" id="3a1c-1d78-1eba-bc6c" primary="false" name="UNIQUE"/>
         <categoryLink targetId="c203-51a0-3d44-6b07" id="c71-f341-3a0-157e" primary="false" name="WARMASTER"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (10)" hidden="false" id="8950-4428-b17d-cdbd" targetId="3d40-cc89-c9ca-058a" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Katakros, Mortarch of the Necropolis" hidden="false" id="babf-adbe-1db7-f2ce">
@@ -722,12 +659,12 @@
               <profiles>
                 <profile name="Inda-Khaat" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2853-ae1d-e386-8491">
                   <characteristics>
-                    <characteristic name="Atk" id="e2ce-f620-1b6b-e4" hidden="false" typeId="60e-35aa-31ed-e488">5</characteristic>
-                    <characteristic name="Hit" id="316e-250b-5079-b781" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="8f99-eca9-c93e-814c" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="b191-79d3-771d-c0c2" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="df70-b7d7-53a-e33" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
-                    <characteristic name="Ability" id="bd7b-a54f-e6eb-ec29" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -740,12 +677,12 @@
               <profiles>
                 <profile name="Retinue Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="81d1-aa4d-708e-a921">
                   <characteristics>
-                    <characteristic name="Atk" id="8ad-f2d-de0b-dbd9" hidden="false" typeId="60e-35aa-31ed-e488">10</characteristic>
-                    <characteristic name="Hit" id="8354-9741-9f62-87e5" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="9fc7-79f4-fbb6-484" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="d804-dadc-12d2-8d9c" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="31d8-52cb-874d-42c0" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="f0b5-5057-1e21-abb3" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -797,7 +734,7 @@
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8134-17b4-5c5d-19c1">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Razarak&apos;s Ebon Claws** is 4.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of **Razarak&apos;s Ebon Claws** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -807,8 +744,8 @@
         </profile>
         <profile name="The Staff of Spirits" hidden="false" id="5a58-d58d-c83a-6d2" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
-            <characteristic name="Keywords" id="ee71-5a04-2795-24a0" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="4c0c-3d23-4aa-e96e" hidden="false" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for this unit. Each time this unit successfully casts a spell, **Heal (1)** this unit.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to casting rolls for this unit. Each time this unit successfully casts a spell, **Heal (1)** this unit after that **^^Spell^^** ability has been resolved.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -820,7 +757,8 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit in combat with it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the target is a **^^Hero^^**, double the amount of mortal damage inflicted.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. Add 1 to the roll if the target is a **^^Wizard^^** or **^^Priest^^**. On a 2+, add an amount equal to the roll to the Attacks characteristic of this unit&apos;s **Razarak&apos;s Ebon Claws** for the rest of the phase, but while this unit is in combat with the target, all attacks made with that weapon this phase must target that enemy unit.
+**Designer&apos;s Note:** *If the target is a* **^^Wizard^^** *or* **^^Priest^^***, this ability cannot fail; however you still need to roll to determine the number of extra attacks it generates.*</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -832,10 +770,10 @@
         </profile>
         <profile name="Mortarch of Sacrament" hidden="false" id="95d2-fbf3-9754-a69e" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" id="bad6-84b2-195e-210a" hidden="false" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a **^^Spell^^** ability</characteristic>
-            <characteristic name="Declare" id="926f-380e-73d9-d5c8" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="e431-5bd2-4c50-a530" hidden="false" typeId="b6f1-ba36-6cd-3b03">If a friendly **^^Ossiarch Bonereapers^^** unit wholly within 18&quot; of this unit was picked to be the target of that spell, roll a dice. On a 4+, ignore the effect of that spell on that unit. This unit can use this ability more than once per phase but only once per **^^Spell^^** ability.</characteristic>
-            <characteristic name="Keywords" id="afe9-24b9-cf23-f1e4" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: Opponent declared a **^^Spell^^** ability for a unit within 18&quot; of this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 2D6. If the roll exceeds the casting roll for the spell, then the spell is unbound, its effect is not resolved and that **^^Spell^^** ability cannot be used by enemy units until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -848,11 +786,12 @@
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
             <characteristic name="Effect" typeId="1cb9-a-1345-907f">Roll 10 dice. For each 6:
-• Inflict 1 mortal damage on the target.
+• Give the target 1 **necrotic withering** point.
 • Roll an extra dice.
-For each 5+ on those extra dice, repeat the above bullet points. Then, do the same for each 4+, then each 3+, then each 2+.</characteristic>
+For each 5+ on those extra dice, repeat the above bullet points. Then, do the same for each 4+, and then each 3+. Finally, for each 2+, give the target 1 **necrotic withering** point (do not roll any extra dice),
+After a roll, if the target has 8 or more **necrotic withering points**, it is automatically destroyed. Otherwise, after the last roll, inflict an amount of mortal damage on the target equal to the number of **necrotic withering** points it has. Then, those **necrotic withering** points are lost.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -871,6 +810,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink targetId="6d54-625c-d063-13e2" id="e6ed-b739-27c3-6252" primary="false" name="MONSTER"/>
         <categoryLink targetId="8bc-6d63-e37f-9239" id="42d0-a5ec-add6-1c79" primary="false" name="WIZARD (3)"/>
         <categoryLink targetId="c203-51a0-3d44-6b07" id="85c9-ba92-3617-be6f" primary="false" name="WARMASTER"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (3)" hidden="false" id="87e4-5db8-c136-c043" targetId="2fb7-c843-5c87-f039" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="37ee-1fd6-7ed1-6fd3" includeChildSelections="true"/>
@@ -882,12 +822,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Razarak&apos;s Ebon Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c6e6-2bec-bc83-cca6">
                   <characteristics>
-                    <characteristic name="Atk" id="9aec-a4c0-dc86-c5e3" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" id="95f8-e9aa-2450-77b4" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="f634-bb5e-c01c-bfea" hidden="false" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" id="3f10-21ad-a00e-7e35" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="38fe-9662-fd36-8092" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="a3e4-ff86-d417-2f9b" hidden="false" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">3</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -900,12 +840,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Zefet-kar and Khenash-an" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8fe5-311c-8c4-385a">
                   <characteristics>
-                    <characteristic name="Atk" id="e0e6-7851-54d-26b" hidden="false" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" id="d2b6-865-6037-55d0" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="fc6e-5e31-e59b-8fb3" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="56dd-f9c-fec9-2854" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="12a8-dade-fd21-be8b" hidden="false" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" id="b8a-7387-8edd-2907" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -953,24 +893,24 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         </profile>
         <profile name="Unstoppable Charge" hidden="false" id="4ea8-2b5b-b380-9016" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" id="5f63-5b85-e2a9-af57" hidden="false" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" id="9366-8bd5-29e8-1417" hidden="false" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy **^^Infantry^^** unit that it passed across to be the target.</characteristic>
-            <characteristic name="Effect" id="82f2-c019-162a-6bbe" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
-            <characteristic name="Keywords" id="99bc-50bd-545d-131a" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick each enemy unit in combat with it to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The targets have **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Still Their Breath!" hidden="false" id="2d3e-4ac0-9ff1-99eb" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" id="63af-9174-3b49-587c" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
-            <characteristic name="Declare" id="44fb-c87e-77e6-a6fa" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="e5e4-49be-39e5-dc49" hidden="false" typeId="b6f1-ba36-6cd-3b03">If this unit is in combat, for the rest of the turn, add 1 to the Attacks characteristic of melee weapons used by friendly non-**^^Hero Ossiarch Bonereapers^^** units while they are wholly within 12&quot; of this unit.</characteristic>
-            <characteristic name="Keywords" id="3029-d8ab-f078-e7c5" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Hero Ossiarch Bonereapers Cavalry^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend 1 **relentless discipline** point. If this unit is in combat, no **relentless discipline** points are spent. The target&apos;s melee weapons have **Charge (+1 Damage)** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Relentless Discipline^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -987,6 +927,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink targetId="70a4-383f-421f-52cd" id="f72d-e23d-96a3-53f8" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="72ce-2188-70bf-2dbd" id="f76-78d0-de12-5739" primary="false" name="UNIQUE"/>
         <categoryLink targetId="926c-df8c-6841-d49e" id="c427-b58d-b6ce-8b57" primary="false" name="CAVALRY"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (7)" hidden="false" id="1bc0-33a4-72e0-ffd6" targetId="0cf3-b75a-0999-7508" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="826a-a19d-dddc-677a" includeChildSelections="true"/>
@@ -1016,12 +957,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="The Dark Lance" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="13c3-30bf-925b-be1a">
                   <characteristics>
-                    <characteristic name="Atk" id="79a8-fcf6-64bd-f6ac" hidden="false" typeId="60e-35aa-31ed-e488">5</characteristic>
-                    <characteristic name="Hit" id="8d89-f894-e8fd-664e" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="8a09-84ec-5cac-5fb6" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="7651-d8c0-e089-3f7b" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="aef7-f833-5a26-ab5f" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="3e84-8da8-cc6b-55a4" hidden="false" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1055,10 +996,10 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         </profile>
         <profile name="Refined Creations" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5fc8-2b4d-ab3b-f004">
           <characteristics>
-            <characteristic name="Timing" id="a3ae-5f18-3e15-1696" hidden="false" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
-            <characteristic name="Declare" id="5507-cad6-975a-f52" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Gothizzar Harvester**, **Morghast Archai** or **Morghast Harbingers** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" id="71e9-babf-6e20-2ffc" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to the Rend characteristic of the target’s melee weapons until the start of your next turn.</characteristic>
-            <characteristic name="Keywords" id="2e5f-5886-f1a-d61" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **Mortek Crawler**, **Gothizzar Harvester**, **Morghast Archai** or **Morghast Harbingers** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to the Rend characteristic of the target’s weapons until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1076,6 +1017,8 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="2707-6773-dde9-e981" targetId="5603-d1-a021-331e" primary="false"/>
         <categoryLink name="MORTISAN" hidden="false" id="ae6-2d77-b4f8-31b5" targetId="a2d-c08d-4d7d-fe93" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="aea6-f27b-ab5f-3cfa" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (2)" hidden="false" id="019c-076e-e905-57c7" targetId="4d3b-23e7-f8f0-9780" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="e16d-82e8-4305-4aad" targetId="b979-4c3e-7d0e-6921" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="a3f-4e34-28f2-fc5d" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -1087,12 +1030,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Ossified Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7e1-3da4-ff34-98a4">
                   <characteristics>
-                    <characteristic name="Atk" id="290d-6c7f-6c13-462d" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="1d7a-2c99-ba88-3fea" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="b21f-a111-5e2f-414f" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="27c5-cec3-5fda-a2e1" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="f28f-9329-16bf-6ce0" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="82f7-3968-a39c-49ca" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1137,10 +1080,10 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         </profile>
         <profile name="Necrotic Impetus" hidden="false" id="846c-e117-b178-2ddf" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" id="730d-6478-f7eb-5ea3" hidden="false" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Fight^^** ability for this unit</characteristic>
-            <characteristic name="Declare" id="8c4a-c251-eaa7-6be5" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="120e-3142-7f8e-1831" hidden="false" typeId="b6f1-ba36-6cd-3b03">Pick a friendly non-**^^Hero Ossiarch Bonereapers Infantry^^** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target’s attacks for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" id="3046-537e-6561-e87c" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit in combat with this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. After this ability has been resolved, you gain a number of **relentless discipline** points equal to the number of total damage points allocated by this ability this turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1158,6 +1101,8 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="6467-f3ff-c695-a27" targetId="5603-d1-a021-331e" primary="false"/>
         <categoryLink name="MORTISAN" hidden="false" id="5d3f-89b0-9543-5a02" targetId="a2d-c08d-4d7d-fe93" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="3db7-cb10-7d37-9e2d" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (2)" hidden="false" id="b709-177d-6dc8-46cc" targetId="4d3b-23e7-f8f0-9780" primary="false"/>
+        <categoryLink name="FLY" hidden="false" id="39c1-703e-cb6f-702c" targetId="b979-4c3e-7d0e-6921" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="354d-d706-b89c-79f3" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -1169,12 +1114,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Soulreaper Scythe" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aa3d-6ed7-ebc1-4fcc">
                   <characteristics>
-                    <characteristic name="Atk" id="724a-537c-fc4-4a2d" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="d247-c3af-9e18-676f" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="734a-9c3a-9140-9651" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="6ab3-1c4a-c5f2-955e" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="8589-71a5-16c7-14ee" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="e8b6-ffd0-4b3b-c1f3" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1200,7 +1145,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
       <profiles>
         <profile name="Mortisan Soulmason" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="2d2c-92f-41ac-e949">
           <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
@@ -1211,7 +1156,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly **^^Ossiarch Bonereapers^^** unit wholly within 12&quot; of the caster to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target has **^^Strike-First^^** for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">The target has **^^Strike-first^^** for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -1228,6 +1173,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink name="MORTISAN" hidden="false" id="5ad6-3acb-d668-e5c4" targetId="a2d-c08d-4d7d-fe93" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="5525-782c-67aa-8456" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
         <categoryLink targetId="8179-697a-9f4c-91d4" id="a153-51a6-3208-2ee5" primary="false" name="WIZARD (2)"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (2)" hidden="false" id="98c6-6ee4-c3b5-69f9" targetId="4d3b-23e7-f8f0-9780" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="21c5-cd8b-79a7-4d93" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -1239,36 +1185,18 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Soulmason&apos;s Staff" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e8b1-18ef-3f3-75c3">
                   <characteristics>
-                    <characteristic name="Atk" id="373e-a244-fab0-1191" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="f65b-4a3b-8969-64de" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="36d3-9078-6f8a-4230" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="121d-616a-b572-e367" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="f3ad-bdb0-30f6-2754" hidden="false" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" id="7d95-ce01-1233-d581" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a42e-df7a-cd9b-8da9-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a42e-df7a-cd9b-8da9-max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mortek Throne&apos;s Ossified Claws" hidden="false" id="e2c3-8db-7aad-1f77">
-              <profiles>
-                <profile name="Mortek Throne&apos;s Ossified Claws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e289-6555-dda1-dc66">
-                  <characteristics>
-                    <characteristic name="Atk" id="cbb5-acb3-90c7-39ec" hidden="false" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" id="ce33-b438-2e03-6335" hidden="false" typeId="26dc-168-b2fd-cb93">5+</characteristic>
-                    <characteristic name="Wnd" id="c851-883c-2256-4649" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="5bb2-f9a1-5fab-faa" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="33c6-823d-6ca9-a3f0" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="e457-3a64-5aeb-19af" hidden="false" typeId="eda3-7332-5db1-4159">Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="428b-744-d0ea-a9a1-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="428b-744-d0ea-a9a1-max"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -1294,15 +1222,18 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Soulbound Protectors" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2c86-163e-bc0e-cd8">
+        <profile name="Immortal Bulwark" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2c86-163e-bc0e-cd8">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to ward rolls for friendly **^^Ossiarch Bonereapers Heroes^^** within this unit’s combat range. However, each time you make an unmodified ward roll of 1 for a friendly **^^Ossiarch Bonereapers Heroes^^** within this unit’s combat range, allocate 1 damage point to this unit after the damage sequence for that **^^Hero^^** has been resolved (ward rolls cannot be made for those damage points).</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit and that charged this turn to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Other than the **Companion** weapon ability, weapon abilities for the target&apos;s combat attacks have no effect for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
@@ -1335,12 +1266,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Dread Halberd" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5882-5afd-fe5-e3e">
                   <characteristics>
-                    <characteristic name="Atk" id="853a-f079-e3de-eaee" hidden="false" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" id="bd3f-8c79-c803-43f2" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="307e-2f98-9d06-58ca" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="8403-9904-9a47-e9c0" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="369e-d051-38be-c25b" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="5a06-27ff-1056-b80b" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1368,21 +1299,17 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Quadrarch Aspects" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1062-dc9e-d0b3-b9e3">
+        <profile name="Fourfold Slayers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1062-dc9e-d0b3-b9e3">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects to apply for the rest of the turn:
-***Domination Aspect***: Subtract 3 from the control scores of enemy units while they are in combat with this unit.
-***Blade-parry Aspect***: Subtract 1 from hit rolls for combat attacks that target this unit.
-***Destroyer Aspect***: Ward rolls cannot be made for damage points inflicted by this unit’s combat attacks.
-***Precision Aspect***: This unit’s melee weapons have Anti-**^^Hero^^** (+1 Rend) while this unit is in combat with an enemy **^^Hero^^**.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on the target. If this unit has 3 or more models, inflict 1 mortal damage on the target for each 5+ instead.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1421,7 +1348,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1452,37 +1379,23 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Spear of the Kavaloi" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a56c-9780-a411-832b">
+        <profile name="Deathrider Commander" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a56c-9780-a411-832b">
           <characteristics>
-            <characteristic name="Keywords" id="606b-a9c-2960-e869" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="f1b5-93a-4d89-86b0" hidden="false" typeId="fd7f-888d-3257-a12b">When this unit uses a **^^Charge^^** ability, it can pass through models in enemy Infantry units as if it had **^^Fly^^**.</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit and visible friendly **Kavalos Deathriders** units wholly within 12&quot; Of this unit can move 12&quot; instead of 10&quot; when they use the &apos;Deathrider Wedge&apos; ability.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
-        <profile name="Unstoppable Charge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="922e-8c0a-e4a9-85">
-          <characteristics>
-            <characteristic name="Timing" id="48af-a784-96ae-2d60" hidden="false" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" id="d228-5594-3f7f-ea78" hidden="false" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy **^^Infantry^^** unit that it passed across to be the target.</characteristic>
-            <characteristic name="Effect" id="dfdd-7ea4-a352-2fae" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
-            <characteristic name="Keywords" id="9ef1-d356-5072-e301" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Master of Cavalry" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="52d7-781f-d8a2-5484">
           <characteristics>
-            <characteristic name="Timing" id="4d24-514c-d684-c2cc" hidden="false" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Fight^^** ability for this unit</characteristic>
-            <characteristic name="Declare" id="7c6f-87b1-a512-5e10" hidden="false" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" id="228d-186f-54ff-bb00" hidden="false" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **Kavalos Deathriders** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the ^^**Fight^^** ability used by this unit has been resolved.</characteristic>
-            <characteristic name="Keywords" id="d37-a6ae-46f-d382" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Fight^^** ability for this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly **Kavalos Deathriders** unit that has not used a **^^Fight^^** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the ^^**Fight^^** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target&apos;s combat attacks for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1498,6 +1411,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="346-63f2-afba-b8f0" targetId="5603-d1-a021-331e" primary="false"/>
         <categoryLink name="WARD (6+)" hidden="false" id="bd62-4563-d940-f95a" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="CAVALRY" hidden="false" id="f633-bf7f-82fb-5e0" targetId="926c-df8c-6841-d49e" primary="false"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (6)" hidden="false" id="80ee-1924-d159-4597" targetId="7f9b-0dda-ac91-6b5f" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Liege-Kavalos" hidden="false" id="5ea0-176a-10e0-9742">
@@ -1506,12 +1420,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Commander&apos;s Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5507-d580-4c2f-c8e4">
                   <characteristics>
-                    <characteristic name="Atk" id="9af1-992e-e1c2-1722" hidden="false" typeId="60e-35aa-31ed-e488">5</characteristic>
-                    <characteristic name="Hit" id="900c-bb6a-315b-9fc1" hidden="false" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" id="caa6-4104-6862-550b" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="9ed4-4a58-7a4b-6fc0" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="9f01-a483-fac8-f778" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="b039-8413-76d8-db30" hidden="false" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1563,15 +1477,31 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         </profile>
         <profile name="Deathly Barrage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4f11-30c-eee6-e582">
           <characteristics>
-            <characteristic name="Timing" id="6b3b-f49d-a77c-7321" hidden="false" typeId="652c-3d84-4e7-14f4">Any Shooting Phase</characteristic>
-            <characteristic name="Declare" id="cb72-2ae7-521c-e8b5" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that was targeted by all of this unit’s shooting attacks this phase to be the target.</characteristic>
-            <characteristic name="Effect" id="f360-b0f6-4428-9515" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if this unit is wholly within 12&quot; of a friendly **Mortisan Ossifector**, and add 1 to the roll if any other friendly **Mortek Crawler** units picked that enemy unit to be the target of this ability this turn. On a 4+, the target has **^^Strike-Last^^** for the rest of the turn</characteristic>
-            <characteristic name="Keywords" id="c394-eb1-8524-ae04" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Shoot^^** ability for this unit.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After that **^^Shoot^^** ability has been resolved, if all of this unit&apos;s attacks targeted the same enemy unit, roll a dice. Add 1 to the roll if this unit is wholly within 12&quot; of a friendly **Mortisan Ossifector**, and add 1 to the roll if any other friendly **Mortek Crawler** units picked that enemy unit to be the target of this ability this turn. On a 4+, the target has **^^Strike-Last^^** for the rest of the turn</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Cursed Stele" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2400-cbaa-9b0d-0430">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
+• This unit&apos;s ranged weapons have **Anti-^^Faction Terrain^^ (+1 Rend)**.
+• Add 1 to the Damage characteristic of this unit&apos;s ranged weapons for attacks that target faction terrain features.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1589,12 +1519,12 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Attendants&apos; Crawler Tools" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6ca-9460-bd3-aadb">
                   <characteristics>
-                    <characteristic name="Atk" id="fe30-1ade-c15a-c67b" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" id="92ad-e891-8e06-711c" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="f30f-e226-d075-543c" hidden="false" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" id="50c-8f-11cd-51e0" hidden="false" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" id="2b4d-1264-aaed-8b5d" hidden="false" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" id="c158-66d7-664b-3025" hidden="false" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1607,13 +1537,13 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
               <profiles>
                 <profile name="Dread Catapult" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="b597-4c7b-f088-11bf">
                   <characteristics>
-                    <characteristic name="Rng" id="6dc2-16f3-a5bf-dfcb" hidden="false" typeId="c6b5-908c-a604-1a98">24&quot;</characteristic>
-                    <characteristic name="Atk" id="f06c-c1d-3985-38a7" hidden="false" typeId="aa17-4296-2887-e05d">4</characteristic>
-                    <characteristic name="Hit" id="6e5f-276-cb78-72fe" hidden="false" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" id="6a2b-338-7dd3-d9ca" hidden="false" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" id="b5c9-387f-ccac-c53e" hidden="false" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" id="bc87-7527-94cf-a3bc" hidden="false" typeId="96c2-d0a5-ea1e-653b">D3+2</characteristic>
-                    <characteristic name="Ability" id="56bc-ae6b-27ec-c76b" hidden="false" typeId="d793-3dd7-9c13-741e">Anti-**^^Infantry^^** (+1 Rend), Crit (2 Hits)</characteristic>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">24&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">4</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3+2</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1645,28 +1575,17 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Deathrider Wedge" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fefb-88d4-8e0c-b0bc">
+        <profile name="Deathrider Wedge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="fefb-88d4-8e0c-b0bc">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When this unit uses a **^^Charge^^** ability, it can pass through models in enemy **^^Infantry^^** units as if it had **^^Fly^^**.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
-        <profile name="Unstoppable Charge" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a409-cf9c-fd11-f69e">
-          <characteristics>
-            <characteristic name="Timing" id="66dc-3d43-399-cff5" hidden="false" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" id="c15c-8051-36e7-7e63" hidden="false" typeId="bad3-f9c5-ba46-18cb">If this unit charged this phase, pick an enemy **^^Infantry^^** unit that it passed across to be the target.</characteristic>
-            <characteristic name="Effect" id="22d9-ec40-94b4-d529" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
-            <characteristic name="Keywords" id="f645-ef05-a6c4-ecf0" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Inflict D3 mortal damage on the enemy target. Inflict an additional D3 mortal damage on the enemy target if you picked a friendly target. Them, this unit and the friendly target (if any) can move 10&quot;. They can move through the combat ranges of enemy units but cannot end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Attack^^**, **^^Fight^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1710,7 +1629,7 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (2 Hits)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1784,24 +1703,24 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
-        <profile name="Gruesome Surgery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2cd4-5267-6502-d5d">
+        <profile name="Bone Harvest" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2cd4-5267-6502-d5d">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Infantry^^** unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. For each model slain by this ability, you can return 1 slain model to a friendly **Mortek Guard** unit wholly within 12&quot; of this unit.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each enemy unit that has been destroyed this battle. Add 1 to each roll if this unit used a **^^Fight^^** ability this turn. If any of the rolls are a 4+, this unit is **full**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Bone Harvest" hidden="false" id="11d-6dc7-33e-28eb" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+        <profile name="Bone Cage" hidden="false" id="11d-6dc7-33e-28eb" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an enemy model from a unit in combat with this unit is slain, give this unit 1 **bone-tithe point**. This unit can have a maximum of 6 **bone-tithe points** at once.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit is either **full** or **empty**. It starts the battle **full**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -1811,15 +1730,15 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         </profile>
         <profile name="Repair Construct" hidden="false" id="4ff5-c69f-5be4-34ee" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <characteristics>
-            <characteristic name="Timing" id="f4df-9659-e118-871c" hidden="false" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" id="aecf-1fcc-574e-f965" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Ossiarch Bonereapers^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" id="63b6-e413-a60a-3718" hidden="false" typeId="b6f1-ba36-6cd-3b03">Return a number of slain models to the target with a combined Health characteristic equal to the number of **bone-tithe points** this unit has. Then, reset this unit’s **bone-tithe points** to 0.</characteristic>
-            <characteristic name="Keywords" id="cf5-6943-2da7-9859" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is **full**, pick a visible friendly **^^Ossiarch Bonereapers^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Return 1 slain model to the target unit. If the target has a Health characteristic of 1, return 3 slain models to it instead. Then, this unit is **empty**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Rallying</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1828,64 +1747,27 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="68e1-17bd-5fc4-4e44" targetId="5603-d1-a021-331e" primary="false"/>
         <categoryLink name="WARD (6+)" hidden="false" id="2649-a228-9416-e45c" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="DEATH" hidden="false" id="e6ec-e75f-26d9-b667" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
-        <categoryLink targetId="6d54-625c-d063-13e2" id="f9d9-6330-99b8-1196" primary="true" name="MONSTER"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="f046-547e-3d52-3104" targetId="f7bc-b618-4b5d-2bae" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Gothizzar Harvester" hidden="false" id="1b89-7f59-4389-6732">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Ossified Hooves and Tail" hidden="false" id="f67d-d9e0-b8fb-c39a">
-              <profiles>
-                <profile name="Ossified Hooves and Tail" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="915c-e470-2931-decb">
-                  <characteristics>
-                    <characteristic name="Atk" id="1c51-995f-904b-c67e" hidden="false" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" id="15ca-ecd9-627d-3980" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="c8d1-f684-ea39-2465" hidden="false" typeId="61c1-22cc-40af-2847">3+</characteristic>
-                    <characteristic name="Rnd" id="1223-f4bd-ba72-5ed7" hidden="false" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" id="608-586e-e4fb-88be" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="69fa-9f1-cd8f-c509" hidden="false" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="725f-87a1-16a9-dd3c-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="725f-87a1-16a9-dd3c-max"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Soulcrusher Weapons" hidden="false" id="183e-a716-d2c4-3485">
               <profiles>
                 <profile name="Soulcrusher Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="dcf8-d579-21e9-15b">
                   <characteristics>
-                    <characteristic name="Atk" id="2767-7764-8294-6456" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" id="5c15-1ff5-f109-6ea7" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" id="5b64-41e4-b4a0-73db" hidden="false" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" id="c2f2-c6c5-f26-6c1c" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" id="954d-90e8-74fb-bdd5" hidden="false" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" id="1b81-356f-18db-3968" hidden="false" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c7d-657f-61d1-6b2f-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c7d-657f-61d1-6b2f-max"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Death&apos;s Head Maw" hidden="false" id="5809-a0ab-6896-7eed">
-              <profiles>
-                <profile name="Death&apos;s Head Maw" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7963-65e4-5b09-4382">
-                  <characteristics>
-                    <characteristic name="Rng" id="c94a-365a-910f-ff9c" hidden="false" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" id="297f-4767-8777-b922" hidden="false" typeId="aa17-4296-2887-e05d">4</characteristic>
-                    <characteristic name="Hit" id="ec4b-2c82-72a4-ca52" hidden="false" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" id="afea-c3ae-1414-10a1" hidden="false" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
-                    <characteristic name="Rnd" id="1c87-89ab-24c2-26b2" hidden="false" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" id="f947-f123-26a1-b1ad" hidden="false" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                    <characteristic name="Ability" id="942a-fbcc-1288-3563" hidden="false" typeId="d793-3dd7-9c13-741e">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="614-4d14-2c7f-f71d-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="614-4d14-2c7f-f71d-max"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -1913,9 +1795,9 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         </profile>
         <profile name="Discharge Armour" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e060-bc5a-3cb2-ad62">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit has an **arcane charge token**, pick a friendly **^^Ossiarch Bonereapers Wizard^^** wholly within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit’s **arcane charge token**, then add 1 to casting rolls for the target for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Ossiarch Bonereapers Wizard^^** wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, add 1 to casting rolls for the target for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1928,12 +1810,11 @@ For each 5+ on those extra dice, repeat the above bullet points. Then, do the s
         <profile name="Ebon-wrought Armour" hidden="false" id="fe5a-12e7-4e7b-af92" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (3+)^^** against damage points inflicted by **^^Spell^^** abilities, **^^Prayer^^** abilities and abilities used by **^^Manifestations^^**.
-If you make a successful ward roll for this unit, or if this unit destroys an enemy **^^Manifestation^^**, give this unit an **arcane charge token**. This unit cannot have more than 1 **arcane charge token** at once.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has **^^Ward (3+)^^** against damage points inflicted by **^^Spell^^** abilities, **^^Prayer^^** abilities and abilities used by **^^Manifestations^^**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -2087,17 +1968,15 @@ If you make a successful ward roll for this unit, or if this unit destroys an e
         <categoryLink targetId="cdd6-ffa1-9b32-4cb8" id="24ba-b3cc-621f-a843" primary="true" name="FACTION TERRAIN"/>
       </categoryLinks>
       <profiles>
-        <profile name="Deadly Gaze" hidden="false" id="12b7-ab68-ac10-6ca3" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+        <profile name="Deathly Aura" hidden="false" id="12b7-ab68-ac10-6ca3" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
-            <characteristic name="Timing" id="8f15-86ba-4556-8139" hidden="false" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-            <characteristic name="Declare" id="cfe2-c4ac-1d96-95a8" hidden="false" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this terrain feature to be the target.</characteristic>
-            <characteristic name="Effect" id="1274-b9cc-fc3c-1ff6" hidden="false" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, pick 1 of the following effects to apply:
-***Punishment of Agony***: Subtract 1 from hit rolls for the target until the start of your next turn.
-***Punishment of Ignorance***: Subtract 1 from casting rolls and/or chanting rolls for the target until the start of your next turn.
-***Punishment of Lethargy***: Halve the target’s Move characteristic until the start of your next turn.
-***Punishment of Death***: Inflict D3 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" id="2130-2cfa-157-3e82" hidden="false" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot be set up within **X**&quot; Of this terrain feature, where **X** is determined by the current battle round, as follows:
+1    9&quot;
+2    12&quot;
+3    15&quot;
+4    18&quot;
+5    21&quot;</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
@@ -2123,6 +2002,26 @@ Cover, Unstable**</description>
           <description>Use model</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Almighty Obsidian Blade" hidden="false" id="b00c-9d47-1f72-e6b6">
+          <profiles>
+            <profile name="Almighty Obsidian Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c595-d6d1-2f8f-940f">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="9e63-6967-48b2-03f0"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f610-0df9-ddc4-6527"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Soulstealer Carrion" hidden="false" id="cecf-5bc0-1647-8b2f" publicationId="2f1e-fdf-1ac2-fa38">
       <profiles>
@@ -2140,7 +2039,7 @@ Cover, Unstable**</description>
         <profile name="Aviarch Sentry" hidden="false" id="3ec-58fa-9f3-f895" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 5 from the control scores of enemy Infantry units while they are within 6&quot; of this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 10 from the control scores of enemy units while they are within 6&quot; of this **^^Manifestation^^**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
@@ -2200,7 +2099,7 @@ Cover, Unstable**</description>
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this ^^**Manifestation^^** was destroyed or banished this turn and the unit that summoned it is on the battlefield, roll a dice. On a 4+, set up this **^^Manifestation^^** again, wholly within 12&quot; of the unit that summoned it and more than 9&quot; from all enemy units</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this ^^**Manifestation^^** was destroyed or banished this turn and the unit that summoned it is on the battlefield, roll a dice. On a 4+, set up this **^^Manifestation^^** again, wholly within 12&quot; of the unit that summoned it and more than 9&quot; from all enemy units. That unit has summoned that **^^Manifestation^^**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2291,14 +2190,6 @@ Cover, Unstable**</description>
                 <characteristic name="Ability" id="420a-20ca-ad1a-eec0" hidden="false" typeId="eda3-7332-5db1-4159">-</characteristic>
               </characteristics>
             </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ad-a6b0-5eeb-7d13-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ad-a6b0-5eeb-7d13-max"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Soul-rending Shriek" hidden="false" id="1b21-a449-7337-a1c5">
-          <profiles>
             <profile name="Soul-rending Shriek" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7298-e406-c59a-f87b">
               <characteristics>
                 <characteristic name="Rng" id="8844-5bd6-fe72-551d" hidden="false" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
@@ -2312,8 +2203,8 @@ Cover, Unstable**</description>
             </profile>
           </profiles>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d3f-4b1b-53dd-8587-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d3f-4b1b-53dd-8587-max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ad-a6b0-5eeb-7d13-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ad-a6b0-5eeb-7d13-max"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2577,13 +2468,13 @@ Cover, Unstable**</description>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Boneshaper" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f809-58fc-c3ae-8e3d">
+        <profile name="Boneshaper" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="f809-58fc-c3ae-8e3d">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is not in combat, pick a friendly **Mortek Guard** unit that has been destroyed to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Your Hero Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">If this unit is not in combat, pick a friendly **Mortek Guard**unit that has been destroyed to be the target.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
@@ -2709,15 +2600,15 @@ Cover, Unstable**</description>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="a579-5ed4-de5a-fdc5"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="20" field="d429-dc20-dfeb-cd51">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true"/>
-              </conditions>
+            <modifier type="increment" value="10" field="d429-dc20-dfeb-cd51">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
-            <modifier type="set" value="20" field="a579-5ed4-de5a-fdc5">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1b37-82b8-c062-eb82" shared="true"/>
-              </conditions>
+            <modifier type="increment" value="10" field="a579-5ed4-de5a-fdc5">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
           <selectionEntries>
@@ -2793,5 +2684,550 @@ Cover, Unstable**</description>
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Liege-Kavalos on War Chariot" hidden="false" id="81d0-9a4a-fb83-8626" publicationId="2f1e-fdf-1ac2-fa38">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="aa2d-aad8-87c6-e3be" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Liege-Kavalos on War Chariot" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="1fde-7c8d-15fd-356a">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Grind Them to Dust" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="08a1-8cb5-c29b-9649">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat, pick this unit and up to 2 visible friendly **Kavalos War Chariots** wholly within 12&quot; of this unit and in combat to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For each target:
+• Make a pile-in move.
+• Then, pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Masterful Charioteer" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cc24-030b-2b17-3a36">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat and has charged this turn, pick a unit and up to 2 visible friendly **Kavalos War Chariots** that have charged this turn, that are wholly within 12&quot; Of this unit and that are in combat to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each target has **^^Ward (5+)^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="65df-77e7-b380-2ce7" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="DEATH" hidden="false" id="1fe3-96f2-7329-1c39" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="e8aa-db67-262d-e6e1" targetId="5603-d1-a021-331e" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="b411-efad-c956-78e8" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (6)" hidden="false" id="ab41-b923-2cc2-cded" targetId="7f9b-0dda-ac91-6b5f" primary="false"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="679c-8d08-86d5-d9fb" targetId="f7bc-b618-4b5d-2bae" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Liege-Kavalos on War Chariot" hidden="false" id="03ae-6384-3f82-674b">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Commander&apos;s Blade" hidden="false" id="3904-8e12-bc78-cd5a">
+              <profiles>
+                <profile name="Commander&apos;s Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b755-86d3-4787-7706">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="433c-e3bd-95ec-c700"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0413-c9c1-4ad1-d419"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Kavalos Steed&apos;s Hooves, Teeth, and Barbed Tails" hidden="false" id="7ea6-9134-8358-4e45">
+              <profiles>
+                <profile name="Kavalos Steed&apos;s Hooves, Teeth, and Barbed Tails" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="bc7f-5ee4-cb79-4f23">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="ed3d-71d9-f7ee-69e4"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cd15-fef4-2605-b8d8"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5408-294f-62f2-d5be"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a564-ee2a-72cb-8a87"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="b0f7-0c45-8696-fe3e" hidden="true">
+              <description>120x92mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Liege-Mortek" hidden="false" id="bf96-2414-2772-b78a" publicationId="2f1e-fdf-1ac2-fa38">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="0604-7580-3336-91ff" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Liege-Mortek" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="9930-ee64-f280-d305">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Clinical Efficiency" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ab0c-feeb-e5d4-0098">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Fight^^** ability for this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">
+</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a visible friendly **Mortek Guard**, **Mortek Triaxes** or **Mortek Crawler** unit that has not used an **^^Attack^^** ability this phase and is wholly within 12&quot; Of this unit to be the target. Immediately after the **^^Fight^^** ability used by this unit has been resolved, the target can be picked to use either a **^^Shoot^^** ability as if it were your shooting phase or a **^^Fight^^** ability. If it is picked to do so:
+• Add 1 to hit rolls for the target&apos;s attacks for the rest of the turn.
+• The target&apos;s ranged weapons (if any) have **Shoot in Combat** for the rest of the turn.
+• If the target uses a **^^Shoot^^** ability and is not in combat, all of its shooting attacks must target units in combat with this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="5fcd-4663-545a-4821" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="DEATH" hidden="false" id="958b-9d9b-2d7a-6159" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="08a9-ec94-e0d3-418e" targetId="5603-d1-a021-331e" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="233a-94c8-1459-0cd2" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="85a3-b907-a2c0-1df0" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="RELENTLESS DISCIPLINE (5)" hidden="false" id="1171-5d6b-28d8-8cdd" targetId="f77f-b20a-b844-dbc1" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Liege-Mortek" hidden="false" id="eda5-9c41-2681-28f0">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Commander&apos;s Weapon" hidden="false" id="acf9-8bf6-46f2-bf7f">
+              <profiles>
+                <profile name="Commander&apos;s Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aa88-f60d-1759-a179">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="3c54-7929-3277-5cea"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b2bc-9fb5-9a27-59e6"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="3ae2-be7d-3813-48ab"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="891a-ea03-17bc-a0d6"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="bfcf-dfa9-a3e3-59e1" hidden="true">
+              <description>80mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Kavalos War Chariot" hidden="false" id="322d-d9f2-cdc6-64e6" publicationId="2f1e-fdf-1ac2-fa38">
+      <profiles>
+        <profile name="Kavalos War Chariot" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="458e-460e-98a4-f808">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">10</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scything Assault" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c418-5066-b050-8dd1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit in combat with it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Inflict D3 mortal damage on the target. Then, you can remove this unit from the battlefield and set it up again within 1&quot; of the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Attack^^**, **^^Fight^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Pinning Attacks" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7829-75ce-d0eb-3121">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+:
+• Inflict 1 mortal damage on the target.
+• The target cannot make pile-in moves for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="DEATH" hidden="false" id="a26e-d5c3-f133-ab14" targetId="d484-a2d7-cf4f-c4a0" primary="false"/>
+        <categoryLink name="OSSIARCH BONEREAPERS" hidden="false" id="5bf0-418b-acee-7ce0" targetId="5603-d1-a021-331e" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="251d-458d-3b88-919f" targetId="70a4-383f-421f-52cd" primary="false"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="58d7-d9c8-dec6-16ff" targetId="f7bc-b618-4b5d-2bae" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Kavalos War Chariot" hidden="false" id="00bc-e5b7-7683-b20a">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Charioteers&apos; Weapons" hidden="false" id="60db-07bd-89e3-fed9">
+              <profiles>
+                <profile name="Charioteers&apos; Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c17a-4892-7792-fb5f">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="d31a-105e-c76d-3ee1"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aead-af2c-f667-791c"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Kavalos Steed&apos;s Hooves, Teeth, and Barbed Tails" hidden="false" id="dd3c-de9f-03ac-c660">
+              <profiles>
+                <profile name="Kavalos Steed&apos;s Hooves, Teeth, and Barbed Tails" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="101e-242a-acfa-746e">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="e8c5-1d91-0866-dba4"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="730d-5dd0-f6d0-6d0c"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="9287-8d05-22e5-25b8"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="553b-191a-e339-bd41"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="c74f-ee0b-c484-de6d" hidden="true">
+              <description>120x92mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mortek Triaxes" hidden="false" id="5809-fc53-2b72-a16f" publicationId="2f1e-fdf-1ac2-fa38">
+      <profiles>
+        <profile name="Mortek Triaxes" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="7ddd-0032-2a0e-1c21">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Balefire Braziers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a886-f217-3a94-6dd3">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s **Balefire Braziers** are tokens. There are 2 **Balefire Braziers** for every 10 models in this unit. After setting up this unit on the battlefield for the first time, place its **Balefire Braziers** next to it.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Cursed Flames" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="99a5-baec-53a6-5288">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a **^^Shoot^^** ability for this unit.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After that **^^Shoot^^** ability has been resolved, if all of this unit&apos;s attacks targeted the same enemy unit and this unit has any **Balefire Braziers** next to it, place 1 of those **Balefire Braziers** next to that enemy unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Atavistic Nightmares" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b3dd-d235-ade1-4506">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While any of this unit&apos;s **Balefire Braziers** are next to an enemy unit, subtract 3 from the control scores of enemy units within that enemy unit&apos;s combat range.
+If an ability would heal or return slain models to an enemy unit while any of this unit&apos;s **Balefire Braziers** are next to it, that ability does not heal or return any slain models to it. Instead, place those **Balefire Braziers** next to this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Control</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="75d6-6995-dfcc-3898" id="14b0-e799-caf8-f073" primary="true" name="INFANTRY"/>
+        <categoryLink targetId="5603-d1-a021-331e" id="3063-c43b-c35d-ba49" primary="false" name="OSSIARCH BONEREAPERS"/>
+        <categoryLink targetId="70a4-383f-421f-52cd" id="e81e-f632-ef69-2264" primary="false" name="WARD (6+)"/>
+        <categoryLink targetId="d484-a2d7-cf4f-c4a0" id="1a89-28e6-3a1a-b288" primary="false" name="DEATH"/>
+        <categoryLink targetId="f679-3bcb-d664-9ac3" id="b7af-af9d-c41d-8aa1" primary="false" name="CHAMPION"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mortek Triax" hidden="false" id="bb70-4447-e354-7241" defaultAmount="1,9">
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="5a15-a0ae-9b3f-c921"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="281d-7c01-6842-f3fb"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="10" field="5a15-a0ae-9b3f-c921">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="281d-7c01-6842-f3fb">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Osseous Bow" hidden="false" id="dd2e-e24d-e9f4-332f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49a5-6045-7d19-5c6a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="773b-d9b8-f2ee-203b"/>
+              </constraints>
+              <profiles>
+                <profile name="Osseous Bow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="304d-e046-87fb-6c57">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">18&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Nadirite Dagger" hidden="false" id="e0df-826b-ccb1-fba5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="07d8-826b-fe6a-471d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c13b-3a61-ac80-7f40"/>
+              </constraints>
+              <profiles>
+                <profile name="Nadirite Dagger" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="dfff-6612-9e62-5d73">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="fb11-3f7d-09e0-1eb9" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e592-a139-b922-3060" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="2b5b-35b0-9e78-9d1f" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="072c-3f69-8280-6f9b"/>
+                    <constraint type="max" value="1" field="selections" scope="5809-fc53-2b72-a16f" shared="true" id="24dc-ffad-37ed-ed63" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="5ff4-16e1-c53e-c473" hidden="true">
+              <description>25mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mortis Reapers" hidden="false" id="23a0-24e5-cc6d-8b41" publicationId="2f1e-fdf-1ac2-fa38">
+      <profiles>
+        <profile name="Mortis Reapers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="dbb4-3da4-8194-9919">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">4</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Necrocaches" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a1cf-6221-d561-e0a8">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit in combat with this unit to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Them, this unit can move 6&quot;. It can move through the combat ranges of enemy units but cannot end that move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="No Escaping the Tithe" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="86c7-639d-f8e9-6b1b">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If there are no enemy units within 6&quot; of this unit, pick a terrain feature within 3&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again wholly within 3&quot; of the target and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Atavistic Nightmares" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7e21-b70d-fee8-3e82">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While any of this unit&apos;s **Balefire Braziers** are next to an enemy unit, subtract 3 from the control scores of enemy units within that enemy unit&apos;s combat range.
+If an ability would heal or return slain models to an enemy unit while any of this unit&apos;s **Balefire Braziers** are next to it, that ability does not heal or return any slain models to it. Instead, place those **Balefire Braziers** next to this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Control</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="75d6-6995-dfcc-3898" id="9d1c-ec68-fe49-460c" primary="true" name="INFANTRY"/>
+        <categoryLink targetId="5603-d1-a021-331e" id="c6e8-6201-c4d7-73b1" primary="false" name="OSSIARCH BONEREAPERS"/>
+        <categoryLink targetId="70a4-383f-421f-52cd" id="4cde-a5c0-5b24-cde4" primary="false" name="WARD (6+)"/>
+        <categoryLink targetId="d484-a2d7-cf4f-c4a0" id="f270-3861-ca8c-c279" primary="false" name="DEATH"/>
+        <categoryLink targetId="f679-3bcb-d664-9ac3" id="9555-5299-b1e7-a179" primary="false" name="CHAMPION"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mortis Reaper" hidden="false" id="b1c4-0bf2-0566-b645" defaultAmount="1,4">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="717a-7f75-bf68-51ba"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="bbe4-261c-81c8-0cbd"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="5" field="717a-7f75-bf68-51ba">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="5" field="bbe4-261c-81c8-0cbd">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Reaper&apos; Blades" hidden="false" id="1cc3-a89e-f88d-cb26">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d2c-5d54-5b84-310a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0406-dc42-f3e1-1e86"/>
+              </constraints>
+              <profiles>
+                <profile name="Reaper&apos; Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f487-dc2c-08c1-58fa">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="0824-cbdd-45d2-4faf" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f749-9b75-402d-f8ec" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="d368-23bc-703a-4817" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b125-b94a-b0e8-fef4"/>
+                    <constraint type="max" value="1" field="selections" scope="23a0-24e5-cc6d-8b41" shared="true" id="e8ec-3308-3862-937b" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="401d-3ff3-b404-30ce" hidden="true">
+              <description>25mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
+  <categoryEntries>
+    <categoryEntry name="RELENTLESS DISCIPLINE (10)" id="3d40-cc89-c9ca-058a" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (3)" id="2fb7-c843-5c87-f039" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (6)" id="7f9b-0dda-ac91-6b5f" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (5)" id="f77f-b20a-b844-dbc1" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (7)" id="0cf3-b75a-0999-7508" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (2)" id="4d3b-23e7-f8f0-9780" hidden="false"/>
+  </categoryEntries>
 </catalogue>
