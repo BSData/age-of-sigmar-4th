@@ -372,6 +372,12 @@
     <categoryEntry name="STANDARD BEARER" id="8ae9-b42e-5611-f8f8" hidden="false"/>
     <categoryEntry name="MUSICIAN" id="afd5-9600-b663-39a2" hidden="false"/>
     <categoryEntry name="AELEMENTOR" id="a336-5554-bb85-134c" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (10)" id="3d40-cc89-c9ca-058a" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (3)" id="2fb7-c843-5c87-f039" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (6)" id="7f9b-0dda-ac91-6b5f" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (5)" id="f77f-b20a-b844-dbc1" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (7)" id="0cf3-b75a-0999-7508" hidden="false"/>
+    <categoryEntry name="RELENTLESS DISCIPLINE (2)" id="4d3b-23e7-f8f0-9780" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
@@ -1430,6 +1436,12 @@
         <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="a9ac-52f9-996d-cf32" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
         <forceEntryLink name="Diseased Revellers" id="4b0b-ed4d-c404-a472" hidden="false" targetId="c30e-bf48-fe89-8d48" type="forceEntry"/>
         <forceEntryLink name="The Pustules" id="e066-b420-2934-709a" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry"/>
+        <forceEntryLink name="Karahtet&apos;s Siege Breaker" id="2619-a9f3-b85f-78dc" hidden="false" targetId="7799-20f4-4e7c-6474" type="forceEntry"/>
+        <forceEntryLink name="Sigil Convocation" id="49d5-1863-235d-a264" hidden="false" targetId="a305-c205-8cff-9744" type="forceEntry"/>
+        <forceEntryLink name="Dawnrider Lance" id="1232-8ff0-acfd-d3fc" hidden="false" targetId="d28a-f6a8-df8a-b38c" type="forceEntry"/>
+        <forceEntryLink name="Mask of the Deceiver" id="4141-4799-3cc3-9f58" hidden="false" targetId="3378-9dbf-9e74-cf5a" type="forceEntry"/>
+        <forceEntryLink name="Seekers of Silver" id="6e14-e952-db7a-3a53" hidden="false" targetId="649c-3737-f793-fe6a" type="forceEntry"/>
+        <forceEntryLink name="Heralds of the Bone-tithe" id="dd02-29ce-4a08-04b5" hidden="false" targetId="4617-acfd-e9d3-807d" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
@@ -2488,6 +2500,12 @@
         <forceEntryLink name="Heroes of the Jade Abbey [LEGENDS]" id="135a-e3a4-753a-2906" hidden="false" targetId="f3c9-ca5d-bd0e-a94e" type="forceEntry"/>
         <forceEntryLink name="Diseased Revellers" id="259a-eeea-c79c-24c3" hidden="false" targetId="c30e-bf48-fe89-8d48" type="forceEntry"/>
         <forceEntryLink name="The Pustules" id="da45-33a0-5589-9187" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry"/>
+        <forceEntryLink name="Sigil Convocation" id="357c-16ca-33be-ce21" hidden="false" targetId="a305-c205-8cff-9744" type="forceEntry"/>
+        <forceEntryLink name="Dawnrider Lance" id="152e-6f0f-dad2-ea89" hidden="false" targetId="d28a-f6a8-df8a-b38c" type="forceEntry"/>
+        <forceEntryLink name="Mask of the Deceiver" id="f468-c9f9-af50-b24e" hidden="false" targetId="3378-9dbf-9e74-cf5a" type="forceEntry"/>
+        <forceEntryLink name="Seekers of Silver" id="8256-fa3d-05b0-2c1c" hidden="false" targetId="649c-3737-f793-fe6a" type="forceEntry"/>
+        <forceEntryLink name="Heralds of the Bone-tithe" id="f007-71f8-c758-240f" hidden="false" targetId="4617-acfd-e9d3-807d" type="forceEntry"/>
+        <forceEntryLink name="Karahtet&apos;s Siege Breaker" id="14dc-1f5d-fb27-b6f5" hidden="false" targetId="7799-20f4-4e7c-6474" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
@@ -6885,6 +6903,12 @@
         <forceEntryLink name="Regiment of Ghyran" id="24a4-4645-fcf7-6e39" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry"/>
         <forceEntryLink name="The Pustules" id="4c61-18e6-24c1-29d4" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry"/>
         <forceEntryLink name="Diseased Revellers" id="7740-e9c0-761f-9400" hidden="false" targetId="c30e-bf48-fe89-8d48" type="forceEntry"/>
+        <forceEntryLink name="Karahtet&apos;s Siege Breaker" id="819e-43c3-2dbe-01f2" hidden="false" targetId="7799-20f4-4e7c-6474" type="forceEntry"/>
+        <forceEntryLink name="Sigil Convocation" id="9a1a-df02-b948-c26d" hidden="false" targetId="a305-c205-8cff-9744" type="forceEntry"/>
+        <forceEntryLink name="Dawnrider Lance" id="1c2a-986f-cc12-3921" hidden="false" targetId="d28a-f6a8-df8a-b38c" type="forceEntry"/>
+        <forceEntryLink name="Mask of the Deceiver" id="7cb6-e622-ee5b-2888" hidden="false" targetId="3378-9dbf-9e74-cf5a" type="forceEntry"/>
+        <forceEntryLink name="Seekers of Silver" id="bb17-66b5-fa80-9c81" hidden="false" targetId="649c-3737-f793-fe6a" type="forceEntry"/>
+        <forceEntryLink name="Heralds of the Bone-tithe" id="1f54-37c4-18b8-614f" hidden="false" targetId="4617-acfd-e9d3-807d" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
@@ -11248,6 +11272,88 @@
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="260"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Heralds of the Bone-tithe" id="4617-acfd-e9d3-807d" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="1019-c7c1-4762-2c2b" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="fec8-d1aa-2cec-4db6" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="66bc-f0bd-1de0-e220" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="5f7c-0df9-42ca-d3d9" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="7e7e-ee65-29ec-9e3d" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="da43-01c8-fed2-e95f" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="FACTION TERRAIN" hidden="false" id="00ad-9750-4a98-f806" targetId="cdd6-ffa1-9b32-4cb8"/>
+        <categoryLink name="Reference" hidden="false" id="32a5-20e7-6ebd-3236" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e614-6d42-c2c3-eebc"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="510"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Karahtet&apos;s Siege Breaker" id="7799-20f4-4e7c-6474" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="640e-6bc1-c83d-13c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="fdbd-d129-2a71-f6a6" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="4a6c-6bb1-1d4d-e2f0" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="5745-5ad0-6330-23d4" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="df7e-298b-ce91-6ac6" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="6672-a25d-7fa9-3eba" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="60a2-5605-79cf-e3d5" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="FACTION TERRAIN" hidden="false" id="ecb0-fa2a-174b-69c2" targetId="cdd6-ffa1-9b32-4cb8"/>
+        <categoryLink name="Reference" hidden="false" id="2cc3-7f9e-7481-fa2f" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="16ff-2a94-8b15-d7ab"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="360"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
