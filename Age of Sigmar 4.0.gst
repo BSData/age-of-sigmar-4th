@@ -5215,6 +5215,13 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="57ad-e4da-52d9-ad2b"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="57ad-e4da-52d9-ad2b">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="37d3-9d2b-13ba-a002" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
       <forceEntries>
