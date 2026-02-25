@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="31" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -4990,10 +4990,17 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditionGroups>
-            <conditionGroup type="or">
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="bcbb-b7ca-2521-05ca" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
