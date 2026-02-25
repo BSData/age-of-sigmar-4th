@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="30" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e0ff-dc7c-8795-bfb9" name="✦ Path to Glory - Blighted Wilds" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="64" revision="31" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Blighted Wilds Paths" id="3f1b-26c1-aa71-73f8" hidden="true" flatten="true" publicationId="836f-b899-80c0-0f72">
       <selectionEntries>
@@ -1115,6 +1115,577 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Path of the Alchemist" hidden="true" id="f7ff-2709-3258-7b8f" publicationId="9082-4798-2e31-dab8">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="d03d-8e8d-18ce-1d3e" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Forager" hidden="false" id="da37-2797-9675-e0da">
+                  <profiles>
+                    <profile name="Forager" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5d27-5526-0724-be02">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, End of Any Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 3&quot; of this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target is wholly within enemy territory, roll on the Exotic Ingredients table and add the corresponding ingredients to your roster. If the target is not wholly within enemy territory, roll on the Basic Ingredients table instead.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a5f-aafc-a1f6-0351"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Potion Pickpocket" hidden="false" id="2881-b4a0-d9a5-c774">
+                  <profiles>
+                    <profile name="Potion Pickpocket" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3e4c-903a-eef9-07db">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** that has a Ghyranite Concoction and is in combat with this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, the target no longer has that Ghyranite Concoction and give this unit that Ghyranite Concoction. If this unit already has a Ghyranite Concoction, it must immediately use one of those Ghyranite Concotions.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4373-6b21-5813-38b1"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="485a-8725-f0b5-482c"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="2" field="485a-8725-f0b5-482c">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="094c-964a-5c48-fbc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="9917-e24c-c125-746b" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Precious Ingredients" hidden="false" id="9dba-fcb2-199b-5046">
+                  <profiles>
+                    <profile name="Precious Ingredients" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c283-061f-0f6e-d256">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit has a Ghyranite Concoction, this unit can immediately use the &apos;Retreat&apos; ability as if it were your movement phase without any mortal damage being inflicted on it.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a895-a171-a4d1-7e9a"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Explosive Concoctions" hidden="false" id="cf01-5913-7b90-9be6">
+                  <profiles>
+                    <profile name="Explosive Concoctions" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1d7e-059c-73a5-71ed">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Inflict D3 + 3 mortal damage on the target.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Attack^^**, **^^Fight^^**</characteristic>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="74d5-0252-da99-6369"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5221-f451-35e1-3cca"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="7cf0-d502-ed17-e3b0" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Portable Brew Station" hidden="false" id="25c0-5bc5-c4d0-9a10">
+                  <profiles>
+                    <profile name="Portable Brew Station" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="45ce-fc23-9fb1-56fe">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a Ghyranite Concoction. If you have the ingredients listed in its recipe on your roster, you can immediately mix it. Remove those ingredients from your roster and give that Ghyranite Concoction to your unit.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fb5-f1ca-2f4f-55d6"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Impromptu Potions" hidden="false" id="90c1-f340-bc84-cde8">
+                  <profiles>
+                    <profile name="Impromptu Potions" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f166-fcb7-97e6-dcd9">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Shooting Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 and apply the corresponding effect:
+**1 *Potion of Instant Corrosion:*** Inflict D3 mortal damage on the target.
+**2 *Potion of Imprecision:*** Subtract 1 from hit rolls for the target&apos;s attacks for the rest of the turn.
+**3 *Potion of Vulnerability:*** Ward rolls cannot be made for the target for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79e4-9fd6-7727-f52e"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="48ec-bc3e-72f7-6abb"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="ed6f-9303-516d-8a36" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Overcharged Elixirs" hidden="false" id="b4c4-57d3-c9d5-7841">
+                  <profiles>
+                    <profile name="Overcharged Elixirs" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9616-d3ac-b886-15d7">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls and wound rolls for this unit&apos;s combat attacks while it has used a **^^Ghyranite Concoction^^** ability in the same turn.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0bc5-07e7-0266-ec51"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Waste Not, Want Not" hidden="false" id="2380-39fb-9819-9768">
+                  <profiles>
+                    <profile name="Waste Not, Want Not" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ef71-255e-324a-1854">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Ghyranite Concoction^^** ability, roll a dice as a reaction. On a 5+, do not remove the Ghyranite Concoction from your roster as part of the effect of that ability.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b4b-0a52-9e3e-b4d3"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f426-964d-2fec-16a3"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Path of the Woodsman" hidden="true" id="6eb2-8f11-16b7-1339" publicationId="836f-b899-80c0-0f72">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Aspiring" id="2cf7-1db6-0192-12bb" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Morale Boost" hidden="false" id="c793-7869-f312-3377">
+                  <profiles>
+                    <profile name="Morale Boost" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="32aa-5ae1-a8f5-906c">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2 to the control scores of friendly units while they are wholly within 12&quot; of this unit.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d557-20d8-16f8-23b7"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Never a Stranger" hidden="false" id="09de-fdf2-8751-d2b5">
+                  <profiles>
+                    <profile name="Never a Stranger" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="99d3-4ea5-fb46-b3b9">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to save rolls for this unit while it is wholly within friendly territory.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                        <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e23-2d5d-7684-32ed"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25c0-3548-7fa1-e666"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="2" field="25c0-3548-7fa1-e666">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="094c-964a-5c48-fbc7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="5" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Elite" id="4c61-0816-5890-3435" hidden="false" sortIndex="2">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Knowledgable Guide" hidden="false" id="2538-d867-e652-1184">
+                  <profiles>
+                    <profile name="Knowledgable Guide" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7390-9e02-0015-d026">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and up to 1 friendly unit within this unit&apos;s combat range to be the targets.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 2&quot; to each target&apos;s Move characteristic while they are wholly outside friendly territory.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20aa-38dc-2869-2423"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Expert of All Terrain" hidden="false" id="8bd0-e425-7811-37e8">
+                  <profiles>
+                    <profile name="Expert of All Terrain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="668e-adea-c7c8-bb6f">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Ignore negative modifiers to:
+• Run rolls and charge rolls for this unit.
+• This unit&apos;s Move characteristic.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="523d-acfa-5392-140c"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="671a-3dd1-1315-da24"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mighty" id="5e76-2a30-b620-4027" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Navigator Extraordinaire" hidden="false" id="3174-9483-04a2-9443">
+                  <profiles>
+                    <profile name="Navigator Extraordinaire" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="141e-b8f9-f870-bca1">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to D3 friendly units to be the targets.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each target can use the &apos;Normal Move&apos; ability as if it were your movement phase.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7529-a9e4-93b8-1640"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Traversal Gear" hidden="false" id="c955-4b4e-87ff-dcf1">
+                  <profiles>
+                    <profile name="Traversal Gear" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6589-8d8f-2be5-f4e8">
+                      <characteristics>
+                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit can pass across terrain features as if it had **^^Fly^^**.</characteristic>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4daa-dddf-4e1b-4363"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2825-e868-1bdf-c976"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="30" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Legendary" id="6ebd-3e56-92b2-4fc3" hidden="false" sortIndex="4">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nature&apos;s Ally" hidden="false" id="275c-dc9b-3446-0338">
+                  <profiles>
+                    <profile name="Nature&apos;s Ally" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e69e-1b23-47a5-b365">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective or terrain feature within this unit&apos;s combat range to be the target.</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle, friendly units have **^^Ward (5+)^^** while they are wholly within 12&quot; of the target.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="946b-5dcb-ff78-01b6"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Master of Hidden Paths" hidden="false" id="1f8a-5fdb-b984-d182">
+                  <profiles>
+                    <profile name="Master of Hidden Paths" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6614-9a7a-323c-70cc">
+                      <characteristics>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
+                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and up to 1 other visible friendly unit wholly within 6&quot; of this unit to be the targets,</characteristic>
+                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the targets from the battlefield and set them up again with each model contesting the same objective or terrain feature and not in combat. The targets cannot use **^^Charge^^** abilities for the rest of the turn.</characteristic>
+                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                      </characteristics>
+                      <attributes>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+                        <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                      </attributes>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1676-c243-9700-7bca"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b69-be48-cd1a-1ba3"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="45" field="selections" scope="root-entry" childId="e7d5-5062-46d5-38dd" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="75d6-6995-dfcc-3898" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -4047,7 +4618,7 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
             <profile name="Wyrdron Seed" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5cf7-34c0-ef16-5d87">
               <characteristics>
                 <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Shooting Phase</characteristic>
-                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 9&quot; of a friendly **^^Hero^^** to be the target. </characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 9&quot; of a friendly **^^Hero^^** to be the target.</characteristic>
                 <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice .On a 1-2, for the rest of the turn, subtract 1 form the number of dice rolled when making charge rolls for the target, to a minimum of 1. On a 3+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                 <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -4202,6 +4773,232 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
           </profiles>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Ghyranite Concoctions" id="17d6-baae-dbeb-3e2c" hidden="false" publicationId="9082-4798-2e31-dab8">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Durthu&apos;s Fury" hidden="false" id="5455-8e3a-c5f9-11d7" sortIndex="2">
+          <profiles>
+            <profile name="Durthu&apos;s Fury" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cc01-1ccc-3e34-e782">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the Damage characteristic of this unit&apos;s melee weapons for the rest of the turn. If the target is **^^Infantry^^**, add D3 to the Damage characteristic of its melee weapons for the rest of the turn instead. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Durthu&apos;s Fury" id="8668-8ceb-57bb-8b65" hidden="false">
+              <description>2 x Leaping Moss, 1 x Bloodwood Nectar</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Revitaliser" hidden="false" id="4b98-9a27-906a-7f12" sortIndex="1">
+          <profiles>
+            <profile name="Revitaliser" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a015-dcde-c4c8-ab6e">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly unit within this unit&apos;s combat range to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (6)** the target. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Revitaliser" id="3fc3-7157-3196-8ba7" hidden="false">
+              <description>2 x Ironthorn Stamen, 1 x Jaderoot Thistle</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ghyranite Vitality" hidden="false" id="752d-a745-b452-62f6" sortIndex="3">
+          <profiles>
+            <profile name="Ghyranite Vitality" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bcab-802d-3585-ede0">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Hero^^** within this unit&apos;s combat range to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to run rolls, charge rolls, and save rolls for the target for the rest of the turn. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Ghyranite Vitality" id="dd91-03f5-da53-3238" hidden="false">
+              <description>1 x Ironthorn Stamen, 1 x Bloodweed Nectar, 1 x Leaping Moss</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Aelf Step" hidden="false" id="621b-219b-6e2a-e7b9" sortIndex="4">
+          <profiles>
+            <profile name="Aelf Step" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bd36-d5f5-543e-b4e4">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again wholly within 3&quot; of another friendly unit and more than 9&quot; from all enemy units. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Aelf Step" id="ce9d-3900-254f-3fef" hidden="false">
+              <description>2 x Jaderoot Thistle, 1 x Fresh Aetherblossom</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Verdant Mist" hidden="false" id="3a5c-c3c1-3a70-7b2b" sortIndex="6">
+          <profiles>
+            <profile name="Verdant Mist" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6b72-8595-21aa-5360">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each visible non-**^^Monster^^** unit (friendly and enemy) within 12&quot; of the unit to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Return 1 slain model to each target unit. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Verdant Mist" id="eb50-3e14-968b-e130" hidden="false">
+              <description>2 x Ironthorn Stamen, 1 x Magevine Root</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dr Rothli&apos;s Rat Repellent" hidden="false" id="e90f-0ff9-be58-c29d" sortIndex="5">
+          <profiles>
+            <profile name="Dr Rothli&apos;s Rat Repellent" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3606-c530-d3ea-3f84">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Shooting Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to the number of models in the target unit. For each 5L, inflict 1 mortal damage on the target. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Dr Rothli&apos;s Rat Repellent" id="a14f-9228-5809-d692" hidden="false">
+              <description>1 x Bloodweed Nectar, 1 x Leaping Moss, 1 x Whisperwood Bark</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Blisterbrew" hidden="false" id="4167-3ed1-ba7c-e95f" sortIndex="7">
+          <profiles>
+            <profile name="Blisterbrew" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bc66-081c-e4df-f311">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Shooting Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield and set it up again wholly within 3&quot; of another friendly unit and more than 9&quot; from all enemy units. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Blisterbrew" id="1ef2-d074-7e52-58fe" hidden="false">
+              <description>2 x Bloodweed Nectar, 1 x Aqua Ghyranis</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Elixir of Enlightenment" hidden="false" id="86a2-4299-3726-add2" sortIndex="8">
+          <profiles>
+            <profile name="Elixir of Enlightenment" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2ce4-6644-53db-3992">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The next time you make a casting roll for the target this phase, roll 3D6 instead of 2D6. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Elixir of Enlightenment" id="4569-943c-778d-ee26" hidden="false">
+              <description>2 x Fresh Aetherblossom, 1 x Magevine Root</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Chameleon Vapour" hidden="false" id="2bf0-3469-2b03-adde" sortIndex="9">
+          <profiles>
+            <profile name="Chameleon Vapour" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0681-4f4e-b335-04cb">
+              <characteristics>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, while they are wholly within 12&quot; of the target, friendly **^^Infantry^^** units are not viisble to enemy units more than 6&quot; away. Then, remove this Ghyranite Concoction from your roster.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Ghyranite Concoction^^**</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+              </characteristics>
+              <attributes>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+              </attributes>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Chameleon Vapour" id="624d-fbc7-aa3a-51e4" hidden="false">
+              <description>2 x Whisperwood Bark, 1 x Aqua Ghyranis</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7830-5139-4f1f-77f5"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e6f-2dd7-a7ed-489e" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <selectionEntries>
@@ -4369,6 +5166,22 @@ In addition, make the following changes to your Regiment Hero&apos;s warscroll:
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b280-ce8f-c517-e045" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ghyranite Concoctions" hidden="false" id="bcbb-b7ca-2521-05ca">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ingredients" id="99af-e60e-05bc-59e3" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leaping Moss" hidden="false" id="8540-4cd1-9ae1-4e70" sortIndex="2"/>
+            <selectionEntry type="upgrade" import="true" name="Ironthorn Stamen" hidden="false" id="6f7f-2fb2-71eb-dfbf" sortIndex="1"/>
+            <selectionEntry type="upgrade" import="true" name="Bloodweed Nectar" hidden="false" id="950b-75a8-262f-44b6" sortIndex="3"/>
+            <selectionEntry type="upgrade" import="true" name="Jaderoot Thistle" hidden="false" id="a877-877e-5881-a52f" sortIndex="4"/>
+            <selectionEntry type="upgrade" import="true" name="Magevine Root" hidden="false" id="3de0-77b4-c83f-7912" sortIndex="7"/>
+            <selectionEntry type="upgrade" import="true" name="Fresh Aetherblossom" hidden="false" id="3fbd-4f89-f289-f776" sortIndex="5"/>
+            <selectionEntry type="upgrade" import="true" name="Whisperwood Bark" hidden="false" id="6ea8-28ab-f753-53cb" sortIndex="6"/>
+            <selectionEntry type="upgrade" import="true" name="Aqua Ghyranis" hidden="false" id="d61b-bbe5-02e8-f299" sortIndex="8"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>

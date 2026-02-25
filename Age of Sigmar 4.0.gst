@@ -13069,6 +13069,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Path to Glory: Blighted Wilds" id="836f-b899-80c0-0f72" hidden="false"/>
     <publication name="Grotmas Darkwater Heroes" id="9e18-0b77-d43e-125e" hidden="false"/>
     <publication name="Battletome Supplement: Disciples of Tzeentch" id="1bad-f288-dd88-2d76" hidden="false"/>
+    <publication name="White Dwarf Issue 521" id="9082-4798-2e31-dab8" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
