@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="82" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="83" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -10895,6 +10895,8 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10940,6 +10942,7 @@
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11512,16 +11515,6 @@
             <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Amberbone Claws and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="245d-e7e2-477e-edb0">
-          <characteristics>
-            <characteristic name="Atk" id="89de-6c24-68b4-75ea" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
-            <characteristic name="Hit" id="5da4-f289-2fb3-1145" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" id="d803-430c-8c66-2f9e" hidden="false" typeId="61c1-22cc-40af-2847">2+</characteristic>
-            <characteristic name="Rnd" id="4303-a4d1-e952-92b9" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
-            <characteristic name="Dmg" id="20b7-e36f-73be-f2f8" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
-            <characteristic name="Ability" id="368e-d428-40cf-9130" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^Manifestation^^**(+1 Rend)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink targetId="bff0-8be9-719f-4afc" id="2445-59d-c23d-d8aa" primary="true" name="MANIFESTATION"/>
@@ -11534,6 +11527,26 @@
           <description>130mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Amberbone Claws and Fangs" hidden="false" id="6ba7-2a4d-632e-c8b0">
+          <profiles>
+            <profile name="Amberbone Claws and Fangs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="245d-e7e2-477e-edb0">
+              <characteristics>
+                <characteristic name="Atk" id="89de-6c24-68b4-75ea" hidden="false" typeId="60e-35aa-31ed-e488">6</characteristic>
+                <characteristic name="Hit" id="5da4-f289-2fb3-1145" hidden="false" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" id="d803-430c-8c66-2f9e" hidden="false" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                <characteristic name="Rnd" id="4303-a4d1-e952-92b9" hidden="false" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                <characteristic name="Dmg" id="20b7-e36f-73be-f2f8" hidden="false" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                <characteristic name="Ability" id="368e-d428-40cf-9130" hidden="false" typeId="eda3-7332-5db1-4159">Anti-**^^Manifestation^^**(+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2ab0-91d6-0127-150e-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ab0-91d6-0127-150e-max"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Purple Sun of Shyish" hidden="false" id="e7a5-e611-4c13-22d0">
       <categoryLinks>
@@ -11579,22 +11592,32 @@
             <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="9997-dae6-c46a-0a72" hidden="true">
           <description>100x70mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Transmuting Rays" hidden="false" id="242c-f4ee-4ed8-2440">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0430-3dcb-6bc0-01b5-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0430-3dcb-6bc0-01b5-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Transmuting Rays" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="aabd-6cde-e7a9-d614">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Soulsnare Shackles" hidden="false" id="dee3-92a0-27e7-252a">
       <categoryLinks>
@@ -11820,33 +11843,53 @@
             <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
-          <characteristics>
-            <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-            <characteristic name="Atk" typeId="aa17-4296-2887-e05d">D6</characteristic>
-            <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-            <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-            <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
-            <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-            <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Flaming Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="64ae-5cff-df66-8a57">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="f9d8-557a-983b-bbd8" hidden="true">
           <description>50mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Burning Breath" hidden="false" id="1bb7-383a-9ce1-9c19">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7fb-9f96-6bd6-78e3-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7fb-9f96-6bd6-78e3-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Burning Breath" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7435-8f4c-8e52-f57a">
+              <characteristics>
+                <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                <characteristic name="Atk" typeId="aa17-4296-2887-e05d">D6</characteristic>
+                <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Flaming Maw" hidden="false" id="b4bd-e7bd-fd0c-0143">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5bff-ed2f-64f0-f6c6-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bff-ed2f-64f0-f6c6-max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="df11-82bf-c6d1-793b-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df11-82bf-c6d1-793b-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Flaming Maw" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="64ae-5cff-df66-8a57">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^WAR MACHINE^^** (+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Horrorghast" hidden="false" id="f935-2383-94ba-3be2">
       <categoryLinks>
@@ -11881,33 +11924,51 @@
             <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
-          <characteristics>
-            <characteristic name="Atk" hidden="false" id="902f-6fd4-500f-e52b" typeId="60e-35aa-31ed-e488">4</characteristic>
-            <characteristic name="Hit" hidden="false" id="d809-3a12-584e-3c42" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" hidden="false" id="cb9a-ea57-a1b7-4e59" typeId="61c1-22cc-40af-2847">4+</characteristic>
-            <characteristic name="Rnd" hidden="false" id="6b30-70aa-d9c0-f34" typeId="eccc-10fa-6958-fb73">-</characteristic>
-            <characteristic name="Dmg" hidden="false" id="387f-1bbd-df77-2b6e" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" hidden="false" id="58ae-32b1-a14e-798e" typeId="eda3-7332-5db1-4159">-</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Scream of Terror" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="263b-a289-2895-1180">
-          <characteristics>
-            <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-            <characteristic name="Atk" typeId="aa17-4296-2887-e05d">6</characteristic>
-            <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-            <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-            <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
-            <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-            <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="0dad-8b93-b703-7548" hidden="true">
           <description>50mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Scream of Terror" hidden="false" id="6e41-ef10-2c1a-9888">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d47-c316-bd69-2a07-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d47-c316-bd69-2a07-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Scream of Terror" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="263b-a289-2895-1180">
+              <characteristics>
+                <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                <characteristic name="Atk" typeId="aa17-4296-2887-e05d">6</characteristic>
+                <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Anti-**^^INFANTRY^^** (+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Deathly Touch" hidden="false" id="b3aa-53de-054e-e702">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e1b1-4341-cf10-a0c8-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1b1-4341-cf10-a0c8-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Deathly Touch" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b88f-9683-454e-a50d">
+              <characteristics>
+                <characteristic name="Atk" hidden="false" id="902f-6fd4-500f-e52b" typeId="60e-35aa-31ed-e488">4</characteristic>
+                <characteristic name="Hit" hidden="false" id="d809-3a12-584e-3c42" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" hidden="false" id="cb9a-ea57-a1b7-4e59" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                <characteristic name="Rnd" hidden="false" id="6b30-70aa-d9c0-f34" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                <characteristic name="Dmg" hidden="false" id="387f-1bbd-df77-2b6e" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" hidden="false" id="58ae-32b1-a14e-798e" typeId="eda3-7332-5db1-4159">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Malevolent Maelstrom" hidden="false" id="e699-49b7-d2b8-d5fc">
       <categoryLinks>
@@ -11957,22 +12018,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="af23-a99e-a3dc-53dd" hidden="true">
           <description>50mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Lashing Tendrils of Energy" hidden="false" id="b578-6b4f-7ef7-657b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c5f-80ab-34eb-2f3e-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c5f-80ab-34eb-2f3e-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Lashing Tendrils of Energy" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c1af-c968-3cd2-19f9">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Shards of Valagharr" hidden="false" id="94f6-4321-fd80-f20e">
       <categoryLinks>
@@ -12068,22 +12139,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
-          <characteristics>
-            <characteristic name="Atk" hidden="false" id="2685-1d07-362d-1178" typeId="60e-35aa-31ed-e488">3</characteristic>
-            <characteristic name="Hit" hidden="false" id="c445-8dc4-5e85-74f0" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" hidden="false" id="3485-8fed-df5c-7dc8" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" hidden="false" id="e81f-833b-bb77-29ae" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" hidden="false" id="6267-902e-a076-49c" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-            <characteristic name="Ability" hidden="false" id="c79b-9200-2df1-9672" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="6ad3-655c-c52a-bba7" hidden="true">
           <description>90x52mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Scything Oar" hidden="false" id="f1d8-bd99-52a3-f955">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="33c2-2f09-78db-1366-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="33c2-2f09-78db-1366-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Scything Oar" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="576e-f8da-691-f732">
+              <characteristics>
+                <characteristic name="Atk" hidden="false" id="2685-1d07-362d-1178" typeId="60e-35aa-31ed-e488">3</characteristic>
+                <characteristic name="Hit" hidden="false" id="c445-8dc4-5e85-74f0" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" hidden="false" id="3485-8fed-df5c-7dc8" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" hidden="false" id="e81f-833b-bb77-29ae" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" hidden="false" id="6267-902e-a076-49c" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                <characteristic name="Ability" hidden="false" id="c79b-9200-2df1-9672" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Quicksilver Swords" hidden="false" id="8cde-fafe-2b2a-ced5">
       <categoryLinks>
@@ -12115,22 +12196,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">12</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="fb86-9d67-8315-d94b" hidden="true">
           <description>40mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Quicksilver Blades" hidden="false" id="c2bf-5142-c110-8358">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5df4-0a71-56d6-9bb2-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5df4-0a71-56d6-9bb2-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Quicksilver Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="76bf-d02-c7d-3778">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">12</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7f34-77c9-597-62c3">
       <profiles>
@@ -12254,22 +12345,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Swarming Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9a05-9547-1ad1-2bf8">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="e549-a70c-2b95-b175" hidden="true">
           <description>64x42mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Swarming Bites" hidden="false" id="20b7-15dc-4c6f-aa3f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a0e-b376-c79f-ce7a-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a0e-b376-c79f-ce7a-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Swarming Bites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9a05-9547-1ad1-2bf8">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2D6</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ravenak&apos;s Gnashing Jaws" hidden="false" id="41c4-2f6a-0d3c-a23e">
       <categoryLinks>
@@ -12303,22 +12404,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Gnashing Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="44ec-0340-a597-8bc5">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="adec-2317-0d4a-b7f6" hidden="true">
           <description>100x70mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Gnashing Jaws" hidden="false" id="38be-e0f1-fa02-2a7c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e36-3cf9-148b-a491-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e36-3cf9-148b-a491-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Gnashing Jaws" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="44ec-0340-a597-8bc5">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Suffocating Gravetide" hidden="false" id="1885-a1aa-bf5d-6d0d">
       <categoryLinks>
@@ -12353,22 +12464,32 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="2d74-4dcd-8468-87fa" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule name="Base Size" id="ac33-18e2-33b5-5df5" hidden="true">
           <description>Use model</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Spectral Riptide" hidden="false" id="8a2f-96ab-9b30-631a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a3b-4c3e-220f-75c2-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a3b-4c3e-220f-75c2-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Spectral Riptide" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c343-4a03-1aee-ad42">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">8</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Geminids of Uhl-Gysh" hidden="false" id="d420-1699-5ad9-1956">
       <categoryLinks>
@@ -12400,16 +12521,6 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
             <attribute typeId="e2e1-15ca-d345-22b8" name="Parent Node"/>
           </attributes>
         </profile>
-        <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
-          <characteristics>
-            <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-            <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-            <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
-            <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-            <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-            <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Multiple Parts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7f8e-f2c5-2638-f35d">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
@@ -12429,6 +12540,26 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <description>40mm</description>
         </rule>
       </rules>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="New Entry" hidden="false" id="b944-7b73-d976-a932">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="Tendrils of Light and Shadow-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="Tendrils of Light and Shadow-max"/>
+          </constraints>
+          <profiles>
+            <profile name="Tendrils of Light and Shadow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0c28-2be0-928b-a49e">
+              <characteristics>
+                <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Umbral Spellportal" hidden="false" id="0552-183c-1b2a-d117">
       <categoryLinks>
