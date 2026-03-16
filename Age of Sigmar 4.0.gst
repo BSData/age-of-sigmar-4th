@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="83" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="84" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -11521,6 +11521,7 @@
         <categoryLink targetId="e7bc-543-4076-553c" id="3ce-2fd3-9f20-2bc" primary="false" name="ENDLESS SPELL"/>
         <categoryLink targetId="70a4-383f-421f-52cd" id="b526-6820-5eca-8a4f" primary="false" name="WARD (6+)"/>
         <categoryLink targetId="b979-4c3e-7d0e-6921" id="4494-b9a6-2e65-65c8" primary="false" name="FLY"/>
+        <categoryLink name="INCARNATE" hidden="false" id="89eb-be50-74c3-fe68" targetId="a1b1-39d1-f6ed-bf2" primary="false"/>
       </categoryLinks>
       <rules>
         <rule name="Base Size" id="6069-170b-1024-1001" hidden="true">
