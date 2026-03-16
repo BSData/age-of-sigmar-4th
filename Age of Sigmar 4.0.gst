@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="84" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="85" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -10657,7 +10657,7 @@
     <forceEntry name="Regiment of Ghyran" id="1d4a-95bf-25a6-549c" hidden="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7983-5dfc-a31c-1833"/>
-        <constraint type="max" value="3" field="selections" scope="self" shared="true" id="cba7-7e7f-754a-08ee"/>
+        <constraint type="max" value="4" field="selections" scope="self" shared="true" id="cba7-7e7f-754a-08ee"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -10669,7 +10669,7 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" value="4" field="cba7-7e7f-754a-08ee">
+        <modifier type="set" value="5" field="cba7-7e7f-754a-08ee">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="force" childId="6e72-1656-d554-528a" shared="true" includeChildSelections="true"/>
           </conditions>
