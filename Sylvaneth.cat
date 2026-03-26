@@ -138,7 +138,7 @@ overgrowth** is based on the number of friendly,
                 <profile name="Seed of Rebirth" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="903-c2e1-8982-3ae6">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (1)** this unit. This unit cannot use this ability again for the rest of the battle.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The first time this unit would be destroyed, before removing it from play, roll a die. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. **Heal (D3)** this unit.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -168,13 +168,13 @@ overgrowth** is based on the number of friendly,
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Crown of Fell Bowers" hidden="false" id="e4e4-838a-a42b-98d7" publicationId="61ee-fae0-f1da-2591">
+            <selectionEntry type="upgrade" import="true" name="Amberglade Nectar" hidden="false" id="e4e4-838a-a42b-98d7" publicationId="61ee-fae0-f1da-2591">
               <profiles>
-                <profile name="Crown of Fell Bowers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="95a9-63d1-425c-7b7e">
+                <profile name="Amberglade Nectar" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="95a9-63d1-425c-7b7e">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On 3+, add 1 to wound rolls for combat attacks made by friendly **^^Sylvaneth^^** units that target that enemy unit this phase.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 6&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Damage characteristic of **Companion** weapons used by friendly **^^SYLVANETH^^** units for attacks that target that enemy unit.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -188,19 +188,20 @@ overgrowth** is based on the number of friendly,
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a6-1cf0-f729-3f3c" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Greenwood Gladius" hidden="false" id="7121-e09e-d407-9785" publicationId="61ee-fae0-f1da-2591">
+            <selectionEntry type="upgrade" import="true" name="Wychwood Glaive" hidden="false" id="7121-e09e-d407-9785" publicationId="61ee-fae0-f1da-2591">
               <profiles>
-                <profile name="Greenwood Gladius" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f04-8155-a9be-9320">
+                <profile name="Wychwood Glaive" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f04-8155-a9be-9320">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that had any damage points allocated to it by this unit&apos;s combat attacks this turn to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from save rolls for the target for the rest of the battle. This unit can use this ability even if it has been destroyed.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -468,9 +469,10 @@ If the target has a Health characteristic of 2 or more, roll a dice, then pick 
                 <profile name="Spellsinger" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8895-1649-9758-bb80">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is within the combat range of an **Awakened Wyldwood**:
-If this unit is a **^^Wizard^^**, add 1 to casting rolls for this unit. 
-If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is a ^^**WIZARD**^^, add 1 to casting rolls for this unit.
+
+
+If this unit is not a ^^**WIZARD^^**, it can use the &apos;Unbind&apos; ability as if it has **^^WIZARD (1)^^**.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -500,19 +502,20 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Radiant Spirit" hidden="false" id="c0bc-2a8-8f0b-b2f4" publicationId="61ee-fae0-f1da-2591">
+            <selectionEntry type="upgrade" import="true" name="Spirit Of The Dark Forest" hidden="false" id="c0bc-2a8-8f0b-b2f4" publicationId="61ee-fae0-f1da-2591">
               <profiles>
-                <profile name="Radiant Spirit" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="36d8-51ba-515f-9e13">
+                <profile name="Spirit Of The Dark Forest" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="36d8-51ba-515f-9e13">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a **^^Spell^^** or **^^Prayer^^** ability</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, ignore the effect of that spell or prayer on that unit. This unit can use this ability more than once per phase but only once per **^^Spell^^** or **^^Prayer^^** ability.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per battle, Enemy Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy ^^**HERO^^** to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Halve the target&apos;s Move characteristic the rest of the turn.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b">This unit if it is wholly within 12&quot; of a friendly **^^Sylvaneth^^** unit picked to be the target of that spell or prayer.</characteristic>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -520,13 +523,13 @@ If this unit is not a **^^Wizard^^**, it has **^^Wizard (1)^^** instead.</charac
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="569e-be11-9cf7-921d" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Warsinger" hidden="false" id="3619-e710-c6e5-490" publicationId="61ee-fae0-f1da-2591">
+            <selectionEntry type="upgrade" import="true" name="Realmroot Guide" hidden="false" id="3619-e710-c6e5-490" publicationId="61ee-fae0-f1da-2591">
               <profiles>
-                <profile name="Warsinger" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c133-8f0c-936d-30d3">
+                <profile name="Realmroot Guide" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c133-8f0c-936d-30d3">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Sylvaneth^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 2&quot; to the Move characteristic of the target for the rest of the turn.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can only use this ability if it is wholly within the **creeping overgrowth**. Pick this unit and up to 1 other friendly **^^SYLVANETH^^** unit. within this unit&apos;s combat range to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the targets from the battlefield and set them up again wholly within the **creeping overgrowth** and more than 9&quot; from all enemy units.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
