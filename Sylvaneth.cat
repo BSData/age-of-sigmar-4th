@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="bb7e-b0da-5c2-a980" name="Sylvaneth" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="bb7e-b0da-5c2-a980" name="Sylvaneth" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Sylvaneth - Library" id="948c-6ad8-8217-2c32" targetId="7e0b-8a19-260-5b58"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="f9f8-a13c-bbff-3403" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -13,40 +13,98 @@
         <profile name="Endless Growth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3ff5-8812-c55e-7f5a" publicationId="61ee-fae0-f1da-2591">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick any number of friendly **^^Sylvaneth^^** units wholly within 6&quot; of any friendly **Awakened Wyldwoods** to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D3)** each target.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each friendly **^^Sylvaneth^^** unit that is wholly within the **creeping overgrowth** to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For each target, roll a D3 and pick 1 of the following effects:
+
+
+• **Heal (X)** the target, where **X** is equal to the roll.
+• Return a number of slain models to it with a combined Health characteristic of up to the value of the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Strike and Fade" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e446-7e34-4e9f-ec50" publicationId="61ee-fae0-f1da-2591">
+        <profile name="The Creeping Overgrowth" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="bf2f-f70a-be1e-4d63" publicationId="61ee-fae0-f1da-2591">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Sylvaneth^^** unit that is in combat and is wholly within 6&quot; of a friendly **Awakened Wyldwood** to use this ability.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove that unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units and wholly within 6&quot; of a different friendly **Awakened Wyldwood**.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The **creeping overgrowth** is measured
+from each terrain feature that has a friendly
+**overgrown token**. The range of the **creeping
+overgrowth** is based on the number of friendly,
+**overgrown tokens** on the battlefield as shown:
+
+• 0-2 **overgrown tokens**: 6&quot;
+• 3-5 **overgrown tokens**: 9&quot;
+• 6-8 **overgrown tokens**: 12&quot;
+• 9+ **overgrown tokens**: Whole battlefield
+
+
+***Designer&apos;s Note**: Awakened Wyldwoods are your main way of generating overgrown tokens. Some unit abilities allow you to too.*</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Fury of The Forest" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="081a-ebf2-6a79-c4db" publicationId="61ee-fae0-f1da-2591">
+          <characteristics>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Enemy Combat Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^SYLVANETH^^** unit wholly within the **creeping overgrowth** and that is in combat with only 1 enemy unit to use this ability.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">The unit using this ability has **^^STRIKE-FIRST^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Red</attribute>
+            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Offensive</attribute>
+            <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
+          </attributes>
+        </profile>
+        <profile name="The Land Awakens" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="dcad-fc9a-65a3-b46f" publicationId="61ee-fae0-f1da-2591">
+          <characteristics>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">End of Your Turn</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly non-**^^HERO REVENANT INFANTRY^^** unit or friendly **Dryads** unit that has been destroyed to be the target.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Setup a replacement unit with half the number of models from the target unit (rounding up) wholly within **creeping overgrowth** and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Purple</attribute>
+            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Control</attribute>
+            <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
+          </attributes>
+        </profile>
+        <profile name="Reclaimed By Nature" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cea9-4cb0-e5fb-bd3e" publicationId="61ee-fae0-f1da-2591">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If there are fewer than 3 friendly **Awakened Wyldwoods** on the battlefield, you can set up an **Awakened Wyldwood** on the battlefield more than 3&quot; from all objectives and enemy units, more than 12&quot; from all other friendly **Awakened Wyldwoods** and more than 1&quot; from all other terrain features.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Walk the Hidden Paths" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c6b6-e57e-e056-40a3" publicationId="61ee-fae0-f1da-2591">
+        <profile name="Creeping Dread" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c9cf-21d7-880d-e59f" publicationId="61ee-fae0-f1da-2591">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Sylvaneth^^** unit that is not in combat and is wholly within 6&quot; of a friendly **Awakened Wyldwood** to use this ability.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove that unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units and wholly within 6&quot; of a different friendly **Awakened Wyldwood**.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit within the **creeping overgrowth** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, the first time your opponent declares a command for the target while it is not wholly within 12&quot; of a **^^HERO^^** in their army, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as being used and the command points spent to use the command are still lost.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
