@@ -34,8 +34,9 @@
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -219,7 +220,7 @@
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                 <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a friendly non-**^^Hero Daughters of Khaine^^** unit that has not used a **^^Fight^^** ability this turn and is within that **anointed** unit&apos;s combat range to the the target. The target  can be picked to use a **^^Fight^^** ability immediately after the Fight ability used by that **anointed** unit has been resolved. If it is picked to do so, the target&apos;s melee weapons have **^^Crit (Auto-wound)^^** for the rest of the turn. If the melee weapons already have **^^Crit (Auto-wound)^^**, they have **^^Crit (Mortal)^^** for the rest of the turn instead.</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b">That **^^anointed^^** unit</characteristic>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b">That **anointed** unit</characteristic>
               </characteristics>
               <attributes>
                 <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
@@ -482,11 +483,11 @@
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You perform a blood rite each time:
-* An enemy unit is destroyed and any damage points were allocated to that unit by a friendly **anointed** unit&apos;s combat attacks in the same turn.
-* A friendly **anointed** unit is destrooyed.
-* A friendly unit contesting an objective you control is destroyed.
-* An enemy unit is destroyed by a friendly **^^Daughters of Khaine^^** unit&apos;s attacks and any models in the enemy unit were contesting an objective you do not control in the same phase.
-* A unit (friendly or enemy) is destroyed and it was within 3&quot; of a **Place of Power** at the start of the phase.</characteristic>
+• An enemy unit is destroyed and any damage points were allocated to that unit by a friendly **anointed** unit&apos;s combat attacks in the same turn.
+• A friendly **anointed** unit is destroyed.
+• A friendly unit contesting an objective you control is destroyed.
+• An enemy unit is destroyed by a friendly **^^Daughters of Khaine^^** unit&apos;s attacks and any models in the enemy unit were contesting an objective you do not control in the same phase.
+• A unit (friendly or enemy) is destroyed and it was within 3&quot; of a **Place of Power** at the start of the phase.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -526,7 +527,30 @@
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Move</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Blessings of Khaine" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d9a6-6eaf-8458-401b">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You can only use this ability if you performed any blood rites this turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following blessings that is not **active**. That blessing is **active**. While a blessing is **active**, its effect applies to friendly **^^Daughters Of Khaine^^** units. The effects of more than 1 blessing can apply to a unit at the same time.
+
+
+· **Blessing of Ruthlessness**: Add 1 to hit rolls for those units&apos; combat attacks.
+. **Blessing of Hatred**: Add 1 to wound rolls for those units&apos; combat attacks.
+. **Blessing of Haste**: Add 3&quot; to those units&apos; Move characteristic.
+· **Blessing of Zeal**: If those units charged in the same turn, they have **^^Ward (5+)^^** for the rest of the turn.
+· **Blessing of Shadow**: Subtract 1 from hit rolls for shooting attacks that target those units.
+. **Blessing of Cruelty**: Those units can use **^^Charge^^** and/or **^^Shoot^^** abilities even if they have used a **^^Retreat^^** ability in the same turn.
+. **Blessing of Clarity**: Add 1 to chanting rolls and casting rolls for those units.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1343,7 +1367,7 @@
         <cost name="pts" typeId="points" value="100"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Witch Aelves with Paired Sciansá" hidden="false" id="ca55-4603-aae7-9faa" type="selectionEntry" targetId="f3b2-f764-110e-fbe5">
+    <entryLink import="true" name="Witch Aelves" hidden="false" id="ca55-4603-aae7-9faa" type="selectionEntry" targetId="f3b2-f764-110e-fbe5">
       <entryLinks>
         <entryLink import="true" name="Reinforced" hidden="false" id="24f6-f774-11b0-b23f" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
         <entryLink import="true" name="Paths" hidden="false" id="3450-fbe6-fbf9-a53d" type="selectionEntryGroup" targetId="a78f-4d81-534c-3aeb"/>
@@ -1606,7 +1630,11 @@
         <cost name="pts" typeId="points" value="140"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Sisters of Slaughter" hidden="false" id="75d1-9354-2d36-49b2" type="selectionEntry" targetId="0683-943c-7667-2b67"/>
+    <entryLink import="true" name="Sisters of Slaughter" hidden="false" id="75d1-9354-2d36-49b2" type="selectionEntry" targetId="0683-943c-7667-2b67">
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+    </entryLink>
     <entryLink import="true" name="Shrine of Dark Tribute" hidden="false" id="8919-2701-5ff3-729b" type="selectionEntry" targetId="0745-c2a2-2a26-afb5">
       <costs>
         <cost name="pts" typeId="points" value="20"/>
