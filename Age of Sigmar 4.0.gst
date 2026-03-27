@@ -13086,7 +13086,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Core Rules" id="1297-79e6-1009-53df" hidden="false"/>
     <publication name="Battletome: Flesh-eater Courts" id="6281-1a88-8f4-946" hidden="false"/>
     <publication name="Faction Pack: Cities of Sigmar" id="a746-732d-1a22-460" hidden="false"/>
-    <publication name="Faction Pack: Daughters of Khaine" id="df1f-ba81-775f-acfd" hidden="false"/>
+    <publication name="Battletome: Daughters of Khaine" id="df1f-ba81-775f-acfd" hidden="false"/>
     <publication name="Battletome: Disciples of Tzeentch" id="72d2-ae0-e519-f2f7" hidden="false"/>
     <publication name="Battletome: Blades of Khorne" id="81a9-3dbf-dbc5-672e" hidden="false"/>
     <publication name="Battletome Supplement: Beasts of Chaos" id="3cc2-31d3-9dd2-f858" hidden="false"/>
@@ -13100,7 +13100,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Faction Pack: Hedonites of Slaanesh" id="95fc-e96f-a916-bba1" hidden="false"/>
     <publication name="Battletome: Maggotkin of Nurgle" id="9c71-86cb-e1d0-ec8d" hidden="false"/>
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
-    <publication name="Faction Pack: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
+    <publication name="Battletome: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
     <publication name="Battletome: Ossiarch Bonereapers" id="2f1e-fdf-1ac2-fa38" hidden="false"/>
     <publication name="Faction Pack: Sons of Behemat" id="b765-4747-cddc-385e" hidden="false"/>
     <publication name="Faction Pack: Seraphon" id="e9d0-a23-6a15-1fcb" hidden="false"/>
