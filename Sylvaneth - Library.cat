@@ -1305,28 +1305,40 @@
         <categoryLink name="CHAMPION (1/8)" hidden="false" id="b1b7-ad84-ebfb-8729" targetId="d131-3bfe-3ff4-a703" primary="false"/>
         <categoryLink name="ORDER" hidden="false" id="ba97-5494-fff3-7ef4" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="322a-13d7-d3a6-57b8" targetId="9190-23b-eab9-9904" primary="false"/>
+        <categoryLink targetId="426b-9a95-d724-377b" id="427a-a914-864b-3903" primary="false" name="REVENANT"/>
       </categoryLinks>
       <profiles>
         <profile name="The Twistweald" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="f092-27cf-241f-5d85">
           <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">2</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Eruption of Thorned Vines" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2d25-2464-ce12-1c8a">
+        <profile name="Latching Paraspites" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2d25-2464-ce12-1c8a">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is more than 6&quot; from all other friendly **^^Sylvaneth^^** units, pick an enemy unit within 12&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract D3 from charge rolls for the target for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target has the **^^Infested^^** keyword for the rest of the battle. **^^Infested^^** enemy units cannot move more than 6&quot; when using non-**^^Charge Move^^** abilities.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Pain-Induced Frenzy" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3fa7-6b88-bc43-4613">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit&apos;s melee weapons have **Crit (2 Hits)** if it charged in the same turn.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -1340,14 +1352,14 @@
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="af55-cd65-d611-3744"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Twistroot Talons" hidden="false" id="251f-bc7a-58af-5e29">
+            <selectionEntry type="upgrade" import="true" name="Twistroot Weapons" hidden="false" id="251f-bc7a-58af-5e29">
               <profiles>
-                <profile name="Twistroot Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7f32-5c86-d823-8803">
+                <profile name="Twistroot Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7f32-5c86-d823-8803">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
@@ -1417,14 +1429,14 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8855-cd39-495a-34c1"/>
                   </constraints>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Twistroot Talons" hidden="false" id="d2c8-8865-71ad-45ac">
+                <selectionEntry type="upgrade" import="true" name="Twistroot Weapons" hidden="false" id="d2c8-8865-71ad-45ac">
                   <profiles>
-                    <profile name="Twistroot Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1af-d59d-9345-13b3">
+                    <profile name="Twistroot Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1af-d59d-9345-13b3">
                       <characteristics>
                         <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                         <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                         <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                        <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                        <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                         <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
                         <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                       </characteristics>
@@ -1436,41 +1448,6 @@
                   </constraints>
                 </selectionEntry>
               </selectionEntries>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Warden’s Blade" hidden="false" id="c89e-20a0-49e4-acc5" defaultAmount="0,1">
-              <profiles>
-                <profile name="Warden’s Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="524f-73da-428f-e913">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">2</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a0f9-f9be-edff-11e6" automatic="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c97f-862a-69e8-829e" automatic="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9b6c-a384-48eb-5641" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="0" field="a0f9-f9be-edff-11e6">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9b6c-a384-48eb-5641" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="0" field="c97f-862a-69e8-829e">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9b6c-a384-48eb-5641" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -1512,14 +1489,14 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e45-22a-f5d0-9b5d"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Twistroot Talons" hidden="false" id="e17a-254f-d21e-85a">
+            <selectionEntry type="upgrade" import="true" name="Twistroot Weapons" hidden="false" id="e17a-254f-d21e-85a">
               <profiles>
-                <profile name="Twistroot Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="60f0-2f25-e2cc-c168">
+                <profile name="Twistroot Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="60f0-2f25-e2cc-c168">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
@@ -1675,31 +1652,17 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Thrumming with Life" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="af2c-bd19-43e6-733c">
+        <profile name="Strike And Fade" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c97f-e7c2-ff91-af51">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (3)** this unit.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit charged this turn, remove it from the battlefield and set it up again more than 9&quot; from all enemy units and wholly within the **creeping overgrowth**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
-        </profile>
-        <profile name="Descent of the Spiteriders" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c97f-e7c2-ff91-af51">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit charged this turn, roll a dice. On a 3+, this unit has **^^Strike-first^^** for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1723,6 +1686,7 @@
         <categoryLink name="FLY" hidden="false" id="f54-6f0b-4177-932" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="ORDER" hidden="false" id="5967-a868-b048-bdeb" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="4896-315a-8d7d-a716" targetId="9190-23b-eab9-9904" primary="false"/>
+        <categoryLink targetId="426b-9a95-d724-377b" id="60ff-6d5a-f38a-c0d8" primary="false" name="REVENANT"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="1076-a8d-5d78-80e4" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1747,25 +1711,25 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Anti‑**^^Cavalry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sharp Mandibles" hidden="false" id="6f39-3b3-ca49-4185">
+            <selectionEntry type="upgrade" import="true" name="Dragonspite&apos;s Mandibles" hidden="false" id="6f39-3b3-ca49-4185">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d3c-6928-7a48-3c71"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa9f-c3b8-c0a3-a5a3"/>
               </constraints>
               <profiles>
-                <profile name="Sharp Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c6e2-57da-9e98-94d9">
+                <profile name="Dragonspite&apos;s Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c6e2-57da-9e98-94d9">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1855,9 +1819,9 @@
         </profile>
         <profile name="Zephyrspites" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6a6c-3a09-92e2-5df3">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Any Shooting Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared a **^^Shoot^^** ability for this unit</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit used a Shoot ability this phase, this unit can move D6&quot;. It cannot end that move in combat.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After that **^^Shoot^^** ability has been resolved, this unit can move up to D6&quot;. It cannot move into combat during any part of that move.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1874,6 +1838,7 @@
         <categoryLink name="INFANTRY" hidden="false" id="12d-8e15-bd14-a086" targetId="75d6-6995-dfcc-3898" primary="true"/>
         <categoryLink name="FLY" hidden="false" id="3d55-8fb9-6190-9b7" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="a2ab-4f3d-c21a-7a82" targetId="9190-23b-eab9-9904" primary="false"/>
+        <categoryLink targetId="426b-9a95-d724-377b" id="8505-7d04-e4fc-d276" primary="false" name="REVENANT"/>
       </categoryLinks>
       <costs>
         <cost name="⬤" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -1904,7 +1869,7 @@
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound), Shoot in Combat</characteristic>
@@ -2274,28 +2239,17 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Thrumming with Life" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="994b-d5af-26da-7a68">
+        <profile name="Deafening Drone" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5619-8dcb-deb0-fc9">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (3)** this unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Attacks characteristic of the target&apos;s melee weapons for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
-        </profile>
-        <profile name="Harvesters of the Lamentiri" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5619-8dcb-deb0-fc9">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly unit wholly within 12&quot; of any friendly **Revenant Seekers** units uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -2319,6 +2273,7 @@
         <categoryLink name="FLY" hidden="false" id="669e-3e90-b137-b0f4" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="ORDER" hidden="false" id="9284-2da8-888-58bd" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="341-1063-de13-772d" targetId="9190-23b-eab9-9904" primary="false"/>
+        <categoryLink targetId="426b-9a95-d724-377b" id="6c2d-acb0-2a5c-e53a" primary="false" name="REVENANT"/>
       </categoryLinks>
       <costs>
         <cost name="‎" id="ec99-c735-3e36-e5d5" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
@@ -2348,20 +2303,20 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sharp Mandibles" hidden="false" id="de63-f686-f142-38e8">
+            <selectionEntry type="upgrade" import="true" name="Dragonspite&apos;s Mandibles" hidden="false" id="de63-f686-f142-38e8">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="92da-f261-c871-b35"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e97-3391-c8ca-1e8"/>
               </constraints>
               <profiles>
-                <profile name="Sharp Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="43e2-e587-a221-7ab">
+                <profile name="Dragonspite&apos;s Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="43e2-e587-a221-7ab">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2727,16 +2682,12 @@
         <categoryLink name="FACTION TERRAIN" hidden="false" id="10e7-2a1b-d34a-946c" targetId="cdd6-ffa1-9b32-4cb8" primary="true"/>
         <categoryLink name="ORDER" hidden="false" id="d7c8-425b-7864-4fc" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="8b3-6c6-2fec-2a22" targetId="9190-23b-eab9-9904" primary="false"/>
-        <categoryLink name="WARD (5+)" hidden="false" id="d96b-e691-fb39-4a10" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
       </categoryLinks>
       <profiles>
-        <profile name="Deploy Wyldwood" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3885-ae8f-a0ed-7b62">
+        <profile name="Budding Forest" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3885-ae8f-a0ed-7b62">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up this terrain feature wholly within friendly territory, more than 3&quot; from all objectives and other terrain features. This terrain feature has now been deployed.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy Terrain^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When this terrain feature is set up, give it a friendly **overgrown token**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
@@ -2752,22 +2703,11 @@
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">-</characteristic>
           </characteristics>
         </profile>
-        <profile name="Overgrown Wilderness" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3e7b-9083-d5ea-2a31">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units are visible to friendly **^^Sylvaneth^^** units even if every model in that enemy unit is within 1&quot; of this terrain feature. In addition, the Range characteristic of friendly **^^Sylvaneth^^** units’ ranged weapons is not halved while every model in that friendly unit is within 1&quot; of this terrain feature.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Blue</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Shooting</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
         <profile name="Vengeful Forest Spirits" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5dd6-a023-8cdb-5cb1">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit within this terrain feature’s combat range to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each target. On a 4+, inflict D3 mortal damage on the target.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each enemy unit within 3&quot; of this terrain feature to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2777,13 +2717,13 @@
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Growing Woods" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8c86-1655-c6c7-be0b">
+        <profile name="Ever Growing" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8c86-1655-c6c7-be0b">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time you set up an **Awakened Wyldwood**, you can place 1-3 scenery pieces (Terrain, 1.6). If you place more than 1 scenery piece, the tips at the end of each base must touch, forming a circle. The area inside this circle is considered to be part of this terrain
-feature. For each additional scenery piece in this terrain feature that is placed after the first:
-• Add 2 to the Health characteristic of this terrain feature.
-• Increase the range of friendly abilities that require friendly models to be wholly within 6&quot; of this terrain feature by 3&quot;.’</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round, Start of Battle Round</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick the closest terrain feature to this terrain feature that does not have a friendly **overgrown token** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target is not controlled by your opponent, give that target a friendly **overgrown token**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -3864,6 +3804,108 @@ In addition, if the target is non-**^^Kurnothi^^**, add 1 to the Attacks charac
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Grove Guardian" hidden="false" id="1902-0dee-b6d1-0f58" publicationId="61ee-fae0-f1da-2591">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="8793-63c9-7d21-816d" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="5416-7ec4-568f-fb07" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="SYLVANETH" hidden="false" id="bbf4-d6a6-a175-e43e" targetId="9190-23b-eab9-9904" primary="false"/>
+        <categoryLink targetId="e467-244c-3711-033d" id="aab3-cfb2-e9ac-0c6c" primary="false" name="FOREST ELDER"/>
+        <categoryLink targetId="75d6-6995-dfcc-3898" id="adef-9597-2d7f-3976" primary="false" name="INFANTRY"/>
+        <categoryLink targetId="e692-853d-6db8-fdbe" id="dceb-dc9a-a103-f301" primary="false" name="PRIEST (2)"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="8e05-269a-17aa-38e7" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Grove Guardian" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="310b-a65c-0553-e2be">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">4&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Soulshriek" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="59a8-f26c-1cfe-79dc">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in a friendly non-**^^Hero Revenant^^** unit wholly within 12&quot; of and visible to this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a number of dice equal to the slain model&apos;s Health characteristic. For each 5+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Primal Terror" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="4b21-6a1c-2faf-d1a3">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a friendly **^^Sylvaneth^^** unit that is wholly within the **creeping overgrowth** or that is visible to and wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">If the chanting roll was 6+, you can pick another eligible unit to be a second target. If a target is **^^Revenant Infantry^^** or **Dryads** unit, return up to D3 models to the target unit. Otherwise, **Heal (3)** that target.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Special</attribute>
+            <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4731-d665-2d95-7bb9" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Grove Guardian" hidden="false" id="5083-3349-59b9-0482">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Grove Sickle or Shears" hidden="false" id="ab7a-4471-97b6-5dfc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b61b-fb01-1131-d242"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d14-0374-adb7-dd34"/>
+              </constraints>
+              <profiles>
+                <profile name="Grove Sickle or Shears" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="4b48-0c89-9d33-74df">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Guardian Spites" hidden="false" id="8a45-1279-1905-eabc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="496d-a2b5-8b99-34b6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f21a-ce38-317c-4f4f"/>
+              </constraints>
+              <profiles>
+                <profile name="Guardian Spites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="598f-02c5-0af4-c833">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="47e8-7448-2517-8700"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bc6-0a24-de44-91e5"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="b835-c4da-b52d-c42d" hidden="true">
+              <description>105x70mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
