@@ -96,10 +96,10 @@
         <categoryLink name="MONSTER" hidden="false" id="2e36-830e-3d75-35b3" targetId="6d54-625c-d063-13e2" primary="false"/>
         <categoryLink name="FLY" hidden="false" id="86a7-3703-b66d-63aa" targetId="b979-4c3e-7d0e-6921" primary="false"/>
         <categoryLink name="WARMASTER" hidden="false" id="d6de-eaf9-5368-9703" targetId="c203-51a0-3d44-6b07" primary="false"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="491-60b2-6526-4842" targetId="70a4-383f-421f-52cd" primary="false"/>
         <categoryLink name="ORDER" hidden="false" id="d126-8f25-4e70-6736" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="3edb-2487-96d0-75ee" targetId="9190-23b-eab9-9904" primary="false"/>
         <categoryLink name="WIZARD (3)" hidden="false" id="69d3-e742-8760-bb55" targetId="8bc-6d63-e37f-9239" primary="false"/>
+        <categoryLink targetId="52cc-95fd-6cd3-8f72" id="d54e-ae4e-0ef1-008e" primary="false" name="WARD (5+)"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="56f7-c706-b989-7799" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -109,14 +109,14 @@
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">14&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">16</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="135b-afc5-4fd9-3460">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Wardroth’s Great Antlers** is 4.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Wardroth Beetle&apos;s Antlers** is 4.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -129,7 +129,7 @@
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
             <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit within 12&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 2D3 mortal damage on the target. If the target is destroyed by this spell, you can immediately resolve the effect of the ‘Treesong’ spell as if this unit had successfully cast it.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict 2D3 mortal damage on the target. If the target would be destroyed by this spell, before removing any models, pick the closest terrain feature to the target that does not have a friendly **overgrown token** and give it a friendly **overgrown token**. If all terrain features on the battlefield already have a friendly **overgrown token**, inflict D3 mortal damage on each enemy unit within 6&quot; of the target instead.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -139,24 +139,22 @@
         </profile>
         <profile name="Lifebloom" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e4b4-8e4d-5f0-eb6a">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
-• Add 1 to casting rolls for this unit for the rest of the turn.
-• **Heal (2D3)** this unit.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (2D6)** this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Living Battering Ram" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5abd-6507-dbee-ed76">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy **^^Infantry^^** unit within 1&quot; of it to be the target.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick a visible enemy unit within 1&quot; of it to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -167,17 +165,41 @@
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Rite of Life" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4f7c-2ca1-ae3f-d2d3">
+        <profile name="The Goddess Of Life" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="4f7c-2ca1-ae3f-d2d3">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Sylvaneth^^** unit that has been destroyed to be the target. This unit can use this ability if it has been destroyed, but if it does, this unit must be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9&quot; of a friendly **Awakened Wyldwood** and more than 9&quot; from all enemy units. If the target was a **^^Monster^^**, allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points).</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Battle, Your Movement Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">2</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">This unit can use this ability even if it has been destroyed.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with 8 damage points allocated to it (ward rolls cannot be made for those damage points) wholly within the **creeping overgrowth** and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
             <attribute typeId="6d16-c86b-2698-85a4" name="Type">Rallying</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Seasons Of War" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="d584-62b7-8083-8f63">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Start of Battle Round</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You must use this ability.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects to apply for the rest of the battle round. You cannot pick the effect that you picked in the previous battle round.
+
+
+***The Burgeoning***: Each time a friendly **Awakened Wyldwood** uses the &apos;Ever Growing&apos; ability, you can pick any terrain feature your opponent does not control to be the target rather than the closest.
+
+***The Reaping***: Add 1 to casting rolls and chanting rolls for friendly **^^Sylvaneth^^** units while they are wholly within 12&quot; of this unit.
+
+
+***The Dwindling***: Friendly **^^Sylvaneth^^** units can use **^^Charge^^** abilities even if they used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on those units when they use **^^Retreat^^** abilities.
+
+***Everdusk***: Each time you use the &apos;Creeping Dread&apos; ability this battle round, you can pick up to 3 targets instead of 1.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -201,7 +223,7 @@
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage)</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Spear of Kurnoth" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="b9be-23b6-1775-836a">
@@ -217,13 +239,13 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wardroth’s Great Antlers" hidden="false" id="614c-27e6-7aab-906">
+            <selectionEntry type="upgrade" import="true" name="Wardroth Beetle&apos;s Antlers" hidden="false" id="614c-27e6-7aab-906">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d631-7a4e-f009-f68"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab61-3a83-c5c9-871c"/>
               </constraints>
               <profiles>
-                <profile name="Wardroth’s Great Antlers" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ec1-b3-dc9a-ae3d">
+                <profile name="Wardroth Beetle&apos;s Antlers" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ec1-b3-dc9a-ae3d">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -253,10 +275,11 @@
         <categoryLink name="UNIQUE" hidden="false" id="2150-8e83-1653-9ce0" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="HERO" hidden="false" id="e3f3-636b-b8fc-67f4" targetId="6e72-1656-d554-528a" primary="true"/>
         <categoryLink name="MONSTER" hidden="false" id="5814-44c4-bb5b-9f00" targetId="6d54-625c-d063-13e2" primary="false"/>
-        <categoryLink name="WARMASTER" hidden="false" id="1250-cf7d-39e-c357" targetId="c203-51a0-3d44-6b07" primary="false"/>
         <categoryLink name="ORDER" hidden="false" id="b413-a463-a249-c975" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="24cf-b73d-1063-8272" targetId="9190-23b-eab9-9904" primary="false"/>
         <categoryLink name="WIZARD (2)" hidden="false" id="70b2-cf8f-e0de-11d" targetId="8179-697a-9f4c-91d4" primary="false"/>
+        <categoryLink targetId="52cc-95fd-6cd3-8f72" id="0cc4-9e1b-305f-57b8" primary="false" name="WARD (5+)"/>
+        <categoryLink targetId="e467-244c-3711-033d" id="04f4-8bc7-1983-7df8" primary="false" name="FOREST ELDER"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="1bc9-52f2-8889-a73b" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -264,28 +287,31 @@
       <profiles>
         <profile name="The Lady of Vines" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="a8fa-fe37-1a09-589">
           <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">8</characteristic>
-            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">10</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
-        <profile name="Verdian Crown" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="43d-79ea-b852-4898">
+        <profile name="Verdian Crown" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="43d-79ea-b852-4898">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit counts as an **Awakened Wyldwood** for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 18&quot; of this unit that does not have a friendly **overgrown token** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Give the target a friendly **overgrown token**</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Aspect of the Everqueen" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="b3f2-fbf6-5483-7d40">
+        <profile name="Protection Of The Everqueen" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="b3f2-fbf6-5483-7d40">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
             <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Make a casting roll of 2D6.</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Make a casting roll of 2D6. Add 1 to the roll if this unit is wholly within the **creeping overgrowth**.</characteristic>
             <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, friendly **^^Sylvaneth^^** units have **^^Ward (5+)^^** while they are wholly within 12&quot; of this unit.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
@@ -294,19 +320,17 @@
             <attribute typeId="da27-8d61-f955-5031" name="Parent Node">Defensive</attribute>
           </attributes>
         </profile>
-        <profile name="Writhing Vines" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="95a7-7f72-7aee-d38c">
+        <profile name="Hands Of The Everqueen" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="95a7-7f72-7aee-d38c">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn:
-***Barrier:*** Subtract 1 from hit rolls for the target’s attacks.
-***Ensnare:*** Add 1 to hit rolls for attacks made by friendly units that target that enemy unit.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 18&quot; of this unit that has a friendly **overgrown token** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Measure the range and visibility of the next **^^Spell^^** ability used by this unit this phase from the target instead of from this unit, and your opponent can measure range and visibility to that terrain feature instead of this unit for the purposes of the &apos;Unbind&apos; ability.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -329,7 +353,7 @@
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D6</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
@@ -375,6 +399,7 @@
         <categoryLink name="ORDER" hidden="false" id="eb9e-515f-9620-ad02" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="SYLVANETH" hidden="false" id="2bc0-222f-af88-fbc4" targetId="9190-23b-eab9-9904" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="1213-8c35-cf88-d3e1" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink targetId="e467-244c-3711-033d" id="e780-e71e-8a7b-fd91" primary="false" name="FOREST ELDER"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="6037-5240-fd43-b143" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
@@ -382,36 +407,29 @@
       <profiles>
         <profile name="Drycha Hamadreth" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="8045-7110-5683-4141">
           <characteristics>
-            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">9&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">10</characteristic>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
-        <profile name="Mercurial Aspect" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a1f-39fd-6570-f3d5">
+        <profile name="Terror Of The Deep Woods" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a1f-39fd-6570-f3d5">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects to apply to this unit for the rest of the turn:
-***Enraged:*** Add 10 to the Attacks characteristic of this unit’s **Flitterfuries**.
-***Embittered:*** Add 10 to the Attacks characteristic of this unit’s **Swarm of Squirmlings**.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Enemy units cannot use **^^Run^^** or **^^Retreat^^** abilities while they are within 9&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Song of Spite" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="a924-fd6e-9278-4d4c">
+        <profile name="Enrage The Spites" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="a924-fd6e-9278-4d4c">
           <characteristics>
             <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
-            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
-            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick an enemy **^^Infantry^^** unit within 12&quot; of the caster to be the target, then make a casting roll of 2D6.</characteristic>
-            <characteristic name="Effect" typeId="1cb9-a-1345-907f">The following effects apply for the rest of the turn:
-Add 1 to hit rolls for combat attacks made by friendly **^^Sylvaneth^^** units that target that enemy unit.
-In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-Revenants** or **The Twistweald** units that target that enemy unit.</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick up to 3 enemy units that are visible to and within 12&quot; of this unit or that are within the **creeping overgrowth** to be the targets, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Inflict D3 mortal damage on each target.</characteristic>
             <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
           </characteristics>
           <attributes>
@@ -421,15 +439,15 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
         </profile>
         <profile name="Primal Terror" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="77b2-7e2-ba0c-83a1">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, halve the target’s control score (rounding up) for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is not in combat and has not used a **^^Run^^** or ^^**Retreat^^** ability this turn, make a charge roll of 2D6. Then, remove this unit from the battlefield and set it up again within 1/2&quot; of an enemy unit and wholly within **X**&quot; of a terrain feature that has a friendly **overgrown token**, where **X** is equal to the charge roll. If you do so, this unit has charged.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**, **^^Charge^^**, **^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Control</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -440,25 +458,6 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Drycha Hamadreth" hidden="false" id="da0d-185d-45c2-29e0">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Flitterfuries" hidden="false" id="38d6-9388-7b08-6296">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3018-b19b-f7b5-a6e4"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7929-6b2d-685e-fa47"/>
-              </constraints>
-              <profiles>
-                <profile name="Flitterfuries" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="d7a1-33bf-5bbb-91ad">
-                  <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">10</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat, Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Slashing Talons" hidden="false" id="cf4d-7df7-ee1-dd98">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2ebf-6d62-da1b-afb9"/>
@@ -470,27 +469,27 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (2 Hits)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Swarm of Squirmlings" hidden="false" id="f27c-2442-f71d-a3c3">
+            <selectionEntry type="upgrade" import="true" name="Swarm of Spites" hidden="false" id="f27c-2442-f71d-a3c3">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f732-756d-69b-3649"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6521-dbe7-7775-fbd2"/>
               </constraints>
               <profiles>
-                <profile name="Swarm of Squirmlings" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a01c-650-e28-739d">
+                <profile name="Swarm of Spites" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a01c-650-e28-739d">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">10</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">20</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73"/>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend), Companion</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal), Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -530,32 +529,29 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
-        <profile name="Nature Aetheric" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="61d2-55e1-7873-e100">
+        <profile name="Huntmaster&apos;s Strike" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="61d2-55e1-7873-e100">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Start of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 6&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle, the target gains the ‘Place of Power’ terrain ability (Terrain 1.2) and counts as a friendly Awakened Wyldwood for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit charged this turn, remove it from the battlefield and set it up again more than 6&quot; from all enemy units and wholly within the **creeping overgrowth**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Kurnothi War-horn" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="59e8-f376-a5df-144c">
+        <profile name="Kurnothi War-horn" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="59e8-f376-a5df-144c">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Sylvaneth^^** units to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, each target can use **^^Charge^^** abilities even if they used a **^^Run^^** ability in the same turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2&quot; to the Move characteristic of friendly **^^Kurnothi^^** units while they are wholly within 12&quot; of this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
         <profile name="Rhythm of the Chase" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b29c-dd1a-502d-27c4">
@@ -575,7 +571,7 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c6b8-a8fd-b2-59fa">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Carnelian Greatspite’s Razor-like Mandibles** is 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Carnelian Greatspite’s Mandibles** is 3.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -608,13 +604,13 @@ In addition, add 1 to wound rolls for combat attacks made by friendly **Spite-R
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Carnelian Greatspite’s Razor-like Mandibles" hidden="false" id="9e28-fe8e-71d1-7430">
+            <selectionEntry type="upgrade" import="true" name="Carnelian Greatspite’s Mandibles" hidden="false" id="9e28-fe8e-71d1-7430">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15e6-99ff-5b0e-7286"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5173-849a-880f-95d1"/>
               </constraints>
               <profiles>
-                <profile name="Carnelian Greatspite’s Razor-like Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6d05-7590-2cb2-e164">
+                <profile name="Carnelian Greatspite’s Mandibles" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6d05-7590-2cb2-e164">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
