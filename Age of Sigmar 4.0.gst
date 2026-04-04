@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="86" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="87" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -378,6 +378,8 @@
     <categoryEntry name="RELENTLESS DISCIPLINE (5)" id="f77f-b20a-b844-dbc1" hidden="false"/>
     <categoryEntry name="RELENTLESS DISCIPLINE (7)" id="0cf3-b75a-0999-7508" hidden="false"/>
     <categoryEntry name="RELENTLESS DISCIPLINE (2)" id="4d3b-23e7-f8f0-9780" hidden="false"/>
+    <categoryEntry name="FOREST ELDER" id="e467-244c-3711-033d" hidden="false"/>
+    <categoryEntry name="REVENANT" id="426b-9a95-d724-377b" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
@@ -13086,7 +13088,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Core Rules" id="1297-79e6-1009-53df" hidden="false"/>
     <publication name="Battletome: Flesh-eater Courts" id="6281-1a88-8f4-946" hidden="false"/>
     <publication name="Faction Pack: Cities of Sigmar" id="a746-732d-1a22-460" hidden="false"/>
-    <publication name="Faction Pack: Daughters of Khaine" id="df1f-ba81-775f-acfd" hidden="false"/>
+    <publication name="Battletome: Daughters of Khaine" id="df1f-ba81-775f-acfd" hidden="false"/>
     <publication name="Battletome: Disciples of Tzeentch" id="72d2-ae0-e519-f2f7" hidden="false"/>
     <publication name="Battletome: Blades of Khorne" id="81a9-3dbf-dbc5-672e" hidden="false"/>
     <publication name="Battletome Supplement: Beasts of Chaos" id="3cc2-31d3-9dd2-f858" hidden="false"/>
@@ -13100,7 +13102,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Faction Pack: Hedonites of Slaanesh" id="95fc-e96f-a916-bba1" hidden="false"/>
     <publication name="Battletome: Maggotkin of Nurgle" id="9c71-86cb-e1d0-ec8d" hidden="false"/>
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
-    <publication name="Faction Pack: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
+    <publication name="Battletome: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
     <publication name="Battletome: Ossiarch Bonereapers" id="2f1e-fdf-1ac2-fa38" hidden="false"/>
     <publication name="Faction Pack: Sons of Behemat" id="b765-4747-cddc-385e" hidden="false"/>
     <publication name="Faction Pack: Seraphon" id="e9d0-a23-6a15-1fcb" hidden="false"/>
