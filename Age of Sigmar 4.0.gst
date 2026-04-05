@@ -380,6 +380,7 @@
     <categoryEntry name="RELENTLESS DISCIPLINE (2)" id="4d3b-23e7-f8f0-9780" hidden="false"/>
     <categoryEntry name="FOREST ELDER" id="e467-244c-3711-033d" hidden="false"/>
     <categoryEntry name="REVENANT" id="426b-9a95-d724-377b" hidden="false"/>
+    <categoryEntry name="STRIKE-FIRST" id="071f-979b-07cc-51fc" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
