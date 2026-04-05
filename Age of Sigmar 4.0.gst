@@ -1588,6 +1588,8 @@
         <forceEntryLink name="Mask of the Deceiver" id="4141-4799-3cc3-9f58" hidden="false" targetId="3378-9dbf-9e74-cf5a" type="forceEntry"/>
         <forceEntryLink name="Seekers of Silver" id="6e14-e952-db7a-3a53" hidden="false" targetId="649c-3737-f793-fe6a" type="forceEntry"/>
         <forceEntryLink name="Heralds of the Bone-tithe" id="dd02-29ce-4a08-04b5" hidden="false" targetId="4617-acfd-e9d3-807d" type="forceEntry"/>
+        <forceEntryLink name="The Twisted Branch" id="26aa-3bca-5670-d7cb" hidden="false" targetId="1874-8be5-53f6-2166" type="forceEntry"/>
+        <forceEntryLink name="Drycha&apos;s Talons" id="d7d2-94d5-caa3-89f6" hidden="false" targetId="0c75-7fef-df92-3a29" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="✦ General&apos;s Handbook 2025-26" hidden="false" id="f079-501a-2738-6845" childForcesLabel="Regiments and Auxiliary" sortIndex="1">
@@ -2796,6 +2798,8 @@
         <forceEntryLink name="Seekers of Silver" id="8256-fa3d-05b0-2c1c" hidden="false" targetId="649c-3737-f793-fe6a" type="forceEntry"/>
         <forceEntryLink name="Heralds of the Bone-tithe" id="f007-71f8-c758-240f" hidden="false" targetId="4617-acfd-e9d3-807d" type="forceEntry"/>
         <forceEntryLink name="Karahtet&apos;s Siege Breaker" id="14dc-1f5d-fb27-b6f5" hidden="false" targetId="7799-20f4-4e7c-6474" type="forceEntry"/>
+        <forceEntryLink name="Drycha&apos;s Talons" id="e367-f33d-4fed-17ba" hidden="false" targetId="0c75-7fef-df92-3a29" type="forceEntry"/>
+        <forceEntryLink name="The Twisted Branch" id="826f-f13a-00be-b989" hidden="false" targetId="1874-8be5-53f6-2166" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Path to Glory: Ravaged Coast" id="01b1-5112-ab45-1afc" hidden="false" childForcesLabel="Regiments and Auxiliary" sortIndex="4">
@@ -6812,6 +6816,8 @@
             <modifier type="set" value="false" field="hidden"/>
           </modifiers>
         </forceEntryLink>
+        <forceEntryLink name="The Twisted Branch" id="2cb4-9fa8-e67e-572a" hidden="false" targetId="1874-8be5-53f6-2166" type="forceEntry"/>
+        <forceEntryLink name="Drycha&apos;s Talons" id="46c1-4226-cc34-d794" hidden="false" targetId="0c75-7fef-df92-3a29" type="forceEntry"/>
       </forceEntryLinks>
     </forceEntry>
     <forceEntry name="Big Drogg Fort-kicker" id="10b2-4a3a-8629-90ef" hidden="true">
@@ -11416,6 +11422,98 @@
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="360"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Drycha&apos;s Talons" id="0c75-7fef-df92-3a29" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="df99-e9bf-2838-d332" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="79d3-ecce-155a-7088" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="e12a-0415-ebb8-6677" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="ac8f-ff16-fcbe-9f34" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="59fb-49ab-7f28-28ff" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="cddb-e0db-30cf-52b4" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="FACTION TERRAIN" hidden="false" id="53b7-0bc9-939b-305f" targetId="cdd6-ffa1-9b32-4cb8"/>
+        <categoryLink name="Reference" hidden="false" id="0217-e9aa-b6df-885f" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ba69-8c31-7551-6635"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="360"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="The Twisted Branch" id="1874-8be5-53f6-2166" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5232-3bab-5562-3172" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="29ee-576f-ed3c-4c51" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="c8ce-05a7-183c-123d" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="1370-42fd-b0af-1143" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="b81d-f109-377c-0d1a" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="85ee-217a-274f-4155" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="5039-bc3b-1bd1-518d" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="FACTION TERRAIN" hidden="false" id="713b-9fc3-3f4e-2173" targetId="cdd6-ffa1-9b32-4cb8"/>
+        <categoryLink name="Reference" hidden="false" id="a1ec-74cd-ec6e-3dd9" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="977f-bb0a-018e-c9ba"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="210"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
