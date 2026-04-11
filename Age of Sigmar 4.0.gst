@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="87" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="88" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -285,8 +285,6 @@
     <categoryEntry name="CAULDRON OF BLOOD" id="30b5-7cb3-c4fa-4875" hidden="false"/>
     <categoryEntry name="INVOCATION" id="6120-adde-45cc-3faa" hidden="false"/>
     <categoryEntry name="DAUGHTERS OF KHAINE" id="abd7-c4f9-cd1-a6f8" hidden="false"/>
-    <categoryEntry name="MELUSAI" id="210f-31fa-20c8-717d" hidden="false"/>
-    <categoryEntry name="KHINERAI" id="a99c-fc67-a3c-17ce" hidden="false"/>
     <categoryEntry name="CHAMPION (1/9)" id="c2cc-3b24-96e3-4245" hidden="false"/>
     <categoryEntry name="ARCANITE" id="4fa7-56fe-431f-fd98" hidden="false"/>
     <categoryEntry name="DISC OF TZEENTCH" id="6960-3f0d-5b0-2ec4" hidden="false"/>
@@ -381,6 +379,7 @@
     <categoryEntry name="FOREST ELDER" id="e467-244c-3711-033d" hidden="false"/>
     <categoryEntry name="REVENANT" id="426b-9a95-d724-377b" hidden="false"/>
     <categoryEntry name="STRIKE-FIRST" id="071f-979b-07cc-51fc" hidden="false"/>
+    <categoryEntry name="MELUSAI" id="3eb7-2bf1-e276-8ad5" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
