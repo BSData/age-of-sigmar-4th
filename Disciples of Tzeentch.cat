@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d731-9058-b0e5-6ff5" name="Disciples of Tzeentch" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="31" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d731-9058-b0e5-6ff5" name="Disciples of Tzeentch" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Disciples of Tzeentch - Library" id="61ad-3d4e-f82-7dfb" targetId="bb28-eb3d-b408-7bb8"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="d449-4709-6d8f-5ce0" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -862,6 +862,7 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
         <modifierGroup type="and">
           <modifiers>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.4fa7-56fe-431f-fd98"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.9d20-b346-5039-25f5"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -1457,6 +1458,32 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
             </conditionGroup>
           </conditionGroups>
         </modifier>
+        <modifier type="set" value="1" field="3abe-d2c8-fbf6-a823">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="5571-45cd-2843-9997" shared="true" includeChildSelections="true" childName="Curseling, Eye of Tzeentch"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="729f-5ec3-80e2-21c9" shared="true" includeChildSelections="true" childName="Fatemaster"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="ed5c-ffea-aaf3-acc2" shared="true" includeChildSelections="true" childName="Fatemaster on Disc of Tzeentch"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="points" value="60"/>
@@ -1466,6 +1493,9 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="961f-2ecf-dca1-b0b2" type="selectionEntryGroup" targetId="9f62-724e-720d-87ff"/>
         <entryLink import="true" name="Renown" hidden="false" id="f94b-154a-78e9-0e8f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
       </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="3abe-d2c8-fbf6-a823" includeChildSelections="true"/>
+      </constraints>
     </entryLink>
     <entryLink import="true" name="Exalted Flamer of Tzeentch" hidden="false" id="f304-1a86-11cb-e4bf" type="selectionEntry" targetId="92ca-fe8b-73fd-6ff2">
       <modifiers>
@@ -1717,7 +1747,7 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
         <cost name="pts" typeId="points" value="170"/>
       </costs>
     </entryLink>
-    <entryLink import="true" name="Fatemaster" hidden="false" id="ed5c-ffea-aaf3-acc2" type="selectionEntry" targetId="0954-f819-54c6-46f3">
+    <entryLink import="true" name="Fatemaster on Disc of Tzeentch" hidden="false" id="ed5c-ffea-aaf3-acc2" type="selectionEntry" targetId="0954-f819-54c6-46f3">
       <entryLinks>
         <entryLink import="true" name="Heroic Traits" hidden="false" id="7b33-2c41-dec2-14c3" type="selectionEntryGroup" targetId="8c6b-90ae-6131-afe"/>
         <entryLink import="true" name="Artefacts of Power" hidden="false" id="e579-b6c4-276b-7c54" type="selectionEntryGroup" targetId="d953-63d2-257f-850f"/>
@@ -1797,6 +1827,7 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
           <modifiers>
             <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.a54f-fb42-b918-1468"/>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.4fa7-56fe-431f-fd98"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.9d20-b346-5039-25f5"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -2226,6 +2257,7 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
           <modifiers>
             <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.a54f-fb42-b918-1468"/>
             <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.4fa7-56fe-431f-fd98"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.9d20-b346-5039-25f5"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
