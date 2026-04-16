@@ -3557,13 +3557,14 @@ However, for each unmodified hit roll of 1 for an attack made with this unit’
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Night Runners" hidden="false" id="687e-ab15-48d9-4103" publicationId="ff83-b049-91b9-ed05">
+    <selectionEntry type="unit" import="true" name="Night Runners" hidden="false" id="687e-ab15-48d9-4103" publicationId="2a78-9788-7ea8-cd74">
       <categoryLinks>
         <categoryLink name="SKAVEN" hidden="false" id="2c74-d5b1-df6b-bf4a" targetId="cce6-9e5a-dd33-a755" primary="false"/>
         <categoryLink name="CHAOS" hidden="false" id="9fa6-fb6b-fa6a-49eb" targetId="319b-38ee-d10d-e800" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="374c-874a-e108-35e7" targetId="75d6-6995-dfcc-3898" primary="true"/>
         <categoryLink name="CHAMPION" hidden="false" id="caec-2ec7-5a9a-b91f" targetId="f679-3bcb-d664-9ac3" primary="false"/>
         <categoryLink name="ESHIN" hidden="false" id="f284-26c9-f872-3e03" targetId="a2e1-6655-23f6-6533" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="ea3f-a8e1-c7aa-4131" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <profiles>
         <profile name="Night Runners" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="c557-3305-57a9-508c">
@@ -3574,29 +3575,32 @@ However, for each unmodified hit roll of 1 for an attack made with this unit’
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Slinking Advance" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bdb7-ee22-a60f-6ef0">
+        <profile name="Grappling Hooks" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bdb7-ee22-a60f-6ef0">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use the ‘Normal Move’ ability as if it were your movement phase.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit was not set up this turn, pick a terrain feature within 3&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again wholly within 3&quot; of the target and more than 3&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Sneaky Infiltrators" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9374-12e6-5d6a-8250">
+        <profile name="Smoke Bombs" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9374-12e6-5d6a-8250">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While each model in this unit is within 1&quot; of any terrain features, this unit cannot be targeted by shooting attacks unless the attacking model is within 9&quot; of it.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit is in combat or charged this turn, this unit can make a pile-in move. Then, if this unit is in combat, you must pick 1 or more enemy units to be the target(s) of this unit’s attacks.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Resolve combat attacks against the target unit(s). Then, if this unit is in combat, roll a dice. On a 3+, this unit can move a distance up to its Move characteristic. It can pass through the combat ranges of enemy units but can only end that move in combat with units it was in combat with at the start of that move. It does not have to end the move in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**, **^^Fight^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
@@ -3674,7 +3678,7 @@ However, for each unmodified hit roll of 1 for an attack made with this unit’
           </modifiers>
           <rules>
             <rule name="Base Size" id="4c94-aaf7-289a-47b2" hidden="true">
-              <description>25mm</description>
+              <description>28.5mm</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -7705,6 +7709,230 @@ In addition, make the following changes to your hero&apos;s warscroll:.
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gutter Runners" hidden="false" id="84db-dfbe-03d0-256c" publicationId="2a78-9788-7ea8-cd74">
+      <categoryLinks>
+        <categoryLink name="SKAVEN" hidden="false" id="5b35-0c53-e6d4-7595" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="3ada-b163-2a31-7143" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="8013-a796-445b-ca18" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="ESHIN" hidden="false" id="8ff4-92d4-e013-7af5" targetId="a2e1-6655-23f6-6533" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="2e7f-6ad4-5712-d0c2" targetId="70a4-383f-421f-52cd" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Gutter Runners" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="ad78-a987-d60a-d894">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">1</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">6+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bomb Rats" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0419-dc3a-607e-8792">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit’s **Bomb Rats** are tokens. If there are fewer than 2 friendly **Bomb Rats** next to enemy units, pick an enemy unit in combat with this unit that does not have a friendly **Bomb Rat** next to it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Place this unit’s **Bomb Rat** next to the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Detonate" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6c93-c30e-23bd-ae88">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit can use this ability even if it has been destroyed. Pick each enemy unit that has a friendly **Bomb Rat** token to be a target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each enemy unit within a target’s combat range. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. Then, remove the target’s **Bomb Rat**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Gutter Runner" hidden="false" id="93ff-ac86-515e-3917" defaultAmount="5">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Saboteur Bombs" hidden="false" id="4043-4b70-457d-e1f6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="84db-dfbe-03d0-256c" shared="true" id="8e6a-c514-2653-48d1" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fef-35c2-9667-15ec"/>
+              </constraints>
+              <profiles>
+                <profile name="Saboteur Bombs" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="ff38-cc4a-53a2-ce26">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Infantry^^** (+1 Rend), Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="0" field="3fef-35c2-9667-15ec">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9c21-1746-9873-a5b5" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="increment" value="1" field="8e6a-c514-2653-48d1">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="84db-dfbe-03d0-256c" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Punch Dagger and Blade" hidden="false" id="fb3e-664c-debb-0e39">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf07-48f9-3b34-73b6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="198c-dca1-3d9f-cffe"/>
+              </constraints>
+              <profiles>
+                <profile name="Punch Dagger and Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0933-7fbd-4baf-a228">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="e573-abcc-4d5d-b411"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="ea89-e23b-f2b8-81c4"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="10" field="e573-abcc-4d5d-b411">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="ea89-e23b-f2b8-81c4">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Base Size" id="8b0d-0d39-f320-0863" hidden="true">
+              <description>1/10 32mm (Champion)
+9/10 28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathmaster Crixxit" hidden="false" id="d07c-20ca-d61f-40d7" publicationId="2a78-9788-7ea8-cd74">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="09cd-3a50-21b4-7da6" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="fcd0-a4b1-d340-147d" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="SKAVEN" hidden="false" id="d0d3-c48a-b60f-07d5" targetId="cce6-9e5a-dd33-a755" primary="false"/>
+        <categoryLink name="CHAOS" hidden="false" id="ea7d-37b5-89b5-3bca" targetId="319b-38ee-d10d-e800" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="0b45-7f17-f531-dcaa" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (5+)" hidden="false" id="5bf2-6241-a7de-0782" targetId="52cc-95fd-6cd3-8f72" primary="false"/>
+        <categoryLink name="ESHIN" hidden="false" id="68e1-1aa9-b4c3-9d17" targetId="a2e1-6655-23f6-6533" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="29c7-df90-4466-254f" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Deathmaster Crixxit" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d51e-4854-8c71-a9a4">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">6</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Master of Assassins" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4158-d326-9857-4942">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Double the Damage characteristic of this unit’s melee weapons for attacks that target an enemy **^^Hero^^**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Shadowblood Cloak" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4455-3000-eb0e-43ef">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **^^Eshin^^** unit that has 2 or more models and that is wholly within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, remove this unit from the battlefield and set it up again wholly within 6&quot; of the target. This unit can be set up in combat.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Diversionary Assault" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="70c1-656d-c612-a8fa">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **Gutter Runners** unit wholly within
+13&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 2 to charge rolls for the target for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="86d2-815f-4700-f87a" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Deathmaster Crixxit" hidden="false" id="2d2e-a35a-bf57-273c">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="The Blades of Thirteen Cuts" hidden="false" id="c818-ccab-ea9e-0aa4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09fa-d2da-3faa-0639"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a0d-a4e3-c1fd-f64d"/>
+              </constraints>
+              <profiles>
+                <profile name="The Blades of Thirteen Cuts" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1961-6ad1-b505-86a4">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">13</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">2+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^**(+1 Rend), Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dae2-fcfb-a3da-b3f4"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c999-2513-b387-edb2"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="444a-7dab-2efe-d5f4" hidden="true">
+              <description>40mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>

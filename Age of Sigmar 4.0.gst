@@ -13618,6 +13618,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome Supplement: Disciples of Tzeentch" id="1bad-f288-dd88-2d76" hidden="false"/>
     <publication name="White Dwarf Issue 521" id="9082-4798-2e31-dab8" hidden="false"/>
     <publication name="White Dwarf Issue 522" id="d979-992f-19fa-7e9d" hidden="false"/>
+    <publication name="Battletome Supplement: Skaven Eshin" id="2a78-9788-7ea8-cd74" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
