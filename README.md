@@ -1,14 +1,6 @@
 Age of Sigmar 4th
 ==================
 
-[![La<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups> release](https://img.shields.io/github/release/BSData/age-of-sigmar-4th.svg?style=flat-square)](https://github.com/BSData/age-of-sigmar-4th/releases/la<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>)
-[![Commits (since la<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups> release)](https://img.shields.io/github/commits-since/BSData/age-of-sigmar-4th/la<conditionGroups><conditionGroup type="and"><conditions><condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/><condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/></conditions></conditionGroup></conditionGroups>.svg?style=flat-square)](https://github.com/BSData/age-of-sigmar-4th/releases)
-[![Open bugs](https://img.shields.io/github/issues/BSData/age-of-sigmar-4th/bug.svg?style=flat-square&label=bugs)](https://github.com/BSData/age-of-sigmar-4th/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![Contributors](https://img.shields.io/github/contributors/BSData/age-of-sigmar-4th.svg?style=flat-square)](https://github.com/BSData/age-of-sigmar-4th/graphs/contributors)
-[![Commit activity the past year](https://img.shields.io/github/commit-activity/y/BSData/age-of-sigmar-4th.svg?style=flat-square)](https://github.com/BSData/age-of-sigmar-4th/pulse/monthly)
-
-[![Chat on Discord](https://img.shields.io/discord/558412685981777922.svg?logo=discord&style=popout-square)](https://www.bsdata.net/discord)
-
 ## Overview ##
 
 __How do I load this in Battlescribe?__
