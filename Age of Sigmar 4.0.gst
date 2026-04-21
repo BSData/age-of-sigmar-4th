@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="89" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="90" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -27,9 +27,27 @@
         <characteristicType id="aa17-4296-2887-e05d" name="Atk"/>
         <characteristicType id="194d-aeb6-5ba7-83b4" name="Hit"/>
         <characteristicType id="d3d5-9dc6-13de-8d1" name="Wnd"/>
-        <characteristicType id="d03f-a9ae-3eec-755" name="Rnd"/>
-        <characteristicType id="96c2-d0a5-ea1e-653b" name="Dmg"/>
-        <characteristicType id="d793-3dd7-9c13-741e" name="Ability"/>
+        <characteristicType id="d03f-a9ae-3eec-755" name="Rnd">
+          <formatRules>
+            <formatRule name="New Format Rule" id="c128-247d-5a90-1d39" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
+        <characteristicType id="96c2-d0a5-ea1e-653b" name="Dmg">
+          <formatRules>
+            <formatRule name="New Format Rule" id="5887-0115-d1e1-2e8c" hidden="false" type="regex" match="^\+0$" replace="">
+              <comment>+0 → (empty)</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
+        <characteristicType id="d793-3dd7-9c13-741e" name="Ability">
+          <formatRules>
+            <formatRule name="New Format Rule" id="dfe6-bf7b-2965-30a0" hidden="false" type="regex" match="^$" replace="-">
+              <comment>Empty → -</comment>
+            </formatRule>
+          </formatRules>
+        </characteristicType>
       </characteristicTypes>
     </profileType>
     <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5">
