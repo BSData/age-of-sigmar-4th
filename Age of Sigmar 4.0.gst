@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="90" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="91" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -36,7 +36,7 @@
         </characteristicType>
         <characteristicType id="96c2-d0a5-ea1e-653b" name="Dmg">
           <formatRules>
-            <formatRule name="New Format Rule" id="5887-0115-d1e1-2e8c" hidden="false" type="regex" match="^\+0$" replace="">
+            <formatRule name="New Format Rule" id="5887-0115-d1e1-2e8c" hidden="false" type="regex" match="^\+0$">
               <comment>+0 → (empty)</comment>
             </formatRule>
           </formatRules>
@@ -6937,11 +6937,7 @@
             <modifier type="set" value="false" field="hidden"/>
           </modifiers>
         </forceEntryLink>
-        <forceEntryLink name="Regiment of Ghyran" id="24a4-4645-fcf7-6e39" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden"/>
-          </modifiers>
-        </forceEntryLink>
+        <forceEntryLink name="Regiment of Ghyran" id="24a4-4645-fcf7-6e39" hidden="false" targetId="1d4a-95bf-25a6-549c" type="forceEntry"/>
         <forceEntryLink name="The Pustules" id="4c61-18e6-24c1-29d4" hidden="false" targetId="a88b-8da0-2e5e-a398" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden"/>
