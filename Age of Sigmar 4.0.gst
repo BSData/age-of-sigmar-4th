@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="91" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="92" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -398,6 +398,8 @@
     <categoryEntry name="REVENANT" id="426b-9a95-d724-377b" hidden="false"/>
     <categoryEntry name="STRIKE-FIRST" id="071f-979b-07cc-51fc" hidden="false"/>
     <categoryEntry name="MELUSAI" id="3eb7-2bf1-e276-8ad5" hidden="false"/>
+    <categoryEntry name="SIGMARITE" id="ae9e-dd18-4bdb-ffe9" hidden="false"/>
+    <categoryEntry name="MUSICIAN (1/2)" id="5145-d9c8-fcfd-28c3" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
@@ -9203,6 +9205,16 @@
             <condition type="atLeast" value="1" field="selections" scope="self" childId="a56b-952e-ad15-7868" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="increment" value="1" field="31ea-619f-f792-f8cc">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true" childName="Freeguild Command Corps Auxiliaries"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" value="1" field="31ea-619f-f792-f8cc">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true" childName="Freeguild Command Corps Whisperblade"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="6071-f472-eb91-659a"/>
@@ -13584,7 +13596,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
   <publications>
     <publication name="Core Rules" id="1297-79e6-1009-53df" hidden="false"/>
     <publication name="Battletome: Flesh-eater Courts" id="6281-1a88-8f4-946" hidden="false"/>
-    <publication name="Faction Pack: Cities of Sigmar" id="a746-732d-1a22-460" hidden="false"/>
+    <publication name="Battletome: Cities of Sigmar" id="a746-732d-1a22-460" hidden="false"/>
     <publication name="Battletome: Daughters of Khaine" id="df1f-ba81-775f-acfd" hidden="false"/>
     <publication name="Battletome: Disciples of Tzeentch" id="72d2-ae0-e519-f2f7" hidden="false"/>
     <publication name="Battletome: Blades of Khorne" id="81a9-3dbf-dbc5-672e" hidden="false"/>
@@ -13633,6 +13645,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 521" id="9082-4798-2e31-dab8" hidden="false"/>
     <publication name="White Dwarf Issue 522" id="d979-992f-19fa-7e9d" hidden="false"/>
     <publication name="Battletome Supplement: Skaven Eshin" id="2a78-9788-7ea8-cd74" hidden="false"/>
+    <publication name="Battletome Supplement: Cities of Sigmar" id="7454-bbda-d2b6-0747" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
