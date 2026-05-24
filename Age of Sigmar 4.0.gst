@@ -14043,6 +14043,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="White Dwarf Issue 522" id="d979-992f-19fa-7e9d" hidden="false"/>
     <publication name="Battletome Supplement: Skaven Eshin" id="2a78-9788-7ea8-cd74" hidden="false"/>
     <publication name="Battletome Supplement: Cities of Sigmar" id="7454-bbda-d2b6-0747" hidden="false"/>
+    <publication name="White Dwarf Issue 524" id="712d-a907-b456-e511" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
