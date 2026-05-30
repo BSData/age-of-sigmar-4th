@@ -115,7 +115,8 @@
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time you perform a blood rite, immediately after the ability that destroyed a unit has been resolved, pick 1 of the following effects:
 • Until the start of your next turn, this unit is only visible to enemy units while those units are within its combat range.
 • **Heal (D6)** this unit or a friendly **Shadow Queen**.
-• A friendly **Shadow Queen** can immediately use the &apos;Normal Move&apos; or &apos;Retreat&apos; ability as if it was your movement phase.
+• A friendly **Shadow Queen** can immediately use the &apos;Normal Move&apos; or &apos;Retreat&apos; ability as if it was your movement phase even if it has already used that ability or another **^^Core^^** ability this phase.
+**Designer’s Note:** *If the Shadow Queen retreats with the &apos;Iron Heart of Khaine&apos; ability, she cannot subsequently use the &apos;Fight&apos; ability in the same combat phase.*
 • Remove this unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.
 • For the rest of the turn, set this unit&apos;s Control characteristic to 5 and a friendly **Shadow Queen**&apos;s Control characteristic to 15.</characteristic>
           </characteristics>
@@ -545,10 +546,13 @@ This unit&apos;s combat attacks that target a **constricted** enemy unit score
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Ironscale&apos;s Fury" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="0abd-128d-c3c6-bd17">
+        <profile name="Ironscale&apos;s Fury" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="0abd-128d-c3c6-bd17">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e">^^**Exalted**^^</characteristic>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in a friendly non-**^^Hero Daughters of Khaine^^** unit is slain by a combat attack, if that friendly unit is within this unit&apos;s combat range and that model was in combat with the attacking unit, roll a dice. If that friendly unit is a **Blood Sisters** or a **Blood Stalkers** unit, roll 2 dice instead. For each 5+, inflict 1 mortal damage on the attacking unit after the **^^Fight^^** ability has been resolved.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each friendly **^^Daughters of Khaine^^** unit within this unit’s combat range to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the phase, each time a model in a target unit is slain by a combat attack, roll a dice. If that unit is a **Blood Sisters** or **Blood Stalkers** unit, roll 2 dice instead. For each 5+, inflict 1 mortal damage on the attacking unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">^^**Exalted**^^</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
@@ -4025,7 +4029,8 @@ Cover, Impassable**</description>
                   <rules>
                     <rule name="Champion of the Arena" id="010a-1b9c-e4f4-eb28" hidden="true">
                       <description>Your hero has the &apos;Peerless Agility&apos; ability and the following regiment options:
-Any **^^Daughters of Khaine^^** units</description>
+Any **^^Daughters of Khaine^^** units
+Your hero has the **^^Aelf^^** keyword.</description>
                     </rule>
                   </rules>
                   <profiles>
@@ -4041,6 +4046,9 @@ Any **^^Daughters of Khaine^^** units</description>
                       </attributes>
                     </profile>
                   </profiles>
+                  <modifiers>
+                    <modifier type="add" value="5ef2-db09-d3cc-4b27" field="category" scope="root-entry" affects="self.entries.recursive"/>
+                  </modifiers>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Priestess of Khaine" hidden="false" id="22dc-880d-2069-bc59" sortIndex="2">
                   <costs>
@@ -4055,11 +4063,13 @@ Any **^^Daughters of Khaine^^** units</description>
                         <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="af4d-f872-a710-6236" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="add" value="5ef2-db09-d3cc-4b27" field="category" scope="root-entry" affects="self.entries.recursive"/>
                   </modifiers>
                   <rules>
                     <rule name="Priestess of Khaine" id="183c-bcc3-6eae-676b" hidden="true">
                       <description>Your hero gains the **^^Priest (1)^^** keyword and the following regiment options:
-Any **^^Daughters of Khaine^^** units</description>
+Any **^^Daughters of Khaine^^** units
+Your hero has the **^^Aelf^^** keyword.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -5419,14 +5429,14 @@ In addition, make the following changes to your hero&apos;s warscroll:
                   <profiles>
                     <profile name="A Thousand Cuts" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad8c-10dc-9815-18b5">
                       <characteristics>
-                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Passive [GW typo]</characteristic>
+                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
                         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Monster^^** in combat with this unit to be the target.</characteristic>
                         <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll and the target cannot use **^^Rampage^^** abilities for the rest of the turn.</characteristic>
                         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                       </characteristics>
                       <attributes>
-                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+                        <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
                         <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                         <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                       </attributes>
