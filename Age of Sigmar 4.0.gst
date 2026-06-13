@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="93" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="94" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -9315,14 +9315,14 @@
           </conditions>
         </modifier>
         <modifier type="increment" value="1" field="31ea-619f-f792-f8cc">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true" childName="Freeguild Command Corps Auxiliaries"/>
-          </repeats>
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="self" childId="6c35-5d85-17e7-7800" shared="true" childName="Freeguild Command Corps Auxiliaries"/>
+          </conditions>
         </modifier>
         <modifier type="increment" value="1" field="31ea-619f-f792-f8cc">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true" childName="Freeguild Command Corps Whisperblade"/>
-          </repeats>
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="self" childId="a8a0-8b9e-2108-e7d1" shared="true" childName="Freeguild Command Corps Whisperblade"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
