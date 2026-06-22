@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Hedonites of Slaanesh - Library" id="253b-dcd3-c7aa-eab" targetId="34e0-2290-e185-efd2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fbec-3fce-0906-d052" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -8,17 +8,16 @@
     <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="3bab-a19c-06e1-ff52" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
   </catalogueLinks>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Battle Traits: Hedonites of Slaanesh" hidden="false" id="77b8-2e38-40f0-4472">
+    <selectionEntry type="upgrade" import="true" name="Battle Traits" hidden="false" id="77b8-2e38-40f0-4472">
       <profiles>
-        <profile name="An Excess of Depravity" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5e45-93e3-812-ec14" publicationId="95fc-e96f-a916-bba1">
+        <profile name="Paragons Of Slaanesh" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="af6b-eaf5-fd60-e7a7" publicationId="95fc-e96f-a916-bba1">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round (Army), Start of Battle Round</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Hedonites of Slaanesh^^** units to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The targets have the **^^Euphoric^^** keyword for the rest of the battle round.
-In addition, for each friendly unit you pick, give your opponent 1 **temptation dice**. During this battle round,
-instead of making a wound roll, save roll, ward roll or run roll, your opponent can use 1 temptation dice to replace the roll they would have made with a 6, or instead of making a charge roll they can use 2 temptation dice to replace 2 of the dice in a charge roll with two 6s (other dice could then be rolled normally). Rolls that have been replaced count as unmodified rolls and cannot be re-rolled. You cannot use temptation dice to replace a re-roll.
-Each time your opponent uses a **temptation dice**, they must roll it. On a 1-2, your opponent’s roll is replaced by that value instead of a 6, and you must allocate D3 damage points to the unit for which the roll was replaced immediately after the ability used by that unit has been resolved (ward rolls cannot be made for those damage points).
-At the end of the battle round, any temptation dice that have not been used are lost.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Start of Your Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If there are fewer than 3 friendly **^^Paragons^^** on the battlefield, pick a friendly **^^Hedonites of Slaanesh^^** unit that does not have the **^^Paragon^^** keyword and has not had the **^^Paragon^^** keyword this battle to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target gains the **^^Paragon^^** keyword.
+
+
+**Designer&apos;s Note**: *Friendly units with the* **^^Paragon^^** *keyword on their warscroll count towards the number of friendly* **^^Paragons^^** *on the battlefield. If there are more than 3 friendly* **^^Paragons^^** *on the battlefield at the same time, you must immediately remove those units from the battlefield one at a time until there are only 3 friendly* **^^Paragons^^** *left on the battlefield.*</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -28,20 +27,121 @@ At the end of the battle round, any temptation dice that have not been used ar
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Euphoric Killers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="f71a-320b-cc60-c9ff" publicationId="95fc-e96f-a916-bba1">
+        <profile name="Fall From Grace" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4c49-c1fa-646a-6b88" publicationId="95fc-e96f-a916-bba1">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly unit has the **^^Euphoric^^** keyword:
-• That unit’s weapons, including **Companion** weapons, have **Crit (2 Hits)**.
-• That unit can use a **^^Run^^** ability and still use **^^Shoot^^** and/or **^^Charge^^** abilities later in the turn.
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">A friendly non-**^^Unique Paragon^^** immediately loses the **^^Paragon^^** keyword when any of the following happen:
 
-
-**Designer’s Note:** ***Note that ‘Sadistic Spite’ does not affect **Companion** weapons.***</characteristic>
+• That **^^Paragon^^** has 3 or more damage points allocated to it by the same use of a non-**^^Attack^^** ability.
+• That **^^Paragon^^** uses a **^^Charge^^** ability and the unmodified charge roll is 5 or less (after any re-rolls).
+• A spell cast by that **^^Paragon^^** is **miscast** (after any re-rolls). </characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
             <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Sensuous Arcana" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ae84-02bd-9934-bfd7" publicationId="95fc-e96f-a916-bba1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Paragon^^** that has successfully cast a spell this turn and has not used a **^^Temptation^^** ability this turn to use this ability.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn, while the unit using this ability is a **^^Paragon^^**, add 1 to casting rolls for visible friendly **^^Hedonites of Slaanesh^^** units while they are wholly within 12&quot; of the unit using this ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">Temptation</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Excess Of Agility" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="39b4-854c-9c7a-e1b2" publicationId="95fc-e96f-a916-bba1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Paragon^^** that has not use a **^^Temptation^^** ability this turn to use this ability. </characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, while the unit using this ability is a **^^Paragon^^** and is in combat, subtract 1 from hit rolls for attacks that target visible friendly **^^Hedonites of Slaanesh^^** units while they are wholly within 12&quot; of the unit using this ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">Temptation</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Enthralling Vanity" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="05f7-ba73-4ff6-5228" publicationId="95fc-e96f-a916-bba1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hedonites of Slaanesh Hero^^** unit that has not used a **^^Temptation^^** ability this turn to use this ability. Then, pick a visible enemy unit within 12&quot; of that **^^Hero^^** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the unit using this ability is a **^^Paragon^^** pick 1 of the effects below. Otherwise your opponent must pick 1 of the effects below.
+
+
+***Mesmerized:*** For the rest of the turn, weapons used by friendly **^^Hedonites of Slaanesh^^** units for attacks that target that unit, including **Companion** weapons, have **Crit (2 Hits)**.
+
+
+***Break their Gaze***: For the rest of the turn, other than the **Companion** ability, weapon abilities for combat attacks made by the target have no effect.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">Temptation</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Beguiling Glance" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="78f4-6a83-e019-a0e9" publicationId="95fc-e96f-a916-bba1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hedonites of Slaanesh Hero^^** unit that has not used a **^^Temptation^^** ability this turn to use this ability. Then, pick a visible enemy unit within 12&quot; of that **^^Hero^^** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the unit using this ability is a **^^Paragon^^**, pick 1 of the effects below. Otherwise, your opponent must pick 1 of the effects below.
+
+
+***Succumb:*** For the rest of the turn, when the target is using a **^^Charge^^** ability, it must end that charge move no further from the **^^Hero^^** using this ability.
+
+
+***Resist:*** For the rest of the turn, subtract 2 from charge rolls for the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">Temptation</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Chief Of Revels" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e5c9-7f2e-fcd5-baf5" publicationId="95fc-e96f-a916-bba1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Paragon^^** that charged this turn and has not used a **^^Temptation^^** ability this turn to use this ability.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn, while that unit using this ability is a **^^Paragon^^**, add 2 to charge rolls for friendly **^^Hedonites of Slaanesh^^** units while hey are wholly within 12&quot; of the uni using his ability.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">Temptation</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Cutting Barbs" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3c8d-6cc1-bda2-0dfe" publicationId="95fc-e96f-a916-bba1">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hedonites of Slaanesh Hero^^** that has not use a **^^Temptation^^** ability this turn to use this ability. Then, pick an enemy unit in combat with that **^^Hero^^** to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the unit using this ability is a **^^Paragon^^**, pick 1 of the effects below. Otherwise,  your opponent must pick 1 of the effects below.
+
+
+***Rise to the Insults:*** For the rest of the turn, the target has a maximum control score of 1.
+
+
+***Turn Aside from the Insults:*** For the rest of the turn, add 1 to the hit rolls for attacks made by friendly **^^Hedonites of Slaanesh^^** units that target that enemy unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">Temptation</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
@@ -55,20 +155,17 @@ At the end of the battle round, any temptation dice that have not been used ar
       <selectionEntryGroups>
         <selectionEntryGroup name="Coveted Treasures" id="c782-bf56-82c4-458e" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Icon of Infinite Excess" hidden="false" id="4d93-cffa-3772-3bc" publicationId="95fc-e96f-a916-bba1">
+            <selectionEntry type="upgrade" import="true" name="Bashful Visage" hidden="false" id="81c4-3e8a-e7ac-5413" publicationId="95fc-e96f-a916-bba1">
               <profiles>
-                <profile name="Icon of Infinite Excess" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4838-b034-28ab-378b">
+                <profile name="Bashful Visage" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4838-b034-28ab-378b">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a non-**^^Hero Hedonites of Slaanesh^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While they are wholly within 6&quot; of this unit, friendly non-**^^Monster^^** non-**^^War Machine Hedonites of Slaanesh^^** units are not visible to enemy units more than 12&quot; from them.</characteristic>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -76,66 +173,46 @@ At the end of the battle round, any temptation dice that have not been used ar
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="35b7-c906-49df-edd3" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Pendant of Slaanesh" hidden="false" id="f321-ad71-d2c6-457e" publicationId="95fc-e96f-a916-bba1">
+            <selectionEntry type="upgrade" import="true" name="The Rod Of Misrule" hidden="false" id="8b0b-791a-7873-1a61" publicationId="95fc-e96f-a916-bba1">
               <profiles>
-                <profile name="Pendant of Slaanesh" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8f5f-aeb-b615-1cfa">
+                <profile name="The Rod Of Misrule" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1e95-1a75-154b-6d17">
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If any damage points were allocated to this unit this turn, **Heal (3)** this unit.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick another visible friendly **^^Hedonites of Slaanesh^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, when the target uses the &apos;Power Through&apos; command, you can pick an enemy target for that command that does not have a lower Health characteristic than the unit using that command.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
-                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5575-472b-472a-ffcf" includeChildSelections="true"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
-                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
-                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="0" field="points">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Threnody Voicebox" hidden="false" id="8b0b-791a-7873-1a61" publicationId="95fc-e96f-a916-bba1">
-              <profiles>
-                <profile name="Threnody Voicebox" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1e95-1a75-154b-6d17">
-                  <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, subtract 1 from the Attacks characteristic of melee weapons used by enemy units while they are in combat with this unit.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-                  </characteristics>
-                  <attributes>
-                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
                     <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                   </attributes>
                 </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="53c8-d59c-5a97-eeeb" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crown Of The Ur-Slaanesh" hidden="false" id="a0a8-9c52-81cd-2b80" publicationId="95fc-e96f-a916-bba1">
+              <profiles>
+                <profile name="Crown Of The Ur-Slaanesh" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="71a3-a1a5-e731-5c1c">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Battle, Your Movement Pphase</characteristic>
+                    <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+                    <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly non-**^^Hero Infantry Hedonites of Slaanesh^^** unit that has been destroyed to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12&quot; of this unit and more than 9&quot; from all enemy units.</characteristic>
+                    <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Black</attribute>
+                    <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Rally</attribute>
+                    <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d7f9-b3fd-cd11-9743" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -162,35 +239,38 @@ At the end of the battle round, any temptation dice that have not been used ar
         <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="85ba-067c-dda1-5178"/>
       </constraints>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Battle Formations: Hedonites of Slaanesh" id="22cc-a0d6-614c-3468" hidden="false" flatten="true">
+    <selectionEntryGroup name="Battle Formations" id="22cc-a0d6-614c-3468" hidden="false" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Depraved Carnival" hidden="false" id="c895-e297-46ec-513f" publicationId="95fc-e96f-a916-bba1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c03-e746-b6de-e7dc"/>
           </constraints>
           <profiles>
-            <profile name="The Ecstatic Throngs" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a6fd-bf86-e9ee-7dab">
+            <profile name="In Search Of Sin" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8eb3-9739-9570-cf1f">
               <characteristics>
-                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls for friendly **^^Sybarite Infantry^^** units while they are damaged or if they had any models slain in the same turn.</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 friendly **^^Hedonites of Slaanesh Infantry^^** units to be the targets.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Each target can move D6&quot;. It can only end that move in combat with units it was in combat with at the start of the move.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-                <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-                <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Seeker Cavalcade" hidden="false" id="56b6-867a-f5b6-7d94" publicationId="95fc-e96f-a916-bba1">
+        <selectionEntry type="upgrade" import="true" name="Godseeker Cavalcade" hidden="false" id="f70b-f6ba-d858-22b7" publicationId="95fc-e96f-a916-bba1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19a8-8353-c97a-3f00"/>
           </constraints>
           <profiles>
-            <profile name="Reckless Haste" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="51fe-fc34-203e-442">
+            <profile name="Godly Spoor" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3eca-92ef-f98a-5013">
               <characteristics>
                 <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Hedonites of Slaanesh Cavalry^^** units can use a **^^Retreat^^** ability and still use **^^Charge^^** abilities later in the turn. In addition, no mortal damage is inflicted on **^^Hedonites of Slaanesh Cavalry^^** units by **^^Retreat^^** abilities.</characteristic>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While they are wholly within 9&quot; of a battlefield edge, friendly **^^Hedonites of Slaanesh^^** units can use **^^Charge^^** abilities even if they used a **^^Run^^** ability in the same turn.</characteristic>
               </characteristics>
               <attributes>
                 <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -200,38 +280,46 @@ At the end of the battle round, any temptation dice that have not been used ar
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Epicurean Revellers" hidden="false" id="68a0-a6a9-1040-cf34" publicationId="95fc-e96f-a916-bba1">
+        <selectionEntry type="upgrade" import="true" name="Artisans Of Torment" hidden="false" id="e170-091c-c496-4b11" publicationId="95fc-e96f-a916-bba1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81ba-548-f11a-7248"/>
           </constraints>
           <profiles>
-            <profile name="Exquisite Palate" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5cd3-21bd-c314-1642">
+            <profile name="Sadistic Tendencies" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="3879-87c9-a645-5bcd">
               <characteristics>
-                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly non-**^^Hero Hedonites of Slaanesh Daemon^^** uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.</characteristic>
+                <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Your Combat Phase</characteristic>
+                <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+                <characteristic name="Declare" typeId="b77f-7548-840e-c086">Pick a friendly **^^Hedonites of Slaanesh^^** unit to use this ability, then pick an enemy unit in combat with that unit and that had any damage points allocated to it this turn to be the target.</characteristic>
+                <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">For the rest of the turn:
+• All of the combat attacks made by that friendly unit must target that enemy unit.
+• Add 1 to the Attacks characteristic of that friendly unit&apos;s melee weapons.</characteristic>
+                <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
               </characteristics>
               <attributes>
-                <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
-                <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Rallying</attribute>
-                <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
               </attributes>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Supreme Sybarites" hidden="false" id="6f63-45c7-28bd-68fd" publicationId="95fc-e96f-a916-bba1">
+        <selectionEntry type="upgrade" import="true" name="Lurid Dreamers" hidden="false" id="7641-d42e-8050-e611" publicationId="95fc-e96f-a916-bba1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bdba-ba0a-8571-f3fa"/>
           </constraints>
           <profiles>
-            <profile name="Godly Ambitions" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="896c-7f7b-defc-587b">
+            <profile name="Amidst The Phantasmagoria" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bcb9-3cda-ff52-908b">
               <characteristics>
-                <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 3 to the control scores of friendly non-**^^Hero Hedonites of Slaanesh^^** units while they are within the combat ranges of any friendly **^^Hedonites of Slaanesh Heroes^^**.</characteristic>
+                <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Shooting Phase</characteristic>
+                <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hedonites of Slaanesh^^** unit that had any damage points allocated to it this turn by an enemy ability to be the target.</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove the target from the battlefield, then set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+                <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
               <attributes>
-                <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
-                <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Control</attribute>
-                <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+                <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
               </attributes>
             </profile>
           </profiles>
@@ -325,19 +413,22 @@ At the end of the battle round, any temptation dice that have not been used ar
     </selectionEntryGroup>
     <selectionEntryGroup name="Heroic Traits" id="c061-56e0-f2c0-af3e" hidden="false">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Figureheads of the Dark Prince" id="d339-c30e-fdae-edef" hidden="false">
+        <selectionEntryGroup name="The Dark Prince&apos;s Beloved" id="224b-2ac6-a2d9-0d81" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Strongest Alone" hidden="false" id="e233-e686-52f-d61e" publicationId="95fc-e96f-a916-bba1">
+            <selectionEntry type="upgrade" import="true" name="Unseemly Vitality" hidden="false" id="d49d-5768-8196-d93c" publicationId="95fc-e96f-a916-bba1">
               <profiles>
-                <profile name="Strongest Alone" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="c834-2adb-2878-b102">
+                <profile name="Unseemly Vitality" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="085c-1dcd-d051-1f14">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to hit rolls and wound rolls for this unit’s attacks while it is more than 6&quot; from all other friendly units.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">**Heal (D3)** this unit.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -345,17 +436,24 @@ At the end of the battle round, any temptation dice that have not been used ar
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b20c-5c4-9647-99f" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Glory Hog" hidden="false" id="7396-d029-dcc2-fac4" publicationId="95fc-e96f-a916-bba1">
+            <selectionEntry type="upgrade" import="true" name="Centre Of Attention" hidden="false" id="1cc1-51fe-a5bb-24a3" publicationId="95fc-e96f-a916-bba1">
               <profiles>
-                <profile name="Glory Hog" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6b86-d4a3-1cc4-4edb">
+                <profile name="Centre Of Attention" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5482-1341-b967-fbc2">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If an enemy **^^Hero^^** is destroyed by this unit, this unit has the **^^Euphoric^^** keyword for the rest of the battle.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 12&quot; of this unit to be the target.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, for the rest of the turn, while this unit is wholly within 12&quot; of the centre of the battlefield and visible to the target:
+
+
+--- Subtract 1 from hit rolls for attacks made by that enemy unit that target other friendly **^^Hedonites of Slaanesh^^** units.
+--- Add 1 to hit rolls for combat attacks made by other friendly **^^Hedonites of Slaanesh^^** units that target that enemy unit.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
-                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
                   </attributes>
                 </profile>
               </profiles>
@@ -363,16 +461,19 @@ At the end of the battle round, any temptation dice that have not been used ar
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="84f9-a7d7-4d4c-1fd5" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Into the Fray" hidden="false" id="6332-3846-cea0-858" publicationId="95fc-e96f-a916-bba1">
+            <selectionEntry type="upgrade" import="true" name="Dilettante" hidden="false" id="b64a-4c09-cfc8-fac5" publicationId="95fc-e96f-a916-bba1">
               <profiles>
-                <profile name="Into the Fray" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7344-d235-48ec-c0c8">
+                <profile name="Dilettante" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7344-d235-48ec-c0c8">
                   <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit charged this turn and the unmodified charge roll was 8+, this unit has Strike-first for the rest of the turn.</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Movement Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again on the battlefield more than 9&quot; from all enemy units.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
                   <attributes>
-                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
                     <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
                   </attributes>
                 </profile>
