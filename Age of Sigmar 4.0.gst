@@ -27,27 +27,9 @@
         <characteristicType id="aa17-4296-2887-e05d" name="Atk"/>
         <characteristicType id="194d-aeb6-5ba7-83b4" name="Hit"/>
         <characteristicType id="d3d5-9dc6-13de-8d1" name="Wnd"/>
-        <characteristicType id="d03f-a9ae-3eec-755" name="Rnd">
-          <formatRules>
-            <formatRule name="New Format Rule" id="c128-247d-5a90-1d39" hidden="false" type="regex" match="^$" replace="-">
-              <comment>Empty → -</comment>
-            </formatRule>
-          </formatRules>
-        </characteristicType>
-        <characteristicType id="96c2-d0a5-ea1e-653b" name="Dmg">
-          <formatRules>
-            <formatRule name="New Format Rule" id="5887-0115-d1e1-2e8c" hidden="false" type="regex" match="^\+0$">
-              <comment>+0 → (empty)</comment>
-            </formatRule>
-          </formatRules>
-        </characteristicType>
-        <characteristicType id="d793-3dd7-9c13-741e" name="Ability">
-          <formatRules>
-            <formatRule name="New Format Rule" id="dfe6-bf7b-2965-30a0" hidden="false" type="regex" match="^$" replace="-">
-              <comment>Empty → -</comment>
-            </formatRule>
-          </formatRules>
-        </characteristicType>
+        <characteristicType id="d03f-a9ae-3eec-755" name="Rnd"/>
+        <characteristicType id="96c2-d0a5-ea1e-653b" name="Dmg"/>
+        <characteristicType id="d793-3dd7-9c13-741e" name="Ability"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Ability (Passive)" hidden="false" id="907f-a48-6a04-f788" sortIndex="5">
@@ -1030,14 +1012,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1576,14 +1558,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2288,14 +2270,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
@@ -2840,14 +2822,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3895,14 +3877,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4429,14 +4411,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -5604,14 +5586,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6150,14 +6132,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -9317,12 +9299,12 @@
         </modifier>
         <modifier type="increment" value="1" field="31ea-619f-f792-f8cc">
           <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="self" childId="6c35-5d85-17e7-7800" shared="true" childName="Freeguild Command Corps Auxiliaries"/>
+            <condition type="equalTo" value="1" field="selections" scope="self" childId="6c35-5d85-17e7-7800" shared="true"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="1" field="31ea-619f-f792-f8cc">
           <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="self" childId="a8a0-8b9e-2108-e7d1" shared="true" childName="Freeguild Command Corps Whisperblade"/>
+            <condition type="equalTo" value="1" field="selections" scope="self" childId="a8a0-8b9e-2108-e7d1" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -10760,14 +10742,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -11294,14 +11276,14 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true" childName="Cities of Sigmar - Allies of the Free Cities"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5201-f4ef-5e24-cbd1" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5201-f4ef-5e24-cbd1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -12204,6 +12186,90 @@
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="400"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Mist-Clad Revellers" id="bb82-173a-f3b3-d48c" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="3c7a-dabb-3b46-5e6e" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="7fd7-02a6-309f-d832" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="358f-0165-e10c-c388" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="28eb-96c6-fb54-e9d7" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="4274-45f2-dffd-cdae" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="4389-0615-d90e-22b2" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="ffee-0ad1-d25e-4454" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c109-74e4-8b4a-0b6f"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="The Accursed Reflection" id="0f99-b3d1-0f32-cb6d" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d731-9058-b0e5-6ff5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5079-92b5-4879-69f8" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="c6fd-af06-e481-8b42" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" hidden="false" id="71da-0eae-9c4a-db48" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" hidden="false" id="20e8-1d9b-8226-ee14" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" hidden="false" id="8732-7bd6-9280-9a12" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" hidden="false" id="61ca-e71c-464f-1be8" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" hidden="false" id="fda9-a3c2-9303-9b96" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" hidden="false" id="74c2-3dd4-b153-4dec" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7a0c-86c1-c3a9-6839"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
