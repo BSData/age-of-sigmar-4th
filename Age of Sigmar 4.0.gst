@@ -400,6 +400,7 @@
     <categoryEntry name="MELUSAI" id="3eb7-2bf1-e276-8ad5" hidden="false"/>
     <categoryEntry name="SIGMARITE" id="ae9e-dd18-4bdb-ffe9" hidden="false"/>
     <categoryEntry name="MUSICIAN (1/2)" id="5145-d9c8-fcfd-28c3" hidden="false"/>
+    <categoryEntry name="PARAGON" id="6682-0010-2bd3-dc9d" hidden="false" publicationId="95fc-e96f-a916-bba1"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="General&apos;s Handbook 2024-25" hidden="false" id="f079-501a-2738-6844" childForcesLabel="Regiments and Auxiliary" sortIndex="3">
