@@ -1039,6 +1039,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1583,6 +1595,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2303,6 +2327,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7dbe-5372-591a-6c7e" shared="true"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -2847,6 +2883,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -3904,6 +3952,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -4436,6 +4496,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -5613,6 +5685,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -6157,6 +6241,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -10769,6 +10865,18 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -11301,6 +11409,18 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f76-e1bd-5241-3f4e" shared="true" childName="Cities of Sigmar - The Iron March"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -14045,6 +14165,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome Supplement: Skaven Eshin" id="2a78-9788-7ea8-cd74" hidden="false"/>
     <publication name="Battletome Supplement: Cities of Sigmar" id="7454-bbda-d2b6-0747" hidden="false"/>
     <publication name="White Dwarf Issue 524" id="712d-a907-b456-e511" hidden="false"/>
+    <publication name="White Dwarf Issue 525" id="dadd-06f0-3f38-c6f3" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">
@@ -14088,6 +14209,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="6cc-9eb2-c5b4-2877" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7acb-3141-6008-1c09" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="78e4-8918-6980-9d52" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="923c-bb61-f01a-7f32" shared="true" childName="Cities of Sigmar - Lethis [LEGENDS]"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
