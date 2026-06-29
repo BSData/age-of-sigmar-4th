@@ -272,7 +272,6 @@
     <categoryEntry name="WARRIORS OF CHAOS" id="e06-cc4d-8589-c273" hidden="false"/>
     <categoryEntry name="CITIES OF SIGMAR" id="4999-8ae2-e1bb-ba5" hidden="false"/>
     <categoryEntry name="DUARDIN" id="72e3-7b1b-cb94-4cbd" hidden="false"/>
-    <categoryEntry name="HUMAN" id="336b-e559-e958-a83" hidden="false"/>
     <categoryEntry name="STANDARD BEARER (1/6)" id="7002-4169-eb88-6e0" hidden="false"/>
     <categoryEntry name="BRUTE" id="2461-b51f-dc6-3114" hidden="false"/>
     <categoryEntry name="DESTRUCTION" id="9057-5a29-dda5-3c28" hidden="false"/>
@@ -15751,6 +15750,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome Supplement: Cities of Sigmar" id="7454-bbda-d2b6-0747" hidden="false"/>
     <publication name="White Dwarf Issue 524" id="712d-a907-b456-e511" hidden="false"/>
     <publication name="White Dwarf Issue 525" id="dadd-06f0-3f38-c6f3" hidden="false"/>
+    <publication name="Scourge of Aqshy" id="9e18-bb03-7b60-d4ff" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry type="upgrade" import="false" name="READ ME" hidden="false" id="eb00-fe05-1949-bed7" defaultAmount="1">

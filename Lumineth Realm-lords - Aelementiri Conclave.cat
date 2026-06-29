@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a0dd-008d-3908-dbe2" name="Lumineth Realm-lords - Aelementiri Conclave" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="80" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a0dd-008d-3908-dbe2" name="Lumineth Realm-lords - Aelementiri Conclave" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="80" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Aelementiri Conclave" hidden="false" id="3b24-0191-cc05-c16c" publicationId="9ed1-cf74-eb97-dee2">
       <profiles>
@@ -781,6 +781,58 @@ You can have a maximum of 6 of each type of rune in your **library**.</character
       </modifierGroups>
       <categoryLinks>
         <categoryLink name="AELEMENTIRI CONCLAVE" hidden="false" id="38b7-cd90-c2b9-a5ee" targetId="cab3-36a3-4dfd-908b" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Alarith Stonemage (Scourge of Aqshy)" hidden="false" id="43e9-6c51-e68e-a1eb" type="selectionEntry" targetId="a437-24d5-468c-7f1d">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="d034-5bbc-8058-3a19" type="selectionEntryGroup" targetId="e73f-aa2e-9185-d641"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="9f13-344a-b8cf-1a40" type="selectionEntryGroup" targetId="8c4b-d736-0d79-2fc1"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8e1b-0d60-3066-38fb" type="selectionEntryGroup" targetId="69d2-7b4b-7659-2cbb"/>
+        <entryLink import="true" name="Paths" hidden="false" id="9f3d-632d-7834-b3d7" type="selectionEntryGroup" targetId="e5ff-b9b2-cced-7482"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="ce1e-f248-f895-74bf" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="920e-afcc-98ad-106c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="1dcb-9811-b00d-daf7" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="130"/>
+      </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.af2a-8b41-2cec-8287"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.5458-8e15-1e45-badf"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.fc79-62e1-45e2-dedd"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink name="AELEMENTIRI CONCLAVE" hidden="false" id="a548-8f18-da6c-1455" targetId="cab3-36a3-4dfd-908b" primary="false"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>

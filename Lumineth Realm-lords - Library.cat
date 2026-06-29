@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f864-1661-71bb-41bb" name="Lumineth Realm-lords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="33" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f864-1661-71bb-41bb" name="Lumineth Realm-lords - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="34" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Vanari Starshard Ballista" hidden="false" id="ac41-4a7-88c5-9ab2" publicationId="9ed1-cf74-eb97-dee2">
       <categoryLinks>
@@ -1519,13 +1519,13 @@ If Ellathor leads, until the start of your next turn, add the current battle r
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Valorous Intervention" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad4-642e-e6f1-aa39">
+        <profile name="Valorous Intervention" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="ad4-642e-e6f1-aa39">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">This unit cannot use this ability if it is in combat. Pick a friendly **^^Lumineth Realm-lords^^** unit that is in combat to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove this unit from the battlefield and set it up again within 1&quot; of the target and in combat.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Any Combat Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086">This unit cannot use this ability if it is in combat. Pick a friendly **^^Lumineth Realm-lords^^** unit that is in combat to be the target.</characteristic>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">Remove this unit from the battlefield and set it up again within 1&quot; of the target and in combat. This unit has charged.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
@@ -2808,7 +2808,7 @@ Cover, Impassable**</description>
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
             <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While a friendly unit with a Health characteristic of 10 or less is wholly inside the ring formed by this **^^Manifestation^^**:
-• That unit is not visible to enemy units.
+• That unit is not visible to enemy units that are not within its combat range.
 • Enemy abilities that would target this unit must target this **^^Manifestation^^** instead.</characteristic>
           </characteristics>
           <attributes>
@@ -2914,7 +2914,6 @@ This **^^Manifestation^^** can have a maximum of 6 **arcane charge points**.</ch
         <categoryLink name="AELF" hidden="false" id="7d17-aa0a-26f7-e02f" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
         <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="fab4-0dcf-d03a-992c" targetId="879-a29f-5c33-2e92" primary="false"/>
         <categoryLink name="VANARI" hidden="false" id="3ccc-cf91-24ee-b17e" targetId="9958-c5c0-c246-8010" primary="false"/>
-        <categoryLink name="SCINARI" hidden="false" id="18fa-b939-f5d8-8007" targetId="939d-918a-37bb-8e84" primary="false"/>
         <categoryLink name="ALARITH" hidden="false" id="ccb1-9c19-62ef-7120" targetId="af2a-8b41-2cec-8287" primary="false"/>
       </categoryLinks>
       <profiles>
@@ -5288,6 +5287,527 @@ For the rest of the battle, while a visible friendly unit is wholly within 12&qu
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e726-d317-9bc1-875c" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Thyrielle&apos;s Zephyrites" hidden="false" id="6e66-e327-cb1e-1d63" publicationId="9dee-a6b2-4b42-bfee">
+      <categoryLinks>
+        <categoryLink name="ORDER" hidden="false" id="e746-2867-2538-120d" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="5971-dba1-152f-997f" targetId="75d6-6995-dfcc-3898" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="9afd-690b-c3b6-05d5" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="8539-aca9-e07d-edf7" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="Legends" hidden="false" id="89ef-40a8-378c-afec" targetId="acaf-8bb6-d6f-3e2a" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="d89b-d199-9bed-c6d8" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="4deb-0011-ee54-5ac7" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="HURAKAN" hidden="false" id="5236-828b-5032-d661" targetId="aa49-5f07-8920-b6f7" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Thyrielle&apos;s Zephyrites" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="819f-017f-7436-ac87">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">7&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">3</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Masters of the Zephyr" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7aed-2f34-7736-ff5a">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit’s **Tzul** is a token. After setting up this unit on the battlefield for the first time, place its **Tzul** next to it.
+• While this unit’s **Tzul** is next to it, it has **^^Fly^^**.
+• While this unit’s **Thyrielle** is on the battlefield, it has **^^Wizard (1)^^**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="One with the Wind" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7f0e-1612-ef0d-39c6">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Infantry^^** or **^^Cavalry^^** unit that this unit passed across this phase to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03"> Place this unit’s **Tzul** next to the target.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="The Living Gale" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c870-8a19-5527-46b7">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit with this unit’s Tzul next
+to it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Place this unit’s **Tzul** next to this unit.
+• You can move the target up to D3&quot;.
+• Then, if this unit is within 6&quot; of the target, you can move this unit up to D6&quot;. It cannot end that move in combat.
+Add 2&quot; to the distance each unit can move for each instance of **Oreali, Rune of the Wind** depicted on your battle scripture.
+**Designer’s Note:** *If your opponent would prefer to move their own models, pre-measure the distance and indicate where they should move their models to.*</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Orieth" hidden="false" id="8f0f-44ba-c003-799f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="730b-1e6f-32e8-095c"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd35-4d0b-47a2-923f"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Slipstream Bow" hidden="false" id="f00d-8cf9-8902-cbb5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a990-6f79-3153-7fc7"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e90-1692-b046-91bd"/>
+              </constraints>
+              <profiles>
+                <profile name="Slipstream Bow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="105d-483e-7041-d5dd">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Zephyrite Weapons" hidden="false" id="1ee2-0cdc-37b9-a3cc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a6b7-d7d9-aaf7-05ba"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5590-0c80-2f61-ea65"/>
+              </constraints>
+              <profiles>
+                <profile name="Zephyrite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0b51-961f-2dda-c5ce">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="8226-5746-22d1-84ad" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Sirikith" hidden="false" id="9af3-c7c6-9c96-1a26">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c72-3b30-9669-cc8c"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1552-5a80-1043-5b53"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Slipstream Bow" hidden="false" id="6819-8fe2-f163-3f78">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3744-3e7c-cee5-63f0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2482-0b5a-7902-74de"/>
+              </constraints>
+              <profiles>
+                <profile name="Slipstream Bow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="cfe0-1e48-4693-593d">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Zephyrite Weapons" hidden="false" id="876b-e042-3de2-024f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37e6-1647-5bf0-26f2"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c99b-afb8-b98e-2aff"/>
+              </constraints>
+              <profiles>
+                <profile name="Zephyrite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0d2a-6913-59c3-412a">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="8f0a-c81b-f187-2821" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Anara" hidden="false" id="13bb-430b-618e-a9ad">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32d5-f6b2-6cbd-42c8"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03a7-efd5-7fff-b07f"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Slipstream Bow" hidden="false" id="2316-0225-a83e-ce73">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa18-eb4d-0650-1b5a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4513-741f-09cc-5b85"/>
+              </constraints>
+              <profiles>
+                <profile name="Slipstream Bow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="20da-a638-5bc9-6f62">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">4+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">1</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Zephyrite Weapons" hidden="false" id="4b0d-7972-ea1a-5509">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a2c-61e5-f43a-106d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b6b-87fd-ca02-5ab6"/>
+              </constraints>
+              <profiles>
+                <profile name="Zephyrite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d943-4221-6be8-c997">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="678e-200a-a3fa-55a8" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Thyrielle" hidden="false" id="c76b-c1ae-31aa-8957">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6550-b667-771a-a34c"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="293c-5812-4e32-9047"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Windblast" hidden="false" id="b1ec-4a6b-1ab4-bf7f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84a2-ad90-9920-0756"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1b2-3e89-350d-fd9e"/>
+              </constraints>
+              <profiles>
+                <profile name="Windblast" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="fe44-df65-daa3-4577">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Zephyrite Weapons" hidden="false" id="3b24-ab38-489a-3066">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e884-8013-6d40-f015"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d454-0992-ecf8-2d64"/>
+              </constraints>
+              <profiles>
+                <profile name="Zephyrite Weapons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2a8b-0733-4c3e-d994">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="48cf-6abe-f646-c584" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78ec-6e19-750e-1835"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="d48c-6699-9c32-0064" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="aaa4-905e-4992-feca" shared="true" id="c4ac-6184-a451-f524" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="a41c-3182-a142-36f2" hidden="true">
+              <description>28.5mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7e59-2237-4890-a80a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e04c-6b8b-96cb-2930" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scinari Loreseeker (Scourge of Aqshy)" hidden="true" id="6c1c-46a5-96d3-3786" publicationId="9ed1-cf74-eb97-dee2">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="dd25-086f-4749-a132" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="b614-1716-7487-08b1" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="084f-8eff-dc4a-bb64" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="334a-8dae-bbc3-a88b" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="c7a3-0517-6af7-74bd" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="SCINARI" hidden="false" id="102f-b22b-21de-f169" targetId="939d-918a-37bb-8e84" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="9552-93c1-2ea4-64e1" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="5bbe-5a52-ef16-665c" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Scinari Loreseeker" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="d390-65fa-28a6-134d">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Arcane Nullification" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="92d3-dbc4-c430-6bdd">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy **^^Hero^^** within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is in combat with the target, the corresponding effect below applies until the start of your next turn. Otherwise, roll a dice. On a 3+, the corresponding effect below applies until the start of your next turn:
+***Holder of Forbidden Treasures*:** If the target has an artefact of power, that artefact of power has no effect.
+***An Insignificant Underling*:** If the target does not have an artefact of power, other than the **Companion** weapon ability, weapon abilities for the target’s combat attacks have no effect.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Grey</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Leashed Fury" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c7a9-83a3-a796-8d4c">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, for the rest of the turn:
+• Each time this unit is picked to use the ‘Eruption of Fury’ ability, if you spend 1 **rage dice** as part of that ability, it counts as 3 **rage dice**.
+• This unit can be picked to use the ‘Eruption of Fury’ ability even if you have already used it this turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Scinari Loreseeker" hidden="false" id="519d-e475-b711-7afd">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Eclipsian Staff" hidden="false" id="5b4f-47a8-e6a6-c878">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d60-aa0d-f80d-5bb1"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e27e-6fae-4487-da27"/>
+              </constraints>
+              <profiles>
+                <profile name="Eclipsian Staff" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="201b-6f1f-75ab-b50f">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Loreseeker Blade" hidden="false" id="8811-ed98-bcec-7036">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f941-f8e6-6257-eb3f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0351-5e28-8c7d-fd73"/>
+              </constraints>
+              <profiles>
+                <profile name="Loreseeker Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5ecf-548a-e158-d7d5">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb86-7bb2-2af5-6910"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9e2-b09e-371b-66e8"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="00ab-3ed3-17ec-1e41" hidden="true">
+              <description>32mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Aqshy variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5676-dd7c-77d3-2db1" shared="true" includeChildSelections="true" includeChildForces="true" childName="Scinari Loreseeker"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Alarith Stonemage (Scourge of Aqshy)" hidden="true" id="a437-24d5-468c-7f1d" publicationId="9ed1-cf74-eb97-dee2">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="8db6-dc17-eb9e-8e42" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="39b0-df4f-9276-aa36" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="AELF" hidden="false" id="87d9-d3ad-0e6f-ae47" targetId="5ef2-db09-d3cc-4b27" primary="false"/>
+        <categoryLink name="LUMINETH REALM-LORDS" hidden="false" id="c774-50d4-e86a-a27a" targetId="879-a29f-5c33-2e92" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="f649-16ac-defa-c640" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="2bd4-a7ee-470b-6f65" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="ALARITH" hidden="false" id="972f-5ad2-5ae3-34f5" targetId="af2a-8b41-2cec-8287" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="7138-9488-fed2-2333" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Alarith Stonemage" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="c1fe-72f8-78bf-981b">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Elemental Endurance" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9755-b38b-e72b-63e1">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit is picked to be a target of the ‘Depict Rune’ ability, for the rest of that battle round, when resolving the damage sequence for a friendly **^^Lumineth Realm-lords^^** unit while it is wholly within 12&quot; of this unit, if you spend rage dice as part of the ‘Fight Through the Pain’ ability, remove 1 damage point from that unit’s damage pool on a 2+ instead of a 3+.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Earth&apos;s Grip" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="4e29-54e9-a97d-deb1">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">7</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible enemy unit that has no more than 1 model
+and is within 18&quot; of this unit to be the target, then make a casting roll
+of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">For the rest of the battle, the target is **gripped** until this unit is destroyed, the target **breaks free** or you pick a different target for this spell.
+While the target is **gripped**, each time it uses a **^^Move^^** ability, your opponent must roll a dice as a reaction and add their **fury level** to the roll. On a 7+, the target breaks free. Otherwise, that **^^Move^^** ability has no effect.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Parent Node" typeId="da27-8d61-f955-5031"/>
+            <attribute name="Type" typeId="da27-8d61-f955-5031">Movement</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Alarith Stonemage" hidden="false" id="ba57-b058-24b2-bfc2">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Staff of the High Peaks" hidden="false" id="d885-69f3-10c1-8ad4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="daa4-bd13-5d95-7df6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36b2-dec9-df34-76ba"/>
+              </constraints>
+              <profiles>
+                <profile name="Staff of the High Peaks" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c3fa-00ab-906b-dfba">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="307c-01d7-8c01-5787"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b10-57b3-5b72-9306"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="3e06-7abf-e20c-54f8" hidden="true">
+              <description>40mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Aqshy variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="aef7-5484-24c8-afc4" shared="true" includeChildSelections="true" includeChildForces="true" childName="Alarith Stonemage"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
