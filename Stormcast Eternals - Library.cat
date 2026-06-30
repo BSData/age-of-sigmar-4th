@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="49" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="d96e-14f5-b8ae-ce7a" name="Stormcast Eternals - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="50" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Liberators" hidden="false" id="e914-877f-21fe-8db9" publicationId="43cd-e9ef-5d4d-87c4">
       <profiles>
@@ -12132,6 +12132,332 @@ In addition, make the following changes to your hero&apos;s warscroll:
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6845" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Stormstrike Palladors (Scourge of Aqshy)" hidden="true" id="222e-fa67-b4c0-cf61" publicationId="9e18-bb03-7b60-d4ff">
+      <profiles>
+        <profile name="Stormstrike Palladors" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="001b-0343-29f3-4c55">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lightning Quick" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="81ce-c5f6-9df6-5cc0">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">No mortal damage is inflicted on this unit by **^^Retreat^^** abilities.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Grey</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Shock Cavalry" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e829-bd5d-8274-8410">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit in combat with both of the following units to be the target:
+• This unit.
+• A friendly unit that did not charge this turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the Damage characteristic of this unit’s melee
+weapons for attacks that target that enemy unit for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="ORDER" hidden="false" id="463e-8301-12e6-6998" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="STORMCAST ETERNALS" hidden="false" id="7ad4-80e3-0527-0ade" targetId="a437-a8f0-67ba-c674" primary="false"/>
+        <categoryLink name="CAVALRY" hidden="false" id="3e46-d92c-5516-f458" targetId="926c-df8c-6841-d49e" primary="true"/>
+        <categoryLink name="CHAMPION" hidden="false" id="9aa0-6c77-f513-b1b5" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="WARRIOR CHAMBER" hidden="false" id="ae88-cace-616f-94a7" targetId="94a8-e786-4b45-1c16" primary="false"/>
+        <categoryLink name="MUSICIAN (1/3)" hidden="false" id="daf2-bed2-2273-0c80" targetId="6cae-9aa2-6245-ab11" primary="false"/>
+        <categoryLink name="STANDARD BEARER (1/3)" hidden="false" id="f546-89ae-88e8-5971" targetId="9072-b48-3dd7-2cbc" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="‎" id="4b45-acab-3ab3-4b99" hidden="false" typeId="1dd2-2af7-76a2-2423" value="0"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Stormstrike Pallador" hidden="false" id="8594-4ce7-9f58-7dd9" defaultAmount="1,1,1">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="a43e-03df-6975-677e"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="133c-b760-c7b4-a6b7"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="3" field="a43e-03df-6975-677e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="3" field="133c-b760-c7b4-a6b7">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Stormstrike Lance or Blade" hidden="false" id="cc44-b982-2097-9d11">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99ab-fb93-9595-6ddb"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78fd-1fcc-7b4a-cf44"/>
+              </constraints>
+              <profiles>
+                <profile name="Stormstrike Lance or Blade" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f307-92da-c365-8a19">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend), Charge (+1 Damage)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gryph-charger’s Talons" hidden="false" id="88e0-7284-efef-a8b1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c10c-3722-176c-2981"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9777-2219-7a07-952d"/>
+              </constraints>
+              <profiles>
+                <profile name="Gryph-charger’s Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5a4d-d2f1-3169-14fd">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Command Models" id="2156-c3d9-1cd0-a384" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7812-742b-2702-7852" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Champion" hidden="false" id="48e5-8e45-06fb-4fb3" type="selectionEntry" targetId="9c21-1746-9873-a5b5" defaultAmount="1,0,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5917-5c5d-460c-409e"/>
+                    <constraint type="max" value="1" field="selections" scope="75e5-05cd-3163-7335" shared="true" id="a7d3-1f0e-da27-0eb4" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Musician" hidden="false" id="a239-bbb1-022f-45c0" type="selectionEntry" targetId="2475-183b-3802-4431" defaultAmount="0,1,0">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="75e5-05cd-3163-7335" shared="true" id="0e8f-2ed4-2444-aac0" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="749d-a772-6506-7782"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="0e8f-2ed4-2444-aac0">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Standard Bearer" hidden="false" id="fa38-e193-add9-6c1a" type="selectionEntry" targetId="7f34-77c9-597-62c3" defaultAmount="0,0,1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbbe-ed06-28bc-00f6"/>
+                    <constraint type="max" value="1" field="selections" scope="75e5-05cd-3163-7335" shared="true" id="6012-11a4-af88-f0d5" includeChildSelections="true"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="1" field="6012-11a4-af88-f0d5">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="1b37-82b8-c062-eb82" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <rules>
+            <rule name="Base Size" id="c02d-edd7-8743-e4bd" hidden="true">
+              <description>90x52mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Aqshy variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="75e5-05cd-3163-7335" shared="true" includeChildSelections="true" includeChildForces="true" childName="Stormstrike Palladors"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Iridan the Witness (Scourge of Aqshy)" hidden="true" id="1673-6b9f-6ebd-c367" publicationId="9e18-bb03-7b60-d4ff">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="89f2-1353-8f99-7646" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Iridan the Witness" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="8a9a-5826-d282-d535">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">12&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">3+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Demands of the Witness" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="9f8b-a0b5-fbdf-61da">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">3</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Ruination Chamber^^** unit wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Until the start of your next turn, add 1 to the Rend characteristic of the target’s melee weapons. If the chanting roll was 7+, you can pick another eligible unit to be a second target.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Special</attribute>
+            <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
+          </attributes>
+        </profile>
+        <profile name="On Wings of Death" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f45d-f780-c812-2f6d">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target charged this turn, apply the effects below. Otherwise, roll a dice. On a 3+, apply the effects below: 
+
+• You can remove this unit from the battlefield and set it up again on the battlefield within 1&quot; of the target.
+• Subtract 1 from hit rolls for the target’s attacks for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="The Flames of Hope" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9ae0-f9ad-0eb9-6781">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">You can re-roll resistance rolls for friendly **^^Ruination Chamber^^** units while they are wholly within 12&quot; of this unit.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Guardian of the Final Threshold" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2c27-5b47-296b-db90">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Reaction: This unit was picked as the target of a non-**^^Core^^** ability</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a resistance roll of D6. On a 3+, that ability has no effect on this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Green</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="bd70-9995-7d9d-1e04" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="FLY" hidden="false" id="f96c-7775-ee26-f57e" targetId="b979-4c3e-7d0e-6921" primary="false"/>
+        <categoryLink name="UNIQUE" hidden="false" id="9310-e599-a23b-d277" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="ORDER" hidden="false" id="f8f0-4d51-a304-d4b4" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="STORMCAST ETERNALS" hidden="false" id="fe96-6e8e-1d4a-3330" targetId="a437-a8f0-67ba-c674" primary="false"/>
+        <categoryLink name="MONSTER" hidden="false" id="b8c4-b4d2-d1b4-5585" targetId="6d54-625c-d063-13e2" primary="false"/>
+        <categoryLink name="PRIEST (1)" hidden="false" id="e30a-cabc-af0e-96c5" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
+        <categoryLink name="RUINATION CHAMBER" hidden="false" id="63e0-3564-6899-d5db" targetId="7e5d-ee55-7c89-4d05" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="4c38-1812-107f-fd5e" targetId="70a4-383f-421f-52cd" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="39b0-27b7-8669-1df3" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Iridan the Witness" hidden="false" id="ad73-f3d1-6c27-3b50">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Axe of the Final Threshold" hidden="false" id="5bfd-68ec-bee3-3bed">
+              <profiles>
+                <profile name="Axe of the Final Threshold" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6596-be5e-c3b2-505b">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Mortal)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60e0-7309-4f3e-04ce"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e82-f8a9-22c2-5ae9"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ariax&apos;s Talons" hidden="false" id="5607-4b20-39aa-7265">
+              <profiles>
+                <profile name="Ariax&apos;s Talons" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d1be-4db6-e43d-5020">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a31-24fd-2ef6-4d88"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c750-d9ed-13cd-dcdc"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6809-27fd-17a9-dceb"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cb2-7e91-9396-1178"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="4e8c-c493-6dfd-da54" hidden="true">
+              <description>120x92mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Aqshy variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="278f-91b3-fedc-1b1a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

@@ -1797,7 +1797,9 @@ This unit and the friendly target can use the &apos;Charge&apos; ability even if
         <categoryLink name="INFANTRY" hidden="false" id="72a8-1145-c94c-f156" targetId="75d6-6995-dfcc-3898" primary="true"/>
         <categoryLink name="ORDER" hidden="false" id="c5a0-829a-c4b0-4dc5" targetId="ee22-3575-6590-25c" primary="false"/>
         <categoryLink name="CITIES OF SIGMAR" hidden="false" id="31bd-e7cf-a8e0-2910" targetId="4999-8ae2-e1bb-ba5" primary="false"/>
-        <categoryLink name="DUARDIN" hidden="false" id="7c6-39b7-a0e1-2c3f" targetId="72e3-7b1b-cb94-4cbd" primary="false"/>
+        <categoryLink name="CHAMPION" hidden="false" id="7efa-e2e0-b72d-8cd0" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="STANDARD BEARER (1/10)" hidden="false" id="5d6f-c7d2-bb72-4b86" targetId="1f17-ad98-ada0-ccf" primary="false"/>
+        <categoryLink name="MUSICIAN (1/10)" hidden="false" id="d2a0-3a58-e1ee-9c95" targetId="eeed-ef77-b0d-fa9d" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Irondrake" hidden="false" id="13ec-39e2-8b8b-902f" defaultAmount="1,1,1,7">
@@ -11403,6 +11405,225 @@ If your hero is a **Sigmarite Battle-priest**:
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a14b-40ea-cc33-c26a" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Pontifex Zenestra, Matriarch of the Great Wheel (Scourge of Aqshy)" hidden="true" id="9d7f-206f-a764-e503" publicationId="9e18-bb03-7b60-d4ff">
+      <categoryLinks>
+        <categoryLink name="UNIQUE" hidden="false" id="54ad-f6df-b45c-5c07" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="HERO" hidden="false" id="4f42-ca6c-561d-8059" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="8c13-6dbe-51ca-ece1" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="CITIES OF SIGMAR" hidden="false" id="f3dd-9062-40de-d307" targetId="4999-8ae2-e1bb-ba5" primary="false"/>
+        <categoryLink name="PRIEST (2)" hidden="false" id="000e-1f29-c4e0-79bb" targetId="e692-853d-6db8-fdbe" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="ed91-fbcc-72cb-69ce" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WARD (4+)" hidden="false" id="a9a0-ffb7-8327-8eed" targetId="f99f-98ee-909f-57cd" primary="false"/>
+        <categoryLink name="SIGMARITE" hidden="false" id="e6ec-4c06-2a18-4fa7" targetId="ae9e-dd18-4bdb-ffe9" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="e040-31a0-9e5c-b3d7" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Pontifex Zenestra, Matriarch of the Great Wheel" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="aa66-e673-d70e-d62d">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">9</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sigmar&apos;s Blessing" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="716c-d583-050d-5534">
+          <characteristics>
+            <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Sigmarite^^** unit wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.
+
+</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Until the start of your next turn:
+• The target’s melee weapons have **Charge (+1 Damage)**.
+• If the chanting roll was 10+, the target has **^^Ward (5+)^^** if it charged in the same turn.</characteristic>
+            <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Unquenchable Faith" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b319-9e7a-b5c1-48a6">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If this unit would be destroyed, before removing it from play, this unit can immediately use the ‘Sigmar’s Blessing’ ability as if it were your hero phase. If it does so:
+• That prayer does not count towards the number of **^^Prayer^^** abilities this unit can use this phase.
+• Instead of making a chanting roll for that prayer, you must use a value of 10 for the roll that cannot be modified.
+• The effect of that prayer applies for the rest of the battle instead of until the start of your next turn.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
+            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Special</attribute>
+            <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eef8-3294-7a7e-2cff" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Pontifex Zenestra, Matriarch of the Great Wheel" hidden="false" id="7e0a-d5bd-082f-f135">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sceptre of the Wheel" hidden="false" id="7241-2b10-6798-7daf">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f8d-5a3d-e16e-222d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f64a-dd33-32b6-635d"/>
+              </constraints>
+              <profiles>
+                <profile name="Sceptre of the Wheel" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="626e-815a-381e-5310">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Acolytes’ Club and Axe" hidden="false" id="3bd4-9ec2-6d0f-7b87">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8faa-6377-7761-f793"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0888-aba8-0ff0-c503"/>
+              </constraints>
+              <profiles>
+                <profile name="Acolytes’ Club and Axe" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="404d-7832-04a3-06cf">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd35-9845-bff8-368b"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0bc7-ef88-9269-7f54"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="abb6-c199-2305-7eb7" hidden="true">
+              <description>90x52mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Aqshy variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="708d-414f-a3f-3734" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Alchemite Warforger (Scourge of Aqshy)" hidden="true" id="f009-0410-83f2-3c88" publicationId="9e18-bb03-7b60-d4ff">
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="0c6a-6883-2b23-8181" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="ORDER" hidden="false" id="faa2-577b-0a7c-7d07" targetId="ee22-3575-6590-25c" primary="false"/>
+        <categoryLink name="CITIES OF SIGMAR" hidden="false" id="8e75-7498-77c8-83c9" targetId="4999-8ae2-e1bb-ba5" primary="false"/>
+        <categoryLink name="INFANTRY" hidden="false" id="ac49-098e-5b8d-317a" targetId="75d6-6995-dfcc-3898" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="5f2e-468c-f47c-6225" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="SIGMARITE" hidden="false" id="c3c9-c2da-d6ad-81f4" targetId="ae9e-dd18-4bdb-ffe9" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="25e5-5ac4-f121-c4e4" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Alchemite Warforger" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="6ee9-935d-6496-2369">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">5&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">5</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Crucible of Rage" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6456-4a7a-d0e4-b3c8">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can spend 1 **rage dice**. If you do:
+• Apply the effect below.
+• If your opponent’s **fury level** is lower than yours, they must increase their fury level by 1, to a maximum of 7.
+Otherwise, roll a dice. On a 3+, apply the effect below.
+Until the start of your next turn, add 1 to casting rolls for friendly **^^Cities of Sigmar^^** units while they are wholly within 6&quot; of this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Alchemite Warforger" hidden="false" id="e189-894c-2943-942c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1496-4828-7627-001a"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba36-ac41-691e-8aa1"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tongstaff" hidden="false" id="c222-f2af-5d15-16d6">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="67b8-5874-bd68-b56a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f637-43c4-ea2b-31dd"/>
+              </constraints>
+              <profiles>
+                <profile name="Tongstaff" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2cee-5841-910c-564a">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Base Size" id="0abb-140c-e847-c16c" hidden="true">
+              <description>32mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="A roster cannot contain both the standard and Scourge of Aqshy variant of the same unit." field="error">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="708d-414f-a3f-3734" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

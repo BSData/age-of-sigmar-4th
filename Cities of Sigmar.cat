@@ -331,7 +331,7 @@ If that unit is not in combat, it can move 6&quot;. It cannot move into combat d
     </selectionEntryGroup>
     <selectionEntryGroup name="Heroic Traits" id="1589-62bd-6587-f183" hidden="false">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Sentinels of Order" id="be90-b077-70e3-47e0" hidden="false">
+        <selectionEntryGroup name="Sentinels of Order" id="be90-b077-70e3-47e0" hidden="false" publicationId="a746-732d-1a22-460">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Stentorian General" hidden="false" id="5469-10c8-8b60-dfc6">
               <profiles>
@@ -500,6 +500,87 @@ If that unit is not in combat, it can move 6&quot;. It cannot move into combat d
               <description>**^^Hero^^** only</description>
             </rule>
           </rules>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Sentinels of Order" id="720d-9f2a-4ed6-112e" hidden="true" publicationId="9e18-bb03-7b60-d4ff">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Pious Veteran" hidden="false" id="d8e9-0953-861a-f5ce">
+              <profiles>
+                <profile name="Pious Veteran" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8e0d-979a-de56-2489">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time you pick targets while declaring a **^^Prayer^^** ability used by a friendly **^^Cities of Sigmar Priest^^**, if this unit is eligible to be picked, you can pick it to be an additional target</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Yellow</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2ddf-8e75-b9d9-9211" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bristling Attitude" hidden="false" id="cdca-aa12-22a4-b08b">
+              <profiles>
+                <profile name="Bristling Attitude" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c6d2-baa2-0a6e-bbf3">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: Opponent declared a **^^Charge^^** ability for a visible unit within 12&quot; of this unit</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend any number of rage dice. If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, roll **X** dice, where **X** is the number of rage dice spent. For each 3+, subtract 1 from the charge roll. </characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="04ca-1143-e951-2710" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cosmopolitan Leader" hidden="false" id="8bdf-4039-228c-c732">
+              <profiles>
+                <profile name="Cosmopolitan Leader" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f5f0-74f8-04db-e9f0">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick up to 3 visible friendly non‑**^^War Machine Sigmarite^^** units wholly within 12&quot; of this unit to be the targets.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend 1 **rage dice** for each target. If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, add 1 to wound rolls for each target’s combat attacks until the start of your next turn.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="330e-b779-2d57-19df" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="df21-515d-1b70-39ae" hidden="true">
+              <description>**^^Hero^^** only, excluding **Cannonade Cogfort** and **Conqueror Cogfort**</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -686,6 +767,96 @@ If that unit is not in combat, it can move 6&quot;. It cannot move into combat d
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ed0e-bb67-5a92-3e5e" includeChildSelections="true"/>
         <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="4f59-b497-9ec7-f120"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Decorations for Valour" id="48fa-1e1e-5798-4d54" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Decorations for Valour" id="7ad1-832e-3c34-765b" hidden="true" publicationId="9e18-bb03-7b60-d4ff">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Twin-tailed Comet of Honour" hidden="false" id="40ea-6840-899c-f688">
+              <profiles>
+                <profile name="Twin-tailed Comet of Honour" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a8dc-1c3e-5c04-e9bf">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has any champions, add 5 to this unit’s control score.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="743a-10b5-1f65-ad69" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Living City Cross" hidden="false" id="b4fc-7ddb-de71-de0e">
+              <profiles>
+                <profile name="The Living City Cross" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="15a0-434e-936f-4a6c">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has any champions, subtract 1 from hit rolls for shooting attacks that target this unit.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dd71-f5c3-fd6a-88ad" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Aqshian Order of Merit" hidden="false" id="5c50-a317-fabd-9493">
+              <profiles>
+                <profile name="Aqshian Order of Merit" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="153b-7b1e-a4e2-1d46">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has any champions, if an enemy unit in combat with this unit uses the ‘Eruption of Fury’ ability, when resolving attacks as part of that ability, on an unmodified hit roll of 6, do not inflict an additional D3 mortal damage on each unit in combat with that unit.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f5c5-6b2d-1ade-3690" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Enhancement Restrictions" id="6c0c-608b-d13c-662a" hidden="true">
+              <description>Decorations for Valour are unique enhancements that can be given to **^^Cities of Sigmar^^** units that have the **^^Champion^^** keyword. A unit can only have 1 Decoration for Valour.</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="78a1-f6c2-71b8-270a" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="0151-9c5b-2f1e-32d4" shared="true" childName="✦ General&apos;s Handbook 2026-27"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="-1" field="d2f6-e72b-9126-7d01">
+          <conditions>
+            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d2f6-e72b-9126-7d01" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="dd62-2f36-8787-4e1c"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -1901,6 +2072,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="330f-b948-9a23-8a54" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2329-7a9c-49e6-4add" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="a5a4-0b0e-5700-baee" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="65bd-7f2a-441b-91f2" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Aelf Infantry" hidden="false" id="0db6-5faa-b69d-4290" targetId="4355-9c27-8a0e-af20" primary="false"/>
@@ -1932,6 +2104,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="1e4b-13a4-e05a-fb54" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae4b-3c78-b391-5a44" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="e2c8-6bac-9646-3df4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="db9f-ad29-41a7-37fe" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Aelf Infantry" hidden="false" id="06b4-c75f-11bb-ed36" targetId="4355-9c27-8a0e-af20" primary="false"/>
@@ -1990,6 +2163,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="b9aa-ecb9-a9b2-629c" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1f39-53e2-0152-de46" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="808d-1270-cabc-e66e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="ebd1-6deb-d849-d99c" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Aelf Infantry" hidden="false" id="9741-44eb-e70c-0665" targetId="4355-9c27-8a0e-af20" primary="false"/>
@@ -2021,6 +2195,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="5d6b-30ce-5823-d0a2" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="2f34-4997-c176-2d70" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="5d5b-849c-eb2b-096d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="fb92-feb3-1d10-9bfe" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Infantry" hidden="false" id="18e9-3b55-aac0-1b5a" targetId="4acc-87fa-ee52-4e51" primary="false"/>
@@ -2104,6 +2279,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="1bba-3e0d-b07c-71ea" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9fc6-8f07-581c-c2e9" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="6124-f50a-b4d4-5822" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="57ac-b99b-7efb-bef1" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Aelf Infantry" hidden="false" id="2b5e-d50c-d866-f196" targetId="4355-9c27-8a0e-af20" primary="false"/>
@@ -2135,6 +2311,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="09f3-2e30-fdc1-cffa" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9787-326c-8f04-acfc" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="22c2-9367-e82c-29b4" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="c708-50bb-d9d1-c17d" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Aelf Infantry" hidden="false" id="f866-47de-03e6-2b8e" targetId="4355-9c27-8a0e-af20" primary="false"/>
@@ -2166,6 +2343,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="d6a8-105e-54ed-53f2" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5297-733d-8251-c307" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="a12d-bece-854b-05de" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="5b0f-2263-41f6-0e30" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Freeguild Command Corps Adjutants" hidden="false" id="ee83-9f22-ef82-6957" type="selectionEntry" targetId="9e34-2f0c-69ff-e722">
@@ -2224,6 +2402,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="bb96-b9f1-767a-619f" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="6946-1ba9-c8e3-cd74" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="6f9b-c6f4-46a9-28e1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="14a0-1ab0-85ae-537c" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Drakespawn Chariot" hidden="false" id="a8c8-3133-fda2-244b" type="selectionEntry" targetId="672e-438c-24a6-5fc4">
@@ -2274,6 +2453,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="74ae-e566-432f-855c" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="47f7-d5c3-4d79-e88e" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="5a48-cf74-9df3-712b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="3d6f-ce53-485d-6dd6" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Flagellants" hidden="false" id="9975-9699-1c0c-85dc" type="selectionEntry" targetId="6da4-e6bc-e5f6-3751">
@@ -2302,6 +2482,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="1af7-bf5c-81fe-516e" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ea91-b6b9-7382-49ff" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="efec-29e1-86ee-758b" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="6bbc-40b6-bbee-a0d4" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Infantry" hidden="false" id="252d-be5a-199c-029f" targetId="4acc-87fa-ee52-4e51" primary="false"/>
@@ -2333,6 +2514,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="a459-cba2-b109-45ad" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="225a-692f-f15f-2370" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="4579-29b9-87e1-fa1c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="3036-ec30-bdf2-10c1" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Cavalry" hidden="false" id="e7eb-7ab6-f204-4405" targetId="23cf-37c8-a8bb-b74d" primary="false"/>
@@ -2364,6 +2546,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="efe6-cd28-8684-5bf9" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4926-168d-8016-3ba5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="7655-7c6b-606e-9bd2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="0ead-6dc7-bdd0-a443" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Infantry" hidden="false" id="b26f-7d42-6aff-af6a" targetId="4acc-87fa-ee52-4e51" primary="false"/>
@@ -2395,6 +2578,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="c21f-2ddf-bf44-0a1b" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9113-3ec6-4505-0856" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="25f3-8925-5d5a-e097" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="e35d-7a00-e39e-1538" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ironbreakers" hidden="false" id="27c5-fd13-f4a2-f35b" type="selectionEntry" targetId="d831-4103-fb92-eb5b">
@@ -2423,6 +2607,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="00de-12c8-7a63-c4c1" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7022-8ce7-0523-bc0f" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="cf07-09fc-ea07-157e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="080c-477a-5942-1c31" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Scourgerunner Chariot" hidden="false" id="408b-7ec-23c1-64a3" type="selectionEntry" targetId="e03f-92f0-5e5d-924a">
@@ -2520,6 +2705,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="e169-890d-549d-0aa6" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5a59-6bd4-014d-effe" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="a361-856b-44a2-28dd" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="779b-8ea3-94f6-9847" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Ironweld Great Cannon" hidden="false" id="1792-e391-bd97-34aa" type="selectionEntry" targetId="8186-4957-8449-590c">
@@ -2586,6 +2772,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="2f61-984e-5dd0-59ae" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8313-f23e-2168-6e05" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="431e-9c24-bd61-1afa" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="2e82-bdae-25b5-f0e6" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Steam Tank" hidden="false" id="83fe-9ef0-814-b3fa" type="selectionEntry" targetId="293f-584a-25a2-c45c">
@@ -2670,6 +2857,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="056b-d491-61fa-ad0e" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="33be-3854-5b6b-d377" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="23ff-123c-22cb-d20a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="233f-98d7-bed5-3072" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Infantry" hidden="false" id="eb5e-2833-ef8c-6132" targetId="4acc-87fa-ee52-4e51" primary="false"/>
@@ -2784,6 +2972,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="8067-7aa0-651e-1004" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5ef2-a387-79ba-41e5" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="f74b-5cea-32ac-3048" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="5bcb-9c84-b74f-3466" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Cavalry" hidden="false" id="1a7b-f6ef-6b17-11c9" targetId="23cf-37c8-a8bb-b74d" primary="false"/>
@@ -3266,6 +3455,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="0579-20bd-f527-6432" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d1d0-ced3-bea3-1314" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="7b98-d24a-119e-fbc3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="0093-896d-45ef-d906" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Infantry" hidden="false" id="36a5-ec36-7ecf-3916" targetId="4acc-87fa-ee52-4e51" primary="false"/>
@@ -3296,6 +3486,7 @@ The unit using this ability and the targets:
         <entryLink import="true" name="Paths" hidden="false" id="b69a-e3e3-c11b-f5f3" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a77b-eefa-5e0f-0b70" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
         <entryLink import="true" name="Renown" hidden="false" id="5312-3133-0b34-73e5" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Decorations for Valour" hidden="false" id="dadf-403f-8c06-2474" type="selectionEntryGroup" targetId="48fa-1e1e-5798-4d54"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Sigmarite Infantry" hidden="false" id="524e-bb25-f829-6dd7" targetId="4acc-87fa-ee52-4e51" primary="false"/>
@@ -3411,6 +3602,96 @@ The unit using this ability and the targets:
           </conditionGroups>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink import="true" name="Pontifex Zenestra, Matriarch of the Great Wheel (Scourge of Aqshy)" hidden="false" id="d158-7487-5ccf-fba5" type="selectionEntry" targetId="9d7f-206f-a764-e503">
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d1fe-e669-f44d-cb17" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.ae9e-dd18-4bdb-ffe9"/>
+            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.b064-7650-e18a-a6ba"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Alchemite Warforger (Scourge of Aqshy)" hidden="false" id="3585-9ece-99d9-081f" type="selectionEntry" targetId="f009-0410-83f2-3c88">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="3047-5469-815a-ec32" type="selectionEntryGroup" targetId="d6f1-33e2-673e-c0c8"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="08f9-f360-a1d7-82e4" type="selectionEntryGroup" targetId="1589-62bd-6587-f183"/>
+        <entryLink import="true" name="Paths" hidden="false" id="0367-6f88-7125-54fe" type="selectionEntryGroup" targetId="1657-3097-6ebc-8023"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="54f1-1342-585e-f1a3" type="selectionEntryGroup" targetId="5f5b-7b93-b8c4-6eab"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="2373-bd54-c3f0-7a2a" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="9c0d-9e4f-a9a5-baa2" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="6b08-12c9-b9e8-6ad1" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.4acc-87fa-ee52-4e51"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.dac6-0751-367f-5cab"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
   </entryLinks>
   <selectionEntries>

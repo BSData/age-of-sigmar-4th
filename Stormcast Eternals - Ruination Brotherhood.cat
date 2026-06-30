@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="c9d1-f1c0-84d1-a75d" name="Stormcast Eternals - Ruination Brotherhood" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="38" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="c9d1-f1c0-84d1-a75d" name="Stormcast Eternals - Ruination Brotherhood" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="39" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Ruination Brotherhood" hidden="false" id="ff00-83be-470e-9f5c" publicationId="43cd-e9ef-5d4d-87c4">
       <profiles>
@@ -2226,6 +2226,120 @@
       <categoryLinks>
         <categoryLink name="RUINATION BROTHERHOOD" hidden="false" id="87a9-03e4-9fd5-ac2d" targetId="1e61-44e3-e572-a097" primary="false"/>
       </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Iridan the Witness (Scourge of Aqshy)" hidden="false" id="d4e7-fc36-5560-9581" type="selectionEntry" targetId="1673-6b9f-6ebd-c367">
+      <costs>
+        <cost name="pts" typeId="points" value="360"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="3b91-bf9c-1963-a0a9" type="selectionEntryGroup" targetId="17e9-ff38-847e-b2d2"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.a437-a8f0-67ba-c674"/>
+            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.6b64-a899-0374-9f1d"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink name="WARMASTER" hidden="false" id="dcf0-a7e7-0d4d-e9fc" targetId="c203-51a0-3d44-6b07" primary="false"/>
+        <categoryLink name="RUINATION BROTHERHOOD" hidden="false" id="dfc8-3c6a-8011-fa49" targetId="1e61-44e3-e572-a097" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Stormstrike Palladors (Scourge of Aqshy)" hidden="false" id="ab5a-9d0f-568b-341d" type="selectionEntry" targetId="222e-fa67-b4c0-cf61">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="d42d-b494-3f31-6f20" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="109d-1ad3-deb8-8e02" type="selectionEntryGroup" targetId="17e9-ff38-847e-b2d2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="56e4-b5d0-e3b8-49cb" type="selectionEntryGroup" targetId="a4f9-8290-cf10-652e"/>
+        <entryLink import="true" name="Renown" hidden="false" id="1282-996a-e0cc-ea39" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="220"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="187f-b2fa-2619-78a1" includeChildSelections="true"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="RUINATION BROTHERHOOD" hidden="false" id="e10f-0358-4092-5024" targetId="1e61-44e3-e572-a097" primary="false"/>
+      </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="Regiment has too many selections of WARRIOR CHAMBER (max 1)" field="error">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="force" childId="594-e51e-83f-4187" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="187f-b2fa-2619-78a1"/>
+            <modifier type="set" value="0" field="187f-b2fa-2619-78a1">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="94a8-e786-4b45-1c16" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="75e5-05cd-3163-7335" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </modifier>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <localConditionGroups>
+                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="2595-a160-afc1-f087" shared="true"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
   </entryLinks>
   <selectionEntries>

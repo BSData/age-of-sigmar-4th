@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="EVERGREEN HUNT" id="637b-b903-6980-34cf" hidden="false"/>
     <categoryEntry name="Forest Sentinel" id="121e-0fc2-daa6-2e08" hidden="false">
@@ -358,6 +358,37 @@
       </costs>
       <categoryLinks>
         <categoryLink name="EVERGREEN HUNT" hidden="false" id="ce3f-a3d4-57ab-88d5" targetId="637b-b903-6980-34cf" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Kurnoth Hunters with Kurnoth Greatswords (Scourge of Aqshy)" hidden="false" id="4234-8260-5356-9c40" type="selectionEntry" targetId="a522-3c8c-8a44-3ca3">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="a74f-ee1d-df6d-0d9c" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5289-5261-7fc8-f3fc" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a647-b6bd-4b45-acc3" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
+        <entryLink import="true" name="Renown" hidden="false" id="86ae-4755-df34-9f73" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" hidden="false" id="746b-7a28-5aa8-d8de" targetId="637b-b903-6980-34cf" primary="false"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>

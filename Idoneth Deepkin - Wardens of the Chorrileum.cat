@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="0473-cd8f-7161-ac72" name="Idoneth Deepkin - Wardens of the Chorrileum" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="39" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="0473-cd8f-7161-ac72" name="Idoneth Deepkin - Wardens of the Chorrileum" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="39" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="7a07-eaac-2802-39e3" hidden="false">
       <selectionEntryGroups>
@@ -1029,6 +1029,82 @@
       </constraints>
     </entryLink>
     <entryLink import="true" name="Gloomtide Shipwreck" hidden="false" id="8896-b820-b0b4-2dd5" type="selectionEntry" targetId="cdd1-4012-45ab-ed95" defaultAmount="1"/>
+    <entryLink import="true" name="Isharann Tidecaster (Scourge of Aqshy)" hidden="false" id="a1c1-d1dc-2797-e8a0" type="selectionEntry" targetId="6bd1-ab10-e0f1-5a1b">
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="cce6-db3f-cb5e-26c3" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="ab54-f074-68b5-3170" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="32a9-db06-56e4-f694" type="selectionEntryGroup" targetId="7a07-eaac-2802-39e3"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="c56f-ed53-703b-295e" type="selectionEntryGroup" targetId="1d87-33a2-dc89-a2fc"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="b9f1-1006-1b38-c039" type="selectionEntryGroup" targetId="9c16-60b4-ef44-1f84"/>
+        <entryLink import="true" name="Paths" hidden="false" id="a582-67d4-939a-d50e" type="selectionEntryGroup" targetId="e9b9-9c0e-9355-e53b"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="47d6-1f00-7562-8984" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.3b18-d4d4-9324-6bbc"/>
+            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.2dcb-b9a8-2364-5d70"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Namarti Reavers (Scourge of Aqshy)" hidden="false" id="7d93-3ffc-b63d-f985" type="selectionEntry" targetId="d246-cc8a-5345-552d">
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="f58e-a400-5dc2-7958" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Renown" hidden="false" id="d2b6-86c6-1178-8b27" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="387c-9559-ca3f-eb59" type="selectionEntryGroup" targetId="1d87-33a2-dc89-a2fc"/>
+        <entryLink import="true" name="Paths" hidden="false" id="d30f-150e-b00f-5c0d" type="selectionEntryGroup" targetId="e9b9-9c0e-9355-e53b"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+    </entryLink>
   </entryLinks>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="93e5-2330-5cd2-f503" defaultAmount="1">
