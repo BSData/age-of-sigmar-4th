@@ -250,6 +250,37 @@
         <categoryLink name="ZIGGURAT STAMPEDE" hidden="false" id="6643-3c98-959d-11d8" targetId="f459-121c-4a5e-a87a" primary="false"/>
       </categoryLinks>
     </entryLink>
+    <entryLink import="true" name="Anointed Sentinels (Scourge of Aqshy)" hidden="false" id="8d44-f05a-767c-b1b6" type="selectionEntry" targetId="40ae-7938-ac66-8636">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="1ad1-8f51-7b00-dc33" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Renown" hidden="false" id="0d2a-bef7-0b76-4cef" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Paths" hidden="false" id="6564-89ed-f0a1-f3f5" type="selectionEntryGroup" targetId="3a9b-41e1-c213-c2b4"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5228-03f9-b55a-525e" type="selectionEntryGroup" targetId="0ab8-38b1-f41a-7cb2"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="170"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="ZIGGURAT STAMPEDE" hidden="false" id="37c1-c030-991c-4952" targetId="f459-121c-4a5e-a87a" primary="false"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink import="true" name="Battle Traits: Ziggurat Stampede" hidden="false" id="62f0-2aea-c412-9fc9" type="selectionEntry" targetId="49f7-4682-f568-e225">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="55fb-4c31-4631-2d70" includeChildSelections="true"/>
@@ -334,6 +365,56 @@
       </modifierGroups>
       <categoryLinks>
         <categoryLink name="ZIGGURAT STAMPEDE" hidden="false" id="3e62-67be-2011-dc04" targetId="f459-121c-4a5e-a87a" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Daemonsmith on Infernal Taurus (Scourge of Aqshy)" hidden="false" id="9a4e-f61f-d55f-6e32" type="selectionEntry" targetId="09a0-81bc-cd2a-161c">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="c647-498e-0b32-e35e" type="selectionEntryGroup" targetId="2cb8-9813-13d1-c448"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="dc24-883d-cc3d-0ab4" type="selectionEntryGroup" targetId="4c54-3230-3318-8149"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="45bc-24a1-3ce4-555a" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a742-8a17-1285-a260" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="d23c-2575-b685-bdaf" type="selectionEntryGroup" targetId="0ab8-38b1-f41a-7cb2"/>
+        <entryLink import="true" name="Paths" hidden="false" id="dbec-e81a-ca98-3ab1" type="selectionEntryGroup" targetId="3a9b-41e1-c213-c2b4"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="d434-2ad6-c574-7640" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="350"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.905e-30fb-4d0f-4685"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <categoryLinks>
+        <categoryLink name="ZIGGURAT STAMPEDE" hidden="false" id="6558-f73f-ef1b-abba" targetId="f459-121c-4a5e-a87a" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Dominator Engine with Bane Maces" hidden="false" id="6703-f3a2-471e-26f3" type="selectionEntry" targetId="c3d1-b2bd-e8d8-d171">
