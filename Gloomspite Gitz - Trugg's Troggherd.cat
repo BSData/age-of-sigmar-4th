@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d048-1146-2bdf-cf78" name="Gloomspite Gitz - Trugg&apos;s Troggherd" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d048-1146-2bdf-cf78" name="Gloomspite Gitz - Trugg&apos;s Troggherd" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Dankhold Troggboss" hidden="false" id="5ea5-9699-f874-4850" type="selectionEntry" targetId="c1d2-33ca-c5f3-56af">
       <categoryLinks>
@@ -125,6 +125,37 @@
       </costs>
       <categoryLinks>
         <categoryLink name="TRUGG&apos;S TROGGHERD" hidden="false" id="8471-a68a-8640-8acd" targetId="d960-e20e-e995-7986" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Fellwater Troggoths (Scourge of Aqshy)" hidden="false" id="425a-f1e2-89b8-a8c7" type="selectionEntry" targetId="6132-f299-106b-97e0">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="5afd-ba20-0bbf-1de6" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="b612-11ff-6956-225d" type="selectionEntryGroup" targetId="4d51-f8e0-5cc1-b93c"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="254d-b9a7-4104-eb34" type="selectionEntryGroup" targetId="6cf2-b737-c12a-a5b9"/>
+        <entryLink import="true" name="Renown" hidden="false" id="f84b-cbfa-c35a-1fb6" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="TRUGG&apos;S TROGGHERD" hidden="false" id="0219-cc7e-58cc-1c62" targetId="d960-e20e-e995-7986" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Trugg, the Troggoth King" hidden="false" id="83f3-af26-f4b3-836f" type="selectionEntry" targetId="94c-5126-509a-168f">

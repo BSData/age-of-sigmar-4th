@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b155-f3bd-2dfc-d638" name="Gloomspite Gitz - Da King&apos;s Gitz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="8" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b155-f3bd-2dfc-d638" name="Gloomspite Gitz - Da King&apos;s Gitz" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="8" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="1b6c-9b2f-e018-63bd" hidden="false">
       <selectionEntryGroups>
@@ -551,6 +551,50 @@
       </constraints>
       <categoryLinks>
         <categoryLink name="KING&apos;S GITZ" hidden="false" id="58b1-6b44-17fa-878b" targetId="3573-2154-d2f7-c352" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Fellwater Troggoths (Scourge of Aqshy)" hidden="false" id="f934-ca56-9fb4-dfa2" type="selectionEntry" targetId="6132-f299-106b-97e0">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="2000-84bd-225a-f9e4" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Paths" hidden="false" id="7e21-5184-a1b0-12c8" type="selectionEntryGroup" targetId="095d-d1e1-63b1-6f8c"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0a9d-129c-ac68-39cc" type="selectionEntryGroup" targetId="9ab2-33c4-b192-dc41"/>
+        <entryLink import="true" name="Renown" hidden="false" id="a65b-952b-edf3-bdf3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" value="1" field="ff02-b78b-963e-90b2">
+          <localConditionGroups>
+            <localConditionGroup type="atLeast" value="1" scope="roster" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="self" childId="c824-f471-3b8c-e580" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="3f7c-ecc-b9dc-ccda" shared="true"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ff02-b78b-963e-90b2"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="KING&apos;S GITZ" hidden="false" id="1d31-f6c4-024b-a9f2" targetId="3573-2154-d2f7-c352" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Fungoid Cave-Shaman" hidden="false" id="d6ea-4fab-93b8-2cbb" type="selectionEntry" targetId="5f35-ca66-398-bf72">

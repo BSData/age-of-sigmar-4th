@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="704d-d7c8-b9a9-f8b6" name="Ironjawz - Ironsunz [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="13" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="704d-d7c8-b9a9-f8b6" name="Ironjawz - Ironsunz [LEGENDS]" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="13" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Ironsunz" hidden="false" id="30b5-6e89-0fff-9500">
       <profiles>
@@ -659,6 +659,71 @@
         </modifierGroup>
       </modifierGroups>
     </entryLink>
+    <entryLink import="true" name="Megaboss (Scourge of Aqshy)" hidden="false" id="8f66-77d8-e000-4737" type="selectionEntry" targetId="215e-afa9-d599-8f10">
+      <categoryLinks>
+        <categoryLink name="IRONSUNZ" hidden="false" id="b00d-5110-21b8-b9c0" targetId="06cf-b407-5418-b6aa" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Paths" hidden="false" id="9442-7dfe-5515-44b0" type="selectionEntryGroup" targetId="ae74-4599-94ef-18dd"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="500e-2e77-d8b9-503c" type="selectionEntryGroup" targetId="05cc-6a1b-66ce-0ee1"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8730-8877-ddba-77fa" type="selectionEntryGroup" targetId="e7e2-1551-61ac-5e7d"/>
+        <entryLink import="true" name="Heroic Traits" hidden="true" id="5e59-2c5c-d566-691e" type="selectionEntryGroup" targetId="93c9-9fce-b21f-a0cf">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Warlord" hidden="false" id="c7f3-ef36-e0d0-4bf4" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="6110-f4a1-feac-98a0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="6c44-ab8c-c575-5a32" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="b69d-b764-8f1e-d744" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.c1ca-4b17-3512-89f"/>
+            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.b69d-b764-8f1e-d744"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </entryLink>
     <entryLink import="true" name="Warchanter" hidden="false" id="26a9-f336-c1aa-180f" type="selectionEntry" targetId="7d89-20b4-7ed4-6ca0">
       <categoryLinks>
         <categoryLink name="IRONSUNZ" hidden="false" id="9566-9f71-bd64-8589" targetId="06cf-b407-5418-b6aa" primary="false"/>
@@ -1200,6 +1265,37 @@
       </costs>
       <categoryLinks>
         <categoryLink name="IRONSUNZ" hidden="false" id="d5d0-0c70-f977-7595" targetId="06cf-b407-5418-b6aa" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Brutes (Scourge of Aqshy)" hidden="false" id="800c-6329-7281-fa5f" type="selectionEntry" targetId="9e76-1d70-7eea-03b6">
+      <entryLinks>
+        <entryLink import="true" name="Reinforced" hidden="false" id="4d8d-77a4-01da-0850" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="eb53-2782-1ff2-4a0f" type="selectionEntryGroup" targetId="e7e2-1551-61ac-5e7d"/>
+        <entryLink import="true" name="Paths" hidden="false" id="22e1-12af-9c38-9200" type="selectionEntryGroup" targetId="ae74-4599-94ef-18dd"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c84b-b729-3b46-2717" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="IRONSUNZ" hidden="false" id="abc8-11ae-7f22-28d2" targetId="06cf-b407-5418-b6aa" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Gore-gruntas (Scourge of Ghyran)" hidden="false" id="7e45-7d10-6982-e8d1" type="selectionEntry" targetId="f0c2-47b3-2266-1a6f">

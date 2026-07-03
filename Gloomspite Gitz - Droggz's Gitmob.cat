@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d215-65e4-50b1-c64c" name="Gloomspite Gitz - Droggz&apos;s Gitmob" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="8" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d215-65e4-50b1-c64c" name="Gloomspite Gitz - Droggz&apos;s Gitmob" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="8" revision="26" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Battle Traits: Droggz&apos;s Gitmob" hidden="false" id="dc99-4960-73e4-784f" publicationId="a395-7bc4-71eb-46df">
       <profiles>
@@ -336,6 +336,40 @@
       </costs>
       <categoryLinks>
         <categoryLink name="DROGGZ&apos;S GITMOB" hidden="false" id="1903-d85d-96ce-af98" targetId="310f-5467-15d1-15f7" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Sunsteala Wheelas (Scourge of Aqshy)" hidden="false" id="5db6-d247-92a7-ff7d" type="selectionEntry" targetId="0856-236a-c8c5-1a66">
+      <entryLinks>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="cea8-89cc-8359-eadf" type="selectionEntryGroup" targetId="116d-3b48-e4bf-079a"/>
+        <entryLink import="true" name="Paths" hidden="false" id="02cf-b6af-7bfa-2d0d" type="selectionEntryGroup" targetId="a193-dcf3-4795-2f83"/>
+        <entryLink import="true" name="Reinforced" hidden="false" id="1bfc-5c41-a2a8-6cce" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
+        <entryLink import="true" name="Renown" hidden="false" id="dc44-6f1f-1659-ab03" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="189f-4da9-400a-b168"/>
+      </constraints>
+      <modifiers>
+        <modifier type="multiply" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="170"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="DROGGZ&apos;S GITMOB" hidden="false" id="05fd-3960-e4e0-a8c5" targetId="310f-5467-15d1-15f7" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Snarlpack Cavalry" hidden="false" id="10b4-e691-b176-8c31" type="selectionEntry" targetId="052d-8f9c-151a-c74b">
