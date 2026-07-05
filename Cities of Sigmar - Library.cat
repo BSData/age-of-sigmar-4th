@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="36" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="37" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Runelord" hidden="false" id="e21a-cca6-9f40-1891" publicationId="7454-bbda-d2b6-0747">
       <categoryLinks>
@@ -1800,6 +1800,7 @@ This unit and the friendly target can use the &apos;Charge&apos; ability even if
         <categoryLink name="CHAMPION" hidden="false" id="7efa-e2e0-b72d-8cd0" targetId="f679-3bcb-d664-9ac3" primary="false"/>
         <categoryLink name="STANDARD BEARER (1/10)" hidden="false" id="5d6f-c7d2-bb72-4b86" targetId="1f17-ad98-ada0-ccf" primary="false"/>
         <categoryLink name="MUSICIAN (1/10)" hidden="false" id="d2a0-3a58-e1ee-9c95" targetId="eeed-ef77-b0d-fa9d" primary="false"/>
+        <categoryLink name="DUARDIN" hidden="false" id="8a40-a646-a59f-c37e" targetId="72e3-7b1b-cb94-4cbd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Irondrake" hidden="false" id="13ec-39e2-8b8b-902f" defaultAmount="1,1,1,7">
@@ -10359,39 +10360,24 @@ In addition, make the following changes to your hero&apos;s warscroll:
                     </modifier>
                   </modifiers>
                 </profile>
-                <profile name="Regulation Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="d554-88ba-a116-d687">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">4+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159"/>
-                  </characteristics>
-                  <modifiers>
-                    <modifier type="append" value="Charge (+1 Damage)" field="eda3-7332-5db1-4159" join=", ">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="164d-a177-4600-f687" shared="true" includeChildSelections="true" childName="Borne to War"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="increment" value="1" field="60e-35aa-31ed-e488">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8297-35ff-3830-072f" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="increment" value="1" field="eccc-10fa-6958-fb73">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7a32-98ac-7aa0-330f" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="append" value="Crit (2 Hits)" field="eda3-7332-5db1-4159" join=", ">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1def-7973-8704-912b" shared="true" includeChildSelections="true" childName="Daring Duelist"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </profile>
               </profiles>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="1acd-4cbc-ed28-16f8"/>
+                    <modifier type="set" value="0" field="54d0-e972-d31e-726e"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="716d-fe9e-86f5-ee75" shared="true" includeChildSelections="true" childName="Freeguild Officer"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3995-1be3-3fa7-a62b" shared="true" includeChildSelections="true" childName="Agent Azyrite"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Order Crossbow" hidden="true" id="fbde-96fa-61b6-0fed" defaultAmount="0">
               <profiles>
@@ -10636,7 +10622,7 @@ Any **^^Sigmarite Infantry^^** units</description>
                   <modifiers>
                     <modifier type="set" value="8&quot;" field="fed0-d1b3-1bb8-c501" scope="root-entry" affects="profiles.Unit"/>
                     <modifier type="set" value="8" field="96be-54ae-ce7b-10b7" scope="root-entry" affects="profiles.Unit"/>
-                    <modifier type="set" value="5+" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
+                    <modifier type="set" value="4+" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
                   </modifiers>
                   <rules>
                     <rule name="Agent Azyrite" id="31c5-d85e-6057-b855" hidden="true">
@@ -11433,9 +11419,7 @@ If your hero is a **Sigmarite Battle-priest**:
           <characteristics>
             <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
             <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
-            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Sigmarite^^** unit wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.
-
-</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Sigmarite^^** unit wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.</characteristic>
             <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Until the start of your next turn:
 • The target’s melee weapons have **Charge (+1 Damage)**.
 • If the chanting roll was 10+, the target has **^^Ward (5+)^^** if it charged in the same turn.</characteristic>
