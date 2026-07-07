@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="2c23-a678-196b-ad69" name="Slaves to Darkness" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="49" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="2c23-a678-196b-ad69" name="Slaves to Darkness" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="50" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Spell Lores" id="76d4-19e8-38b1-d8c9" hidden="false" flatten="true">
       <selectionEntries>
@@ -46,10 +46,10 @@
                 <profile name="Rune of Murder" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4820-9486-55af-a4f9">
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Combat Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick 1 of this unit's melee weapons to be the target.</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick 1 of this unit&apos;s melee weapons to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
-• Inflict 3 mortal damage on this unit. Then, double the target weapon's Attacks characteristic for the rest of the turn.
-• Add D6 to the target weapon's Attacks characteristic for the rest of the turn.</characteristic>
+• Inflict 3 mortal damage on this unit. Then, double the target weapon&apos;s Attacks characteristic for the rest of the turn.
+• Add D6 to the target weapon&apos;s Attacks characteristic for the rest of the turn.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -127,7 +127,7 @@
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 12&quot; of this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target does not have the 'Obscuring' terrain ability, it gains that ability until the start of your next turn. Then, roll a dice for each model (friendly and enemy) within 1&quot; of the target. For each 5+, inflict 1 mortal damage on that model's unit.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target does not have the &apos;Obscuring&apos; terrain ability, it gains that ability until the start of your next turn. Then, roll a dice for each model (friendly and enemy) within 1&quot; of the target. For each 5+, inflict 1 mortal damage on that model&apos;s unit.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -743,6 +743,26 @@ In addition, while this unit includes any standard bearers, this unit has **^^Wa
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2f61-5689-eb84-23c3" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brand of the Unaligned" hidden="false" id="ed22-5f5e-88b5-e7fd">
               <profiles>
@@ -750,7 +770,7 @@ In addition, while this unit includes any standard bearers, this unit has **^^Wa
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove all of this unit's **^^Pledge to Chaos^^** keywords. Then, pick 1 of the following **^^Pledge to Chaos^^** keywords. You cannot pick a keyword you picked for this unit earlier in the battle.
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Remove all of this unit&apos;s **^^Pledge to Chaos^^** keywords. Then, pick 1 of the following **^^Pledge to Chaos^^** keywords. You cannot pick a keyword you picked for this unit earlier in the battle.
 • **^^Pledged to Khorne^^**
 • **^^Pledged to Tzeentch^^**
 • **^^Pledged to Nurgle^^**
@@ -769,13 +789,33 @@ This unit has that keyword for the rest of the battle.</characteristic>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5252-85b9-546a-d1a5" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brand of Apoplexy" hidden="false" id="f62c-f28b-9d34-8e65">
               <profiles>
                 <profile name="Brand of Apoplexy" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1c5c-fe72-0caf-aa57">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While your **fury level** is 7, add 1 to the Damage characteristic of this unit's weapons.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While your **fury level** is 7, add 1 to the Damage characteristic of this unit&apos;s weapons.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -787,6 +827,26 @@ This unit has that keyword for the rest of the battle.</characteristic>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3962-f89c-48e7-1bdd" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -867,7 +927,7 @@ During the battle, the target gains **Dark Apotheosis** points as follows:
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit with 8 or more **Dark Apotheosis** points to be the target.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following.
 ***Aura of Chaos:* Heal(X)** the target, where **X** is the number of damage points allocated to the target. In addition, the target has **^^Ward (5+)^^** for the rest of the battle.
-***Daemonhood:*** Set up a **Daemon Prince** within 1&quot; of the target. Then, remove the target from the battlefield. If the target is your general, the **Daemon Prince** becomes your general instead and is added to your general's regiment. If the target has any enhancements, the **Daemon Prince** has those enhancements instead. If the target has a **Pledge to Chaos** keyword, the **Daemon Prince** has the same keyword. Otherwise, pick 1 **Pledge to Chaos** keyword for the **Daemon Prince** to have for the rest of the battle If any **^^Manifestations^^** that were summoned by the target are on the battlefield, those **^^Manifestations^^** are removed from play.</characteristic>
+***Daemonhood:*** Set up a **Daemon Prince** within 1&quot; of the target. Then, remove the target from the battlefield. If the target is your general, the **Daemon Prince** becomes your general instead and is added to your general&apos;s regiment. If the target has any enhancements, the **Daemon Prince** has those enhancements instead. If the target has a **Pledge to Chaos** keyword, the **Daemon Prince** has the same keyword. Otherwise, pick 1 **Pledge to Chaos** keyword for the **Daemon Prince** to have for the rest of the battle If any **^^Manifestations^^** that were summoned by the target are on the battlefield, those **^^Manifestations^^** are removed from play.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="97" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="98" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -14335,7 +14335,7 @@
         <profile name="Wild Form" hidden="false" id="4f4-6041-9f7e-2585" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <characteristics>
             <characteristic name="Keywords" id="b594-1d0d-ae7c-afba" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="b137-be1-a320-9e97" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the 'Banish Manifestation' ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
+            <characteristic name="Effect" id="b137-be1-a320-9e97" hidden="false" typeId="fd7f-888d-3257-a12b">Each time this **^^Manifestation^^** is targeted by the &apos;Banish Manifestation&apos; ability, if it would be banished, it is not banished. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points).</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
@@ -14472,7 +14472,7 @@
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">For each part of this **^^Manifestation^^**, you can pick an enemy unit within 3&quot; of that part to be the targets. You cannot pick the same unit to be the target of this ability more than once per turn.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+:
 • Inflict an amount of mortal damage on the target equal to the roll.
-• Subtract a number of inches equal to the roll from the target's Move characteristic for the rest of the turn.</characteristic>
+• Subtract a number of inches equal to the roll from the target&apos;s Move characteristic for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -14573,7 +14573,7 @@
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic in one direction (see 'The Pendulum Swings'). It can pass through models during that move and can end that move in combat. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move or that are within 1/2&quot; of it to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This **^^Manifestation^^** can move a distance up to its Move characteristic in one direction (see &apos;The Pendulum Swings&apos;). It can pass through models during that move and can end that move in combat. Then, pick up to 3 enemy units that this **^^Manifestation^^** passed across during that move or that are within 1/2&quot; of it to be the targets. Roll a D6 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -14920,7 +14920,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <profile name="Ensnaring Soul-drain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9d0c-ae55-1df5-ec0e">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an enemy unit uses a **^^Move^^** ability while it is within 9&quot; of any parts of this Manifestation, the effects of the 'Fly' ability do not apply to that unit. Enemy units cannot be set up within 9&quot; of either part of this **^^Manifestation^^**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an enemy unit uses a **^^Move^^** ability while it is within 9&quot; of any parts of this Manifestation, the effects of the &apos;Fly&apos; ability do not apply to that unit. Enemy units cannot be set up within 9&quot; of either part of this **^^Manifestation^^**.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -15057,7 +15057,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <profile name="Standard Bearer" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1ec9-5b34-74df-6e40">
           <characteristics>
             <characteristic name="Keywords" id="7823-b5d2-96c3-f2d" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="41a0-f4d3-94f7-b5f2" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit contains any standard bearers, add 1 to this unit's control score.</characteristic>
+            <characteristic name="Effect" id="41a0-f4d3-94f7-b5f2" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit contains any standard bearers, add 1 to this unit&apos;s control score.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Purple</attribute>
@@ -15135,7 +15135,7 @@ This **^^Manifestation^^** can have a maximum of 6 **maelstrom points** at once
         <profile name="Musician" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ef81-53a1-5559-5aa1">
           <characteristics>
             <characteristic name="Keywords" id="98bb-35ab-5c54-88ea" hidden="false" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" id="2464-8e0d-db9b-bf62" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit contains any musicians, if it uses the 'Rally' command, you can make one additional rally roll of D6.</characteristic>
+            <characteristic name="Effect" id="2464-8e0d-db9b-bf62" hidden="false" typeId="fd7f-888d-3257-a12b">While this unit contains any musicians, if it uses the &apos;Rally&apos; command, you can make one additional rally roll of D6.</characteristic>
           </characteristics>
           <attributes>
             <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Yellow</attribute>
@@ -15451,7 +15451,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Wizard^^** within 3&quot; of this **^^Manifestation^^** to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The next time the target uses a non-**^^Summon Spell^^** ability this phase, add 1 to the casting value of that spell. When picking targets for that spell, you can measure range and visibility from either part of this **^^Manifestation^^** instead of from the caster, and your opponent can measure range and visibility to either part of this **^^Manifestation^^** instead of to the caster for the purposes of the 'Unbind' ability.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The next time the target uses a non-**^^Summon Spell^^** ability this phase, add 1 to the casting value of that spell. When picking targets for that spell, you can measure range and visibility from either part of this **^^Manifestation^^** instead of from the caster, and your opponent can measure range and visibility to either part of this **^^Manifestation^^** instead of to the caster for the purposes of the &apos;Unbind&apos; ability.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -15525,14 +15525,14 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       <description>If an attack made with this weapon scores a critical hit, that attack scores 2 hits on the target instead of 1. Make a wound roll for each hit.</description>
     </rule>
     <rule name="Companion" hidden="false" id="6eda-6036-78c5-2076">
-      <description>Unless otherwise specified, attacks made by this weapon are not affected by friendly abilities that modify hit rolls, wound rolls or weapon characteristics, except for those that apply negative modifiers (e.g. 'Covering Fire')</description>
+      <description>Unless otherwise specified, attacks made by this weapon are not affected by friendly abilities that modify hit rolls, wound rolls or weapon characteristics, except for those that apply negative modifiers (e.g. &apos;Covering Fire&apos;)</description>
     </rule>
     <rule name="Anti-X (+1 Rend)" hidden="false" id="5daf-bfb3-e495-dae6">
       <description>Add 1 to this weapon&apos;s Rend characteristic if the target has the keyword after &apos;Anti-&apos; or fulfils the condition after &apos;Anti-&apos;. Multiples of this ability are cumulative. For example, if a weapon has both Anti-charge (+1 Rend) and Anti-HERO (+1 Rend), then add 2 to the Rend characteristic of the weapon for attacks that target a HERO that charged in the same turn.</description>
       <alias/>
     </rule>
     <rule name="Charge (+1 Damage)" hidden="false" id="9ae2-afa0-f49-35dd">
-      <description>Add 1 to this weapon's Damage characteristic if the attacking unit charged this turn</description>
+      <description>Add 1 to this weapon&apos;s Damage characteristic if the attacking unit charged this turn</description>
     </rule>
     <rule name="Crit (Auto-wound)" hidden="false" id="e745-73af-60c0-8139">
       <description>If an attack made with this weapon scores a critical hit, that attack automatically wounds the target. Make a save roll as normal.</description>
@@ -15572,7 +15572,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
       </modifiers>
     </rule>
     <rule name="Place of Power" id="bc59-9616-faae-992c" hidden="false">
-      <description>**^^Heroes^^** within 3&quot; of this terrain feature can use the 'Activate Place of Power' ability.</description>
+      <description>**^^Heroes^^** within 3&quot; of this terrain feature can use the &apos;Activate Place of Power&apos; ability.</description>
     </rule>
     <rule name="Unstable" id="8182-41a0-866a-ff5f" hidden="false">
       <description>Models can move across but cannot be set up on or end any type of move on any part of this terrain feature that is more than 1&quot; tall.</description>
@@ -15611,7 +15611,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <profile name="Ward Save" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ed70-f30-2f5a-747f">
       <characteristics>
         <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">In step 1 of the damage sequence (see 18.0), make a **ward roll** of D6 for each **damage point** in this unit's **damage pool**. If the roll equals or exceeds this unit's **ward value**, remove that damage point from the damage pool.</characteristic>
+        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">In step 1 of the damage sequence (see 18.0), make a **ward roll** of D6 for each **damage point** in this unit&apos;s **damage pool**. If the roll equals or exceeds this unit&apos;s **ward value**, remove that damage point from the damage pool.</characteristic>
       </characteristics>
       <attributes>
         <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
@@ -15652,7 +15652,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hero^^** within 3&quot; of a **Place of Power** to use this ability, then pick that **Place of Power** to be the target.</characteristic>
         <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 1, inflict D3 mortal damage on that **^^Hero^^**. On a 2+:
 • If that **^^Hero^^** is a **^^Wizard^^** or **^^Priest^^**, add 1 to casting rolls or chanting rolls for that **^^Hero^^** this turn.
-• If that **^^Hero^^** is not a **^^Wizard^^** or **^^Priest^^**, they can use the 'Unbind' or 'Banish Manifestation' ability this turn as if they had **^^Wizard (1)^^**.</characteristic>
+• If that **^^Hero^^** is not a **^^Wizard^^** or **^^Priest^^**, they can use the &apos;Unbind&apos; or &apos;Banish Manifestation&apos; ability this turn as if they had **^^Wizard (1)^^**.</characteristic>
         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
       </characteristics>
@@ -15675,8 +15675,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hero^^** within 3&quot; of a **Place of Power** to use this ability, then pick that **Place of Power** to be the target.</characteristic>
         <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
 • ***Cauterising Pollen:*** Roll a dice. On a 1, inflict 1 mortal damage on each unit (friendly and enemy) within 6&quot; of any **Places of Power**. On a 3+, **Heal (2)** each unit (friendly and enemy) wholly within 6&quot; of the target.
-• ***Rapid Sprouting:*** Pick a Ghyranite objective or visible terrain feature within 12&quot; of that **^^Hero^^** and roll a dice. On a 3+, that objective or terrain feature has the 'Obscuring' ability (see 1.2) for the rest of the battle.
-• ***Tap the Ley Lines:*** For the rest of the turn, if that **^^Hero^^** is not a **^^Wizard^^** or **^^Priest^^**, they can use the 'Unbind' or 'Banish Manifestation' ability as if they had **^^Wizard (1)^^**.</characteristic>
+• ***Rapid Sprouting:*** Pick a Ghyranite objective or visible terrain feature within 12&quot; of that **^^Hero^^** and roll a dice. On a 3+, that objective or terrain feature has the &apos;Obscuring&apos; ability (see 1.2) for the rest of the battle.
+• ***Tap the Ley Lines:*** For the rest of the turn, if that **^^Hero^^** is not a **^^Wizard^^** or **^^Priest^^**, they can use the &apos;Unbind&apos; or &apos;Banish Manifestation&apos; ability as if they had **^^Wizard (1)^^**.</characteristic>
         <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**</characteristic>
         <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
       </characteristics>
@@ -15816,8 +15816,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Priority Target" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8bb9-a31d-4540-0425">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit in, but not leading, a regiment to be that regiment's **honour guard**. You can pick a unit in reserve.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to hit rolls and wound rolls for attacks made by that **honour guard** unit that target the enemy general, or the enemy **honour guard** if it is in the enemy general's regiment, if the target of the attack is within 12&quot;.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit in, but not leading, a regiment to be that regiment&apos;s **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to hit rolls and wound rolls for attacks made by that **honour guard** unit that target the enemy general, or the enemy **honour guard** if it is in the enemy general&apos;s regiment, if the target of the attack is within 12&quot;.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -15830,10 +15830,10 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Bodyguard" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4a1a-5004-d133-ac9c">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit in, but not leading, a regiment to be that regiment's **honour guard**. You can pick a unit in reserve.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Attacks characteristic of enemy units' melee weapons while they are in combat with the unit leading that regiment if both of the following are true:
-• That regiment's **honour guard** is wholly within 6&quot; of the leader of that regiment.
-• Neither that regiment's **honour guard** nor the regiment's leader charged this turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit in, but not leading, a regiment to be that regiment&apos;s **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from the Attacks characteristic of enemy units&apos; melee weapons while they are in combat with the unit leading that regiment if both of the following are true:
+• That regiment&apos;s **honour guard** is wholly within 6&quot; of the leader of that regiment.
+• Neither that regiment&apos;s **honour guard** nor the regiment&apos;s leader charged this turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -15846,7 +15846,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Field Sergeant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="54eb-6de5-1e82-a796">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Fly Infantry Hero^^** in, but not leading, a regiment to be that regiment's **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Fly Infantry Hero^^** in, but not leading, a regiment to be that regiment&apos;s **honour guard**. You can pick a unit in reserve.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 2&quot; to the Move characteristic of friendly non-**^^Fly Infantry^^** units while they are wholly within 12&quot; of the **honour guard**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -15860,8 +15860,8 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Prized Beast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ad6-dccc-c9b9-dabc">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** that has not been reinforced and that is in, but not leading, a regiment to be that regiment's **honour guard**. You can pick a unit in reserve.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit can ignore the effects of the 'Battle Damaged' ability. In addition, add 1 to hit rolls for combat attacks made by the **honour guard**. This ability also affects Companion weapons.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly non-**^^Unique Monster^^** that has not been reinforced and that is in, but not leading, a regiment to be that regiment&apos;s **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">That unit can ignore the effects of the &apos;Battle Damaged&apos; ability. In addition, add 1 to hit rolls for combat attacks made by the **honour guard**. This ability also affects Companion weapons.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -15874,14 +15874,14 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
         <profile name="Special Assignment" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="99f1-c5a8-8a2e-4d27">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit in, but not leading, a regiment to be that regiment's **honour guard**. You can pick a unit in reserve.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly unit in, but not leading, a regiment to be that regiment&apos;s **honour guard**. You can pick a unit in reserve.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following weapon abilities:
 • **Anti-^^Infantry^^ (+1 Rend)**
 • **Anti-^^Cavalry^^ (+1 Rend)**
 • **Anti-^^Monster^^ (+1 Rend)**
 • **Anti-^^War Machine^^ (+1 Rend)**
 • **Anti-^^Beast^^ (+1 Rend)**
-In any turn in which that **honour guard** charged, that unit's melee weapons have the weapon ability you picked.</characteristic>
+In any turn in which that **honour guard** charged, that unit&apos;s melee weapons have the weapon ability you picked.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Honour Guard^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -15894,10 +15894,10 @@ In any turn in which that **honour guard** charged, that unit's melee weapons h
       </profiles>
       <rules>
         <rule name="Honour Guard" id="d3c0-2624-6a5a-1fc6" hidden="false">
-          <description>Each player can use one of the following Honour Guard abilities in each battle. When using that ability, they must pick a unit in their general's regiment to be the honour guard.</description>
+          <description>Each player can use one of the following Honour Guard abilities in each battle. When using that ability, they must pick a unit in their general&apos;s regiment to be the honour guard.</description>
         </rule>
         <rule name="Regimented Forces" id="42aa-b9ec-df97-53ac" hidden="false">
-          <description>If a player has more regiments than their opponent, they can use a second, different **^^Honour Guard^^** ability, but they must pick a unit that is in a different regiment that is not led by the general to be the **honour guard** for that ability. You cannot pick units in a Regiment of Renown to be an **honour guard**. If you chose not to pick an **honour guard** unit in your general's regiment, you can still pick an **honour guard** unit for a different regiment as described above.</description>
+          <description>If a player has more regiments than their opponent, they can use a second, different **^^Honour Guard^^** ability, but they must pick a unit that is in a different regiment that is not led by the general to be the **honour guard** for that ability. You cannot pick units in a Regiment of Renown to be an **honour guard**. If you chose not to pick an **honour guard** unit in your general&apos;s regiment, you can still pick an **honour guard** unit for a different regiment as described above.</description>
         </rule>
       </rules>
       <constraints>
@@ -15986,7 +15986,7 @@ You complete this battle tactic at the end of your turn if you control every obj
                   <characteristics>
                     <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df">• At the start of the battle, your opponent must pick 3 of their units on the battlefield to be carrying a Ghyranite Treasure. They cannot pick faction terrain features or **^^Manifestations^^**. A unit can only carry 1 Ghyranite Treasure. If your opponent has fewer than 3 units on the battlefield, you automatically complete a number of these battle tactics, starting with the **Domination** battle tactic (followed by the **Strike** and then the **Affray**) until the number of remaining uncompleted battle tactics equals the number of enemy units on the battlefield.
 • If you went second in the previous battle round and choose to go first in the current battle round, your opponent can remove 1 Ghyranite Treasure from one of their units at the start of the battle round.
-• If an ability would remove a unit that was carrying treasure from the battlefield and that unit is not set up again as part of the same ability (e.g. 'Dark Apotheosis' or 'Red Ruin'), before removing that unit from the battlefield, your opponent must give the treasure it was carrying to another one of their units that does not have a Ghyranite treasure within 3&quot; of that unit. If this is not possible, that unit counts as having been destroyed for the purpose of this battle tactics card.</characteristic>
+• If an ability would remove a unit that was carrying treasure from the battlefield and that unit is not set up again as part of the same ability (e.g. &apos;Dark Apotheosis&apos; or &apos;Red Ruin&apos;), before removing that unit from the battlefield, your opponent must give the treasure it was carrying to another one of their units that does not have a Ghyranite treasure within 3&quot; of that unit. If this is not possible, that unit counts as having been destroyed for the purpose of this battle tactics card.</characteristic>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Stolen Seedpod:
 You complete this battle tactic at the end of your turn if at least 1 enemy unit carrying a Ghyranite Treasure has been destroyed this battle.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Contraband Aqua Ghyranis:
@@ -16122,7 +16122,7 @@ You complete this battle tactic at the end of your turn if 1 of the following is
 • There is no enemy **fugitive** on the battlefield.</characteristic>
                     <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Bring Them In:
 You complete this battle tactic at the end of your turn if 1 of the following is true:
-• There are 3 or more enemy units in combat with the enemy **fugitive**.
+• There are 3 or more friendly units in combat with the enemy **fugitive**.
 • There is no enemy **fugitive** on the battlefield and 3 or more friendly units are contesting the same objective that is wholly outside friendly territory.</characteristic>
                   </characteristics>
                 </profile>
