@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="42" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="640e-6bc1-c83d-13c" name="Nighthaunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="43" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Artefacts of Power" id="f997-403-7b2e-60c6" hidden="false">
       <selectionEntryGroups>
@@ -53,7 +53,7 @@
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend up to 3 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend up to 3 **rage dice**. If your opponent&apos;s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.
 Then, roll XD6, where X is the number of **rage dice** spent. This unit can move a distance in inches up to the roll but must end that move in combat with a damaged enemy unit and/or an enemy unit that has fewer models than its starting size.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -202,7 +202,7 @@ Then, roll XD6, where X is the number of **rage dice** spent. This unit can move
                 <profile name="Tombstone of the Penitent" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5997-e952-7a26-bef4">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit's melee weapons for each non-**^^Faction Terrain^^** terrain feature that is being contested by friendly units, to a maximum of 8.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons for each non-**^^Faction Terrain^^** terrain feature that is being contested by friendly units, to a maximum of 8.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -221,7 +221,7 @@ Then, roll XD6, where X is the number of **rage dice** spent. This unit can move
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** within 18&quot; of this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the 'Guarded Hero' ability or the 'Obscuring' terrain ability.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the &apos;Guarded Hero&apos; ability or the &apos;Obscuring&apos; terrain ability.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -660,13 +660,33 @@ Then, roll XD6, where X is the number of **rage dice** spent. This unit can move
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8da4-ff3c-75ca-610c" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Backstabbing Betrayers" hidden="false" id="4721-b89a-072a-2a06">
               <profiles>
                 <profile name="Backstabbing Betrayers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2ec6-e947-a62c-2440">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit's melee weapons while it is more than 12&quot; from all other friendly **^^Nighthaunt^^** units.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Attacks characteristic of this unit&apos;s melee weapons while it is more than 12&quot; from all other friendly **^^Nighthaunt^^** units.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -678,6 +698,26 @@ Then, roll XD6, where X is the number of **rage dice** spent. This unit can move
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9f26-5c65-89fd-f041" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Cowards and Deserters" hidden="false" id="1993-1107-196f-ec03">
               <profiles>
@@ -687,7 +727,7 @@ Then, roll XD6, where X is the number of **rage dice** spent. This unit can move
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After that **^^Fight^^** ability has been resolved, roll a dice. You can spend 1 **rage dice**. If you do:
 • Add 1 to the roll.
-• If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.
+• If your opponent&apos;s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.
 On a 3+, this unit can move a distance up to its Move characteristic. It can move through the combat ranges of enemy units but cannot end that move in combat.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -702,6 +742,26 @@ On a 3+, this unit can move a distance up to its Move characteristic. It can mov
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="18fd-150e-7b5b-7d59" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -775,7 +835,7 @@ On a 3+, this unit can move a distance up to its Move characteristic. It can mov
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If there is a friendly **Nexus of Grief** on the battlefield, you can set up up to 2 additional **Nexuses of Grief** on the battlefield. Each must be set up wholly outside enemy territory, more than 3&quot; from all objectives and other terrain features, and more than 12&quot; from all other friendly **Nexuses of Grief**.
-**Designer's Note:** *The original* **Nexus of Grief** *is set up in Step 1 of the deployment phase using the 'Deploy Faction Terrain' ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*</characteristic>
+**Designer&apos;s Note:** *The original* **Nexus of Grief** *is set up in Step 1 of the deployment phase using the &apos;Deploy Faction Terrain&apos; ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>

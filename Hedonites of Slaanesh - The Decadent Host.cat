@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7156-35e7-686b-f032" name="Hedonites of Slaanesh - The Decadent Host" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="95" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7156-35e7-686b-f032" name="Hedonites of Slaanesh - The Decadent Host" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="95" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Paths" id="fe9b-c237-cb88-4f51" hidden="true">
       <entryLinks>
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="67e7-9554-a568-7c8f" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="a4aa-06fd-bd13-fd33" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
         <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="a14e-03f7-50df-eb20" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
+        <entryLink import="true" name="Paths" hidden="false" id="5528-7855-6d6d-47c7" type="selectionEntryGroup" targetId="13c8-a5de-c589-3c9e" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -1057,6 +1058,44 @@ While this unit is within 3&quot; of and visible to the friendly **Sigvald**, ad
       </costs>
       <categoryLinks>
         <categoryLink name="DECADENT HOST" hidden="false" id="7cd0-f0ca-5647-0c6a" targetId="ad41-09e2-315f-626f" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Hedonites of Slaanesh Hero" hidden="false" id="cac1-b58c-915a-0815" type="selectionEntry" targetId="8457-5a8f-ceaa-7bd8">
+      <entryLinks>
+        <entryLink import="true" name="Warlord" hidden="false" id="bc31-bd39-3662-69bc" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="40a1-8ba5-c7c8-826a" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="027b-8776-974f-b746" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1db9-8847-796c-6819" type="selectionEntryGroup" targetId="4f3a-d66e-c12c-f1b1"/>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="fd8b-efea-72c2-66aa" type="selectionEntryGroup" targetId="08bd-d8a0-e8cc-0dc9"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="7729-e135-7978-8a61" type="selectionEntryGroup" targetId="b36f-ddc5-0938-2823"/>
+        <entryLink import="true" name="Paths" hidden="false" id="ded5-0274-c4bb-8ea1" type="selectionEntryGroup" targetId="fe9b-c237-cb88-4f51"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="DECADENT HOST" hidden="false" id="17f0-e9a5-795f-bfaf" targetId="ad41-09e2-315f-626f" primary="false"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>

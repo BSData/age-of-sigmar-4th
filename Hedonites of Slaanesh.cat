@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="33" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="afdb-68a1-283e-3bf2" name="Hedonites of Slaanesh" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="34" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Hedonites of Slaanesh - Library" id="253b-dcd3-c7aa-eab" targetId="34e0-2290-e185-efd2"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fbec-3fce-0906-d052" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -371,8 +371,8 @@
               <characteristics>
                 <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
                 <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Hedonites of Slaanesh Hero^^** that has an artefact of power to be the target.</characteristic>
-                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Give the target a heroic trait from the 'Figureheads of the Dark Prince' or 'Hedonistic Obsessions' tables.
-**Designer's Note:** *This heroic trait is given to the target during the deployment phase, not during army composition.*</characteristic>
+                <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Give the target a heroic trait from the &apos;Figureheads of the Dark Prince&apos; or &apos;Hedonistic Obsessions&apos; tables.
+**Designer&apos;s Note:** *This heroic trait is given to the target during the deployment phase, not during army composition.*</characteristic>
                 <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                 <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
               </characteristics>
@@ -459,7 +459,7 @@
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Movement Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If it is your turn, apply the effect below. If it is your opponent's turn, roll a dice. On a 3+, apply the effect below:
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If it is your turn, apply the effect below. If it is your opponent&apos;s turn, roll a dice. On a 3+, apply the effect below:
 Inflict D3 mortal damage on the target. Then, this unit must move a distance up to its Move characteristic. It can move through the combat ranges of enemy units but cannot end that move in combat.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Move^^**</characteristic>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -775,6 +775,7 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
         <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="1f33-461b-b551-c4eb" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
         <entryLink import="true" name="Ascension Paths" hidden="false" id="f970-f641-d6a3-fd9e" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
         <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="e30e-af78-05c8-adfb" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
+        <entryLink import="true" name="Paths" hidden="false" id="175b-970b-5c60-e36c" type="selectionEntryGroup" targetId="13c8-a5de-c589-3c9e" flatten="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
@@ -799,7 +800,7 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle, while this unit is contesting the target objective:
 • This unit has **^^Ward^^** (5+).
-• Add 5 to this unit's control score.</characteristic>
+• Add 5 to this unit&apos;s control score.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -813,12 +814,32 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb2a-0237-2989-0562" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Obsession with Form" hidden="false" id="4680-75a1-f41a-47a8">
               <profiles>
                 <profile name="Obsession with Form" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5220-1127-ebc3-66f5">
                   <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared the 'Run' ability for this unit</characteristic>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Reaction: You declared the &apos;Run&apos; ability for this unit</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Subtract 1 from hit rolls for attacks that target this unit for the rest of the turn.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -834,6 +855,26 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b4d9-1cb6-5099-e8d6" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Obsession with Pain" hidden="false" id="eb93-5bf0-ccc7-41b5">
               <profiles>
@@ -841,7 +882,7 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is damaged, spend 1 **rage dice**. If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, add 1 to the Rend characteristic of this unit's non-**^^Companion^^** melee weapons for the rest of the turn.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is damaged, spend 1 **rage dice**. If your opponent&apos;s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, add 1 to the Rend characteristic of this unit&apos;s non-**^^Companion^^** melee weapons for the rest of the turn.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -855,6 +896,26 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e48b-0b04-8104-95de" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -2465,6 +2526,41 @@ Inflict D3 mortal damage on the target. Then, this unit must move a distance up 
           </conditions>
         </modifierGroup>
       </modifierGroups>
+    </entryLink>
+    <entryLink import="true" name="Anvil of Apotheosis: Hedonites of Slaanesh Hero" hidden="false" id="c5e3-24bf-0f70-84d2" type="selectionEntry" targetId="8457-5a8f-ceaa-7bd8">
+      <entryLinks>
+        <entryLink import="true" name="Heroic Traits" hidden="false" id="a617-3e30-3d2b-ec3f" type="selectionEntryGroup" targetId="c061-56e0-f2c0-af3e"/>
+        <entryLink import="true" name="Artefacts of Power" hidden="false" id="884f-8245-06ab-158c" type="selectionEntryGroup" targetId="521a-8c3e-b543-3b40"/>
+        <entryLink import="true" name="Paths" hidden="false" id="59ca-1b09-08bf-d638" type="selectionEntryGroup" targetId="3036-9f76-bbb9-e18a"/>
+        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e6e3-1959-440e-ee79" type="selectionEntryGroup" targetId="1331-6d75-79fb-92af"/>
+        <entryLink import="true" name="Warlord" hidden="false" id="7253-3ffc-3b91-b0e0" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
+        <entryLink import="true" name="Renown" hidden="false" id="c7f2-7119-79ca-7dbe" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="b75e-7b85-78ab-8ffc" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <selectionEntries>

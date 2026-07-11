@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b7b7-cf58-4189-56ec" name="Helsmiths of Hashut" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="55" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b7b7-cf58-4189-56ec" name="Helsmiths of Hashut" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="55" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Helsmiths of Hashut - Library" id="8490-04c0-27e7-8d15" targetId="2c07-f0f9-8601-d082"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="2cab-e54e-6f5e-7ada" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
@@ -89,7 +89,7 @@ Then, allocate your **daemonic power points** to friendly non-**^^Hobgrot Helsmi
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is not a **^^Wizard^^**, it has **^^Wizard (2)^^** until the start of your next turn.
 
 If this unit is a **^^Wizard^^**, until the start of your next turn:
-• Add 1 to this unit's power level.
+• Add 1 to this unit&apos;s power level.
 • Add D3 to casting rolls for this unit.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -177,7 +177,7 @@ If this unit is a **^^Wizard^^**, until the start of your next turn:
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
 • The target has **^^Ward (2+)^^**.
 • The target cannot use non-passive abilities or be picked to be the target of friendly abilities.
-• Enemy units can ignore the target's combat range for the purposes of movement and charging.
+• Enemy units can ignore the target&apos;s combat range for the purposes of movement and charging.
 • Enemy units can ignore the target for the purposes of setting up on the battlefield but cannot be set up on the target.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -341,8 +341,8 @@ If this unit is a **^^Wizard^^**, until the start of your next turn:
             <profile name="Domination Hexes" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="2c38-a3cb-bc21-ca71">
               <characteristics>
                 <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Double the Health characteristic of friendly non-**^^Hobgrot Helsmiths of Hashut^^** units for the purposes of the 'Power Through' command.
-**Designer's Note:** *The effect of this ability applies both when you use 'Power Through' and when your opponent uses 'Power Through'.*</characteristic>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Double the Health characteristic of friendly non-**^^Hobgrot Helsmiths of Hashut^^** units for the purposes of the &apos;Power Through&apos; command.
+**Designer&apos;s Note:** *The effect of this ability applies both when you use &apos;Power Through&apos; and when your opponent uses &apos;Power Through&apos;.*</characteristic>
               </characteristics>
               <attributes>
                 <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
@@ -560,14 +560,14 @@ If this unit is a **^^Wizard^^**, until the start of your next turn:
     </selectionEntryGroup>
     <selectionEntryGroup name="Accursed Devices" id="d0dc-5188-54c8-6f77" hidden="false">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Accursed Devices: Helsmiths of Hashut" id="86af-42f5-1779-3055" hidden="true" publicationId="9e18-bb03-7b60-d4ff">
+        <selectionEntryGroup name="Accursed Devices" id="86af-42f5-1779-3055" hidden="true" publicationId="9e18-bb03-7b60-d4ff">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Infernal Motivators" hidden="false" id="2ace-b526-6a90-5b40">
               <profiles>
                 <profile name="Infernal Motivators" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ce4a-2d7a-ca4c-455f">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2&quot; to this unit's Move characteristic.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 2&quot; to this unit&apos;s Move characteristic.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Gray</attribute>
@@ -579,13 +579,33 @@ If this unit is a **^^Wizard^^**, until the start of your next turn:
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f917-6164-b8b8-10c8" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Earthwrack Stabilisers" hidden="false" id="2b30-dd7d-0a4d-b086">
               <profiles>
                 <profile name="Earthwrack Stabilisers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8a58-8275-4192-e496">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit's melee weapons if it has not charged in the same turn.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Rend characteristic of this unit&apos;s melee weapons if it has not charged in the same turn.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -597,6 +617,26 @@ If this unit is a **^^Wizard^^**, until the start of your next turn:
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bd19-7a6d-3618-6086" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Bullfather&apos;s Scorn" hidden="false" id="5520-72bf-4d9b-ca07">
               <profiles>
@@ -606,10 +646,10 @@ If this unit is a **^^Wizard^^**, until the start of your next turn:
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can spend 1 **rage dice**. If you do:
 • Apply the effect below.
-• If your opponent's **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.
+• If your opponent&apos;s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.
 Otherwise, roll a dice. On a 3+, apply the effect below.
 
-This unit's ranged weapons have **^^Crit (2 Hits)^^** until the start of your next turn. If each of this unit's ranged weapons already have **^^Crit (2 Hits)^^**, this unit's shooting attacks score critical hits on unmodified hit rolls of 5+ until the start of your next turn instead.</characteristic>
+This unit&apos;s ranged weapons have **^^Crit (2 Hits)^^** until the start of your next turn. If each of this unit&apos;s ranged weapons already have **^^Crit (2 Hits)^^**, this unit&apos;s shooting attacks score critical hits on unmodified hit rolls of 5+ until the start of your next turn instead.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -623,6 +663,26 @@ This unit's ranged weapons have **^^Crit (2 Hits)^^** until the start of your ne
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a0d-2529-7a0d-794b" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -643,7 +703,7 @@ This unit's ranged weapons have **^^Crit (2 Hits)^^** until the start of your ne
             </rule>
           </rules>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Accursed Devices: Helsmiths of Hashut" id="0455-04af-0dd9-1719" hidden="true" publicationId="f894-7929-f79a-a269">
+        <selectionEntryGroup name="Accursed Devices" id="0455-04af-0dd9-1719" hidden="true" publicationId="f894-7929-f79a-a269">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Greed Pistons" hidden="false" id="8f46-4718-0522-1964">
               <profiles>
@@ -691,7 +751,7 @@ This unit's ranged weapons have **^^Crit (2 Hits)^^** until the start of your ne
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared an **^^Attack^^** ability for this unit</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the phase:
-• Add 1 to hit rolls for this unit's attacks, including those made with **Companion** weapons, that target an enemy unit within 9&quot; of it.
+• Add 1 to hit rolls for this unit&apos;s attacks, including those made with **Companion** weapons, that target an enemy unit within 9&quot; of it.
 • Each time an unmodified hit roll for an attack made by this unit is 1, allocate 1 damage point to this unit after the Attack ability has been resolved (ward rolls cannot be made for those damage points).</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>

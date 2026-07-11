@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d731-9058-b0e5-6ff5" name="Disciples of Tzeentch" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="37" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d731-9058-b0e5-6ff5" name="Disciples of Tzeentch" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="38" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Disciples of Tzeentch - Library" id="61ad-3d4e-f82-7dfb" targetId="bb28-eb3d-b408-7bb8"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="d449-4709-6d8f-5ce0" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -346,7 +346,7 @@ Then, roll a dice. If the roll is the same as any of the dice in the casting rol
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible **^^Manifestation^^** (friendly or enemy) that was not set up this turn and is within 12&quot; of this unit to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+:
 • The target is banished.
-• **Heal (X)** this unit, where X is the target's Health characteristic.</characteristic>
+• **Heal (X)** this unit, where X is the target&apos;s Health characteristic.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -367,7 +367,7 @@ Then, roll a dice. If the roll is the same as any of the dice in the casting rol
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of this unit's melee weapons. That weapon's Attacks characteristic is 2D6 for the rest of the battle.</characteristic>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of this unit&apos;s melee weapons. That weapon&apos;s Attacks characteristic is 2D6 for the rest of the battle.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
@@ -523,7 +523,7 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
             <profile name="Symbiotic Madness" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="62b9-a6fd-962f-bf68">
               <characteristics>
                 <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Arcanite^^** units' melee weapons have **Crit (2 Hits)** while they are wholly within 12&quot; of a friendly **^^Disciples of Tzeentch Daemon^^** unit.</characteristic>
+                <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Friendly **^^Arcanite^^** units&apos; melee weapons have **Crit (2 Hits)** while they are wholly within 12&quot; of a friendly **^^Disciples of Tzeentch Daemon^^** unit.</characteristic>
               </characteristics>
               <attributes>
                 <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
@@ -777,6 +777,26 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6132-08d5-41f9-503d" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Vision of Destined Conquest" hidden="false" id="459b-9a0f-860c-80d5">
               <profiles>
@@ -800,6 +820,26 @@ If you remove 1 or more damage points from the damage pool of a friendly **^^Dis
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ac72-5014-1839-749f" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Vision of Arcane Sacrifice" hidden="false" id="98bf-841c-d2e3-a635">
               <profiles>
@@ -821,6 +861,26 @@ The first time this unit is destroyed, gain D6 **fate points**.</characteristic>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2dd5-efe4-989a-e60f" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <modifiers>

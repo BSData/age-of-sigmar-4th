@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5079-92b5-4879-69f8" name="Maggotkin of Nurgle" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="47" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5079-92b5-4879-69f8" name="Maggotkin of Nurgle" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="48" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Maggotkin of Nurgle - Library" id="5118-2b4-6e2-3504" targetId="7589-6d2-dadc-bc6"/>
     <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="08b4-e92c-8190-9cc7" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
@@ -309,7 +309,7 @@ Each time the **plague progenitor** is picked to be the target of the &apos;Spre
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick a visible enemy unit within 1&quot; of it to be the target.</characteristic>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to this unit's Move characteristic. For each 3+, inflict 1 mortal damage on the target.
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a number of dice equal to this unit&apos;s Move characteristic. For each 3+, inflict 1 mortal damage on the target.
 If any damage points were allocated to the target by this ability, this unit can move 2D3&quot;. It can move through the combat ranges of enemy units but must end that move in combat with the unit it was already in combat with at the start of
 the move.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
@@ -500,7 +500,7 @@ the move.</characteristic>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
                     <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn:
-• Each time the target uses a **^^Retreat^^** ability, if it is in combat with this unit, roll 2D6 as a reaction and add the target's Control characteristic to the roll. On an 8+, that **^^Retreat^^** ability has no effect.
+• Each time the target uses a **^^Retreat^^** ability, if it is in combat with this unit, roll 2D6 as a reaction and add the target&apos;s Control characteristic to the roll. On an 8+, that **^^Retreat^^** ability has no effect.
 • The target cannot be removed from the battlefield by an ability that would allow it to be set up elsewhere on the battlefield or in reserve.</characteristic>
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
@@ -515,15 +515,35 @@ the move.</characteristic>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="695e-3a31-fc83-982a" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Chuckling Murrain" hidden="false" id="e928-0b8b-ff77-dc19">
               <profiles>
                 <profile name="Chuckling Murrain" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ec4b-44d8-9986-cc79">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Your opponent must spend 1 additional **rage dice** for a unit to use the 'Eruption of Fury' ability while it is in combat with this unit.
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Your opponent must spend 1 additional **rage dice** for a unit to use the &apos;Eruption of Fury&apos; ability while it is in combat with this unit.
 
-When resolving the damage sequence for enemy units in combat with this unit, each time your opponent would spend **rage dice** as part of the 'Fight Through the Pain' ability, they must spend 1 additional **rage dice**.
+When resolving the damage sequence for enemy units in combat with this unit, each time your opponent would spend **rage dice** as part of the &apos;Fight Through the Pain&apos; ability, they must spend 1 additional **rage dice**.
 
 In both cases, that additional dice does not count towards the number of **rage dice** spent for the purposes of the ability.</characteristic>
                   </characteristics>
@@ -537,13 +557,33 @@ In both cases, that additional dice does not count towards the number of **rage 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="28ea-1775-af3c-b181" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Weeping Flux" hidden="false" id="3f02-a4f7-da50-7a13">
               <profiles>
                 <profile name="The Weeping Flux" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9671-42c0-0c96-760e">
                   <characteristics>
                     <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in this unit is slain by a combat attack, roll a number of dice equal to this unit's Health characteristic. For each 6, inflict 1 mortal damage on the attacking unit.</characteristic>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a model in this unit is slain by a combat attack, roll a number of dice equal to this unit&apos;s Health characteristic. For each 6, inflict 1 mortal damage on the attacking unit.</characteristic>
                   </characteristics>
                   <attributes>
                     <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
@@ -555,6 +595,26 @@ In both cases, that additional dice does not count towards the number of **rage 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7cfb-8d87-a196-9df3" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="points">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="01b1-5112-ab45-1afc" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f079-501a-2738-6844" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8e6f-2dd7-a7ed-489e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+                <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+                <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+                <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -571,7 +631,7 @@ In both cases, that additional dice does not count towards the number of **rage 
           </modifiers>
           <rules>
             <rule name="Enhancement Restrictions" id="2f17-79d7-8d45-812f" hidden="true">
-              <description>Plaguefather's Poxes are unique enhancements that can be given to non-**^^Hero^^** **^^Maggotkin of Nurgle^^** units. A unit can only have 1 Plaguefather's Pox.</description>
+              <description>Plaguefather&apos;s Poxes are unique enhancements that can be given to non-**^^Hero^^** **^^Maggotkin of Nurgle^^** units. A unit can only have 1 Plaguefather&apos;s Pox.</description>
             </rule>
           </rules>
         </selectionEntryGroup>
@@ -618,7 +678,7 @@ In both cases, that additional dice does not count towards the number of **rage 
 ***Infect:*** Pick an enemy unit within 7&quot; of any friendly **^^Maggotkin of Nurgles^^** unit to be the target. You cannot pick a **^^Manifestation^^** or terrain feature.
 • If the target is in combat with any **^^Maggotkin of Nurgle^^** units, it has the **^^Diseased^^** keyword.
 • If the target is not in combat with any **^^Maggotkin of Nurgle^^** units, roll a dice. On a 4+, the target has the **^^Diseased^^** keyword.
-***Spread:*** Pick a **^^Diseased^^** enemy unit to be the target. Each other enemy unit within the target's combat range, excluding **^^Manifestations^^** and terrain features, has the **^^Diseased^^** keyword.
+***Spread:*** Pick a **^^Diseased^^** enemy unit to be the target. Each other enemy unit within the target&apos;s combat range, excluding **^^Manifestations^^** and terrain features, has the **^^Diseased^^** keyword.
 ***Mutate:*** If all enemy units on the battlefield, excluding **^^Manifestations^^** and terrain features, have the **^^Diseased^^** keyword, inflict 1 mortal damage on each of them.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
