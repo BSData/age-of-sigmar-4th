@@ -291,9 +291,11 @@
     <categoryEntry name="WARFLOCK" id="33cc-ab90-fc8f-69ec" hidden="false"/>
     <categoryEntry name="KHARADRON OVERLORDS" id="9c8d-276-b7d2-f1fd" hidden="false"/>
     <categoryEntry name="SKYFARER" id="e13e-4c7c-54fd-908" hidden="false"/>
+    <categoryEntry name="BEASTCLAW" id="410d-6b15-3cf4-88d0" hidden="false"/>
     <categoryEntry name="BEASTCLAW RAIDERS" id="1a3d-33f9-c4cc-fe0" hidden="false"/>
     <categoryEntry name="CHAMPION (1/5)" id="11c3-dbff-a3f7-ab" hidden="false"/>
     <categoryEntry name="GUTBUSTERS" id="5c0d-5e93-d71f-f0da" hidden="false"/>
+    <categoryEntry name="MAWSEEKERS" id="b50b-6a98-f92a-c99c" hidden="false"/>
     <categoryEntry name="MUSICIAN (1/6)" id="a9bc-adc0-42a0-e843" hidden="false"/>
     <categoryEntry name="OGOR" id="ddcb-3c91-472f-c35a" hidden="false"/>
     <categoryEntry name="OGOR MAWTRIBES" id="743-1bd8-e3d-ced2" hidden="false"/>
@@ -15709,6 +15711,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Regiments of Renown" id="27d9-b0c5-1ecc-ba2f" hidden="false"/>
     <publication name="Battletome: Lumineth Realmlords" id="9ed1-cf74-eb97-dee2" hidden="false"/>
     <publication name="Faction Pack: Ogor Mawtribes" id="1ac6-e227-a186-12" hidden="false"/>
+    <publication name="Battletome: Ogor Mawtribes" id="feba-6749-6df3-ea9e" hidden="false"/>
     <publication name="Battletome: Hedonites of Slaanesh" id="95fc-e96f-a916-bba1" hidden="false"/>
     <publication name="Battletome: Maggotkin of Nurgle" id="9c71-86cb-e1d0-ec8d" hidden="false"/>
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
