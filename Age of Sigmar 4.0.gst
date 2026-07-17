@@ -15710,8 +15710,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="General&apos;s Handbook 2024-25" id="ec12-a5ee-5304-af7" hidden="false"/>
     <publication name="Regiments of Renown" id="27d9-b0c5-1ecc-ba2f" hidden="false"/>
     <publication name="Battletome: Lumineth Realmlords" id="9ed1-cf74-eb97-dee2" hidden="false"/>
-    <publication name="Faction Pack: Ogor Mawtribes" id="1ac6-e227-a186-12" hidden="false"/>
-    <publication name="Battletome: Ogor Mawtribes" id="feba-6749-6df3-ea9e" hidden="false"/>
+    <publication name="Battletome: Ogor Mawtribes" id="1ac6-e227-a186-12" hidden="false"/>
     <publication name="Battletome: Hedonites of Slaanesh" id="95fc-e96f-a916-bba1" hidden="false"/>
     <publication name="Battletome: Maggotkin of Nurgle" id="9c71-86cb-e1d0-ec8d" hidden="false"/>
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
