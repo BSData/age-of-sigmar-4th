@@ -1632,6 +1632,8 @@
         <forceEntryLink name="Brand&apos;s Oathbound" id="a77a-2c33-2058-cc55" hidden="false" targetId="f8bf-3c82-73dc-a7e8" type="forceEntry"/>
         <forceEntryLink name="Bundo Whalebiter" id="725e-8464-14ed-fbee" hidden="false" targetId="fb09-ac57-e70e-716d" type="forceEntry"/>
         <forceEntryLink name="Da Hurtlin&apos; Hogz" id="0e89-f526-57b7-1d9f" hidden="false" targetId="3cd2-b31b-43c8-e42c" type="forceEntry"/>
+        <forceEntryLink name="Okar&apos;s Torrbad" id="c486-232e-39e9-6f8d" hidden="false" targetId="7199-3205-3f4e-5567" type="forceEntry"/>
+        <forceEntryLink name="Urrgar&apos;s Maulerguts" id="8ae3-0748-798b-3e6b" hidden="false" targetId="71ed-0753-4dbb-c952" type="forceEntry"/>
         <forceEntryLink name="Da Kountin&apos; Krew" id="eafd-da06-ddf2-45c2" hidden="false" targetId="1d9c-5fbb-bb1e-bdb8" type="forceEntry"/>
         <forceEntryLink name="Drekki&apos;s Privateers" id="e55f-f5e4-0234-a556" hidden="false" targetId="accf-873b-ebe8-1d1c" type="forceEntry"/>
         <forceEntryLink name="Elthwin&apos;s Thorns" id="ec71-e9ad-433e-12f5" hidden="false" targetId="e484-c06-d856-2921" type="forceEntry"/>
@@ -2947,6 +2949,8 @@
         <forceEntryLink name="Brand&apos;s Oathbound" id="e810-dd10-ad40-d7dc" hidden="false" targetId="f8bf-3c82-73dc-a7e8" type="forceEntry"/>
         <forceEntryLink name="Bundo Whalebiter" id="a446-1667-9435-a624" hidden="false" targetId="fb09-ac57-e70e-716d" type="forceEntry"/>
         <forceEntryLink name="Da Hurtlin&apos; Hogz" id="0fef-4de2-cbaf-1fa4" hidden="false" targetId="3cd2-b31b-43c8-e42c" type="forceEntry"/>
+        <forceEntryLink name="Okar&apos;s Torrbad" id="016e-c595-be24-d468" hidden="false" targetId="7199-3205-3f4e-5567" type="forceEntry"/>
+        <forceEntryLink name="Urrgar&apos;s Maulerguts" id="ae53-9733-e2c5-4623" hidden="false" targetId="71ed-0753-4dbb-c952" type="forceEntry"/>
         <forceEntryLink name="Da Kountin&apos; Krew" id="1d29-8502-728e-9022" hidden="false" targetId="1d9c-5fbb-bb1e-bdb8" type="forceEntry"/>
         <forceEntryLink name="Drekki&apos;s Privateers" id="45d5-6e29-ce35-2e1d" hidden="false" targetId="accf-873b-ebe8-1d1c" type="forceEntry"/>
         <forceEntryLink name="Elthwin&apos;s Thorns" id="f425-dd87-f665-f408" hidden="false" targetId="e484-c06-d856-2921" type="forceEntry"/>
@@ -7006,6 +7010,16 @@
             <modifier type="set" value="false" field="hidden"/>
           </modifiers>
         </forceEntryLink>
+        <forceEntryLink name="Okar&apos;s Torrbad" id="a3b7-55ec-1879-31be" hidden="false" targetId="7199-3205-3f4e-5567" type="forceEntry">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+        </forceEntryLink>
+        <forceEntryLink name="Urrgar&apos;s Maulerguts" id="3145-d476-ea69-fe00" hidden="false" targetId="71ed-0753-4dbb-c952" type="forceEntry">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden"/>
+          </modifiers>
+        </forceEntryLink>
         <forceEntryLink name="Da Kountin&apos; Krew" id="24e9-6e6a-7561-22a8" hidden="false" targetId="1d9c-5fbb-bb1e-bdb8" type="forceEntry">
           <modifiers>
             <modifier type="set" value="false" field="hidden"/>
@@ -7415,6 +7429,90 @@
       <costs>
         <cost name="pts" typeId="points" value="400"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Okar&apos;s Torrbad" id="7199-3205-3f4e-5567" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de5f-588b-ea57-d6b5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="fb4a-1088-3c65-b847" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="MONSTER" hidden="false" id="1c14-f56f-2bd7-5c00" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="Reference" hidden="false" id="43ab-37c1-8310-a288" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fb98-7bc5-1db4-37c3"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="490"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+    </forceEntry>
+    <forceEntry name="Urrgar&apos;s Maulerguts" id="71ed-0753-4dbb-c952" hidden="true">
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b53b-1217-df2e-66d2" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9baf-c109-f621-e60" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b7b7-cf58-4189-56ec" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="832c-fd6-a535-ffae" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8aef-b85d-b63a-ef05" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8e0e-5e8c-5824-89c9" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="231a-2a83-26f0-a718" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="2c23-a678-196b-ad69" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="405e-c5f4-8579-b05c" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="9835-ba0a-099d-f712" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="MONSTER" hidden="false" id="c522-4634-9c6a-7141" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="CAVALRY" hidden="false" id="2ae5-9f4e-33d3-5165" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="Reference" hidden="false" id="0b0f-7516-6809-39de" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1efa-64f2-7611-c2a2"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="600"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
       </costs>
     </forceEntry>
     <forceEntry name="One-eyed Grunnock" id="733b-7b81-c2b-b772" hidden="true">
@@ -13818,6 +13916,8 @@
         <forceEntryLink name="Brand&apos;s Oathbound" id="7894-f810-3ceb-3ec1" hidden="false" targetId="f8bf-3c82-73dc-a7e8" type="forceEntry"/>
         <forceEntryLink name="Bundo Whalebiter" id="cfad-8d09-3590-b433" hidden="false" targetId="fb09-ac57-e70e-716d" type="forceEntry"/>
         <forceEntryLink name="Da Hurtlin&apos; Hogz" id="ca7e-b2cb-83a2-59f4" hidden="false" targetId="3cd2-b31b-43c8-e42c" type="forceEntry"/>
+        <forceEntryLink name="Okar&apos;s Torrbad" id="6ac5-295e-993b-ff14" hidden="false" targetId="7199-3205-3f4e-5567" type="forceEntry"/>
+        <forceEntryLink name="Urrgar&apos;s Maulerguts" id="6e6a-6824-8273-5661" hidden="false" targetId="71ed-0753-4dbb-c952" type="forceEntry"/>
         <forceEntryLink name="Da Kountin&apos; Krew" id="33a0-b698-5e4b-bc74" hidden="false" targetId="1d9c-5fbb-bb1e-bdb8" type="forceEntry"/>
         <forceEntryLink name="Drekki&apos;s Privateers" id="15cf-2bef-c1a0-d16f" hidden="false" targetId="accf-873b-ebe8-1d1c" type="forceEntry"/>
         <forceEntryLink name="Elthwin&apos;s Thorns" id="0039-d6da-433e-f4fd" hidden="false" targetId="e484-c06-d856-2921" type="forceEntry"/>
