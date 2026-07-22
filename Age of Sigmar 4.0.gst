@@ -16139,7 +16139,7 @@ You complete this battle tactic at the end of your turn if 1 of the following is
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Daring Rescue:
 You complete this battle tactic at the end of your turn if an enemy unit that was in combat at the start of the turn was destroyed by a combat attack made by a friendly unit that charged this turn.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Command from the Front:
-You complete this battle tactic at the end of your turn if there are 2 or more friendly **^^Heroes^^** on the battlefield, all freindly **^^Heroes^^** are within 9&quot; of a visible enemy unit and no friendly **^^Heroes^^** were slain this turn.</characteristic>
+You complete this battle tactic at the end of your turn if there are 2 or more friendly **^^Heroes^^** on the battlefield, all friendly **^^Heroes^^** are within 9&quot; of a visible enemy unit and no friendly **^^Heroes^^** were slain this turn.</characteristic>
                     <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Hero of Legend:
 You complete this battle tactic at the end of your turn if you control an objective wholly outside your territory that you did not control at the start of the turn and a friendly **^^Hero^^** is contesting that objective.</characteristic>
                   </characteristics>
