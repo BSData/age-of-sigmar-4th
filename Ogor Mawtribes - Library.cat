@@ -358,33 +358,33 @@ Then, roll a dice. On a 3+, until the start of your next turn, the target cannot
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">8</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">3</characteristic>
           </characteristics>
         </profile>
         <profile name="Fill the Pot" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="33e5-a60f-bd45-8223">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time an enemy unit is destroyed by a combat attack made by a friendly **^^Ogor Mawtribes^^** unit wholly within 18&quot; of this unit, give this unit a **grisly remains point**, to a maximum of 3.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit's cauldron is either filled with grisly remains or empty. It starts the battle empty. If an enemy unit that was in combat with this unit this turn is destroyed and this unit's cauldron is empty, it becomes filled with grisly remains.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
         <profile name="Great Cauldron" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3b0e-b90f-3322-1c36">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You can spend 1 or more of this unit's **grisly remains points**. For each point spent, pick a friendly **^^Gutbusters^^** unit wholly within 12&quot; of this unit to be the target, then pick 1 of the following effects: 
-***Bloodgruel:*** The target has **^^Ward (5+)^^** for the rest of the turn.
-***Spinemarrow:*** Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit's cauldron is filled with grisly remains, pick a visible friendly **^^Mawseekers^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit's cauldron is now empty. Pick 1 of the following effects:
+***Bloodgruel:*** The target has **^^Ward (5+)^^** for the rest of the turn.
+***Spinemarrow:*** Add 1 to the Attacks characteristic of the target's melee weapons for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -395,30 +395,13 @@ Then, roll a dice. On a 3+, until the start of your next turn, the target cannot
         <categoryLink name="OGOR MAWTRIBES" hidden="false" id="c2f2-4734-8b6f-559c" targetId="743-1bd8-e3d-ced2" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="e9c9-7a92-6605-b17e" targetId="75d6-6995-dfcc-3898" primary="false"/>
         <categoryLink name="OGOR" hidden="false" id="c0ff-ba69-326c-4158" targetId="ddcb-3c91-472f-c35a" primary="false"/>
-        <categoryLink name="GUTBUSTERS" hidden="false" id="8f89-1fc1-c94b-7c99" targetId="5c0d-5e93-d71f-f0da" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="a324-c9ce-3e79-1390" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="MAWSEEKERS" hidden="false" id="78e9-16f8-0af5-f33e" targetId="b50b-6a98-f92a-c99c" primary="false"/>
+        <categoryLink name="WARD (6+)" hidden="false" id="7f6e-1663-ca90-14b8" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Slaughtermaster" hidden="false" id="dd2-2f8d-5c8a-8208">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Gnoblars&apos; Implements" hidden="false" id="10da-8d85-539c-71f3">
-              <profiles>
-                <profile name="Gnoblars&apos; Implements" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="74f1-93a-a85c-8497">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">5+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">5+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c194-2042-c328-41bd"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d772-5cf8-21e8-fe3d"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Stump Blades" hidden="false" id="b1d2-1119-7e20-cd96">
               <profiles>
                 <profile name="Stump Blades" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="23ea-7482-8476-9cb7">
@@ -2150,26 +2133,27 @@ Then, roll a dice. On a 3+, until the start of your next turn, the target cannot
         </profile>
         <profile name="Firing from the Belly" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a8ab-ce71-ba62-3fc6">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Shooting Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Shooting Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit has not used a Move ability this turn and was not set up this turn, add 1 to hit rolls for this unit's shooting attacks for the rest of the turn.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit has not used a **^^Move^^** ability this turn and was not set up this turn, add 1 to hit rolls for this unit's shooting attacks for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Shooting</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Powder Gnoblars" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="334f-de4c-6a85-bbd0">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has up to 2 **Powder Gnoblar** tokens. Each time this unit uses a **^^Shoot^^** ability, for each of this unit's **Powder Gnoblars** that are on the battlefield, you can re-roll 1 random characteristic roll for this unit's Attacks characteristic. If a random characteristic roll re-rolled in this manner is 1, remove 1 of this unit's **Powder Gnoblars** from the battlefield.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit's **Powder Gnoblars** are tokens. There are 2 **Powder Gnoblars** for every 4 models in this unit.
+Each time this unit uses a **^^Shoot^^** ability, for each of this unit's **Powder Gnoblars** that are on the battlefield, you can re-roll 1 hit roll of 1 but if that attack misses, remove 1 of this unit's **Powder Gnoblars** from the battlefield after that **^^Shoot^^** ability has been resolved.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Shooting</attribute>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Blue</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Shooting</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -2210,7 +2194,7 @@ Then, roll a dice. On a 3+, until the start of your next turn, the target cannot
                 <profile name="Leadbelcher Gun" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="5b5e-61bb-c592-c812">
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">15&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">D3</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
@@ -4198,17 +4182,17 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">3</characteristic>
           </characteristics>
         </profile>
         <profile name="Torrent of Flame" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8b2e-fc78-685-78b4">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Damage characteristic of this unit's **Fire Breath** for attacks that target **^^Infantry^^**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to the Damage characteristic of this unit's **Fire Breath** if the target is **^^Infantry^^**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Blue</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Shooting</attribute>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Blue</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Shooting</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -4220,6 +4204,7 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         <categoryLink name="INFANTRY" hidden="false" id="f474-7dd3-c9f5-2617" targetId="75d6-6995-dfcc-3898" primary="false"/>
         <categoryLink name="OGOR" hidden="false" id="4955-50e5-1900-e3de" targetId="ddcb-3c91-472f-c35a" primary="false"/>
         <categoryLink name="WIZARD (1)" hidden="false" id="e306-a79e-9af5-c2df" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="GUTBUSTERS" hidden="false" id="749f-39c2-fafa-36bb" targetId="5c0d-5e93-d71f-f0da" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Firebelly" hidden="false" id="f0d1-9063-8c9a-d0f6">
@@ -4284,34 +4269,34 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">6&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">3</characteristic>
           </characteristics>
         </profile>
         <profile name="Masters of Ambush" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b4f2-dae1-5bcb-a57a">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Deployment Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and up to 2 friendly **Frost Sabres** units if those units have not been deployed.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up those units in reserve **outflanking the prey**. They have now been deployed.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit and up to 2 friendly **Frost Sabres** units in this unit's regiment if none of those units have been deployed.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up those units in reserve **outflanking the prey**. They have now been deployed.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Deploy^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Black</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="The Hunt Is On" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="166-c7f0-b1cf-33e8">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Movement Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit if it is **outflanking the prey**.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up this unit wholly within 9&quot; of a battlefield edge and more than 9&quot; from all enemy units. Then, set up each **Frost Sabres** unit that was set up **outflanking the prey** with this unit wholly within 12&quot; of it and more than 9&quot; from all enemy units.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit if it is **outflanking the prey**.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Set up this unit wholly within 9&quot; of a battlefield edge and more than 9&quot; from all enemy units. Then, set up each **Frost Sabres** unit that was set up **outflanking the prey** with this unit wholly within 12&quot; of it and more than 9&quot; from all enemy units.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Gray</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -4335,7 +4320,7 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">-</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Monster^^** (+1 Rend)</characteristic>
                   </characteristics>
                 </profile>
@@ -4345,14 +4330,14 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84ba-f5d7-44d9-f903"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hunter&apos;s Crossbow" hidden="false" id="2efb-4abb-d000-8b93">
+            <selectionEntry type="upgrade" import="true" name="Great Throwing Spear and Crossbow" hidden="false" id="19bc-e2b7-e418-8ead">
               <profiles>
-                <profile name="Hunter&apos;s Crossbow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="13ea-3879-837c-235e">
+                <profile name="Great Throwing Spear and Crossbow" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="ba72-9aaf-c978-91e8">
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">2</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">-</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Monster^^** (+1 Rend)</characteristic>
@@ -4360,27 +4345,8 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e070-44a1-ab8c-b44"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab0f-4d3a-43a6-f85f"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Great Throwing Spear" hidden="false" id="9483-f961-5fc5-f52d">
-              <profiles>
-                <profile name="Great Throwing Spear" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="1ec1-3c5f-b756-9ba0">
-                  <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Anti-**^^Monster^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="353-f3ce-5618-7f82"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="166a-22ac-4e34-c696"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3dfe-94da-e4d7-bc4e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8988-ad7e-0bb0-b368"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -4414,6 +4380,17 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Gutless" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d1be-af8c-2a56-92e3">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit cannot use the 'Bull Charge' ability.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Damage</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -4456,7 +4433,7 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4485,16 +4462,27 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         </profile>
         <profile name="Nasty Traps and Tricks" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7e21-a3f-d35e-eb57">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit within 6&quot; of this unit and that used a **^^Move^^** ability this turn to be the target. You cannot pick the same unit to be the target of this ability more than once per turn.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit and that charged this turn to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Gutless" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="8387-2820-2b5e-1c53">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit cannot use the 'Bull Charge' ability.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Orange</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Damage</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -4595,15 +4583,15 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         </profile>
         <profile name="Bounding Leaps" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4725-1412-71e9-fefb">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Enemy Combat Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Enemy Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move up to 3&quot;. It can move into combat.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can move up to 3&quot;. It can move through the combat ranges of enemy units and end that move in combat.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -4613,7 +4601,6 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         <categoryLink name="DESTRUCTION" hidden="false" id="5267-3363-61e6-989e" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="BEASTCLAW" hidden="false" id="4a-5403-2c22-17d1" targetId="410d-6b15-3cf4-88d0" primary="false"/>
         <categoryLink name="INFANTRY" hidden="false" id="27e6-f6c1-8e02-f8ce" targetId="75d6-6995-dfcc-3898" primary="true"/>
-        <categoryLink name="WARD (6+)" hidden="false" id="79d5-99c8-5df6-ad95" targetId="70a4-383f-421f-52cd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Icefall Yhetee" hidden="false" id="9e89-4d5f-6604-4a47" defaultAmount="3">
@@ -4673,15 +4660,15 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         </profile>
         <profile name="Been There, Done That" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="250a-62aa-c07d-da93">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: This unit was picked as the target of a non-**^^Core^^** ability</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: This unit was picked to be the target of a non-**^^Core^^** ability</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 4+, that ability has no effect on this unit.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Green</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -4725,7 +4712,7 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
                     <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">2</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
                   </characteristics>
                 </profile>
@@ -4771,22 +4758,11 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         <profile name="Alpha Cavalry" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="aedb-3fcf-b1c9-b703">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The **Charge (+1 Damage)** weapon ability has no effect on attacks that target this unit.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The **Charge (+1 Damage)** weapon ability has no effect on attacks that target this unit.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
-        <profile name="Lumpen Wall of Flesh" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3c2-be9b-e291-75a1">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from wound rolls for shooting attacks that target friendly **^^Beastclaw Raiders^^** units while they are within this unit's combat range.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
@@ -4850,42 +4826,11 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Companion</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ironlock Pistol" hidden="false" id="262e-28e0-3f84-5967">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86a8-34ce-c79a-acf3" automatic="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5285-c12f-ecce-bb05" automatic="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Ironlock Pistol" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="7386-d945-36a3-ac92">
-                  <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">10&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">Shoot in Combat</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="0" field="5285-c12f-ecce-bb05">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="31e7-5cb6-3efe-99c3" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="0" field="86a8-34ce-c79a-acf3">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="31e7-5cb6-3efe-99c3" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -4943,17 +4888,6 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
         <categoryLink name="OGOR MAWTRIBES" hidden="false" id="ce04-3850-8fd0-d050" targetId="743-1bd8-e3d-ced2" primary="false"/>
       </categoryLinks>
       <profiles>
-        <profile name="Great Mawpot" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a716-182b-d7ec-1794">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The **Great Mawpot** is either **full** or **empty**. It starts the battle **full**.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
         <profile name="Great Mawpot" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="b94f-154c-51e9-8dc8">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">-</characteristic>
@@ -4966,38 +4900,39 @@ Add 1 to casting rolls for visible friendly **^^Mawseekers Wizards^^** while the
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the **Great Mawpot** is full, **Heal (D3)** each friendly unit wholly within 18&quot; of it. After you have done so, the **Great Mawpot** is empty.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this **Great Mawpot** is full, **Heal (D3)** each visible friendly unit wholly within 18&quot; of it. After you have done so, this **Great Mawpot** is empty.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
         <profile name="Vessel of the Gulping God" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="21dc-31c8-ec8a-48aa">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If the **Great Mawpot** is full, pick a friendly **^^Ogor Wizard^^** within 3&quot; of it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to the power level of the target for the rest of the turn.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this **Great Mawpot** is full, pick a visible friendly **^^Ogor Mawtribes^^** **^^Wizard^^** wholly within 3&quot; of it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Add 1 to casting rolls for the target for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Throw &apos;Em In" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b0aa-620-8f45-ade0">
+        <profile name="Throw 'Em In" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="b0aa-620-8f45-ade0">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If an enemy model is slain within 6&quot; of the **Great Mawpot** when it is **empty**, it becomes **full**.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This **Great Mawpot** is either **full** or **empty**. It starts the battle **full**.
+If an enemy model is slain within 12&quot; of this **Great Mawpot** while it is **empty**, it becomes **full**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
