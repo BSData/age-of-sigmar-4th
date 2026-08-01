@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="98" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="99" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -16155,7 +16155,7 @@ You complete this battle tactic at the end of your turn if you control an object
                   <characteristics>
                     <characteristic name="Card" typeId="67f1-ce6d-1cf4-a4df"/>
                     <characteristic name="Affray" typeId="1047-3e43-674d-dc6c">Ambuscade:
-You complete this battle tactic at the end of your turn if 2 or more objectives or terrain features that you control, in any combination, are each contested by a different friendly unit that is more than 6&quot; from friendly territory and was not set up this turn.</characteristic>
+You complete this battle tactic at the end of your turn if 2 or more objectives or non-**^^Faction Terrain^^** terrain features that you control, in any combination, are each contested by a different friendly unit that is more than 6&quot; from friendly territory and was not set up this turn.</characteristic>
                     <characteristic name="Strike" typeId="94d4-173e-0f65-c569">Surround the Enemy:
 You complete this battle tactic at the end of your turn if 2 or more friendly units that were not set up this turn are each within 9&quot; of a different corner of the battlefield and wholly outside friendly territory.</characteristic>
                     <characteristic name="Domination" typeId="e1d7-1d3c-f001-62e0">Claim What&apos;s Yours:
