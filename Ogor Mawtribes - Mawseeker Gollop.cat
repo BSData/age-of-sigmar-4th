@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5dbd-f273-4a31-505e" name="Ogor Mawtribes - Mawseeker Gollop" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5dbd-f273-4a31-505e" name="Ogor Mawtribes - Mawseeker Gollop" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Butcher" hidden="false" id="b0eb-607d-5c1f-8927" type="selectionEntry" targetId="1688-fcbe-1470-a4ee">
       <categoryLinks>
@@ -43,8 +43,7 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.5c0d-5e93-d71f-f0da"/>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.c79e-2820-22fd-7869"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.75d6-6995-dfcc-3898"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -93,6 +92,39 @@
       <entryLinks>
         <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e766-2a0a-aaeb-1904" type="selectionEntryGroup" targetId="2257-b8b2-7e29-bbba"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.743-1bd8-e3d-ced2"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Cleavers" hidden="false" id="bfec-ef46-75a4-d7d9" type="selectionEntry" targetId="7ad4-12cf-f68d-953f">
       <categoryLinks>
@@ -179,7 +211,7 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.5c0d-5e93-d71f-f0da"/>
+            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.b50b-6a98-f92a-c99c"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
@@ -324,20 +356,20 @@ The number of **raw ingredients** yielded by a destroyed unit is the Health char
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Overflowing Larder" hidden="false" id="8351-5f48-4e35-472e">
               <profiles>
-                    <profile name="Overflowing Larder" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f4be-f72c-f4d3-1d4c">
-                      <characteristics>
-                        <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
-                        <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                        <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Gain D6 **raw ingredients**. If this unit is a **Feastmaster**, gain D3+3 **raw ingredients** instead.</characteristic>
-                        <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                        <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-                      </characteristics>
-                      <attributes>
-                        <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
-                        <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
-                        <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-                      </attributes>
-                    </profile>
+                <profile name="Overflowing Larder" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f4be-f72c-f4d3-1d4c">
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Gain D6 **raw ingredients**. If this unit is a **Feastmaster**, gain D3+3 **raw ingredients** instead.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                  <attributes>
+                    <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Yellow</attribute>
+                    <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bfef-25f9-c31a-d65f" includeChildSelections="true"/>
@@ -373,17 +405,17 @@ The number of **raw ingredients** yielded by a destroyed unit is the Health char
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Indomitable Guts" hidden="false" id="c864-2d4b-7a96-4b16">
               <profiles>
-                    <profile name="Indomitable Guts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9a1f-4340-0ed9-0b85">
-                      <characteristics>
-                        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to ward rolls for this unit.</characteristic>
-                      </characteristics>
-                      <attributes>
-                        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
-                        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
-                        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-                      </attributes>
-                    </profile>
+                <profile name="Indomitable Guts" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9a1f-4340-0ed9-0b85">
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Add 1 to ward rolls for this unit.</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+                    <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                </profile>
               </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a770-b0b7-be5f-49e6" includeChildSelections="true"/>
@@ -423,7 +455,7 @@ The number of **raw ingredients** yielded by a destroyed unit is the Health char
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Spell Lore: Mawseeker Gollop" hidden="false" id="5fb2-cf81-64c6-a2ef" type="selectionEntryGroup" targetId="6fbc-8802-19c4-8cba">
+            <entryLink import="true" name="Gollop Spell Lore" hidden="false" id="5fb2-cf81-64c6-a2ef" type="selectionEntryGroup" targetId="6fbc-8802-19c4-8cba">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d9c-4040-c9a1-79a8"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67a2-be48-6fe5-79b9"/>
