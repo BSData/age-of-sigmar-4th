@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="99" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="100" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -12314,52 +12314,6 @@
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
-        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
-        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
-        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
-      </costs>
-    </forceEntry>
-    <forceEntry name="The Crimson Lash" id="d995-c803-6579-7ed0" hidden="true">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="42ad-8ca7-4b48-7df1" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="b3f9-6c96-b99a-1e71" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="40a4-1c1c-8a00-bb65" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1100-a22f-15c6-bdea" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="efc5-b8d-894c-67c6" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="4e3-e1a7-a8d4-8719" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="1bd9-ad7d-68ee-3b53" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="bb7e-b0da-5c2-a980" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="1ed8-2e23-1563-c119" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink name="HERO" hidden="false" id="b046-be66-dd35-badc" targetId="6e72-1656-d554-528a"/>
-        <categoryLink name="INFANTRY" hidden="false" id="300f-c484-a4e3-5e53" targetId="75d6-6995-dfcc-3898"/>
-        <categoryLink name="MONSTER" hidden="false" id="4d9f-dcfd-aaff-f5b1" targetId="6d54-625c-d063-13e2"/>
-        <categoryLink name="WAR MACHINE" hidden="false" id="5b44-a933-74ca-f6c0" targetId="f7bc-b618-4b5d-2bae"/>
-        <categoryLink name="CAVALRY" hidden="false" id="259f-538e-db90-c7ec" targetId="926c-df8c-6841-d49e"/>
-        <categoryLink name="BEAST" hidden="false" id="875a-24d4-d0f7-5282" targetId="b224-8c8e-ca93-9860"/>
-        <categoryLink name="FACTION TERRAIN" hidden="false" id="54e3-2c96-d79d-87ef" targetId="cdd6-ffa1-9b32-4cb8"/>
-        <categoryLink name="Reference" hidden="false" id="f0cc-d250-73ed-c1a1" targetId="3360-1158-e879-9606"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b8e8-a8dd-33a8-3dce"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="220"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
