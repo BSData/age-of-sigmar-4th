@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="44" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="c83a-4a23-6dc5-fb68" name="Cities of Sigmar - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="45" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Runelord" hidden="false" id="e21a-cca6-9f40-1891" publicationId="7454-bbda-d2b6-0747">
       <categoryLinks>
@@ -10571,7 +10571,7 @@ Any **^^Sigmarite Infantry^^** units</description>
                 <selectionEntry type="upgrade" import="true" name="Sigmarite Battle-priest" hidden="false" id="346a-5e62-0d01-2185" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -10604,13 +10604,11 @@ Any **^^Sigmarite Infantry^^** units</description>
                 <selectionEntry type="upgrade" import="true" name="Agent Azyrite" hidden="false" id="3995-1be3-3fa7-a62b" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="8&quot;" field="fed0-d1b3-1bb8-c501" scope="root-entry" affects="profiles.Unit"/>
-                    <modifier type="set" value="8" field="96be-54ae-ce7b-10b7" scope="root-entry" affects="profiles.Unit"/>
                     <modifier type="set" value="4+" field="1981-ef09-96f6-7aa9" scope="root-entry" affects="profiles.Unit"/>
                   </modifiers>
                   <rules>
@@ -10786,8 +10784,8 @@ If your hero is a **Sigmarite Battle-priest**:
                           <conditionGroups>
                             <conditionGroup type="and">
                               <conditions>
-                                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="346a-5e62-0d01-2185" shared="true" includeChildSelections="true" childName="Sigmarite Battle-priest"/>
-                                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="fc48-e501-434f-f980" shared="true" includeChildSelections="true" childName="Sigmarite Battlemage"/>
+                                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="346a-5e62-0d01-2185" shared="true" includeChildSelections="true" childName="Sigmarite Battle-priest"/>
+                                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fc48-e501-434f-f980" shared="true" includeChildSelections="true" childName="Sigmarite Battlemage"/>
                               </conditions>
                             </conditionGroup>
                           </conditionGroups>
@@ -10823,7 +10821,7 @@ If your hero is a **Sigmarite Battle-priest**:
                   </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-6"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -10871,7 +10869,7 @@ If your hero is a **Sigmarite Battle-priest**:
                   </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -11063,6 +11061,9 @@ If your hero is a **Sigmarite Battle-priest**:
                       <description>Your hero&apos;s non-**Companion** melee weapon has **Charge (+1 Damage**.</description>
                     </rule>
                   </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9ee-0ecf-8cd6-707b"/>
+                  </constraints>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Stormrider" hidden="false" id="507c-db1d-7488-2991" sortIndex="7">
                   <costs>
@@ -11189,7 +11190,7 @@ If your hero is a **Sigmarite Battle-priest**:
                 <selectionEntry type="upgrade" import="true" name="Blade of the Order" hidden="false" id="e57b-ea11-4523-bb3e" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-2"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -11260,7 +11261,7 @@ If your hero is a **Sigmarite Battle-priest**:
                 <selectionEntry type="upgrade" import="true" name="Blademaster" hidden="false" id="7a32-98ac-7aa0-330f" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-4"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-3"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>
@@ -11343,7 +11344,7 @@ If your hero is a **Sigmarite Battle-priest**:
                 <selectionEntry type="upgrade" import="true" name="Impeccable Generalship" hidden="false" id="e2b0-4a68-fcf6-c661" sortIndex="9">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
-                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-6"/>
+                    <cost name="Destiny Point Limit" typeId="bc33-05f5-8d3f-af43" value="-8"/>
                     <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
                     <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
                   </costs>

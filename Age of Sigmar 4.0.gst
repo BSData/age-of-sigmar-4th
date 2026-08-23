@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="100" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="101" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -1047,6 +1047,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -1615,6 +1633,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2363,6 +2399,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -2931,6 +2985,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -4016,6 +4088,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -4572,6 +4662,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -5821,6 +5929,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -6389,6 +6515,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -11122,6 +11266,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="3dfe-6e73-b65e-50fd" shared="true" childName="Cities of Sigmar - Greywater Fastness [LEGENDS]"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -11678,6 +11840,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -13284,6 +13464,24 @@
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                       </conditions>
                     </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                      </conditions>
+                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
@@ -13852,6 +14050,24 @@
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
                         <condition type="instanceOf" value="1" field="selections" scope="parent" childId="7156-35e7-686b-f032" shared="true" childName="Hedonites of Slaanesh - The Decadent Host"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="5dbd-f273-4a31-505e" shared="true" childName="Ogor Mawtribes - Mawseeker Gollop"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7cb-df20-b24b-fcf3" shared="true" childName="Ogor Mawtribes - Meatfist Mawtribe"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="primary-catalogue" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="parent" childId="92db-6ef9-6809-9a65" shared="true" childName="Ogor Mawtribes - The Roving Maw"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
