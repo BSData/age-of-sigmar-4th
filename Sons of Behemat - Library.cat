@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="e691-c828-52e1-f1a8" name="Sons of Behemat - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="e691-c828-52e1-f1a8" name="Sons of Behemat - Library" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Kragnos, the End of Empires" hidden="false" id="7c7-7226-5b84-b87c" publicationId="b765-4747-cddc-385e">
       <entryLinks>
@@ -313,15 +313,15 @@
         <profile name="King Brodd" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="a74-da81-6af3-d8c5">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">40</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">28</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="9d8a-8e5f-2070-1a12">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Obelisk of Tor Crania** is 4 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of this unit&apos;s **Obelisk of Tor Crania** is 13 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -329,44 +329,74 @@
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Creepers" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3a28-2ca4-157d-661c">
+        <profile name="Obelisk of Tor Crania" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3601-a6e1-7754-dff6">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit cannot be picked to be the target of enemy **^^Rampage^^** abilities.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Obelisk of Tor Crania**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
         <profile name="Power of Behemat" typeId="5946-234-d7b4-6195" typeName="Ability (Prayer)" hidden="false" id="3807-d745-251a-dbb7">
           <characteristics>
             <characteristic name="Timing" typeId="76bf-8126-64d4-c709">Your Hero Phase</characteristic>
-            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">5</characteristic>
-            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Make a chanting roll of D6.</characteristic>
-            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">Pick 1 of the following effects. If the chanting roll was 10+, pick 2 instead:
-***Shatter the Mountains:*** Add 2&quot; to the Move characteristic of friendly **^^Sons of Behemat^^** units for the rest of the turn.
-***Might of the Earth:*** **Heal (D3)** each friendly **^^Sons of Behemat^^** unit.
-***Pummel All to Dust:*** For the rest of the turn, add 1 to the Rend characteristic of the **Obelisk of Tor Crania**, **Menhir Club**, **Fortcrusha Flail**, **Shipwrecka Warclub**, **Titanic Boulderclub** and **Massive Club** used by friendly Sons of Behemat units.</characteristic>
+            <characteristic name="Chanting Value" typeId="f192-6780-8138-9cef">4</characteristic>
+            <characteristic name="Declare" typeId="284c-90b2-245b-adf3">Pick a visible friendly **^^Sons of Behemat Monster^^** unit wholly within 12&quot; of this unit to be the target, then make a chanting roll of D6.</characteristic>
+            <characteristic name="Effect" typeId="6219-6fcc-5ae2-a6b7">If the chanting roll was 7+, you can pick another eligible unit to be a second target. Add 1 to the Rend characteristic of each target&apos;s melee weapons for the rest of the turn.</characteristic>
             <characteristic name="Keywords" typeId="e3d8-f58b-e4e0-8e9d">**^^Prayer^^**</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="7564-4bf0-b34a-b143">Yellow</attribute>
-            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Movement</attribute>
+            <attribute name="Type" typeId="c63c-196d-34a7-cec3">Offensive</attribute>
             <attribute name="Parent Node" typeId="5d25-63d6-3935-9312"/>
+          </attributes>
+        </profile>
+        <profile name="Court of Creepers" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9947-d97e-ddcd-02b8">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Hero^^** or **^^Monster^^** in combat with this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. Add 1 to the roll if this unit charged this turn. On a 3+:
+• Add 1 to hit rolls for this unit&apos;s combat attacks that target that enemy unit for the rest of the turn.
+• The target cannot use **^^Rampage^^** abilities for the rest of the turn.
+• The target no longer has any artefacts of power.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Set &apos;Em Up, Then Knock &apos;Em Down!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e049-e9dd-6b72-54cd">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible enemy unit within 18&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If there are 3 or more friendly **^^Big^^** or **^^Little^^** models in combat with the target, apply the effect below. Otherwise, make a rampage roll of D6. On a 3+, apply the effect below.
+
+For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat attacks while it is in combat with 2 or more friendly **^^Big^^** or **^^Little^^** models.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="7d4d-83e8-e18a-3a98" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="WARMASTER" hidden="false" id="1fed-a3-90bf-cd59" targetId="c203-51a0-3d44-6b07" primary="false"/>
         <categoryLink name="UNIQUE" hidden="false" id="8d9e-7f36-1c43-b9cb" targetId="72ce-2188-70bf-2dbd" primary="false"/>
         <categoryLink name="MONSTER" hidden="false" id="290d-cbdc-f104-7169" targetId="6d54-625c-d063-13e2" primary="false"/>
-        <categoryLink name="WARMASTER" hidden="false" id="1fed-a3-90bf-cd59" targetId="c203-51a0-3d44-6b07" primary="false"/>
+        <categoryLink name="PRIEST (1)" hidden="false" id="7b31-96cb-55de-d2af" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
         <categoryLink name="DESTRUCTION" hidden="false" id="6d9f-4c3a-8829-26a9" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="SONS OF BEHEMAT" hidden="false" id="ece9-9feb-f15-a2b2" targetId="482b-a44e-ffc6-df0a" primary="false"/>
-        <categoryLink name="MEGA-GARGANT" hidden="false" id="bb7-ba92-79d0-247" targetId="3723-4d8b-de1e-114b" primary="false"/>
-        <categoryLink name="PRIEST (1)" hidden="false" id="7b31-96cb-55de-d2af" targetId="3fe-84f4-cec6-a1c1" primary="false"/>
+        <categoryLink name="BIG" hidden="false" id="f66a-1e27-18ba-3a17" targetId="aba7-75e8-ea43-5f1e" primary="false"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8c95-c4f5-9677-3dd9" includeChildSelections="true"/>
@@ -374,9 +404,27 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="King Brodd" hidden="false" id="fc14-dab7-8f1d-36eb">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Obelisk of Tor Crania" hidden="false" id="6c54-177f-34fa-cbf8">
+            <selectionEntry type="upgrade" import="true" name="Obelisk of Tor Crania: Calamitous Sweep" hidden="false" id="fbdd-124e-4cca-809e">
               <profiles>
-                <profile name="Obelisk of Tor Crania" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8766-bf86-252e-6b96">
+                <profile name="Obelisk of Tor Crania: Calamitous Sweep" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b23f-1239-f409-9d16">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">20</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf24-f8a6-0b57-8402"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="137f-815e-1b1d-3cc3"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Obelisk of Tor Crania: Crushing Blow" hidden="false" id="bbec-0348-1d72-55c1">
+              <profiles>
+                <profile name="Obelisk of Tor Crania: Crushing Blow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5e48-9b1b-a108-3739">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -388,38 +436,20 @@
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="377-356f-c315-79e7"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ac3-60bb-8de-7896"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Death Grip" hidden="false" id="1917-cfba-6181-8693">
-              <profiles>
-                <profile name="Death Grip" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="47e4-5e79-6d6-bcea">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a685-8f80-a761-1fdd"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="240a-35b-fa71-dcef"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="672d-2310-477b-78ad"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c456-822c-84e5-83af"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="9ac2-54ff-e075-197c">
               <profiles>
                 <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c97-9de-64bc-86e7">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -440,10 +470,6 @@
           </rules>
         </selectionEntry>
       </selectionEntries>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="6fa2-309f-4405-3a6f" hidden="false" type="profile" targetId="ff24-51d-54d2-c80b"/>
-        <infoLink name="Longshanks" id="c84b-89d1-1a53-9a33" hidden="false" type="profile" targetId="c219-8bc2-6da1-f74f"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Beast-smasher Mega-Gargant" hidden="false" id="4a1b-3873-aa68-6d28" publicationId="b765-4747-cddc-385e">
       <entryLinks>
@@ -453,15 +479,15 @@
         <profile name="Beast-smasher Mega-Gargant" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="358c-5196-78e0-c62d">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">35</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">25</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="5ea-4303-9108-3b12">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Menhir Club** is 3 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Menhir Club** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -469,23 +495,12 @@
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Behemoth Brawler" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="3648-de85-f4fd-5522">
+        <profile name="Leader of the Pack" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6ac7-6882-571d-732c">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from the Attacks characteristic of enemy **^^Monsters^^** while they are in combat with this unit.</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-          </attributes>
-        </profile>
-        <profile name="Beast-breaking Strike" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ad3c-ca45-9baa-d1ea">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy Monster in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can make a pile-in move. Then, roll a dice. On a 4+, inflict 5D6 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Attack^^**, **^^Fight^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a Fight ability for this unit</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick another visible friendly **^^Sons of Behemat^^** unit wholly within 12&quot; of this unit to be the target and make a rampage roll of D6. Add 1 to the roll if the target is **^^Little^^**. On a 3+, the target&apos;s melee weapons have **Crit (2 Hits)** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -494,63 +509,88 @@
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
+        <profile name="Primal Aura" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="a352-0ffc-8d5d-3056">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a rampage roll of D6. Add 1 to the roll for each other friendly **^^Big^^** or **^^Little^^** unit that is in combat and within this unit&apos;s combat range. On a 3+, subtract 1 from ward rolls for damage points inflicted by abilities used by this unit for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Menhir Club" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="dd42-b7ed-b6ca-8a9f">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Menhir Club**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="HERO" hidden="false" id="51de-617d-8d7b-b9fa" targetId="6e72-1656-d554-528a" primary="true"/>
         <categoryLink name="MONSTER" hidden="false" id="8c42-2445-24f1-23e8" targetId="6d54-625c-d063-13e2" primary="false"/>
         <categoryLink name="DESTRUCTION" hidden="false" id="a74e-e05b-3419-318b" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="SONS OF BEHEMAT" hidden="false" id="a02c-657f-f623-41a2" targetId="482b-a44e-ffc6-df0a" primary="false"/>
-        <categoryLink name="MEGA-GARGANT" hidden="false" id="37c0-68ce-dfad-6c4b" targetId="3723-4d8b-de1e-114b" primary="false"/>
+        <categoryLink name="BIG" hidden="false" id="ec09-dcca-fb6b-aad1" targetId="aba7-75e8-ea43-5f1e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Beast-smasher Mega-Gargant" hidden="false" id="dd37-5d1b-c13e-c834">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Menhir Club" hidden="false" id="c9fe-2e58-b7de-4ca7">
+            <selectionEntry type="upgrade" import="true" name="Menhir Club: Calamitous Sweep" hidden="false" id="460f-49c1-a02b-cc3c">
               <profiles>
-                <profile name="Menhir Club" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b5d8-4908-500b-9c9c">
+                <profile name="Menhir Club: Calamitous Sweep" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2eda-98e8-4583-d99a">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">5</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Monster^^** (+1 Rend)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">16</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d269-41c9-8065-f72b"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a97-56a6-5c04-c9f"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f3c-ed18-0f73-d18c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc6b-5b74-41a2-3b6f"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Death Grip" hidden="false" id="b92d-e4ee-119b-bc75">
+            <selectionEntry type="upgrade" import="true" name="Menhir Club: Crushing Blow" hidden="false" id="7de3-628a-3087-5d97">
               <profiles>
-                <profile name="Death Grip" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5308-415f-16ed-8554">
+                <profile name="Menhir Club: Crushing Blow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="bb05-bc89-16df-fc84">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb72-99d3-b697-63e2"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e113-b8c3-7183-73ed"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a0d4-e3dc-521b-2b7c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b70-78b8-9f22-69d7"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="f307-eec7-3d0d-e5ad">
               <profiles>
                 <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="ce6d-bf32-f3d7-d1bc">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -571,10 +611,6 @@
           </rules>
         </selectionEntry>
       </selectionEntries>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="f849-d185-dd8c-838d" hidden="false" type="profile" targetId="ff24-51d-54d2-c80b"/>
-        <infoLink name="Longshanks" id="56c7-b5a9-d20c-fbb6" hidden="false" type="profile" targetId="c219-8bc2-6da1-f74f"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gatebreaker Mega-Gargant" hidden="false" id="7e9e-7d9f-d3ab-d143" publicationId="b765-4747-cddc-385e">
       <entryLinks>
@@ -584,15 +620,15 @@
         <profile name="Gatebreaker Mega-Gargant" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="129-928d-2761-8be9">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">35</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">25</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="fafa-5ebc-fa61-bd5e">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 4 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -600,26 +636,40 @@
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Smash Down" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b54c-1a6b-387e-2011">
+        <profile name="Fortcrusha Flail" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="edac-45a0-c8ba-271f">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 3&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target is **^^Faction Terrain^^**, inflict D3+3 mortal damage on it. Then, roll a D3 for each non-**^^Monster^^** unit (friendly and enemy) within 3&quot; of the target. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Fortcrusha Flail**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Rip It Up and Chuck It" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9f5a-6d24-5bfc-d21f">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature within 3&quot; of this unit that is not **uprooted**, then pick a friendly **^^Sons of Behemat^^** unit within 3&quot; of that terrain feature to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a rampage roll of D6. On a 3+:
+• If the target is another **^^Big^^** unit, excluding **Gatebreaker Mega-Gargants**, it is armed with a **Hurled Boulder** for the rest of the turn (see the weapon profile on this unit&apos;s warscroll. Modifiers to this unit&apos;s ranged weapons or shooting attacks do not apply to the target).
+• If the target is a **Gatebreaker Mega-Gargant** or a **^^Little^^** unit, add 1 to the Attacks characteristic of its ranged weapons for the rest of the turn.
+• That terrain feature is **uprooted** for the rest of the battle. If it is **^^Faction Terrain^^**, inflict an amount of mortal damage on it equal to the rampage roll.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Pulverising Strike" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f5f8-c73-ad07-a14a">
+        <profile name="Primal Reckoning" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="435c-1ba6-4cb5-a131">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can make a pile-in move. Then, roll a dice. On a 4+, inflict 4D6 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Attack^^**, **^^Fight^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Attacks characteristic of this unit&apos;s **Fortcrusha Flail: Crushing Blow** for each friendly **^^Sons of Behemat^^** unit that has been destroyed this battle, to a maximum of 10.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -634,7 +684,7 @@
         <categoryLink name="MONSTER" hidden="false" id="3894-663d-8710-940c" targetId="6d54-625c-d063-13e2" primary="false"/>
         <categoryLink name="DESTRUCTION" hidden="false" id="ec00-767f-c7ba-27d7" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="SONS OF BEHEMAT" hidden="false" id="d1f8-9824-30f5-817d" targetId="482b-a44e-ffc6-df0a" primary="false"/>
-        <categoryLink name="MEGA-GARGANT" hidden="false" id="80d8-ecc5-ce80-637b" targetId="3723-4d8b-de1e-114b" primary="false"/>
+        <categoryLink name="BIG" hidden="false" id="0bf1-0add-1f1b-223f" targetId="aba7-75e8-ea43-5f1e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Gatebreaker Mega-Gargant" hidden="false" id="15d4-9e71-77f9-f935">
@@ -647,7 +697,7 @@
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">3</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">4</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
@@ -658,58 +708,58 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b-f8da-d9d2-9f6e"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Death Grip" hidden="false" id="772f-acec-b87b-9fd3">
+            <selectionEntry type="upgrade" import="true" name="Fortcrusha Flail: Calamitous Sweep" hidden="false" id="5c39-8720-3d82-12b2">
               <profiles>
-                <profile name="Death Grip" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="b02f-aa4f-1cb4-3cbc">
+                <profile name="Fortcrusha Flail: Calamitous Sweep" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2db1-beff-3b5b-3b5d">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">16</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f69-c4b5-47aa-eb86"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d784-3510-2b08-271d"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d85-da56-b54b-979e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67d5-0112-58da-8553"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="b670-d6e9-940a-1827">
+            <selectionEntry type="upgrade" import="true" name="Fortcrusha Flail: Crushing Blow" hidden="false" id="8c07-1c7c-1e8f-a49e">
               <profiles>
-                <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8423-4cdc-aeda-2504">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c3e-61f9-2dde-b23e"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cca8-5761-9e8f-4bb9"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fortcrusha Flail" hidden="false" id="f8b9-70fd-9ea2-7abe">
-              <profiles>
-                <profile name="Fortcrusha Flail" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5d55-eab-3233-5c36">
+                <profile name="Fortcrusha Flail: Crushing Blow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9ddd-4c43-ddb8-68ab">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Faction Terrain^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dcc0-80ba-5a9b-dd16"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76fb-c924-7518-68c0"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c771-14e4-87a4-36c7"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8af7-40d5-7e17-819f"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="b670-d6e9-940a-1827">
+              <profiles>
+                <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8423-4cdc-aeda-2504">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c3e-61f9-2dde-b23e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cca8-5761-9e8f-4bb9"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -724,10 +774,6 @@
           </rules>
         </selectionEntry>
       </selectionEntries>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="bbb2-b4a0-dc56-5759" hidden="false" type="profile" targetId="ff24-51d-54d2-c80b"/>
-        <infoLink name="Longshanks" id="20d1-1f30-3a9a-33c1" hidden="false" type="profile" targetId="c219-8bc2-6da1-f74f"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gatebreaker Mega-Gargant (Scourge of Aqshy)" hidden="false" id="87c2-9b68-f753-4b5c" publicationId="9e18-bb03-7b60-d4ff">
       <entryLinks>
@@ -1081,15 +1127,15 @@
         <profile name="Kraken-eater Mega-Gargant" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="530b-a4f6-120-2044">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">35</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">25</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a62f-378-39d9-958">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Shipwrecka Warclub** is 3 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Shipwrecka Warclub** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -1097,31 +1143,48 @@
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Stuff &apos;Em in Me Net" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1e94-b37d-16d5-294f">
+        <profile name="Shipwrecka Warclub" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4233-2fe2-855b-0a48">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 3 dice. For each roll that is at least double the target's Health characteristic, 1 model in the target unit is slain.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Shipwrecka Warclub**.</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
         <profile name="Get Orf Me Land!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="1551-87b7-fda3-3eba">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective within 1&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 2+, move the target 2D6&quot; to a new position on the battlefield more than 1&quot; from all models, terrain features and other objectives. That objective is treated as if it were in the same territories as it was when it was first set up on the battlefield for the purposes of the battleplan.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an objective or terrain feature on the battlefield to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the battle, the target is this unit&apos;s **loot hoard**.
+
+While the unit that used this ability is contesting its **loot hoard**, add 10 to its control score.
+
+While the unit that used this ability is not contesting its **loot hoard**, add 2 to the Attacks characteristic of its **Almighty Stomp**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Greedy Show-Offs" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5d55-cd32-b105-e074">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick another visible friendly **^^Big^^** or **^^Little^^** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit is contesting its **loot hoard**, apply the effect below. Otherwise, make a rampage roll of D6. On a 3+, apply the effect below.
+
+Add 1 to charge rolls for the target for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -1131,71 +1194,34 @@
         <categoryLink name="MONSTER" hidden="false" id="b154-4c6f-da8e-1f29" targetId="6d54-625c-d063-13e2" primary="false"/>
         <categoryLink name="DESTRUCTION" hidden="false" id="15fe-185e-fdad-5eef" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="SONS OF BEHEMAT" hidden="false" id="6fac-6e9d-1ff9-f763" targetId="482b-a44e-ffc6-df0a" primary="false"/>
-        <categoryLink name="MEGA-GARGANT" hidden="false" id="b9cf-3f4f-aa05-eb10" targetId="3723-4d8b-de1e-114b" primary="false"/>
+        <categoryLink name="BIG" hidden="false" id="afef-13dc-8bac-42c0" targetId="aba7-75e8-ea43-5f1e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Kraken-eater Mega-Gargant" hidden="false" id="888b-a398-2c64-1d0">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Hurled Debris" hidden="false" id="b788-5c4d-96a5-86a6">
+            <selectionEntry type="upgrade" import="true" name="Shipwrecka Warclub: Calamitous Sweep" hidden="false" id="6214-eed6-b218-0450">
               <profiles>
-                <profile name="Hurled Debris" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="e848-bd85-2f2d-3a32">
+                <profile name="Shipwrecka Warclub: Calamitous Sweep" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="4669-8088-f52f-ef6a">
                   <characteristics>
-                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">24&quot;</characteristic>
-                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
-                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">3+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
-                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
-                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">16</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86fa-5070-5f5e-cac0"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8ae-9ec1-ad78-cce5"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f594-6c76-2619-7914"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="18b6-a7f8-4c74-3a5c"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Death Grip" hidden="false" id="c5cd-2299-17d9-dfcd">
+            <selectionEntry type="upgrade" import="true" name="Shipwrecka Warclub: Crushing Blow" hidden="false" id="b20b-6ec3-ca95-6cd6">
               <profiles>
-                <profile name="Death Grip" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="a1ca-c70e-acee-9f5b">
+                <profile name="Shipwrecka Warclub: Crushing Blow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="0a09-ae2e-2fbc-1afb">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be23-4510-76f0-77f1"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bb0-fd19-b563-9104"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="2c7c-7aac-604e-c5a4">
-              <profiles>
-                <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c3c6-bd39-80fa-6450">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="888a-c263-59c-7e5d"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d0e-5efb-ceda-652"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Shipwrecka Warclub" hidden="false" id="6013-3f69-d629-e03c">
-              <profiles>
-                <profile name="Shipwrecka Warclub" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="5715-45e2-2b36-91d">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
@@ -1205,8 +1231,26 @@
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d0e-b83e-5c8b-1aa4"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f306-9a3f-f708-e17a"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e3f-8155-eb1d-65b0"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d588-3903-ca66-30a5"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="2c7c-7aac-604e-c5a4">
+              <profiles>
+                <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c3c6-bd39-80fa-6450">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="888a-c263-59c-7e5d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d0e-5efb-ceda-652"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -1221,10 +1265,6 @@
           </rules>
         </selectionEntry>
       </selectionEntries>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="ae1f-9aaf-c4e2-8e0a" hidden="false" type="profile" targetId="ff24-51d-54d2-c80b"/>
-        <infoLink name="Longshanks" id="912b-e004-4e57-b10c" hidden="false" type="profile" targetId="c219-8bc2-6da1-f74f"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warstomper Mega-Gargant" hidden="false" id="5201-4045-7632-5a40" publicationId="b765-4747-cddc-385e">
       <entryLinks>
@@ -1234,15 +1274,15 @@
         <profile name="Warstomper Mega-Gargant" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="a82-92ec-e400-b763">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">35</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">25</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4d22-116a-b7e0-e9e4">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Titanic Boulderclub** is 3 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Titanic Boulderclub** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
@@ -1250,12 +1290,28 @@
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="Hurled Body" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="eb08-d848-4e3a-80fa">
+        <profile name="Don&apos;t Stomp Those; Stomp Them!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="8c7a-9418-a29b-4414">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll is at least double the target's Health characteristic, 1 model in that unit is slain and you can pick a visible enemy unit within 12&quot; of this unit. Inflict an amount of mortal damage on that unit equal to the target's Health characteristic.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick another visible friendly **^^Big^^** or **^^Little^^** unit wholly within 12&quot; of this unit and that has not been set up this turn to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">The target can move 2D6&quot;. It can pass through and end that move within the combat ranges of enemy units that it was in combat with at the start of the move, but not those of other enemy units. It does not have to end the move in combat.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Movement</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Almightier Stompin&apos;" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2757-1eca-daa2-e96e">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit charged this turn, pick an enemy unit in combat with it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a rampage roll of D3. For the rest of the turn, add the roll to the Attacks characteristic of this unit&apos;s **Almighty Stomp**, but all of this unit&apos;s attacks made with that weapon must target the target unit.
+
+If any models are slain by those attacks, for the rest of the turn, enemy units have a maximum control score of 1 while they are in combat with this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -1267,7 +1323,7 @@
         <profile name="Titanic Boulderclub" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="de0c-c64b-7aa2-c0c4">
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If all of the attacks made with this unit's **Titanic Boulderclub** target the same enemy unit, for every 5 models in the target unit, add 2 to its Attacks characteristic for the rest of the phase.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Titanic Boulderclub**.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
@@ -1281,63 +1337,63 @@
         <categoryLink name="MONSTER" hidden="false" id="54e1-8847-6584-dbcb" targetId="6d54-625c-d063-13e2" primary="false"/>
         <categoryLink name="DESTRUCTION" hidden="false" id="ef80-daeb-9a90-e478" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="SONS OF BEHEMAT" hidden="false" id="be0d-cb87-1e13-f14b" targetId="482b-a44e-ffc6-df0a" primary="false"/>
-        <categoryLink name="MEGA-GARGANT" hidden="false" id="eca1-8e39-bbc9-e7d9" targetId="3723-4d8b-de1e-114b" primary="false"/>
+        <categoryLink name="BIG" hidden="false" id="9542-b4a4-d7dd-4dcb" targetId="aba7-75e8-ea43-5f1e" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Warstomper Mega-Gargant" hidden="false" id="c946-9bff-e9e6-e790">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Death Grip" hidden="false" id="7ced-84dc-7ce6-c67">
+            <selectionEntry type="upgrade" import="true" name="Titanic Boulderclub: Calamitous Sweep" hidden="false" id="cdd6-e0cd-821b-7ca8">
               <profiles>
-                <profile name="Death Grip" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="6a3e-2e4a-e2d5-150c">
+                <profile name="Titanic Boulderclub: Calamitous Sweep" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2767-8d61-f587-d5b1">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">16</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e002-4c64-978-2e82"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b4c-7d13-5bc9-4a7b"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31c9-b51f-e8aa-853d"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="343c-6756-5fa6-f4dd"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Almightier Stomp" hidden="false" id="7205-2b24-e6d7-3bac">
+            <selectionEntry type="upgrade" import="true" name="Titanic Boulderclub: Crushing Blow" hidden="false" id="5855-423f-9bdc-bceb">
               <profiles>
-                <profile name="Almightier Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="9c32-bed9-ab17-d863">
+                <profile name="Titanic Boulderclub: Crushing Blow" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="c33a-a32d-7cbb-1607">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ef4-701-3d10-3f64"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f08c-efba-6754-f85b"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ab5e-f645-08d6-ab7f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c6f-ca75-2066-023b"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Titanic Boulderclub" hidden="false" id="b776-cab2-7862-dbb6">
+            <selectionEntry type="upgrade" import="true" name="Almighty Stomp" hidden="false" id="f387-e450-7cc8-d3e4">
               <profiles>
-                <profile name="Titanic Boulderclub" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="8812-3d4a-684b-cb5b">
+                <profile name="Almighty Stomp" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7fcc-0839-3541-1a54">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2082-eb7f-9853-e80e"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ad3-5c31-bcd8-67a9"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b0a9-b0d9-edf4-369a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f376-ad70-3244-b4d7"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
@@ -1352,10 +1408,6 @@
           </rules>
         </selectionEntry>
       </selectionEntries>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="b6bd-3834-89b7-de09" hidden="false" type="profile" targetId="ff24-51d-54d2-c80b"/>
-        <infoLink name="Longshanks" id="6628-2e24-46db-dbf8" hidden="false" type="profile" targetId="c219-8bc2-6da1-f74f"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mancrusher Gargant" hidden="false" id="2e41-3174-d7a3-cded" publicationId="b765-4747-cddc-385e">
       <profiles>
@@ -1364,32 +1416,41 @@
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
             <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
           </characteristics>
         </profile>
-        <profile name="Stuff &apos;Em in Me Bag" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bce1-201-2ef0-bccb">
+        <profile name="Bet You Can&apos;t..." typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="519a-ec21-8ff3-adad">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn, Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. If the roll is at least double the target's Health characteristic, 1 model in the target unit is slain.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each friendly **Mancrusher Gargant** on the battlefield to be the targets.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
+
+***...Kill the Big &apos;Eads!***: For the rest of the battle, add 1 to the Attacks characteristic of each target&apos;s melee weapons while they are in combat with any enemy **^^Heroes^^** or **^^Monsters^^**.
+
+***...Get There Before Me!***: Up to 3 of the targets can each use the &apos;Normal Move&apos; ability as if it were your movement phase.
+
+***...Grab That!***: Add 5 to each target&apos;s control score for the rest of the battle.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
-        <profile name="Keep Up!" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7bb9-e3d2-48af-3a4e">
+        <profile name="Excitable Followers" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="4040-f458-4c37-e6ab">
           <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is wholly within 12&quot; of a friendly **^^Mega-Gargant^^**, this unit can use **^^Charge^^** abilities even if it used a **^^Run^^** ability in the same turn.</characteristic>
+            <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Any Combat Phase</characteristic>
+            <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
+            <characteristic name="Declare" typeId="b77f-7548-840e-c086"/>
+            <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">While this unit is wholly within 12&quot; of a visible friendly **^^Sons of Behemat Hero^^**, this unit can use 2 **^^Fight^^** abilities this phase. After the first is used, however, this unit has **^^Strike-last^^** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="445d-f443-5448-e7ce">**^^Rampage^^**</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Orange</attribute>
-            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Movement</attribute>
-            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Red</attribute>
+            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Offensive</attribute>
+            <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
           </attributes>
         </profile>
       </profiles>
@@ -1397,38 +1458,20 @@
         <categoryLink name="MONSTER" hidden="false" id="1ad6-6275-31d8-f11d" targetId="6d54-625c-d063-13e2" primary="true"/>
         <categoryLink name="DESTRUCTION" hidden="false" id="fbf7-495-3681-82f5" targetId="9057-5a29-dda5-3c28" primary="false"/>
         <categoryLink name="SONS OF BEHEMAT" hidden="false" id="3271-a16f-f7b0-9f2e" targetId="482b-a44e-ffc6-df0a" primary="false"/>
-        <categoryLink name="GARGANT" hidden="false" id="eba0-633a-2707-54a4" targetId="cdfb-7c8d-6a59-3866" primary="false"/>
+        <categoryLink name="LITTLE" hidden="false" id="aced-81db-280c-be32" targetId="d8ec-c3f5-89bb-d132" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Mancrusher Gargant" hidden="false" id="4801-2bc6-d6f8-dfa8">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="&apos;Eadbutt" hidden="false" id="14f8-ebc3-e2c-5026">
-              <profiles>
-                <profile name="&apos;Eadbutt" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e4e0-5be2-1abd-52fd">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4461-3e63-c07e-fa67"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="524b-ef0b-421b-401d"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Throwin&apos; Rocks" hidden="false" id="de72-fbef-73da-88ec">
               <profiles>
                 <profile name="Throwin&apos; Rocks" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="92de-2dfa-eebc-c3fc">
                   <characteristics>
                     <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
-                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">5+</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
@@ -1439,9 +1482,414 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2052-da6d-9d0f-b1bf"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Massive Club" hidden="false" id="f3bd-7433-cf4c-1e39">
+            <selectionEntry type="upgrade" import="true" name="Gigantic Weapon" hidden="false" id="cdcd-8761-9ff6-3d2b">
               <profiles>
-                <profile name="Massive Club" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f58a-bdfb-e601-cde">
+                <profile name="Gigantic Weapon" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="7de4-1412-6fb2-646a">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">5</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2725-9019-c87c-8059"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a09f-4282-4efb-e69f"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="&apos;Eadbutt" hidden="false" id="14f8-ebc3-e2c-5026">
+              <profiles>
+                <profile name="&apos;Eadbutt" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="e4e0-5be2-1abd-52fd">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4461-3e63-c07e-fa67"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="524b-ef0b-421b-401d"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf63-bab4-609b-c45a"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e300-560b-7fba-4d7"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="b20c-8a03-3b1a-4cd1" hidden="true">
+              <description>90x52mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ma Maegran, Chooser of the Mighty" hidden="false" id="76d5-8ec5-a7ae-f2ad" publicationId="b765-4747-cddc-385e">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="e6ee-61dd-6c40-b8fc" type="selectionEntry" targetId="a56b-952e-ad15-7868"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Ma Maegran, Chooser of the Mighty" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="5f35-3e71-372b-e572">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">15</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Battle Damaged" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="a2a6-4088-ad3b-2014">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 10 or more damage points, the Attacks characteristic of its **Spear of Krum Kalda** is 3.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Damage</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Shepherdess" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="aee9-5b6f-7633-58fb">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a visible friendly **Ancient Ghyrochs** unit wholly within 12&quot; of this unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If the target is within this unit&apos;s combat range, pick 1 of the effects below. Otherwise, make a rampage roll of D6. On a 3+, pick 1 of the effects below.
+
+***Gore their Guts!***: If the target is in combat, add 1 to the Damage characteristic of the target&apos;s **Mighty Horns and Hooves** for the rest of the turn.
+
+***Ghyroch Rush***: If the target is not in combat, it can move 3&quot;. It can move into combat.
+
+***Reservoirs of Jade Energy***: Add 1 to this unit&apos;s casting power level until the start of your next turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Creepy Cantrips" typeId="7312-8367-c171-f2ef" typeName="Ability (Spell)" hidden="false" id="6913-31ce-23c0-17a9">
+          <characteristics>
+            <characteristic name="Timing" typeId="de6f-d57b-248a-83be">Your Hero Phase</characteristic>
+            <characteristic name="Casting Value" typeId="9fc7-b0f6-d018-a608">6</characteristic>
+            <characteristic name="Declare" typeId="24f8-3803-4ab1-3b6c">Pick a visible friendly **^^Sons of Behemat Monster^^** unit wholly within 18&quot; of this unit to be the target, then make a casting roll of 2D6.</characteristic>
+            <characteristic name="Effect" typeId="1cb9-a-1345-907f">Until the start of your next turn, add 1 to rampage rolls for the target and add 1 to hit rolls for the target&apos;s combat attacks.</characteristic>
+            <characteristic name="Keywords" typeId="353f-565e-c351-1cf2">**^^Spell^^**</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="16b6-0911-f549-a4bd">Yellow</attribute>
+            <attribute name="Parent Node" typeId="da27-8d61-f955-5031">Special</attribute>
+          </attributes>
+        </profile>
+        <profile name="The Wandering Witch" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="6799-ac6c-aeed-1af3">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is wholly within 12&quot; of another friendly **^^Sons of Behemat Monster^^** unit, this unit is not visible to enemy units more than 12&quot; away from it.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Chooser of the Mighty" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="cd82-aee9-af84-8f1a">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Any Movement Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick another visible friendly **^^Little^^** unit wholly within 12&quot; of this unit to be **mighty**.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects:
+
+• For the rest of the turn, each time you make an unmodified wound roll of 6 for a combat attack made by the **mighty** unit, inflict 1 mortal damage on the target of the attack after the **^^Fight^^** ability has been resolved.
+
+• Pick a point on the battlefield within 1&quot; of the **mighty** unit, then pick a friendly non-**^^Unique^^** **^^Big^^** unit that has been destroyed to be the target. Set up a replacement unit identical to the target within 1&quot; of that point, then allocate 10 damage points to it (ward rolls cannot be made for those damage points). The replacement unit can only be set up in combat with units that the **mighty** unit was in combat with when it was picked to be **mighty**. Then, 1 model in the **mighty** unit is slain.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="HERO" hidden="false" id="9116-9d77-50d3-75e1" targetId="6e72-1656-d554-528a" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="df09-6455-a66f-a906" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="MONSTER" hidden="false" id="6595-ab0a-8f46-171b" targetId="6d54-625c-d063-13e2" primary="false"/>
+        <categoryLink name="WIZARD (1)" hidden="false" id="dd7d-4fc6-84b9-4ee5" targetId="6f28-c3f6-4b1b-8aff" primary="false"/>
+        <categoryLink name="DESTRUCTION" hidden="false" id="cfdd-4e55-ddc8-8068" targetId="9057-5a29-dda5-3c28" primary="false"/>
+        <categoryLink name="SONS OF BEHEMAT" hidden="false" id="be50-bf18-5862-5f71" targetId="482b-a44e-ffc6-df0a" primary="false"/>
+        <categoryLink name="LITTLE" hidden="false" id="42a0-aaf8-8452-e088" targetId="d8ec-c3f5-89bb-d132" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3131-e5c5-2bd7-c2e1" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ma Maegran, Chooser of the Mighty" hidden="false" id="10e2-922a-ee51-9f4e">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Spear of Krum Kalda" hidden="false" id="86f3-1ac8-2820-7d67">
+              <profiles>
+                <profile name="Spear of Krum Kalda" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="3174-209d-4b60-c338">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4a7-3ad5-2848-73a6"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb29-c2ad-dcfe-e8eb"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fcb9-28ac-0406-229b"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8900-98e7-1efd-4586"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="cb77-fc95-ea6c-ec8d" hidden="true">
+              <description>90mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ancient Ghyrochs" hidden="false" id="7279-4fc4-6435-4d21" publicationId="b765-4747-cddc-385e">
+      <profiles>
+        <profile name="Ancient Ghyrochs" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="ddec-b005-6b4d-0c1a">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">7</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Beast" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ceba-2f0e-f10d-2726">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">This unit has a maximum control score of 1.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Purple</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Control</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Wellspring of Life Energy" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="4af3-8ad0-b203-caca">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Heal (3) this unit.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="BEAST" hidden="false" id="8c09-d70f-2fa0-bd27" targetId="b224-8c8e-ca93-9860" primary="true"/>
+        <categoryLink name="UNIQUE" hidden="false" id="53a2-8cfa-2f95-e854" targetId="72ce-2188-70bf-2dbd" primary="false"/>
+        <categoryLink name="DESTRUCTION" hidden="false" id="055d-4bb0-6314-a0c9" targetId="9057-5a29-dda5-3c28" primary="false"/>
+        <categoryLink name="SONS OF BEHEMAT" hidden="false" id="ae25-e6fe-599a-a931" targetId="482b-a44e-ffc6-df0a" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fef5-1b5a-0a67-f6b7" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ancient Ghyroch" hidden="false" id="9238-a9a6-a006-770a">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Mighty Horns and Hooves" hidden="false" id="d1cd-74ca-a564-7341">
+              <profiles>
+                <profile name="Mighty Horns and Hooves" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="518f-33c9-8135-dfcb">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Charge (+1 Damage), Companion</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b5e5-0964-156d-2d9b"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a82-00de-9902-fccc"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a06a-9f22-a9f2-1f63"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6507-35a4-ecb0-f317"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="614e-d681-567d-16a1" hidden="true">
+              <description>105x70mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Boss-stompers" hidden="false" id="6c99-2bd0-d6d3-1f75" publicationId="b765-4747-cddc-385e">
+      <profiles>
+        <profile name="Boss-stompers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="08dd-f7a8-53d2-a718">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Quit Hogging Da Fun!" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="321e-147c-ac11-2902">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Reaction: You declared a Fight ability for this unit in the enemy combat phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick a visible friendly **^^Big^^** unit that has not used a **^^Fight^^** ability this turn and is wholly within 12&quot; of this unit to be the target. The target can be picked to use a **^^Fight^^** ability immediately after the **^^Fight^^** ability used by this unit has been resolved.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="MONSTER" hidden="false" id="74b8-9960-b345-1590" targetId="6d54-625c-d063-13e2" primary="true"/>
+        <categoryLink name="CHAMPION" hidden="false" id="f938-7dd0-8b66-b480" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="DESTRUCTION" hidden="false" id="6727-363f-1f4c-d834" targetId="9057-5a29-dda5-3c28" primary="false"/>
+        <categoryLink name="SONS OF BEHEMAT" hidden="false" id="0c67-a44d-5735-637a" targetId="482b-a44e-ffc6-df0a" primary="false"/>
+        <categoryLink name="LITTLE" hidden="false" id="aa62-474a-5c61-bafb" targetId="d8ec-c3f5-89bb-d132" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Boss-stomper" hidden="false" id="f7d8-2171-ca85-be76">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Stomper&apos;s Clubs" hidden="false" id="223a-9084-e5e7-0ca0">
+              <profiles>
+                <profile name="Stomper&apos;s Clubs" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="f151-4d6d-d214-377c">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">7</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">2</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="108d-93b0-ba95-67eb"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c00-05ec-2514-1f62"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="&apos;Eadbutt" hidden="false" id="c6a1-588d-7c4f-944b">
+              <profiles>
+                <profile name="&apos;Eadbutt" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="cf3f-96d6-9345-e11f">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2763-62f6-22a7-1fbf"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e121-b6db-88df-f37d"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="884e-7619-9053-3c77"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2b4f-d2be-8b49-d73c"/>
+          </constraints>
+          <rules>
+            <rule name="Base Size" id="07a5-04ad-7cf5-288f" hidden="true">
+              <description>80mm</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Rock-hurlers" hidden="false" id="6668-edb8-b4d6-0ef3" publicationId="b765-4747-cddc-385e">
+      <profiles>
+        <profile name="Rock-hurlers" typeId="ff03-376e-972f-8ab2" typeName="Unit" hidden="false" id="61ef-198a-8076-9f2b">
+          <characteristics>
+            <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">8&quot;</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">12</characteristic>
+            <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">5+</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">5</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Drop, Toss or Roll" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2458-5f3f-67f2-41ef">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Pick 1 of the following effects to apply for the rest of the turn:
+
+***Drop***: This unit&apos;s ranged weapons have **Shoot in Combat** and this unit can use the &apos;Covering Fire&apos; command even if it is in combat.
+
+***Toss***: Add 6&quot; to the Range characteristic of this unit&apos;s ranged weapons.
+
+***Roll***: Add 1 to hit rolls for this unit&apos;s shooting attacks.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Blue</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Shooting</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="MONSTER" hidden="false" id="1c4a-82bc-8cb6-3184" targetId="6d54-625c-d063-13e2" primary="true"/>
+        <categoryLink name="CHAMPION" hidden="false" id="5fd3-921b-3edf-576c" targetId="f679-3bcb-d664-9ac3" primary="false"/>
+        <categoryLink name="DESTRUCTION" hidden="false" id="f3ec-c392-8a53-fb57" targetId="9057-5a29-dda5-3c28" primary="false"/>
+        <categoryLink name="SONS OF BEHEMAT" hidden="false" id="4dbb-fe4f-cb71-6573" targetId="482b-a44e-ffc6-df0a" primary="false"/>
+        <categoryLink name="LITTLE" hidden="false" id="2ab1-50c8-7664-9ac3" targetId="d8ec-c3f5-89bb-d132" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Rock-hurler" hidden="false" id="7fea-a7e7-acc0-a34c">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hurlin&apos; Rocks" hidden="false" id="89b5-a7a9-e8d6-da5a">
+              <profiles>
+                <profile name="Hurlin&apos; Rocks" typeId="1fd-a42f-41d3-fe05" typeName="Ranged Weapon" hidden="false" id="1a44-b751-8528-c7dc">
+                  <characteristics>
+                    <characteristic name="Rng" typeId="c6b5-908c-a604-1a98">12&quot;</characteristic>
+                    <characteristic name="Atk" typeId="aa17-4296-2887-e05d">3</characteristic>
+                    <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">4+</characteristic>
+                    <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">1</characteristic>
+                    <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">D3</characteristic>
+                    <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f46-4508-084a-a874"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fc0-780c-e2af-90d6"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Massive Club and Rocks" hidden="false" id="ab41-e080-f981-964b">
+              <profiles>
+                <profile name="Massive Club and Rocks" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="1edc-64d5-8c87-e24e">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
@@ -1453,36 +1901,36 @@
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="584b-d2c9-7012-f1d9"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d75-dd1d-aa01-a144"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c4c-56e7-add9-1b86"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c84-94a7-9583-0d53"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mighty Kick" hidden="false" id="503d-20d0-cbd3-f407">
+            <selectionEntry type="upgrade" import="true" name="&apos;Eadbutt" hidden="false" id="d21a-ac9e-059e-17f4">
               <profiles>
-                <profile name="Mighty Kick" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2291-a805-e5d2-f1b6">
+                <profile name="&apos;Eadbutt" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon" hidden="false" id="2463-33c1-fdb3-8a02">
                   <characteristics>
                     <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">3</characteristic>
                     <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eabc-7faf-2e19-85c3"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="814f-1b9b-56e9-8c4"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4edf-d95c-5d92-c33c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46c0-1c54-52c2-e986"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf63-bab4-609b-c45a"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e300-560b-7fba-4d7"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="aff2-58cd-d1f3-ac3f"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d51a-3469-bb7a-2485"/>
           </constraints>
           <rules>
-            <rule name="Base Size" id="b20c-8a03-3b1a-4cd1" hidden="true">
-              <description>90x52mm</description>
+            <rule name="Base Size" id="7d06-13fc-a4bb-380a" hidden="true">
+              <description>80mm</description>
             </rule>
           </rules>
         </selectionEntry>

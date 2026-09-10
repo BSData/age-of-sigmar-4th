@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="102" battleScribeVersion="2.03" type="gameSystem">
+<gameSystem xmlns="http://www.battlescribe.net/schema/gameSystemSchema" id="e51d-b1a3-75fc-dc3g" name="Age of Sigmar 4.0" revision="103" battleScribeVersion="2.03" type="gameSystem">
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="0" hidden="false"/>
     <costType name="Destiny Points" id="bc33-05f5-8d3f-af43" defaultCostLimit="-1" hidden="true">
@@ -344,6 +344,8 @@
     <categoryEntry name="MEGA-GARGANT" id="3723-4d8b-de1e-114b" hidden="false"/>
     <categoryEntry name="SONS OF BEHEMAT" id="482b-a44e-ffc6-df0a" hidden="false"/>
     <categoryEntry name="GARGANT" id="cdfb-7c8d-6a59-3866" hidden="false"/>
+    <categoryEntry name="BIG" id="aba7-75e8-ea43-5f1e" hidden="false"/>
+    <categoryEntry name="LITTLE" id="d8ec-c3f5-89bb-d132" hidden="false"/>
     <categoryEntry name="BEASTS OF CHAOS" id="e902-e0b8-b5ea-d527" hidden="false"/>
     <categoryEntry name="BRAYHERD" id="bf15-f13d-cca6-29d8" hidden="false"/>
     <categoryEntry name="THUNDERSCORN" id="7be1-3285-0de8-35da" hidden="false"/>
@@ -15986,7 +15988,7 @@ Each part of this **^^Manifestation^^** is armed with **Tendrils of Light and S
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
     <publication name="Battletome: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
     <publication name="Battletome: Ossiarch Bonereapers" id="2f1e-fdf-1ac2-fa38" hidden="false"/>
-    <publication name="Faction Pack: Sons of Behemat" id="b765-4747-cddc-385e" hidden="false"/>
+    <publication name="Battletome: Sons of Behemat" id="b765-4747-cddc-385e" hidden="false"/>
     <publication name="Faction Pack: Seraphon" id="e9d0-a23-6a15-1fcb" hidden="false"/>
     <publication name="Battletome Supplement: Stormcast Eternals" id="87c-f122-a891-630e" hidden="false"/>
     <publication name="Battletome Supplement: Bonesplitterz" id="06c5-6322-e810-7967" hidden="false"/>
