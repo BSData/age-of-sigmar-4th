@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="65" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1ed8-2e23-1563-c119" name="۞ Regiments of Renown" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="66" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <entryLinks>
     <entryLink import="true" name="Neferata, Mortarch of Blood" hidden="true" id="69dd-9ab3-ca73-65c" type="selectionEntry" targetId="ca26-c079-31bc-38a8">
       <constraints>
@@ -2216,7 +2216,7 @@
             <modifier type="set" value="false" field="hidden"/>
           </modifiers>
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="e974-53fd-481c-5345" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="799b-bee1-49a7-aa3a" shared="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
@@ -2365,7 +2365,7 @@
     <entryLink import="true" name="Regiment of Renown: The Lost-Song Spirits" hidden="false" id="ce96-e57f-c7fe-2d4f" type="selectionEntry" targetId="e900-fc9b-8fc3-1641"/>
     <entryLink import="true" name="Regiment of Renown: Nurgle&apos;s Gift" hidden="false" id="7728-bff1-9cba-e794" type="selectionEntry" targetId="dca4-121d-1547-43bf"/>
     <entryLink import="true" name="Regiment of Renown: Godmarked Ascendant" hidden="false" id="4105-e693-61be-da1a" type="selectionEntry" targetId="d944-cad1-cdbd-f4ad"/>
-    <entryLink import="true" name="Regiment of Renown: Stumblefoot Gargant" hidden="false" id="ec55-f950-18cd-f0a3" type="selectionEntry" targetId="2f4c-d582-fb8b-a435"/>
+    <entryLink import="true" name="Regiment of Renown: Krong the Club" hidden="false" id="f5c6-16c8-8b58-9a8c" type="selectionEntry" targetId="b1c8-8c01-a823-68c2"/>
     <entryLink import="true" name="Regiment of Renown: Goroan Scions" hidden="false" id="8be9-e466-ac4e-b680" type="selectionEntry" targetId="8c01-d397-bdf2-6645"/>
     <entryLink import="true" name="Regiment of Renown: Valnir&apos;s Stormwing" hidden="false" id="d706-35c8-1b22-6054" type="selectionEntry" targetId="5a01-d417-a5fc-bc9c"/>
     <entryLink import="true" name="Regiment of Renown: Snerk&apos;s Trogg-fer-Hire" hidden="false" id="45d0-bb7d-3751-d0b7" type="selectionEntry" targetId="bfa8-623c-3614-11ae"/>
@@ -5240,12 +5240,23 @@
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f3b7-7847-b4f4-b37b" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
-        <profile name="Mighty Walloper" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7128-9604-e000-e3e6">
+        <profile name="Protective Wards" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="ce92-fade-1e41-48c1">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The unit in this Regiment of Renown has **^^Ward (6+)^^**.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Mighty Walloper" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9cff-437a-4ce4-1e29">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Monster^^** in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy **^^Monster^^** in combat with the unit in this Regiment of Renown to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, the unit in this Regiment of Renown&apos;s **Menhir Club** has **Crit (2 Hits)** but all attacks made with that weapon this turn must target that enemy **^^Monster^^**.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
@@ -5262,9 +5273,6 @@
           </conditions>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Timberrrrr!" id="7781-1434-7a65-b15d" hidden="false" type="profile" targetId="7a21-bb2e-ee2a-ad50"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Saviours of Cinderfall" hidden="true" id="d00e-e3cd-e785-8236" defaultAmount="0" publicationId="27d9-b0c5-1ecc-ba2f">
       <categoryLinks>
@@ -5358,17 +5366,31 @@ While every model in the same unit in the Regiment of Renown is contesting the 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="25cb-3bd8-c99e-1df8" includeChildForces="true" includeChildSelections="true"/>
       </constraints>
       <profiles>
-        <profile name="Grievous Halitosis" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="fef2-300d-f133-a75c">
+        <profile name="Fortress Wrekka" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="5838-fb30-cf9d-f1bb">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Reaction: You declared the &apos;Rip It Up and Chuck It&apos; ability for the unit in this Regiment of Renown</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">After picking the target for that ability, roll a number of dice equal to the current battle round number. For each 4+, add 1 to the Attacks characteristic of the unit in this Regiment of Renown&apos;s **Hurled Boulder** for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Shooting</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
+        </profile>
+        <profile name="Grievous Halitosis" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bb1f-5725-ad6d-0825">
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with the unit in this Regiment of Renown to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If any enemy models are slain by this ability, the target has a maximum control score of 1 for the rest of the turn.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
+          <attributes>
+            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Purple</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -5380,9 +5402,6 @@ While every model in the same unit in the Regiment of Renown is contesting the 
           </conditions>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Timberrrrr!" id="8493-da45-ca46-f495" hidden="false" type="profile" targetId="7a21-bb2e-ee2a-ad50"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Bundo Whalebiter" hidden="true" id="2b8d-f1f7-5518-a5ce" defaultAmount="0" publicationId="b765-4747-cddc-385e">
       <categoryLinks>
@@ -5392,18 +5411,23 @@ While every model in the same unit in the Regiment of Renown is contesting the 
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be3-b986-89f5-861a" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
-        <profile name="Dead Cunning, for a Gargant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="2618-4e52-f45b-e0cd">
+        <profile name="Dead Cunning, for a Gargant" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="bae6-a0a4-7f73-5c83">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, add 1 to the Attacks characteristic of this unit&apos;s weapons.
-Then, roll a dice. On a 4+, this unit has **^^Strike-last^^** for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">For the rest of the turn, the unit in this Regiment of Renown has **^^Strike-last^^** and **^^Ward (5+)^^**. Pick 1 of the following effects to apply for the rest of the turn:
+
+***A Kunnin&apos; Ruse:*** Other than the **Companion** ability, weapon abilities for attacks that target the unit in this Regiment of Renown have no effect.
+
+***A Nasty Surprise:*** Add 1 to hit rolls for the unit in this Regiment of Renown&apos;s combat attacks and ignore negative modifiers to hit rolls and wound rolls for its combat attacks.
+
+***Tricked Ya!:*** Enemy units have a maximum control score of 1 while they are in combat with the unit in this Regiment of Renown.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -5415,9 +5439,6 @@ Then, roll a dice. On a 4+, this unit has **^^Strike-last^^** for the rest of th
           </conditions>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Timberrrrr!" id="6442-aac5-d148-1d28" hidden="false" type="profile" targetId="7a21-bb2e-ee2a-ad50"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Regiment of Renown: One-eyed Grunnock" hidden="true" id="d942-c26a-2a98-b432" defaultAmount="0" publicationId="b765-4747-cddc-385e">
       <categoryLinks>
@@ -5427,20 +5448,26 @@ Then, roll a dice. On a 4+, this unit has **^^Strike-last^^** for the rest of th
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e54-5416-bf77-94ae" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
-        <profile name="Shake the Earth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="666c-6185-c722-b13f">
+        <profile name="Titanic Stride" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d1b2-293f-69d2-e568">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit in combat with this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3. On a 2+:
-• Inflict an amount of mortal damage on the target equal to the roll. If the target is **^^Infantry^^**, double the amount of mortal damage inflicted.
-• Subtract 1 from hit rolls for the target&apos;s attacks for the rest of the turn.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The unit in this Regiment of Renown can use **^^Charge^^** abilities even if it used a **^^Retreat^^** ability in the same turn. In addition, no mortal damage is inflicted on the unit in this Regiment of Renown by **^^Retreat^^** abilities.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Black</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Movement</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+        </profile>
+        <profile name="Earth-shaking Stomp" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="426a-41c7-4506-6e09">
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Subtract 1 from hit rolls for combat attacks made by enemy **^^Infantry^^** and **^^Cavalry^^** units while they are in combat with the unit in this Regiment of Renown.</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Green</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Defensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
       </profiles>
@@ -5451,9 +5478,6 @@ Then, roll a dice. On a 4+, this unit has **^^Strike-last^^** for the rest of th
           </conditions>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Timberrrrr!" id="54b0-ccc4-815d-eeec" hidden="false" type="profile" targetId="7a21-bb2e-ee2a-ad50"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Braggit&apos;s Bottle-snatchaz" hidden="true" id="e614-f029-2fce-26ce" defaultAmount="0" publicationId="27d9-b0c5-1ecc-ba2f">
       <categoryLinks>
@@ -6349,53 +6373,36 @@ Add 1 to wound rolls for units in this Regiment of Renown while they are contest
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Stumblefoot Gargant" hidden="true" id="2f4c-d582-fb8b-a435" defaultAmount="0" publicationId="fdea-639c-1111-eecc">
+    <selectionEntry type="upgrade" import="true" name="Regiment of Renown: Krong the Club" hidden="true" id="b1c8-8c01-a823-68c2" defaultAmount="0" publicationId="b765-4747-cddc-385e">
       <categoryLinks>
-        <categoryLink name="Reference" hidden="false" id="7922-c7c4-4372-c9cd" targetId="3360-1158-e879-9606" primary="true"/>
+        <categoryLink name="Reference" hidden="false" id="f977-4be8-e938-de10" targetId="3360-1158-e879-9606" primary="true"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6096-64a1-d823-da6f" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f404-7d79-334b-0e56" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <profiles>
-        <profile name="Projectile Vomit" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="270a-917f-1a56-84f8">
+        <profile name="Devastating Collapse" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="d16b-787d-d362-b23e">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Shooting Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to use this ability if it has not used a **^^Rampage^^** ability this turn. Then, pick a point on the battlefield within 6&quot; of this unit and pick each enemy unit within 3&quot; of that point to be the targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When the unit in this Regiment of Renown is destroyed, before removing it from play, you and your opponent must roll off. If you roll higher, inflict 3 mortal damage on each unit (friendly and enemy) within its combat range.</characteristic>
           </characteristics>
           <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Blue</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Shooting</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+            <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
+            <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
         </profile>
-        <profile name="&apos;What&apos;re you lookin&apos; at?&apos;" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="eb91-c049-9810-da46">
+        <profile name="Jump Up and Down" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e9d5-b0d6-a8cf-a176">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Charge Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to use this ability if it charged this turn and has not used a **^^Rampage^^** ability this turn. Then, pick an enemy unit within 9&quot; of this unit to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
-          <attributes>
-            <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Orange</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Movement</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
-        </profile>
-        <profile name="Bellowing Mockery" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="916a-d853-9140-88b6">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this unit to use this ability if it has not used a **^^Rampage^^** ability this turn, then pick an enemy unit within this unit&apos;s combat range to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+, subtract 1 from hit rolls for the target&apos;s attacks for the rest of the turn.</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If the unit in this Regiment of Renown charged this turn, pick an enemy unit in combat with it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice for each model in the target unit. Add 1 to each roll if the target is contesting an objective you do not control. For each 6+, inflict 1 mortal damage on the target. Then, if any of the rolls were an unmodified 1, resolve the effect of the &apos;Devastating Collapse&apos; ability as if the unit in this Regiment of Renown had been destroyed (it is neither destroyed nor removed from play).</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
           <attributes>
             <attribute typeId="5a11-eab3-180c-ddf5" name="Color">Red</attribute>
-            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Defensive</attribute>
+            <attribute typeId="6d16-c86b-2698-85a4" name="Type">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
         </profile>
@@ -6403,7 +6410,7 @@ Add 1 to wound rolls for units in this Regiment of Renown while they are contest
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="force" childId="e974-53fd-481c-5345" shared="true" includeChildForces="true" includeChildSelections="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="force" childId="799b-bee1-49a7-aa3a" shared="true" includeChildForces="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9485,17 +9492,6 @@ If you picked a **Dreadful Visage** or **Wheels of Excruciation**, set it up who
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
-    <profile name="Timberrrrr!" hidden="false" id="7a21-bb2e-ee2a-ad50" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
-      <characteristics>
-        <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-        <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">When the **^^Mega‑Gargant^^** in this Regiment of Renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3&quot; of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3&quot; of that point that has a lower Health characteristic than that model.</characteristic>
-      </characteristics>
-      <attributes>
-        <attribute typeId="50fe-4f29-6bc3-dcc6" name="Color">Red</attribute>
-        <attribute typeId="bf11-4e10-3ab1-06f4" name="Type">Offensive</attribute>
-        <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-      </attributes>
-    </profile>
   </sharedProfiles>
   <categoryEntries>
     <categoryEntry name="NURGLE&apos;S GIFT" id="d75f-7fcf-632f-61c8" hidden="false"/>
