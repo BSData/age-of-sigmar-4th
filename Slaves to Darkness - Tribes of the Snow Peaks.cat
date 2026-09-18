@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7bb3-81d1-72cc-ea89" name="Slaves to Darkness - Tribes of the Snow Peaks" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Slaves to Darkness - Tribes of the Snow Peaks" id="7bb3-81d1-72cc-ea89" battleScribeVersion="2.03" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" library="false" revision="29" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink name="Slaves to Darkness - Library" id="a184-5b22-50c8-87e2" targetId="c580-f07a-aa35-f79f" type="catalogue"/>
+    <catalogueLink name="✦ Path to Glory - Ravaged Coast" id="c4ff-62bb-e4b7-8b7e" importRootEntries="true" targetId="a434-b1ba-922b-7624" type="catalogue"/>
+    <catalogueLink name="❖ Lores" id="ff28-cf06-86c2-6ccb" targetId="0a11-cd61-2a4e-8e04" type="catalogue"/>
+    <catalogueLink name="✦ Path to Glory - Ascension" id="1cf6-223d-1c8e-bd23" importRootEntries="true" targetId="3a8b-7496-526f-feab" type="catalogue"/>
+    <catalogueLink name="✦ Path to Glory - Blighted Wilds" id="7380-e283-5365-c3df" importRootEntries="true" targetId="e0ff-dc7c-8795-bfb9" type="catalogue"/>
+  </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="SNOW PEAKS" id="b4c6-30f5-3976-4ed6" hidden="false"/>
     <categoryEntry name="Oathsworn" id="6a00-8623-4e06-55ca" hidden="false">
+      <constraints>
+        <constraint id="7f86-1c4f-5d61-a5f7" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <modifiers>
-        <modifier type="set" value="1" field="7f86-1c4f-5d61-a5f7">
+        <modifier field="7f86-1c4f-5d61-a5f7" type="set" value="1">
           <conditionGroups>
             <conditionGroup type="or">
               <localConditionGroups>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                <localConditionGroup field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" scope="force" type="atLeast" value="1">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="dbbe-0e2e-3bdb-ddd1" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                    <condition childId="dbbe-0e2e-3bdb-ddd1" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </localConditionGroup>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                <localConditionGroup field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" scope="force" type="atLeast" value="1">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="854f-1e38-fc0d-741d" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                    <condition childId="854f-1e38-fc0d-741d" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </localConditionGroup>
               </localConditionGroups>
@@ -25,62 +35,585 @@
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="7f86-1c4f-5d61-a5f7" includeChildSelections="true"/>
-      </constraints>
     </categoryEntry>
   </categoryEntries>
+  <entryLinks>
+    <entryLink name="Battle Traits: Tribes of the Snow Peaks" id="8985-3209-a85c-45b7" hidden="false" import="true" targetId="682c-c92d-bab5-ce8f" type="selectionEntry">
+      <constraints>
+        <constraint id="e0cc-a952-9143-1737" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+    </entryLink>
+    <entryLink name="Darkoath Chieftain" id="26f3-4fff-492b-3644" hidden="false" import="true" targetId="b09c-3f57-8c75-aa38" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="090d-32ad-913e-a269" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Heroic Traits" id="2555-62f1-0a61-4e4e" hidden="false" import="true" targetId="eb5b-b161-8088-f32" type="selectionEntryGroup"/>
+        <entryLink name="Artefacts of Power" id="e856-557e-eeb5-111f" hidden="false" import="true" targetId="710a-f03f-13c9-cf9" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="0ac9-9942-c088-aafc" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="0b79-5531-38c1-d598" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Warlord" id="d7d3-42dc-7eaf-9acd" hidden="false" import="true" targetId="bb28-fa4a-bf5f-f793" type="selectionEntry"/>
+        <entryLink name="Renown" id="5f9f-236c-9544-86e1" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+        <entryLink name="Ghyranite Concoctions" id="4eaf-51b8-ea48-aaba" hidden="false" import="true" targetId="17d6-baae-dbeb-3e2c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier field="category" type="add" value="6a00-8623-4e06-55ca"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+          <modifiers>
+            <modifier affects="self.entries.recursive.56-43e3-895c-2c26" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.6d54-625c-d063-13e2" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="category" scope="root-entry" type="set-primary" value="d1f3-921c-b403-1106">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+                <condition childId="8f4b-1fa6-3128-8405" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Darkoath Chieftain on Warsteed" id="dbbe-0e2e-3bdb-ddd1" hidden="false" import="true" targetId="6bde-370e-478d-cf24" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="000a-0c85-8ec7-de11" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Heroic Traits" id="3ff0-bafb-d03e-d6bc" hidden="false" import="true" targetId="eb5b-b161-8088-f32" type="selectionEntryGroup"/>
+        <entryLink name="Artefacts of Power" id="7bf7-b902-6965-0c5a" hidden="false" import="true" targetId="710a-f03f-13c9-cf9" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="8f36-e094-fd29-3b61" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="4b2b-1d31-17b5-5c3a" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Warlord" id="9cd4-b421-1fe2-367c" hidden="false" import="true" targetId="bb28-fa4a-bf5f-f793" type="selectionEntry"/>
+        <entryLink name="Renown" id="8379-550f-7d1a-59f3" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+        <entryLink name="Ghyranite Concoctions" id="34d3-a44a-0c22-2e21" hidden="false" import="true" targetId="17d6-baae-dbeb-3e2c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier field="category" type="add" value="6a00-8623-4e06-55ca"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <conditions>
+            <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+          <modifiers>
+            <modifier affects="self.entries.recursive.56-43e3-895c-2c26" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.6d54-625c-d063-13e2" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.6a00-8623-4e06-55ca" field="category" scope="force" type="add" value="8f4b-1fa6-3128-8405"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="category" scope="root-entry" type="set-primary" value="d1f3-921c-b403-1106">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+                <condition childId="8f4b-1fa6-3128-8405" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Darkoath Warqueen" id="854f-1e38-fc0d-741d" hidden="false" import="true" targetId="7f9-8a5a-4a59-769b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="eb43-7a40-bc9c-ebd9" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Heroic Traits" id="c083-3d8f-7bab-e9dd" hidden="false" import="true" targetId="eb5b-b161-8088-f32" type="selectionEntryGroup"/>
+        <entryLink name="Artefacts of Power" id="b31c-65ef-fda8-6b68" hidden="false" import="true" targetId="710a-f03f-13c9-cf9" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="912c-7988-d50e-5354" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="2bb4-9f92-f054-7d0d" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Warlord" id="56d7-c741-8364-2cfd" hidden="false" import="true" targetId="bb28-fa4a-bf5f-f793" type="selectionEntry"/>
+        <entryLink name="Renown" id="cdaf-3b11-b0bd-3a0e" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+        <entryLink name="Ghyranite Concoctions" id="986a-de0a-3382-0e2a" hidden="false" import="true" targetId="17d6-baae-dbeb-3e2c" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+          <modifiers>
+            <modifier affects="self.entries.recursive.56-43e3-895c-2c26" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.6d54-625c-d063-13e2" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.6a00-8623-4e06-55ca" field="category" scope="force" type="add" value="8f4b-1fa6-3128-8405"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="category" scope="root-entry" type="set-primary" value="d1f3-921c-b403-1106">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Gunnar Brand" id="f02b-58bf-bc51-bf5e" hidden="false" import="true" targetId="dd16-c1dc-4ff-85f2" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="0399-03ea-a95d-6a10" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Battle Wounds + Scars" id="9679-74c1-790f-83d6" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+          <modifiers>
+            <modifier affects="self.entries.recursive.56-43e3-895c-2c26" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.f306-b27d-6d13-6124" field="category" scope="force" type="add" value="8f4b-1fa6-3128-8405"/>
+            <modifier affects="self.entries.recursive.215d-0eed-b23e-7ab2" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="category" scope="root-entry" type="set-primary" value="d1f3-921c-b403-1106">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                    <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Singri Brand" id="f306-b27d-6d13-6124" hidden="false" import="true" targetId="4191-4be9-6ccd-9f70" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="5e12-8291-a27b-a216" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="5d9f-1321-dd22-9c8e" field="selections" scope="force" shared="true" type="min" value="-1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Battle Wounds + Scars" id="4333-200f-f84a-3749" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="5d9f-1321-dd22-9c8e" type="set" value="1">
+          <localConditionGroups>
+            <localConditionGroup field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" scope="force" type="atLeast" value="1">
+              <conditions>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
+                <condition childId="f02b-58bf-bc51-bf5e" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="8f4b-1fa6-3128-8405" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="The Oathsworn Kin" id="215d-0eed-b23e-7ab2" hidden="false" import="true" targetId="c8b1-7d96-6db6-2293" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="6d6b-1577-990d-21ad" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="5676-73e6-6752-3495" field="selections" scope="force" shared="true" type="min" value="-1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Battle Wounds + Scars" id="7d34-f4af-a6d4-8565" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="5676-73e6-6752-3495" type="set" value="1">
+          <localConditionGroups>
+            <localConditionGroup field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" scope="force" type="atLeast" value="1">
+              <conditions>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
+                <condition childId="f02b-58bf-bc51-bf5e" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </localConditionGroup>
+          </localConditionGroups>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+              <localConditionGroups>
+                <localConditionGroup field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" scope="force" type="lessThan" value="1">
+                  <conditions>
+                    <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="f02b-58bf-bc51-bf5e" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </localConditionGroup>
+              </localConditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Darkoath Fellriders" id="78f3-ed91-ccbc-2871" hidden="false" import="true" targetId="30f5-9b05-d94a-fdfb" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="ba42-e895-132c-ee37" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="130"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="60e4-37b0-ab52-bfe9" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Battle Wounds + Scars" id="621a-13c9-063d-9839" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="d1ab-a0e4-e4be-5c16" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="ca34-a536-ee4b-e232" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Darkoath Marauders" id="cc7e-b2b9-9749-bb5d" hidden="false" import="true" targetId="32a0-6285-a243-3a38" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="dad8-4af9-2aca-aa54" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="d75e-d4d3-5566-2e0d" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Battle Wounds + Scars" id="eeaf-952d-1ff5-583b" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="082b-13c6-33c8-e455" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="e229-5a7e-4ba5-689f" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Darkoath Savagers" id="dbf7-4486-71ff-136a" hidden="false" import="true" targetId="df89-794a-4994-8293" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="842b-a74b-0d13-92f6" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Battle Wounds + Scars" id="5531-6871-5428-fcbe" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="8dd3-0d71-2116-5e41" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="01e5-f4bf-74c9-c580" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Darkoath Wilderfiend" id="4732-a295-356c-ce9f" hidden="false" import="true" targetId="43ac-9228-ce2c-b739" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="SNOW PEAKS" id="4b4e-7ea6-6f30-0f79" hidden="false" primary="false" targetId="b4c6-30f5-3976-4ed6"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="7e4b-1378-f875-045a" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Battle Wounds + Scars" id="e1b9-a9d1-0833-4090" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="eaad-3742-2e10-b6d8" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="1ac8-9bdd-420e-636e" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="The Gnarlspirit Pack" id="7f2c-f5d6-843e-250f" hidden="false" import="true" targetId="8046-a145-5d79-aa66" type="selectionEntry">
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Battle Wounds + Scars" id="4686-3fc8-7fec-f91a" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Godsworn Hunt" id="6d74-68dd-1837-c739" hidden="false" import="true" targetId="1bb9-8fa7-8bf8-e4a2" type="selectionEntry">
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Battle Wounds + Scars" id="a1fe-2357-189b-9310" hidden="false" import="true" targetId="cbc6-9e3a-ff49-844e" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="6ad6-252e-b01c-3c61" hidden="false" import="true" targetId="6709-9100-c776-b6a6" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Nexus Chaotica" id="8eb1-f615-3c91-6078" defaultAmount="1" hidden="false" import="true" targetId="22a9-a618-90cf-5bc7" type="selectionEntry"/>
+  </entryLinks>
+  <selectionEntries>
+    <selectionEntry name="Manifestation Lore" id="9e90-540a-a5f6-e6f1" defaultAmount="1" hidden="true" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Army Composition" id="d312-1a03-51bc-3b2d" hidden="false" primary="true" targetId="ac97-b27c-7e35-7ab9"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="f101-848b-ad33-fe25" field="selections" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="55b4-5eec-2364-8376" field="selections" scope="self" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Manifestation Lores" id="2883-ed8f-1747-c0fd" flatten="true" hidden="false" import="true" targetId="748f-5d65-2d45-95c5" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditions>
+            <condition childId="any" field="de92-2099-fbf7-a156" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </selectionEntries>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Battle Traits: Tribes of the Snow Peaks" hidden="false" id="682c-c92d-bab5-ce8f">
+    <selectionEntry name="Battle Traits: Tribes of the Snow Peaks" id="682c-c92d-bab5-ce8f" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Reference" id="7fa7-833c-6a1b-71d7" hidden="false" primary="true" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
       <profiles>
-        <profile name="Pledges to the Dark Gods" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="7f09-43fc-58da-79f4">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly **^^Snow Peaks^^** unit uses 1 of the following abilities and the effect of that ability is resolved, gain 1 **oath point**.
-• 'Oath of Bloodshed'
-• 'Oath of Murder'
-• 'Oath of Supremacy'
-• 'Oath of the Marauder'
-• 'Oath of the Raider'
-• 'Oath of Conquest'
-• 'Oath of Dark Sacrifice'
-**Designer's Note:** *The abilities listed above are abilities on **^^Darkoath^^** warscrolls. By using those abilities (i.e. completing the oaths), the player gains* **oath points***, which can then be spent to use the* **^^Oath^^** *abilities in these Army of Renown rules.*</characteristic>
-          </characteristics>
+        <profile name="Pledges to the Dark Gods" id="7f09-43fc-58da-79f4" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
-        </profile>
-        <profile name="Hunger of Shesh&apos;shan" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e242-5d60-4e28-62e3">
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Your Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If you have 1 or more **oath points**, pick a friendly **^^Snow Peaks^^** unit that has not used an **^^Oath^^** ability this turn to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend 1 **oath point**. For the rest of the turn, add 1 to the Attacks characteristic of the target's melee weapons</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time a friendly **^^Snow Peaks^^** unit uses 1 of the following abilities and the effect of that ability is resolved, gain 1 **oath point**.
+• &apos;Oath of Bloodshed&apos;
+• &apos;Oath of Murder&apos;
+• &apos;Oath of Supremacy&apos;
+• &apos;Oath of the Marauder&apos;
+• &apos;Oath of the Raider&apos;
+• &apos;Oath of Conquest&apos;
+• &apos;Oath of Dark Sacrifice&apos;
+**Designer&apos;s Note:** *The abilities listed above are abilities on **^^Darkoath^^** warscrolls. By using those abilities (i.e. completing the oaths), the player gains* **oath points***, which can then be spent to use the* **^^Oath^^** *abilities in these Army of Renown rules.*</characteristic>
           </characteristics>
+        </profile>
+        <profile name="Hunger of Shesh&apos;shan" id="e242-5d60-4e28-62e3" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Daemonfire Weapons" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="ac7c-6c38-bc27-51c2">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Your Combat Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If you have 1 or more **oath points**, pick a friendly **^^Snow Peaks^^** unit that has not used an **^^Oath^^** ability this turn to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend 1 **oath point**. For the rest of the turn, add 1 to the Rend characteristic of the target's melee weapons.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend 1 **oath point**. For the rest of the turn, add 1 to the Attacks characteristic of the target&apos;s melee weapons</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Daemonfire Weapons" id="ac7c-6c38-bc27-51c2" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Your Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If you have 1 or more **oath points**, pick a friendly **^^Snow Peaks^^** unit that has not used an **^^Oath^^** ability this turn to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Spend 1 **oath point**. For the rest of the turn, add 1 to the Rend characteristic of the target&apos;s melee weapons.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
         </profile>
-        <profile name="Messengers of the Gods" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="b95f-1a71-89cf-58c2">
+        <profile name="Messengers of the Gods" id="b95f-1a71-89cf-58c2" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), End of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If you have 1 or more **oath points**, pick a friendly **^^Snow Peaks^^** **Darkoath Marauders** or **Fellriders** unit that has been destroyed and has not used an **^^Oath^^** ability this turn to be the target</characteristic>
@@ -88,13 +621,13 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Shroud of the Pale Elk" id="775b-cc6e-d1ef-203e" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Purple</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Rallying</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Shroud of the Pale Elk" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="775b-cc6e-d1ef-203e">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Reaction: Opponent declared an **^^Attack^^** ability</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">A friendly **^^Snow Peaks^^** unit targeted by that **^^Attack^^** ability, if you have 1 or more **oath points**.</characteristic>
@@ -102,13 +635,13 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Rage of Arkhar" id="634f-c58-32c6-6fa2" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Green</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Rage of Arkhar" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="634f-c58-32c6-6fa2">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Your CombatPhase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If you have 1 or more **oath points**, pick a friendly **^^Snow Peaks^^** unit that has not used an **^^Oath^^** ability this turn to be the target.</characteristic>
@@ -116,13 +649,13 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Speed of the Blood Crow" id="fd34-3791-803c-e804" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Speed of the Blood Crow" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="fd34-3791-803c-e804">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Phase (Army), Your Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If you have 1 or more **oath points**, pick a friendly **^^Snow Peaks^^** unit that has not used an **^^Oath^^** ability this turn to be the target.</characteristic>
@@ -130,72 +663,92 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Oath^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Orange</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink name="Reference" hidden="false" id="7fa7-833c-6a1b-71d7" targetId="3360-1158-e879-9606" primary="true"/>
-      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Heroic Traits" id="eb5b-b161-8088-f32" hidden="false">
+      <constraints>
+        <constraint id="1202-9e13-fb8d-b0b2" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="2fea-4a86-2be7-6338" field="selections" scope="root-entry" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Heroic Traits" id="2787-5c78-fa6d-2f55" flatten="true" hidden="false" import="true" targetId="c437-e34c-5e1c-95e6" type="selectionEntryGroup"/>
+        <entryLink name="Heroic Traits" id="b981-6465-d508-312c" hidden="false" import="true" targetId="59df-5a5c-f4ee-ab6e" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="1202-9e13-fb8d-b0b2" type="set" value="-1">
+          <conditions>
+            <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Heroic Traits: Tribes of the Snow Peaks" id="5b5a-8f76-72bb-8ded" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Oath of Kinship" hidden="false" id="3653-7b1b-135d-f092">
-              <profiles>
-                <profile name="Oath of Kinship" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="1c98-a6f-d426-7cea">
-                  <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is within the combat range of another friendly **^^Snow Peaks^^** unit, add 1 to hit rolls for this unit's attacks.</characteristic>
-                  </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
-                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
-                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ecf6-f7ab-d1b1-125d" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
           <rules>
             <rule name="Enhancement Restrictions" id="a765-517e-9f78-569e" hidden="true">
               <description>**^^Hero^^** only</description>
             </rule>
           </rules>
+          <selectionEntries>
+            <selectionEntry name="Oath of Kinship" id="3653-7b1b-135d-f092" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="ecf6-f7ab-d1b1-125d" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+              </constraints>
+              <profiles>
+                <profile name="Oath of Kinship" id="1c98-a6f-d426-7cea" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit is within the combat range of another friendly **^^Snow Peaks^^** unit, add 1 to hit rolls for this unit&apos;s attacks.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Artefacts of Power" id="710a-f03f-13c9-cf9" hidden="false">
+      <constraints>
+        <constraint id="138c-34a1-e430-91bd" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="36a4-b34f-5a92-cd77" field="selections" scope="root-entry" shared="true" type="max" value="1"/>
+      </constraints>
       <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="2787-5c78-fa6d-2f55" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="b981-6465-d508-312c" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
+        <entryLink name="Artefacts of Power" id="43c5-b0a0-dfc0-cc64" flatten="true" hidden="false" import="true" targetId="e1b2-cedf-56a5-6bb1" type="selectionEntryGroup"/>
+        <entryLink name="Artefacts of Power" id="ddb7-1f3d-b636-a70c" hidden="false" import="true" targetId="d563-838a-a901-097e" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="-1" field="1202-9e13-fb8d-b0b2">
+        <modifier field="138c-34a1-e430-91bd" type="set" value="-1">
           <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1202-9e13-fb8d-b0b2" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="2fea-4a86-2be7-6338"/>
-      </constraints>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Artefacts of Power" id="710a-f03f-13c9-cf9" hidden="false">
       <selectionEntryGroups>
         <selectionEntryGroup name="Artefacts of Power: Tribes of the Snow Peaks" id="bcc7-511e-896b-e162" hidden="false">
+          <rules>
+            <rule name="Enhancement Restrictions" id="833f-f9b5-95ab-0623" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grand Offering" hidden="false" id="8582-af09-ef12-2d7">
+            <selectionEntry name="Grand Offering" id="8582-af09-ef12-2d7" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="7e3-2fb2-ea0d-b7a2" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+              </constraints>
               <profiles>
-                <profile name="Grand Offering" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="3cf2-2cd-1b42-c77b">
+                <profile name="Grand Offering" id="3cf2-2cd-1b42-c77b" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
                   <characteristics>
                     <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Movement Phase</characteristic>
                     <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Snow Peaks^^** **Wilderfiend** within 9&quot; of this unit to be the target</characteristic>
@@ -203,69 +756,41 @@
                     <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
                     <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
                   </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Gray</attribute>
-                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-                  </attributes>
                 </profile>
               </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7e3-2fb2-ea0d-b7a2" includeChildSelections="true"/>
-              </constraints>
             </selectionEntry>
           </selectionEntries>
-          <rules>
-            <rule name="Enhancement Restrictions" id="833f-f9b5-95ab-0623" hidden="true">
-              <description>**^^Hero^^** only</description>
-            </rule>
-          </rules>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="cbc6-9e3a-ff49-844e" collapsible="true" hidden="true">
       <entryLinks>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="43c5-b0a0-dfc0-cc64" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="ddb7-1f3d-b636-a70c" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
+        <entryLink name="Ravaged Coast Battle Scars" id="e738-5c9a-b27f-2067" flatten="true" hidden="false" import="true" targetId="5559-80df-ba01-66a7" type="selectionEntryGroup"/>
+        <entryLink name="Blighted Wilds Battle Scars" id="5117-cd51-4c4c-4132" hidden="false" import="true" targetId="374e-3b5e-1810-b56a" type="selectionEntryGroup"/>
+        <entryLink name="Blighted Wilds Paths" id="be23-2e1c-02be-09fd" hidden="false" import="true" targetId="3f1b-26c1-aa71-73f8" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="-1" field="138c-34a1-e430-91bd">
-          <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="138c-34a1-e430-91bd" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="36a4-b34f-5a92-cd77"/>
-      </constraints>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Battle Wounds + Scars" id="cbc6-9e3a-ff49-844e" hidden="true" collapsible="true">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
+        <modifier field="hidden" type="set" value="false">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
+                <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="1bed-ddb5-0c50-16d2" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="e738-5c9a-b27f-2067" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
-        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="5117-cd51-4c4c-4132" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
-        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="be23-2e1c-02be-09fd" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
-      </entryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="b2bb-906a-d90e-2fce"/>
-        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="2cbe-b380-e76c-5567">
+        <selectionEntry name="Battle Wounds" id="b2bb-906a-d90e-2fce" hidden="false" import="true" type="upgrade"/>
+        <selectionEntry name="Drained" id="2cbe-b380-e76c-5567" hidden="true" import="true" type="upgrade">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ecb-207e-8c19-2026"/>
+            <constraint id="3ecb-207e-8c19-2026" field="selections" scope="parent" shared="true" type="max" value="1"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier field="hidden" type="set" value="false">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
+                <condition childId="6e72-1656-d554-528a" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -273,547 +798,22 @@
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup name="Paths" id="6709-9100-c776-b6a6" hidden="true">
+      <constraints>
+        <constraint id="1820-3308-cfeb-f50b" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <entryLinks>
-        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="cd85-2631-5110-03e6" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
-        <entryLink import="true" name="Paths" hidden="false" id="31c2-8d42-8467-f179" type="selectionEntryGroup" targetId="962b-e74d-8efa-d6ea" flatten="true"/>
-        <entryLink import="true" name="Ascension Paths" hidden="false" id="cc3b-b892-5a40-666c" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
-        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="53d9-54b6-5b12-4837" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
+        <entryLink name="Ravaged Coast Paths" id="cd85-2631-5110-03e6" flatten="true" hidden="false" import="true" targetId="7bae-23cb-3977-3ece" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="31c2-8d42-8467-f179" flatten="true" hidden="false" import="true" targetId="962b-e74d-8efa-d6ea" type="selectionEntryGroup"/>
+        <entryLink name="Ascension Paths" id="cc3b-b892-5a40-666c" flatten="true" hidden="false" import="true" targetId="9b2e-ad88-381f-5c49" type="selectionEntryGroup"/>
+        <entryLink name="Blighted Wilds Paths" id="53d9-54b6-5b12-4837" hidden="false" import="true" targetId="3f1b-26c1-aa71-73f8" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="false" field="hidden">
+        <modifier field="hidden" type="set" value="false">
           <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1820-3308-cfeb-f50b"/>
-      </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
-  <entryLinks>
-    <entryLink import="true" name="Battle Traits: Tribes of the Snow Peaks" hidden="false" id="8985-3209-a85c-45b7" type="selectionEntry" targetId="682c-c92d-bab5-ce8f">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e0cc-a952-9143-1737" includeChildSelections="true"/>
-      </constraints>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Chieftain" hidden="false" id="26f3-4fff-492b-3644" type="selectionEntry" targetId="b09c-3f57-8c75-aa38">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="090d-32ad-913e-a269" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="2555-62f1-0a61-4e4e" type="selectionEntryGroup" targetId="eb5b-b161-8088-f32"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="e856-557e-eeb5-111f" type="selectionEntryGroup" targetId="710a-f03f-13c9-cf9"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="0ac9-9942-c088-aafc" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="0b79-5531-38c1-d598" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="d7d3-42dc-7eaf-9acd" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="5f9f-236c-9544-86e1" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="4eaf-51b8-ea48-aaba" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <modifiers>
-        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="6a00-8623-4e06-55ca" field="category"/>
-          </modifiers>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifierGroup>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.56-43e3-895c-2c26"/>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.6d54-625c-d063-13e2"/>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Chieftain on Warsteed" hidden="false" id="dbbe-0e2e-3bdb-ddd1" type="selectionEntry" targetId="6bde-370e-478d-cf24">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="000a-0c85-8ec7-de11" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="3ff0-bafb-d03e-d6bc" type="selectionEntryGroup" targetId="eb5b-b161-8088-f32"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="7bf7-b902-6965-0c5a" type="selectionEntryGroup" targetId="710a-f03f-13c9-cf9"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="8f36-e094-fd29-3b61" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="4b2b-1d31-17b5-5c3a" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="9cd4-b421-1fe2-367c" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="8379-550f-7d1a-59f3" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="34d3-a44a-0c22-2e21" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="90"/>
-      </costs>
-      <modifiers>
-        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="6a00-8623-4e06-55ca" field="category"/>
-          </modifiers>
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifierGroup>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.56-43e3-895c-2c26"/>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.6d54-625c-d063-13e2"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.6a00-8623-4e06-55ca"/>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Warqueen" hidden="false" id="854f-1e38-fc0d-741d" type="selectionEntry" targetId="7f9-8a5a-4a59-769b">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="eb43-7a40-bc9c-ebd9" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="c083-3d8f-7bab-e9dd" type="selectionEntryGroup" targetId="eb5b-b161-8088-f32"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="b31c-65ef-fda8-6b68" type="selectionEntryGroup" targetId="710a-f03f-13c9-cf9"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="912c-7988-d50e-5354" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="2bb4-9f92-f054-7d0d" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="56d7-c741-8364-2cfd" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="cdaf-3b11-b0bd-3a0e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="986a-de0a-3382-0e2a" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <modifiers>
-        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.56-43e3-895c-2c26"/>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.6d54-625c-d063-13e2"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.6a00-8623-4e06-55ca"/>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Gunnar Brand" hidden="false" id="f02b-58bf-bc51-bf5e" type="selectionEntry" targetId="dd16-c1dc-4ff-85f2">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="0399-03ea-a95d-6a10" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="180"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="9679-74c1-790f-83d6" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.56-43e3-895c-2c26"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.f306-b27d-6d13-6124"/>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.215d-0eed-b23e-7ab2"/>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Singri Brand" hidden="false" id="f306-b27d-6d13-6124" type="selectionEntry" targetId="4191-4be9-6ccd-9f70">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="5e12-8291-a27b-a216" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="1" field="5d9f-1321-dd22-9c8e">
-          <localConditionGroups>
-            <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="self" childId="f02b-58bf-bc51-bf5e" shared="true"/>
-              </conditions>
-            </localConditionGroup>
-          </localConditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="min" value="-1" field="selections" scope="force" shared="true" id="5d9f-1321-dd22-9c8e"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4333-200f-f84a-3749" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="The Oathsworn Kin" hidden="false" id="215d-0eed-b23e-7ab2" type="selectionEntry" targetId="c8b1-7d96-6db6-2293">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="6d6b-1577-990d-21ad" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="1" field="5676-73e6-6752-3495">
-          <localConditionGroups>
-            <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="self" childId="f02b-58bf-bc51-bf5e" shared="true"/>
-              </conditions>
-            </localConditionGroup>
-          </localConditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-              <localConditionGroups>
-                <localConditionGroup type="lessThan" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="f02b-58bf-bc51-bf5e" shared="true"/>
-                  </conditions>
-                </localConditionGroup>
-              </localConditionGroups>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="min" value="-1" field="selections" scope="force" shared="true" id="5676-73e6-6752-3495"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7d34-f4af-a6d4-8565" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Fellriders" hidden="false" id="78f3-ed91-ccbc-2871" type="selectionEntry" targetId="30f5-9b05-d94a-fdfb">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="ba42-e895-132c-ee37" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="60e4-37b0-ab52-bfe9" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="621a-13c9-063d-9839" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="d1ab-a0e4-e4be-5c16" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Renown" hidden="false" id="ca34-a536-ee4b-e232" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Marauders" hidden="false" id="cc7e-b2b9-9749-bb5d" type="selectionEntry" targetId="32a0-6285-a243-3a38">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="dad8-4af9-2aca-aa54" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="d75e-d4d3-5566-2e0d" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="eeaf-952d-1ff5-583b" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="082b-13c6-33c8-e455" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Renown" hidden="false" id="e229-5a7e-4ba5-689f" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Savagers" hidden="false" id="dbf7-4486-71ff-136a" type="selectionEntry" targetId="df89-794a-4994-8293">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="842b-a74b-0d13-92f6" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="90"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="5531-6871-5428-fcbe" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="8dd3-0d71-2116-5e41" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Renown" hidden="false" id="01e5-f4bf-74c9-c580" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Darkoath Wilderfiend" hidden="false" id="4732-a295-356c-ce9f" type="selectionEntry" targetId="43ac-9228-ce2c-b739">
-      <categoryLinks>
-        <categoryLink name="SNOW PEAKS" hidden="false" id="4b4e-7ea6-6f30-0f79" targetId="b4c6-30f5-3976-4ed6" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="7e4b-1378-f875-045a" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="e1b9-a9d1-0833-4090" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="eaad-3742-2e10-b6d8" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-        <entryLink import="true" name="Renown" hidden="false" id="1ac8-9bdd-420e-636e" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-    </entryLink>
-    <entryLink import="true" name="The Gnarlspirit Pack" hidden="false" id="7f2c-f5d6-843e-250f" type="selectionEntry" targetId="8046-a145-5d79-aa66">
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="4686-3fc8-7fec-f91a" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Godsworn Hunt" hidden="false" id="6d74-68dd-1837-c739" type="selectionEntry" targetId="1bb9-8fa7-8bf8-e4a2">
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a1fe-2357-189b-9310" type="selectionEntryGroup" targetId="cbc6-9e3a-ff49-844e"/>
-        <entryLink import="true" name="Paths" hidden="false" id="6ad6-252e-b01c-3c61" type="selectionEntryGroup" targetId="6709-9100-c776-b6a6"/>
-      </entryLinks>
-    </entryLink>
-    <entryLink import="true" name="Nexus Chaotica" hidden="false" id="8eb1-f615-3c91-6078" type="selectionEntry" targetId="22a9-a618-90cf-5bc7" defaultAmount="1"/>
-  </entryLinks>
-  <catalogueLinks>
-    <catalogueLink type="catalogue" name="Slaves to Darkness - Library" id="a184-5b22-50c8-87e2" targetId="c580-f07a-aa35-f79f"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="c4ff-62bb-e4b7-8b7e" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
-    <catalogueLink type="catalogue" name="❖ Lores" id="ff28-cf06-86c2-6ccb" targetId="0a11-cd61-2a4e-8e04"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="1cf6-223d-1c8e-bd23" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="7380-e283-5365-c3df" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
-  </catalogueLinks>
-  <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="9e90-540a-a5f6-e6f1" defaultAmount="1">
-      <entryLinks>
-        <entryLink import="true" name="Manifestation Lores" hidden="false" id="2883-ed8f-1747-c0fd" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f101-848b-ad33-fe25"/>
-        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="55b4-5eec-2364-8376"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink name="Army Composition" hidden="false" id="d312-1a03-51bc-3b2d" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="de92-2099-fbf7-a156" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-  </selectionEntries>
 </catalogue>

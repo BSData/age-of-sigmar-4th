@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b3cb-53fb-b710-87f5" name="Sylvaneth - The Evergreen Hunt" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" revision="26" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Sylvaneth - The Evergreen Hunt" id="b3cb-53fb-b710-87f5" battleScribeVersion="2.03" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" library="false" revision="26" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink name="Sylvaneth - Library" id="b61-d53b-4131-554a" targetId="7e0b-8a19-260-5b58" type="catalogue"/>
+    <catalogueLink name="✦ Path to Glory - Ravaged Coast" id="fc0d-7291-93c2-bdd3" importRootEntries="true" targetId="a434-b1ba-922b-7624" type="catalogue"/>
+    <catalogueLink name="❖ Lores" id="61c9-2e1d-6780-3f4c" importRootEntries="true" targetId="0a11-cd61-2a4e-8e04" type="catalogue"/>
+    <catalogueLink name="✦ Path to Glory - Ascension" id="c27a-7112-562d-1f0b" importRootEntries="true" targetId="3a8b-7496-526f-feab" type="catalogue"/>
+    <catalogueLink name="✦ Path to Glory - Blighted Wilds" id="595d-0d38-0835-50b3" importRootEntries="true" targetId="e0ff-dc7c-8795-bfb9" type="catalogue"/>
+  </catalogueLinks>
   <categoryEntries>
     <categoryEntry name="EVERGREEN HUNT" id="637b-b903-6980-34cf" hidden="false"/>
     <categoryEntry name="Forest Sentinel" id="121e-0fc2-daa6-2e08" hidden="false">
+      <constraints>
+        <constraint id="be30-e27f-fed7-567e" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <modifiers>
-        <modifier type="set" value="1" field="be30-e27f-fed7-567e">
+        <modifier field="be30-e27f-fed7-567e" type="set" value="1">
           <conditionGroups>
             <conditionGroup type="or">
               <localConditionGroups>
-                <localConditionGroup type="atLeast" value="1" scope="force" field="selections" includeChildSelections="true" includeChildForces="true" repeats="1">
+                <localConditionGroup field="selections" includeChildForces="true" includeChildSelections="true" repeats="1" scope="force" type="atLeast" value="1">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="427f-870-7b15-6f8" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
+                    <condition childId="427f-870-7b15-6f8" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="self" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </localConditionGroup>
               </localConditionGroups>
@@ -19,553 +29,424 @@
           </conditionGroups>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="be30-e27f-fed7-567e" includeChildSelections="true"/>
-      </constraints>
     </categoryEntry>
   </categoryEntries>
   <entryLinks>
-    <entryLink import="true" name="Belthanos, First Thorn of Kurnoth" hidden="false" id="427f-870-7b15-6f8" type="selectionEntry" targetId="f6f4-66ce-c346-42ed">
+    <entryLink name="Belthanos, First Thorn of Kurnoth" id="427f-870-7b15-6f8" hidden="false" import="true" targetId="f6f4-66ce-c346-42ed" type="selectionEntry">
       <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="1a1b-5895-1527-225b" targetId="637b-b903-6980-34cf" primary="false"/>
+        <categoryLink name="EVERGREEN HUNT" id="1a1b-5895-1527-225b" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="290"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="7418-72fa-977c-ab94" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
+        <entryLink name="Battle Wounds + Scars" id="7418-72fa-977c-ab94" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
+          </conditions>
+          <modifiers>
+            <modifier affects="self.entries.recursive.9190-23b-eab9-9904" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+            <modifier affects="self.entries.recursive.121e-0fc2-daa6-2e08" field="category" scope="force" type="add" value="8f4b-1fa6-3128-8405"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
       <modifiers>
-        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
+        <modifier field="category" scope="root-entry" type="set-primary" value="d1f3-921c-b403-1106">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.9190-23b-eab9-9904"/>
-            <modifier type="add" value="8f4b-1fa6-3128-8405" field="category" scope="force" affects="self.entries.recursive.121e-0fc2-daa6-2e08"/>
-          </modifiers>
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
     </entryLink>
-    <entryLink import="true" name="Arch-Revenant" hidden="false" id="9f39-e566-d3f3-81e2" type="selectionEntry" targetId="c21d-479c-e8ef-b406">
+    <entryLink name="Arch-Revenant" id="9f39-e566-d3f3-81e2" hidden="false" import="true" targetId="c21d-479c-e8ef-b406" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Restrict General" id="1db9-cdf6-1a9d-b9ea" hidden="false" primary="false" targetId="abcb-73d0-2b6c-4f17"/>
+        <categoryLink name="EVERGREEN HUNT" id="5213-f6c5-5280-e14e" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="d6ab-f930-ffde-61f6" field="selections" scope="force" shared="true" type="max" value="-1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="208-401-eed8-e6ab" type="selectionEntryGroup" targetId="d065-9be7-8088-3e87"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="59c3-68e7-73f3-663c" type="selectionEntryGroup" targetId="1d20-b278-2f5f-089b"/>
-        <entryLink import="true" name="Paths" hidden="false" id="139f-5566-0513-3726" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1d0a-0de8-ba75-3b9a" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Warlord" hidden="false" id="fdf0-9444-73e2-fdc2" type="selectionEntry" targetId="bb28-fa4a-bf5f-f793"/>
-        <entryLink import="true" name="Renown" hidden="false" id="d880-bc71-a8b6-6fab" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-        <entryLink import="true" name="Ghyranite Concoctions" hidden="false" id="cca8-16af-af54-3c42" type="selectionEntryGroup" targetId="17d6-baae-dbeb-3e2c"/>
+        <entryLink name="Artefacts of Power" id="208-401-eed8-e6ab" hidden="false" import="true" targetId="d065-9be7-8088-3e87" type="selectionEntryGroup"/>
+        <entryLink name="Heroic Traits" id="59c3-68e7-73f3-663c" hidden="false" import="true" targetId="1d20-b278-2f5f-089b" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="139f-5566-0513-3726" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="1d0a-0de8-ba75-3b9a" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Warlord" id="fdf0-9444-73e2-fdc2" hidden="false" import="true" targetId="bb28-fa4a-bf5f-f793" type="selectionEntry"/>
+        <entryLink name="Renown" id="d880-bc71-a8b6-6fab" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+        <entryLink name="Ghyranite Concoctions" id="cca8-16af-af54-3c42" hidden="false" import="true" targetId="17d6-baae-dbeb-3e2c" type="selectionEntryGroup"/>
       </entryLinks>
-      <categoryLinks>
-        <categoryLink name="Restrict General" hidden="false" id="1db9-cdf6-1a9d-b9ea" targetId="abcb-73d0-2b6c-4f17" primary="false"/>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="5213-f6c5-5280-e14e" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="d1f3-921c-b403-1106" field="category" scope="root-entry">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="8f4b-1fa6-3128-8405" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="d6ab-f930-ffde-61f6"/>
-      </constraints>
       <modifierGroups>
         <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="121e-0fc2-daa6-2e08" field="category"/>
-          </modifiers>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="d1f3-921c-b403-1106" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
+          <modifiers>
+            <modifier field="category" type="add" value="121e-0fc2-daa6-2e08"/>
+          </modifiers>
         </modifierGroup>
         <modifierGroup type="and">
-          <modifiers>
-            <modifier type="add" value="db3a-7199-c92e-f3cf" field="category" scope="force" affects="self.entries.recursive.9190-23b-eab9-9904"/>
-          </modifiers>
           <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="self" childId="d1f3-921c-b403-1106" shared="true"/>
+            <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
           </conditions>
+          <modifiers>
+            <modifier affects="self.entries.recursive.9190-23b-eab9-9904" field="category" scope="force" type="add" value="db3a-7199-c92e-f3cf"/>
+          </modifiers>
         </modifierGroup>
       </modifierGroups>
-    </entryLink>
-    <entryLink import="true" name="Spiterider Lancers" hidden="false" id="2224-c6b3-1c03-b87d" type="selectionEntry" targetId="8d4f-cdc2-f74f-daac">
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="947d-7226-891d-793c" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="3952-f081-dda5-7052" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="26a2-f7ac-affa-555d" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="a863-8b59-7280-9da0" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="category" scope="root-entry" type="set-primary" value="d1f3-921c-b403-1106">
           <conditionGroups>
             <conditionGroup type="and">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildForces="true" includeChildSelections="true" scope="force" shared="true" type="lessThan" value="1"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+                <condition childId="8f4b-1fa6-3128-8405" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink name="Spiterider Lancers" id="2224-c6b3-1c03-b87d" hidden="false" import="true" targetId="8d4f-cdc2-f74f-daac" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" id="9b89-262a-a71-974b" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="230"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="9b89-262a-a71-974b" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Revenant Seekers" hidden="false" id="cfe9-6bb5-5957-e3ce" type="selectionEntry" targetId="766a-54f1-440b-b878">
       <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="89e7-5d9-f700-ee62" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="a673-f3c9-02b7-0306" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="ae1a-2318-4f8d-bbbc" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="4f92-0cfe-bdd4-105c" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink name="Reinforced" id="947d-7226-891d-793c" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="3952-f081-dda5-7052" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="26a2-f7ac-affa-555d" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="a863-8b59-7280-9da0" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
       </entryLinks>
       <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="180"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="c3bd-5b4b-fc96-a9c3" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Kurnoth Hunters with Kurnoth Scythes" hidden="false" id="cd9e-95e9-e6a0-3af9" type="selectionEntry" targetId="577a-d471-c08e-6ff4">
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="f404-eeb4-1424-f758" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="379c-76eb-ffac-6801" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="b3f0-4055-f0c8-c716" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="7eb0-1d8c-3901-e4cd" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="200"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="da02-4f52-6221-d67a" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Kurnoth Hunters with Kurnoth Greatswords" hidden="false" id="e53b-ea79-a6c3-8b4a" type="selectionEntry" targetId="7403-c67e-a2d-a1af">
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="b50a-ae20-4e58-1fc8" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="5559-b677-bd20-0802" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="99e0-5d5d-9f00-85b6" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="d3ec-104f-967e-fdf8" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="210"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="76e7-1371-435a-b80d" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Kurnoth Hunters with Kurnoth Greatbows" hidden="false" id="e675-7e99-363b-1367" type="selectionEntry" targetId="a457-63b8-99fb-b82f">
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="a623-2aa5-ce16-c084" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="dca0-872f-5996-4b81" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="75c7-9c75-6f7c-1128" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="1b0e-0c59-7acf-ebcb" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="multiply" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="190"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="5c1a-4d5a-ac3d-a20f" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
-    </entryLink>
-    <entryLink import="true" name="Awakened Wyldwood" hidden="false" id="f15b-e609-1c95-f717" type="selectionEntry" targetId="cda9-53e5-99de-f836" defaultAmount="1"/>
-    <entryLink import="true" name="Battle Traits: The Evergreen Hunt" hidden="false" id="dd18-148c-7efe-0edf" type="selectionEntry" targetId="8a8e-e599-64f9-6079"/>
-    <entryLink import="true" name="Revenant Seekers (Scourge of Ghyran)" hidden="false" id="87c5-cc83-24f4-f750" type="selectionEntry" targetId="4f4f-8ec1-d16d-880e">
-      <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="e1e8-c3eb-3f11-7e83" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="411a-69eb-b505-3556" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="1f37-f94c-cadc-7aef" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="4008-0815-80c3-372d" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="9f39-e566-d3f3-81e2" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="force" childId="427f-870-7b15-6f8" shared="true"/>
+                    <condition childId="427f-870-7b15-6f8" field="selections" scope="force" shared="true" type="lessThan" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="multiply" value="2" field="points">
+        <modifier field="points" type="multiply" value="2">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
-      <costs>
-        <cost name="pts" typeId="points" value="240"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="ce3f-a3d4-57ab-88d5" targetId="637b-b903-6980-34cf" primary="false"/>
-      </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Kurnoth Hunters with Kurnoth Greatswords (Scourge of Aqshy)" hidden="false" id="4234-8260-5356-9c40" type="selectionEntry" targetId="a522-3c8c-8a44-3ca3">
+    <entryLink name="Revenant Seekers" id="cfe9-6bb5-5957-e3ce" hidden="false" import="true" targetId="766a-54f1-440b-b878" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" id="c3bd-5b4b-fc96-a9c3" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="180"/>
+      </costs>
       <entryLinks>
-        <entryLink import="true" name="Reinforced" hidden="false" id="a74f-ee1d-df6d-0d9c" type="selectionEntry" targetId="1b37-82b8-c062-eb82"/>
-        <entryLink import="true" name="Paths" hidden="false" id="5289-5261-7fc8-f3fc" type="selectionEntryGroup" targetId="cd0a-4f22-0d92-5f96"/>
-        <entryLink import="true" name="Battle Wounds + Scars" hidden="false" id="a647-b6bd-4b45-acc3" type="selectionEntryGroup" targetId="1c26-b91a-37b0-0d54"/>
-        <entryLink import="true" name="Renown" hidden="false" id="86ae-4755-df34-9f73" type="selectionEntry" targetId="e7d5-5062-46d5-38dd"/>
+        <entryLink name="Reinforced" id="89e7-5d9-f700-ee62" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="a673-f3c9-02b7-0306" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="ae1a-2318-4f8d-bbbc" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="4f92-0cfe-bdd4-105c" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
       </entryLinks>
       <modifiers>
-        <modifier type="multiply" value="2" field="points">
+        <modifier field="points" type="multiply" value="2">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="self" childId="1b37-82b8-c062-eb82" shared="true"/>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="376a-6b97-8699-dd59" shared="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="self" childId="db3a-7199-c92e-f3cf" shared="true"/>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
       </modifiers>
+    </entryLink>
+    <entryLink name="Kurnoth Hunters with Kurnoth Scythes" id="cd9e-95e9-e6a0-3af9" hidden="false" import="true" targetId="577a-d471-c08e-6ff4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" id="da02-4f52-6221-d67a" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="200"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="f404-eeb4-1424-f758" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="379c-76eb-ffac-6801" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="b3f0-4055-f0c8-c716" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="7eb0-1d8c-3901-e4cd" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Kurnoth Hunters with Kurnoth Greatswords" id="e53b-ea79-a6c3-8b4a" hidden="false" import="true" targetId="7403-c67e-a2d-a1af" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" id="76e7-1371-435a-b80d" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="210"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="b50a-ae20-4e58-1fc8" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="5559-b677-bd20-0802" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="99e0-5d5d-9f00-85b6" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="d3ec-104f-967e-fdf8" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Kurnoth Hunters with Kurnoth Greatbows" id="e675-7e99-363b-1367" hidden="false" import="true" targetId="a457-63b8-99fb-b82f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" id="5c1a-4d5a-ac3d-a20f" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="190"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="a623-2aa5-ce16-c084" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="dca0-872f-5996-4b81" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="75c7-9c75-6f7c-1128" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="1b0e-0c59-7acf-ebcb" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Awakened Wyldwood" id="f15b-e609-1c95-f717" defaultAmount="1" hidden="false" import="true" targetId="cda9-53e5-99de-f836" type="selectionEntry"/>
+    <entryLink name="Battle Traits: The Evergreen Hunt" id="dd18-148c-7efe-0edf" hidden="false" import="true" targetId="8a8e-e599-64f9-6079" type="selectionEntry"/>
+    <entryLink name="Revenant Seekers (Scourge of Ghyran)" id="87c5-cc83-24f4-f750" hidden="false" import="true" targetId="4f4f-8ec1-d16d-880e" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="EVERGREEN HUNT" id="ce3f-a3d4-57ab-88d5" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="e1e8-c3eb-3f11-7e83" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="411a-69eb-b505-3556" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="1f37-f94c-cadc-7aef" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="4008-0815-80c3-372d" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="9f39-e566-d3f3-81e2" field="selections" scope="force" shared="true" type="lessThan" value="1"/>
+                    <condition childId="427f-870-7b15-6f8" field="selections" scope="force" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </entryLink>
+    <entryLink name="Kurnoth Hunters with Kurnoth Greatswords (Scourge of Aqshy)" id="4234-8260-5356-9c40" hidden="false" import="true" targetId="a522-3c8c-8a44-3ca3" type="selectionEntry">
       <categoryLinks>
-        <categoryLink name="EVERGREEN HUNT" hidden="false" id="746b-7a28-5aa8-d8de" targetId="637b-b903-6980-34cf" primary="false"/>
+        <categoryLink name="EVERGREEN HUNT" id="746b-7a28-5aa8-d8de" hidden="false" primary="false" targetId="637b-b903-6980-34cf"/>
       </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Reinforced" id="a74f-ee1d-df6d-0d9c" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
+        <entryLink name="Paths" id="5289-5261-7fc8-f3fc" hidden="false" import="true" targetId="cd0a-4f22-0d92-5f96" type="selectionEntryGroup"/>
+        <entryLink name="Battle Wounds + Scars" id="a647-b6bd-4b45-acc3" hidden="false" import="true" targetId="1c26-b91a-37b0-0d54" type="selectionEntryGroup"/>
+        <entryLink name="Renown" id="86ae-4755-df34-9f73" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="db3a-7199-c92e-f3cf" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
-  <catalogueLinks>
-    <catalogueLink type="catalogue" name="Sylvaneth - Library" id="b61-d53b-4131-554a" targetId="7e0b-8a19-260-5b58"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Ravaged Coast" id="fc0d-7291-93c2-bdd3" importRootEntries="true" targetId="a434-b1ba-922b-7624"/>
-    <catalogueLink type="catalogue" name="❖ Lores" id="61c9-2e1d-6780-3f4c" targetId="0a11-cd61-2a4e-8e04" importRootEntries="true"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Ascension" id="c27a-7112-562d-1f0b" targetId="3a8b-7496-526f-feab" importRootEntries="true"/>
-    <catalogueLink type="catalogue" name="✦ Path to Glory - Blighted Wilds" id="595d-0d38-0835-50b3" targetId="e0ff-dc7c-8795-bfb9" importRootEntries="true"/>
-  </catalogueLinks>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Heroic Traits" id="1d20-b278-2f5f-089b" hidden="false">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Heroic Traits: The Evergreen Hunt" id="155e-b146-ac9b-b91e" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Sapwood Leader" hidden="false" id="c06c-f08f-6b41-2be9">
-              <profiles>
-                <profile name="Sapwood Leader" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="4193-d666-1dc5-66f3">
-                  <characteristics>
-                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If you pick this unit to be a target of the 'Abundant Growth' ability, **Heal (3)** this unit instead of **Heal (1)**.</characteristic>
-                  </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
-                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
-                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="632c-23cf-e61c-dbda" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <rules>
-            <rule name="Enhancement Restrictions" id="f4c2-2fa1-06c1-b08d" hidden="true">
-              <description>**^^Hero^^** only</description>
-            </rule>
-          </rules>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+  <selectionEntries>
+    <selectionEntry name="Manifestation Lore" id="e0b7-8f5e-7f79-aaa4" defaultAmount="1" hidden="true" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Army Composition" id="01db-a16d-c572-614b" hidden="false" primary="true" targetId="ac97-b27c-7e35-7ab9"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="63e4-02be-e978-34c4" field="selections" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="2e55-8d4d-289f-ec87" field="selections" scope="self" shared="true" type="max" value="1"/>
+      </constraints>
       <entryLinks>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="2de5-b2ac-c564-60dc" type="selectionEntryGroup" targetId="c437-e34c-5e1c-95e6" flatten="true"/>
-        <entryLink import="true" name="Heroic Traits" hidden="false" id="62bb-a825-ee19-06be" type="selectionEntryGroup" targetId="59df-5a5c-f4ee-ab6e"/>
+        <entryLink name="Manifestation Lores" id="53a5-1a50-b0fa-a480" flatten="true" hidden="false" import="true" targetId="748f-5d65-2d45-95c5" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="-1" field="6aa3-fad5-a3bc-ebc6">
+        <modifier field="hidden" type="set" value="false">
           <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition childId="any" field="de92-2099-fbf7-a156" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6aa3-fad5-a3bc-ebc6" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="5797-8ac8-eb02-93bf"/>
-      </constraints>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Artefacts of Power" id="d065-9be7-8088-3e87" hidden="false">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Artefacts of Power: The Evergreen Hunt" id="c41b-43cc-ac7a-0d4f" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Heartwood Hunting Horn" hidden="false" id="b8c6-45f4-45bb-5a6c">
-              <profiles>
-                <profile name="Heartwood Hunting Horn" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="e527-61cb-f2c3-146b">
-                  <characteristics>
-                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Hero Phase</characteristic>
-                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You gain 1 chord.</characteristic>
-                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-                  </characteristics>
-                  <attributes>
-                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-                  </attributes>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="92fd-8e28-7780-e864" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <rules>
-            <rule name="Enhancement Restrictions" id="a3dd-74d1-8185-9271" hidden="true">
-              <description>**^^Hero^^** only</description>
-            </rule>
-          </rules>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="9c87-0e99-7bcb-0e90" type="selectionEntryGroup" targetId="e1b2-cedf-56a5-6bb1" flatten="true"/>
-        <entryLink import="true" name="Artefacts of Power" hidden="false" id="0289-e152-3309-2559" type="selectionEntryGroup" targetId="d563-838a-a901-097e"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="set" value="-1" field="702f-d62f-f8ef-0d5b">
-          <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="702f-d62f-f8ef-0d5b" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="da4b-b5fa-4b03-0c90"/>
-      </constraints>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Battle Wounds + Scars" id="1c26-b91a-37b0-0d54" hidden="true" collapsible="true">
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1bed-ddb5-0c50-16d2" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Ravaged Coast Battle Scars" hidden="false" id="f9aa-b4a1-a1cb-9730" type="selectionEntryGroup" targetId="5559-80df-ba01-66a7" flatten="true"/>
-        <entryLink import="true" name="Blighted Wilds Battle Scars" hidden="false" id="dba0-fae3-1ed1-4e49" type="selectionEntryGroup" targetId="374e-3b5e-1810-b56a"/>
-      </entryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Battle Wounds" hidden="false" id="1681-f0d1-549b-2e01"/>
-        <selectionEntry type="upgrade" import="true" name="Drained" hidden="true" id="95eb-f787-a60d-dcde">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e046-c383-1dae-642e"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="6e72-1656-d554-528a" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Paths" id="cd0a-4f22-0d92-5f96" hidden="true">
-      <entryLinks>
-        <entryLink import="true" name="Ravaged Coast Paths" hidden="false" id="cc6a-47fa-5ab3-ac84" type="selectionEntryGroup" targetId="7bae-23cb-3977-3ece" flatten="true"/>
-        <entryLink import="true" name="Ascension Paths" hidden="false" id="1fdc-0cf4-dc41-9f53" type="selectionEntryGroup" targetId="9b2e-ad88-381f-5c49" flatten="true"/>
-        <entryLink import="true" name="Blighted Wilds Paths" hidden="false" id="5325-f33e-d903-e380" type="selectionEntryGroup" targetId="3f1b-26c1-aa71-73f8"/>
-        <entryLink import="true" name="Paths" hidden="false" id="dff9-183a-946b-3cab" type="selectionEntryGroup" targetId="1ef8-fa29-1687-934f" flatten="true"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="e63c-79ff-93ba-c5eb" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87f6-5902-1500-7246"/>
-      </constraints>
-    </selectionEntryGroup>
-  </sharedSelectionEntryGroups>
+    </selectionEntry>
+  </selectionEntries>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Battle Traits: The Evergreen Hunt" hidden="false" id="8a8e-e599-64f9-6079">
+    <selectionEntry name="Battle Traits: The Evergreen Hunt" id="8a8e-e599-64f9-6079" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Reference" id="9b3d-f73d-17bd-3e08" hidden="false" primary="true" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
       <profiles>
-        <profile name="Song of the Hunt" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)" hidden="false" id="64cd-11e1-f3ab-9218">
-          <characteristics>
-            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The following cumulative effects apply to friendly **^^Evergreen Hunt^^** units depending on the number of chords you have:
-**1 chord – *Simple:*** Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry.
-**2 chords – *Tuneful:*** Add 1 to hit rolls and wound rolls for friendly units' combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry.
-**3-5 chords – *Melodic:*** Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry.
-**6+ chords – *Mellifluous:*** While a friendly unit is in combat with the quarry, the quarry has **^^Strike-last^^**.</characteristic>
-          </characteristics>
+        <profile name="Song of the Hunt" id="64cd-11e1-f3ab-9218" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
           <attributes>
             <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Black</attribute>
             <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Special</attribute>
             <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
           </attributes>
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">The following cumulative effects apply to friendly **^^Evergreen Hunt^^** units depending on the number of chords you have:
+**1 chord – *Simple:*** Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry.
+**2 chords – *Tuneful:*** Add 1 to hit rolls and wound rolls for friendly units&apos; combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry.
+**3-5 chords – *Melodic:*** Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry.
+**6+ chords – *Mellifluous:*** While a friendly unit is in combat with the quarry, the quarry has **^^Strike-last^^**.</characteristic>
+          </characteristics>
         </profile>
-        <profile name="Abundant Growth" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="c9eb-8479-6016-45a3">
+        <profile name="Abundant Growth" id="c9eb-8479-6016-45a3" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick each friendly **^^Evergreen Hunt^^** unit that is wholly within 3&quot; of a terrain feature to be the targets.</characteristic>
@@ -573,13 +454,13 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Opening Horn Blast" id="9dc9-a9bc-1932-e09c" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Defensive</attribute>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Opening Horn Blast" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9dc9-a9bc-1932-e09c">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round (Army), Start of Battle Round</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">You must use this ability at the start of the battle round.</characteristic>
@@ -590,13 +471,13 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Rhythm of the Chase" id="9a02-6398-3e48-6bd8" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Rhythm of the Chase" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="9a02-6398-3e48-6bd8">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle Round (Army), Start of Battle Round</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If there is no **quarry** on the battlefield, pick an enemy unit on the battlefield to be the target.</characteristic>
@@ -604,13 +485,13 @@
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
         </profile>
-        <profile name="A Prize Quarry is Sighted" typeId="55ac-f837-dded-5872" typeName="Ability (Command)" hidden="false" id="2e05-5a2d-aaca-92c4">
+        <profile name="A Prize Quarry is Sighted" id="2e05-5a2d-aaca-92c4" hidden="false" typeId="55ac-f837-dded-5872" typeName="Ability (Command)">
+          <attributes>
+            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Yellow</attribute>
+            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Special</attribute>
+            <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
+          </attributes>
           <characteristics>
             <characteristic name="Timing" typeId="736-6e3a-d0b5-a1b0">Once Per Battle (Army), Your Hero Phase</characteristic>
             <characteristic name="Cost" typeId="a49e-3082-e2a6-e802">1</characteristic>
@@ -618,27 +499,27 @@
             <characteristic name="Effect" typeId="2111-3ca8-61dd-a5f0">The target becomes the quarry for the rest of the battle. If there was already a quarry on the battlefield when you declared this ability, that unit is no longer the quarry.</characteristic>
             <characteristic name="Keywords" typeId="445d-f443-5448-e7ce"/>
           </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5c69-e4b9-19bc-e801">Yellow</attribute>
-            <attribute name="Type" typeId="2bd5-08f1-f3d1-86f7">Special</attribute>
-            <attribute name="Parent Node" typeId="df75-e7dc-12b5-48a8"/>
-          </attributes>
         </profile>
-        <profile name="Merciful Strike" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="6b10-92ad-9fdd-ce66">
-          <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Evergreen Hunt Monster^^** that has not used a **^^Rampage^^** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice and add the number of damage points the target has. If the result exceeds the target's Health characteristic, 1 model in the target unit is slain.</characteristic>
-            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
-            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
-          </characteristics>
+        <profile name="Merciful Strike" id="6b10-92ad-9fdd-ce66" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
+          <characteristics>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Combat Phase</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a friendly **^^Evergreen Hunt Monster^^** that has not used a **^^Rampage^^** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice and add the number of damage points the target has. If the result exceeds the target&apos;s Health characteristic, 1 model in the target unit is slain.</characteristic>
+            <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+            <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+          </characteristics>
         </profile>
-        <profile name="Nature Aetheric" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="7f2a-bda2-2428-c5d0">
+        <profile name="Nature Aetheric" id="7f2a-bda2-2428-c5d0" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+          <attributes>
+            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
+            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+          </attributes>
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Deployment Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick a terrain feature that is within friendly territory to be the target.</characteristic>
@@ -647,13 +528,13 @@ wholly within the **creeping overgrowth** while they are wholly within 6&quot; 
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
+        </profile>
+        <profile name="Questing Tendrils" id="f17c-2030-f75d-6d5c" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
-        </profile>
-        <profile name="Questing Tendrils" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)" hidden="false" id="f17c-2030-f75d-6d5c">
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Any Turn</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick the terrain feature that is closest to the quarry to be the target.</characteristic>
@@ -661,37 +542,156 @@ wholly within the **creeping overgrowth** while they are wholly within 6&quot; 
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
-          <attributes>
-            <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Black</attribute>
-            <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
-            <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
-          </attributes>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink name="Reference" hidden="false" id="9b3d-f73d-17bd-3e08" targetId="3360-1158-e879-9606" primary="true"/>
-      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
-  <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Manifestation Lore" hidden="true" id="e0b7-8f5e-7f79-aaa4" defaultAmount="1">
-      <entryLinks>
-        <entryLink import="true" name="Manifestation Lores" hidden="false" id="53a5-1a50-b0fa-a480" type="selectionEntryGroup" targetId="748f-5d65-2d45-95c5" flatten="true"/>
-      </entryLinks>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Heroic Traits" id="1d20-b278-2f5f-089b" hidden="false">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="63e4-02be-e978-34c4"/>
-        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="2e55-8d4d-289f-ec87"/>
+        <constraint id="6aa3-fad5-a3bc-ebc6" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="5797-8ac8-eb02-93bf" field="selections" scope="root-entry" shared="true" type="max" value="1"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink name="Army Composition" hidden="false" id="01db-a16d-c572-614b" targetId="ac97-b27c-7e35-7ab9" primary="true"/>
-      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Heroic Traits" id="2de5-b2ac-c564-60dc" flatten="true" hidden="false" import="true" targetId="c437-e34c-5e1c-95e6" type="selectionEntryGroup"/>
+        <entryLink name="Heroic Traits" id="62bb-a825-ee19-06be" hidden="false" import="true" targetId="59df-5a5c-f4ee-ab6e" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifiers>
-        <modifier type="set" value="false" field="hidden">
+        <modifier field="6aa3-fad5-a3bc-ebc6" type="set" value="-1">
           <conditions>
-            <condition type="atLeast" value="1" field="de92-2099-fbf7-a156" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
           </conditions>
         </modifier>
       </modifiers>
-    </selectionEntry>
-  </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Heroic Traits: The Evergreen Hunt" id="155e-b146-ac9b-b91e" hidden="false">
+          <rules>
+            <rule name="Enhancement Restrictions" id="f4c2-2fa1-06c1-b08d" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
+          <selectionEntries>
+            <selectionEntry name="Sapwood Leader" id="c06c-f08f-6b41-2be9" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="632c-23cf-e61c-dbda" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+              </constraints>
+              <profiles>
+                <profile name="Sapwood Leader" id="4193-d666-1dc5-66f3" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+                  <attributes>
+                    <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Green</attribute>
+                    <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Defensive</attribute>
+                    <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+                  </attributes>
+                  <characteristics>
+                    <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+                    <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">If you pick this unit to be a target of the &apos;Abundant Growth&apos; ability, **Heal (3)** this unit instead of **Heal (1)**.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Artefacts of Power" id="d065-9be7-8088-3e87" hidden="false">
+      <constraints>
+        <constraint id="702f-d62f-f8ef-0d5b" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="da4b-b5fa-4b03-0c90" field="selections" scope="root-entry" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Artefacts of Power" id="9c87-0e99-7bcb-0e90" flatten="true" hidden="false" import="true" targetId="e1b2-cedf-56a5-6bb1" type="selectionEntryGroup"/>
+        <entryLink name="Artefacts of Power" id="0289-e152-3309-2559" hidden="false" import="true" targetId="d563-838a-a901-097e" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="702f-d62f-f8ef-0d5b" type="set" value="-1">
+          <conditions>
+            <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Artefacts of Power: The Evergreen Hunt" id="c41b-43cc-ac7a-0d4f" hidden="false">
+          <rules>
+            <rule name="Enhancement Restrictions" id="a3dd-74d1-8185-9271" hidden="true">
+              <description>**^^Hero^^** only</description>
+            </rule>
+          </rules>
+          <selectionEntries>
+            <selectionEntry name="Heartwood Hunting Horn" id="b8c6-45f4-45bb-5a6c" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="92fd-8e28-7780-e864" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+              </constraints>
+              <profiles>
+                <profile name="Heartwood Hunting Horn" id="e527-61cb-f2c3-146b" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+                  <attributes>
+                    <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Yellow</attribute>
+                    <attribute name="Type" typeId="6d16-c86b-2698-85a4">Special</attribute>
+                    <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
+                  </attributes>
+                  <characteristics>
+                    <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Any Hero Phase</characteristic>
+                    <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
+                    <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">You gain 1 chord.</characteristic>
+                    <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
+                    <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Battle Wounds + Scars" id="1c26-b91a-37b0-0d54" collapsible="true" hidden="true">
+      <entryLinks>
+        <entryLink name="Ravaged Coast Battle Scars" id="f9aa-b4a1-a1cb-9730" flatten="true" hidden="false" import="true" targetId="5559-80df-ba01-66a7" type="selectionEntryGroup"/>
+        <entryLink name="Blighted Wilds Battle Scars" id="dba0-fae3-1ed1-4e49" hidden="false" import="true" targetId="374e-3b5e-1810-b56a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+                <condition childId="1bed-ddb5-0c50-16d2" field="selections" includeChildSelections="true" scope="ancestor" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry name="Battle Wounds" id="1681-f0d1-549b-2e01" hidden="false" import="true" type="upgrade"/>
+        <selectionEntry name="Drained" id="95eb-f787-a60d-dcde" hidden="true" import="true" type="upgrade">
+          <constraints>
+            <constraint id="e046-c383-1dae-642e" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifiers>
+            <modifier field="hidden" type="set" value="false">
+              <conditions>
+                <condition childId="6e72-1656-d554-528a" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paths" id="cd0a-4f22-0d92-5f96" hidden="true">
+      <constraints>
+        <constraint id="87f6-5902-1500-7246" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <entryLinks>
+        <entryLink name="Ravaged Coast Paths" id="cc6a-47fa-5ab3-ac84" flatten="true" hidden="false" import="true" targetId="7bae-23cb-3977-3ece" type="selectionEntryGroup"/>
+        <entryLink name="Ascension Paths" id="1fdc-0cf4-dc41-9f53" flatten="true" hidden="false" import="true" targetId="9b2e-ad88-381f-5c49" type="selectionEntryGroup"/>
+        <entryLink name="Blighted Wilds Paths" id="5325-f33e-d903-e380" hidden="false" import="true" targetId="3f1b-26c1-aa71-73f8" type="selectionEntryGroup"/>
+        <entryLink name="Paths" id="dff9-183a-946b-3cab" flatten="true" hidden="false" import="true" targetId="1ef8-fa29-1687-934f" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditions>
+            <condition childId="any" field="e63c-79ff-93ba-c5eb" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>
