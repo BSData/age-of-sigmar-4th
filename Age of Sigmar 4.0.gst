@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Age of Sigmar 4.0" id="e51d-b1a3-75fc-dc3g" battleScribeVersion="2.03" revision="102" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Age of Sigmar 4.0" id="e51d-b1a3-75fc-dc3g" battleScribeVersion="2.03" revision="104" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="DEATH" id="d484-a2d7-cf4f-c4a0" hidden="false"/>
     <categoryEntry name="HERO" id="6e72-1656-d554-528a" hidden="false">
@@ -186,6 +186,8 @@
     <categoryEntry name="MEGA-GARGANT" id="3723-4d8b-de1e-114b" hidden="false"/>
     <categoryEntry name="SONS OF BEHEMAT" id="482b-a44e-ffc6-df0a" hidden="false"/>
     <categoryEntry name="GARGANT" id="cdfb-7c8d-6a59-3866" hidden="false"/>
+    <categoryEntry name="BIG" id="aba7-75e8-ea43-5f1e" hidden="false"/>
+    <categoryEntry name="LITTLE" id="d8ec-c3f5-89bb-d132" hidden="false"/>
     <categoryEntry name="BEASTS OF CHAOS" id="e902-e0b8-b5ea-d527" hidden="false"/>
     <categoryEntry name="BRAYHERD" id="bf15-f13d-cca6-29d8" hidden="false"/>
     <categoryEntry name="THUNDERSCORN" id="7be1-3285-0de8-35da" hidden="false"/>
@@ -1472,7 +1474,7 @@
         <forceEntryLink name="Sky-Port Profiteers" id="bdb2-a4a4-aaa9-b84f" hidden="false" targetId="5b4a-c0d3-7f5f-3794" type="forceEntry"/>
         <forceEntryLink name="Snerk&apos;s Trogg-fer-Hire" id="be3b-344c-9ca1-780a" hidden="false" targetId="9d39-ae0e-afc9-f982" type="forceEntry"/>
         <forceEntryLink name="Squires of the Everchosen" id="ca57-76e1-a906-0e75" hidden="false" targetId="2b2d-a5c6-4595-5468" type="forceEntry"/>
-        <forceEntryLink name="Stumblefoot Gargant" id="fd44-0281-227f-3926" hidden="false" targetId="e974-53fd-481c-5345" type="forceEntry"/>
+        <forceEntryLink name="Krong the Club" id="e9ed-ab9f-6c5f-344a" hidden="false" targetId="799b-bee1-49a7-aa3a" type="forceEntry"/>
         <forceEntryLink name="The Beast of Castle Sterneiste" id="182d-a1c0-f9ad-aed9" hidden="false" targetId="6e65-4c2e-132e-4c1e" type="forceEntry"/>
         <forceEntryLink name="The Blacktalons" id="532a-a1f5-ebcd-686c" hidden="false" targetId="bced-df96-fcc3-5cf6" type="forceEntry"/>
         <forceEntryLink name="The Coven of Thryx" id="a4ad-e59d-955d-c951" hidden="false" targetId="6f98-8771-7752-c86e" type="forceEntry"/>
@@ -2825,7 +2827,7 @@
         <forceEntryLink name="Sky-Port Profiteers" id="42f7-fe39-75ff-3738" hidden="false" targetId="5b4a-c0d3-7f5f-3794" type="forceEntry"/>
         <forceEntryLink name="Snerk&apos;s Trogg-fer-Hire" id="bbcf-124f-3cf4-0f47" hidden="false" targetId="9d39-ae0e-afc9-f982" type="forceEntry"/>
         <forceEntryLink name="Squires of the Everchosen" id="67a3-3f5e-63f9-cbe8" hidden="false" targetId="2b2d-a5c6-4595-5468" type="forceEntry"/>
-        <forceEntryLink name="Stumblefoot Gargant" id="0800-80dd-7db6-49c4" hidden="false" targetId="e974-53fd-481c-5345" type="forceEntry"/>
+        <forceEntryLink name="Krong the Club" id="b59f-7caf-b62a-79c9" hidden="false" targetId="799b-bee1-49a7-aa3a" type="forceEntry"/>
         <forceEntryLink name="The Beast of Castle Sterneiste" id="0d80-bcc2-5d87-6f56" hidden="false" targetId="6e65-4c2e-132e-4c1e" type="forceEntry"/>
         <forceEntryLink name="The Blacktalons" id="2a24-16f9-ecdd-4241" hidden="false" targetId="bced-df96-fcc3-5cf6" type="forceEntry"/>
         <forceEntryLink name="The Coven of Thryx" id="4bd6-1b4d-9c07-fd67" hidden="false" targetId="6f98-8771-7752-c86e" type="forceEntry"/>
@@ -7139,7 +7141,7 @@
             <modifier field="hidden" type="set" value="false"/>
           </modifiers>
         </forceEntryLink>
-        <forceEntryLink name="Stumblefoot Gargant" id="ff16-0ef2-6cf8-d584" hidden="false" targetId="e974-53fd-481c-5345" type="forceEntry">
+        <forceEntryLink name="Krong the Club" id="31d4-0f66-b346-0480" hidden="false" targetId="799b-bee1-49a7-aa3a" type="forceEntry">
           <modifiers>
             <modifier field="hidden" type="set" value="false"/>
           </modifiers>
@@ -7348,7 +7350,7 @@
         <constraint id="460b-b59c-1dd7-cd30" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="450"/>
+        <cost name="pts" typeId="points" value="440"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -7362,7 +7364,6 @@
                     <condition childId="405e-c5f4-8579-b05c" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="640e-6bc1-c83d-13c" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="b53b-1217-df2e-66d2" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="7acb-3141-6008-1c09" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="9baf-c109-f621-e60" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6353-cb84-ac7f-9a15" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="832c-fd6-a535-ffae" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
@@ -7392,7 +7393,7 @@
         <constraint id="68d9-7ef1-a7fb-c64" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="400"/>
+        <cost name="pts" typeId="points" value="360"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -7403,7 +7404,6 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition childId="8aef-b85d-b63a-ef05" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="7acb-3141-6008-1c09" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="9baf-c109-f621-e60" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6353-cb84-ac7f-9a15" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="832c-fd6-a535-ffae" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
@@ -7536,11 +7536,9 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition childId="8aef-b85d-b63a-ef05" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="7acb-3141-6008-1c09" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="9baf-c109-f621-e60" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6353-cb84-ac7f-9a15" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="832c-fd6-a535-ffae" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="6cc-9eb2-c5b4-2877" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="d545-cdca-9e60-ad27" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="d731-9058-b0e5-6ff5" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="afdb-68a1-283e-3bf2" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
@@ -8336,7 +8334,6 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition childId="8aef-b85d-b63a-ef05" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="7acb-3141-6008-1c09" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="9baf-c109-f621-e60" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6353-cb84-ac7f-9a15" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="832c-fd6-a535-ffae" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
@@ -8932,18 +8929,18 @@
         </modifier>
       </modifiers>
     </forceEntry>
-    <forceEntry name="Stumblefoot Gargant" id="e974-53fd-481c-5345" hidden="true">
+    <forceEntry name="Krong the Club" id="799b-bee1-49a7-aa3a" hidden="true">
       <categoryLinks>
-        <categoryLink name="HERO" id="4622-6c6a-58d5-922b" hidden="false" targetId="6e72-1656-d554-528a"/>
-        <categoryLink name="INFANTRY" id="145d-2c56-ae2b-f0e9" hidden="false" targetId="75d6-6995-dfcc-3898"/>
-        <categoryLink name="MONSTER" id="f555-93ac-f0ba-c277" hidden="false" targetId="6d54-625c-d063-13e2"/>
-        <categoryLink name="WAR MACHINE" id="4983-52f5-664a-53fa" hidden="false" targetId="f7bc-b618-4b5d-2bae"/>
-        <categoryLink name="CAVALRY" id="e80f-e8b8-8dff-2eec" hidden="false" targetId="926c-df8c-6841-d49e"/>
-        <categoryLink name="BEAST" id="2a6a-02ae-51ce-1556" hidden="false" targetId="b224-8c8e-ca93-9860"/>
-        <categoryLink name="Reference" id="66e6-9d64-f104-263d" hidden="false" targetId="3360-1158-e879-9606"/>
+        <categoryLink name="HERO" id="5ded-8f96-83a2-6e0c" hidden="false" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" id="6774-b93b-495f-a7ab" hidden="false" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" id="e211-ae17-cfee-5aab" hidden="false" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" id="20c4-ebf8-aa7d-e29f" hidden="false" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" id="ae6c-79a9-f7b9-25ee" hidden="false" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" id="fcb8-4be7-a3b5-7fca" hidden="false" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" id="9c4c-fb36-abdf-398c" hidden="false" targetId="3360-1158-e879-9606"/>
       </categoryLinks>
       <constraints>
-        <constraint id="ca64-ad20-9945-3e9f" field="selections" scope="roster" shared="true" type="max" value="1"/>
+        <constraint id="4ef1-76a6-ea58-8e40" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
@@ -8956,32 +8953,31 @@
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition childId="2c23-a678-196b-ad69" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="747c-104a-4d8d-c9a5" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="9baf-c109-f621-e60" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="bb7e-b0da-5c2-a980" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="5079-92b5-4879-69f8" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="d731-9058-b0e5-6ff5" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="1bd9-ad7d-68ee-3b53" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="afdb-68a1-283e-3bf2" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="4e3-e1a7-a8d4-8719" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="d545-cdca-9e60-ad27" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="b3f9-6c96-b99a-1e71" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="42ad-8ca7-4b48-7df1" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="231a-2a83-26f0-a718" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="40a4-1c1c-8a00-bb65" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="5232-3bab-5562-3172" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="1100-a22f-15c6-bdea" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="832c-fd6-a535-ffae" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="8aef-b85d-b63a-ef05" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="9baf-c109-f621-e60" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="6353-cb84-ac7f-9a15" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="405e-c5f4-8579-b05c" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="832c-fd6-a535-ffae" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="d545-cdca-9e60-ad27" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="42ad-8ca7-4b48-7df1" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="5232-3bab-5562-3172" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="d731-9058-b0e5-6ff5" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="b53b-1217-df2e-66d2" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="b3f9-6c96-b99a-1e71" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="afdb-68a1-283e-3bf2" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="b7b7-cf58-4189-56ec" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="40a4-1c1c-8a00-bb65" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="1100-a22f-15c6-bdea" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="efc5-b8d-894c-67c6" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="5079-92b5-4879-69f8" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="640e-6bc1-c83d-13c" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                     <condition childId="8e0e-5e8c-5824-89c9" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="7acb-3141-6008-1c09" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="6cc-9eb2-c5b4-2877" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="b7b7-cf58-4189-56ec" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="4e3-e1a7-a8d4-8719" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="231a-2a83-26f0-a718" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="2c23-a678-196b-ad69" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="747c-104a-4d8d-c9a5" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="405e-c5f4-8579-b05c" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="1bd9-ad7d-68ee-3b53" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="bb7e-b0da-5c2-a980" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -13890,7 +13886,7 @@
         <forceEntryLink name="Sky-Port Profiteers" id="06d9-8d15-bf80-f4e2" hidden="false" targetId="5b4a-c0d3-7f5f-3794" type="forceEntry"/>
         <forceEntryLink name="Snerk&apos;s Trogg-fer-Hire" id="7a97-dfb2-8ab4-97bc" hidden="false" targetId="9d39-ae0e-afc9-f982" type="forceEntry"/>
         <forceEntryLink name="Squires of the Everchosen" id="407c-0cc7-ca76-2514" hidden="false" targetId="2b2d-a5c6-4595-5468" type="forceEntry"/>
-        <forceEntryLink name="Stumblefoot Gargant" id="c452-6273-c107-c2de" hidden="false" targetId="e974-53fd-481c-5345" type="forceEntry"/>
+        <forceEntryLink name="Krong the Club" id="07fb-fcc1-43ca-33e7" hidden="false" targetId="799b-bee1-49a7-aa3a" type="forceEntry"/>
         <forceEntryLink name="The Beast of Castle Sterneiste" id="65ae-8d13-fb3a-df8a" hidden="false" targetId="6e65-4c2e-132e-4c1e" type="forceEntry"/>
         <forceEntryLink name="The Blacktalons" id="87bf-bf7f-fd19-2fdf" hidden="false" targetId="bced-df96-fcc3-5cf6" type="forceEntry"/>
         <forceEntryLink name="The Coven of Thryx" id="b7c9-fa3d-3e71-c2d1" hidden="false" targetId="6f98-8771-7752-c86e" type="forceEntry"/>
@@ -14176,7 +14172,7 @@
     <publication name="Battletome: Nighthaunt" id="67f7-aa7f-294f-880d" hidden="false"/>
     <publication name="Battletome: Sylvaneth" id="61ee-fae0-f1da-2591" hidden="false"/>
     <publication name="Battletome: Ossiarch Bonereapers" id="2f1e-fdf-1ac2-fa38" hidden="false"/>
-    <publication name="Faction Pack: Sons of Behemat" id="b765-4747-cddc-385e" hidden="false"/>
+    <publication name="Battletome: Sons of Behemat" id="b765-4747-cddc-385e" hidden="false"/>
     <publication name="Faction Pack: Seraphon" id="e9d0-a23-6a15-1fcb" hidden="false"/>
     <publication name="Battletome Supplement: Stormcast Eternals" id="87c-f122-a891-630e" hidden="false"/>
     <publication name="Battletome Supplement: Bonesplitterz" id="06c5-6322-e810-7967" hidden="false"/>

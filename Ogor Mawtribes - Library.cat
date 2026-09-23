@@ -950,7 +950,7 @@ Then, roll a dice. On a 3+, until the start of your next turn, the target cannot
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this unit has not used a **^^Run^^** or **^^Retreat^^** ability this turn, pick a visible enemy unit within 18&quot; of it to be the target. Then, draw a straight line between the closest points on the bases of this unit and the target. Each other unit (friendly and enemy) that the line passes across is a **collateral damage target**.</characteristic>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a dice. On a 3+:
 • Inflict an amount of mortal damage on the target equal to the roll.
-• Inflict D3 damage on each **collateral damage target**.</characteristic>
+• Inflict D3 mortal damage on each **collateral damage target**.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Core^^**, **^^Attack^^**, **^^Shoot^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -1467,7 +1467,7 @@ Then, roll a dice. On a 3+, until the start of your next turn, the target cannot
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Your Charge Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use Charge abilities this turn even if it is in combat. If the charge roll is 2 or less when it does so, it does not count as having charged.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">This unit can use **^^Charge^^** abilities this turn even if it is in combat. If the charge roll is 2 or less when it does so, it does not count as having charged.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f">**^^Rampage^^**</characteristic>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2322,8 +2322,12 @@ Each time this unit uses a **^^Shoot^^** ability, for each of this unit&apos;s *
           </attributes>
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), End of Any Turn</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this **Mawpit** to be a **sinkhole**. Then, you can pick another terrain feature within 12&quot; of this **Mawpit** and that you have not already picked to be a **sinkhole** this battle to be a **sinkhole** for the rest of the turn. Then, pick every enemy unit within 3&quot; of the **sinkhole(s)** to be targets.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. From the second battle round onwards, increase the range at which another terrain feature can be picked to be a **sinkhole** by 3&quot; each battle round. If this terrain feature has a **Head Butcher**, increase the range at which another terrain feature can be picked to be a **sinkhole** by 6&quot; that turn instead of 3&quot;. This effect is cumulative.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick this **Mawpit** to be a **sinkhole**. Then, you can pick another terrain feature within 12&quot; of this **Mawpit** and that you have not already picked to be a **sinkhole** this battle to be a **sinkhole** for the rest of the turn.
+
+Then, pick each enemy unit within 3&quot; of the **sinkhole(s)** to be the targets.
+
+From the second battle round onwards, increase the range at which another terrain feature can be picked to be a **sinkhole** by 3&quot; for each previous battle round. If this terrain feature has a **Head Butcher**, increase the range at which another terrain feature can be picked to be a **sinkhole** by 6&quot; for each previous battle round instead of 3&quot;.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -2337,7 +2341,9 @@ Each time this unit uses a **^^Shoot^^** ability, for each of this unit&apos;s *
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If this terrain feature does not have a **Head Butcher**, pick a friendly **Butcher** within 3&quot; of it and not in combat to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Place the target on this terrain feature. The target is now a **Head Butcher** (see &apos;Hungry Sinkhole&apos;).</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Place the target on this terrain feature. The target is now a **Head Butcher** (see &apos;Hungry Sinkhole&apos;).
+
+If this terrain feature is demolished, before removing it from the battlefield, inflict D3 mortal damage on the **Head Butcher**. Then, set up the **Head Butcher** on the battlefield wholly within 3&quot; of this terrain feature and not in combat. That unit is no longer a **Head Butcher**. If it is not possible to set up the **Head Butcher**, it is slain.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -3012,8 +3018,8 @@ If an enemy unit is destroyed or removed from the battlefield while any of this 
           </attributes>
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Start of Battle Round</characteristic>
-            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">If this unit has any **Mantrapper accomplices**, remove 1 **Mantrapper accomplice** from this unit and place it next to a visible enemy unit.</characteristic>
+            <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">If any of this unit&apos;s **Mantrapper accomplices** are next to this unit, pick a visible enemy unit to be the target.</characteristic>
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Place 1 of this unit&apos;s **Mantrapper accomplices** next to the target.</characteristic>
             <characteristic name="Keywords" typeId="12e8-3214-7d8f-1d0f"/>
             <characteristic name="Used By" typeId="1b32-c9d6-3106-166b"/>
           </characteristics>
@@ -3027,7 +3033,7 @@ If an enemy unit is destroyed or removed from the battlefield while any of this 
           <characteristics>
             <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Turn (Army), Any Shooting Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb">Pick an enemy unit that had any damage points allocated to it this turn by this unit&apos;s shooting attacks to be the target.</characteristic>
-            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a **trapped roll** of D6. Subtract 1 from the roll for each **Mantrapper accomplice** next to the target.
+            <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Make a **trapped roll** of D6. Subtract 1 from the roll for each friendly **Mantrapper accomplice** next to the target.
 
 If the roll is less than the target&apos;s Save characteristic, until the start of your next turn:
 
@@ -4056,7 +4062,7 @@ If the target is in combat, inflict D3 mortal damage on each enemy unit in comba
             <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">2</characteristic>
           </characteristics>
         </profile>
-        <profile name="Arcane Appetite" id="ed72-694d-b288-8152" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
+        <profile name="A Taste for the Arcane" id="ed72-694d-b288-8152" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
           <attributes>
             <attribute name="Color" typeId="5a11-eab3-180c-ddf5">Red</attribute>
             <attribute name="Type" typeId="6d16-c86b-2698-85a4">Offensive</attribute>
@@ -5761,6 +5767,7 @@ In addition, make the following changes to your hero&apos;s warscroll:
                     <modifier field="category" scope="root-entry" type="remove" value="75d6-6995-dfcc-3898"/>
                     <modifier field="category" scope="root-entry" type="add" value="6d54-625c-d063-13e2"/>
                     <modifier affects="profiles.Unit" field="1981-ef09-96f6-7aa9" scope="root-entry" type="set" value="3+"/>
+                    <modifier affects="profiles.Unit" field="6c6f-8510-9ce1-fc6e" scope="root-entry" type="set" value="10"/>
                   </modifiers>
                   <profiles>
                     <profile name="Battle Damaged" id="aa76-76c1-141e-05fd" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -5782,6 +5789,7 @@ In addition, make the following changes to your hero&apos;s warscroll:
 • Change the Move characteristic to 10&quot;.
 • Change the Health characteristic to 16.
 • Change the Save characteristic to 3+.
+• Change the Control characteristic to 10.
 • Replace the **^^Infantry^^** keyword with the **^^Monster^^** keyword.</description>
                     </rule>
                   </rules>
