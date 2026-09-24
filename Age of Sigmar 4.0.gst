@@ -7572,7 +7572,7 @@
         <constraint id="f19c-90de-65b2-c65a" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="200"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -7751,7 +7751,7 @@
         <constraint id="9472-695c-5dcc-5240" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="290"/>
+        <cost name="pts" typeId="points" value="270"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -7839,7 +7839,7 @@
         <constraint id="4366-39e7-7d0c-c0fc" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="190"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -7883,7 +7883,7 @@
         <constraint id="50d4-e21f-abdc-6bc2" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -7927,7 +7927,7 @@
         <constraint id="2be7-dd4e-a7f6-f713" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="530"/>
+        <cost name="pts" typeId="points" value="460"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -7970,7 +7970,7 @@
         <constraint id="34dd-ac54-5b14-27f1" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="270"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -8049,7 +8049,7 @@
         <constraint id="d8b8-2c69-bc1-31b" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="760"/>
+        <cost name="pts" typeId="points" value="710"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -8446,7 +8446,7 @@
         <constraint id="2e45-3a6a-05b4-b79b" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="410"/>
+        <cost name="pts" typeId="points" value="380"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8490,7 +8490,7 @@
         <constraint id="a43e-09a8-7e6f-cab9" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="380"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8666,7 +8666,7 @@
         <constraint id="4d1c-194a-313c-e5ba" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="240"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -8754,7 +8754,7 @@
         <constraint id="2dbd-ac50-222b-82ed" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="410"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -8807,7 +8807,7 @@
         <constraint id="3886-43b0-7f50-2261" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="280"/>
+        <cost name="pts" typeId="points" value="240"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
       </costs>
       <modifiers>
@@ -9003,7 +9003,7 @@
         <constraint id="a28a-3566-79e0-41b8" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="220"/>
+        <cost name="pts" typeId="points" value="200"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9060,7 +9060,7 @@
         <constraint id="9480-14d5-5092-6179" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="420"/>
+        <cost name="pts" typeId="points" value="360"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9145,7 +9145,7 @@
         <constraint id="e98f-84e8-4faf-1d69" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="280"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9226,7 +9226,7 @@
         <constraint id="8f5c-01bd-679c-9a5d" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="310"/>
+        <cost name="pts" typeId="points" value="280"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9267,7 +9267,7 @@
         <constraint id="acf8-e36d-3ec2-e0f9" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="230"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9307,7 +9307,7 @@
         <constraint id="cbf6-d72a-35f2-a573" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="190"/>
+        <cost name="pts" typeId="points" value="160"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9437,7 +9437,7 @@
         <constraint id="a3f8-97e7-d8c5-f7fe" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="500"/>
+        <cost name="pts" typeId="points" value="460"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9531,7 +9531,7 @@
         <constraint id="01d1-a8ea-0480-18c6" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="390"/>
+        <cost name="pts" typeId="points" value="400"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9575,7 +9575,7 @@
         <constraint id="b354-a7ff-10a2-e68c" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="380"/>
+        <cost name="pts" typeId="points" value="350"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9762,7 +9762,7 @@
         <constraint id="cff6-13b9-e826-eba1" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="200"/>
+        <cost name="pts" typeId="points" value="180"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -9886,7 +9886,7 @@
         <constraint id="f9b9-be7e-3827-aaba" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="380"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -11810,7 +11810,7 @@
         <constraint id="681e-6f0a-9f02-b6b4" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="310"/>
+        <cost name="pts" typeId="points" value="270"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -12099,7 +12099,7 @@
         <constraint id="e614-6d42-c2c3-eebc" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="510"/>
+        <cost name="pts" typeId="points" value="390"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -12362,7 +12362,7 @@
         <constraint id="23e0-92f4-3a0e-b4ee" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="470"/>
+        <cost name="pts" typeId="points" value="450"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -12426,7 +12426,7 @@
         <constraint id="ddf1-6c56-befd-49fe" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="450"/>
+        <cost name="pts" typeId="points" value="410"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -12623,7 +12623,7 @@
         <constraint id="7a0c-86c1-c3a9-6839" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="130"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
