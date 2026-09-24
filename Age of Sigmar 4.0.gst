@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Age of Sigmar 4.0" id="e51d-b1a3-75fc-dc3g" battleScribeVersion="2.03" revision="104" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Age of Sigmar 4.0" id="e51d-b1a3-75fc-dc3g" battleScribeVersion="2.03" revision="105" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="DEATH" id="d484-a2d7-cf4f-c4a0" hidden="false"/>
     <categoryEntry name="HERO" id="6e72-1656-d554-528a" hidden="false">
