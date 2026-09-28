@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Maggotkin of Nurgle - Cycle of Corruption" id="1be3-6bdd-1bb2-d2e0" battleScribeVersion="2.03" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="71" library="false" revision="6" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Maggotkin of Nurgle - Cycle of Corruption" id="1be3-6bdd-1bb2-d2e0" battleScribeVersion="2.03" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="71" library="false" revision="7" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink name="Maggotkin of Nurgle - Library" id="c5bf-0e00-cbd1-7db7" targetId="7589-6d2-dadc-bc6" type="catalogue"/>
     <catalogueLink name="❖ Lores" id="6307-f722-70e6-d324" importRootEntries="true" targetId="0a11-cd61-2a4e-8e04" type="catalogue"/>
@@ -237,7 +237,7 @@
         <categoryLink name="CYCLE OF CORRUPTION" id="5f8e-82ef-4622-28fd" hidden="false" primary="false" targetId="bb0d-ce53-6e33-9053"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="210"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <entryLinks>
         <entryLink name="Reinforced" id="005a-b31c-e2f2-cd53" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
@@ -437,11 +437,17 @@
         <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
+        <entryLink name="Reinforced" id="fb2d-7247-9a0d-6ea3" hidden="false" import="true" targetId="1b37-82b8-c062-eb82" type="selectionEntry"/>
         <entryLink name="Renown" id="e531-1bfa-cff3-2166" hidden="false" import="true" targetId="e7d5-5062-46d5-38dd" type="selectionEntry"/>
         <entryLink name="Battle Wounds + Scars" id="9719-9b63-4e67-61ac" hidden="false" import="true" targetId="a45f-bae4-1a8b-9d8d" type="selectionEntryGroup"/>
         <entryLink name="Paths" id="3549-7e9a-f9bd-928d" hidden="false" import="true" targetId="1eef-ae4d-3c08-f468" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
+        <modifier field="points" type="multiply" value="2">
+          <conditions>
+            <condition childId="1b37-82b8-c062-eb82" field="selections" scope="self" shared="true" type="atLeast" value="1"/>
+          </conditions>
+        </modifier>
         <modifier field="hidden" type="set" value="true">
           <conditionGroups>
             <conditionGroup type="and">
@@ -645,6 +651,20 @@
       </entryLinks>
       <modifierGroups>
         <modifierGroup type="and">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
+                <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier field="category" type="add" value="b56c-b375-04bd-3ce1"/>
+          </modifiers>
+        </modifierGroup>
+        <modifierGroup type="and">
           <conditions>
             <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="instanceOf" value="1"/>
           </conditions>
@@ -672,6 +692,7 @@
                 <condition childId="376a-6b97-8699-dd59" field="selections" scope="ancestor" shared="true" type="instanceOf" value="1"/>
                 <condition childId="d1f3-921c-b403-1106" field="selections" includeChildSelections="true" scope="force" shared="true" type="atLeast" value="1"/>
                 <condition childId="d1f3-921c-b403-1106" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
+                <condition childId="8f4b-1fa6-3128-8405" field="selections" scope="self" shared="true" type="notInstanceOf" value="1"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -683,7 +704,7 @@
         <categoryLink name="CYCLE OF CORRUPTION" id="949b-2e8a-097d-07c4" hidden="false" primary="false" targetId="bb0d-ce53-6e33-9053"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="260"/>
+        <cost name="pts" typeId="points" value="250"/>
       </costs>
       <entryLinks>
         <entryLink name="Battle Wounds + Scars" id="d94d-1d99-d4ed-bc32" hidden="false" import="true" targetId="a45f-bae4-1a8b-9d8d" type="selectionEntryGroup"/>
@@ -728,7 +749,7 @@
         <categoryLink name="CYCLE OF CORRUPTION" id="f302-a271-8147-fa1f" hidden="false" primary="false" targetId="bb0d-ce53-6e33-9053"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="230"/>
       </costs>
       <entryLinks>
         <entryLink name="Battle Wounds + Scars" id="6f90-5177-47d9-1726" hidden="false" import="true" targetId="a45f-bae4-1a8b-9d8d" type="selectionEntryGroup"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="Sons of Behemat - Library" id="e691-c828-52e1-f1a8" battleScribeVersion="2.03" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" library="true" revision="21" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Sons of Behemat - Library" id="e691-c828-52e1-f1a8" battleScribeVersion="2.03" gameSystemId="e51d-b1a3-75fc-dc3g" gameSystemRevision="2" library="true" revision="22" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedProfiles>
     <profile name="Son of Behemat" id="ff24-51d-54d2-c80b" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
       <attributes>
@@ -663,15 +663,11 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
         <categoryLink name="MONSTER" id="3b68-e43f-1c5d-0c62" hidden="false" primary="false" targetId="6d54-625c-d063-13e2"/>
         <categoryLink name="DESTRUCTION" id="4897-d3dd-2bc4-4a69" hidden="false" primary="false" targetId="9057-5a29-dda5-3c28"/>
         <categoryLink name="SONS OF BEHEMAT" id="7e8a-3275-ce64-8aad" hidden="false" primary="false" targetId="482b-a44e-ffc6-df0a"/>
-        <categoryLink name="MEGA-GARGANT" id="d958-a88f-02cb-9410" hidden="false" primary="false" targetId="3723-4d8b-de1e-114b"/>
+        <categoryLink name="BIG" id="d958-a88f-02cb-9410" hidden="false" primary="false" targetId="aba7-75e8-ea43-5f1e"/>
       </categoryLinks>
       <entryLinks>
         <entryLink name="General" id="52c8-6269-7926-539b" hidden="false" import="true" targetId="a56b-952e-ad15-7868" type="selectionEntry"/>
       </entryLinks>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="9fd0-88ec-b376-6eaf" hidden="false" targetId="ff24-51d-54d2-c80b" type="profile"/>
-        <infoLink name="Longshanks" id="fb17-5847-1819-b5ec" hidden="false" targetId="c219-8bc2-6da1-f74f" type="profile"/>
-      </infoLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="false">
           <conditionGroups>
@@ -693,9 +689,9 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
         <profile name="Gatebreaker Mega-Gargant" id="eedb-8155-f730-95f8" hidden="false" typeId="ff03-376e-972f-8ab2" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">35</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">25</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" id="946b-2f90-0901-1f42" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -706,7 +702,18 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
           </attributes>
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 4 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Fortcrusha Flail" id="b2b4-d8d7-2f56-439a" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Fortcrusha Flail**.</characteristic>
           </characteristics>
         </profile>
         <profile name="It&apos;s Goin&apos; Down" id="cc15-3916-c7f2-cb9a" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
@@ -716,7 +723,7 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn:
 • This unit has a Move characteristic of 4D6&quot;.
@@ -764,27 +771,45 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">3</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">4</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry name="Death Grip" id="6b17-5da6-8549-c8e7" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Fortcrusha Flail: Calamitous Sweep" id="765c-a6cd-d2e0-8036" hidden="false" import="true" type="upgrade">
               <constraints>
-                <constraint id="1552-7240-d53b-0113" field="selections" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="2178-0189-bb59-f34c" field="selections" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="25bc-04f7-20c4-8bf9" field="selections" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="4bf4-84e4-8861-2a8e" field="selections" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <profiles>
-                <profile name="Death Grip" id="f925-ea41-2cb8-0307" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
+                <profile name="Fortcrusha Flail: Calamitous Sweep" id="39b0-4550-7fb9-c97c" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">16</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Fortcrusha Flail: Crushing Blow" id="8201-a399-a5ed-2555" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="f58c-94eb-a268-f40c" field="selections" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="5e0e-1206-42c3-c054" field="selections" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <profiles>
+                <profile name="Fortcrusha Flail: Crushing Blow" id="6c32-1003-bbd3-f9af" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -797,30 +822,12 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
               <profiles>
                 <profile name="Almighty Stomp" id="b8a1-490d-6777-97d0" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry name="Fortcrusha Flail" id="3a8e-e32c-247e-e00d" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="c8c5-027c-a86a-4dba" field="selections" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="4784-6de2-41b6-ca8f" field="selections" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <profiles>
-                <profile name="Fortcrusha Flail" id="9673-c3fd-9be0-b84b" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Faction Terrain^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -835,15 +842,11 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
         <categoryLink name="MONSTER" id="a3a8-017b-697a-48ca" hidden="false" primary="false" targetId="6d54-625c-d063-13e2"/>
         <categoryLink name="DESTRUCTION" id="ee7b-1f4d-9b90-5da4" hidden="false" primary="false" targetId="9057-5a29-dda5-3c28"/>
         <categoryLink name="SONS OF BEHEMAT" id="3032-eea5-467e-25ad" hidden="false" primary="false" targetId="482b-a44e-ffc6-df0a"/>
-        <categoryLink name="MEGA-GARGANT" id="f231-c283-ed61-7c4f" hidden="false" primary="false" targetId="3723-4d8b-de1e-114b"/>
+        <categoryLink name="BIG" id="f231-c283-ed61-7c4f" hidden="false" primary="false" targetId="aba7-75e8-ea43-5f1e"/>
       </categoryLinks>
       <entryLinks>
         <entryLink name="General" id="cc49-f05c-e0be-1a96" hidden="false" import="true" targetId="a56b-952e-ad15-7868" type="selectionEntry"/>
       </entryLinks>
-      <infoLinks>
-        <infoLink name="Son of Behemat" id="cfeb-327e-0b61-4802" hidden="false" targetId="ff24-51d-54d2-c80b" type="profile"/>
-        <infoLink name="Longshanks" id="5fc1-9dcf-92c3-691f" hidden="false" targetId="c219-8bc2-6da1-f74f" type="profile"/>
-      </infoLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="false">
           <conditionGroups>
@@ -865,9 +868,9 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
         <profile name="Gatebreaker Mega-Gargant" id="6afe-5988-16be-051c" hidden="false" typeId="ff03-376e-972f-8ab2" typeName="Unit">
           <characteristics>
             <characteristic name="Move" typeId="fed0-d1b3-1bb8-c501">10&quot;</characteristic>
-            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">35</characteristic>
+            <characteristic name="Health" typeId="96be-54ae-ce7b-10b7">25</characteristic>
             <characteristic name="Save" typeId="1981-ef09-96f6-7aa9">4+</characteristic>
-            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">20</characteristic>
+            <characteristic name="Control" typeId="6c6f-8510-9ce1-fc6e">10</characteristic>
           </characteristics>
         </profile>
         <profile name="Battle Damaged" id="3d3a-ab6b-0082-292d" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
@@ -878,7 +881,18 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
           </attributes>
           <characteristics>
             <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
-            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 4 and this unit has a Control characteristic of 10.</characteristic>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Fortcrusha Flail" id="9f60-7c73-1760-b134" hidden="false" typeId="907f-a48-6a04-f788" typeName="Ability (Passive)">
+          <attributes>
+            <attribute name="Color" typeId="50fe-4f29-6bc3-dcc6">Red</attribute>
+            <attribute name="Type" typeId="bf11-4e10-3ab1-06f4">Offensive</attribute>
+            <attribute name="Parent Node" typeId="e2e1-15ca-d345-22b8"/>
+          </attributes>
+          <characteristics>
+            <characteristic name="Keywords" typeId="b977-7c5e-33b2-428e"/>
+            <characteristic name="Effect" typeId="fd7f-888d-3257-a12b">Each time this unit uses a **^^Fight^^** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Fortcrusha Flail**.</characteristic>
           </characteristics>
         </profile>
         <profile name="It&apos;s Goin&apos; Down" id="1417-e560-4fa9-7afa" hidden="false" typeId="59b6-d47a-a68a-5dcc" typeName="Ability (Activated)">
@@ -888,7 +902,7 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
             <attribute name="Parent Node" typeId="2d74-4dcd-8468-87fa"/>
           </attributes>
           <characteristics>
-            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle, Your Hero Phase</characteristic>
+            <characteristic name="Timing" typeId="652c-3d84-4e7-14f4">Once Per Battle (Army), Your Hero Phase</characteristic>
             <characteristic name="Declare" typeId="bad3-f9c5-ba46-18cb"/>
             <characteristic name="Effect" typeId="b6f1-ba36-6cd-3b03">Until the start of your next turn:
 • This unit has a Move characteristic of 4D6&quot;.
@@ -936,27 +950,45 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
                     <characteristic name="Atk" typeId="aa17-4296-2887-e05d">1</characteristic>
                     <characteristic name="Hit" typeId="194d-aeb6-5ba7-83b4">3+</characteristic>
                     <characteristic name="Wnd" typeId="d3d5-9dc6-13de-8d1">2+</characteristic>
-                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">3</characteristic>
+                    <characteristic name="Rnd" typeId="d03f-a9ae-3eec-755">2</characteristic>
                     <characteristic name="Dmg" typeId="96c2-d0a5-ea1e-653b">4</characteristic>
                     <characteristic name="Ability" typeId="d793-3dd7-9c13-741e">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry name="Death Grip" id="c321-c94e-ec74-5135" hidden="false" import="true" type="upgrade">
+            <selectionEntry name="Fortcrusha Flail: Calamitous Sweep" id="1f40-b816-a862-2ca1" hidden="false" import="true" type="upgrade">
               <constraints>
-                <constraint id="3ff7-b201-d023-0056" field="selections" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="ca7c-ae5b-8ac3-b593" field="selections" scope="parent" shared="true" type="max" value="1"/>
+                <constraint id="fbc1-81dd-d3e5-9240" field="selections" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="5f8b-0455-a351-8c7a" field="selections" scope="parent" shared="true" type="max" value="1"/>
               </constraints>
               <profiles>
-                <profile name="Death Grip" id="0718-faa3-a927-5dc7" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
+                <profile name="Fortcrusha Flail: Calamitous Sweep" id="ca9e-78d8-1f46-a1d9" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">1</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">16</characteristic>
+                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">3+</characteristic>
+                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">3+</characteristic>
+                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">1</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">1</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Crit (Auto-wound)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry name="Fortcrusha Flail: Crushing Blow" id="5516-57be-2b0f-cbab" hidden="false" import="true" type="upgrade">
+              <constraints>
+                <constraint id="fa9a-71ad-34b7-67bd" field="selections" scope="parent" shared="true" type="min" value="1"/>
+                <constraint id="820b-0e73-bb6a-b54f" field="selections" scope="parent" shared="true" type="max" value="1"/>
+              </constraints>
+              <profiles>
+                <profile name="Fortcrusha Flail: Crushing Blow" id="a779-0ead-1b6f-b77e" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
+                  <characteristics>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D6</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Hero^^** (+1 Rend)</characteristic>
+                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -969,30 +1001,12 @@ For the rest of the turn, subtract 1 from hit rolls for the target&apos;s combat
               <profiles>
                 <profile name="Almighty Stomp" id="7ce2-8c69-9dea-2080" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
                   <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">4</characteristic>
+                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">3</characteristic>
                     <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
                     <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
                     <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
                     <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">D3</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Infantry^^** (+1 Rend)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry name="Fortcrusha Flail" id="fd19-cd02-c2ff-d3f3" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="5894-c588-c069-8fce" field="selections" scope="parent" shared="true" type="min" value="1"/>
-                <constraint id="17ed-ecb2-c789-4b55" field="selections" scope="parent" shared="true" type="max" value="1"/>
-              </constraints>
-              <profiles>
-                <profile name="Fortcrusha Flail" id="e8ee-b442-7c4c-71ac" hidden="false" typeId="9074-76b6-9e2f-81e3" typeName="Melee Weapon">
-                  <characteristics>
-                    <characteristic name="Atk" typeId="60e-35aa-31ed-e488">6</characteristic>
-                    <characteristic name="Hit" typeId="26dc-168-b2fd-cb93">4+</characteristic>
-                    <characteristic name="Wnd" typeId="61c1-22cc-40af-2847">2+</characteristic>
-                    <characteristic name="Rnd" typeId="eccc-10fa-6958-fb73">2</characteristic>
-                    <characteristic name="Dmg" typeId="e948-9c71-12a6-6be4">4</characteristic>
-                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">Anti-**^^Faction Terrain^^** (+1 Rend)</characteristic>
+                    <characteristic name="Ability" typeId="eda3-7332-5db1-4159">-</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1823,7 +1837,7 @@ If any models are slain by those attacks, for the rest of the turn, enemy units 
         <categoryLink name="MONSTER" id="9eab-07bd-4fcb-3746" hidden="false" primary="true" targetId="6d54-625c-d063-13e2"/>
         <categoryLink name="DESTRUCTION" id="72a5-eb1a-7a9c-8987" hidden="false" primary="false" targetId="9057-5a29-dda5-3c28"/>
         <categoryLink name="SONS OF BEHEMAT" id="1ddb-00b0-4552-6dca" hidden="false" primary="false" targetId="482b-a44e-ffc6-df0a"/>
-        <categoryLink name="GARGANT" id="d851-d59c-2bc3-0d1f" hidden="false" primary="false" targetId="cdfb-7c8d-6a59-3866"/>
+        <categoryLink name="LITTLE" id="d851-d59c-2bc3-0d1f" hidden="false" primary="false" targetId="d8ec-c3f5-89bb-d132"/>
       </categoryLinks>
       <modifiers>
         <modifier field="hidden" type="set" value="false">
