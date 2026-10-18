@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem name="Age of Sigmar 4.0" id="e51d-b1a3-75fc-dc3g" battleScribeVersion="2.03" revision="105" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem name="Age of Sigmar 4.0" id="e51d-b1a3-75fc-dc3g" battleScribeVersion="2.03" revision="106" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="DEATH" id="d484-a2d7-cf4f-c4a0" hidden="false"/>
     <categoryEntry name="HERO" id="6e72-1656-d554-528a" hidden="false">
@@ -228,6 +228,11 @@
     <categoryEntry name="SIGMARITE" id="ae9e-dd18-4bdb-ffe9" hidden="false"/>
     <categoryEntry name="MUSICIAN (1/2)" id="5145-d9c8-fcfd-28c3" hidden="false"/>
     <categoryEntry name="PARAGON" id="6682-0010-2bd3-dc9d" hidden="false" publicationId="95fc-e96f-a916-bba1"/>
+    <categoryEntry name="KHAZALITE HOLDS" id="a14f-1160-84ad-3a73" hidden="false"/>
+    <categoryEntry name="GRIMMDRON" id="c55f-5aac-f84a-889b" hidden="false"/>
+    <categoryEntry name="KROMDRON" id="58f1-f918-6688-b7ad" hidden="false"/>
+    <categoryEntry name="VALAYAN" id="9a50-8f2a-b869-3046" hidden="false"/>
+    <categoryEntry name="GHOLEM" id="fd29-8944-ff91-3a53" hidden="false"/>
   </categoryEntries>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="0" hidden="false"/>
@@ -1514,6 +1519,8 @@
         <forceEntryLink name="Ven Denst&apos;s Hounds" id="12cb-f87a-112c-6047" hidden="false" targetId="bfa4-82e4-1430-3fd4" type="forceEntry"/>
         <forceEntryLink name="The Accursed Reflection" id="2479-7fe6-9cd8-74fc" hidden="false" targetId="0f99-b3d1-0f32-cb6d" type="forceEntry"/>
         <forceEntryLink name="Mist-Clad Revellers" id="3b36-6fc7-5028-ded7" hidden="false" targetId="bb82-173a-f3b3-d48c" type="forceEntry"/>
+        <forceEntryLink name="Fjori&apos;s Vengeance" id="3ee2-abad-c487-5493" hidden="false" targetId="1c87-ae3a-bc75-0668" type="forceEntry"/>
+        <forceEntryLink name="Thengin&apos;s Grudgesettlers" id="ea6f-238f-5ad9-206d" hidden="false" targetId="e61f-48b6-8f84-2fd8" type="forceEntry"/>
       </forceEntryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Your list can have a maximum of 5 regiments, including up to 1 Regiment of Renown.">
@@ -2866,6 +2873,8 @@
         <forceEntryLink name="Reinholt&apos;s Sharpshooters" id="bcb9-853d-c1d0-2d1a" hidden="false" targetId="9fe3-19f8-a1b7-328b" type="forceEntry"/>
         <forceEntryLink name="The Accursed Reflection" id="a3a2-71c6-6a77-11ad" hidden="false" targetId="0f99-b3d1-0f32-cb6d" type="forceEntry"/>
         <forceEntryLink name="Mist-Clad Revellers" id="4c15-97f7-ad18-219e" hidden="false" targetId="bb82-173a-f3b3-d48c" type="forceEntry"/>
+        <forceEntryLink name="Fjori&apos;s Vengeance" id="b7db-7dfc-bd76-e14e" hidden="false" targetId="1c87-ae3a-bc75-0668" type="forceEntry"/>
+        <forceEntryLink name="Thengin&apos;s Grudgesettlers" id="a86a-2cc6-6002-be97" hidden="false" targetId="e61f-48b6-8f84-2fd8" type="forceEntry"/>
       </forceEntryLinks>
       <modifiers>
         <modifier field="error" type="add" value="Your list can have a maximum of 5 regiments, including up to 1 Regiment of Renown.">
@@ -7327,6 +7336,8 @@
         <forceEntryLink name="Ven Denst&apos;s Hounds" id="68a9-ef8e-582c-5454" hidden="false" targetId="bfa4-82e4-1430-3fd4" type="forceEntry"/>
         <forceEntryLink name="The Accursed Reflection" id="b8f9-4a9f-b37c-229b" hidden="false" targetId="0f99-b3d1-0f32-cb6d" type="forceEntry"/>
         <forceEntryLink name="Mist-Clad Revellers" id="3b5b-acde-4478-2ab7" hidden="false" targetId="bb82-173a-f3b3-d48c" type="forceEntry"/>
+        <forceEntryLink name="Fjori&apos;s Vengeance" id="a09a-0644-78fe-e96f" hidden="false" targetId="1c87-ae3a-bc75-0668" type="forceEntry"/>
+        <forceEntryLink name="Thengin&apos;s Grudgesettlers" id="d2aa-553e-0b8c-e8ef" hidden="false" targetId="e61f-48b6-8f84-2fd8" type="forceEntry"/>
       </forceEntryLinks>
       <modifiers>
         <modifier field="error" type="add" value="To add units to your roster, you need to add a regiment. These can be added under the Forces selector - select your top-level force for your army and then click the + on mobile or check the sidebar panel on desktop.">
@@ -7662,7 +7673,7 @@
         <constraint id="9b07-6873-f1a1-6c62" field="selections" scope="roster" shared="true" type="max" value="1"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="320"/>
+        <cost name="pts" typeId="points" value="220"/>
         <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
         <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
         <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
@@ -13097,6 +13108,30 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
+                        <condition childId="e7bb-96f9-c2d4-445a" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="e7bb-96f9-c2d4-445a" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="bce3-ca5e-022e-cf31" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="bce3-ca5e-022e-cf31" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="2da4-04b6-1008-0526" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="2da4-04b6-1008-0526" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="e616-dbba-d91e-7af4" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="e616-dbba-d91e-7af4" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
                         <condition childId="5a77-1371-c897-5db1" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                         <condition childId="5a77-1371-c897-5db1" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                       </conditions>
@@ -13691,6 +13726,30 @@
                     </conditionGroup>
                     <conditionGroup type="and">
                       <conditions>
+                        <condition childId="e7bb-96f9-c2d4-445a" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="e7bb-96f9-c2d4-445a" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="bce3-ca5e-022e-cf31" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="bce3-ca5e-022e-cf31" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="2da4-04b6-1008-0526" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="2da4-04b6-1008-0526" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="e616-dbba-d91e-7af4" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="e616-dbba-d91e-7af4" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
                         <condition childId="4cb4-298b-bb1b-58d1" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
                         <condition childId="4cb4-298b-bb1b-58d1" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
                       </conditions>
@@ -13921,6 +13980,8 @@
         <forceEntryLink name="Ven Denst&apos;s Hounds" id="d7e1-aad4-35c4-00fd" hidden="false" targetId="bfa4-82e4-1430-3fd4" type="forceEntry"/>
         <forceEntryLink name="Reinholt&apos;s Sharpshooters" id="df46-bfba-1e51-a4d0" hidden="false" targetId="9fe3-19f8-a1b7-328b" type="forceEntry"/>
         <forceEntryLink name="Mist-Clad Revellers" id="7215-a1a6-0f67-730d" hidden="false" targetId="bb82-173a-f3b3-d48c" type="forceEntry"/>
+        <forceEntryLink name="Fjori&apos;s Vengeance" id="6ade-2845-e471-0b16" hidden="false" targetId="1c87-ae3a-bc75-0668" type="forceEntry"/>
+        <forceEntryLink name="Thengin&apos;s Grudgesettlers" id="d6e2-3c0d-00f2-4892" hidden="false" targetId="e61f-48b6-8f84-2fd8" type="forceEntry"/>
         <forceEntryLink name="The Accursed Reflection" id="0778-60ec-2909-f96f" hidden="false" targetId="0f99-b3d1-0f32-cb6d" type="forceEntry"/>
       </forceEntryLinks>
       <modifiers>
@@ -13997,6 +14058,96 @@
           <conditions>
             <condition childId="any" field="forces" scope="roster" shared="true" type="atMost" value="1"/>
           </conditions>
+        </modifier>
+      </modifiers>
+    </forceEntry>
+    <forceEntry name="Fjori&apos;s Vengeance" id="1c87-ae3a-bc75-0668" hidden="true">
+      <categoryLinks>
+        <categoryLink name="HERO" id="9ff9-35c6-82a6-acc6" hidden="false" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" id="c369-4ed8-ef90-9847" hidden="false" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" id="4b5d-efb4-25e5-1e4e" hidden="false" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" id="177f-dfbc-3520-036f" hidden="false" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" id="2e94-b7f2-06cf-bcd1" hidden="false" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" id="6d13-6e62-8512-4ccf" hidden="false" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" id="c05e-e5ef-01c1-1b06" hidden="false" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="091d-e5af-14a5-850c" field="selections" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="310"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="bb7e-b0da-5c2-a980" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="42ad-8ca7-4b48-7df1" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="5232-3bab-5562-3172" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="40a4-1c1c-8a00-bb65" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="1100-a22f-15c6-bdea" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="efc5-b8d-894c-67c6" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="4e3-e1a7-a8d4-8719" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="1bd9-ad7d-68ee-3b53" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition childId="1ed8-2e23-1563-c119" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </forceEntry>
+    <forceEntry name="Thengin&apos;s Grudgesettlers" id="e61f-48b6-8f84-2fd8" hidden="true">
+      <categoryLinks>
+        <categoryLink name="HERO" id="ab21-291d-21eb-b205" hidden="false" targetId="6e72-1656-d554-528a"/>
+        <categoryLink name="INFANTRY" id="deae-26ea-1f5a-664b" hidden="false" targetId="75d6-6995-dfcc-3898"/>
+        <categoryLink name="MONSTER" id="42e5-d693-2906-5b6e" hidden="false" targetId="6d54-625c-d063-13e2"/>
+        <categoryLink name="WAR MACHINE" id="164b-7acb-225a-f95e" hidden="false" targetId="f7bc-b618-4b5d-2bae"/>
+        <categoryLink name="CAVALRY" id="7043-018b-a7b4-e63e" hidden="false" targetId="926c-df8c-6841-d49e"/>
+        <categoryLink name="BEAST" id="c820-df84-ead4-fd90" hidden="false" targetId="b224-8c8e-ca93-9860"/>
+        <categoryLink name="Reference" id="dcb8-4310-b8ce-b3bf" hidden="false" targetId="3360-1158-e879-9606"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="b249-54db-e9cc-597b" field="selections" scope="roster" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="510"/>
+        <cost name="Destiny Points" typeId="bc33-05f5-8d3f-af43" value="0"/>
+        <cost name="Force Category - PTG" typeId="e63c-79ff-93ba-c5eb" value="0"/>
+        <cost name="Force Category - GHB" typeId="de92-2099-fbf7-a156" value="0"/>
+      </costs>
+      <modifiers>
+        <modifier field="hidden" type="set" value="false">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="bb7e-b0da-5c2-a980" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="42ad-8ca7-4b48-7df1" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="5232-3bab-5562-3172" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="40a4-1c1c-8a00-bb65" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="1100-a22f-15c6-bdea" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="efc5-b8d-894c-67c6" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="4e3-e1a7-a8d4-8719" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="1bd9-ad7d-68ee-3b53" field="selections" scope="parent" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition childId="1ed8-2e23-1563-c119" field="selections" scope="primary-catalogue" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </forceEntry>
@@ -14205,6 +14356,7 @@
     <publication name="White Dwarf Issue 524" id="712d-a907-b456-e511" hidden="false"/>
     <publication name="White Dwarf Issue 525" id="dadd-06f0-3f38-c6f3" hidden="false"/>
     <publication name="Scourge of Aqshy" id="9e18-bb03-7b60-d4ff" hidden="false"/>
+    <publication name="Battletome: Khazalite Holds" id="f98d-040f-7b3e-eaf1" hidden="false"/>
   </publications>
   <selectionEntries>
     <selectionEntry name="READ ME" id="eb00-fe05-1949-bed7" defaultAmount="1" hidden="false" import="false" type="upgrade">
